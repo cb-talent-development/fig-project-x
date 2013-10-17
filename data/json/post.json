@@ -1,0 +1,76 @@
+{
+    "Id": 1,
+    "OrganizationId": 0,
+    "Headline": "How to prepare for a career in sales or customer service.",
+    "ShortDescription": "Cars, trains, trucks, planes and boats: they're the vehicule that move us and our economy, driving the market forward and delivering products and goods to consumers. As the economy continue to recover, more workers are nedded to keep transportation and delivery needs mt and moving",
+    "PublicationDate": "2013-09-14T00:00:00-04:00",
+    "PublicationStatus": null,
+    "PublicationVisibility": null,
+    "ExpirationDate": "0001-01-01T00:00:00",
+    "Author": {
+        "Name":"Pierre raymond",
+        "Media":{
+            "id": "string",
+            "Type": "photo",
+            "Url": "img/personnes.jpg",
+            "Width": "363",
+            "Height": "258",
+            "Posx": "0",
+            "Posy": "0",
+            "Scale": "1",
+            "Alt": "string",
+            "Title": "string",
+            "MetaTags": "string"
+        }
+    },
+    "CopyrightOwner": null,
+    "CopyrightDate": "0001-01-01T00:00:00",
+    "BodyPlainText": null,
+    "BodyHtml": "<h3>1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3> <p classe='text'>  Nulla nec felis sed leo placerat imperdiet. Curabitur eu amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue. Ut in risus volutpat libero pharetra tempor. Cras vestibulum bibendum augue. Praesent egestas leo in pede. Praesent blandit odio eu enim. Pellentesque sed dui ut augue blandit sodales. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam nibh. Mauris ac mauris sed pede pellentesque fermentum. Maecenas adipiscing ante non diam sodales hendrerit. Pst canata tari est paroy malardi dalr sahit ya kho ral labass erat non mauris convallis vehicula. Nulla et sapien. Integer tortor tellus, aliquam faucibus, convallis id, congue eu, quam. Mauris ullamcorper felis vitae erat. Proin feugiat, augue non elementum posuere, metus purus iaculis lectus, et tristique ligula justo vitae magna. Aliquam convallis sollicitudin purus. Praesent aliquam, enim at fermentum mollis, ligula massa adipiscing nisl, ac euismod nibh nisl eu lectus. Fusce vulputate sem at sapien. Vivamus leo. Aliquam euismod libero eu enim. Nulla nec felis sed leo placerat imperdiet. Curabitur eu amet. </p><p> Nulla nec felis sed leo placerat imperdiet. Curabitur eu amet. Aenean suscipit nulla in justo. Suspendisse cursus rutrum augue. Nulla tincidunt tincidunt mi. <span class=\"hightlight\">Curabitur iaculis</span>, lorem vel rhoncus faucibus, felis magna fermentum augue, et ultricies lacus lorem varius purus. Curabitur eu amet Aenean suscipit nulla in justo. Suspendisse cursus rutrum augue. Nulla tincidunt tincidunt mi. Curabitur iaculis, lorem vel rhoncus faucibus, felis magna fermentum augue, et ultricies lacus lorem varius purus. Curabitur eu amet.  Nulla tincidunt tincidunt mi. Curabitur iaculis, lorem vel rhoncus faucibus, felis magna fermentum augue, et ultricies lacus lorem varius purus. Curabitur eu amet.</p> <h3>2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3> <p classe='text'> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue. Ut in risus volutpat libero pharetra tempor. Cras vestibulum bibendum augue. Praesent egestas leo in pede. Praesent blandit odio eu enim. Pellentesque sed dui ut augue blandit sodales. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam nibh. Mauris ac mauris sed pede pellentesque fermentum. Maecenas adipiscing ante non diam sodales hendrerit. Pst canata tari est paroy malardi dalr sahit ya kho ral labass erat non mauris convallis vehicula. Nulla et sapien. Integer tortor tellus, aliquam faucibus, convallis id, congue eu, quam. Mauris ullamcorper felis vitae erat. Proin feugiat </p><img src=\"img/personnes.jpg\"/> <h3>3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3> <p classe=\"text\"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue. Ut in risus volutpat libero pharetra tempor. Cras vestibulum bibendum augue. Praesent egestas leo in pede. Praesent blandit odio eu enim. Pellentesque sed dui ut augue blandit sodales. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam nibh. Mauris ac mauris sed pede pellentesque fermentum. Maecenas adipiscing ante non diam sodales hendrerit. Pst canata tari est paroy malardi dalr sahit ya kho ral labass erat non mauris convallis vehicula. Nulla et sapien. Integer tortor tellus, aliquam faucibus, convallis id, congue eu, quam. Mauris ullamcorper felis vitae erat. Proin feugiat, augue non elementum posuere, metus purus iaculis lectus, et tristique ligula justo vitae magna. Aliquam convallis sollicitudin purus. Praesent aliquam, enim at fermentum mollis, ligula massa adipiscing nisl, ac euismod nibh nisl eu lectus. Fusce vulputate sem at sapien. Vivamus leo. Aliquam euismod libero eu enim. Nulla nec felis sed leo placerat imperdiet. Aenean suscipit nulla in justo. Suspendisse cursus rutrum augue. Nulla tincidunt tincidunt mi. Curabitur iaculis, lorem vel rhoncus faucibus, felis magna fermentum augue, et ultricies lacus lorem varius purus. Curabitur eu amet. </p>",
+    "RelatedPosts": null,
+    "SeoInfo": null,
+    "AllowComments": false,
+    "AllowTrackbackPingbacks": false,
+    "CareerPhase": "Landing a Job",
+    "Categories": [
+        {
+            "Id": 1,
+            "Name": "Salary Negotiation"
+        }
+    ],
+    "PostTags": null,
+    "Sticky": false,
+    "DisplaySize": null,
+    "IsoLanguageCode": null,
+    "OnetIndustry": {
+        "Code": "id",
+        "Name": "Bain"
+    },
+    "OnetOccupation": {
+        "Code": "id",
+        "Name": "Business"
+    },
+    "OnetSkills": null,
+    "AdminNotes": null,
+    "Template": 1,
+    "Rating": 3,
+    "Posx": 0,
+    "Posy": 0,
+    "Media": {
+        "id": "string",
+        "Type": "photo",
+        "Url": "img/personnes.jpg",
+        "Width": "363",
+        "Height": "258",
+        "Posx": "0",
+        "Posy": "0",
+        "Scale": "1",
+        "Alt": "string",
+        "Title": "string",
+        "MetaTags": "string"
+    },
+    "CommentCount": 13,
+    "OnetIndustryName": "Career company",
+    "OnetOccupationName": "Sales Manager",
+    "Type": "article"
+}

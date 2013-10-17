@@ -1,0 +1,47 @@
+/*
+REDONDANCE
+*/
+
+//Variables
+
+//colors
+$navcolor: #104E8B;
+$boxBlue: #00B2EE;
+$boxGreen: #008B00;
+$boxYellow: #EEAD0E;
+$boxRed: #EE6363;
+$boxPurple: #CD6090;
+$boxLightGreen: #66CDAA;
+$boxDarkBlue: #104E9B;
+$grey: rgb(167,167,167);
+
+//animation
+$transition-time:1s;
+//...
+
+//Width
+$total-width:1170px;
+
+//Heights
+
+//Desktop
+$large-box-height: 355px;
+$med-box-height: 380px;
+$small-box-height: 175px;
+//phone portrait
+$phone-height: 310px;
+$phone-height-small: 225px;
+//Retina
+$phone-retina-height:620px;
+$phone-retina-height-small: 450px;
+
+/*
+END-REDONDANCE
+*/
+
+
+footer{
+	.section{
+		min-width: 180px;
+	}
+}

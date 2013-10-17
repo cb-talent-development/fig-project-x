@@ -1,0 +1,862 @@
+{
+    "resourcePath": "/api",
+    "basePath": "http://localhost:8888/api",
+    "apis": [
+        {
+            "path": "/posts",
+            "description": "Returns a list of complete posts",
+            "operations": [
+                {
+                    "parameters": [
+                        {
+                            "name": "order",
+                            "description": "filter to order the posts",
+                            "defaultValue": "byDateDesc",
+                            "allowableValues": {
+                                "values": [
+                                    "byDateDesc",
+                                    "byDateAsc",
+                                    "byPopularity"
+                                ],
+                                "valueType": "LIST"
+                            },
+                            "required": false,
+                            "dataType": "string",
+                            "allowMultiple": false,
+                            "paramType": "query"
+                        },
+                        {
+                            "name": "limit",
+                            "description": "number of results to be returned",
+                            "defaultValue": "20",
+                            "required": false,
+                            "dataType": "integer",
+                            "allowMultiple": false,
+                            "paramType": "query",
+                            "minimum": "10",
+                            "maximum": "50"
+                        },
+                        {
+                            "name": "offset",
+                            "description": "offset for pagination purposes",
+                            "defaultValue": "0",
+                            "required": false,
+                            "dataType": "integer",
+                            "allowMultiple": false,
+                            "paramType": "query",
+                            "minimum": "0",
+                            "maximum": "50"
+                        }
+                    ],
+                    "summary": "Get a list of posts",
+                    "httpMethod": "GET",
+                    "errorResponses": [
+                        {
+                            "reason": "Bad Request: syntax error",
+                            "code": 400
+                        },
+                        {
+                            "reason": "Unauthorized: authentication required",
+                            "code": 401
+                        },
+                        {
+                            "reason": "Forbidden",
+                            "code": 403
+                        },
+                        {
+                            "reason": "No results found",
+                            "code": 404
+                        }
+                    ],
+                    "nickname": "getPost",
+                    "responseClass": "snippets"
+                }
+            ]
+        },
+        {
+            "path": "/posts/{id}",
+            "description": "Get all the data to be displayed on the view of a post",
+            "operations": [
+                {
+                    "parameters": [
+                        {
+                            "name": "id",
+                            "description": "unique identifier of the post",
+                            "required": false,
+                            "dataType": "integer",
+                            "allowMultiple": false,
+                            "paramType": "path"
+                        }
+                    ],
+                    "summary": "Get detailed information of a post",
+                    "httpMethod": "GET",
+                    "errorResponses": [
+                        {
+                            "reason": "Bad Request: syntax error",
+                            "code": 400
+                        },
+                        {
+                            "reason": "Unauthorized: authentication required",
+                            "code": 401
+                        },
+                        {
+                            "reason": "Forbidden",
+                            "code": 403
+                        },
+                        {
+                            "reason": "No results found",
+                            "code": 404
+                        }
+                    ],
+                    "nickname": "getPostById",
+                    "responseClass": "post"
+                }
+            ]
+        },
+        {
+            "path": "/posts/{id}/related",
+            "description": "Returns a list of posts related to the current one",
+            "operations": [
+                {
+                    "parameters": [
+                        {
+                            "name": "order",
+                            "description": "filter to order the posts",
+                            "defaultValue": "byDateDesc",
+                            "allowableValues": {
+                                "values": [
+                                    "byDateDesc",
+                                    "byDateAsc",
+                                    "byPopularity"
+                                ],
+                                "valueType": "LIST"
+                            },
+                            "required": false,
+                            "dataType": "string",
+                            "allowMultiple": false,
+                            "paramType": "query"
+                        },
+                        {
+                            "name": "limit",
+                            "description": "number of results to be returned",
+                            "defaultValue": "20",
+                            "required": false,
+                            "dataType": "integer",
+                            "allowMultiple": false,
+                            "paramType": "query",
+                            "minimum": "10",
+                            "maximum": "50"
+                        },
+                        {
+                            "name": "offset",
+                            "description": "offset for pagination purposes",
+                            "defaultValue": "0",
+                            "required": false,
+                            "dataType": "integer",
+                            "allowMultiple": false,
+                            "paramType": "query",
+                            "minimum": "0",
+                            "maximum": "50"
+                        }
+                    ],
+                    "summary": "Get a list of related posts",
+                    "httpMethod": "GET",
+                    "errorResponses": [
+                        {
+                            "reason": "Bad Request: syntax error",
+                            "code": 400
+                        },
+                        {
+                            "reason": "Unauthorized: authentication required",
+                            "code": 401
+                        },
+                        {
+                            "reason": "Forbidden",
+                            "code": 403
+                        },
+                        {
+                            "reason": "No results found",
+                            "code": 404
+                        }
+                    ],
+                    "nickname": "getArticle",
+                    "responseClass": "snippets"
+                }
+            ]
+        },
+        {
+            "path": "/posts/{id}/comments",
+            "description": "Get all the comments that were made on a particular post",
+            "operations": [
+                {
+                    "parameters": [
+                        {
+                            "name": "id",
+                            "description": "unique identifier of a post",
+                            "required": false,
+                            "dataType": "integer",
+                            "allowMultiple": false,
+                            "paramType": "path"
+                        },
+                        {
+                            "name": "order",
+                            "description": "filter to order the comments",
+                            "defaultValue": "byDateDesc",
+                            "allowableValues": {
+                                "values": [
+                                    "byDateDesc",
+                                    "byDateAsc"
+                                ],
+                                "valueType": "LIST"
+                            },
+                            "required": false,
+                            "dataType": "string",
+                            "allowMultiple": false,
+                            "paramType": "query"
+                        },
+                        {
+                            "name": "limit",
+                            "description": "number of comments to load",
+                            "defaultValue": "20",
+                            "required": false,
+                            "dataType": "integer",
+                            "allowMultiple": false,
+                            "paramType": "query",
+                            "minimum": "10"
+                        },
+                        {
+                            "name": "offset",
+                            "description": "offset for pagination purposes",
+                            "defaultValue": "0",
+                            "required": false,
+                            "dataType": "integer",
+                            "allowMultiple": false,
+                            "paramType": "query",
+                            "minimum": "0",
+                            "maximum": "50"
+                        }
+                    ],
+                    "summary": "Get the comments of a post",
+                    "httpMethod": "GET",
+                    "errorResponses": [
+                        {
+                            "reason": "Bad Request: syntax error",
+                            "code": 400
+                        },
+                        {
+                            "reason": "Unauthorized: authentication required",
+                            "code": 401
+                        },
+                        {
+                            "reason": "Forbidden",
+                            "code": 403
+                        },
+                        {
+                            "reason": "No results found",
+                            "code": 404
+                        }
+                    ],
+                    "nickname": "getArticleComments",
+                    "responseClass": "comments"
+                }
+            ]
+        }
+    ],
+    "models": {
+        "snippets": {
+            "uniqueItems": false,
+            "properties": {
+                "Posts": {
+                    "uniqueItems": false,
+                    "description": "The list of posts (small format)",
+                    "required": true,
+                    "type": "array",
+                    "items": {
+                        "$ref": "snippet",
+                        "uniqueItems": false,
+                        "required": true,
+                        "type": "any"
+                    }
+                }
+            }
+        },
+        "snippet": {
+            "uniqueItems": false,
+            "type": "any",
+            "properties": {
+                "id": {
+                    "uniqueItems": false,
+                    "description": "the unique identifier of the post",
+                    "type": "integer",
+                    "required": true
+                },
+                "Headline": {
+                    "uniqueItems": false,
+                    "description": "The headline of the post",
+                    "type": "string",
+                    "required": true
+                },
+                "ShortDescription": {
+                    "uniqueItems": false,
+                    "description": "The short description of the post",
+                    "type": "string",
+                    "required": false
+                },
+                "Categories": {
+                    "uniqueItems": false,
+                    "description": "The categories of the post (first is the color of the post)",
+                    "type": "array",
+                    "required": true,
+                    "items": {
+                        "$ref": "category",
+                        "uniqueItems": false,
+                        "required": true,
+                        "type": "any"
+                    }
+                },
+                "Type": {
+                    "uniqueItems": false,
+                    "description": "The type of the post (infographic, plain, video or promo)",
+                    "type": "string",
+                    "required": true
+                },
+                "Rating": {
+                    "uniqueItems": false,
+                    "description": "The rating of the post (0,1,2,3,4 or 5)",
+                    "type": "integer",
+                    "required": true
+                },
+                "Media": {
+                    "uniqueItems": false,
+                    "description": "the main media information (image/graphic/video)",
+                    "type": "any",
+                    "required": true,
+                    "items": {
+                        "$ref": "media",
+                        "uniqueItems": false,
+                        "required": true,
+                        "type": "any"
+                    }
+                },
+                "TargetURL": {
+                    "uniqueItems": false,
+                    "description": "Link to the full version of the article",
+                    "type": "string",
+                    "required": true
+                }
+            }
+        },
+        "posts": {
+            "uniqueItems": false,
+            "properties": {
+                "articles": {
+                    "uniqueItems": false,
+                    "description": "The list of posts",
+                    "required": true,
+                    "type": "array",
+                    "items": {
+                        "$ref": "post",
+                        "uniqueItems": false,
+                        "required": true,
+                        "type": "any"
+                    }
+                }
+            }
+        },
+        "post": {
+            "uniqueItems": false,
+            "type": "any",
+            "properties": {
+                "id": {
+                    "uniqueItems": false,
+                    "description": "the unique identifier of the post",
+                    "type": "integer",
+                    "required": true
+                },
+                "Headline": {
+                    "uniqueItems": false,
+                    "description": "The headline of the post",
+                    "type": "string",
+                    "required": true
+                },
+                "ShortDescription": {
+                    "uniqueItems": false,
+                    "description": "The short description of the post",
+                    "type": "string",
+                    "required": false
+                },
+                "PublicationDate": {
+                    "uniqueItems": false,
+                    "description": "The publication date of the post",
+                    "type": "string",
+                    "required": false
+                },
+                "BodyHtml": {
+                    "uniqueItems": false,
+                    "description": "The content containing formatting html tags (strong, italic, paragraphs, links) of the post",
+                    "type": "string",
+                    "required": true
+                },
+                "Author": {
+                    "uniqueItems": false,
+                    "description": "The author of the post",
+                    "type": "string",
+                    "required": true
+                },
+                "CareerPhase": {
+                    "uniqueItems": false,
+                    "description": "The career phase of the post",
+                    "type": "enum",
+                    "required": true
+                },
+                "Categories": {
+                    "uniqueItems": false,
+                    "description": "The categories of the post (first is the color of the post)",
+                    "type": "array",
+                    "required": true,
+                    "items": {
+                        "$ref": "category",
+                        "uniqueItems": false,
+                        "required": true,
+                        "type": "any"
+                    }
+                },
+                "OnetOccupation": {
+                    "uniqueItems": false,
+                    "description": "The occupation of the post",
+                    "type": "any",
+                    "required": true,
+                    "items": {
+                        "$ref": "onetOccupation",
+                        "uniqueItems": false,
+                        "required": true,
+                        "type": "any"
+                    }
+                },
+                "OnetIndustry": {
+                    "uniqueItems": false,
+                    "description": "The industry of the post",
+                    "type": "any",
+                    "required": true,
+                    "items": {
+                        "$ref": "onetIndustry",
+                        "uniqueItems": false,
+                        "required": true,
+                        "type": "any"
+                    }
+                },
+                "Type": {
+                    "uniqueItems": false,
+                    "description": "The type of the post (infographic, plain, video or promo)",
+                    "type": "string",
+                    "required": true
+                },
+                "Rating": {
+                    "uniqueItems": false,
+                    "description": "The rating of the post (0,1,2,3,4 or 5)",
+                    "type": "integer",
+                    "required": true
+                },
+                "CallToActionText": {
+                    "uniqueItems": false,
+                    "description": "Action text associated to a promo post (only for promos)",
+                    "type": "integer",
+                    "required": false
+                },
+                "DestinationUrl": {
+                    "uniqueItems": false,
+                    "description": "The destination of the promotion (only for promos)",
+                    "type": "integer",
+                    "required": false
+                },
+                "Media": {
+                    "uniqueItems": false,
+                    "description": "the main media information (image/graphic/video)",
+                    "type": "any",
+                    "required": true,
+                    "items": {
+                        "$ref": "media",
+                        "uniqueItems": false,
+                        "required": true,
+                        "type": "any"
+                    }
+                },
+                "SeoInfo": {
+                    "uniqueItems": false,
+                    "description": "the seo info of the post",
+                    "type": "any",
+                    "required": true,
+                    "items": {
+                        "$ref": "seoInfo",
+                        "uniqueItems": false,
+                        "required": true,
+                        "type": "any"
+                    }
+                }
+            }
+        },
+        "onetOccupation":{
+            "uniqueItems": false,
+            "properties": {
+                "Code": {
+                    "uniqueItems": false,
+                    "description": "The code of the occupation",
+                    "required": true,
+                    "type": "id"
+                },
+                "Name": {
+                    "uniqueItems": false,
+                    "description": "The name of the occupation",
+                    "required": true,
+                    "type": "string"
+                }
+            }
+        },
+        "onetIndustry":{
+            "uniqueItems": false,
+            "properties": {
+                "Code": {
+                    "uniqueItems": false,
+                    "description": "The code of the industry",
+                    "required": true,
+                    "type": "id"
+                },
+                "Name": {
+                    "uniqueItems": false,
+                    "description": "The name of the industry",
+                    "required": true,
+                    "type": "string"
+                }
+            }
+        },
+        "onetSkill":{
+            "uniqueItems": false,
+            "properties": {
+                "id": {
+                    "uniqueItems": false,
+                    "description": "The code of the skill",
+                    "required": true,
+                    "type": "id"
+                },
+                "CategoryName": {
+                    "uniqueItems": false,
+                    "description": "The name of the skill",
+                    "required": true,
+                    "type": "string"
+                }
+            }
+        },
+        "category":{
+            "uniqueItems": false,
+            "properties": {
+                "id": {
+                    "uniqueItems": false,
+                    "description": "The id of the category",
+                    "required": true,
+                    "type": "id"
+                },
+                "CategoryName": {
+                    "uniqueItems": false,
+                    "description": "The name of the category",
+                    "required": true,
+                    "type": "string"
+                }
+            }
+        },
+        "comments": {
+            "uniqueItems": false,
+            "properties": {
+                "Comments": {
+                    "uniqueItems": false,
+                    "description": "The list of comments",
+                    "required": true,
+                    "type": "array",
+                    "items": {
+                        "$ref": "comment",
+                        "uniqueItems": false,
+                        "required": true,
+                        "type": "any"
+                    }
+                }
+            }
+        },
+        "comment": {
+            "uniqueItems": false,
+            "type": "any",
+            "properties": {
+                "id": {
+                    "uniqueItems": false,
+                    "description": "the unique identifier of the comment",
+                    "required": true,
+                    "type": "string"
+                },
+                "Content": {
+                    "uniqueItems": false,
+                    "description": "the content of the comment",
+                    "required": true,
+                    "type": "string"
+                },
+                "Date": {
+                    "uniqueItems": false,
+                    "description": "the date of the comment",
+                    "required": true,
+                    "type": "string"
+                },
+                "User": {
+                    "uniqueItems": false,
+                    "description": "the user that commented",
+                    "required": true,
+                    "type": "any",
+                    "items": {
+                        "$ref": "user_basic",
+                        "uniqueItems": false,
+                        "required": true,
+                        "type": "any"
+                    }
+                },
+                "Replies":{
+                    "uniqueItems": false,
+                    "description": "the user that commented",
+                    "required": true,
+                    "type": "array",
+                    "items": {
+                        "$ref": "comment_reply",
+                        "uniqueItems": false,
+                        "required": true,
+                        "type": "any"
+                    } 
+                }
+            }
+        },
+        "comment_reply": {
+            "uniqueItems": false,
+            "type": "any",
+            "properties": {
+                "id": {
+                    "uniqueItems": false,
+                    "description": "the unique identifier of the comment",
+                    "required": true,
+                    "type": "string"
+                },
+                "id_parent": {
+                    "uniqueItems": false,
+                    "description": "the unique identifier of the parent comment",
+                    "required": true,
+                    "type": "string"
+                },
+                "Content": {
+                    "uniqueItems": false,
+                    "description": "the content of the comment",
+                    "required": true,
+                    "type": "string"
+                },
+                "Date": {
+                    "uniqueItems": false,
+                    "description": "the date of the comment",
+                    "required": true,
+                    "type": "string"
+                },
+                "User": {
+                    "uniqueItems": false,
+                    "description": "the user that commented",
+                    "required": true,
+                    "type": "any",
+                    "items": {
+                        "$ref": "user_basic",
+                        "uniqueItems": false,
+                        "required": true,
+                        "type": "any"
+                    }
+                },
+                "Replies":{
+                    "uniqueItems": false,
+                    "description": "the user that commented",
+                    "required": true,
+                    "type": "array",
+                    "items": {
+                        "$ref": "comment_reply_reply",
+                        "uniqueItems": false,
+                        "required": true,
+                        "type": "any"
+                    } 
+                }
+            }
+        },
+        "comment_reply_reply": {
+            "uniqueItems": false,
+            "type": "any",
+            "properties": {
+                "id": {
+                    "uniqueItems": false,
+                    "description": "the unique identifier of the comment",
+                    "required": true,
+                    "type": "string"
+                },
+                "id_parent": {
+                    "uniqueItems": false,
+                    "description": "the unique identifier of the parent comment",
+                    "required": true,
+                    "type": "string"
+                },
+                "id_super_parent": {
+                    "uniqueItems": false,
+                    "description": "the unique identifier of the parent's parent comment",
+                    "required": true,
+                    "type": "string"
+                },
+                "Content": {
+                    "uniqueItems": false,
+                    "description": "the content of the comment",
+                    "required": true,
+                    "type": "string"
+                },
+                "Date": {
+                    "uniqueItems": false,
+                    "description": "the date of the comment",
+                    "required": true,
+                    "type": "string"
+                },
+                "User": {
+                    "uniqueItems": false,
+                    "description": "the user that commented",
+                    "required": true,
+                    "type": "any",
+                    "items": {
+                        "$ref": "user_basic",
+                        "uniqueItems": false,
+                        "required": true,
+                        "type": "any"
+                    }
+                }
+            }
+        },
+        "user_basic": {
+            "uniqueItems": false,
+            "type": "any",
+            "properties": {
+                "id": {
+                    "uniqueItems": false,
+                    "description": "user's unique identifier",
+                    "required": true,
+                    "type": "integer"
+                },
+                "Name": {
+                    "uniqueItems": false,
+                    "description": "user's name",
+                    "required": true,
+                    "type": "string"
+                },
+                "Picture": {
+                    "uniqueItems": false,
+                    "description": "user's profile picture",
+                    "required": true,
+                    "type": "any",
+                    "items": {
+                        "$ref": "media",
+                        "uniqueItems": false,
+                        "required": true,
+                        "type": "any"
+                    }
+                }
+            }
+        },
+        "seoInfo": {
+            "uniqueItems": false,
+            "type": "any",
+            "properties": {
+                "id":{
+                },
+                "Title ": {
+                    "uniqueItems": false,
+                    "description": "meta-title of the post for SEO",
+                    "required": true,
+                    "type": "string"
+                },
+                "Description ": {
+                    "uniqueItems": false,
+                    "description": "meta-description of the post for SEO",
+                    "required": true,
+                    "type": "string"
+                },
+                "Keywords": {
+                    "uniqueItems": false,
+                    "description": "keywords of the post for SEO",
+                    "required": true,
+                    "type": "string"
+                }
+            }
+        },
+        "media": {
+            "uniqueItems": false,
+            "type": "any",
+            "properties": {
+                "id": {
+                    "uniqueItems": false,
+                    "description": "The unique identifier of the media",
+                    "type": "string",
+                    "required": true
+                },
+                "Type": {
+                    "uniqueItems": false,
+                    "description": "the media type (photo/video/infographic)",
+                    "required": true,
+                    "type": "string"
+                },
+                "Url": {
+                    "uniqueItems": false,
+                    "description": "URL of the media",
+                    "required": true,
+                    "type": "url"
+                },
+                "Width": {
+                    "uniqueItems": false,
+                    "description": "width of the placeholder",
+                    "required": true,
+                    "type": "integer"
+                },
+                "Height": {
+                    "uniqueItems": false,
+                    "description": "height of the placeholder",
+                    "required": true,
+                    "type": "integer"
+                },
+                "Posx": {
+                    "uniqueItems": false,
+                    "description": "x coordinate of the position of the media according to the top-left corner",
+                    "required": true,
+                    "type": "integer"
+                },
+                "Posy": {
+                    "uniqueItems": false,
+                    "description": "y coordinate of the position of the media according to the top-left corner",
+                    "required": true,
+                    "type": "integer"
+                },
+                "Scale": {
+                    "uniqueItems": false,
+                    "description": "the scale in percentage of the media (less or equal to 100)",
+                    "required": true,
+                    "type": "integer"
+                },
+                "Alt": {
+                    "uniqueItems": false,
+                    "description": "the alternate text",
+                    "required": true,
+                    "type": "string"
+                },
+                "Title": {
+                    "uniqueItems": false,
+                    "description": "the media information",
+                    "required": true,
+                    "type": "string"
+                },
+                "MetaTags": {
+                    "uniqueItems": false,
+                    "description": "the metatags of the media",
+                    "required": true,
+                    "type": "string"
+                }
+            }
+        }
+    }
+}

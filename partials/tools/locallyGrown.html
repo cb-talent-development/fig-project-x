@@ -1,0 +1,15 @@
+<div ng-controller="LocallyGrownCtr" class="locallyGrown">
+    <div class="selector">
+        <form onsubmit="showInfo('zip','distance')">
+        <div class="input-zip">
+            <input id="zip" class="input-button" type="text" placeholder="Input zip code (ex: 10021)">
+        </div>
+        <div ng-include="'partials/tools/parts/filters.html'"></div>
+        </form>
+        <div class="clear"></div>
+    </div>
+    <div id="map" class="mapbox"></div>
+    <div class="messages-jobs">153 Jobs found in your area</div>
+    <div class="arrow"><i class="arrow-down"></i></div>
+    <div ng-include="'partials/jobsRecommandations.html'"></div>
+</div>

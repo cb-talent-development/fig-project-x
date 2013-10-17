@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="CareerBuilder">
+<head>
+	<title>CareerBuilder</title>
+	
+	<link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/maxime.css" rel="stylesheet" type="text/css">
+	<link href="css/fonts.css" rel="stylesheet" type="text/css">
+    <link href="css/icon.css" rel="stylesheet" type="text/css">
+    <link href='http://api.tiles.mapbox.com/mapbox.js/v1.0.0/mapbox.css' rel='stylesheet' />
+
+	<script type="text/javascript" src="lib/jQuery/jQuery.js"></script>
+	<script src="lib/angular/angular.min.js"></script>
+    <script type="text/javascript" src="lib/angular/angular-sanitize.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/maxime.js"></script>
+    <script src="js/functions.js"></script>
+    <script src="js/career.js "></script>
+	<script src="js/directives.js"></script>
+    <!-- Controllers -->
+    <script src="js/controllers/tools.js"></script>
+	<script src="js/controllers/header.js"></script>
+	<script src="js/controllers/home.js"></script>
+	<script src="js/controllers/post.js"></script>
+    <script src="js/controllers/tooldashboard.js"></script>
+    <script src="js/controllers/dashboard.js"></script>
+
+    <!-- /Controllers -->
+    <!-- CareerScape -->
+    <script src="js/careerScape/keysplines.js"></script>
+    <script src="js/careerScape/animate.js"></script>
+    <script src="js/careerScape/edge.js"></script>
+    <script src="js/careerScape/node.js"></script>
+    <script src="js/careerScape/careerTree.js"></script>
+    <script src="js/careerScape/canvasDesinator.js"></script>
+    <script src="js/careerScape/constructFunctions.js"></script> 
+    <!-- /CareerScape-->
+    <!-- LocallyGrown -->
+    <script src='http://api.tiles.mapbox.com/mapbox.js/v1.0.0/mapbox.js'></script>
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script src="js/localyGrown/topojson.js"></script> 
+    <script src="js/localyGrown/functions-zip.js"></script> 
+    <!--<script src="js/localyGrown/functions-counties.js"></script>-->
+    <!-- /LocallyGrown -->
+	<script src="js/app.js"></script>
+	<script src="lib/bootstrap/js/bootstrap.min.js "></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="check article-check"></div>
+    <header ng-include="'partials/header.html'" ng-controller="HeaderCtr"></header>
+	<div ng-view></div>
+    <footer ng-include="'partials/footer.html'"></footer>
+</body>
+</html>

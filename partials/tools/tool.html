@@ -1,0 +1,61 @@
+<div ng-include="'partials/path.html'"></div>
+<div class="tool">
+    <div class="header-tool">
+        <div class="title-social">
+            <div class="{{logo}}"></div>  
+            <div class="title"><span class="part-1">{{title.part1}}</span><span class="part2">{{title.part2}}</span></div>
+            <div class="icon-arrow-right-big-grey"></div>  
+            <div class="social">
+                <span class='icon-social icon-save' onclick="apparition($('.save-section'))"></span>
+                <span class='icon-bar-grey'></span>
+                <span class='icon-social icon-mail'></span>
+                <span class='icon-social icon-twitter'></span>
+                <span class='icon-social icon-google'></span>
+                <span class='icon-social icon-face'></span>
+                <span class='icon-social icon-link'></span>
+            </div>
+        </div>
+        <div class="help">
+            <i class="icon-help icon-question-big" onclick="apparition($('.help-section'))"></i>    
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div ng-include="template"></div>
+    <div class="help-section dialog">
+        <div class="background" onclick="disparition($('.help-section'))"></div>
+        <div class="section">
+            <div class="header">
+                <span class"title">{{help.Title}}</span><i class="close icon-x-black" onclick="disparition($('.help-section'))"></i>
+            </div>
+            <table class="intro">
+            <tr>
+                <td>
+                <div class="{{logo}} logo"></div>
+                </td>
+                <td>
+                    <strong>{{help.Intro.Title}}</strong>&nbsp;<span>{{help.Intro.Content}}</span>
+                </td>
+            </tr>
+            </table>
+            <div class="content" ng-bind-html-unsafe="help.Content"></div>
+        </div>
+    </div>
+    <div class="save-section dialog">
+        <div class="background" onclick="disparition($('.save-section'))"></div>
+        <div class="section">
+            <div class="header">
+                <span class"title">Save&nbsp;{{title.part1}}{{title.part2}}&nbsp;Search</span><i class="close icon-x-black" onclick="disparition($('.save-section'))"></i>
+            </div>
+            <div class="content">
+                <div class="icon-locallygrown-save logo"></div>
+                <div class="search-button">
+                    <input placeholder="Search"/>
+                </div>
+            </div>
+            <div class="footer-dialog">
+                <div class="button green" onclick="">Save & Close</div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+</div>

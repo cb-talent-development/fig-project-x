@@ -1,0 +1,324 @@
+{
+    "resourcePath": "/api",
+    "basePath": "http://localhost:8888/api",
+    "apis": [
+        {
+            "path": "/occupations",
+            "description": "List of occupations",
+            "operations": [
+                {
+                    "parameters": [
+                        {
+                            "name": "order",
+                            "description": "filter that changes the ordering of the content",
+                            "defaultValue": "a-z",
+                            "allowableValues": {
+                                "values": [
+                                    "a-z",
+                                    "z-a"
+                                ],
+                                "valueType": "LIST"
+                            },
+                            "required": false,
+                            "dataType": "string",
+                            "allowMultiple": false,
+                            "paramType": "query"
+                        },
+                        {
+                            "name": "limit",
+                            "description": "number of results to be returned",
+                            "defaultValue": "10",
+                            "required": false,
+                            "dataType": "integer",
+                            "allowMultiple": false,
+                            "paramType": "query",
+                            "minimum": "10"
+                        },
+                        {
+                            "name": "offset",
+                            "description": "offset of the search",
+                            "defaultValue": "0",
+                            "required": false,
+                            "dataType": "integer",
+                            "allowMultiple": false,
+                            "paramType": "query",
+                            "minimum": "0"
+                        }
+                    ],
+                    "nickname": "getOccupations",
+                    "responseClass": "occupations",
+                    "summary": "Retrieve a list of occupations",
+                    "httpMethod": "GET",
+                    "errorResponses": [
+                        {
+                            "reason": "Bad Request: syntax error",
+                            "code": 400
+                        },
+                        {
+                            "reason": "Unauthorized: authentication required",
+                            "code": 401
+                        },
+                        {
+                            "reason": "Forbidden",
+                            "code": 403
+                        },
+                        {
+                            "reason": "No results found",
+                            "code": 404
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "path": "/occupations/{id}",
+            "description": "details of an occupation",
+            "operations": [
+                {
+                    "parameters": [
+                        {
+                            "name": "onet",
+                            "description": "onet code of the occupation",
+                            "required": false,
+                            "dataType": "string",
+                            "allowMultiple": false,
+                            "paramType": "path"
+                        }
+                    ],
+                    "nickname": "getOccupation",
+                    "responseClass": "occupation",
+                    "summary": "Get information of the occupation",
+                    "httpMethod": "GET",
+                    "errorResponses": [
+                        {
+                            "reason": "Bad Request: syntax error",
+                            "code": 400
+                        },
+                        {
+                            "reason": "Unauthorized: authentication required",
+                            "code": 401
+                        },
+                        {
+                            "reason": "Forbidden",
+                            "code": 403
+                        },
+                        {
+                            "reason": "No results found",
+                            "code": 404
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "path": "/occupations/{id}/careerScape",
+            "description": "career scape for an occupation",
+            "operations": [
+                {
+                    "parameters": [
+                        {
+                            "name": "id",
+                            "description": "id of the occupation",
+                            "required": false,
+                            "dataType": "string",
+                            "allowMultiple": false,
+                            "paramType": "path"
+                        }
+                    ],
+                    "nickname": "getCareerScapeOccupation",
+                    "responseClass": "careerScape",
+                    "summary": "career scape for an occupation",
+                    "httpMethod": "GET",
+                    "errorResponses": [
+                        {
+                            "reason": "Bad Request: syntax error",
+                            "code": 400
+                        },
+                        {
+                            "reason": "Unauthorized: authentication required",
+                            "code": 401
+                        },
+                        {
+                            "reason": "Forbidden",
+                            "code": 403
+                        },
+                        {
+                            "reason": "No results found",
+                            "code": 404
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "models": {
+        "careerScape": {
+            "uniqueItems": false,
+            "properties": {
+                "max_salary": {
+                    "uniqueItems": false,
+                    "description": "The maximum salary found in the current graph",
+                    "required": true,
+                    "type": "number"
+                },
+                "min_salary": {
+                    "uniqueItems": false,
+                    "description": "The minimum salary found in the current graph",
+                    "required": true,
+                    "type": "number"
+                },
+                "max_stability": {
+                    "uniqueItems": false,
+                    "description": "The maximum stability found in the current graph",
+                    "required": true,
+                    "type": "number"
+                },
+                "max_statibility": {
+                    "uniqueItems": false,
+                    "description": "The minimum stability found in the current graph",
+                    "required": true,
+                    "type": "number"
+                },
+                "primary_node": {
+                    "uniqueItems": false,
+                    "description": "The root of the tree",
+                    "required": true,
+                    "type": "any",
+                    "items": {
+                        "$ref": "primary_node",
+                        "uniqueItems": false,
+                        "required": true,
+                        "type": "any"
+                    }
+                }
+            }
+        },
+        "primary_node": {
+            "uniqueItems": false,
+            "properties": {
+                "title": {
+                    "uniqueItems": false,
+                    "description": "The title of the occupation",
+                    "required": true,
+                    "type": "string"
+                },
+                "salary_growth": {
+                    "uniqueItems": false,
+                    "description": "The salary growth value",
+                    "required": true,
+                    "type": "number"
+                },
+                "stability_growth": {
+                    "uniqueItems": false,
+                    "description": "The stability growth value",
+                    "required": true,
+                    "type": "number"
+                },
+                "nodes": {
+                    "uniqueItems": false,
+                    "description": "The secondary nodes of the tree (exactly five)",
+                    "required": true,
+                    "type": "array",
+                    "items": {
+                        "$ref": "secondary_node",
+                        "uniqueItems": false,
+                        "required": true,
+                        "type": "any"
+                    }
+                }
+            }
+        },
+        "secondary_node": {
+            "uniqueItems": false,
+            "properties": {
+                "title": {
+                    "uniqueItems": false,
+                    "description": "The title of the occupation",
+                    "required": true,
+                    "type": "string"
+                },
+                "salary_growth": {
+                    "uniqueItems": false,
+                    "description": "The salary growth value",
+                    "required": true,
+                    "type": "number"
+                },
+                "stability_growth": {
+                    "uniqueItems": false,
+                    "description": "The stability growth value",
+                    "required": true,
+                    "type": "number"
+                },
+                "nodes": {
+                    "uniqueItems": false,
+                    "description": "The tertiary nodes related to the current node (exactly three)",
+                    "required": true,
+                    "type": "array",
+                    "items": {
+                        "$ref": "tertiary_node",
+                        "uniqueItems": false,
+                        "required": true,
+                        "type": "any"
+                    }
+                }
+            }
+        },
+        "tertiary_node": {
+            "uniqueItems": false,
+            "properties": {
+                "title": {
+                    "uniqueItems": false,
+                    "description": "The title of the occupation",
+                    "required": true,
+                    "type": "string"
+                },
+                "salary_growth": {
+                    "uniqueItems": false,
+                    "description": "The salary growth value",
+                    "required": true,
+                    "type": "number"
+                },
+                "stability_growth": {
+                    "uniqueItems": false,
+                    "description": "The stability growth value",
+                    "required": true,
+                    "type": "number"
+                }
+            }
+        },
+        "occupations": {
+            "uniqueItems": false,
+            "properties": {
+                "occupations": {
+                    "uniqueItems": false,
+                    "description": "The list of occupations",
+                    "required": true,
+                    "type": "array",
+                    "items": {
+                        "$ref": "occupation",
+                        "uniqueItems": false,
+                        "required": true,
+                        "type": "any"
+                    }
+                }
+            }
+        },
+        "occupation": {
+            "uniqueItems": false,
+            "properties": {
+                "id": {
+                    "uniqueItems": false,
+                    "description": "The unique identifier of the occupation",
+                    "type": "integer",
+                    "required": true
+                },
+                "Name": {
+                    "uniqueItems": false,
+                    "description": "The name of the occupation",
+                    "type": "string",
+                    "required": true
+                }
+            }
+        }
+    }
+}

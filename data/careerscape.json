@@ -1,0 +1,123 @@
+{
+"min_salary":-100,
+"max_salary":100,
+"min_stability":-100,
+"max_stability":100,
+"main_node":{
+    "title": "Sales Manager",
+    "salary_growth": 60,
+    "stability_growth": 80,
+    "nodes": [
+		{
+			"title": "Financial Manager",
+			"salary_growth": 30,
+			"stability_growth": -10,
+			"nodes": [
+					{
+						"title": "Medical Secretaires",
+						"salary_growth": 25,
+						"stability_growth": 35
+					},
+					{
+						"title": "Market Research Analyst",
+						"salary_growth": 48,
+						"stability_growth": 89
+					},
+					{
+						"title": "Public Relations Managers",
+						"salary_growth": -88,
+						"stability_growth": -69
+					}
+				]
+		},
+		{
+			"title": "First-Line Supervisors of Non-Retail Sales Workers",
+			"salary_growth": 54,
+			"stability_growth": 12,
+			"nodes": [
+					{
+						"title": "Medical Secretaires",
+						"salary_growth": 78,
+						"stability_growth": -78
+					},
+					{
+						"title": "Market Research Analyst",
+						"salary_growth": 25,
+						"stability_growth": 67
+					},
+					{
+						"title": "Public Relations Managers",
+						"salary_growth": 88,
+						"stability_growth": 90
+					}
+				]
+		},
+		{
+			"title": "Information Technology Managers",
+			"salary_growth": 78,
+			"stability_growth": 75,
+			"nodes": [
+					{
+						"title": "Medical Secretaires",
+						"salary_growth": 24,
+						"stability_growth": 36
+					},
+					{
+						"title": "Market Research Analyst",
+						"salary_growth": -66,
+						"stability_growth": 67
+					},
+					{
+						"title": "Public Relations Managers",
+						"salary_growth": -40,
+						"stability_growth": 96
+					}
+				]
+		},
+		{
+			"title": "Human Resources Managers",
+			"salary_growth": 40,
+			"stability_growth": 78,
+			"nodes": [
+					{
+						"title": "Medical Secretaires",
+						"salary_growth": 29,
+						"stability_growth": 30
+					},
+					{
+						"title": "Market Research Analyst",
+						"salary_growth": 76,
+						"stability_growth": 24
+					},
+					{
+						"title": "Public Relations Managers",
+						"salary_growth": 36,
+						"stability_growth": -25
+					}
+				]
+		},
+		{
+			"title": "Public Relations and Fundraising Managers",
+			"salary_growth": -12,
+			"stability_growth": 76,
+			"nodes": [
+					{
+						"title": "Medical Secretaires",
+						"salary_growth": 67,
+						"stability_growth": 45
+					},
+					{
+						"title": "Market Research Analyst",
+						"salary_growth": 19,
+						"stability_growth": 34
+					},
+					{
+						"title": "Public Relations Managers",
+						"salary_growth": 12,
+						"stability_growth": 78
+					}
+				]
+		}
+	]
+}
+}

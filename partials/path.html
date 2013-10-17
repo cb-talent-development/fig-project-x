@@ -1,0 +1,26 @@
+<div class="container">
+		<div class="page-header">
+			<h1>
+                <img id="profil-pic" class="img-circle img-responsive" ng-src="{{user=='none' && 'img/me.jpg'|| user.Media.Url}}" alt="photo de profile"/>
+                <span ng-switch on="user">
+                        <span ng-switch-when="none">
+                            <span class="grey link toggleMenu">Sign Up&nbsp;<i class="icon-bigarrow-bottom-grey"></i>&nbsp;/
+                                <div class="subMenu" ng-include="'partials/home-submenu.html'"></div>
+                            </span>
+                            <span ng-repeat="path in paths">
+                                  <span class="{{path.color}}">{{path.txt}}</span>
+                            </span>
+                        </span>
+                        <span ng-switch-default>
+                            <span class="orange link toggleMenu">{{user.Name}}&nbsp;<i class="icon-bigarrow-bottom-orange"></i>&nbsp;/
+                                <div class="subMenu" ng-include="'partials/home-submenu.html'"></div>
+                            </span>
+                            <span ng-repeat="path in paths">
+                                  <span class="{{path.color}}">{{path.txt}}</span>
+                            </span>
+                        </span>
+                </span>
+            </h1>
+		</div>
+</div>
+<div class="background-zig"></div>

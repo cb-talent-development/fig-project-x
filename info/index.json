@@ -1,0 +1,31 @@
+{
+"apiVersion":"0.2",
+"swaggerVersion":"1.1",
+"apis":
+    [
+        {
+            "path":"/home",
+            "description":"Home"
+        },
+        {
+            "path":"/posts",
+            "description":"Articles"
+        },
+        {
+            "path":"/industries",
+            "description":"Industries"
+        },
+        {
+            "path":"/occupations",
+            "description":"Occupations"
+        },
+        {
+            "path":"/jobRecommendations",
+            "description":"Job Recommendations"
+        },
+        {
+            "path":"/categories",
+            "description":"Categories"
+        }
+	]
+}

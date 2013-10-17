@@ -1,0 +1,23 @@
+<div class="job-results">
+    <div class="title">{{jobResulstTitle}}</div>
+    <div class="content">
+        <i class="icon-arrow-left-big-blue" ng-click="pageClick(pageJobs.currentPage-1,'jobs','.job-results')"></i>
+        <div class="scrollable-content">
+            <div class="scrollable">
+                <div class="job-recommandation link" ng-repeat="job in jobs">
+                    <a href="/"></a>
+                    <div class="icon-suitcase-job"></div>
+                    <div class="title-job">{{job.Title}}</div>
+                    <div class="info-job">
+                        <div>{{job.Company}}</div>
+                        <div>{{job.City}},&nbsp;{{job.State}}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pages">
+            <div class="ball" ng-class="{true: 'activated',false: 'nick' }[n==1]" ng-click="pageClick(n,'jobs','.job-results')" ng-repeat="n in pageJobs.pages"></div>
+        </div>
+        <i class="icon-arrow-right-big-blue" ng-click="pageClick(pageJobs.currentPage+1,'jobs','.job-results')"></i>
+    </div>
+</div>

@@ -1,0 +1,469 @@
+{
+    "resourcePath": "/api",
+    "basePath": "http://localhost:8888/api",
+    "apis": [
+        {
+            "path": "/home",
+            "description": "Posts to be displayed on the homepage",
+            "operations": [
+                {
+                    "parameters": [
+                        {
+                            "name": "order",
+                            "description": "filter that changes the ordering of the content",
+                            "defaultValue": "byDateDesc",
+                            "allowableValues": {
+                                "values": [
+                                    "byDateDesc",
+                                    "byDateAsc",
+                                    "byPopularirty"
+                                ],
+                                "valueType": "LIST"
+                            },
+                            "required": false,
+                            "dataType": "string",
+                            "allowMultiple": false,
+                            "paramType": "query"
+                        },
+                        {
+                            "name": "content",
+                            "description": "filter that displays content by type",
+                            "defaultValue": "all",
+                            "allowableValues": {
+                                "values": [
+                                    "all",
+                                    "article",
+                                    "infographic",
+                                    "video",
+                                    "promo"
+                                ],
+                                "valueType": "LIST"
+                            },
+                            "required": false,
+                            "dataType": "string",
+                            "allowMultiple": false,
+                            "paramType": "query"
+                        },
+                        {
+                            "name": "categoryId",
+                            "description": "filter that displays the content according to a particular category.",
+                            "defaultValue": "all",
+                            "required": false,
+                            "dataType": "integer",
+                            "allowMultiple": false,
+                            "paramType": "query"
+                        },
+                        {
+                            "name": "industryId",
+                            "description": "filter that displays the content according to a particular industry (ONet Code).",
+                            "defaultValue": "all",
+                            "required": false,
+                            "dataType": "string",
+                            "allowMultiple": false,
+                            "paramType": "query"
+                        },
+                        {
+                            "name": "jobPhase",
+                            "description": "filter that change the desplays content according to a job phase",
+                            "defaultValue": "all",
+                            "allowableValues": {
+                                "values": [
+                                    "all",
+                                    "discovery",
+                                    "landing",
+                                    "looking",
+                                    "growing"
+                                ],
+                                "valueType": "LIST"
+                            },
+                            "required": false,
+                            "dataType": "string",
+                            "allowMultiple": false,
+                            "paramType": "query"
+                        },
+                        {
+                            "name": "limit",
+                            "description": "number of weeks to be returned",
+                            "defaultValue": "3",
+                            "required": false,
+                            "dataType": "integer",
+                            "allowMultiple": false,
+                            "paramType": "query",
+                            "minimum": "1",
+                            "maximum": "10"
+                        },
+                        {
+                            "name": "offset",
+                            "description": "offset in number of weeks",
+                            "defaultValue": "0",
+                            "required": false,
+                            "dataType": "integer",
+                            "allowMultiple": false,
+                            "paramType": "query",
+                            "minimum": "0"
+                        }
+                    ],
+                    "summary": "Retrieve the content to be displayed on the homepage",
+                    "httpMethod": "GET",
+                    "errorResponses": [
+                        {
+                            "reason": "Bad Request: syntax error",
+                            "code": 400
+                        },
+                        {
+                            "reason": "Unauthorized: authentication required",
+                            "code": 401
+                        },
+                        {
+                            "reason": "Forbidden",
+                            "code": 403
+                        },
+                        {
+                            "reason": "No results found",
+                            "code": 404
+                        }
+                    ],
+                    "nickname": "getHomepage",
+                    "responseClass": "home"
+                }
+            ]
+        }
+    ],
+    "models": {
+        "home": {
+            "uniqueItems": false,
+            "properties": {
+                "Homepage": {
+                    "uniqueItems": false,
+                    "description": "The list of weeks to display",
+                    "required": true,
+                    "type": "any",
+                    "items": {
+                        "$ref": "weeks",
+                        "uniqueItems": false,
+                        "required": true,
+                        "type": "any"
+                    }
+                }
+            }
+        },
+        "weeks": {
+            "uniqueItems": false,
+            "properties": {
+                "Week": {
+                    "uniqueItems": false,
+                    "description": "The list of elements for each week (tools, posts and/or promos)",
+                    "required": true,
+                    "type": "array",
+                    "items": {
+                        "$ref": "week",
+                        "uniqueItems": false,
+                        "required": true,
+                        "type": "any"
+                    }
+                }
+            }
+        },
+        "week": {
+            "uniqueItems": false,
+            "properties": {
+                "Posts": {
+                    "uniqueItems": false,
+                    "description": "The list of elements for each week (tools, posts and/or promos)",
+                    "required": true,
+                    "type": "array",
+                    "items": {
+                        "$ref": "post",
+                        "uniqueItems": false,
+                        "required": true,
+                        "type": "any"
+                    }
+                }
+            }
+        },
+        "post": {
+            "uniqueItems": false,
+            "type": "array",
+            "properties": {
+                "id": {
+                    "uniqueItems": false,
+                    "description": "the unique identifier of the post",
+                    "type": "integer",
+                    "required": true
+                },
+                "Template": {
+                    "uniqueItems": false,
+                    "description": "The template of the element (A1/A2/A3)",
+                    "type": "string",
+                    "required": true
+                },
+                "CommentCount": {
+                    "uniqueItems": false,
+                    "description": "the number of comments",
+                    "type": "integer",
+                    "required": true
+                },
+                "Rating": {
+                    "uniqueItems": false,
+                    "description": "rating of the element",
+                    "type": "integer",
+                    "required": true
+                },
+                "Sticky": {
+                    "uniqueItems": false,
+                    "description": "whether the promo sticks on the homepage",
+                    "type": "boolean",
+                    "required": false
+                },
+                "Posx": {
+                    "uniqueItems": false,
+                    "description": "The position in x in de admin panel",
+                    "type": "integer",
+                    "required": true
+                },
+                "Posy": {
+                    "uniqueItems": false,
+                    "description": "The position in y in de admin panel",
+                    "type": "integer",
+                    "required": true
+                },
+                "Headline": {
+                    "uniqueItems": false,
+                    "description": "The headline of the post",
+                    "type": "string",
+                    "required": true
+                },
+                "ShortDescription": {
+                    "uniqueItems": false,
+                    "description": "The short description of the post",
+                    "type": "string",
+                    "required": false
+                },
+                "PublicationDate": {
+                    "uniqueItems": false,
+                    "description": "The publication date of the post",
+                    "type": "string",
+                    "required": false
+                },
+                "Author": {
+                    "uniqueItems": false,
+                    "description": "The author of the post",
+                    "type": "string",
+                    "required": true
+                },
+                "CareerPhase": {
+                    "uniqueItems": false,
+                    "description": "The career phase of the post",
+                    "type": "enum",
+                    "required": true
+                },
+                "Categories": {
+                    "uniqueItems": false,
+                    "description": "The categories of the post (first is the color of the post)",
+                    "type": "array",
+                    "required": true,
+                    "items": {
+                        "$ref": "category",
+                        "uniqueItems": false,
+                        "required": true,
+                        "type": "any"
+                    }
+                },
+                "OnetOccupation": {
+                    "uniqueItems": false,
+                    "description": "The occupation of the post",
+                    "type": "any",
+                    "required": true,
+                    "items": {
+                        "$ref": "onetOccupation",
+                        "uniqueItems": false,
+                        "required": true,
+                        "type": "any"
+                    }
+                },
+                "OnetIndustry": {
+                    "uniqueItems": false,
+                    "description": "The industry of the post",
+                    "type": "any",
+                    "required": true,
+                    "items": {
+                        "$ref": "onetIndustry",
+                        "uniqueItems": false,
+                        "required": true,
+                        "type": "any"
+                    }
+                },
+                "Type": {
+                    "uniqueItems": false,
+                    "description": "The type of the post (infographic, plain, video or promo)",
+                    "type": "string",
+                    "required": true
+                },
+                "Rating": {
+                    "uniqueItems": false,
+                    "description": "The rating of the post (0,1,2,3,4 or 5)",
+                    "type": "integer",
+                    "required": true
+                },
+                "CallToActionText": {
+                    "uniqueItems": false,
+                    "description": "Action text associated to a promo post (only for promos)",
+                    "type": "integer",
+                    "required": false
+                },
+                "Media": {
+                    "uniqueItems": false,
+                    "description": "the main media information (image/graphic/video)",
+                    "type": "any",
+                    "required": true,
+                    "items": {
+                        "$ref": "media",
+                        "uniqueItems": false,
+                        "required": true,
+                        "type": "any"
+                    }
+                }
+            }
+        },
+        "media": {
+            "uniqueItems": false,
+            "type": "any",
+            "properties": {
+                "id": {
+                    "uniqueItems": false,
+                    "description": "The unique identifier of the media",
+                    "type": "string",
+                    "required": true
+                },
+                "Type": {
+                    "uniqueItems": false,
+                    "description": "the media type (photo/video/infographic)",
+                    "required": true,
+                    "type": "string"
+                },
+                "Url": {
+                    "uniqueItems": false,
+                    "description": "URL of the media",
+                    "required": true,
+                    "type": "url"
+                },
+                "Width": {
+                    "uniqueItems": false,
+                    "description": "width of the placeholder",
+                    "required": true,
+                    "type": "integer"
+                },
+                "Height": {
+                    "uniqueItems": false,
+                    "description": "height of the placeholder",
+                    "required": true,
+                    "type": "integer"
+                },
+                "Posx": {
+                    "uniqueItems": false,
+                    "description": "x coordinate of the position of the media according to the top-left corner",
+                    "required": true,
+                    "type": "integer"
+                },
+                "Posy": {
+                    "uniqueItems": false,
+                    "description": "y coordinate of the position of the media according to the top-left corner",
+                    "required": true,
+                    "type": "integer"
+                },
+                "Scale": {
+                    "uniqueItems": false,
+                    "description": "the scale in percentage of the media (less or equal to 100)",
+                    "required": true,
+                    "type": "integer"
+                },
+                "Alt": {
+                    "uniqueItems": false,
+                    "description": "the alternate text",
+                    "required": true,
+                    "type": "string"
+                },
+                "Title": {
+                    "uniqueItems": false,
+                    "description": "the media information",
+                    "required": true,
+                    "type": "string"
+                },
+                "MetaTags": {
+                    "uniqueItems": false,
+                    "description": "the metatags of the media",
+                    "required": true,
+                    "type": "string"
+                }
+            }
+        },
+        "category": {
+            "uniqueItems": false,
+            "properties": {
+                "id": {
+                    "uniqueItems": false,
+                    "description": "The unique identifier of the category",
+                    "type": "integer",
+                    "required": true
+                },
+                "CategoryName": {
+                    "uniqueItems": false,
+                    "description": "The name of the category",
+                    "type": "string",
+                    "required": true
+                }
+            }
+        },
+        "onetOccupation":{
+            "uniqueItems": false,
+            "properties": {
+                "Code": {
+                    "uniqueItems": false,
+                    "description": "The code of the occupation",
+                    "required": true,
+                    "type": "id"
+                },
+                "Name": {
+                    "uniqueItems": false,
+                    "description": "The name of the occupation",
+                    "required": true,
+                    "type": "string"
+                }
+            }
+        },
+        "onetIndustry":{
+            "uniqueItems": false,
+            "properties": {
+                "Code": {
+                    "uniqueItems": false,
+                    "description": "The code of the industry",
+                    "required": true,
+                    "type": "id"
+                },
+                "Name": {
+                    "uniqueItems": false,
+                    "description": "The name of the industry",
+                    "required": true,
+                    "type": "string"
+                }
+            }
+        },
+        "onetSkill":{
+            "uniqueItems": false,
+            "properties": {
+                "id": {
+                    "uniqueItems": false,
+                    "description": "The code of the skill",
+                    "required": true,
+                    "type": "id"
+                },
+                "CategoryName": {
+                    "uniqueItems": false,
+                    "description": "The name of the skill",
+                    "required": true,
+                    "type": "string"
+                }
+            }
+        }
+    }
+}

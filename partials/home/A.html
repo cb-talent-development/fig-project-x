@@ -1,0 +1,21 @@
+<div class='box-{{post.classColor }} a{{post.Template}}'>
+    <div class="{{post.pictured}}">
+        <h2 class='title'>{{post.Headline}}</h2>
+        <div class="left">
+            <div class="img" style="background: url('{{post.Media.Url}}') center no-repeat; background-size: 240%;"></div>
+           <h3 class='subtitle'>/{{post.Category.Name | uppercase}}</h3>
+        </div>
+        <div class="right">
+            <div class='comment'>
+                <i class='icon-talk-{{post.classColor}}'></i>
+                <div class='commentCount'>{{post.CommentCount}} COMMENTS </div>
+                <i class='icon-bar-grey'></i>
+                <span ng-repeat="star in post.stars">
+                    <i class='{{star.class}} star'></i>
+                </span>
+           </div>
+            <div class='text'>{{post.ShortDescription}}</div>
+        </div>
+    </div>
+	<a class='transp-link' href='#/posts/{{post.Id}}'></a>
+</div>

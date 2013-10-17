@@ -1,0 +1,1706 @@
+{
+    "Homepage": {
+        "Weeks": [
+            {
+                "Posts": [
+                    {
+                        "Id": 1,
+                        "OrganizationId": 0,
+                        "Headline": "How to prepare for a career in sales or customer service.",
+                        "ShortDescription": "Cars, trains, trucks, planes and boats: they're the vehicule that move us and our economy, driving the market forward and delivering products and goods to consumers. As the economy continue to recover, more workers are nedded to keep transportation and delivery needs mt and moving",
+                        "PublicationDate": "2013-09-14T00:00:00-04:00",
+                        "PublicationStatus": null,
+                        "PublicationVisibility": null,
+                        "ExpirationDate": "0001-01-01T00:00:00",
+                        "Author": "Pierre raymond",
+                        "CopyrightOwner": null,
+                        "CopyrightDate": "0001-01-01T00:00:00",
+                        "BodyPlainText": null,
+                        "BodyHtml": null,
+                        "RelatedPosts": null,
+                        "SeoInfo": null,
+                        "AllowComments": false,
+                        "AllowTrackbackPingbacks": false,
+                        "CareerPhase": "Landing a Job",
+                        "Categories": [
+                            {
+                                "Id": 1,
+                                "Name": "interview"
+                            }
+                        ],
+                        "PostTags": null,
+                        "Sticky": false,
+                        "DisplaySize": null,
+                        "IsoLanguageCode": null,
+                        "OnetIndustry": {
+                            "Code": "id",
+                            "Name": "Bain"
+                        },
+                        "OnetOccupation": {
+                            "Code": "id",
+                            "Name": "Business"
+                        },
+                        "OnetSkills": null,
+                        "AdminNotes": null,
+                        "Template": 1,
+                        "Rating": 3,
+                        "Posx": 0,
+                        "Posy": 0,
+                        "Media": {
+                            "id": "string",
+                            "Type": "photo",
+                            "Url": "img/personnes.jpg",
+                            "Width": "363",
+                            "Height": "258",
+                            "Posx": "0",
+                            "Posy": "0",
+                            "Scale": "1",
+                            "Alt": "string",
+                            "Title": "string",
+                            "MetaTags": "string"
+                        },
+                        "CommentCount": 13,
+                        "OnetIndustryName": null,
+                        "OnetOccupationName": null,
+                        "Type": "article"
+                    },
+                    {
+                        "Id": 2,
+                        "OrganizationId": 0,
+                        "Headline": "Four types of interviewers ans how to make them love you.",
+                        "ShortDescription": "Even if you've prepared for the standard interview questions and feel ready to ace your job interview, there will be some",
+                        "PublicationDate": "2013-09-14T00:00:00-04:00",
+                        "PublicationStatus": null,
+                        "PublicationVisibility": null,
+                        "ExpirationDate": "0001-01-01T00:00:00",
+                        "Author": "Pierre raymond",
+                        "CopyrightOwner": null,
+                        "CopyrightDate": "0001-01-01T00:00:00",
+                        "BodyPlainText": null,
+                        "BodyHtml": null,
+                        "RelatedPosts": null,
+                        "SeoInfo": null,
+                        "AllowComments": false,
+                        "AllowTrackbackPingbacks": false,
+                        "CareerPhase": "Landing a Job",
+                        "Categories": [
+                            {
+                                "Id": 1,
+                                "Name": "Salary Negotiation"
+                            }
+                        ],
+                        "PostTags": null,
+                        "Sticky": false,
+                        "DisplaySize": null,
+                        "IsoLanguageCode": null,
+                        "OnetIndustry": {
+                            "Code": "id",
+                            "Name": "Bain"
+                        },
+                        "OnetOccupation": {
+                            "Code": "id",
+                            "Name": "Business"
+                        },
+                        "OnetSkills": null,
+                        "AdminNotes": null,
+                        "Template": 3,
+                        "Rating": 3,
+                        "Posx": 0,
+                        "Posy": 2,
+                        "Media": {
+                            "id": "string",
+                            "Type": "photo",
+                            "Url": "img/personnes.jpg",
+                            "Width": "363",
+                            "Height": "258",
+                            "Posx": "0",
+                            "Posy": "0",
+                            "Scale": "1",
+                            "Alt": "string",
+                            "Title": "string",
+                            "MetaTags": "string"
+                        },
+                        "CommentCount": 13,
+                        "OnetIndustryName": null,
+                        "OnetOccupationName": null,
+                        "Type": "article"
+                    },
+                    {
+                        "Id": 3,
+                        "OrganizationId": 0,
+                        "Headline": "Social media showdown: how each site can get you closer to the job you want.",
+                        "ShortDescription": "Social-media websites aren't just for catching up with friends anymore. Many companies have embraced social media",
+                        "PublicationDate": "2013-09-14T00:00:00-04:00",
+                        "PublicationStatus": null,
+                        "PublicationVisibility": null,
+                        "ExpirationDate": "0001-01-01T00:00:00",
+                        "Author": "Pierre raymond",
+                        "CopyrightOwner": null,
+                        "CopyrightDate": "0001-01-01T00:00:00",
+                        "BodyPlainText": null,
+                        "BodyHtml": null,
+                        "RelatedPosts": null,
+                        "SeoInfo": null,
+                        "AllowComments": false,
+                        "AllowTrackbackPingbacks": false,
+                        "CareerPhase": "Landing a Job",
+                        "Categories": [
+                            {
+                                "Id": 1,
+                                "Name": "Salary Negotiation"
+                            }
+                        ],
+                        "PostTags": null,
+                        "Sticky": false,
+                        "DisplaySize": null,
+                        "IsoLanguageCode": null,
+                        "OnetIndustry": {
+                            "Code": "id",
+                            "Name": "Bain"
+                        },
+                        "OnetOccupation": {
+                            "Code": "id",
+                            "Name": "Business"
+                        },
+                        "OnetSkills": null,
+                        "AdminNotes": null,
+                        "Template": 3,
+                        "Rating": 3,
+                        "Posx": 1,
+                        "Posy": 2,
+                        "Media": {
+                            "id": "string",
+                            "Type": "photo",
+                            "Url": "",
+                            "Width": "363",
+                            "Height": "258",
+                            "Posx": "0",
+                            "Posy": "0",
+                            "Scale": "1",
+                            "Alt": "string",
+                            "Title": "string",
+                            "MetaTags": "string"
+                        },
+                        "CommentCount": 13,
+                        "OnetIndustryName": null,
+                        "OnetOccupationName": null,
+                        "Type": "article"
+                    },
+                    {
+                        "Id": 4,
+                        "OrganizationId": 0,
+                        "Headline": "Six transportation jobs that can move your career.",
+                        "ShortDescription": "Cars, trains, trucks, planes and boats: they're the vehicule that move us and our economy, driving the market forward and delivering products and goods to consumers. As the economy continue to recover, more workers are nedded to keep transportation and delivery needs mt and moving",
+                        "PublicationDate": "2013-09-14T00:00:00-04:00",
+                        "PublicationStatus": null,
+                        "PublicationVisibility": null,
+                        "ExpirationDate": "0001-01-01T00:00:00",
+                        "Author": "Pierre raymond",
+                        "CopyrightOwner": null,
+                        "CopyrightDate": "0001-01-01T00:00:00",
+                        "BodyPlainText": null,
+                        "BodyHtml": null,
+                        "RelatedPosts": null,
+                        "SeoInfo": null,
+                        "AllowComments": false,
+                        "AllowTrackbackPingbacks": false,
+                        "CareerPhase": "Landing a Job",
+                        "Categories": [
+                            {
+                                "Id": 1,
+                                "Name": "Salary Negotiation"
+                            }
+                        ],
+                        "PostTags": null,
+                        "Sticky": false,
+                        "DisplaySize": null,
+                        "IsoLanguageCode": null,
+                        "OnetIndustry": {
+                            "Code": "id",
+                            "Name": "Bain"
+                        },
+                        "OnetOccupation": {
+                            "Code": "id",
+                            "Name": "Business"
+                        },
+                        "OnetSkills": null,
+                        "AdminNotes": null,
+                        "Template": 3,
+                        "Rating": 3,
+                        "Posx": 2,
+                        "Posy": 2,
+                        "Media": null,
+                        "CommentCount": 13,
+                        "OnetIndustryName": null,
+                        "OnetOccupationName": null,
+                        "Type": "article"
+                    },
+                    {
+                        "Id": 5,
+                        "OrganizationId": 0,
+                        "Headline": "Social media showdown: how each site can get you closer to the job you want.",
+                        "ShortDescription": "Social-media websites aren't just for catching up with friends anymore. Many companies have embraced social media",
+                        "PublicationDate": "2013-09-14T00:00:00-04:00",
+                        "PublicationStatus": null,
+                        "PublicationVisibility": null,
+                        "ExpirationDate": "0001-01-01T00:00:00",
+                        "Author": "Pierre raymond",
+                        "CopyrightOwner": null,
+                        "CopyrightDate": "0001-01-01T00:00:00",
+                        "BodyPlainText": null,
+                        "BodyHtml": null,
+                        "RelatedPosts": null,
+                        "SeoInfo": null,
+                        "AllowComments": false,
+                        "AllowTrackbackPingbacks": false,
+                        "CareerPhase": "Landing a Job",
+                        "Categories": [
+                            {
+                                "Id": 1,
+                                "Name": "Salary Negotiation"
+                            }
+                        ],
+                        "PostTags": null,
+                        "Sticky": false,
+                        "DisplaySize": null,
+                        "IsoLanguageCode": null,
+                        "OnetIndustry": {
+                            "Code": "id",
+                            "Name": "Bain"
+                        },
+                        "OnetOccupation": {
+                            "Code": "id",
+                            "Name": "Business"
+                        },
+                        "OnetSkills": null,
+                        "AdminNotes": null,
+                        "Template": 2,
+                        "Rating": 3,
+                        "Posx": 2,
+                        "Posy": 4,
+                        "Media": {
+                            "id": "string",
+                            "Type": "photo",
+                            "Url": "img/personnes.jpg",
+                            "Width": "363",
+                            "Height": "258",
+                            "Posx": "0",
+                            "Posy": "0",
+                            "Scale": "1",
+                            "Alt": "string",
+                            "Title": "string",
+                            "MetaTags": "string"
+                        },
+                        "CommentCount": 13,
+                        "OnetIndustryName": null,
+                        "OnetOccupationName": null,
+                        "Type": "article"
+                    },
+                    {
+                        "Id": 6,
+                        "OrganizationId": 0,
+                        "Headline": "Six transportation jobs that can move your career.",
+                        "ShortDescription": "\"Cars, trains, trucks, planes and boats: they're the vehicule that move us and our economy, driving the market forward and delivering products and goods to consumers. As the economy continue to recover, more workers are nedded to keep transportation and delivery needs mt and moving",
+                        "PublicationDate": "2013-09-14T00:00:00-04:00",
+                        "PublicationStatus": null,
+                        "PublicationVisibility": null,
+                        "ExpirationDate": "0001-01-01T00:00:00",
+                        "Author": "Pierre raymond",
+                        "CopyrightOwner": null,
+                        "CopyrightDate": "0001-01-01T00:00:00",
+                        "BodyPlainText": null,
+                        "BodyHtml": null,
+                        "RelatedPosts": null,
+                        "SeoInfo": null,
+                        "AllowComments": false,
+                        "AllowTrackbackPingbacks": false,
+                        "CareerPhase": "Landing a Job",
+                        "Categories": [
+                            {
+                                "Id": 1,
+                                "Name": "Salary Negotiation"
+                            }
+                        ],
+                        "PostTags": null,
+                        "Sticky": false,
+                        "DisplaySize": null,
+                        "IsoLanguageCode": null,
+                        "OnetIndustry": {
+                            "Code": "id",
+                            "Name": "Bain"
+                        },
+                        "OnetOccupation": {
+                            "Code": "id",
+                            "Name": "Business"
+                        },
+                        "OnetSkills": null,
+                        "AdminNotes": null,
+                        "Template": 2,
+                        "Rating": 3,
+                        "Posx": 0,
+                        "Posy": 4,
+                        "Media": {
+                            "id": "string",
+                            "Type": "photo",
+                            "Url": "img/personnes.jpg",
+                            "Width": "363",
+                            "Height": "258",
+                            "Posx": "0",
+                            "Posy": "0",
+                            "Scale": "1",
+                            "Alt": "string",
+                            "Title": "string",
+                            "MetaTags": "string"
+                        },
+                        "CommentCount": 13,
+                        "OnetIndustryName": null,
+                        "OnetOccupationName": null,
+                        "Type": "article"
+                    },
+                    {
+                        "Id": 7,
+                        "OrganizationId": 0,
+                        "Headline": "How to prepare for a career in sales or customer service.",
+                        "ShortDescription": "By now, job seekers should know the two cardinal rules of interview questions: 1. When the interviewer asks if you have any questions, have something to ask. 2. You should walk in the interview room prepared to answer the classic questions, such as: 'What is your biggest weakness?', or 'Where do you see yourself in five years?' But there is an often-overlooked rule that you should remember for your own",
+                        "PublicationDate": "2013-09-14T00:00:00-04:00",
+                        "PublicationStatus": null,
+                        "PublicationVisibility": null,
+                        "ExpirationDate": "0001-01-01T00:00:00",
+                        "Author": "Pierre raymond",
+                        "CopyrightOwner": null,
+                        "CopyrightDate": "0001-01-01T00:00:00",
+                        "BodyPlainText": null,
+                        "BodyHtml": null,
+                        "RelatedPosts": null,
+                        "SeoInfo": null,
+                        "AllowComments": false,
+                        "AllowTrackbackPingbacks": false,
+                        "CareerPhase": "Landing a Job",
+                        "Categories": [
+                            {
+                                "Id": 1,
+                                "Name": "Salary Negotiation"
+                            }
+                        ],
+                        "PostTags": null,
+                        "Sticky": false,
+                        "DisplaySize": null,
+                        "IsoLanguageCode": null,
+                        "OnetIndustry": {
+                            "Code": "id",
+                            "Name": "Bain"
+                        },
+                        "OnetOccupation": {
+                            "Code": "id",
+                            "Name": "Business"
+                        },
+                        "OnetSkills": null,
+                        "AdminNotes": null,
+                        "Template": 2,
+                        "Rating": 3,
+                        "Posx": 1,
+                        "Posy": 4,
+                        "Media": null,
+                        "CommentCount": 13,
+                        "OnetIndustryName": null,
+                        "OnetOccupationName": null,
+                        "Type": "article"
+                    }
+                ]
+            },
+            {
+                "Posts": [
+                    {
+                        "Id": 1,
+                        "OrganizationId": 0,
+                        "Headline": "How to prepare for a career in sales or customer service.",
+                        "ShortDescription": "Cars, trains, trucks, planes and boats: they're the vehicule that move us and our economy, driving the market forward and delivering products and goods to consumers. As the economy continue to recover, more workers are nedded to keep transportation and delivery needs mt and moving",
+                        "PublicationDate": "2013-09-14T00:00:00-04:00",
+                        "PublicationStatus": null,
+                        "PublicationVisibility": null,
+                        "ExpirationDate": "0001-01-01T00:00:00",
+                        "Author": "Pierre raymond",
+                        "CopyrightOwner": null,
+                        "CopyrightDate": "0001-01-01T00:00:00",
+                        "BodyPlainText": null,
+                        "BodyHtml": null,
+                        "RelatedPosts": null,
+                        "SeoInfo": null,
+                        "AllowComments": false,
+                        "AllowTrackbackPingbacks": false,
+                        "CareerPhase": "Landing a Job",
+                        "Categories": [
+                            {
+                                "Id": 1,
+                                "Name": "Social Media"
+                            }
+                        ],
+                        "PostTags": null,
+                        "Sticky": false,
+                        "DisplaySize": null,
+                        "IsoLanguageCode": null,
+                        "OnetIndustry": {
+                            "Code": "id",
+                            "Name": "Bain"
+                        },
+                        "OnetOccupation": {
+                            "Code": "id",
+                            "Name": "Business"
+                        },
+                        "OnetSkills": null,
+                        "AdminNotes": null,
+                        "Template": 1,
+                        "Rating": 3,
+                        "Posx": 0,
+                        "Posy": 0,
+                        "Media": {
+                            "id": "string",
+                            "Type": "photo",
+                            "Url": "img/personnes.jpg",
+                            "Width": "363",
+                            "Height": "258",
+                            "Posx": "0",
+                            "Posy": "0",
+                            "Scale": "1",
+                            "Alt": "string",
+                            "Title": "string",
+                            "MetaTags": "string"
+                        },
+                        "CommentCount": 13,
+                        "OnetIndustryName": null,
+                        "OnetOccupationName": null,
+                        "Type": "infographic"
+                    },
+                    {
+                        "Id": 2,
+                        "OrganizationId": 0,
+                        "Headline": "Four types of interviewers ans how to make them love you.",
+                        "ShortDescription": "Even if you've prepared for the standard interview questions and feel ready to ace your job interview, there will be some",
+                        "PublicationDate": "2013-09-14T00:00:00-04:00",
+                        "PublicationStatus": null,
+                        "PublicationVisibility": null,
+                        "ExpirationDate": "0001-01-01T00:00:00",
+                        "Author": "Pierre raymond",
+                        "CopyrightOwner": null,
+                        "CopyrightDate": "0001-01-01T00:00:00",
+                        "BodyPlainText": null,
+                        "BodyHtml": null,
+                        "RelatedPosts": null,
+                        "SeoInfo": null,
+                        "AllowComments": false,
+                        "AllowTrackbackPingbacks": false,
+                        "CareerPhase": "Landing a Job",
+                        "Categories": [
+                            {
+                                "Id": 1,
+                                "Name": "Salary Negotiation"
+                            }
+                        ],
+                        "PostTags": null,
+                        "Sticky": false,
+                        "DisplaySize": null,
+                        "IsoLanguageCode": null,
+                        "OnetIndustry": {
+                            "Code": "id",
+                            "Name": "Bain"
+                        },
+                        "OnetOccupation": {
+                            "Code": "id",
+                            "Name": "Business"
+                        },
+                        "OnetSkills": null,
+                        "AdminNotes": null,
+                        "Template": 3,
+                        "Rating": 3,
+                        "Posx": 0,
+                        "Posy": 2,
+                        "Media": {
+                            "id": "string",
+                            "Type": "photo",
+                            "Url": "img/personnes.jpg",
+                            "Width": "363",
+                            "Height": "258",
+                            "Posx": "0",
+                            "Posy": "0",
+                            "Scale": "1",
+                            "Alt": "string",
+                            "Title": "string",
+                            "MetaTags": "string"
+                        },
+                        "CommentCount": 13,
+                        "OnetIndustryName": null,
+                        "OnetOccupationName": null,
+                        "Type": "infographic"
+                    },
+                    {
+                        "Id": 3,
+                        "OrganizationId": 0,
+                        "Headline": "Social media showdown: how each site can get you closer to the job you want.",
+                        "ShortDescription": "Social-media websites aren't just for catching up with friends anymore. Many companies have embraced social media",
+                        "PublicationDate": "2013-09-14T00:00:00-04:00",
+                        "PublicationStatus": null,
+                        "PublicationVisibility": null,
+                        "ExpirationDate": "0001-01-01T00:00:00",
+                        "Author": "Pierre raymond",
+                        "CopyrightOwner": null,
+                        "CopyrightDate": "0001-01-01T00:00:00",
+                        "BodyPlainText": null,
+                        "BodyHtml": null,
+                        "RelatedPosts": null,
+                        "SeoInfo": null,
+                        "AllowComments": false,
+                        "AllowTrackbackPingbacks": false,
+                        "CareerPhase": "Landing a Job",
+                        "Categories": [
+                            {
+                                "Id": 1,
+                                "Name": "Salary Negotiation"
+                            }
+                        ],
+                        "PostTags": null,
+                        "Sticky": false,
+                        "DisplaySize": null,
+                        "IsoLanguageCode": null,
+                        "OnetIndustry": {
+                            "Code": "id",
+                            "Name": "Bain"
+                        },
+                        "OnetOccupation": {
+                            "Code": "id",
+                            "Name": "Business"
+                        },
+                        "OnetSkills": null,
+                        "AdminNotes": null,
+                        "Template": 3,
+                        "Rating": 3,
+                        "Posx": 1,
+                        "Posy": 2,
+                        "Media": {
+                            "id": "string",
+                            "Type": "photo",
+                            "Url": "img/personnes.jpg",
+                            "Width": "363",
+                            "Height": "258",
+                            "Posx": "0",
+                            "Posy": "0",
+                            "Scale": "1",
+                            "Alt": "string",
+                            "Title": "string",
+                            "MetaTags": "string"
+                        },
+                        "CommentCount": 13,
+                        "OnetIndustryName": null,
+                        "OnetOccupationName": null,
+                        "Type": "infographic"
+                    },
+                    {
+                        "Id": 4,
+                        "OrganizationId": 0,
+                        "Headline": "Six transportation jobs that can move your career.",
+                        "ShortDescription": "Cars, trains, trucks, planes and boats: they're the vehicule that move us and our economy, driving the market forward and delivering products and goods to consumers. As the economy continue to recover, more workers are nedded to keep transportation and delivery needs mt and moving",
+                        "PublicationDate": "2013-09-14T00:00:00-04:00",
+                        "PublicationStatus": null,
+                        "PublicationVisibility": null,
+                        "ExpirationDate": "0001-01-01T00:00:00",
+                        "Author": "Pierre raymond",
+                        "CopyrightOwner": null,
+                        "CopyrightDate": "0001-01-01T00:00:00",
+                        "BodyPlainText": null,
+                        "BodyHtml": null,
+                        "RelatedPosts": null,
+                        "SeoInfo": null,
+                        "AllowComments": false,
+                        "AllowTrackbackPingbacks": false,
+                        "CareerPhase": "Landing a Job",
+                        "Categories": [
+                            {
+                                "Id": 1,
+                                "Name": "Salary Negotiation"
+                            }
+                        ],
+                        "PostTags": null,
+                        "Sticky": false,
+                        "DisplaySize": null,
+                        "IsoLanguageCode": null,
+                        "OnetIndustry": {
+                            "Code": "id",
+                            "Name": "Bain"
+                        },
+                        "OnetOccupation": {
+                            "Code": "id",
+                            "Name": "Business"
+                        },
+                        "OnetSkills": null,
+                        "AdminNotes": null,
+                        "Template": 3,
+                        "Rating": 3,
+                        "Posx": 2,
+                        "Posy": 2,
+                        "Media": {
+                            "id": "string",
+                            "Type": "photo",
+                            "Url": "img/personnes.jpg",
+                            "Width": "363",
+                            "Height": "258",
+                            "Posx": "0",
+                            "Posy": "0",
+                            "Scale": "1",
+                            "Alt": "string",
+                            "Title": "string",
+                            "MetaTags": "string"
+                        },
+                        "CommentCount": 13,
+                        "OnetIndustryName": null,
+                        "OnetOccupationName": null,
+                        "Type": "infographic"
+                    },
+                    {
+                        "Id": 5,
+                        "OrganizationId": 0,
+                        "Headline": "Social media showdown: how each site can get you closer to the job you want.",
+                        "ShortDescription": "Social-media websites aren't just for catching up with friends anymore. Many companies have embraced social media",
+                        "PublicationDate": "2013-09-14T00:00:00-04:00",
+                        "PublicationStatus": null,
+                        "PublicationVisibility": null,
+                        "ExpirationDate": "0001-01-01T00:00:00",
+                        "Author": "Pierre raymond",
+                        "CopyrightOwner": null,
+                        "CopyrightDate": "0001-01-01T00:00:00",
+                        "BodyPlainText": null,
+                        "BodyHtml": null,
+                        "RelatedPosts": null,
+                        "SeoInfo": null,
+                        "AllowComments": false,
+                        "AllowTrackbackPingbacks": false,
+                        "CareerPhase": "Landing a Job",
+                        "Categories": [
+                            {
+                                "Id": 1,
+                                "Name": "Salary Negotiation"
+                            }
+                        ],
+                        "PostTags": null,
+                        "Sticky": false,
+                        "DisplaySize": null,
+                        "IsoLanguageCode": null,
+                        "OnetIndustry": {
+                            "Code": "id",
+                            "Name": "Bain"
+                        },
+                        "OnetOccupation": {
+                            "Code": "id",
+                            "Name": "Business"
+                        },
+                        "OnetSkills": null,
+                        "AdminNotes": null,
+                        "Template": 2,
+                        "Rating": 3,
+                        "Posx": 2,
+                        "Posy": 4,
+                        "Media": {
+                            "id": "string",
+                            "Type": "photo",
+                            "Url": "img/personnes.jpg",
+                            "Width": "363",
+                            "Height": "258",
+                            "Posx": "0",
+                            "Posy": "0",
+                            "Scale": "1",
+                            "Alt": "string",
+                            "Title": "string",
+                            "MetaTags": "string"
+                        },
+                        "CommentCount": 13,
+                        "OnetIndustryName": null,
+                        "OnetOccupationName": null,
+                        "Type": "infographic"
+                    },
+                    {
+                        "Id": 6,
+                        "OrganizationId": 0,
+                        "Headline": "Six transportation jobs that can move your career.",
+                        "ShortDescription": "\"Cars, trains, trucks, planes and boats: they're the vehicule that move us and our economy, driving the market forward and delivering products and goods to consumers. As the economy continue to recover, more workers are nedded to keep transportation and delivery needs mt and moving",
+                        "PublicationDate": "2013-09-14T00:00:00-04:00",
+                        "PublicationStatus": null,
+                        "PublicationVisibility": null,
+                        "ExpirationDate": "0001-01-01T00:00:00",
+                        "Author": "Pierre raymond",
+                        "CopyrightOwner": null,
+                        "CopyrightDate": "0001-01-01T00:00:00",
+                        "BodyPlainText": null,
+                        "BodyHtml": null,
+                        "RelatedPosts": null,
+                        "SeoInfo": null,
+                        "AllowComments": false,
+                        "AllowTrackbackPingbacks": false,
+                        "CareerPhase": "Landing a Job",
+                        "Categories": [
+                            {
+                                "Id": 1,
+                                "Name": "Salary Negotiation"
+                            }
+                        ],
+                        "PostTags": null,
+                        "Sticky": false,
+                        "DisplaySize": null,
+                        "IsoLanguageCode": null,
+                        "OnetIndustry": {
+                            "Code": "id",
+                            "Name": "Bain"
+                        },
+                        "OnetOccupation": {
+                            "Code": "id",
+                            "Name": "Business"
+                        },
+                        "OnetSkills": null,
+                        "AdminNotes": null,
+                        "Template": 2,
+                        "Rating": 3,
+                        "Posx": 0,
+                        "Posy": 4,
+                        "Media": {
+                            "id": "string",
+                            "Type": "photo",
+                            "Url": "img/personnes.jpg",
+                            "Width": "363",
+                            "Height": "258",
+                            "Posx": "0",
+                            "Posy": "0",
+                            "Scale": "1",
+                            "Alt": "string",
+                            "Title": "string",
+                            "MetaTags": "string"
+                        },
+                        "CommentCount": 13,
+                        "OnetIndustryName": null,
+                        "OnetOccupationName": null,
+                        "Type": "infographic"
+                    },
+                    {
+                        "Id": 7,
+                        "OrganizationId": 0,
+                        "Headline": "How to prepare for a career in sales or customer service.",
+                        "ShortDescription": "By now, job seekers should know the two cardinal rules of interview questions: 1. When the interviewer asks if you have any questions, have something to ask. 2. You should walk in the interview room prepared to answer the classic questions, such as: 'What is your biggest weakness?', or 'Where do you see yourself in five years?' But there is an often-overlooked rule that you should remember for your own",
+                        "PublicationDate": "2013-09-14T00:00:00-04:00",
+                        "PublicationStatus": null,
+                        "PublicationVisibility": null,
+                        "ExpirationDate": "0001-01-01T00:00:00",
+                        "Author": "Pierre raymond",
+                        "CopyrightOwner": null,
+                        "CopyrightDate": "0001-01-01T00:00:00",
+                        "BodyPlainText": null,
+                        "BodyHtml": null,
+                        "RelatedPosts": null,
+                        "SeoInfo": null,
+                        "AllowComments": false,
+                        "AllowTrackbackPingbacks": false,
+                        "CareerPhase": "Landing a Job",
+                        "Categories": [
+                            {
+                                "Id": 1,
+                                "Name": "Salary Negotiation"
+                            }
+                        ],
+                        "PostTags": null,
+                        "Sticky": false,
+                        "DisplaySize": null,
+                        "IsoLanguageCode": null,
+                        "OnetIndustry": {
+                            "Code": "id",
+                            "Name": "Bain"
+                        },
+                        "OnetOccupation": {
+                            "Code": "id",
+                            "Name": "Business"
+                        },
+                        "OnetSkills": null,
+                        "AdminNotes": null,
+                        "Template": 2,
+                        "Rating": 3,
+                        "Posx": 1,
+                        "Posy": 4,
+                        "Media": {
+                            "id": "string",
+                            "Type": "photo",
+                            "Url": "img/personnes.jpg",
+                            "Width": "363",
+                            "Height": "258",
+                            "Posx": "0",
+                            "Posy": "0",
+                            "Scale": "1",
+                            "Alt": "string",
+                            "Title": "string",
+                            "MetaTags": "string"
+                        },
+                        "CommentCount": 13,
+                        "OnetIndustryName": null,
+                        "OnetOccupationName": null,
+                        "Type": "infographic"
+                    }
+                ]
+            },
+            {
+                "Posts": [
+                    {
+                        "Id": 1,
+                        "OrganizationId": 0,
+                        "Headline": "How to prepare for a career in sales or customer service.",
+                        "ShortDescription": "Cars, trains, trucks, planes and boats: they're the vehicule that move us and our economy, driving the market forward and delivering products and goods to consumers. As the economy continue to recover, more workers are nedded to keep transportation and delivery needs mt and moving",
+                        "PublicationDate": "2013-09-14T00:00:00-04:00",
+                        "PublicationStatus": null,
+                        "PublicationVisibility": null,
+                        "ExpirationDate": "0001-01-01T00:00:00",
+                        "Author": "Pierre raymond",
+                        "CopyrightOwner": null,
+                        "CopyrightDate": "0001-01-01T00:00:00",
+                        "BodyPlainText": null,
+                        "BodyHtml": null,
+                        "RelatedPosts": null,
+                        "SeoInfo": null,
+                        "AllowComments": false,
+                        "AllowTrackbackPingbacks": false,
+                        "CareerPhase": "Landing a Job",
+                        "Categories": [
+                            {
+                                "Id": 1,
+                                "Name": "Salary Negotiation"
+                            }
+                        ],
+                        "PostTags": null,
+                        "Sticky": false,
+                        "DisplaySize": null,
+                        "IsoLanguageCode": null,
+                        "OnetIndustry": {
+                            "Code": "id",
+                            "Name": "Bain"
+                        },
+                        "OnetOccupation": {
+                            "Code": "id",
+                            "Name": "Business"
+                        },
+                        "OnetSkills": null,
+                        "AdminNotes": null,
+                        "Template": 1,
+                        "Rating": 3,
+                        "Posx": 0,
+                        "Posy": 0,
+                        "Media": {
+                            "id": "string",
+                            "Type": "photo",
+                            "Url": "img/personnes.jpg",
+                            "Width": "363",
+                            "Height": "258",
+                            "Posx": "0",
+                            "Posy": "0",
+                            "Scale": "1",
+                            "Alt": "string",
+                            "Title": "string",
+                            "MetaTags": "string"
+                        },
+                        "CommentCount": 13,
+                        "OnetIndustryName": null,
+                        "OnetOccupationName": null,
+                        "Type": "video"
+                    },
+                    {
+                        "Id": 2,
+                        "OrganizationId": 0,
+                        "Headline": "Four types of interviewers ans how to make them love you.",
+                        "ShortDescription": "Even if you've prepared for the standard interview questions and feel ready to ace your job interview, there will be some",
+                        "PublicationDate": "2013-09-14T00:00:00-04:00",
+                        "PublicationStatus": null,
+                        "PublicationVisibility": null,
+                        "ExpirationDate": "0001-01-01T00:00:00",
+                        "Author": "Pierre raymond",
+                        "CopyrightOwner": null,
+                        "CopyrightDate": "0001-01-01T00:00:00",
+                        "BodyPlainText": null,
+                        "BodyHtml": null,
+                        "RelatedPosts": null,
+                        "SeoInfo": null,
+                        "AllowComments": false,
+                        "AllowTrackbackPingbacks": false,
+                        "CareerPhase": "Landing a Job",
+                        "Categories": [
+                            {
+                                "Id": 1,
+                                "Name": "Salary Negotiation"
+                            }
+                        ],
+                        "PostTags": null,
+                        "Sticky": false,
+                        "DisplaySize": null,
+                        "IsoLanguageCode": null,
+                        "OnetIndustry": {
+                            "Code": "id",
+                            "Name": "Bain"
+                        },
+                        "OnetOccupation": {
+                            "Code": "id",
+                            "Name": "Business"
+                        },
+                        "OnetSkills": null,
+                        "AdminNotes": null,
+                        "Template": 3,
+                        "Rating": 3,
+                        "Posx": 0,
+                        "Posy": 2,
+                        "Media": {
+                            "id": "string",
+                            "Type": "photo",
+                            "Url": "img/personnes.jpg",
+                            "Width": "363",
+                            "Height": "258",
+                            "Posx": "0",
+                            "Posy": "0",
+                            "Scale": "1",
+                            "Alt": "string",
+                            "Title": "string",
+                            "MetaTags": "string"
+                        },
+                        "CommentCount": 13,
+                        "OnetIndustryName": null,
+                        "OnetOccupationName": null,
+                        "Type": "video"
+                    },
+                    {
+                        "Id": 3,
+                        "OrganizationId": 0,
+                        "Headline": "Social media showdown: how each site can get you closer to the job you want.",
+                        "ShortDescription": "Social-media websites aren't just for catching up with friends anymore. Many companies have embraced social media",
+                        "PublicationDate": "2013-09-14T00:00:00-04:00",
+                        "PublicationStatus": null,
+                        "PublicationVisibility": null,
+                        "ExpirationDate": "0001-01-01T00:00:00",
+                        "Author": "Pierre raymond",
+                        "CopyrightOwner": null,
+                        "CopyrightDate": "0001-01-01T00:00:00",
+                        "BodyPlainText": null,
+                        "BodyHtml": null,
+                        "RelatedPosts": null,
+                        "SeoInfo": null,
+                        "AllowComments": false,
+                        "AllowTrackbackPingbacks": false,
+                        "CareerPhase": "Landing a Job",
+                        "Categories": [
+                            {
+                                "Id": 1,
+                                "Name": "Salary Negotiation"
+                            }
+                        ],
+                        "PostTags": null,
+                        "Sticky": false,
+                        "DisplaySize": null,
+                        "IsoLanguageCode": null,
+                        "OnetIndustry": {
+                            "Code": "id",
+                            "Name": "Bain"
+                        },
+                        "OnetOccupation": {
+                            "Code": "id",
+                            "Name": "Business"
+                        },
+                        "OnetSkills": null,
+                        "AdminNotes": null,
+                        "Template": 3,
+                        "Rating": 3,
+                        "Posx": 1,
+                        "Posy": 2,
+                        "Media": {
+                            "id": "string",
+                            "Type": "photo",
+                            "Url": "img/personnes.jpg",
+                            "Width": "363",
+                            "Height": "258",
+                            "Posx": "0",
+                            "Posy": "0",
+                            "Scale": "1",
+                            "Alt": "string",
+                            "Title": "string",
+                            "MetaTags": "string"
+                        },
+                        "CommentCount": 13,
+                        "OnetIndustryName": null,
+                        "OnetOccupationName": null,
+                        "Type": "video"
+                    },
+                    {
+                        "Id": 4,
+                        "OrganizationId": 0,
+                        "Headline": "Six transportation jobs that can move your career.",
+                        "ShortDescription": "Cars, trains, trucks, planes and boats: they're the vehicule that move us and our economy, driving the market forward and delivering products and goods to consumers. As the economy continue to recover, more workers are nedded to keep transportation and delivery needs mt and moving",
+                        "PublicationDate": "2013-09-14T00:00:00-04:00",
+                        "PublicationStatus": null,
+                        "PublicationVisibility": null,
+                        "ExpirationDate": "0001-01-01T00:00:00",
+                        "Author": "Pierre raymond",
+                        "CopyrightOwner": null,
+                        "CopyrightDate": "0001-01-01T00:00:00",
+                        "BodyPlainText": null,
+                        "BodyHtml": null,
+                        "RelatedPosts": null,
+                        "SeoInfo": null,
+                        "AllowComments": false,
+                        "AllowTrackbackPingbacks": false,
+                        "CareerPhase": "Landing a Job",
+                        "Categories": [
+                            {
+                                "Id": 1,
+                                "Name": "Salary Negotiation"
+                            }
+                        ],
+                        "PostTags": null,
+                        "Sticky": false,
+                        "DisplaySize": null,
+                        "IsoLanguageCode": null,
+                        "OnetIndustry": {
+                            "Code": "id",
+                            "Name": "Bain"
+                        },
+                        "OnetOccupation": {
+                            "Code": "id",
+                            "Name": "Business"
+                        },
+                        "OnetSkills": null,
+                        "AdminNotes": null,
+                        "Template": 3,
+                        "Rating": 3,
+                        "Posx": 2,
+                        "Posy": 2,
+                        "Media": {
+                            "id": "string",
+                            "Type": "photo",
+                            "Url": "img/personnes.jpg",
+                            "Width": "363",
+                            "Height": "258",
+                            "Posx": "0",
+                            "Posy": "0",
+                            "Scale": "1",
+                            "Alt": "string",
+                            "Title": "string",
+                            "MetaTags": "string"
+                        },
+                        "CommentCount": 13,
+                        "OnetIndustryName": null,
+                        "OnetOccupationName": null,
+                        "Type": "video"
+                    },
+                    {
+                        "Id": 5,
+                        "OrganizationId": 0,
+                        "Headline": "Social media showdown: how each site can get you closer to the job you want.",
+                        "ShortDescription": "Social-media websites aren't just for catching up with friends anymore. Many companies have embraced social media",
+                        "PublicationDate": "2013-09-14T00:00:00-04:00",
+                        "PublicationStatus": null,
+                        "PublicationVisibility": null,
+                        "ExpirationDate": "0001-01-01T00:00:00",
+                        "Author": "Pierre raymond",
+                        "CopyrightOwner": null,
+                        "CopyrightDate": "0001-01-01T00:00:00",
+                        "BodyPlainText": null,
+                        "BodyHtml": null,
+                        "RelatedPosts": null,
+                        "SeoInfo": null,
+                        "AllowComments": false,
+                        "AllowTrackbackPingbacks": false,
+                        "CareerPhase": "Landing a Job",
+                        "Categories": [
+                            {
+                                "Id": 1,
+                                "Name": "Salary Negotiation"
+                            }
+                        ],
+                        "PostTags": null,
+                        "Sticky": false,
+                        "DisplaySize": null,
+                        "IsoLanguageCode": null,
+                        "OnetIndustry": {
+                            "Code": "id",
+                            "Name": "Bain"
+                        },
+                        "OnetOccupation": {
+                            "Code": "id",
+                            "Name": "Business"
+                        },
+                        "OnetSkills": null,
+                        "AdminNotes": null,
+                        "Template": 2,
+                        "Rating": 3,
+                        "Posx": 2,
+                        "Posy": 4,
+                        "Media": {
+                            "id": "string",
+                            "Type": "photo",
+                            "Url": "img/personnes.jpg",
+                            "Width": "363",
+                            "Height": "258",
+                            "Posx": "0",
+                            "Posy": "0",
+                            "Scale": "1",
+                            "Alt": "string",
+                            "Title": "string",
+                            "MetaTags": "string"
+                        },
+                        "CommentCount": 13,
+                        "OnetIndustryName": null,
+                        "OnetOccupationName": null,
+                        "Type": "video"
+                    },
+                    {
+                        "Id": 6,
+                        "OrganizationId": 0,
+                        "Headline": "Six transportation jobs that can move your career.",
+                        "ShortDescription": "\"Cars, trains, trucks, planes and boats: they're the vehicule that move us and our economy, driving the market forward and delivering products and goods to consumers. As the economy continue to recover, more workers are nedded to keep transportation and delivery needs mt and moving",
+                        "PublicationDate": "2013-09-14T00:00:00-04:00",
+                        "PublicationStatus": null,
+                        "PublicationVisibility": null,
+                        "ExpirationDate": "0001-01-01T00:00:00",
+                        "Author": "Pierre raymond",
+                        "CopyrightOwner": null,
+                        "CopyrightDate": "0001-01-01T00:00:00",
+                        "BodyPlainText": null,
+                        "BodyHtml": null,
+                        "RelatedPosts": null,
+                        "SeoInfo": null,
+                        "AllowComments": false,
+                        "AllowTrackbackPingbacks": false,
+                        "CareerPhase": "Landing a Job",
+                        "Categories": [
+                            {
+                                "Id": 1,
+                                "Name": "Salary Negotiation"
+                            }
+                        ],
+                        "PostTags": null,
+                        "Sticky": false,
+                        "DisplaySize": null,
+                        "IsoLanguageCode": null,
+                        "OnetIndustry": {
+                            "Code": "id",
+                            "Name": "Bain"
+                        },
+                        "OnetOccupation": {
+                            "Code": "id",
+                            "Name": "Business"
+                        },
+                        "OnetSkills": null,
+                        "AdminNotes": null,
+                        "Template": 2,
+                        "Rating": 3,
+                        "Posx": 0,
+                        "Posy": 4,
+                        "Media": {
+                            "id": "string",
+                            "Type": "photo",
+                            "Url": "img/personnes.jpg",
+                            "Width": "363",
+                            "Height": "258",
+                            "Posx": "0",
+                            "Posy": "0",
+                            "Scale": "1",
+                            "Alt": "string",
+                            "Title": "string",
+                            "MetaTags": "string"
+                        },
+                        "CommentCount": 13,
+                        "OnetIndustryName": null,
+                        "OnetOccupationName": null,
+                        "Type": "video"
+                    },
+                    {
+                        "Id": 7,
+                        "OrganizationId": 0,
+                        "Headline": "How to prepare for a career in sales or customer service.",
+                        "ShortDescription": "By now, job seekers should know the two cardinal rules of interview questions: 1. When the interviewer asks if you have any questions, have something to ask. 2. You should walk in the interview room prepared to answer the classic questions, such as: 'What is your biggest weakness?', or 'Where do you see yourself in five years?' But there is an often-overlooked rule that you should remember for your own",
+                        "PublicationDate": "2013-09-14T00:00:00-04:00",
+                        "PublicationStatus": null,
+                        "PublicationVisibility": null,
+                        "ExpirationDate": "0001-01-01T00:00:00",
+                        "Author": "Pierre raymond",
+                        "CopyrightOwner": null,
+                        "CopyrightDate": "0001-01-01T00:00:00",
+                        "BodyPlainText": null,
+                        "BodyHtml": null,
+                        "RelatedPosts": null,
+                        "SeoInfo": null,
+                        "AllowComments": false,
+                        "AllowTrackbackPingbacks": false,
+                        "CareerPhase": "Landing a Job",
+                        "Categories": [
+                            {
+                                "Id": 1,
+                                "Name": "Salary Negotiation"
+                            }
+                        ],
+                        "PostTags": null,
+                        "Sticky": false,
+                        "DisplaySize": null,
+                        "IsoLanguageCode": null,
+                        "OnetIndustry": {
+                            "Code": "id",
+                            "Name": "Bain"
+                        },
+                        "OnetOccupation": {
+                            "Code": "id",
+                            "Name": "Business"
+                        },
+                        "OnetSkills": null,
+                        "AdminNotes": null,
+                        "Template": 2,
+                        "Rating": 3,
+                        "Posx": 1,
+                        "Posy": 4,
+                        "Media": {
+                            "id": "string",
+                            "Type": "photo",
+                            "Url": "img/personnes.jpg",
+                            "Width": "363",
+                            "Height": "258",
+                            "Posx": "0",
+                            "Posy": "0",
+                            "Scale": "1",
+                            "Alt": "string",
+                            "Title": "string",
+                            "MetaTags": "string"
+                        },
+                        "CommentCount": 13,
+                        "OnetIndustryName": null,
+                        "OnetOccupationName": null,
+                        "Type": "video"
+                    }
+                ]
+            },
+            {
+                "Posts": [
+                    {
+                        "Id": 1,
+                        "OrganizationId": 0,
+                        "Headline": "How to prepare for a career in sales or customer service.",
+                        "ShortDescription": "Cars, trains, trucks, planes and boats: they're the vehicule that move us and our economy, driving the market forward and delivering products and goods to consumers. As the economy continue to recover, more workers are nedded to keep transportation and delivery needs mt and moving",
+                        "PublicationDate": "2013-09-14T00:00:00-04:00",
+                        "PublicationStatus": null,
+                        "PublicationVisibility": null,
+                        "ExpirationDate": "0001-01-01T00:00:00",
+                        "Author": "Pierre raymond",
+                        "CopyrightOwner": null,
+                        "CopyrightDate": "0001-01-01T00:00:00",
+                        "BodyPlainText": null,
+                        "BodyHtml": null,
+                        "RelatedPosts": null,
+                        "SeoInfo": null,
+                        "AllowComments": false,
+                        "AllowTrackbackPingbacks": false,
+                        "CareerPhase": "Landing a Job",
+                        "Categories": [
+                            {
+                                "Id": 1,
+                                "Name": "Salary Negotiation"
+                            }
+                        ],
+                        "PostTags": null,
+                        "Sticky": false,
+                        "DisplaySize": null,
+                        "IsoLanguageCode": null,
+                        "OnetIndustry": {
+                            "Code": "id",
+                            "Name": "Bain"
+                        },
+                        "OnetOccupation": {
+                            "Code": "id",
+                            "Name": "Business"
+                        },
+                        "OnetSkills": null,
+                        "AdminNotes": null,
+                        "Template": 1,
+                        "Rating": 3,
+                        "Posx": 0,
+                        "Posy": 0,
+                        "Media": {
+                            "id": "string",
+                            "Type": "photo",
+                            "Url": "img/personnes.jpg",
+                            "Width": "363",
+                            "Height": "258",
+                            "Posx": "0",
+                            "Posy": "0",
+                            "Scale": "1",
+                            "Alt": "string",
+                            "Title": "string",
+                            "MetaTags": "string"
+                        },
+                        "CommentCount": 13,
+                        "OnetIndustryName": null,
+                        "OnetOccupationName": null,
+                        "Type": "promo"
+                    },
+                    {
+                        "Id": 2,
+                        "OrganizationId": 0,
+                        "Headline": "Four types of interviewers ans how to make them love you.",
+                        "ShortDescription": "Even if you've prepared for the standard interview questions and feel ready to ace your job interview, there will be some",
+                        "PublicationDate": "2013-09-14T00:00:00-04:00",
+                        "PublicationStatus": null,
+                        "PublicationVisibility": null,
+                        "ExpirationDate": "0001-01-01T00:00:00",
+                        "Author": "Pierre raymond",
+                        "CopyrightOwner": null,
+                        "CopyrightDate": "0001-01-01T00:00:00",
+                        "BodyPlainText": null,
+                        "BodyHtml": null,
+                        "RelatedPosts": null,
+                        "SeoInfo": null,
+                        "AllowComments": false,
+                        "AllowTrackbackPingbacks": false,
+                        "CareerPhase": "Landing a Job",
+                        "Categories": [
+                            {
+                                "Id": 1,
+                                "Name": "Salary Negotiation"
+                            }
+                        ],
+                        "PostTags": null,
+                        "Sticky": false,
+                        "DisplaySize": null,
+                        "IsoLanguageCode": null,
+                        "OnetIndustry": {
+                            "Code": "id",
+                            "Name": "Bain"
+                        },
+                        "OnetOccupation": {
+                            "Code": "id",
+                            "Name": "Business"
+                        },
+                        "OnetSkills": null,
+                        "AdminNotes": null,
+                        "Template": 3,
+                        "Rating": 3,
+                        "Posx": 0,
+                        "Posy": 2,
+                        "Media": {
+                            "id": "string",
+                            "Type": "photo",
+                            "Url": "img/personnes.jpg",
+                            "Width": "363",
+                            "Height": "258",
+                            "Posx": "0",
+                            "Posy": "0",
+                            "Scale": "1",
+                            "Alt": "string",
+                            "Title": "string",
+                            "MetaTags": "string"
+                        },
+                        "CommentCount": 13,
+                        "OnetIndustryName": null,
+                        "OnetOccupationName": null,
+                        "Type": "promo"
+                    },
+                    {
+                        "Id": 3,
+                        "OrganizationId": 0,
+                        "Headline": "Social media showdown: how each site can get you closer to the job you want.",
+                        "ShortDescription": "Social-media websites aren't just for catching up with friends anymore. Many companies have embraced social media",
+                        "PublicationDate": "2013-09-14T00:00:00-04:00",
+                        "PublicationStatus": null,
+                        "PublicationVisibility": null,
+                        "ExpirationDate": "0001-01-01T00:00:00",
+                        "Author": "Pierre raymond",
+                        "CopyrightOwner": null,
+                        "CopyrightDate": "0001-01-01T00:00:00",
+                        "BodyPlainText": null,
+                        "BodyHtml": null,
+                        "RelatedPosts": null,
+                        "SeoInfo": null,
+                        "AllowComments": false,
+                        "AllowTrackbackPingbacks": false,
+                        "CareerPhase": "Landing a Job",
+                        "Categories": [
+                            {
+                                "Id": 1,
+                                "Name": "Salary Negotiation"
+                            }
+                        ],
+                        "PostTags": null,
+                        "Sticky": false,
+                        "DisplaySize": null,
+                        "IsoLanguageCode": null,
+                        "OnetIndustry": {
+                            "Code": "id",
+                            "Name": "Bain"
+                        },
+                        "OnetOccupation": {
+                            "Code": "id",
+                            "Name": "Business"
+                        },
+                        "OnetSkills": null,
+                        "AdminNotes": null,
+                        "Template": 3,
+                        "Rating": 3,
+                        "Posx": 1,
+                        "Posy": 2,
+                        "Media": {
+                            "id": "string",
+                            "Type": "photo",
+                            "Url": "img/personnes.jpg",
+                            "Width": "363",
+                            "Height": "258",
+                            "Posx": "0",
+                            "Posy": "0",
+                            "Scale": "1",
+                            "Alt": "string",
+                            "Title": "string",
+                            "MetaTags": "string"
+                        },
+                        "CommentCount": 13,
+                        "OnetIndustryName": null,
+                        "OnetOccupationName": null,
+                        "Type": "promo"
+                    },
+                    {
+                        "Id": 4,
+                        "OrganizationId": 0,
+                        "Headline": "Six transportation jobs that can move your career.",
+                        "ShortDescription": "Cars, trains, trucks, planes and boats: they're the vehicule that move us and our economy, driving the market forward and delivering products and goods to consumers. As the economy continue to recover, more workers are nedded to keep transportation and delivery needs mt and moving",
+                        "PublicationDate": "2013-09-14T00:00:00-04:00",
+                        "PublicationStatus": null,
+                        "PublicationVisibility": null,
+                        "ExpirationDate": "0001-01-01T00:00:00",
+                        "Author": "Pierre raymond",
+                        "CopyrightOwner": null,
+                        "CopyrightDate": "0001-01-01T00:00:00",
+                        "BodyPlainText": null,
+                        "BodyHtml": null,
+                        "RelatedPosts": null,
+                        "SeoInfo": null,
+                        "AllowComments": false,
+                        "AllowTrackbackPingbacks": false,
+                        "CareerPhase": "Landing a Job",
+                        "Categories": [
+                            {
+                                "Id": 1,
+                                "Name": "Salary Negotiation"
+                            }
+                        ],
+                        "PostTags": null,
+                        "Sticky": false,
+                        "DisplaySize": null,
+                        "IsoLanguageCode": null,
+                        "OnetIndustry": {
+                            "Code": "id",
+                            "Name": "Bain"
+                        },
+                        "OnetOccupation": {
+                            "Code": "id",
+                            "Name": "Business"
+                        },
+                        "OnetSkills": null,
+                        "AdminNotes": null,
+                        "Template": 3,
+                        "Rating": 3,
+                        "Posx": 2,
+                        "Posy": 2,
+                        "Media": {
+                            "id": "string",
+                            "Type": "photo",
+                            "Url": "img/personnes.jpg",
+                            "Width": "363",
+                            "Height": "258",
+                            "Posx": "0",
+                            "Posy": "0",
+                            "Scale": "1",
+                            "Alt": "string",
+                            "Title": "string",
+                            "MetaTags": "string"
+                        },
+                        "CommentCount": 13,
+                        "OnetIndustryName": null,
+                        "OnetOccupationName": null,
+                        "Type": "promo"
+                    },
+                    {
+                        "Id": 5,
+                        "OrganizationId": 0,
+                        "Headline": "Social media showdown: how each site can get you closer to the job you want.",
+                        "ShortDescription": "Social-media websites aren't just for catching up with friends anymore. Many companies have embraced social media",
+                        "PublicationDate": "2013-09-14T00:00:00-04:00",
+                        "PublicationStatus": null,
+                        "PublicationVisibility": null,
+                        "ExpirationDate": "0001-01-01T00:00:00",
+                        "Author": "Pierre raymond",
+                        "CopyrightOwner": null,
+                        "CopyrightDate": "0001-01-01T00:00:00",
+                        "BodyPlainText": null,
+                        "BodyHtml": null,
+                        "RelatedPosts": null,
+                        "SeoInfo": null,
+                        "AllowComments": false,
+                        "AllowTrackbackPingbacks": false,
+                        "CareerPhase": "Landing a Job",
+                        "Categories": [
+                            {
+                                "Id": 1,
+                                "Name": "Salary Negotiation"
+                            }
+                        ],
+                        "PostTags": null,
+                        "Sticky": false,
+                        "DisplaySize": null,
+                        "IsoLanguageCode": null,
+                        "OnetIndustry": {
+                            "Code": "id",
+                            "Name": "Bain"
+                        },
+                        "OnetOccupation": {
+                            "Code": "id",
+                            "Name": "Business"
+                        },
+                        "OnetSkills": null,
+                        "AdminNotes": null,
+                        "Template": 2,
+                        "Rating": 3,
+                        "Posx": 2,
+                        "Posy": 4,
+                        "Media": {
+                            "id": "string",
+                            "Type": "photo",
+                            "Url": "img/personnes.jpg",
+                            "Width": "363",
+                            "Height": "258",
+                            "Posx": "0",
+                            "Posy": "0",
+                            "Scale": "1",
+                            "Alt": "string",
+                            "Title": "string",
+                            "MetaTags": "string"
+                        },
+                        "CommentCount": 13,
+                        "OnetIndustryName": null,
+                        "OnetOccupationName": null,
+                        "Type": "promo"
+                    },
+                    {
+                        "Id": 6,
+                        "OrganizationId": 0,
+                        "Headline": "Six transportation jobs that can move your career.",
+                        "ShortDescription": "\"Cars, trains, trucks, planes and boats: they're the vehicule that move us and our economy, driving the market forward and delivering products and goods to consumers. As the economy continue to recover, more workers are nedded to keep transportation and delivery needs mt and moving",
+                        "PublicationDate": "2013-09-14T00:00:00-04:00",
+                        "PublicationStatus": null,
+                        "PublicationVisibility": null,
+                        "ExpirationDate": "0001-01-01T00:00:00",
+                        "Author": "Pierre raymond",
+                        "CopyrightOwner": null,
+                        "CopyrightDate": "0001-01-01T00:00:00",
+                        "BodyPlainText": null,
+                        "BodyHtml": null,
+                        "RelatedPosts": null,
+                        "SeoInfo": null,
+                        "AllowComments": false,
+                        "AllowTrackbackPingbacks": false,
+                        "CareerPhase": "Landing a Job",
+                        "Categories": [
+                            {
+                                "Id": 1,
+                                "Name": "Salary Negotiation"
+                            }
+                        ],
+                        "PostTags": null,
+                        "Sticky": false,
+                        "DisplaySize": null,
+                        "IsoLanguageCode": null,
+                        "OnetIndustry": {
+                            "Code": "id",
+                            "Name": "Bain"
+                        },
+                        "OnetOccupation": {
+                            "Code": "id",
+                            "Name": "Business"
+                        },
+                        "OnetSkills": null,
+                        "AdminNotes": null,
+                        "Template": 2,
+                        "Rating": 3,
+                        "Posx": 0,
+                        "Posy": 4,
+                        "Media": {
+                            "id": "string",
+                            "Type": "photo",
+                            "Url": "img/personnes.jpg",
+                            "Width": "363",
+                            "Height": "258",
+                            "Posx": "0",
+                            "Posy": "0",
+                            "Scale": "1",
+                            "Alt": "string",
+                            "Title": "string",
+                            "MetaTags": "string"
+                        },
+                        "CommentCount": 13,
+                        "OnetIndustryName": null,
+                        "OnetOccupationName": null,
+                        "Type": "promo"
+                    },
+                    {
+                        "Id": 7,
+                        "OrganizationId": 0,
+                        "Headline": "How to prepare for a career in sales or customer service.",
+                        "ShortDescription": "By now, job seekers should know the two cardinal rules of interview questions: 1. When the interviewer asks if you have any questions, have something to ask. 2. You should walk in the interview room prepared to answer the classic questions, such as: 'What is your biggest weakness?', or 'Where do you see yourself in five years?' But there is an often-overlooked rule that you should remember for your own",
+                        "PublicationDate": "2013-09-14T00:00:00-04:00",
+                        "PublicationStatus": null,
+                        "PublicationVisibility": null,
+                        "ExpirationDate": "0001-01-01T00:00:00",
+                        "Author": "Pierre raymond",
+                        "CopyrightOwner": null,
+                        "CopyrightDate": "0001-01-01T00:00:00",
+                        "BodyPlainText": null,
+                        "BodyHtml": null,
+                        "RelatedPosts": null,
+                        "SeoInfo": null,
+                        "AllowComments": false,
+                        "AllowTrackbackPingbacks": false,
+                        "CareerPhase": "Landing a Job",
+                        "Categories": [
+                            {
+                                "Id": 1,
+                                "Name": "Salary Negotiation"
+                            }
+                        ],
+                        "PostTags": null,
+                        "Sticky": false,
+                        "DisplaySize": null,
+                        "IsoLanguageCode": null,
+                        "OnetIndustry": {
+                            "Code": "id",
+                            "Name": "Bain"
+                        },
+                        "OnetOccupation": {
+                            "Code": "id",
+                            "Name": "Business"
+                        },
+                        "OnetSkills": null,
+                        "AdminNotes": null,
+                        "Template": 2,
+                        "Rating": 3,
+                        "Posx": 1,
+                        "Posy": 4,
+                        "Media": {
+                            "id": "string",
+                            "Type": "photo",
+                            "Url": "img/personnes.jpg",
+                            "Width": "363",
+                            "Height": "258",
+                            "Posx": "0",
+                            "Posy": "0",
+                            "Scale": "1",
+                            "Alt": "string",
+                            "Title": "string",
+                            "MetaTags": "string"
+                        },
+                        "CommentCount": 13,
+                        "OnetIndustryName": null,
+                        "OnetOccupationName": null,
+                        "Type": "promo"
+                    }
+                ]
+            }
+        ]
+    }
+}

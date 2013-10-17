@@ -1,0 +1,93 @@
+<div ng-include="'partials/path.html'"></div>
+<div class="menu-buttons">
+		<div class="icon-button-post-large button person">
+            <div class="picture" style="background: url('{{post.Author.Media.Url}}') center no-repeat;"></div>
+            <span class="name">author: {{post.Author.Name}}</span>
+        </div>
+        <div class="icon-button-post button element"><span>{{post.Type}}</span>
+        </div>
+		<div class="icon-button-post button element"><span>{{post.OnetIndustry.Name}}</span>
+        </div>
+        <div class="icon-button-post button element"><span>{{post.CareerPhase}}</span>
+        </div>
+		<div class="search-button home">
+			<form onsubmit="search($('#search-input'))">
+				<input id="search-input" placeholder="Search">
+			</form>
+            <i onclick="search($('#search-input'))" class="icon-search"></i>
+		</div>
+</div>
+<div class="background-zig"></div>
+    
+<div class="post">
+    <h1 class="title">{{post.Headline}}</h1>
+    <div class="img-background">
+        <div class="{{post.visibilityPicture}} img" style="background: url('{{post.Media.Url}}') center no-repeat;background-size:90%;" alt=""></div>
+    </div>
+	<div class="content">
+        <div class="intro">{{post.ShortDescription}}</div>
+        <div class="body" ng-bind-html-unsafe="post.BodyHtml"></div>
+   </div>
+   <aside class="complement">
+       <!-- social link + comments-->
+       <div class="social">
+                <span class='icon-social icon-save'></span>
+                <span class='icon-bar-grey'></span>
+                <span class='icon-social icon-mail'></span>
+                <span class='icon-social icon-twitter'></span>
+                <span class='icon-social icon-google'></span>
+                <span class='icon-social icon-face'></span>
+                <span class='icon-social icon-link'></span>
+       </div>
+       <div class="rating">
+            <span ng-repeat="star in post.stars">
+                        <span class='{{star.class}} icon'></span>
+            </span>
+       </div>
+       <div class="comments">
+            <div class="new-comment">
+                <div class="img-user" style="background: url('{{user.Media.Url}}') center no-repeat;background-size:200%;" alt=""></div>
+                <form class="input" ng-submit="newComment()">
+                    <input onkeyup="fakePlaceholder($(this))" ng-model="inputComment"/>
+                    <div class="placeholder"><strong>Get involved,</strong>&nbsp;<span>write a comment...</span></div>
+                </form>
+                <div class="clear"></div>
+            </div>
+            <div class="comments-list">
+                <div ng-repeat="comment in comments">
+                    <div class="level-1 {{comment.class}}">
+                        <comment comment="comment" user="user"></comment>
+                    </div>
+                    <div ng-repeat="subComment in comment.Replies">
+                        <div class="level-2 {{subComment.padding}}">
+                            <comment comment="subComment" user="user"></comment>
+                        </div>
+                        <div class="{{subComment.firstBorder}}">
+                            <div class="separator"></div>
+                        </div>
+                        <div ng-repeat="subSubComment in subComment.Replies">
+                                <div class="level-3 {{subSubComment.padding}}">
+                                    <comment comment="subSubComment" user="user"></comment>
+                                </div>
+                        </div>
+                        <div class="{{subComment.secondBorder}}">
+                            <div class="separator"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+       </div>
+    </aside>
+    <div class="clear"></div>
+</div>
+<div class="bottom-post background-zig"></div>
+<div class="related">
+    <h2 class="related-title">/Related Content</h2>    
+    <div class="related-container">
+        <div ng-repeat="post in related">
+            <div ng-include="post.url_template"></div>
+        </div>  
+        <div class="clear"></div>
+    </div>
+</div>
+

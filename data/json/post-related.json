@@ -1,0 +1,328 @@
+{
+  "Posts": [
+    {
+        "Id": 1,
+        "OrganizationId": 0,
+        "Headline": "How to prepare for a career in sales or customer service.",
+        "ShortDescription": "Cars, trains, trucks, planes and boats: they're the vehicule that move us and our economy, driving the market forward and delivering products and goods to consumers. As the economy continue to recover, more workers are nedded to keep transportation and delivery needs mt and moving",
+        "PublicationDate": "2013-09-14T00:00:00-04:00",
+        "PublicationStatus": null,
+        "PublicationVisibility": null,
+        "ExpirationDate": "0001-01-01T00:00:00",
+        "CopyrightOwner": null,
+        "CopyrightDate": "0001-01-01T00:00:00",
+        "SeoInfo": null,
+        "AllowComments": false,
+        "AllowTrackbackPingbacks": false,
+        "CareerPhase": "Landing a Job",
+        "Categories": [
+            {
+                "Id": 1,
+                "Name": "Salary Negotiation"
+            }
+        ],
+        "PostTags": null,
+        "Sticky": false,
+        "DisplaySize": null,
+        "IsoLanguageCode": null,
+        "OnetIndustry": {
+            "Code": "id",
+            "Name": "Bain"
+        },
+        "OnetOccupation": {
+            "Code": "id",
+            "Name": "Business"
+        },
+        "OnetSkills": null,
+        "AdminNotes": null,
+        "Template": 1,
+        "Rating": 3,
+        "Posx": 0,
+        "Posy": 0,
+        "Media": {
+            "id": "string",
+            "Type": "photo",
+            "Url": "img/personnes.jpg",
+            "Width": "363",
+            "Height": "258",
+            "Posx": "0",
+            "Posy": "0",
+            "Scale": "1",
+            "Alt": "string",
+            "Title": "string",
+            "MetaTags": "string"
+        },
+        "Type": "article"
+    },
+    {
+        "Id": 1,
+        "OrganizationId": 0,
+        "Headline": "How to prepare for a career in sales or customer service.",
+        "ShortDescription": "Cars, trains, trucks, planes and boats: they're the vehicule that move us and our economy, driving the market forward and delivering products and goods to consumers. As the economy continue to recover, more workers are nedded to keep transportation and delivery needs mt and moving",
+        "PublicationDate": "2013-09-14T00:00:00-04:00",
+        "PublicationStatus": null,
+        "PublicationVisibility": null,
+        "ExpirationDate": "0001-01-01T00:00:00",
+        "CopyrightOwner": null,
+        "CopyrightDate": "0001-01-01T00:00:00",
+        "SeoInfo": null,
+        "AllowComments": false,
+        "AllowTrackbackPingbacks": false,
+        "CareerPhase": "Landing a Job",
+        "Categories": [
+            {
+                "Id": 1,
+                "Name": "Salary Negotiation"
+            }
+        ],
+        "PostTags": null,
+        "Sticky": false,
+        "DisplaySize": null,
+        "IsoLanguageCode": null,
+        "OnetIndustry": {
+            "Code": "id",
+            "Name": "Bain"
+        },
+        "OnetOccupation": {
+            "Code": "id",
+            "Name": "Business"
+        },
+        "OnetSkills": null,
+        "AdminNotes": null,
+        "Template": 1,
+        "Rating": 3,
+        "Posx": 0,
+        "Posy": 0,
+        "Media": {
+            "id": "string",
+            "Type": "photo",
+            "Url": "img/personnes.jpg",
+            "Width": "363",
+            "Height": "258",
+            "Posx": "0",
+            "Posy": "0",
+            "Scale": "1",
+            "Alt": "string",
+            "Title": "string",
+            "MetaTags": "string"
+        },
+        "Type": "article"
+    },
+    {
+        "Id": 1,
+        "OrganizationId": 0,
+        "Headline": "How to prepare for a career in sales or customer service.",
+        "ShortDescription": "Cars, trains, trucks, planes and boats: they're the vehicule that move us and our economy, driving the market forward and delivering products and goods to consumers. As the economy continue to recover, more workers are nedded to keep transportation and delivery needs mt and moving",
+        "PublicationDate": "2013-09-14T00:00:00-04:00",
+        "PublicationStatus": null,
+        "PublicationVisibility": null,
+        "ExpirationDate": "0001-01-01T00:00:00",
+        "CopyrightOwner": null,
+        "CopyrightDate": "0001-01-01T00:00:00",
+        "SeoInfo": null,
+        "AllowComments": false,
+        "AllowTrackbackPingbacks": false,
+        "CareerPhase": "Landing a Job",
+        "Categories": [
+            {
+                "Id": 1,
+                "Name": "Salary Negotiation"
+            }
+        ],
+        "PostTags": null,
+        "Sticky": false,
+        "DisplaySize": null,
+        "IsoLanguageCode": null,
+        "OnetIndustry": {
+            "Code": "id",
+            "Name": "Bain"
+        },
+        "OnetOccupation": {
+            "Code": "id",
+            "Name": "Business"
+        },
+        "OnetSkills": null,
+        "AdminNotes": null,
+        "Template": 1,
+        "Rating": 3,
+        "Posx": 0,
+        "Posy": 0,
+        "Media": {
+            "id": "string",
+            "Type": "photo",
+            "Url": "img/personnes.jpg",
+            "Width": "363",
+            "Height": "258",
+            "Posx": "0",
+            "Posy": "0",
+            "Scale": "1",
+            "Alt": "string",
+            "Title": "string",
+            "MetaTags": "string"
+        },
+        "Type": "article"
+    },
+    {
+        "Id": 1,
+        "OrganizationId": 0,
+        "Headline": "How to prepare for a career in sales or customer service.",
+        "ShortDescription": "Cars, trains, trucks, planes and boats: they're the vehicule that move us and our economy, driving the market forward and delivering products and goods to consumers. As the economy continue to recover, more workers are nedded to keep transportation and delivery needs mt and moving",
+        "PublicationDate": "2013-09-14T00:00:00-04:00",
+        "PublicationStatus": null,
+        "PublicationVisibility": null,
+        "ExpirationDate": "0001-01-01T00:00:00",
+        "CopyrightOwner": null,
+        "CopyrightDate": "0001-01-01T00:00:00",
+        "SeoInfo": null,
+        "AllowComments": false,
+        "AllowTrackbackPingbacks": false,
+        "CareerPhase": "Landing a Job",
+        "Categories": [
+            {
+                "Id": 1,
+                "Name": "Salary Negotiation"
+            }
+        ],
+        "PostTags": null,
+        "Sticky": false,
+        "DisplaySize": null,
+        "IsoLanguageCode": null,
+        "OnetIndustry": {
+            "Code": "id",
+            "Name": "Bain"
+        },
+        "OnetOccupation": {
+            "Code": "id",
+            "Name": "Business"
+        },
+        "OnetSkills": null,
+        "AdminNotes": null,
+        "Template": 1,
+        "Rating": 3,
+        "Posx": 0,
+        "Posy": 0,
+        "Media": {
+            "id": "string",
+            "Type": "photo",
+            "Url": "",
+            "Width": "363",
+            "Height": "258",
+            "Posx": "0",
+            "Posy": "0",
+            "Scale": "1",
+            "Alt": "string",
+            "Title": "string",
+            "MetaTags": "string"
+        },
+        "Type": "article"
+    },
+    {
+        "Id": 1,
+        "OrganizationId": 0,
+        "Headline": "How to prepare for a career in sales or customer service.",
+        "ShortDescription": "Cars, trains, trucks, planes and boats: they're the vehicule that move us and our economy, driving the market forward and delivering products and goods to consumers. As the economy continue to recover, more workers are nedded to keep transportation and delivery needs mt and moving",
+        "PublicationDate": "2013-09-14T00:00:00-04:00",
+        "PublicationStatus": null,
+        "PublicationVisibility": null,
+        "ExpirationDate": "0001-01-01T00:00:00",
+        "CopyrightOwner": null,
+        "CopyrightDate": "0001-01-01T00:00:00",
+        "SeoInfo": null,
+        "AllowComments": false,
+        "AllowTrackbackPingbacks": false,
+        "CareerPhase": "Landing a Job",
+        "Categories": [
+            {
+                "Id": 1,
+                "Name": "Salary Negotiation"
+            }
+        ],
+        "PostTags": null,
+        "Sticky": false,
+        "DisplaySize": null,
+        "IsoLanguageCode": null,
+        "OnetIndustry": {
+            "Code": "id",
+            "Name": "Bain"
+        },
+        "OnetOccupation": {
+            "Code": "id",
+            "Name": "Business"
+        },
+        "OnetSkills": null,
+        "AdminNotes": null,
+        "Template": 1,
+        "Rating": 3,
+        "Posx": 0,
+        "Posy": 0,
+        "Media": {
+            "id": "string",
+            "Type": "photo",
+            "Url": "img/personnes.jpg",
+            "Width": "363",
+            "Height": "258",
+            "Posx": "0",
+            "Posy": "0",
+            "Scale": "1",
+            "Alt": "string",
+            "Title": "string",
+            "MetaTags": "string"
+        },
+        "Type": "infographic"
+    },
+    {
+        "Id": 3,
+        "OrganizationId": 0,
+        "Headline": "How to prepare for a career in sales or customer service.",
+        "ShortDescription": "Cars, trains, trucks, planes and boats: they're the vehicule that move us and our economy, driving the market forward and delivering products and goods to consumers. As the economy continue to recover, more workers are nedded to keep transportation and delivery needs mt and moving",
+        "PublicationDate": "2013-09-14T00:00:00-04:00",
+        "PublicationStatus": null,
+        "PublicationVisibility": null,
+        "ExpirationDate": "0001-01-01T00:00:00",
+        "CopyrightOwner": null,
+        "CopyrightDate": "0001-01-01T00:00:00",
+        "SeoInfo": null,
+        "AllowComments": false,
+        "AllowTrackbackPingbacks": false,
+        "CareerPhase": "Landing a Job",
+        "Categories": [
+            {
+                "Id": 1,
+                "Name": "Salary Negotiation"
+            }
+        ],
+        "PostTags": null,
+        "Sticky": false,
+        "DisplaySize": null,
+        "IsoLanguageCode": null,
+        "OnetIndustry": {
+            "Code": "id",
+            "Name": "Bain"
+        },
+        "OnetOccupation": {
+            "Code": "id",
+            "Name": "Business"
+        },
+        "OnetSkills": null,
+        "AdminNotes": null,
+        "Template": 1,
+        "Rating": 3,
+        "Posx": 0,
+        "Posy": 0,
+        "Media": {
+            "id": "string",
+            "Type": "photo",
+            "Url": "img/personnes.jpg",
+            "Width": "363",
+            "Height": "258",
+            "Posx": "0",
+            "Posy": "0",
+            "Scale": "1",
+            "Alt": "string",
+            "Title": "string",
+            "MetaTags": "string"
+        },
+        "Type": "article"
+    }
+  ]
+}

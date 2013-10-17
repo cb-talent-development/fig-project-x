@@ -1,0 +1,114 @@
+{
+    "resourcePath": "/api",
+    "basePath": "http://localhost:8888/api",
+    "apis": [
+        {
+            "path": "/jobRecommendations",
+            "description": "List of job recommendations",
+            "operations": [
+                {
+                    "parameters": [
+                        {
+                            "name": "onetOccupation",
+                            "description": "onet code of occupation",
+                            "required": false,
+                            "dataType": "integer",
+                            "allowMultiple": false,
+                            "paramType": "query"
+                        },
+                        {
+                            "name": "onetIndustry",
+                            "description": "onet code of industry",
+                            "required": false,
+                            "dataType": "integer",
+                            "allowMultiple": false,
+                            "paramType": "query"
+                        }
+                    ],
+                    "nickname": "getJobRecommendations",
+                    "responseClass": "job_recommendations",
+                    "summary": "Retrieve a list of industries",
+                    "httpMethod": "GET",
+                    "errorResponses": [
+                        {
+                            "reason": "Bad Request: syntax error",
+                            "code": 400
+                        },
+                        {
+                            "reason": "Unauthorized: authentication required",
+                            "code": 401
+                        },
+                        {
+                            "reason": "Forbidden",
+                            "code": 403
+                        },
+                        {
+                            "reason": "No results found",
+                            "code": 404
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "models": {
+        "job_recommendations": {
+            "uniqueItems": false,
+            "properties": {
+                "job_recommendations": {
+                    "uniqueItems": false,
+                    "description": "The list of job recommendations",
+                    "required": true,
+                    "type": "array",
+                    "items": {
+                        "$ref": "job_recommendation",
+                        "uniqueItems": false,
+                        "required": true,
+                        "type": "any"
+                    }
+                }
+            }
+        },
+        "job_recommendation": {
+            "uniqueItems": false,
+            "properties": {
+                "job_id": {
+                    "uniqueItems": false,
+                    "description": "The unique identifier of the job ",
+                    "type": "integer",
+                    "required": true
+                },
+                "job_title": {
+                    "uniqueItems": false,
+                    "description": "The title of the job",
+                    "type": "string",
+                    "required": true
+                },
+                "company": {
+                    "uniqueItems": false,
+                    "description": "The company that offers the job",
+                    "type": "string",
+                    "required": true
+                },
+                "city": {
+                    "uniqueItems": false,
+                    "description": "the City of the job",
+                    "type": "string",
+                    "required": true
+                },
+                "state": {
+                    "uniqueItems": false,
+                    "description": "The State of the job",
+                    "type": "string",
+                    "required": true
+                },
+                "targetURL": {
+                    "uniqueItems": false,
+                    "description": "Link to the job details",
+                    "type": "string",
+                    "required": true
+                }
+            }
+        }
+    }
+}

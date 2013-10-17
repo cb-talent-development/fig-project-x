@@ -1,0 +1,25 @@
+<div ng-include="'partials/path.html'"></div>
+<div class="dashboard">
+    <div class="presentation"></div>
+    <div class="saved-content">
+        <div class="title">{{savedContentTitle}}</div>
+        <div class="content">
+            <i class="icon-arrow-left-big-blue" ng-click="pageClick(pageSaved.currentPage-1,'save','.saved-content')"></i>
+            <div class="scrollable-content">
+                <div class="scrollable">
+                    <div class="save link" ng-repeat="save in saves">   
+                        <a href="/"></a>
+                        <div class="icon"></div>
+                        <div class="name">{{save.AssetName}}</div>
+                        <div class="type">{{save.AssetType}}</div>
+                    </div>
+                </div>
+            </div>
+            <div class="pages">
+                <div class="ball" ng-class="{true: 'activated',false: 'nick' }[n==1]" ng-click="pageClick(n,'save','.saved-content')" ng-repeat="n in pageSaved.pages"></div>
+            </div>
+            <i class="icon-arrow-right-big-blue" ng-click="pageClick(pageSaved.currentPage+1,'save','.saved-content')"></i>
+        </div>
+    </div>
+    <div ng-include="'partials/jobsRecommandations.html'"></div>
+</div>

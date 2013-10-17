@@ -1,0 +1,17 @@
+<div class="comment" id="comment_{{comment.id}}" style="display:{{comment.display}}";>
+    <div class="img" style="background: url('{{comment.User.Media.Url}}') center no-repeat;background-size:200%;"></div>
+    <div class="content">
+        <span class="name">{{comment.User.Name}}</span><span class="time">{{comment.Date}}</span>
+        <div class="statement">{{comment.Content}}</div>
+        <span class="closeReply" onclick="closeReply($(this))">close</span>
+        <span class="reply" ng-click="$parent.openReply(comment)" onclick="openReply($(this))">reply</span>
+        <div class="new-comment">
+            <div class="img-user" style="background: url('{{user.Media.Url}}') center no-repeat;background-size:200%;" alt=""></div>
+            <form class="input" ng-submit="$parent.reply(comment)" >
+                <input ng-model="comment.input" placeholder="Write a comment..."/>
+            </form>
+            <div class="clear"></div>
+        </div>
+    </div>
+</div>
+<div class="clear"></div>

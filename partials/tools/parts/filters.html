@@ -1,0 +1,22 @@
+<div class="industries select toggleMenu">
+            <div ng-click="$parent.loadIndustries()">
+                <span class="title">Choose an Industry</span>
+                <b class="icon-bigarrow-bottom-grey grey-icon"></b>
+            </div>
+            <div class="subMenu">
+				<div ng-repeat="industry in $parent.$parent.industries">
+                    <div class="elem mode-{{$index % 2}}" ng-click="$parent.$parent.saveIndustry(industry.id)" onclick="selectEffect($(this))">{{industry.Name}}</div>
+                </div>
+			</div>
+</div>
+<div class="occupations toggleMenuSimple">
+            <div ng-click="$parent.loadOccupations()">
+                <span class="title">Choose Occupations</span>
+                <b class="icon-bigarrow-bottom-grey grey-icon"></b>
+            </div>
+            <div class="subMenu">
+				<div ng-repeat="occupation in $parent.occupations">
+                    <div class="elem mode-{{$index % 4}}"><input type="checkbox" name="option{{$index}}" value="{{occupation.Name}}"> {{occupation.Name}}</div>
+                </div>
+			</div>
+</div>

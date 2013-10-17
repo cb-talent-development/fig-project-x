@@ -1,0 +1,18 @@
+{
+    "Name":"Nicolas Bernier",
+    "LastName":"Benier",
+    "FirstName":"Nicolas",
+    "Media":{
+            "id": "string",
+            "Type": "photo",
+            "Url": "img/personnes.jpg",
+            "Width": "50",
+            "Height": "70",
+            "Posx": "0",
+            "Posy": "0",
+            "Scale": "1",
+            "Alt": "string",
+            "Title": "string",
+            "MetaTags": "string"
+    }
+}

@@ -1,0 +1,126 @@
+{
+    "resourcePath": "/api",
+    "basePath": "http://localhost:8888/api",
+    "apis": [
+        {
+            "path": "/industries",
+            "description": "List of industries",
+            "operations": [
+                {
+                    "parameters": [
+                        {
+                            "name": "order",
+                            "description": "filter that changes the ordering of the content",
+                            "defaultValue": "a-z",
+                            "allowableValues": {
+                                "values": [
+                                    "a-z",
+                                    "z-a"
+                                ],
+                                "valueType": "LIST"
+                            },
+                            "required": false,
+                            "dataType": "string",
+                            "allowMultiple": false,
+                            "paramType": "query"
+                        },
+                        {
+                            "name": "limit",
+                            "description": "number of results",
+                            "defaultValue": "10",
+                            "required": false,
+                            "dataType": "integer",
+                            "allowMultiple": false,
+                            "paramType": "query",
+                            "minimum": "10"
+                        },
+                        {
+                            "name": "offset",
+                            "description": "offset of the search",
+                            "defaultValue": "0",
+                            "required": false,
+                            "dataType": "integer",
+                            "allowMultiple": false,
+                            "paramType": "query",
+                            "minimum": "0"
+                        }
+                    ],
+                    "nickname": "getIndustries",
+                    "responseClass": "industries",
+                    "summary": "Retrieve a list of industries",
+                    "httpMethod": "GET",
+                    "errorResponses": [
+                        {
+                            "reason": "No results found",
+                            "code": 401
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "path": "/industries/{id}",
+            "description": "Information of the industry",
+            "operations": [
+                {
+                    "parameters": [
+                        {
+                            "name": "onet",
+                            "description": "onet code of the industry",
+                            "required": false,
+                            "dataType": "string",
+                            "allowMultiple": false,
+                            "paramType": "path"
+                        }
+                    ],
+                    "nickname": "getIndustry",
+                    "responseClass": "industry",
+                    "summary": "get information of the industry",
+                    "httpMethod": "GET",
+                    "errorResponses": [
+                        {
+                            "reason": "No results found",
+                            "code": 401
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "models": {
+        "industries": {
+            "uniqueItems": false,
+            "properties": {
+                "industries": {
+                    "uniqueItems": false,
+                    "description": "The list of industries",
+                    "required": true,
+                    "type": "array",
+                    "items": {
+                        "$ref": "industry",
+                        "uniqueItems": false,
+                        "required": true,
+                        "type": "any"
+                    }
+                }
+            }
+        },
+        "industry": {
+            "uniqueItems": false,
+            "properties": {
+                "id": {
+                    "uniqueItems": false,
+                    "description": "The unique identifier of the industry",
+                    "type": "integer",
+                    "required": true
+                },
+                "Name": {
+                    "uniqueItems": false,
+                    "description": "The name of the industry",
+                    "type": "string",
+                    "required": true
+                }
+            }
+        }
+    }
+}

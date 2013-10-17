@@ -1,0 +1,59 @@
+<div ng-controller="CareerScapeCtr" class="careerScape">
+    <div class="selector">
+        <form onsubmit="">
+        <div class="buttons-changes">
+            <div class="button-change selected" onclick="changeType('salary',$(this))">
+                <div class="carre"></div>
+                <div class="txt">Top Salary</div>
+            </div>
+            <div class="button-change" onclick="changeType('stability',$(this))">
+                <div class="carre"></div>
+                <div class="txt">Job Stability</div>
+            </div>
+        </div>
+        <div ng-include="'partials/tools/parts/filters.html'"></div>
+        </form>
+        <div class="clear"></div>
+    </div>
+        
+    <div class="canvas-container">
+        <div class="buttons_zoom">
+            <div id="zoom_plus" class="no_select zoom" onclick="zoomPlus()">+</div>
+            <div id="zoom_minus" class="no_select zoom" onclick="zoomMinus()">&ndash;</div>
+        </div>
+        <div class="legend">
+            <div class="growth">
+                <div class="ball big"></div>
+                <div class="ball medium"></div>
+                <div class="ball small"></div>
+                <div class="info">
+                    <div class="title">
+                    Job Growth
+                    </div>
+                    <div class="comment">
+                    (Size Indicates Rate of Growth)
+                    </div>
+                </div>
+            </div>
+            <div class="decline">
+                <div class="ball big"></div>
+                <div class="ball medium"></div>
+                <div class="ball small"></div>
+                <div class="info">
+                    <div class="title">
+                    Job Decline
+                    </div>
+                    <div class="comment">
+                    (Size Indicates Rate of Decline)
+                    </div>
+                </div>
+            </div>
+        </div>
+        <canvas id="canvas" class="no_select" height="200" width="200">
+            Message pour les navigateurs ne supportant pas encore canvas.
+        </canvas>
+        <div class="messages-jobs">153 Jobs found in your area</div>
+        <div class="arrow"><i class="arrow-down"></i></div>
+        <div ng-include="'partials/jobsRecommandations.html'"></div>
+    </div>
+</div>

@@ -1,0 +1,52 @@
+{
+  "industries": [
+    {
+      "id": "1",
+      "Name": "Bain & Company"
+    },
+    {
+      "id": "2",
+      "Name": "Coca Cola"
+    },
+    {
+      "id": "3",
+      "Name": "Bank of America"
+    },
+    {
+      "id": "4",
+      "Name": "Bank of America"
+    },
+    {
+      "id": "5",
+      "Name": "Bain & Company"
+    },
+    {
+      "id": "6",
+      "Name": "Coca Cola"
+    },
+    {
+      "id": "7",
+      "Name": "Bank of America"
+    },
+    {
+      "id": "8",
+      "Name": "Bank of America"
+    },
+    {
+      "id": "9",
+      "Name": "Bain & Company"
+    },
+    {
+      "id": "10",
+      "Name": "Coca Cola"
+    },
+    {
+      "id": "11",
+      "Name": "Bank of America"
+    },
+    {
+      "id": "12",
+      "Name": "Bank of America"
+    }
+  ]
+}

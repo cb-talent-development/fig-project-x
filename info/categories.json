@@ -1,0 +1,110 @@
+{
+    "resourcePath": "/api",
+    "basePath": "http://localhost:8888/api",
+    "apis": [
+        {
+            "path": "/categories",
+            "description": "List of categories",
+            "operations": [
+                {
+                    "parameters": [
+                        {
+                            "name": "order",
+                            "description": "filter that changes the ordering of the categories",
+                            "defaultValue": "a-z",
+                            "allowableValues": {
+                                "values": [
+                                    "a-z",
+                                    "z-a"
+                                ],
+                                "valueType": "LIST"
+                            },
+                            "required": false,
+                            "dataType": "string",
+                            "allowMultiple": false,
+                            "paramType": "query"
+                        },
+                        {
+                            "name": "limit",
+                            "description": "number of results",
+                            "defaultValue": "10",
+                            "required": false,
+                            "dataType": "integer",
+                            "allowMultiple": false,
+                            "paramType": "query",
+                            "minimum": "10"
+                        },
+                        {
+                            "name": "offset",
+                            "description": "offset of the search",
+                            "defaultValue": "0",
+                            "required": false,
+                            "dataType": "integer",
+                            "allowMultiple": false,
+                            "paramType": "query",
+                            "minimum": "0"
+                        }
+                    ],
+                    "nickname": "getCategories",
+                    "responseClass": "categories",
+                    "summary": "Retrieve a list of categories",
+                    "httpMethod": "GET",
+                    "errorResponses": [
+                        {
+                            "reason": "Bad Request: syntax error",
+                            "code": 400
+                        },
+                        {
+                            "reason": "Unauthorized: authentication required",
+                            "code": 401
+                        },
+                        {
+                            "reason": "Forbidden",
+                            "code": 403
+                        },
+                        {
+                            "reason": "No results found",
+                            "code": 404
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "models":{
+        "categories": {
+            "uniqueItems": false,
+            "properties": {
+                "industries": {
+                    "uniqueItems": false,
+                    "description": "The list of categories",
+                    "required": true,
+                    "type": "array",
+                    "items": {
+                        "$ref": "category",
+                        "uniqueItems": false,
+                        "required": true,
+                        "type": "any"
+                    }
+                }
+            }
+        },
+        "category": {
+            "uniqueItems": false,
+            "properties": {
+                "id": {
+                    "uniqueItems": false,
+                    "description": "The unique identifier of the category",
+                    "type": "integer",
+                    "required": true
+                },
+                "CategoryName": {
+                    "uniqueItems": false,
+                    "description": "The name of the category",
+                    "type": "string",
+                    "required": true
+                }
+            }
+        }
+    }
+}

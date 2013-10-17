@@ -1,0 +1,43 @@
+@font-face
+{
+	font-family: 'HelveticaUltraLightCondensed';
+	src:url('fonts/HelveticaUltraLightCondensed/HelveticaUltraLightCondensed.eot');
+	src:url('fonts/HelveticaUltraLightCondensed/HelveticaUltraLightCondensed.eot?#iefix') format('embedded-opentype'), /* IE9 */
+		url('fonts/HelveticaUltraLightCondensed/HelveticaUltraLightCondensed.woff') format('woff'),
+		url('fonts/HelveticaUltraLightCondensed/HelveticaUltraLightCondensed.svg') format('svg');
+}
+
+@font-face
+{
+	font-family: 'HelveticaThinCondensed';
+	src:url('fonts/HelveticaThinCondensed/HelveticaThinCondensed.eot');
+	src:url('fonts/HelveticaThinCondensed/HelveticaThinCondensed.eot?#iefix') format('embedded-opentype'), /* IE9 */
+		url('fonts/HelveticaThinCondensed/HelveticaThinCondensed.woff') format('woff'),
+		url('fonts/HelveticaThinCondensed/HelveticaThinCondensed.svg') format('svg');
+}
+
+@font-face
+{
+	font-family: 'HelveticaRoman';
+	src:url('fonts/HelveticaRoman/HelveticaNeueLTStd-Roman.eot');
+	src:url('fonts/HelveticaRoman/HelveticaNeueLTStd-Roman.eot?#iefix') format('embedded-opentype'), /* IE9 */
+		url('fonts/HelveticaRoman/HelveticaNeueLTStd-Roman.woff') format('woff'),
+		url('fonts/HelveticaRoman/HelveticaNeueLTStd-Roman.svg') format('svg');
+}
+
+@font-face
+{
+	font-family: 'HelveticaLightCondensed';
+	src:url('fonts/HelveticaLightCondensed/HelveticaLightCondensed.eot');
+	src:url('fonts/HelveticaLightCondensed/HelveticaLightCondensed.eot?#iefix') format('embedded-opentype'), /* IE9 */
+		url('fonts/HelveticaLightCondensed/HelveticaLightCondensed.woff') format('woff'),
+		url('fonts/HelveticaLightCondensed/HelveticaLightCondensed.svg') format('svg');
+}
+@font-face
+{
+	font-family: 'HelveticaThinCondensedEm';
+	src:url('fonts/HelveticaThinCondensedOblique/HelveticaThinCondensedOblique.eot');
+	src:url('fonts/HelveticaThinCondensedOblique/HelveticaThinCondensedOblique.eot?#iefix') format('embedded-opentype'), /* IE9 */
+		url('fonts/HelveticaThinCondensedOblique/HelveticaThinCondensedOblique.woff') format('woff'),
+		url('fonts/HelveticaThinCondensedOblique/HelveticaThinCondensedOblique.svg') format('svg');
+}
