@@ -31,13 +31,11 @@ function DashboardCtr($scope, $http,pagination) {
             $scope.pageJobs.computePages();
 	   });
     }
-    
-    /*
+     /*
     Saved Content
     */
     $scope.loadSaved=function(){
         $http.get("data/json/saved.json").success(function(data) {
-           // Job recommandation
             $scope.saves=data;
             $scope.pageSaved=new pagination();
             $scope.pageSaved.limit=5;
@@ -45,6 +43,55 @@ function DashboardCtr($scope, $http,pagination) {
             $scope.pageSaved.computePages();
 	   });
     }
+    /*
+    Work experiencess
+    */
+    $scope.loadInfo=function(){
+        $http.get("data/json/user-full.json").success(function(data) {
+            $scope.user=data;
+	   });
+    }
+    /*
+    Work experiencess
+    */
+    $scope.loadWorkExperience=function(){
+        $http.get("data/json/workexperience.json").success(function(data) {
+            $scope.workExperiences=data;
+	   });
+    }
+    /*
+    Eductions    
+    */
+    $scope.loadEducation=function(){
+        $http.get("data/json/education.json").success(function(data) {
+            $scope.educations=data; 
+	   });
+    }
+    /*
+    Career Goals
+    */
+    $scope.loadCareerGoals=function(){
+        $http.get("data/json/careergoals.json").success(function(data) {
+            $scope.careerGoals=data;
+	   });
+    }
+    /*
+    Skills    
+    */
+    $scope.loadSkill=function(){
+        $http.get("data/json/skills.json").success(function(data) {
+            $scope.skills=data; 
+	   });
+    }
+    /*
+    Technology
+    */
+    $scope.loadTechnologies=function(){
+        $http.get("data/json/technologies.json").success(function(data) {
+            $scope.technologies=data;
+	   });
+    }
+
     /*
     Constructor
     */
@@ -55,14 +102,22 @@ function DashboardCtr($scope, $http,pagination) {
             "txt":" Dashboard",
             "color":"black"
         }];
+        $scope.loadInfo();
         $scope.loadJob();
         $scope.loadSaved();
+        $scope.loadEducation();
+        $scope.loadWorkExperience();
+        $scope.loadSkill();
+        $scope.loadInfo();
+        $scope.loadTechnologies();
+        $scope.loadCareerGoals();
         $scope.jobResulstTitle="Latest Job for You";
         $scope.savedContentTitle="Saved Content";
         //Init eventual effects
         $scope.$on('$includeContentLoaded', function(){
             initEffect();
         });
+        console.log($scope);
         
         
     }

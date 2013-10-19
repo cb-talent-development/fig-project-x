@@ -1459,11 +1459,26 @@ OTHER
       width: 16px; } }
 
 .icon-pencil {
+  background-size: 1065px 994px;
+  background-position: -106px -300px;
+  height: 20px;
+  width: 20px; }
+  @media only screen and (max-width: 768px) {
+    .icon-pencil {
+      background-size: -1275px 1190px;
+      background-position: -127px -358px;
+      height: 23px;
+      width: 23px;
+      	   /*background-position: -75px -221px;
+             height:14x;
+             width:14px;*/ } }
+
+.icon-pencil-big {
   background-position: -150px -422px;
   height: 28px;
   width: 28px; }
   @media only screen and (max-width: 768px) {
-    .icon-pencil {
+    .icon-pencil-big {
       background-position: -75px -221px;
       height: 14x;
       width: 14px; } }
@@ -1607,6 +1622,16 @@ OTHER
       background-position: -155px -270px;
       height: 27.5px;
       width: 15px; } }
+
+.icon-bar-cursor {
+  background-position: -156px -545px;
+  height: 192px;
+  width: 5px; }
+  @media only screen and (max-width: 768px) {
+    .icon-bar-cursor {
+      background-position: -77.5px -272.5px;
+      height: 96px;
+      width: 3px; } }
 
 /*
 TOOLS

@@ -1,6 +1,69 @@
 <div ng-include="'partials/path.html'"></div>
 <div class="dashboard">
-    <div class="presentation"></div>
+    <div class="resume">
+        <div class="left person">
+            <i class="icon-pencil"></i>
+            <div class="picture" style="background: url('{{user.Media.Url}}') center no-repeat;background-size:160%;"></div>
+            <div class="name">{{user.Name}}</div>
+            <div class="mail">{{user.Mail}}</div>
+
+        </div>
+        <div class="left presentation">
+            <table>
+                <tr>
+                    <td><div class="icon-pencil"></div></td>
+                    <td><div class="icon-suitcase-red logo"></div></td>
+                    <td><div>{{user.JobTitle}}</div></td>
+                </tr>
+                <tr>
+                    <td><div class="icon-pencil"></div></td>
+                    <td><div class="icon-building logo"></div></td>
+                    <td><div>{{user.Website}}</div></td>
+                </tr>
+                <tr>
+                    <td><div class="icon-pencil"></div></td>
+                    <td><div class="icon-location logo"></div></td>
+                    <td><div>{{user.Location}}</div></td>
+                </tr>
+                <tr>
+                    <td><div class="icon-pencil"></div></td>
+                    <td><div class="icon-dollars logo"></div></td>
+                    <td><div>{{user.Income}}</div></td>
+                </tr>
+            </table>
+        </div>
+        <div class="right job-phase">
+            <div class="title">
+                <div class="icon-pencil inline"></div>
+                <div class="txt inline">What Phase of the Job Search Are You?</div>
+            </div>
+            <div class="phase-content">
+                <div class="cursor left">
+                    <i class="icon-cursor-red"></i>
+                    <div class="icon-bar-cursor"></div>
+                </div>
+                <div class="left">
+                    <div class="phase link" onclick="scrollVertical($(this),$('.icon-cursor'))">
+                        <i class="icon-search-orange-big"></i>
+                        <span>Discovery</span>
+                    </div>
+                    <div class="phase link" onclick="scrollVertical($(this),$('.icon-cursor'))">
+                        <i class="icon-twin-blue-big"></i>
+                        <span>Find the Job</span>
+                    </div>
+                    <div class="phase link" onclick="scrollVertical($(this),$('.icon-cursor'))">
+                        <i class="icon-check-red-big"></i>
+                        <span>Get the Job</span>
+                    </div>
+                    <div class="phase link" onclick="scrollVertical($(this),$('.icon-cursor'))">
+                        <i class="icon-suitcase-green-big"></i>
+                        <span>On the Job</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
     <div class="saved-content">
         <div class="title">{{savedContentTitle}}</div>
         <div class="content">
@@ -22,4 +85,86 @@
         </div>
     </div>
     <div ng-include="'partials/jobsRecommandations.html'"></div>
+    <div class="content">
+        <div class="col-left left">
+            <div class="work-experience">
+                <div class="title-section">
+                    <span class="icon-pencil"></span>
+                    <span class="title">Work Experience</span>
+                </div>
+                <div class="content">
+                    <div class="work-experience-elem" ng-repeat="experience in workExperiences">
+                        <div class="left">
+                            <div class="icon-suitcase-red"></div>
+                            <div class="dotted-bar"></div>
+                        </div>
+                        <div class="left">
+                            <div class="job-title">{{experience.Title}}</div>
+                            <div class="website">{{experience.Website}}</div>
+                            <div class="period">{{experience.Period}}</div>
+                            <div class="left occupation">{{experience.OnetOccupation}}</div>
+                            <div class="left income">{{experience.Income}}</div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-left left">
+            <div class="education">
+                <div class="title-section">
+                    <span class="icon-pencil"></span>
+                    <span class="title">Education</span>
+                </div>
+                <div class="content">
+                    <div class="education-elem" ng-repeat="education in educations">
+                        <div class="left">
+                            <div class="icon-graduation"></div>
+                            <div class="dotted-bar"></div>
+                        </div>
+                        <div class="left">
+                            <div class="name">{{education.Name}}</div>
+                            <div class="place">{{education.Place}}</div>
+                            <div class="period">{{education.Period}}</div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="career-goals">
+                <div class="title-section">
+                    <span class="icon-pencil"></span>
+                    <span class="title">Career Goals</span>
+                </div>
+                <div class="content">
+                    <div class="goal" ng-class="{true : 'first',false: ''}[$index==0]" ng-repeat="goal in careerGoals">{{goal.Name}}</div>
+            
+                </div>
+            </div>
+        </div>
+        <div class="col-right right">
+            <div class="skills">
+                <div class="title-section">
+                    <span class="icon-pencil"></span>
+                    <span class="title">Skills</span>
+                </div>
+                <div class="content">
+                    <div class="skill" ng-class="{true:'left',false:'right'}[$index%2==0]" ng-repeat="skill in skills">{{skill.Name}}</div>
+                    <div class="add-elem link left">+ Add a Skill</div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="technology">
+                <div class="title-section">
+                    <span class="icon-pencil"></span>
+                    <span class="title">Tools & Technology</span>
+                </div>
+                <div class="content">
+                    <div class="technology-elem" ng-repeat="technology in technologies">{{technology.Name}}</div>
+                    <div class="link add-elem">+ Add more Tools & Technologies</div>
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
 </div>

@@ -102,6 +102,10 @@ General CSS
     box-shadow:$left $bottom $spread $thickness rgba(0,0,0,$opacity);
     -webkit-box-shadow: $left $bottom $spread $thickness rgba(0,0,0,$opacity);
 }
+@mixin inline-top{
+   display:inline-block;
+   vertical-align:top;
+}
 .visible{
     display:block;
 }
@@ -145,6 +149,9 @@ table td{
 }
 .right{
     float:right;
+}
+.inline{
+    @include inline-top;
 }
 .toggleMenu,.toggleMenuSimple{
     position:relative;
@@ -197,6 +204,8 @@ body{
 	background-color: $backgroundGrey;
     z-index:1;
 	width: 100%;
+    font-size:auto;
+    line-height:normal;
     font-family: HelveticaThinCondensed, sans-serif;
 }
 input{
@@ -206,14 +215,17 @@ input{
 /*
 Font handler
 */
-.title,.content,.text,.careerScape{
+.title,.content,.text,.careerScape,.dashboard,.related-title{
     font-family: HelveticaLightCondensed, sans-serif;
 }
-.end-week,.article .intro{
+.related-content{
+    font-family:HelveticaRoman,'sans-serif';
+}
+.end-week,.article,.intro{
     font-family: HelveticaThinCondensedEm, sans-serif;
 }
-.comment .content,.comments .placeholder,.help-section .intro{
-    font-family: HelveticaRoman, sans-serif;
+.comment .content,.comments .placeholder,.help-section .intro,.post .body{
+    font-family: HelveticaNeue, sans-serif;
    
 }
 @mixin font-family{
@@ -367,7 +379,7 @@ Header css
     padding:0px;
 	border: none;
 	h1{
-		font-size: 3.5em;
+		font-size: 50px;
 		display: inline;
 		img{
 			vertical-align:middle;
@@ -441,7 +453,7 @@ Header css
 	}
 	span#menu-button{
 		position:absolute;
-		top: 13px;
+		top: 20px;
 		right: 75px;
 		@media only screen and (max-width: 768px){
 			right: 10px;
@@ -544,10 +556,6 @@ General buttons classes
     @include shadow-effect;
     background:white;
 }
-@mixin inline-top{
-   display:inline-block;
-   vertical-align:top;
-}
 @mixin button-style{
     @include inline-top; 
     position:relative;
@@ -563,6 +571,7 @@ General buttons classes
 .button{
     @include shadow;
     @include button-style;
+    font-size:18px;
     b,i{
         position:absolute;
         top:50%;
@@ -609,7 +618,7 @@ Menu with multiple button
     }
     .button{
         b{
-            top:16px;
+            top:20px;
         }
 
     }
@@ -630,9 +639,9 @@ Menu with multiple button
         width:33.3%;
         .picture{
             position:absolute;
-            left:0px;top:0px;
-            width:43px;
-            height:43px;
+            left:0px;top:0.5px;
+            width:42px;
+            height:41.5px;
         }
         .name{
             margin-left:46px;
@@ -708,8 +717,8 @@ week number css
 	width: 100%;
 	color: #ccc;
 	font-size: 1.7em;
-	text-shadow: 0.04em 0.04em 0.02em #aaa;
-	text-align: center;
+    text-shadow : 0.00em 0.08em 0.04em #FFFFFF;
+    text-align: center;
     .line{
         border-top:1px solid #bbb;
         border-bottom:1px solid #EEE;
@@ -787,7 +796,7 @@ Article type 1
 	div.comment{
 		display: inline-block;
 		margin: 30px;
-        margin-top:0px;
+        margin-top:8px;
         margin-bottom:16px;
 		.commentCount{
 			margin: 0px 3px;
@@ -812,7 +821,7 @@ Article type 1
 		overflow:hidden;
 		margin: 0px 30px;
 		margin-bottom: 25px;
-		-webkit-line-clamp: 8;
+		-webkit-line-clamp: 6;
         @media only screen and (max-width:768px){
             margin: 10px;margin-top:0px;margin-bottom:0px;
             overflow:hidden;
@@ -839,9 +848,6 @@ Article type 1
         .left{
             float:left;
             clear:left;
-        }
-        .right{
-            float:right;
         }
     }
 }
@@ -969,7 +975,6 @@ Article type 3
         }
         .right{
             width:235px;     
-            float:right;
         }
         .left{
             width:128px;
@@ -1135,6 +1140,9 @@ Small article (A2/A3)
                 width:100%;
                 padding-left:15px;padding-right:15px;
                 padding-top:10px;padding-bottom:8px;
+            }
+            .icon-bar-grey{
+                margin-left:10px;margin-right:8px;
             }
         }
 	}
@@ -1455,7 +1463,6 @@ Load More button
 */
 .load-more{
     @include main-block;
-    font-size:17px;
     margin-top:30px;
     margin-bottom:55px;
     text-align:center;
@@ -1656,7 +1663,8 @@ POST CSS
             font-size:18px;
         }
         p{
-            font-size:17px;
+            font-size:18px;
+            line-height:24px;
             margin:0px;
             padding-top:11px;
             padding-bottom:16px;
@@ -1866,7 +1874,6 @@ Tools dashboard & tool css
             height:100%;
             background-color:$grey;
             width:69.2%;
-            float:right;
         }
     }
 }
@@ -1897,6 +1904,7 @@ Tool CSS
             .social{
                 float:right;
                 height:100%;
+                margin-right:18px;
             }
             .icon-jobinality-small,.icon-resumePro-small,.icon-localygrown-small,.icon-careerscape-small{
                 position:absolute;
@@ -1904,16 +1912,16 @@ Tool CSS
             }
             .icon-arrow-right-big-grey{
                 position:absolute;top:50%;margin-top:-26px;
-                left:440px;
+                left:431px;
             }
             .title{
                 top:0px;
                 text-transform:capitalize;
-                font-size:27px;
+                font-size:37px;
                 position:absolute;
-                line-height:100px;
+                line-height:108px;
                 height:94px;
-                left:240px;
+                left:238px;
             }
         }
         .help{
@@ -1921,7 +1929,7 @@ Tool CSS
             float:right;
             height:94px;
             padding:25px;
-            width:94px;
+            width:90px;
             .icon-help:hover{
                 cursor:pointer;
             }
@@ -2366,14 +2374,90 @@ JOB RESULTS/RECOMMENDATIONS
 Dashboard
 */
 .dashboard{
-    .presentation{
+    @include main-block;
+    .resume{
         @include whitebox;
-        @include main-block;
-        @include shadow;
         position:relative;
-        height:350px;
         margin-top:60px;
         margin-bottom:25px;
+        > .left,>.right{
+            position:relative;
+            height:350px;
+            padding:45px 30px;
+            width:33.31%;
+        }
+        >.left{
+            border-right:1px solid $lightGrey;
+        }
+        .person{
+            text-align:center;
+            .icon-pencil{
+                position:absolute;
+                top:45px;
+                left:30px;
+                
+            }
+            .picture{
+                width:175px;height:175px;
+                border-radius:100px;
+                border:2px solid white;
+                @include box-shadow(0px,1px,2px,0px,0.2);
+                margin:auto;margin-bottom:20px;
+                
+            }
+            .name{
+                font-size:35px;
+            }
+            .mail{
+                color:$grey;
+                font-size:20px;                                                              
+            }
+        }
+        .presentation{
+            padding-top:30px;
+            padding-bottom:0px;
+            font-size:20px;
+            line-height:20px;
+            table{
+                tr{
+                 height:74px;
+                    .logo{
+                        margin:0px 15px;
+                    }
+                }
+            }
+        }
+        .job-phase{
+            font-size:20px;
+            .title{
+                margin-bottom:10px;
+                .txt{width:70%;
+                    margin-left:20px;
+                }
+            }
+            .phase-content{
+                .cursor{
+                    padding-top:6px;
+                    margin-right:30px;
+                    margin-left:6px;
+                    position:relative;
+                    .icon-cursor-red{
+                        position:absolute;
+                        left:-4px;top:65px;
+                    }
+                }
+                .phase{
+                    margin-bottom:13px;
+                    i{
+                        margin-right:15px;}
+                    >span{
+                        line-height:40px;
+                        position:relative;
+                        top:1px;
+                    }
+                }
+            }
+        }
     }
     .saved-content{
         @include whitebox;
@@ -2382,5 +2466,78 @@ Dashboard
     }
     .job-results,.saved-content{
         .title{text-align:left;}
+    }
+    .content{
+        .col-left,.col-right{
+            width:370px;
+        }
+        .col-left{
+            margin-right:25px;
+        }
+        .education,.work-experience,.skills,.technology,.career-goals{
+            @include whitebox;
+            margin-bottom:25px;
+            .title-section{
+                font-size:19px;
+                padding:22px;
+                padding-bottom:19px;
+                .title{
+                    margin-left:5px;
+                }
+                border-bottom:1px solid $lightGrey;  
+                
+            }
+            .content{
+                padding:20px;
+            }
+        }
+        .work-experience{
+           
+        }
+        .education{
+            
+        }
+        .add-elem,.technology-elem,.skill{
+            font-size:16px;
+            text-align:center;
+            padding-top:12px;
+            padding-bottom:8px;
+        }
+        .add-elem{
+            background:rgb(237,237,237);
+            border:1px dashed rgb(190,190,190);
+        }
+        .skills{
+            .left{
+                margin-right:26px;
+            }
+            .add-elem,.skill{
+                width:46%;
+            }
+            .add-elem{margin:0;}
+            .skill{
+                color:white;
+                margin-bottom:20px;
+                background:rgb(92,26,71);
+            }
+        }
+        
+        .technology{
+            .add-tech,.technology-elem{
+                padding-top:12px;
+                padding-bottom:8px;
+            }
+            .technology-elem{
+                @include blue-element;
+                margin-bottom:20px;
+            }
+        }
+        .career-goals{
+            font-size:19px;
+            .content{
+                .goal{margin-top:31px;width:80%;}
+                .first{margin-top:0px;}
+            }
+        }
     }
 }

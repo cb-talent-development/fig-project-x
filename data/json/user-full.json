@@ -1,0 +1,24 @@
+{
+    "Name":"Nicolas Bernier",
+    "LastName":"Benier",
+    "FirstName":"Nicolas",
+    "Media":{
+            "id": "string",
+            "Type": "photo",
+            "Url": "img/personnes.jpg",
+            "Width": "50",
+            "Height": "70",
+            "Posx": "0",
+            "Posy": "0",
+            "Scale": "1",
+            "Alt": "string",
+            "Title": "string",
+            "MetaTags": "string"
+    },
+    "Mail":"berniernico@hotmail.com",
+    "JobPhase":"Find the Job",
+    "JobTitle":"Senior Manager, Consumer Strategy & Insights",
+    "Website":"www.careerbuilder.com",
+    "Income":"$125000-$150000",
+    "Location":"Illinois, 61261"
+}
