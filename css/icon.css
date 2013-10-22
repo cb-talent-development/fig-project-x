@@ -78,11 +78,11 @@ Arrow big
 .icon-bigarrow-right-black {
   background-position: -212px -59px;
   width: 9px;
-  height: 15px; }
+  height: 17px; }
   @media only screen and (max-width: 768px) {
     .icon-bigarrow-right-black {
       width: 5px;
-      height: 8px;
+      height: 9px;
       background-position: -106px -29.5px; } }
 
 .icon-bigarrow-right-white {
@@ -1485,7 +1485,7 @@ OTHER
 
 .icon-suitcase-red {
   background-position: -190px -415px;
-  height: 42px;
+  height: 43px;
   width: 43px; }
   @media only screen and (max-width: 768px) {
     .icon-suitcase-red {
@@ -1493,34 +1493,45 @@ OTHER
       height: 21x;
       width: 22px; } }
 
+.icon-suitcase-red-medium {
+  background-size: 1125px 1050px;
+  background-position: -142.5px -311.25px;
+  height: 32.25px;
+  width: 32.25px; }
+  @media only screen and (max-width: 768px) {
+    .icon-suitcase-red-medium {
+      background-position: -71.25px -155.625px;
+      height: 16.5x;
+      width: 17.5px; } }
+
 .icon-building {
   background-position: -236px -415px;
-  height: 42px;
+  height: 43px;
   width: 43px; }
   @media only screen and (max-width: 768px) {
     .icon-building {
       background-position: -118px -207.5px;
-      height: 21x;
+      height: 22x;
       width: 22px; } }
 
 .icon-location {
   background-position: -283px -415px;
-  height: 42px;
+  height: 43px;
   width: 43px; }
   @media only screen and (max-width: 768px) {
     .icon-location {
       background-position: -141.5px -207.5px;
-      height: 21x;
+      height: 22x;
       width: 22px; } }
 
 .icon-dollars {
   background-position: -330px -415px;
-  height: 42px;
+  height: 43px;
   width: 43px; }
   @media only screen and (max-width: 768px) {
     .icon-dollars {
       background-position: -165px -207.5px;
-      height: 21x;
+      height: 23x;
       width: 22px; } }
 
 .icon-graduation {
@@ -1715,3 +1726,76 @@ TOOLS
       background-position: -90.5px -270px;
       height: 28.5px;
       width: 28.5px; } }
+
+/*
+ICON SAVED
+*/
+.icon-jobinality-saved {
+  background-position: -893px -588px;
+  height: 117px;
+  width: 101px; }
+  @media only screen and (max-width: 768px) {
+    .icon-jobinality-saved {
+      background-position: -446.5px -294px;
+      height: 58.5px;
+      width: 50.5px; } }
+
+.icon-article-saved {
+  background-position: -1008px -583px;
+  height: 126px;
+  width: 102px; }
+  @media only screen and (max-width: 768px) {
+    .icon-article-saved {
+      background-position: -446.5px -291.5px;
+      height: 63px;
+      width: 51px; } }
+
+.icon-resumePro-saved {
+  background-position: -1125px -588px;
+  height: 117px;
+  width: 101px; }
+  @media only screen and (max-width: 768px) {
+    .icon-resumePro-saved {
+      background-position: -562.5px -294px;
+      height: 58.5px;
+      width: 50.5px; } }
+
+.icon-video-saved {
+  background-position: -1240px -583px;
+  height: 126px;
+  width: 101px; }
+  @media only screen and (max-width: 768px) {
+    .icon-video-saved {
+      background-position: -620px -291.5px;
+      height: 63px;
+      width: 50.5px; } }
+
+.icon-image-saved {
+  background-position: -1356px -583px;
+  height: 126px;
+  width: 101px; }
+  @media only screen and (max-width: 768px) {
+    .icon-image-saved {
+      background-position: -678px -291.5px;
+      height: 63px;
+      width: 50.5px; } }
+
+.icon-locallyGrown-saved {
+  background-position: -893px -743px;
+  height: 115px;
+  width: 113px; }
+  @media only screen and (max-width: 768px) {
+    .icon-locallyGrown-saved {
+      background-position: -446.5px -371.5px;
+      height: 57.5px;
+      width: 56.5px; } }
+
+.icon-careerScape-saved {
+  background-position: -1045px -739px;
+  height: 123px;
+  width: 114px; }
+  @media only screen and (max-width: 768px) {
+    .icon-careerScape-saved {
+      background-position: -522.5px -369.5px;
+      height: 61.5px;
+      width: 57px; } }

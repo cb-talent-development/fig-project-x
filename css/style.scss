@@ -31,7 +31,8 @@ $pink-3: #CD6090;
 $orange: rgb(244,125,61);
 
 $lightBlue: rgb(204,214,222);
-$grey: rgb(167,167,167);
+$darkGrey:rgb(128, 128, 128);
+$grey: rgb(157,157,157);
 $lightGrey: rgb(207,207,207);
 $backgroundGrey: #E7E7E7;
 $orange: rgb(238,120,53);
@@ -153,6 +154,27 @@ table td{
 .inline{
     @include inline-top;
 }
+.custom-checkbox{
+    position:relative;
+    input[type=checkbox] {
+	    display: none;
+    } 
+    label:hover{ cursor:pointer;}
+    label:before{
+        content:"";
+        position:absolute;
+        left:0px;
+        top:50%;
+        text-align: center;  
+    }
+    label:hover:before { 
+        box-shadow:0px 0px 2px 0px rgba(0,0,0,0.3);
+        -webkit-box-shadow:0 0px 2px 0px rgba(0,0,0,0.3);
+    }
+    input[type=checkbox]:checked + label:before { 
+        content: "\2713";  
+    }  
+}
 .toggleMenu,.toggleMenuSimple{
     position:relative;
     .subMenu{
@@ -164,6 +186,70 @@ table td{
         display:none;
         background-color:inherit;
     }
+}
+/*
+COLOR
+*/
+@mixin shadow-color{
+    @include box-shadow(0px,1px,1px,0px,0.3);
+}
+$grey-color:rgb(237,237,237);
+$dark-grey-color:rgb(207,207,207);
+$grey-font:rgb(157,157,157);
+@mixin back-grey{
+    @include shadow-color;
+    background-color:$grey-color !important;color:black;
+}
+.back-grey{
+    @include back-grey;
+}
+.back-grey-no-hover{
+    @include back-grey;
+}
+.back-grey:hover{
+    cursor:pointer;
+    background-color:$dark-grey-color !important;
+}
+.grey{
+    color:$grey-font;
+}
+//green
+$green-color:rgb(112,194,57);
+$dark-green-color:rgb(95,174,45);
+@mixin back-green{
+    @include shadow-color;
+    background-color:$green-color !important;color:white;
+}
+.back-green-no-hover{
+    @include back-green;
+}
+.back-green{
+    @include back-green;
+}
+.back-green:hover{
+    cursor:pointer;
+    background-color:$dark-green-color !important;
+}
+.green{
+    color:$green-color !important;
+}
+//white
+@mixin back-white{
+    @include shadow-color;
+    background-color:white !important;color:black;
+}
+.back-white-no-hover{
+    @include back-white;
+}
+.back-white{
+    @include back-white;
+}
+.back-white:hover{
+    cursor:pointer;
+    color:rgb(80,80,80) !important;
+}
+.white{
+    color:white !important;
 }
 /*
 Arrow
@@ -221,10 +307,10 @@ Font handler
 .related-content{
     font-family:HelveticaRoman,'sans-serif';
 }
-.end-week,.article,.intro{
+.end-week,.article,.intro,.dialog .message{
     font-family: HelveticaThinCondensedEm, sans-serif;
 }
-.comment .content,.comments .placeholder,.help-section .intro,.post .body{
+.comment .content,.comments .placeholder,.help-section .intro,.post .body,.optional{
     font-family: HelveticaNeue, sans-serif;
    
 }
@@ -412,6 +498,7 @@ Header css
 }
 .navbar{
     margin:0px;
+    z-index:1000;
 	background-color: $navcolor;
 	@media only screen and (min-width:769px){
 		height: 60px;
@@ -557,12 +644,18 @@ General buttons classes
     background:white;
 }
 @mixin button-style{
+    font-size:18px;
     @include inline-top; 
     position:relative;
     padding-top:13px;padding-bottom:9px;
     padding-left:15px;padding-right:15px;
     text-align:left;
-    color:$grey;
+    color:$darkGrey;
+     b,i{
+        position:absolute;
+        top:50%;
+        right:15px;
+    }
 }
 .green{
     background:green;
@@ -571,28 +664,40 @@ General buttons classes
 .button{
     @include shadow;
     @include button-style;
-    font-size:18px;
-    b,i{
-        position:absolute;
-        top:50%;
-        right:20px;
-    }
 }
 .button:hover:not(.no-hover){
     cursor:pointer;
     color: #6b6b6b;
 	.grey-icon{
-		opacity: 0.5;
+		opacity: 0.8;
 	}
 }
-.search-button{
-    margin:0px !important;
+.select{
+    @include shadow;
+    @include button-style;
+    b,i{margin-top:-4.5px;}
+    .subMenu{
+        @include shadow;
+        border-top:1px solid $lightGrey;
+        top:100%;
+        padding:5px 15px;
+        > div{
+            margin:5px 0px
+        }
+        >div:hover{
+            color:black !important;
+        }
+    }
+}
+.select:hover{cursor:pointer;}
+.input-button{
+    margin:0px;
     @extend .button;
     padding:0px;
     box-shadow:0 -1px 1px rgba(0,0,0,0.2);
     -webkit-box-shadow:0 -1px 1px rgba(0,0,0,0.2);
     input{
-        padding-top:13px;padding-bottom:9px;padding-left:15px;
+        padding-top:13px;padding-bottom:9px;padding-left:15px;padding-right:15px; // default padding
         border:none;
         display:block;
         width:100%;
@@ -615,6 +720,9 @@ Menu with multiple button
     .home{
         margin-right:2.2%;
         width:14.54%;
+    }
+    .last{
+         margin-right:0px;
     }
     .button{
         b{
@@ -1882,6 +1990,76 @@ Tools dashboard & tool css
     color:white;
 }
 /*
+DIALOG
+*/
+.dialog{
+    z-index:300;
+    display:none;
+    position:fixed;top:0px;left:0px;bottom:0px;right:0px;width:100%;height:100%;
+    .background{
+        background:rgba(0,0,0,0.5);
+        position:fixed;top:0px;left:0px;bottom:0px;right:0px;width:100%;height:100%;
+    }
+    .section{
+        position:relative;display:none;
+        width:60%;margin:auto;margin-top:100px;background-color:rgb(243,245,245);
+        .header{
+            position:relative;
+            font-size:27px;padding-left:30px;
+            padding-right:15px;
+            padding-top:20px;
+            font-weight:bold;
+            padding-bottom:12px;
+            border-bottom:1px solid $lightGrey;
+            .close{
+                position:absolute;
+                top:50%;
+                right:20px;
+                margin-top:-15px;
+            }
+        }
+        .intro{
+            width:100%;
+            font-weight:18px;padding:22px;
+            border-bottom:1px solid $lightGrey;
+            td{vertical-align:middle;}
+            .logo{position:relative;top:26px;left:17px;}
+            strong{
+                font-weight:bold;
+            }
+        }
+        .content{width:100%;}
+        .footer-dialog{
+            padding:22px;
+                .button-save,.button-next,.button-previous{
+                    position:relative;
+                    padding:0px 14px;
+                    padding-top:12px;
+                    padding-bottom:7px;
+                }
+                .button-next,.button-previous{
+                    i{
+                        position:absolute;
+                        top:50%;
+                        margin-top:-8.5px;
+                    }
+                }
+                .button-previous[class~=selected],.button-next[class~=selected]{
+                    opacity:0.5;
+                }
+                .button-previous{
+                    padding-left:40px;
+                    margin-right:15px;
+                    i{left:15px;}
+                }
+                .button-next{
+                    padding-right:40px;
+                    i{right:15px;}
+                }
+        }
+    }
+}
+/*
 Tool CSS
 */
 .tool{
@@ -1959,7 +2137,7 @@ Tool CSS
             border:none;background:none;
         }
         .industries,.occupations{
-            padding-top:19px;padding-bottom:15px;
+            padding-top:22px;padding-bottom:17px;
             font-size:22px;
             position:relative;
             .title{
@@ -1973,6 +2151,7 @@ Tool CSS
             }
             .subMenu{
                 left:0px;
+                top:65px;
                 font-size:17px;
                 line-height:40px;
                 color:white !important;
@@ -2035,37 +2214,8 @@ Tool CSS
        border-top-color:$navcolor;
     }
     .dialog{
-        z-index:300;
-        display:none;
-        position:fixed;top:0px;left:0px;bottom:0px;right:0px;width:100%;height:100%;
-        .background{
-            background:rgba(0,0,0,0.5);
-            position:fixed;top:0px;left:0px;bottom:0px;right:0px;width:100%;height:100%;
-        }
         .section{
-            position:relative;display:none;
-            width:60%;margin:auto;margin-top:100px;background-color:rgb(243,245,245);
-            .header{
-                font-size:27px;padding-left:30px;padding-right:15px;padding-top:20px;font-weight:bold;padding-bottom:12px;
-                border-bottom:1px solid $lightGrey;
-                .close{
-                    float:right;
-                }
-            }
-            .intro{
-                width:100%;
-                font-weight:18px;padding:22px;
-                border-bottom:1px solid $lightGrey;
-                td{vertical-align:middle;}
-                .logo{position:relative;top:26px;left:17px;}
-                strong{
-                    font-weight:bold;
-                }
-            }
-            .content{padding:15px;width:100%;}
-            .footer-dialog{
-                padding:22px;
-            }
+            .content{padding:15px;}
         }
     }
     .help-section{
@@ -2295,14 +2445,15 @@ JOB RESULTS/RECOMMENDATIONS
             border-bottom:1px solid $grey;
         }
         .content{
-            height:275px;
+            position:relative;
             .scrollable-content{
                 width:80%;
                 margin:auto;
-                height:80%;
+                height:82%;
                 overflow:hidden;
             }
             .scrollable{
+                height:100%;
                 text-align:left;
                 width:10000px;
             }
@@ -2333,38 +2484,46 @@ JOB RESULTS/RECOMMENDATIONS
 }
 .saved-content{
     .content{
+        height:325px;
+        .scrollable-content{
+            height:85%;
+        }
         .save{
-            .icon{
-                height:50px;
-                width:50px;
-                margin-top:35px;
-                margin-bottom:10px;
-            }
+            margin-top:45px;
+            position:relative;
+            height:210px;
             font-size:17px;
             line-height:23px;
-            .name{
-                color:black;
-            }
-            .type{
-                font-size:15px;
-                color:$grey;
+            .content{
+                position:absolute;
+                top:145px;
+                width:100%;
+                .name{
+                    color:black;
+                }
+                .type{
+                    font-size:15px;
+                    color:$grey;
+                }
             }
         }
     }
 }
 .job-results{
     .content{
+        height:275px;
         .job-recommandation{
             .icon-suitcase-job{
-                margin-top:35px;
-                margin-bottom:10px;
+                margin-top:40px;
+                margin-bottom:20px;
             }
             font-size:17px;
-            line-height:23px;
             .title-job{
                 color:black;
+                line-height:26px;
             }
             .info-job{
+                line-height:23px;
                 color:$grey;
             }
         }
@@ -2485,23 +2644,83 @@ Dashboard
                     margin-left:5px;
                 }
                 border-bottom:1px solid $lightGrey;  
-                
             }
+        }
+        .work-experience-elem,.education-elem{
+            position:relative;
+            overflow:hidden;
+
+        }
+        .skills,.technology,.career-goals{
             .content{
                 padding:20px;
             }
         }
+        .education,.work-experience{
+            .content{
+                padding:20px;padding-bottom:0px;
+            }
+        }
+        .website,.period,.place{
+            font-size:15px;
+            line-height:27px;
+        }
+        .website,.place{
+            color:rgb(238,120,53);
+        }
+        .period{
+            color:rgb(128,128,128);
+        }
+        .job-title,.education-elem .name{
+            font-size:20px;line-height:30px;
+        }
+        .detail{
+            margin-left:52px;//20+32
+            width:75%;
+        }
+        .timeline{
+            position:absolute;
+            height:100%;
+            .dashed-bar{
+                width:0px;
+                margin-left:17px;
+                height:90%;
+                border-left:1px dashed $lightGrey;
+            }
+        }
         .work-experience{
-           
+            .period{margin-bottom:3px;}
+            .detail{
+                padding-bottom:40px;
+            }
+            .website{
+                text-transform:uppercase;
+            }
+           .occupation,.income{
+                text-transform:uppercase;
+                padding-left:15px;padding-right:15px;
+            }
+            .occupation{
+                margin-right:10px;
+            }
+            .income{
+                background:rgb(107,212,138);color:white;
+            }
         }
         .education{
-            
+            .dashed-bar{margin-left:16px;}
+            .detail{
+                padding-bottom:30px;
+            }
         }
-        .add-elem,.technology-elem,.skill{
+        .add-elem,.technology-elem,.skill,.occupation,.income{
             font-size:16px;
             text-align:center;
             padding-top:12px;
             padding-bottom:8px;
+        }
+        .occupation,.technology-elem{
+            @include blue-element;
         }
         .add-elem{
             background:rgb(237,237,237);
@@ -2521,14 +2740,12 @@ Dashboard
                 background:rgb(92,26,71);
             }
         }
-        
         .technology{
             .add-tech,.technology-elem{
                 padding-top:12px;
                 padding-bottom:8px;
             }
             .technology-elem{
-                @include blue-element;
                 margin-bottom:20px;
             }
         }
@@ -2537,6 +2754,78 @@ Dashboard
             .content{
                 .goal{margin-top:31px;width:80%;}
                 .first{margin-top:0px;}
+            }
+        }
+    }
+    .popup{
+        .section{
+            width:90%;
+            .header{
+                font-size:24px;
+                .grey{
+                    color:$grey;
+                }
+            }
+            .content{
+                .custom-checkbox{
+                    margin-right:25px;
+                    position:relative;
+                    input[type=checkbox] {
+                        display: none;
+                    } 
+                    label{margin-left:40px;}
+                    label:hover{ cursor:pointer;}
+                    label:before{
+                        height:20px;
+                        width:20px;
+                        content:"";
+                        position:absolute;
+                        left:0px;
+                        top:50%;
+                        text-align: center;  
+                        margin-top:-15px;
+                        @include box-shadow(0.5px,-1px,2px,0px,0.3);
+                        border-right:1px solid $lightGrey;
+                        background:white;
+                    }
+                    input[type=checkbox]:checked + label:before { 
+                        background:$orange;
+                    }  
+                }
+                .custom-checkbox{
+                    font-size:23px;
+                    color:$darkGrey;
+                }
+                .message{
+                    font-size:17px;
+                    text-transform:uppercase;
+                    color:rgb(178,178,178);
+                    margin-bottom:10px;
+                }
+                .optional{color:$lightGrey;text-transform:uppercase;font-size:17px;}
+                .select,input,input[placeholder]{  
+                    padding-top:20px;padding-bottom:16px;
+                    font-size:23px;
+                }   
+                .large{width:340px;margin-right:25px;}
+                .medium{width:140px;margin-right:25px;}
+                .address{
+                    padding:17px;
+                    .street{margin-bottom:20px;}
+                }
+                .general{
+                    padding:17px;
+                    border-bottom:1px solid $lightGrey;
+                    .gender{margin-right:135px;
+                        .custom-checkbox{margin-top:15px;}
+                    }
+                    
+                }
+            }
+            .footer-dialog{
+                border-top:1px solid $lightGrey;
+                padding-top:12px;
+                padding-bottom:15px;
             }
         }
     }

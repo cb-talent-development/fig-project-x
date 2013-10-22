@@ -2,7 +2,7 @@
 <div class="dashboard">
     <div class="resume">
         <div class="left person">
-            <i class="icon-pencil"></i>
+            <i class="icon-pencil link" onclick="apparition($('.popup'))"></i>
             <div class="picture" style="background: url('{{user.Media.Url}}') center no-repeat;background-size:160%;"></div>
             <div class="name">{{user.Name}}</div>
             <div class="mail">{{user.Mail}}</div>
@@ -72,9 +72,11 @@
                 <div class="scrollable">
                     <div class="save link" ng-repeat="save in saves">   
                         <a href="/"></a>
-                        <div class="icon"></div>
-                        <div class="name">{{save.AssetName}}</div>
-                        <div class="type">{{save.AssetType}}</div>
+                        <div class="icon-{{save.Type}}-saved icon"></div>
+                        <div class="content">
+                            <div class="name">{{save.AssetName}}</div>
+                            <div class="type">{{save.AssetType}}</div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -94,11 +96,11 @@
                 </div>
                 <div class="content">
                     <div class="work-experience-elem" ng-repeat="experience in workExperiences">
-                        <div class="left">
-                            <div class="icon-suitcase-red"></div>
-                            <div class="dotted-bar"></div>
+                        <div class="left timeline">
+                            <div class="icon-suitcase-red-medium"></div>
+                            <div class="dashed-bar"></div>
                         </div>
-                        <div class="left">
+                        <div class="left detail">
                             <div class="job-title">{{experience.Title}}</div>
                             <div class="website">{{experience.Website}}</div>
                             <div class="period">{{experience.Period}}</div>
@@ -118,11 +120,11 @@
                 </div>
                 <div class="content">
                     <div class="education-elem" ng-repeat="education in educations">
-                        <div class="left">
+                        <div class="left timeline">
                             <div class="icon-graduation"></div>
-                            <div class="dotted-bar"></div>
+                            <div class="dashed-bar"></div>
                         </div>
-                        <div class="left">
+                        <div class="left detail">
                             <div class="name">{{education.Name}}</div>
                             <div class="place">{{education.Place}}</div>
                             <div class="period">{{education.Period}}</div>
@@ -166,5 +168,80 @@
             </div>
         </div>
         <div class="clear"></div>
+    </div>
+    <div class="dialog popup">
+        <div class="background" onclick="disparition($('.popup'))"></div>
+        <div class="section">
+            <div class="header">
+                <span class"title">Did you know: XX% of the la population love hamburgers<i class="icon-x-black close" onclick="disparition($('.popup'))"></i></span>
+            </div>
+            <div class="content">
+                <div class="general">
+                    <div class="left gender">
+                        <div class="message">enter your gender</div>
+                        <div>
+                            <div class="custom-checkbox left">
+                                <input id="male" type="checkbox"/><label for="male">Male</label>
+                            </div>
+                            <div class="custom-checkbox left">
+                                <input id="female" type="checkbox"/><label for="female">Female</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="left">
+                        <div class="message"><span>enter your age range:</span><span class="right optional">optional</span></div>
+                        <div class="large select toggleMenu">
+                            <span class="title">Select Age Range</span><b class="icon-bigarrow-bottom-grey grey-icon"></b>
+                            <i class=""></i>
+                            <div class="subMenu">
+                                <div>18-25 Years 0ld</div>
+                                <div>25-30 Years 0ld</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="address">
+                    <div class="message">Please Enter Your Street address</div>
+                    <div class="street">
+                        <div class="input-button large street left">
+                            <input placeholder="Street Address"/>
+                        </div>
+                        <div class="input-button medium left">
+                            <input placeholder="Apt/Suite"/>
+                        </div>
+                        <div class="input-button large left">
+                            <input placeholder="City"/>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="medium select toggleMenu left">
+                        <span class="title">State</span><b class="icon-bigarrow-bottom-grey grey-icon"></b>
+                        <i class=""></i>
+                        <div class="subMenu">
+                            <div>NY</div>
+                            <div>IL</div>
+                        </div>
+                    </div>
+                    <div class="input-button medium left">
+                        <input placeholder="Zipcode"/>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="footer-dialog">
+                <div class="button-previous back-white left selected" onclick="">
+                    Previous
+                    <i class="icon-bigarrow-right-black icon left"></i>
+                </div>
+                <div class="button-next back-white left" onclick="">
+                    Next
+                    <i class="icon-bigarrow-right-black icon right"></i>
+                </div>
+
+                <div class="button-save back-green right" onclick="">Save & Close</div>
+                <div class="clear"></div>
+            </div>
+        </div>
     </div>
 </div>

@@ -74,6 +74,24 @@ table td {
   display: inline-block;
   vertical-align: top; }
 
+.custom-checkbox {
+  position: relative; }
+  .custom-checkbox input[type=checkbox] {
+    display: none; }
+  .custom-checkbox label:hover {
+    cursor: pointer; }
+  .custom-checkbox label:before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    text-align: center; }
+  .custom-checkbox label:hover:before {
+    box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0 0px 2px 0px rgba(0, 0, 0, 0.3); }
+  .custom-checkbox input[type=checkbox]:checked + label:before {
+    content: "\2713"; }
+
 .toggleMenu, .toggleMenuSimple {
   position: relative; }
   .toggleMenu .subMenu, .toggleMenuSimple .subMenu {
@@ -84,6 +102,66 @@ table td {
     color: inherit;
     display: none;
     background-color: inherit; }
+
+/*
+COLOR
+*/
+.back-grey {
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.3);
+  background-color: #ededed !important;
+  color: black; }
+
+.back-grey-no-hover {
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.3);
+  background-color: #ededed !important;
+  color: black; }
+
+.back-grey:hover {
+  cursor: pointer;
+  background-color: #cfcfcf !important; }
+
+.grey {
+  color: #9d9d9d; }
+
+.back-green-no-hover {
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.3);
+  background-color: #70c239 !important;
+  color: white; }
+
+.back-green {
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.3);
+  background-color: #70c239 !important;
+  color: white; }
+
+.back-green:hover {
+  cursor: pointer;
+  background-color: #5fae2d !important; }
+
+.green {
+  color: #70c239 !important; }
+
+.back-white-no-hover {
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.3);
+  background-color: white !important;
+  color: black; }
+
+.back-white {
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.3);
+  background-color: white !important;
+  color: black; }
+
+.back-white:hover {
+  cursor: pointer;
+  color: #505050 !important; }
+
+.white {
+  color: white !important; }
 
 /*
 Arrow
@@ -142,10 +220,10 @@ Font handler
 .related-content {
   font-family: HelveticaRoman,'sans-serif'; }
 
-.end-week, .article, .intro {
+.end-week, .article, .intro, .dialog .message {
   font-family: HelveticaThinCondensedEm, sans-serif; }
 
-.comment .content, .comments .placeholder, .help-section .intro, .post .body {
+.comment .content, .comments .placeholder, .help-section .intro, .post .body, .optional {
   font-family: HelveticaNeue, sans-serif; }
 
 .home-container, .related .related-container, .navbar, .page-header h1, .page-header h2 {
@@ -204,6 +282,7 @@ Header css
 
 .navbar {
   margin: 0px;
+  z-index: 1000;
   background-color: #09335b; }
   @media only screen and (min-width: 769px) {
     .navbar {
@@ -318,11 +397,12 @@ General buttons classes
   background: green;
   color: white; }
 
-.button, .search-button {
+.button, .input-button {
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
   border: none;
   background: white;
+  font-size: 18px;
   display: inline-block;
   vertical-align: top;
   position: relative;
@@ -331,33 +411,70 @@ General buttons classes
   padding-left: 15px;
   padding-right: 15px;
   text-align: left;
-  color: #a7a7a7;
-  font-size: 18px; }
-  .button b, .search-button b, .button i, .search-button i {
+  color: gray; }
+  .button b, .input-button b, .button i, .input-button i {
     position: absolute;
     top: 50%;
-    right: 20px; }
+    right: 15px; }
 
-.button:hover:not(.no-hover), .search-button:hover:not(.no-hover) {
+.button:hover:not(.no-hover), .input-button:hover:not(.no-hover) {
   cursor: pointer;
   color: #6b6b6b; }
-  .button:hover:not(.no-hover) .grey-icon, .search-button:hover:not(.no-hover) .grey-icon {
-    opacity: 0.5; }
+  .button:hover:not(.no-hover) .grey-icon, .input-button:hover:not(.no-hover) .grey-icon {
+    opacity: 0.8; }
 
-.search-button {
-  margin: 0px !important;
+.select {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  border: none;
+  background: white;
+  font-size: 18px;
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  padding-top: 13px;
+  padding-bottom: 9px;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-align: left;
+  color: gray; }
+  .select b, .select i {
+    position: absolute;
+    top: 50%;
+    right: 15px; }
+  .select b, .select i {
+    margin-top: -4.5px; }
+  .select .subMenu {
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    border: none;
+    background: white;
+    border-top: 1px solid #cfcfcf;
+    top: 100%;
+    padding: 5px 15px; }
+    .select .subMenu > div {
+      margin: 5px 0px; }
+    .select .subMenu > div:hover {
+      color: black !important; }
+
+.select:hover {
+  cursor: pointer; }
+
+.input-button {
+  margin: 0px;
   padding: 0px;
   box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.2); }
-  .search-button input {
+  .input-button input {
     padding-top: 13px;
     padding-bottom: 9px;
     padding-left: 15px;
+    padding-right: 15px;
     border: none;
     display: block;
     width: 100%;
     height: 100%; }
-  .search-button .icon-search {
+  .input-button .icon-search {
     margin-top: -8px;
     opacity: 0.8; }
 
@@ -378,7 +495,9 @@ Menu with multiple button
   .menu-buttons .home {
     margin-right: 2.2%;
     width: 14.54%; }
-  .menu-buttons .button b, .menu-buttons .search-button b {
+  .menu-buttons .last {
+    margin-right: 0px; }
+  .menu-buttons .button b, .menu-buttons .input-button b {
     top: 20px; }
   .menu-buttons .element, .menu-buttons .person {
     text-transform: capitalize;
@@ -1909,7 +2028,7 @@ Promo
     .p1 {
       height: 310px;
       margin-bottom: 10px; } }
-  .p1 .transp-black .button, .p1 .transp-black .search-button {
+  .p1 .transp-black .button, .p1 .transp-black .input-button {
     border: none;
     background-color: #104e9b;
     color: #ffffff;
@@ -1921,7 +2040,7 @@ Promo
     text-align: left;
     margin-bottom: 20px;
     text-transform: uppercase; }
-    .p1 .transp-black .button i, .p1 .transp-black .search-button i {
+    .p1 .transp-black .button i, .p1 .transp-black .input-button i {
       position: absolute;
       right: 3px; }
   .p1 .transp-black {
@@ -1956,19 +2075,19 @@ Promo
         .p1 .transp-black h2.title {
           padding: 15px;
           padding-bottom: 0px; } }
-  .p1 .transp-black .button, .p1 .transp-black .search-button {
+  .p1 .transp-black .button, .p1 .transp-black .input-button {
     margin-left: 25px;
     font-size: 18px;
     width: 200px; }
-    .p1 .transp-black .button i, .p1 .transp-black .search-button i {
+    .p1 .transp-black .button i, .p1 .transp-black .input-button i {
       top: 9px;
       right: 10px; }
     @media only screen and (max-width: 768px) {
-      .p1 .transp-black .button, .p1 .transp-black .search-button {
+      .p1 .transp-black .button, .p1 .transp-black .input-button {
         margin-left: 15px;
         font-size: 10px;
         width: 130px; }
-        .p1 .transp-black .button i, .p1 .transp-black .search-button i {
+        .p1 .transp-black .button i, .p1 .transp-black .input-button i {
           top: 6px; } }
   .p1 img {
     width: 100%; }
@@ -2027,7 +2146,7 @@ Promo
     .p2 {
       margin-bottom: 10px;
       height: 225px; } }
-  .p2 .transp-black .button, .p2 .transp-black .search-button {
+  .p2 .transp-black .button, .p2 .transp-black .input-button {
     border: none;
     background-color: #104e9b;
     color: #ffffff;
@@ -2039,7 +2158,7 @@ Promo
     text-align: left;
     margin-bottom: 20px;
     text-transform: uppercase; }
-    .p2 .transp-black .button i, .p2 .transp-black .search-button i {
+    .p2 .transp-black .button i, .p2 .transp-black .input-button i {
       position: absolute;
       right: 3px; }
   .p2 .transp-black {
@@ -2057,7 +2176,7 @@ Promo
     z-index: 1; }
   .p2 .transp-black h2.title {
     -webkit-line-clamp: 3; }
-  .p2 .transp-black .button, .p2 .transp-black .search-button {
+  .p2 .transp-black .button, .p2 .transp-black .input-button {
     width: 180px;
     font-size: 15px; }
   .p2 h2.title {
@@ -2125,14 +2244,14 @@ Promo
       height: 57.778%; } }
   .p2 .transp-black {
     padding: 10px; }
-    .p2 .transp-black .button i, .p2 .transp-black .search-button i {
+    .p2 .transp-black .button i, .p2 .transp-black .input-button i {
       top: 6px;
       right: 10px; }
     @media only screen and (max-width: 768px) {
-      .p2 .transp-black .button, .p2 .transp-black .search-button {
+      .p2 .transp-black .button, .p2 .transp-black .input-button {
         font-size: 9px;
         width: 100px; }
-        .p2 .transp-black .button i, .p2 .transp-black .search-button i {
+        .p2 .transp-black .button i, .p2 .transp-black .input-button i {
           top: 3px;
           right: 5px; } }
 
@@ -2144,7 +2263,7 @@ Promo
     .p3 {
       margin-bottom: 10px;
       height: 225px; } }
-  .p3 .transp-black .button, .p3 .transp-black .search-button {
+  .p3 .transp-black .button, .p3 .transp-black .input-button {
     border: none;
     background-color: #104e9b;
     color: #ffffff;
@@ -2156,7 +2275,7 @@ Promo
     text-align: left;
     margin-bottom: 20px;
     text-transform: uppercase; }
-    .p3 .transp-black .button i, .p3 .transp-black .search-button i {
+    .p3 .transp-black .button i, .p3 .transp-black .input-button i {
       position: absolute;
       right: 3px; }
   .p3 .transp-black {
@@ -2174,7 +2293,7 @@ Promo
     z-index: 1; }
   .p3 .transp-black h2.title {
     -webkit-line-clamp: 3; }
-  .p3 .transp-black .button, .p3 .transp-black .search-button {
+  .p3 .transp-black .button, .p3 .transp-black .input-button {
     width: 150px;
     font-size: 13px; }
   .p3 h2.title {
@@ -2242,14 +2361,14 @@ Promo
       height: 57.778%; } }
   .p3 .transp-black {
     padding: 10px; }
-    .p3 .transp-black .button i, .p3 .transp-black .search-button i {
+    .p3 .transp-black .button i, .p3 .transp-black .input-button i {
       top: 6px;
       right: 10px; }
     @media only screen and (max-width: 768px) {
-      .p3 .transp-black .button, .p3 .transp-black .search-button {
+      .p3 .transp-black .button, .p3 .transp-black .input-button {
         font-size: 9px;
         width: 100px; }
-        .p3 .transp-black .button i, .p3 .transp-black .search-button i {
+        .p3 .transp-black .button i, .p3 .transp-black .input-button i {
           top: 3px;
           right: 5px; } }
 
@@ -2576,7 +2695,7 @@ POST CSS
           padding: 15px 0px;
           display: none; }
           .post .comments .comments-list .comment .content .new-comment .placeholder {
-            color: #a7a7a7; }
+            color: #9d9d9d; }
         .post .comments .comments-list .comment .content .closeReply {
           display: none; }
     .post .comments .comments-list .no-first-bar .separator, .post .comments .comments-list .no-second-bar .separator {
@@ -2590,7 +2709,7 @@ Tools dashboard & tool css
 .tools-dashboard .title .part1, .tool .title .part1 {
   color: black; }
 .tools-dashboard .title .part2, .tool .title .part2 {
-  color: #a7a7a7; }
+  color: #9d9d9d; }
 
 .tools-dashboard .first {
   margin-top: 60px; }
@@ -2646,8 +2765,89 @@ Tools dashboard & tool css
         margin-top: 2px; }
   .tools-dashboard .tool .right {
     height: 100%;
-    background-color: #a7a7a7;
+    background-color: #9d9d9d;
     width: 69.2%; }
+
+/*
+DIALOG
+*/
+.dialog {
+  z-index: 300;
+  display: none;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  width: 100%;
+  height: 100%; }
+  .dialog .background {
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    width: 100%;
+    height: 100%; }
+  .dialog .section {
+    position: relative;
+    display: none;
+    width: 60%;
+    margin: auto;
+    margin-top: 100px;
+    background-color: #f3f5f5; }
+    .dialog .section .header {
+      position: relative;
+      font-size: 27px;
+      padding-left: 30px;
+      padding-right: 15px;
+      padding-top: 20px;
+      font-weight: bold;
+      padding-bottom: 12px;
+      border-bottom: 1px solid #cfcfcf; }
+      .dialog .section .header .close {
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        margin-top: -15px; }
+    .dialog .section .intro {
+      width: 100%;
+      font-weight: 18px;
+      padding: 22px;
+      border-bottom: 1px solid #cfcfcf; }
+      .dialog .section .intro td {
+        vertical-align: middle; }
+      .dialog .section .intro .logo {
+        position: relative;
+        top: 26px;
+        left: 17px; }
+      .dialog .section .intro strong {
+        font-weight: bold; }
+    .dialog .section .content {
+      width: 100%; }
+    .dialog .section .footer-dialog {
+      padding: 22px; }
+      .dialog .section .footer-dialog .button-save, .dialog .section .footer-dialog .button-next, .dialog .section .footer-dialog .button-previous {
+        position: relative;
+        padding: 0px 14px;
+        padding-top: 12px;
+        padding-bottom: 7px; }
+      .dialog .section .footer-dialog .button-next i, .dialog .section .footer-dialog .button-previous i {
+        position: absolute;
+        top: 50%;
+        margin-top: -8.5px; }
+      .dialog .section .footer-dialog .button-previous[class~=selected], .dialog .section .footer-dialog .button-next[class~=selected] {
+        opacity: 0.5; }
+      .dialog .section .footer-dialog .button-previous {
+        padding-left: 40px;
+        margin-right: 15px; }
+        .dialog .section .footer-dialog .button-previous i {
+          left: 15px; }
+      .dialog .section .footer-dialog .button-next {
+        padding-right: 40px; }
+        .dialog .section .footer-dialog .button-next i {
+          right: 15px; }
 
 /*
 Tool CSS
@@ -2735,8 +2935,8 @@ Tool CSS
       border: none;
       background: none; }
     .tool .selector .industries, .tool .selector .occupations {
-      padding-top: 19px;
-      padding-bottom: 15px;
+      padding-top: 22px;
+      padding-bottom: 17px;
       font-size: 22px;
       position: relative; }
       .tool .selector .industries .title, .tool .selector .occupations .title {
@@ -2748,6 +2948,7 @@ Tool CSS
         position: absolute; }
       .tool .selector .industries .subMenu, .tool .selector .occupations .subMenu {
         left: 0px;
+        top: 65px;
         font-size: 17px;
         line-height: 40px;
         color: white !important; }
@@ -2799,60 +3000,8 @@ Tool CSS
     border-right-width: 20px;
     border-top-width: 20px;
     border-top-color: #09335b; }
-  .tool .dialog {
-    z-index: 300;
-    display: none;
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    bottom: 0px;
-    right: 0px;
-    width: 100%;
-    height: 100%; }
-    .tool .dialog .background {
-      background: rgba(0, 0, 0, 0.5);
-      position: fixed;
-      top: 0px;
-      left: 0px;
-      bottom: 0px;
-      right: 0px;
-      width: 100%;
-      height: 100%; }
-    .tool .dialog .section {
-      position: relative;
-      display: none;
-      width: 60%;
-      margin: auto;
-      margin-top: 100px;
-      background-color: #f3f5f5; }
-      .tool .dialog .section .header {
-        font-size: 27px;
-        padding-left: 30px;
-        padding-right: 15px;
-        padding-top: 20px;
-        font-weight: bold;
-        padding-bottom: 12px;
-        border-bottom: 1px solid #cfcfcf; }
-        .tool .dialog .section .header .close {
-          float: right; }
-      .tool .dialog .section .intro {
-        width: 100%;
-        font-weight: 18px;
-        padding: 22px;
-        border-bottom: 1px solid #cfcfcf; }
-        .tool .dialog .section .intro td {
-          vertical-align: middle; }
-        .tool .dialog .section .intro .logo {
-          position: relative;
-          top: 26px;
-          left: 17px; }
-        .tool .dialog .section .intro strong {
-          font-weight: bold; }
-      .tool .dialog .section .content {
-        padding: 15px;
-        width: 100%; }
-      .tool .dialog .section .footer-dialog {
-        padding: 22px; }
+  .tool .dialog .section .content {
+    padding: 15px; }
   .tool .help-section .section {
     width: 85%; }
   .tool .save-section .section {
@@ -2865,7 +3014,7 @@ Tool CSS
         margin: auto; }
       .tool .save-section .section .content input {
         margin: auto; }
-    .tool .save-section .section .footer-dialog .button, .tool .save-section .section .footer-dialog .search-button {
+    .tool .save-section .section .footer-dialog .button, .tool .save-section .section .footer-dialog .input-button {
       float: right; }
 
 /*
@@ -2953,7 +3102,7 @@ Career Scape
   .careerScape .zoom:hover:not(.selected) {
     background: rgba(50, 50, 50, 0.8);
     cursor: pointer; }
-  .careerScape .button:hover, .careerScape .search-button:hover {
+  .careerScape .button:hover, .careerScape .input-button:hover {
     cursor: pointer; }
   .careerScape #json {
     margin: auto;
@@ -3054,15 +3203,16 @@ JOB RESULTS/RECOMMENDATIONS
     padding: 0px 25px;
     padding-top: 22px;
     padding-bottom: 20px;
-    border-bottom: 1px solid #a7a7a7; }
+    border-bottom: 1px solid #9d9d9d; }
   .job-results .content, .saved-content .content {
-    height: 275px; }
+    position: relative; }
     .job-results .content .scrollable-content, .saved-content .content .scrollable-content {
       width: 80%;
       margin: auto;
-      height: 80%;
+      height: 82%;
       overflow: hidden; }
     .job-results .content .scrollable, .saved-content .content .scrollable {
+      height: 100%;
       text-align: left;
       width: 10000px; }
     .job-results .content .job-recommandation, .job-results .content .save, .saved-content .content .job-recommandation, .saved-content .content .save {
@@ -3087,30 +3237,39 @@ JOB RESULTS/RECOMMENDATIONS
       .job-results .content .pages .ball:hover, .saved-content .content .pages .ball:hover {
         cursor: pointer; }
 
-.saved-content .content .save {
-  font-size: 17px;
-  line-height: 23px; }
-  .saved-content .content .save .icon {
-    height: 50px;
-    width: 50px;
-    margin-top: 35px;
-    margin-bottom: 10px; }
-  .saved-content .content .save .name {
-    color: black; }
-  .saved-content .content .save .type {
-    font-size: 15px;
-    color: #a7a7a7; }
+.saved-content .content {
+  height: 325px; }
+  .saved-content .content .scrollable-content {
+    height: 85%; }
+  .saved-content .content .save {
+    margin-top: 45px;
+    position: relative;
+    height: 210px;
+    font-size: 17px;
+    line-height: 23px; }
+    .saved-content .content .save .content {
+      position: absolute;
+      top: 145px;
+      width: 100%; }
+      .saved-content .content .save .content .name {
+        color: black; }
+      .saved-content .content .save .content .type {
+        font-size: 15px;
+        color: #9d9d9d; }
 
-.job-results .content .job-recommandation {
-  font-size: 17px;
-  line-height: 23px; }
-  .job-results .content .job-recommandation .icon-suitcase-job {
-    margin-top: 35px;
-    margin-bottom: 10px; }
-  .job-results .content .job-recommandation .title-job {
-    color: black; }
-  .job-results .content .job-recommandation .info-job {
-    color: #a7a7a7; }
+.job-results .content {
+  height: 275px; }
+  .job-results .content .job-recommandation {
+    font-size: 17px; }
+    .job-results .content .job-recommandation .icon-suitcase-job {
+      margin-top: 40px;
+      margin-bottom: 20px; }
+    .job-results .content .job-recommandation .title-job {
+      color: black;
+      line-height: 26px; }
+    .job-results .content .job-recommandation .info-job {
+      line-height: 23px;
+      color: #9d9d9d; }
 
 /*
 Dashboard
@@ -3156,7 +3315,7 @@ Dashboard
       .dashboard .resume .person .name {
         font-size: 35px; }
       .dashboard .resume .person .mail {
-        color: #a7a7a7;
+        color: #9d9d9d;
         font-size: 20px; }
     .dashboard .resume .presentation {
       padding-top: 30px;
@@ -3218,13 +3377,62 @@ Dashboard
       border-bottom: 1px solid #cfcfcf; }
       .dashboard .content .education .title-section .title, .dashboard .content .work-experience .title-section .title, .dashboard .content .skills .title-section .title, .dashboard .content .technology .title-section .title, .dashboard .content .career-goals .title-section .title {
         margin-left: 5px; }
-    .dashboard .content .education .content, .dashboard .content .work-experience .content, .dashboard .content .skills .content, .dashboard .content .technology .content, .dashboard .content .career-goals .content {
-      padding: 20px; }
-  .dashboard .content .add-elem, .dashboard .content .technology-elem, .dashboard .content .skill {
+  .dashboard .content .work-experience-elem, .dashboard .content .education-elem {
+    position: relative;
+    overflow: hidden; }
+  .dashboard .content .skills .content, .dashboard .content .technology .content, .dashboard .content .career-goals .content {
+    padding: 20px; }
+  .dashboard .content .education .content, .dashboard .content .work-experience .content {
+    padding: 20px;
+    padding-bottom: 0px; }
+  .dashboard .content .website, .dashboard .content .period, .dashboard .content .place {
+    font-size: 15px;
+    line-height: 27px; }
+  .dashboard .content .website, .dashboard .content .place {
+    color: #ee7835; }
+  .dashboard .content .period {
+    color: gray; }
+  .dashboard .content .job-title, .dashboard .content .education-elem .name {
+    font-size: 20px;
+    line-height: 30px; }
+  .dashboard .content .detail {
+    margin-left: 52px;
+    width: 75%; }
+  .dashboard .content .timeline {
+    position: absolute;
+    height: 100%; }
+    .dashboard .content .timeline .dashed-bar {
+      width: 0px;
+      margin-left: 17px;
+      height: 90%;
+      border-left: 1px dashed #cfcfcf; }
+  .dashboard .content .work-experience .period {
+    margin-bottom: 3px; }
+  .dashboard .content .work-experience .detail {
+    padding-bottom: 40px; }
+  .dashboard .content .work-experience .website {
+    text-transform: uppercase; }
+  .dashboard .content .work-experience .occupation, .dashboard .content .work-experience .income {
+    text-transform: uppercase;
+    padding-left: 15px;
+    padding-right: 15px; }
+  .dashboard .content .work-experience .occupation {
+    margin-right: 10px; }
+  .dashboard .content .work-experience .income {
+    background: #6bd48a;
+    color: white; }
+  .dashboard .content .education .dashed-bar {
+    margin-left: 16px; }
+  .dashboard .content .education .detail {
+    padding-bottom: 30px; }
+  .dashboard .content .add-elem, .dashboard .content .technology-elem, .dashboard .content .skill, .dashboard .content .occupation, .dashboard .content .income {
     font-size: 16px;
     text-align: center;
     padding-top: 12px;
     padding-bottom: 8px; }
+  .dashboard .content .occupation, .dashboard .content .technology-elem {
+    background-color: #09335b;
+    color: white; }
   .dashboard .content .add-elem {
     background: #ededed;
     border: 1px dashed #bebebe; }
@@ -3242,8 +3450,6 @@ Dashboard
     padding-top: 12px;
     padding-bottom: 8px; }
   .dashboard .content .technology .technology-elem {
-    background-color: #09335b;
-    color: white;
     margin-bottom: 20px; }
   .dashboard .content .career-goals {
     font-size: 19px; }
@@ -3252,3 +3458,70 @@ Dashboard
       width: 80%; }
     .dashboard .content .career-goals .content .first {
       margin-top: 0px; }
+  .dashboard .popup .section {
+    width: 90%; }
+    .dashboard .popup .section .header {
+      font-size: 24px; }
+      .dashboard .popup .section .header .grey {
+        color: #9d9d9d; }
+    .dashboard .popup .section .content .custom-checkbox {
+      margin-right: 25px;
+      position: relative; }
+      .dashboard .popup .section .content .custom-checkbox input[type=checkbox] {
+        display: none; }
+      .dashboard .popup .section .content .custom-checkbox label {
+        margin-left: 40px; }
+      .dashboard .popup .section .content .custom-checkbox label:hover {
+        cursor: pointer; }
+      .dashboard .popup .section .content .custom-checkbox label:before {
+        height: 20px;
+        width: 20px;
+        content: "";
+        position: absolute;
+        left: 0px;
+        top: 50%;
+        text-align: center;
+        margin-top: -15px;
+        box-shadow: 0.5px -1px 2px 0px rgba(0, 0, 0, 0.3);
+        -webkit-box-shadow: 0.5px -1px 2px 0px rgba(0, 0, 0, 0.3);
+        border-right: 1px solid #cfcfcf;
+        background: white; }
+      .dashboard .popup .section .content .custom-checkbox input[type=checkbox]:checked + label:before {
+        background: #ee7835; }
+    .dashboard .popup .section .content .custom-checkbox {
+      font-size: 23px;
+      color: gray; }
+    .dashboard .popup .section .content .message {
+      font-size: 17px;
+      text-transform: uppercase;
+      color: #b2b2b2;
+      margin-bottom: 10px; }
+    .dashboard .popup .section .content .optional {
+      color: #cfcfcf;
+      text-transform: uppercase;
+      font-size: 17px; }
+    .dashboard .popup .section .content .select, .dashboard .popup .section .content input, .dashboard .popup .section .content input[placeholder] {
+      padding-top: 20px;
+      padding-bottom: 16px;
+      font-size: 23px; }
+    .dashboard .popup .section .content .large {
+      width: 340px;
+      margin-right: 25px; }
+    .dashboard .popup .section .content .medium {
+      width: 140px;
+      margin-right: 25px; }
+    .dashboard .popup .section .content .address {
+      padding: 17px; }
+      .dashboard .popup .section .content .address .street {
+        margin-bottom: 20px; }
+    .dashboard .popup .section .content .general {
+      padding: 17px;
+      border-bottom: 1px solid #cfcfcf; }
+      .dashboard .popup .section .content .general .gender {
+        margin-right: 135px; }
+        .dashboard .popup .section .content .general .gender .custom-checkbox {
+          margin-top: 15px; }
+    .dashboard .popup .section .footer-dialog {
+      border-top: 1px solid #cfcfcf;
+      padding-top: 12px;
+      padding-bottom: 15px; }

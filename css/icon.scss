@@ -14,6 +14,11 @@ ICON css
     height:10px;
     background: url('assets/zig.png') center center repeat-x;
 }
+@mixin dimensionPosition($posX,$posY,$height,$width,$rapp){
+    background-position: ($rapp * $posX) ($rapp * $posY);
+    height: $height * $rapp;
+    width: $width * $rapp;
+}
 .icon-career { 
 	width: 142px;
     height: 24px;
@@ -78,10 +83,10 @@ Arrow big
 .icon-bigarrow-right-black{
     background-position:-212px -59px;
 	width: 9px;
-	height: 15px;
+	height: 17px;
     @media only screen and (max-width: 768px){
        width: 5px;
-       height: 8px;
+       height: 9px;
 	   background-position: -106px -29.5px;
 	}
 }
@@ -1259,7 +1264,7 @@ OTHER
 }
 .icon-suitcase-red{
     background-position:-190px -415px;
-    height:42px;
+    height:43px;
     width:43px;
     @media only screen and (max-width: 768px){
 	   background-position: -95px -207.5px;
@@ -1267,33 +1272,45 @@ OTHER
        width:22px;
 	}
 }
+$rapp:0.75;
+.icon-suitcase-red-medium{
+    background-size:1500px * $rapp 1400px * $rapp;
+    background-position:-190px * $rapp -415px * $rapp;
+    height:43px * $rapp;
+    width:43px * $rapp;
+    @media only screen and (max-width: 768px){
+	   background-position: -95px * $rapp -207.5px * $rapp;
+       height:22x * $rapp;
+       width:22px * $rapp + 1;
+	}
+}
 .icon-building{
     background-position:-236px -415px;
-    height:42px;
+    height:43px;
     width:43px;
     @media only screen and (max-width: 768px){
 	   background-position: -118px -207.5px;
-       height:21x;
+       height:22x;
        width:22px;
 	}
 }
 .icon-location{
     background-position:-283px -415px;
-    height:42px;
+    height:43px;
     width:43px;
     @media only screen and (max-width: 768px){
 	   background-position: -141.5px -207.5px;
-       height:21x;
+       height:22x;
        width:22px;
 	}
 }
 .icon-dollars{
     background-position:-330px -415px;
-    height:42px;
+    height:43px;
     width:43px;
     @media only screen and (max-width: 768px){
 	   background-position: -165px -207.5px;
-       height:21x;
+       height:23x;
        width:22px;
 	}
 }
@@ -1488,5 +1505,50 @@ TOOLS
 	   background-position: -90.5px -270px;
        height:28.5px;
        width:28.5px;
+	}
+}
+/*
+ICON SAVED
+*/
+.icon-jobinality-saved{
+    @include dimensionPosition(-893px,-588px,117px,101px,1);
+    @media only screen and (max-width: 768px){
+        @include dimensionPosition(-893px,-588px,117px,101px,0.5);
+	}
+}
+.icon-article-saved{
+    @include dimensionPosition(-1008px,-583px,126px,102px,1);
+    @media only screen and (max-width: 768px){
+        @include dimensionPosition(-893px,-583px,126px,102px,0.5);
+	}
+}
+.icon-resumePro-saved{
+    @include dimensionPosition(-1125px,-588px,117px,101px,1);
+    @media only screen and (max-width: 768px){
+        @include dimensionPosition(-1125px,-588px,117px,101px,0.5);
+	}
+}
+.icon-video-saved{
+    @include dimensionPosition(-1240px,-583px,126px,101px,1);
+    @media only screen and (max-width: 768px){
+        @include dimensionPosition(-1240px,-583px,126px,101px,0.5);
+	}
+}
+.icon-image-saved{
+    @include dimensionPosition(-1356px,-583px,126px,101px,1);
+    @media only screen and (max-width: 768px){
+        @include dimensionPosition(-1356px,-583px,126px,101px,0.5);
+	}
+}
+.icon-locallyGrown-saved{
+    @include dimensionPosition(-893px,-743px,115px,113px,1);
+    @media only screen and (max-width: 768px){
+        @include dimensionPosition(-893px,-743px,115px,113px,0.5);
+	}
+}
+.icon-careerScape-saved{
+    @include dimensionPosition(-1045px,-739px,123px,114px,1);
+    @media only screen and (max-width: 768px){
+        @include dimensionPosition(-1045px,-739px,123px,114px,0.5);
 	}
 }
