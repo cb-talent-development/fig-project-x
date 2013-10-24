@@ -37,6 +37,7 @@ $lightGrey: rgb(207,207,207);
 $backgroundGrey: #E7E7E7;
 $orange: rgb(238,120,53);
 $orangeHover: rgba(238,120,53,0.8);
+$red-delete:rgb(214,57,46);
 //animation
 $transition-time:1s;
 //...
@@ -77,7 +78,6 @@ $phone-retina-height-small: 450px;
 /*
 GENERAL CSS
 */
-
 /*
 General CSS
 */
@@ -188,6 +188,15 @@ table td{
     }
 }
 /*
+ICON-ARROW
+*/
+.link{
+    i,b{position:absolute;top:50%;right:10px;}
+    .icon-bigarrow-right-black,.icon-bigarrow-right-white{
+        margin-top:-8.5px;
+    }
+}
+/*
 COLOR
 */
 @mixin shadow-color{
@@ -196,8 +205,12 @@ COLOR
 $grey-color:rgb(237,237,237);
 $dark-grey-color:rgb(207,207,207);
 $grey-font:rgb(157,157,157);
+@mixin colorCommon{
+    padding-top:12px;padding-bottom:8px;
+    @include box-shadow(0px,1px,1px,0px,0.3);
+}
 @mixin back-grey{
-    @include shadow-color;
+    @include colorCommon;
     background-color:$grey-color !important;color:black;
 }
 .back-grey{
@@ -217,7 +230,7 @@ $grey-font:rgb(157,157,157);
 $green-color:rgb(112,194,57);
 $dark-green-color:rgb(95,174,45);
 @mixin back-green{
-    @include shadow-color;
+    @include colorCommon;
     background-color:$green-color !important;color:white;
 }
 .back-green-no-hover{
@@ -235,7 +248,7 @@ $dark-green-color:rgb(95,174,45);
 }
 //white
 @mixin back-white{
-    @include shadow-color;
+    @include colorCommon;
     background-color:white !important;color:black;
 }
 .back-white-no-hover{
@@ -307,7 +320,7 @@ Font handler
 .related-content{
     font-family:HelveticaRoman,'sans-serif';
 }
-.end-week,.article,.intro,.dialog .message{
+.end-week,.article,.intro,.dialog .message,.job-correction .mess{
     font-family: HelveticaThinCondensedEm, sans-serif;
 }
 .comment .content,.comments .placeholder,.help-section .intro,.post .body,.optional{
@@ -480,9 +493,14 @@ Header css
     .black{
         color: rgb(35,35,35);
     }
-    i{
+    .icon-bigarrow-bottom-orange{
         position:relative;
         top:45px;
+    }
+    .button-signout{
+        margin-top:32px;
+        font-size:16px;
+        padding-left:10px;width:170px;
     }
 	#profil-pic{
 		height: 100px;
@@ -2002,7 +2020,7 @@ DIALOG
     }
     .section{
         position:relative;display:none;
-        width:60%;margin:auto;margin-top:100px;background-color:rgb(243,245,245);
+        width:60%;margin:auto;margin-top:50px;background-color:rgb(243,245,245);
         .header{
             position:relative;
             font-size:27px;padding-left:30px;
@@ -2416,6 +2434,17 @@ Career Scape
 /*
 JOB RESULTS/RECOMMENDATIONS
 */
+.scrollable-content{
+    margin:auto;
+    overflow:hidden;
+}
+.scrollable{
+    text-align:left;
+    width:10000px;
+    .step{
+        display:inline-block;
+    }
+}
 .job-results,.saved-content{
         @include main-block;
         text-align:center;
@@ -2448,14 +2477,10 @@ JOB RESULTS/RECOMMENDATIONS
             position:relative;
             .scrollable-content{
                 width:80%;
-                margin:auto;
                 height:82%;
-                overflow:hidden;
             }
             .scrollable{
                 height:100%;
-                text-align:left;
-                width:10000px;
             }
             .job-recommandation,.save{
                 text-align:center;
@@ -2483,6 +2508,7 @@ JOB RESULTS/RECOMMENDATIONS
         }
 }
 .saved-content{
+    .title{text-align:left;}
     .content{
         height:325px;
         .scrollable-content{
@@ -2492,17 +2518,24 @@ JOB RESULTS/RECOMMENDATIONS
             margin-top:45px;
             position:relative;
             height:210px;
-            font-size:17px;
-            line-height:23px;
-            .content{
+            font-size:18px;
+            .content-save{
                 position:absolute;
                 top:145px;
                 width:100%;
                 .name{
                     color:black;
+                                margin-bottom:3px;
+
                 }
                 .type{
-                    font-size:15px;
+                    font-size:16px;
+                    line-height:18px;
+                    color:$grey;
+                }
+                .date{
+                    font-size:14px;
+                    line-height:16px;
                     color:$grey;
                 }
             }
@@ -2594,6 +2627,7 @@ Dashboard
                     margin-left:20px;
                 }
             }
+            .phases{position:relative;}
             .phase-content{
                 .cursor{
                     padding-top:6px;
@@ -2602,12 +2636,13 @@ Dashboard
                     position:relative;
                     .icon-cursor-red{
                         position:absolute;
-                        left:-4px;top:65px;
+                        left:-4px;top:0px;
                     }
                 }
                 .phase{
                     margin-bottom:13px;
                     i{
+                        position:relative;top:auto;right:auto;
                         margin-right:15px;}
                     >span{
                         line-height:40px;
@@ -2619,12 +2654,17 @@ Dashboard
         }
     }
     .saved-content{
-        @include whitebox;
         margin-bottom:25px;
-        
+        .button-edit{
+            margin-top:-8px;
+            margin-right:-12px;
+            font-size:14px;
+            position:relative;padding-left:10px;padding-right:40px;
+        }
     }
     .job-results,.saved-content{
         .title{text-align:left;}
+        
     }
     .content{
         .col-left,.col-right{
@@ -2758,6 +2798,14 @@ Dashboard
         }
     }
     .popup{
+        .scrollable{
+            width:500%;
+        }
+        .section-wrapper{
+            width:20%;
+            display:inline-block;
+            vertical-align:top;
+        }
         .section{
             width:90%;
             .header{
@@ -2765,6 +2813,12 @@ Dashboard
                 .grey{
                     color:$grey;
                 }
+            }
+            .step{
+                width:1150px;
+            }
+            .step1{
+                display:none;
             }
             .content{
                 .custom-checkbox{
@@ -2807,8 +2861,8 @@ Dashboard
                     padding-top:20px;padding-bottom:16px;
                     font-size:23px;
                 }   
-                .large{width:340px;margin-right:25px;}
-                .medium{width:140px;margin-right:25px;}
+                .large{width:370px;margin-right:25px;}
+                .medium{width:170px;margin-right:25px;}
                 .address{
                     padding:17px;
                     .street{margin-bottom:20px;}
@@ -2821,11 +2875,132 @@ Dashboard
                     }
                     
                 }
+                .job-phase{
+                    padding:0px 15px;
+                    padding-top:25px;
+                    .cursor{
+                        margin-top:20px;
+                        margin-bottom:45px;
+                        position:relative;
+                        .bar{
+                            border-radius:8px;
+                            height:15px;
+                            background:rgb(231,235,235);
+                        }
+                        .icon-cursor-orange-down{
+                            position:absolute;
+                            top:-5px;
+                            left:10px;
+                            background:orange;
+                            height:30px;
+                            width:20px
+                        }
+                    }
+                    .phase{
+                        opacity:0.6;
+                        @include whitebox;
+                        width:23.35%;
+                        height:295px;
+                        text-align:center;
+                        margin-bottom:15px;
+                        .title{font-size:20px;padding-top:20px;padding-bottom:25px;
+                            .logo{
+                                margin-bottom:15px;
+                            }
+                            border-bottom:1px solid $lightGrey;
+                        }
+                        .description{
+                            padding:0px 30px;
+                            font-size:15px;
+                            line-height:20px;
+                            padding-top:25px;
+                            @include webkit-box;
+                            -webkit-line-clamp: 6;
+                        }
+                    }
+                    .left{margin-right:2.2%;}
+                    .before-last{
+                        margin-right:0px;
+                    }
+                     .phase[class~="selected"]{
+                        opacity:1;
+                    }
+                }
+                .job-occupation{
+                    .large{width:465px;margin:0px;}
+                    padding:0px 20px;
+                    height:200px;
+                    border-bottom:1px solid $lightGrey;
+                    .job{
+                        height:100%;
+                        width:42%;
+                        position:relative;
+                        .entry{position:absolute;bottom:30px;
+                            .message{margin-bottom:10px;}
+                        }
+                        
+                    }
+                    .job-correction{
+                        height:200px;
+                        width:50.7%;
+                        position:relative;
+                        .logo{
+                            position:absolute;
+                            bottom:30px;
+                        }
+                        .correction{
+                            position:absolute;
+                            bottom:30px;
+                            right:0px;
+                            .mess{
+                                font-size:16px;
+                                margin-bottom:10px;
+                                text-transform:uppercase;
+                                color:$orange;
+                                @include webkit-box;
+                                -webkit-line-clamp:4;
+                            }
+                            .wrong{color:black;}
+                            .select{border:1px solid $orange;}
+                        }
+                    }
+                }
+                .job-info{
+                    padding:0px 15px;
+                    padding-top:25px;padding-bottom:30px;
+                    
+                }
             }
             .footer-dialog{
                 border-top:1px solid $lightGrey;
                 padding-top:12px;
                 padding-bottom:15px;
+            }
+        }
+    }
+}
+.saved-content-page{
+    .saved-content{
+        margin-top:65px;
+        .content{
+            height:auto;
+            padding:0px 100px;
+            padding-bottom:40px;
+            .save:not(.right){
+                margin-right:8px;
+            }
+            .fourth{
+                margin-right:0px !important;
+            }
+            .save{
+                height:265px;
+                overflow:hidden;
+                margin-top:40px;
+                .delete{
+                    color:$red-delete;
+                    margin-top:25px;
+                    margin-bottom:10px;
+                }
             }
         }
     }

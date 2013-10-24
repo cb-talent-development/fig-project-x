@@ -104,15 +104,29 @@ table td {
     background-color: inherit; }
 
 /*
+ICON-ARROW
+*/
+.link i, .link b {
+  position: absolute;
+  top: 50%;
+  right: 10px; }
+.link .icon-bigarrow-right-black, .link .icon-bigarrow-right-white {
+  margin-top: -8.5px; }
+
+/*
 COLOR
 */
 .back-grey {
+  padding-top: 12px;
+  padding-bottom: 8px;
   box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.3);
   -webkit-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.3);
   background-color: #ededed !important;
   color: black; }
 
 .back-grey-no-hover {
+  padding-top: 12px;
+  padding-bottom: 8px;
   box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.3);
   -webkit-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.3);
   background-color: #ededed !important;
@@ -126,12 +140,16 @@ COLOR
   color: #9d9d9d; }
 
 .back-green-no-hover {
+  padding-top: 12px;
+  padding-bottom: 8px;
   box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.3);
   -webkit-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.3);
   background-color: #70c239 !important;
   color: white; }
 
 .back-green {
+  padding-top: 12px;
+  padding-bottom: 8px;
   box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.3);
   -webkit-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.3);
   background-color: #70c239 !important;
@@ -145,12 +163,16 @@ COLOR
   color: #70c239 !important; }
 
 .back-white-no-hover {
+  padding-top: 12px;
+  padding-bottom: 8px;
   box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.3);
   -webkit-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.3);
   background-color: white !important;
   color: black; }
 
 .back-white {
+  padding-top: 12px;
+  padding-bottom: 8px;
   box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.3);
   -webkit-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.3);
   background-color: white !important;
@@ -220,7 +242,7 @@ Font handler
 .related-content {
   font-family: HelveticaRoman,'sans-serif'; }
 
-.end-week, .article, .intro, .dialog .message {
+.end-week, .article, .intro, .dialog .message, .job-correction .mess {
   font-family: HelveticaThinCondensedEm, sans-serif; }
 
 .comment .content, .comments .placeholder, .help-section .intro, .post .body, .optional {
@@ -266,9 +288,14 @@ Header css
     color: #ee7835; }
   .page-header .black {
     color: #232323; }
-  .page-header i {
+  .page-header .icon-bigarrow-bottom-orange {
     position: relative;
     top: 45px; }
+  .page-header .button-signout {
+    margin-top: 32px;
+    font-size: 16px;
+    padding-left: 10px;
+    width: 170px; }
   .page-header #profil-pic {
     height: 100px;
     width: 100px;
@@ -2795,7 +2822,7 @@ DIALOG
     display: none;
     width: 60%;
     margin: auto;
-    margin-top: 100px;
+    margin-top: 50px;
     background-color: #f3f5f5; }
     .dialog .section .header {
       position: relative;
@@ -3170,6 +3197,16 @@ Career Scape
 /*
 JOB RESULTS/RECOMMENDATIONS
 */
+.scrollable-content {
+  margin: auto;
+  overflow: hidden; }
+
+.scrollable {
+  text-align: left;
+  width: 10000px; }
+  .scrollable .step {
+    display: inline-block; }
+
 .job-results, .saved-content {
   width: 1170px;
   display: block;
@@ -3208,13 +3245,9 @@ JOB RESULTS/RECOMMENDATIONS
     position: relative; }
     .job-results .content .scrollable-content, .saved-content .content .scrollable-content {
       width: 80%;
-      margin: auto;
-      height: 82%;
-      overflow: hidden; }
+      height: 82%; }
     .job-results .content .scrollable, .saved-content .content .scrollable {
-      height: 100%;
-      text-align: left;
-      width: 10000px; }
+      height: 100%; }
     .job-results .content .job-recommandation, .job-results .content .save, .saved-content .content .job-recommandation, .saved-content .content .save {
       text-align: center;
       text-transform: uppercase;
@@ -3237,6 +3270,8 @@ JOB RESULTS/RECOMMENDATIONS
       .job-results .content .pages .ball:hover, .saved-content .content .pages .ball:hover {
         cursor: pointer; }
 
+.saved-content .title {
+  text-align: left; }
 .saved-content .content {
   height: 325px; }
   .saved-content .content .scrollable-content {
@@ -3245,16 +3280,21 @@ JOB RESULTS/RECOMMENDATIONS
     margin-top: 45px;
     position: relative;
     height: 210px;
-    font-size: 17px;
-    line-height: 23px; }
-    .saved-content .content .save .content {
+    font-size: 18px; }
+    .saved-content .content .save .content-save {
       position: absolute;
       top: 145px;
       width: 100%; }
-      .saved-content .content .save .content .name {
-        color: black; }
-      .saved-content .content .save .content .type {
-        font-size: 15px;
+      .saved-content .content .save .content-save .name {
+        color: black;
+        margin-bottom: 3px; }
+      .saved-content .content .save .content-save .type {
+        font-size: 16px;
+        line-height: 18px;
+        color: #9d9d9d; }
+      .saved-content .content .save .content-save .date {
+        font-size: 14px;
+        line-height: 16px;
         color: #9d9d9d; }
 
 .job-results .content {
@@ -3333,6 +3373,8 @@ Dashboard
         .dashboard .resume .job-phase .title .txt {
           width: 70%;
           margin-left: 20px; }
+      .dashboard .resume .job-phase .phases {
+        position: relative; }
       .dashboard .resume .job-phase .phase-content .cursor {
         padding-top: 6px;
         margin-right: 30px;
@@ -3341,22 +3383,27 @@ Dashboard
         .dashboard .resume .job-phase .phase-content .cursor .icon-cursor-red {
           position: absolute;
           left: -4px;
-          top: 65px; }
+          top: 0px; }
       .dashboard .resume .job-phase .phase-content .phase {
         margin-bottom: 13px; }
         .dashboard .resume .job-phase .phase-content .phase i {
+          position: relative;
+          top: auto;
+          right: auto;
           margin-right: 15px; }
         .dashboard .resume .job-phase .phase-content .phase > span {
           line-height: 40px;
           position: relative;
           top: 1px; }
   .dashboard .saved-content {
-    background-color: white;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-    border: none;
-    background: white;
     margin-bottom: 25px; }
+    .dashboard .saved-content .button-edit {
+      margin-top: -8px;
+      margin-right: -12px;
+      font-size: 14px;
+      position: relative;
+      padding-left: 10px;
+      padding-right: 40px; }
   .dashboard .job-results .title, .dashboard .saved-content .title {
     text-align: left; }
   .dashboard .content .col-left, .dashboard .content .col-right {
@@ -3458,12 +3505,22 @@ Dashboard
       width: 80%; }
     .dashboard .content .career-goals .content .first {
       margin-top: 0px; }
+  .dashboard .popup .scrollable {
+    width: 500%; }
+  .dashboard .popup .section-wrapper {
+    width: 20%;
+    display: inline-block;
+    vertical-align: top; }
   .dashboard .popup .section {
     width: 90%; }
     .dashboard .popup .section .header {
       font-size: 24px; }
       .dashboard .popup .section .header .grey {
         color: #9d9d9d; }
+    .dashboard .popup .section .step {
+      width: 1150px; }
+    .dashboard .popup .section .step1 {
+      display: none; }
     .dashboard .popup .section .content .custom-checkbox {
       margin-right: 25px;
       position: relative; }
@@ -3505,10 +3562,10 @@ Dashboard
       padding-bottom: 16px;
       font-size: 23px; }
     .dashboard .popup .section .content .large {
-      width: 340px;
+      width: 370px;
       margin-right: 25px; }
     .dashboard .popup .section .content .medium {
-      width: 140px;
+      width: 170px;
       margin-right: 25px; }
     .dashboard .popup .section .content .address {
       padding: 17px; }
@@ -3521,7 +3578,121 @@ Dashboard
         margin-right: 135px; }
         .dashboard .popup .section .content .general .gender .custom-checkbox {
           margin-top: 15px; }
+    .dashboard .popup .section .content .job-phase {
+      padding: 0px 15px;
+      padding-top: 25px; }
+      .dashboard .popup .section .content .job-phase .cursor {
+        margin-top: 20px;
+        margin-bottom: 45px;
+        position: relative; }
+        .dashboard .popup .section .content .job-phase .cursor .bar {
+          border-radius: 8px;
+          height: 15px;
+          background: #e7ebeb; }
+        .dashboard .popup .section .content .job-phase .cursor .icon-cursor-orange-down {
+          position: absolute;
+          top: -5px;
+          left: 10px;
+          background: orange;
+          height: 30px;
+          width: 20px; }
+      .dashboard .popup .section .content .job-phase .phase {
+        opacity: 0.6;
+        background-color: white;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+        -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+        border: none;
+        background: white;
+        width: 23.35%;
+        height: 295px;
+        text-align: center;
+        margin-bottom: 15px; }
+        .dashboard .popup .section .content .job-phase .phase .title {
+          font-size: 20px;
+          padding-top: 20px;
+          padding-bottom: 25px;
+          border-bottom: 1px solid #cfcfcf; }
+          .dashboard .popup .section .content .job-phase .phase .title .logo {
+            margin-bottom: 15px; }
+        .dashboard .popup .section .content .job-phase .phase .description {
+          padding: 0px 30px;
+          font-size: 15px;
+          line-height: 20px;
+          padding-top: 25px;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          -webkit-line-clamp: 6; }
+      .dashboard .popup .section .content .job-phase .left {
+        margin-right: 2.2%; }
+      .dashboard .popup .section .content .job-phase .before-last {
+        margin-right: 0px; }
+      .dashboard .popup .section .content .job-phase .phase[class~="selected"] {
+        opacity: 1; }
+    .dashboard .popup .section .content .job-occupation {
+      padding: 0px 20px;
+      height: 200px;
+      border-bottom: 1px solid #cfcfcf; }
+      .dashboard .popup .section .content .job-occupation .large {
+        width: 465px;
+        margin: 0px; }
+      .dashboard .popup .section .content .job-occupation .job {
+        height: 100%;
+        width: 42%;
+        position: relative; }
+        .dashboard .popup .section .content .job-occupation .job .entry {
+          position: absolute;
+          bottom: 30px; }
+          .dashboard .popup .section .content .job-occupation .job .entry .message {
+            margin-bottom: 10px; }
+      .dashboard .popup .section .content .job-occupation .job-correction {
+        height: 200px;
+        width: 50.7%;
+        position: relative; }
+        .dashboard .popup .section .content .job-occupation .job-correction .logo {
+          position: absolute;
+          bottom: 30px; }
+        .dashboard .popup .section .content .job-occupation .job-correction .correction {
+          position: absolute;
+          bottom: 30px;
+          right: 0px; }
+          .dashboard .popup .section .content .job-occupation .job-correction .correction .mess {
+            font-size: 16px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            color: #ee7835;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            -webkit-line-clamp: 4; }
+          .dashboard .popup .section .content .job-occupation .job-correction .correction .wrong {
+            color: black; }
+          .dashboard .popup .section .content .job-occupation .job-correction .correction .select {
+            border: 1px solid #ee7835; }
+    .dashboard .popup .section .content .job-info {
+      padding: 0px 15px;
+      padding-top: 25px;
+      padding-bottom: 30px; }
     .dashboard .popup .section .footer-dialog {
       border-top: 1px solid #cfcfcf;
       padding-top: 12px;
       padding-bottom: 15px; }
+
+.saved-content-page .saved-content {
+  margin-top: 65px; }
+  .saved-content-page .saved-content .content {
+    height: auto;
+    padding: 0px 100px;
+    padding-bottom: 40px; }
+    .saved-content-page .saved-content .content .save:not(.right) {
+      margin-right: 8px; }
+    .saved-content-page .saved-content .content .fourth {
+      margin-right: 0px !important; }
+    .saved-content-page .saved-content .content .save {
+      height: 265px;
+      overflow: hidden;
+      margin-top: 40px; }
+      .saved-content-page .saved-content .content .save .delete {
+        color: #d6392e;
+        margin-top: 25px;
+        margin-bottom: 10px; }

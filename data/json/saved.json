@@ -1,46 +1,55 @@
 [{
     "Type":"article",
     "AssetName":"Asset Name",
-    "AssetType":"Asset Type"
+    "AssetType":"Asset Type",
+    "Date":"June 12th"
 },
  {
     "Type":"careerScape",
     "AssetName":"Asset Name",
-    "AssetType":"Asset Type"
+    "AssetType":"Asset Type",
+    "Date":"June 12th"
 },
  {
     "Type":"locallyGrown",
     "AssetName":"Asset Name",
-    "AssetType":"Asset Type"
+    "AssetType":"Asset Type",
+    "Date":"June 12th"
 },
  {
     "Type":"jobinality",
     "AssetName":"Asset Name",
-    "AssetType":"Asset Type"
+    "AssetType":"Asset Type",
+    "Date":"June 12th"
 },
  {
     "Type":"article",
     "AssetName":"Asset Name",
-    "AssetType":"Asset Type"
+    "AssetType":"Asset Type",
+    "Date":"June 12th"
 },
  {
     "Type":"article",
     "AssetName":"Asset Name",
-    "AssetType":"Asset Type"
+    "AssetType":"Asset Type",
+    "Date":"June 12th"
 },
  {
     "Type":"article",
     "AssetName":"Asset Name",
-    "AssetType":"Asset Type"
+    "AssetType":"Asset Type",
+    "Date":"June 12th"
 },
  {
     "Type":"video",
     "AssetName":"Asset Name",
-    "AssetType":"Asset Type"
+    "AssetType":"Asset Type",
+    "Date":"June 12th"
 },
  {
     "Type":"article",
     "AssetName":"Asset Name",
-    "AssetType":"Asset Type"
+    "AssetType":"Asset Type",
+    "Date":"June 12th"
 }
  ]

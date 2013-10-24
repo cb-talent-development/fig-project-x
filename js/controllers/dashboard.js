@@ -1,4 +1,38 @@
 function DashboardCtr($scope, $http,pagination) {
+    
+    /*
+    Check Job Title
+    */
+    $scope.checkJobTitle=function(){        
+        console.log($scope.jobTitle);
+        if($scope.jobTitle.length>=5){
+            //...
+            $scope.showErrorJob=true;
+            $scope.correction="not-done";
+            $scope.jobTitles=["Public Relations Specialist","Sales Manager","Mcdonald Manager","Donut Seller"];
+            $scope.jobTitleCorrected=$scope.jobTitles[0];
+        }
+    }
+    /*
+    CUSTOM SELECT
+    */
+    $scope.setSalary=function(id){
+        $scope.salaryValue=$scope.salaries[id];
+    }
+    $scope.setCompany=function(id){
+        $scope.companyName=$scope.companies[id];
+    }
+    $scope.setJobTitle=function(id){
+        $scope.jobTitleCorrected=$scope.jobTitles[id];
+        $scope.jobTitle=$scope.jobTitleCorrected;
+        $scope.correction="done";
+    }
+    $scope.setAge=function(id){
+        $scope.selectedAge=$scope.ages[id];
+    }
+    $scope.setState=function(id){
+        $scope.selectedState=$scope.states[id];
+    }
     /*
     Page Click
     */
@@ -111,13 +145,35 @@ function DashboardCtr($scope, $http,pagination) {
         $scope.loadInfo();
         $scope.loadTechnologies();
         $scope.loadCareerGoals();
+        $scope.page="dashboard";
         $scope.jobResulstTitle="Latest Job for You";
         $scope.savedContentTitle="Saved Content";
+        $scope.selectedAge="Select Age Range";
+        $scope.selectedState="State";
+        //Part job title
+        $scope.jobTitle="";
+        $scope.salaryValue="Enter your Current Salary";
+        $scope.salaries=["$25,000-$35,000","$45,000-$50,000"];
+        $scope.showErrorJob=false;
+        $scope.companyName="Enter Company Name"
+        //companues
+        $scope.companies=["McKinsey","Bain","BCG","Fig"];
+        //states
+        $scope.states=["IL","NY","NJ"];
+        //ages
+        $scope.ages=["18-25 Years Old","26-30 Years Old","31-35 Years Old"];
         //Init eventual effects
         $scope.$on('$includeContentLoaded', function(){
             initEffect();
+            var jobPhases=$(".phase");
+            if(jobPhases){
+                for(var i=0;i<jobPhases.length;i++){
+                    if($(jobPhases[i]).hasClass("selected")){
+                        moveCursor($(jobPhases[i]),$('.icon-cursor-red'),true);
+                    }
+                }
+            }
         });
-        console.log($scope);
         
         
     }

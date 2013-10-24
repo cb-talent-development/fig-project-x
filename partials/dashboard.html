@@ -42,20 +42,20 @@
                     <i class="icon-cursor-red"></i>
                     <div class="icon-bar-cursor"></div>
                 </div>
-                <div class="left">
-                    <div class="phase link" onclick="scrollVertical($(this),$('.icon-cursor'))">
+                <div class="left phases">
+                    <div class="phase link" ng-class="{true:'selected',false:''}[user.JobPhase=='Discovery']" onclick="moveCursor($(this),$('.icon-cursor-red'))">
                         <i class="icon-search-orange-big"></i>
                         <span>Discovery</span>
                     </div>
-                    <div class="phase link" onclick="scrollVertical($(this),$('.icon-cursor'))">
+                    <div class="phase link" ng-class="{true:'selected',false:''}[user.JobPhase=='Find the Job']" onclick="moveCursor($(this),$('.icon-cursor-red'))">
                         <i class="icon-twin-blue-big"></i>
                         <span>Find the Job</span>
                     </div>
-                    <div class="phase link" onclick="scrollVertical($(this),$('.icon-cursor'))">
+                    <div class="phase link" ng-class="{true:'selected',false:''}[user.JobPhase=='Get the Job']" onclick="moveCursor($(this),$('.icon-cursor-red'))">
                         <i class="icon-check-red-big"></i>
                         <span>Get the Job</span>
                     </div>
-                    <div class="phase link" onclick="scrollVertical($(this),$('.icon-cursor'))">
+                    <div class="phase link" ng-class="{true:'selected',false:''}[user.JobPhase=='On the Job']" onclick="moveCursor($(this),$('.icon-cursor-red'))">
                         <i class="icon-suitcase-green-big"></i>
                         <span>On the Job</span>
                     </div>
@@ -65,17 +65,24 @@
         <div class="clear"></div>
     </div>
     <div class="saved-content">
-        <div class="title">{{savedContentTitle}}</div>
+        <div class="title">{{savedContentTitle}}
+            <div class="right button-edit back-grey link">
+                <a href="#/dashboard/saved"></a>
+                <span>View & Edit my Career Content</span>
+                <i class="icon-bigarrow-right-black"></i>
+            </div>
+        </div>
         <div class="content">
             <i class="icon-arrow-left-big-blue" ng-click="pageClick(pageSaved.currentPage-1,'save','.saved-content')"></i>
             <div class="scrollable-content">
                 <div class="scrollable">
-                    <div class="save link" ng-repeat="save in saves">   
-                        <a href="/"></a>
+                    <div class="save" ng-repeat="save in saves">   
                         <div class="icon-{{save.Type}}-saved icon"></div>
-                        <div class="content">
+                        <div class="content-save">
                             <div class="name">{{save.AssetName}}</div>
                             <div class="type">{{save.AssetType}}</div>
+                            <div class="date">{{save.Date}}</div>
+
                         </div>
                     </div>
                 </div>
@@ -169,78 +176,218 @@
         </div>
         <div class="clear"></div>
     </div>
+    
     <div class="dialog popup">
         <div class="background" onclick="disparition($('.popup'))"></div>
-        <div class="section">
-            <div class="header">
-                <span class"title">Did you know: XX% of the la population love hamburgers<i class="icon-x-black close" onclick="disparition($('.popup'))"></i></span>
-            </div>
-            <div class="content">
-                <div class="general">
-                    <div class="left gender">
-                        <div class="message">enter your gender</div>
-                        <div>
-                            <div class="custom-checkbox left">
-                                <input id="male" type="checkbox"/><label for="male">Male</label>
+        <div class="scrollable-content">
+            <div class="scrollable">
+                <div class="section-wrapper">
+                    <div class="section section1">
+                        <div class="header">
+                            <span class"title">Did you know: XX% of the la population love hamburgers<i class="icon-x-black close" onclick="disparition($('.popup'))"></i></span>
+                        </div>
+                        <div class="content">
+                            <div class="general">
+                                <div class="left gender">
+                                    <div class="message">enter your gender</div>
+                                    <div>
+                                        <div class="custom-checkbox left">
+                                            <input id="male" type="checkbox"/><label for="male">Male</label>
+                                        </div>
+                                        <div class="custom-checkbox left">
+                                            <input id="female" type="checkbox"/><label for="female">Female</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="left">
+                                    <div class="message large"><span>enter your age range:</span><span class="right optional">optional</span></div>
+                                    <div class="large select toggleMenu">
+                                        <span class="title">{{selectedAge}}</span><b class="icon-bigarrow-bottom-grey grey-icon"></b>
+                                        <i class=""></i>
+                                        <div class="subMenu">
+                                            <div ng-repeat="age in ages" ng-click="setAge($index)">{{age}}</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="clear"></div>
                             </div>
-                            <div class="custom-checkbox left">
-                                <input id="female" type="checkbox"/><label for="female">Female</label>
+                            <div class="address">
+                                <div class="message">Please Enter Your Street address</div>
+                                <div class="street">
+                                    <div class="input-button large street left">
+                                        <input placeholder="Street Address"/>
+                                    </div>
+                                    <div class="input-button medium left">
+                                        <input placeholder="Apt/Suite"/>
+                                    </div>
+                                    <div class="input-button large left">
+                                        <input placeholder="City"/>
+                                    </div>
+                                </div>
+                                <div class="clear"></div>
+                                <div class="medium select toggleMenu left">
+                                    <span class="title">{{selectedState}}</span><b class="icon-bigarrow-bottom-grey grey-icon"></b>
+                                    <i class=""></i>
+                                    <div class="subMenu">
+                                        <div ng-click="setState($index)" ng-repeat="state in states">{{state}}</div>
+                                    </div>
+                                </div>
+                                <div class="input-button medium left">
+                                    <input placeholder="Zipcode"/>
+                                </div>
+                                <div class="clear"></div>
                             </div>
                         </div>
+                        <div class="footer-dialog">
+                            <div class="button-previous back-white left selected" onclick="">
+                                Previous
+                                <i class="icon-bigarrow-left-black icon left"></i>
+                            </div>
+                            <div class="button-next back-white left" onclick="moveToPopup($('.popup'),2)">
+                                Next
+                                <i class="icon-bigarrow-right-black icon right"></i>
+                            </div>
+                            <div class="button-save back-green right" onclick="">Save & Close</div>
+                            <div class="clear"></div>
+                        </div>
                     </div>
-                    <div class="left">
-                        <div class="message"><span>enter your age range:</span><span class="right optional">optional</span></div>
-                        <div class="large select toggleMenu">
-                            <span class="title">Select Age Range</span><b class="icon-bigarrow-bottom-grey grey-icon"></b>
-                            <i class=""></i>
-                            <div class="subMenu">
-                                <div>18-25 Years 0ld</div>
-                                <div>25-30 Years 0ld</div>
+                </div>
+                <div class="section-wrapper">
+                    <div class="section section2">
+                        <div class="header">
+                            <span class"title">Did you know: XX% of the la population love hamburgers<i class="icon-x-black close" onclick="disparition($('.popup'))"></i></span>
+                        </div>
+                        <div class="content">
+                              <div class="job-phase">
+                                <div class="message">Select your current job phase:</div>
+                                <div class="cursor">
+                                    <div class="bar"></div>
+                                    <div class="icon-cursor-orange-down"></div>
+                                </div>
+                                <div class="phase left link" onclick="moveCursorHorizontal($(this),$('.icon-cursor-orange-down'))">
+                                    <div class="title"> 
+                                        <div class="icon-search-orange-big logo"></div>
+                                        <div>Discovery</div>
+                                    </div>
+                                    <div class="description">
+                                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec felis sed leo placerat imperdiet. Curabitur eu amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor."
+                                    </div>
+                                </div>
+                                <div class="phase left link" onclick="moveCursorHorizontal($(this),$('.icon-cursor-orange-down'))">
+                                    <div class="title">
+                                        <div class="icon-twin-blue-big logo"></div>
+                                        <div>Find the Job</div>
+                                    </div>
+                                    <div class="description">
+                                         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec felis sed leo placerat imperdiet. Curabitur eu amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor."
+                                    </div>
+                                </div>
+                                <div class="phase before-last left link" onclick="moveCursorHorizontal($(this),$('.icon-cursor-orange-down'))">
+                                    <div class="title">
+                                        <div class="icon-check-red-big logo"></div>
+                                        <div>Get the Job</div>
+                                    </div>
+                                    <div class="description">
+                                         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec felis sed leo placerat imperdiet. Curabitur eu amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor."
+                                    </div>
+                                </div>
+                                <div class="phase right link" onclick="moveCursorHorizontal($(this),$('.icon-cursor-orange-down'))">
+                                    <div class="title">
+                                        <div class="icon-suitcase-green-big logo"></div>
+                                        <div>On the Job</div>
+                                    </div>
+                                    <div class="description">
+                                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec felis sed leo placerat imperdiet. Curabitur eu amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor."
+                                    </div>
+                                </div>
+                                <div class="clear"></div>
+                            </div>  
+                        </div>
+                        <div class="footer-dialog">
+                            <div class="button-previous back-white left" onclick="moveToPopup($('.popup'),1)">
+                                Previous
+                                <i class="icon-bigarrow-left-black icon left"></i>
+                            </div>
+                            <div class="button-next back-white left" onclick="moveToPopup($('.popup'),3)">
+                                Next
+                                <i class="icon-bigarrow-right-black icon right"></i>
+                            </div>
+            
+                            <div class="button-save back-green right" onclick="">Save & Close</div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-wrapper">
+                    <div class="section section2">
+                        <div class="header">
+                            <span class"title">Did you know: XX% of the la population love hamburgers<i class="icon-x-black close" onclick="disparition($('.popup'))"></i></span>
+                        </div>
+                        <div class="content">
+                            <div class="job-occupation">
+                                <div class="job left">
+                                    <div class="entry">
+                                        <div class="message large"><span>enter your age range:</span><span class="right optional">optional</span></div>
+                                        <div class="input-button large">
+                                            <input ng-model="jobTitle" placeholder="Enter Job Title" ng-change="checkJobTitle()"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="job-correction right" ng-class="{true:'invisible',false:'visible'}[showErrorJob==false]">
+                                    <div class="icon-arrow-right-big-orange left logo"></div>
+                                    <div class="correction left">
+                                        <div class="mess large" ng-class="{true:'invisible',false:'visible'}[correction=='done']">We do not have '<span class="wrong">{{jobTitle}}</span>' in our database. Please select a similar job occupation below so we can help better serve you.
+                                        </div>
+                                        <div class="large select toggleMenu">
+                                            <span class="title">{{jobTitleCorrected}}</span><b class="icon-bigarrow-bottom-grey grey-icon"></b>
+                                            <i class=""></i>
+                                            <div class="subMenu">
+                                                <div ng-repeat="title in jobTitles" ng-click="setJobTitle($index)">{{title}}</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                            </div>
+                            <div class="job-info">
+                                <div class="left">
+                                    <div class="message large"><span>What's your current company?</span><span class="right optional">optional</span></div>
+                                    <div class="large select toggleMenu">
+                                        <span class="title">{{companyName}}</span><b class="icon-bigarrow-bottom-grey grey-icon"></b>
+                                        <i class=""></i>
+                                        <div class="subMenu">
+                                                <div ng-repeat="company in companies" ng-click="setCompany($index)">{{company}}</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="right">
+                                    <div class="message large"><span>You current salary</span><span class="right optional">optional</span></div>
+                                    <div class="large select toggleMenu">
+                                        <span class="title">{{salaryValue}}</span><b class="icon-bigarrow-bottom-grey grey-icon"></b>
+                                        <i class=""></i>
+                                        <div class="subMenu">
+                                                <div ng-repeat="salary in salaries" ng-click="setSalary($index)">{{salary}}</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="clear"></div>
                             </div>
                         </div>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-                <div class="address">
-                    <div class="message">Please Enter Your Street address</div>
-                    <div class="street">
-                        <div class="input-button large street left">
-                            <input placeholder="Street Address"/>
-                        </div>
-                        <div class="input-button medium left">
-                            <input placeholder="Apt/Suite"/>
-                        </div>
-                        <div class="input-button large left">
-                            <input placeholder="City"/>
+                        <div class="footer-dialog">
+                            <div class="button-previous back-white left" onclick="moveToPopup($('.popup'),2)">
+                                Previous
+                                <i class="icon-bigarrow-left-black icon left"></i>
+                            </div>
+                            <div class="button-next back-white left" onclick="moveToPopup($('.popup'),4)">
+                                Next
+                                <i class="icon-bigarrow-right-black icon right"></i>
+                            </div>
+            
+                            <div class="button-save back-green right" onclick="">Save & Close</div>
+                            <div class="clear"></div>
                         </div>
                     </div>
-                    <div class="clear"></div>
-                    <div class="medium select toggleMenu left">
-                        <span class="title">State</span><b class="icon-bigarrow-bottom-grey grey-icon"></b>
-                        <i class=""></i>
-                        <div class="subMenu">
-                            <div>NY</div>
-                            <div>IL</div>
-                        </div>
-                    </div>
-                    <div class="input-button medium left">
-                        <input placeholder="Zipcode"/>
-                    </div>
-                    <div class="clear"></div>
                 </div>
-            </div>
-            <div class="footer-dialog">
-                <div class="button-previous back-white left selected" onclick="">
-                    Previous
-                    <i class="icon-bigarrow-right-black icon left"></i>
-                </div>
-                <div class="button-next back-white left" onclick="">
-                    Next
-                    <i class="icon-bigarrow-right-black icon right"></i>
-                </div>
-
-                <div class="button-save back-green right" onclick="">Save & Close</div>
-                <div class="clear"></div>
             </div>
         </div>
     </div>
