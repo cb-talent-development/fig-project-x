@@ -45,3 +45,27 @@ footer{
 		min-width: 180px;
 	}
 }
+
+.subMenu{
+	margin: 0px;
+	padding: 0px;
+	margin-top: 9px;
+	-webkit-box-shadow:0px 1px 1px rgba(0,0,0,0.2);
+	li{
+		list-style-type: none;
+		margin: 0px;
+		padding: 10px 15px;
+		width: 100%;
+		a{
+			color: #555;
+			b{
+				position: relative;
+				margin-top: -20px;
+				margin-left: 10px;
+			}
+		}
+	}
+	li:nth-child(odd){
+		background-color: #eee;
+	}
+}
