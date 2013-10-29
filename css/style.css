@@ -98,7 +98,6 @@ table td {
     position: absolute;
     left: 0px;
     z-index: 100;
-    width: 100%;
     color: inherit;
     display: none;
     background-color: inherit; }
