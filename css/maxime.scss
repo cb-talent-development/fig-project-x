@@ -57,6 +57,22 @@ $phone-height-small: 225px;
 $phone-retina-height:620px;
 $phone-retina-height-small: 450px;
 
+@mixin shadow-effect{
+    box-shadow:0 1px 1px rgba(0,0,0,0.2);
+    -webkit-box-shadow:0 1px 1px rgba(0,0,0,0.2);
+    border:none;
+}
+
+@mixin shadow{
+    @include shadow-effect;
+    background:white;
+}
+
+@mixin whitebox{
+	background-color: white;
+    @include shadow;
+}
+
 /*
 END-REDONDANCE
 */
@@ -72,7 +88,7 @@ footer{
 HEADER BUTTONS
 */
 
-.subMenu{
+.dropdown{
 	width: 100%;
 	margin: 0px;
 	padding: 0px;
@@ -87,18 +103,24 @@ HEADER BUTTONS
 	li:nth-child(odd){
 		background-color: #eee;
 	}
+	a:hover{
+		text-decoration:none;
+	}
 }
 
-.subMenu > li{
+.dropdown > li{
 	b{
 		position: relative;
 		margin-top: -20px;
 		margin-left: 10px;
 	}
+	a{
+		color: #888;
+	}
 }
 
 .dubble{
-	width: 230%;
+	width: 217%;
 	ul{
 		margin: 0px;
 		padding: 0px;
@@ -120,28 +142,86 @@ END HEADER BUTTONS
 */
 
 /*
+PROFILE SUBMENU
+*/
+
+.position{
+	left: -80px;
+}
+
+.profile-subMenu{
+	@include whitebox;
+	.text-part{
+		h2{
+			width: 100%;
+			text-align: center;
+			padding-top: 30px;
+			padding-bottom: 15px;
+			color: black;
+			font-size: 0.8em;
+		}
+		p{
+			width: 100%;
+			text-align: center;
+			font-size: 0.4em;
+			color: #888;
+		}
+		padding-bottom: 20px;
+		border-bottom: 1px solid #ccc;
+	}
+	.buttons-part{
+		width: 100%;
+		padding: 10%;
+		.button{
+			width: 100%;
+			margin: 0%;
+		}
+		.orange{
+			background-color: #F47937;
+			color: white;
+		}
+		.grey{
+			background-color: #EDEDED;
+			color: black;
+		}
+		.blue{
+			background-color: #14153E;
+			color: white;
+		}
+		.button:first{
+			margin-bottom: 5%;
+		}
+	}
+}
+
+/*
+END PROFILE SUBMENU
+*/
+
+
+/*
 COLORS
 */
 
-.green-1 { color: $green-1; }
-.green-2 { color: $green-2; }
-.green-3 { color: $green-3; }
-.green-4 { color: $green-4; }
-.blue-1 { color: $blue-1; }
-.blue-2 { color: $blue-2; }
-.blue-3 { color: $blue-3; }
-.blue-4 { color: $blue-4; }
-.blue-5 { color: $blue-5; }
-.blue-6 { color: $blue-6; }
-.orange-1 { color: $orange-1; }
-.orange-2 { color: $orange-2; }
-.orange-3 { color: $orange-3; }
-.orange-4 { color: $orange-4; }
-.orange-5 { color: $orange-5; }
-.red-1 { color: $red-1; }
-.red-2 { color: $red-2; }
-.red-3 { color: $red-3; }
-.red-4 { color: $red-4; }
-.pink-1 { color: $pink-1; }
-.pink-2 { color: $pink-2; }
-.pink-3 { color: $pink-3; }
+a.green-1 { color: $green-1; }
+a.green-2 { color: $green-2; }
+a.green-3 { color: $green-3; }
+a.green-4 { color: $green-4; }
+a.blue-1 { color: $blue-1; }
+a.blue-2 { color: $blue-2; }
+a.blue-3 { color: $blue-3; }
+a.blue-4 { color: $blue-4; }
+a.blue-5 { color: $blue-5; }
+a.blue-6 { color: $blue-6; }
+a.orange-1 { color: $orange-1; }
+a.orange-2 { color: $orange-2; }
+a.orange-3 { color: $orange-3; }
+a.orange-4 { color: $orange-4; }
+a.orange-5 { color: $orange-5; }
+a.red-1 { color: $red-1; }
+a.red-2 { color: $red-2; }
+a.red-3 { color: $red-3; }
+a.red-4 { color: $red-4; }
+a.pink-1 { color: $pink-1; }
+a.pink-2 { color: $pink-2; }
+a.pink-3 { color: $pink-3; }
