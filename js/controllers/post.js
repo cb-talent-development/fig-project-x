@@ -165,7 +165,7 @@ function PostCtr($scope,$http,$routeParams){
     $scope.init=function(){ 
         $scope.inputComment="";
         $scope.actualPosition=0;
-        console.log($routeParams.postId);
+
         $scope.postId=$routeParams.postId;
         //USE POSTID
         //load post info

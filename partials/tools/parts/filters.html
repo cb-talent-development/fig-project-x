@@ -1,11 +1,11 @@
-<div class="industries select toggleMenu">
+<div class="industries toggleMenu">
             <div ng-click="$parent.loadIndustries()">
-                <span class="title">Choose an Industry</span>
+                <span class="title">{{savedIndustry}}</span>
                 <b class="icon-bigarrow-bottom-grey grey-icon"></b>
             </div>
             <div class="subMenu">
 				<div ng-repeat="industry in $parent.$parent.industries">
-                    <div class="elem mode-{{$index % 2}}" ng-click="$parent.$parent.saveIndustry(industry.id)" onclick="selectEffect($(this))">{{industry.Name}}</div>
+                    <div class="elem mode-{{$index % 2}}" ng-click="saveIndustry(industry)">{{industry.Name}}</div>
                 </div>
 			</div>
 </div>

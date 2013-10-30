@@ -1,3 +1,40 @@
+/*
+equivalent to range function in python
+*/
+function range (low, high, step) {
+  var matrix = [];
+  var inival, endval, plus;
+  var walker = step || 1;
+  var chars = false;
+
+  if (!isNaN(low) && !isNaN(high)) {
+    inival = low;
+    endval = high;
+  } else if (isNaN(low) && isNaN(high)) {
+    chars = true;
+    inival = low.charCodeAt(0);
+    endval = high.charCodeAt(0);
+  } else {
+    inival = (isNaN(low) ? 0 : low);
+    endval = (isNaN(high) ? 0 : high);
+  }
+
+  plus = ((inival > endval) ? false : true);
+  if (plus) {
+    while (inival <= endval) {
+      matrix.push(((chars) ? String.fromCharCode(inival) : inival));
+      inival += walker;
+    }
+  } else {
+    while (inival >= endval) {
+      matrix.push(((chars) ? String.fromCharCode(inival) : inival));
+      inival -= walker;
+    }
+  }
+
+  return matrix;
+}
+//Variable for the months
 var monthNames = [ "January", "February", "March", "April", "May", "June",
     "July", "August", "September", "October", "November", "December" ];
 
@@ -25,7 +62,7 @@ function sortArticles(article1, article2){
     }
 }
 /*
-Allow responsivity
+Allow responsivity for homePage
 */
 function prepareWindow(){
     window.onresize=resizeHandling;
@@ -45,19 +82,23 @@ function resizeHandling(){
     if(checkModeTwoColumns && !modeTwoColumns){
         modeTwoColumns=true;
         var homeScope=angular.element('#home').scope();
-        homeScope.$apply(function(){
-            homeScope.modeTwo=true;
-            homeScope.computeElements();
-        });
+        if(homeScope){
+            homeScope.$apply(function(){
+                homeScope.modeTwo=true;
+                homeScope.computeElements();
+            });
+        }
     }
     //if mode three column has to be called but has not already been called
     else if(!checkModeTwoColumns && modeTwoColumns){
         modeTwoColumns=false;
         var homeScope=angular.element('#home').scope();
-        homeScope.$apply(function(){
-            homeScope.modeTwo=false;
-            homeScope.computeElements();
-        });
+        if(homeScope){
+            homeScope.$apply(function(){
+                homeScope.modeTwo=false;
+                homeScope.computeElements();
+            });
+        }
     }
 }
 //function that match the category of an article to a class
@@ -74,17 +115,6 @@ function getClassByCategory(article){
         return "pink-1";
     else if(article.Category.css == "coverletters")
         return "orange-3";
-}
-function getZoomPicture(media,template,mode){
-    if(template==1){
-        return (Math.max());
-    }
-    else if(template==2){
-        return (Math.max());
-    }
-    else{
-        return (Math.max());
-    }
 }
 /*
 General search function
@@ -117,7 +147,7 @@ function checkUserInfo($scope,$http){
     }
 }
 /*
-Post pretreatment
+Post pretreatment of posts
 */
 function postPretreatment(post,string){
             if(!string){
@@ -154,7 +184,7 @@ function postPretreatment(post,string){
 
 }
 /*
-Fake placeholder
+Fake placeholder (allow custom placeholder)
 */
 function fakePlaceholder(elem){
     if(elem.val().length>0){
@@ -170,7 +200,7 @@ function fakePlaceholder(elem){
     }
 }
 /*
-Reply functions 
+Reply functions (for comments)
 */
 function openReply(elem){
     var parent=elem.parent();
@@ -253,42 +283,6 @@ function toggleEffect(event){
     }
 }
 /*
-equivalent to range function in python
-*/
-function range (low, high, step) {
-  var matrix = [];
-  var inival, endval, plus;
-  var walker = step || 1;
-  var chars = false;
-
-  if (!isNaN(low) && !isNaN(high)) {
-    inival = low;
-    endval = high;
-  } else if (isNaN(low) && isNaN(high)) {
-    chars = true;
-    inival = low.charCodeAt(0);
-    endval = high.charCodeAt(0);
-  } else {
-    inival = (isNaN(low) ? 0 : low);
-    endval = (isNaN(high) ? 0 : high);
-  }
-
-  plus = ((inival > endval) ? false : true);
-  if (plus) {
-    while (inival <= endval) {
-      matrix.push(((chars) ? String.fromCharCode(inival) : inival));
-      inival += walker;
-    }
-  } else {
-    while (inival >= endval) {
-      matrix.push(((chars) ? String.fromCharCode(inival) : inival));
-      inival -= walker;
-    }
-  }
-
-  return matrix;
-}
-/*
 Cancel effects
 */
 function cancelToggle(){
@@ -305,7 +299,10 @@ var lock=false;
 function unlock(){
     lock=false;
 }
-function scrollVertical(page,container){
+/*
+Scroll Horizontal + activate ball indicating the step
+*/
+function scrollHorizontal(page,container){
     if(!lock){
         lock=true;
         var pages=container.find(".pages");
@@ -345,32 +342,6 @@ function disparition(elem){
     });
 }
 /*
-Init all the effects
-*/
-function initEffect(){
-    var htmlBody=$("html, body");
-    var toggleMenu=$(".toggleMenu");
-    var toggleMenuSimple=$(".toggleMenuSimple");
-    htmlBody.unbind('click');
-    toggleMenu.unbind('click');
-    toggleMenuSimple.unbind('click');
-    htmlBody.click(cancelEffects);
-    toggleMenu.click(toggleEffect);  
-    toggleMenuSimple.click(simpleToggleEffect); 
-    
-    //Initialization maxime
-    initMaxime()
-
-}
-function selectEffect(elem){
-    var content=elem.html();
-    console.log(elem);
-    while(!elem.hasClass("select")){
-        elem=elem.parent();
-    }
-    elem.find(".title").html(content);
-}
-/*
 Functions move cursor
 */
 /*
@@ -390,38 +361,74 @@ function moveCursor(elem,cursor,first){
 /*
 Horizontal
 */
-function moveCursorHorizontal(elem,cursor){
+function moveCursorHorizontal(elem,cursor,fast){
     if(!lock){
-        if(!elem.hasClass("selected")){
+        if(!elem.hasClass("selected") || fast){
             lock=true;
             $(elem.parent()).find(".selected").removeClass("selected");
             elem.addClass("selected");
             var dist=elem.offset().left+(elem.width()/2)-cursor.offset().left-cursor.width()/2;
-            cursor.animate({'left':"+="+dist},config.time_anim,unlock)
+            if(fast){
+                var pos=cursor.position().left+dist+"px";
+                cursor.css('left',pos);
+                unlock();
+            }else{
+                cursor.animate({'left':"+="+dist},config.time_anim,unlock)
+            }
         }
      }
 }
 /*
+Set cursor at the right position
+*/
+function checkCursorPosition(parent,cursor,orientation,boolean){
+    var jobPhases=$(parent+" .phase");
+    if(jobPhases){
+        for(var i=0;i<jobPhases.length;i++){
+            if($(jobPhases[i]).hasClass("selected")){
+                if(orientation=="vertical"){
+                    moveCursor($(jobPhases[i]),$(cursor),boolean);
+                }
+                else{
+                    moveCursorHorizontal($(jobPhases[i]),$(cursor),boolean);
+                }
+            }
+        }
+    }
+}
+/*
 Move popup
 */
-function moveToPopup(container,step){
+function movePopup(container,step,fast){
     if(!lock){
             lock=true;
             var elem=container.find(".scrollable-content");
             var scroll=(step-1)*elem.width();
-            elem.animate({'scrollLeft':scroll},1.5*config.timeAnim,unlock);
+            //fast allow to go directly to the right position without animation
+            if(fast){
+                elem.scrollLeft(scroll);
+                unlock();
+            }
+            else{
+                elem.animate({'scrollLeft':scroll},1.5*config.timeAnim,unlock);
+            }
      }
 }
 /*
-Init doucment 
+Init all the effects
 */
-function init(){
+function initEffect(){
+    var htmlBody=$("html, body");
+    var toggleMenu=$(".toggleMenu");
+    var toggleMenuSimple=$(".toggleMenuSimple");
+    htmlBody.unbind('click');
+    toggleMenu.unbind('click');
+    toggleMenuSimple.unbind('click');
+    htmlBody.click(cancelEffects);
+    toggleMenu.click(toggleEffect);  
+    toggleMenuSimple.click(simpleToggleEffect); 
+    
+    //Initialization maxime
+    initMaxime()
+
 }
-/*
-Document initialisation
-*/
-$(document).ready( function () {
-	 init();
-     initMaxime();
-     window.lock=false;
-});

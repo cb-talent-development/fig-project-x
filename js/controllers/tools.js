@@ -10,7 +10,7 @@ function ToolCtr($scope, $http,$routeParams,pagination) {
         if(!lock){
             if(page<=$scope.pageJobs.pages.length && page>0){
                 $scope.pageJobs.currentPage=page;
-                scrollVertical($scope.pageJobs.currentPage,$(class_element));
+                scrollHorizontal($scope.pageJobs.currentPage,$(class_element));
             }
             else{}
         }
@@ -44,8 +44,9 @@ function ToolCtr($scope, $http,$routeParams,pagination) {
 	       });
         }
     }
-    $scope.saveIndustry=function(id){
-        $scope.industryId=id;
+    $scope.saveIndustry=function(industry){
+        $scope.industryId=industry.id;
+        $scope.savedIndustry=industry.Name;
     }
     $scope.loadHelp=function(name){
         $http.get("data/json/help-"+name+".json").success(function(data) {
@@ -93,6 +94,7 @@ function ToolCtr($scope, $http,$routeParams,pagination) {
             "txt":" "+$scope.txt,
             "color":"black"
         }];
+        $scope.savedIndustry="Choose an Industry";
         checkUserInfo($scope,$http);
         $scope.jobResulstTitle="Job for You:";
         $scope.loadJob();

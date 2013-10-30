@@ -92,6 +92,22 @@ table td {
   .custom-checkbox input[type=checkbox]:checked + label:before {
     content: "\2713"; }
 
+.custom-radio {
+  position: relative; }
+  .custom-radio input[type=radio] {
+    display: none; }
+  .custom-radio label:hover {
+    cursor: pointer; }
+  .custom-radio label:before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    text-align: center; }
+  .custom-radio label:hover:before {
+    box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0 0px 2px 0px rgba(0, 0, 0, 0.3); }
+
 .toggleMenu, .toggleMenuSimple {
   position: relative; }
   .toggleMenu .subMenu, .toggleMenuSimple .subMenu {
@@ -522,6 +538,8 @@ Menu with multiple button
   .menu-buttons .home {
     margin-right: 2.2%;
     width: 14.54%; }
+  .menu-buttons .search {
+    width: 12%; }
   .menu-buttons .last {
     margin-right: 0px; }
   .menu-buttons .button b, .menu-buttons .input-button b {
@@ -2801,7 +2819,7 @@ DIALOG
 .dialog {
   z-index: 300;
   display: none;
-  position: fixed;
+  position: absolute;
   top: 0px;
   left: 0px;
   bottom: 0px;
@@ -2822,7 +2840,7 @@ DIALOG
     display: none;
     width: 60%;
     margin: auto;
-    margin-top: 50px;
+    margin-top: 140px;
     background-color: #f3f5f5; }
     .dialog .section .header {
       position: relative;
@@ -2952,8 +2970,8 @@ Tool CSS
     margin: auto;
     margin-bottom: 30px; }
     .tool .selector .input-button {
-      padding-top: 19px;
-      padding-bottom: 15px;
+      padding-top: 21px;
+      padding-bottom: 17px;
       padding-left: 15px;
       width: 100%;
       height: 100%;
@@ -2962,7 +2980,7 @@ Tool CSS
       border: none;
       background: none; }
     .tool .selector .industries, .tool .selector .occupations {
-      padding-top: 22px;
+      padding-top: 21px;
       padding-bottom: 17px;
       font-size: 22px;
       position: relative; }
@@ -2975,7 +2993,7 @@ Tool CSS
         position: absolute; }
       .tool .selector .industries .subMenu, .tool .selector .occupations .subMenu {
         left: 0px;
-        top: 65px;
+        top: 64px;
         font-size: 17px;
         line-height: 40px;
         color: white !important; }
@@ -3086,7 +3104,7 @@ Career Scape
   .careerScape .buttons-changes {
     width: 23%;
     min-width: 267px;
-    height: 65px;
+    height: 64px;
     float: left;
     background-color: #09335b; }
   .careerScape .button-change {
@@ -3506,13 +3524,14 @@ Dashboard
     .dashboard .content .career-goals .content .first {
       margin-top: 0px; }
   .dashboard .popup .scrollable {
-    width: 500%; }
+    width: 500%;
+    min-width: 6000px; }
   .dashboard .popup .section-wrapper {
     width: 20%;
     display: inline-block;
     vertical-align: top; }
   .dashboard .popup .section {
-    width: 90%; }
+    width: 1150px; }
     .dashboard .popup .section .header {
       font-size: 24px; }
       .dashboard .popup .section .header .grey {
@@ -3521,16 +3540,16 @@ Dashboard
       width: 1150px; }
     .dashboard .popup .section .step1 {
       display: none; }
-    .dashboard .popup .section .content .custom-checkbox {
+    .dashboard .popup .section .content .custom-radio {
       margin-right: 25px;
       position: relative; }
-      .dashboard .popup .section .content .custom-checkbox input[type=checkbox] {
+      .dashboard .popup .section .content .custom-radio input[type=checkbox] {
         display: none; }
-      .dashboard .popup .section .content .custom-checkbox label {
+      .dashboard .popup .section .content .custom-radio label {
         margin-left: 40px; }
-      .dashboard .popup .section .content .custom-checkbox label:hover {
+      .dashboard .popup .section .content .custom-radio label:hover {
         cursor: pointer; }
-      .dashboard .popup .section .content .custom-checkbox label:before {
+      .dashboard .popup .section .content .custom-radio label:before {
         height: 20px;
         width: 20px;
         content: "";
@@ -3543,9 +3562,9 @@ Dashboard
         -webkit-box-shadow: 0.5px -1px 2px 0px rgba(0, 0, 0, 0.3);
         border-right: 1px solid #cfcfcf;
         background: white; }
-      .dashboard .popup .section .content .custom-checkbox input[type=checkbox]:checked + label:before {
+      .dashboard .popup .section .content .custom-radio input[type=radio]:checked + label:before {
         background: #ee7835; }
-    .dashboard .popup .section .content .custom-checkbox {
+    .dashboard .popup .section .content .custom-radio {
       font-size: 23px;
       color: gray; }
     .dashboard .popup .section .content .message {

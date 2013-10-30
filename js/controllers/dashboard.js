@@ -1,5 +1,12 @@
 function DashboardCtr($scope, $http,pagination) {
-    
+    /*
+    Save function
+    */
+    $scope.save=function(){
+        checkCursorPosition('.resume','.icon-cursor-red','vertical',true);
+        //...
+        console.log("save");
+    }
     /*
     Check Job Title
     */
@@ -14,8 +21,11 @@ function DashboardCtr($scope, $http,pagination) {
         }
     }
     /*
-    CUSTOM SELECT
+    Setter
     */
+    $scope.setJobPhase=function(phase){
+        $scope.user.JobPhase=phase;
+    }
     $scope.setSalary=function(id){
         $scope.salaryValue=$scope.salaries[id];
     }
@@ -47,7 +57,7 @@ function DashboardCtr($scope, $http,pagination) {
             }
             if(page<=pages.pages.length && page>0){
                 pages.currentPage=page;
-                scrollVertical(pages.currentPage,$(class_element));
+                scrollHorizontal(pages.currentPage,$(class_element));
             }
             else{}
         }
@@ -83,6 +93,7 @@ function DashboardCtr($scope, $http,pagination) {
     $scope.loadInfo=function(){
         $http.get("data/json/user-full.json").success(function(data) {
             $scope.user=data;
+            $scope.initInput();
 	   });
     }
     /*
@@ -126,16 +137,24 @@ function DashboardCtr($scope, $http,pagination) {
 	   });
     }
 
+    //Input initialisation
+    $scope.initInput=function(){
+        $scope.selectedAge="Select Age Range";
+        $scope.selectedState=$scope.user.State;
+        $scope.gender=$scope.user.Gender;
+        $scope.zipcode=$scope.user.Zipcode;
+        $scope.jobTitle=$scope.user.JobTitle;
+        $scope.salaryValue=$scope.user.Income;
+    }
     /*
-    Constructor
+        Constructor
     */
-    
     $scope.init=function(){
-        checkUserInfo($scope,$http);
         $scope.paths=[{
             "txt":" Dashboard",
             "color":"black"
         }];
+        //Loading part
         $scope.loadInfo();
         $scope.loadJob();
         $scope.loadSaved();
@@ -145,34 +164,27 @@ function DashboardCtr($scope, $http,pagination) {
         $scope.loadInfo();
         $scope.loadTechnologies();
         $scope.loadCareerGoals();
+        //page
         $scope.page="dashboard";
+        //Message
         $scope.jobResulstTitle="Latest Job for You";
-        $scope.savedContentTitle="Saved Content";
-        $scope.selectedAge="Select Age Range";
-        $scope.selectedState="State";
+        $scope.savedContentTitle="Saved Content";        
         //Part job title
-        $scope.jobTitle="";
-        $scope.salaryValue="Enter your Current Salary";
-        $scope.salaries=["$25,000-$35,000","$45,000-$50,000"];
+        $scope.salaries=["$25,000-$50,000","$50,000-$75,000","$75,000-$100,000","$125,000-$150,000"];
         $scope.showErrorJob=false;
         $scope.companyName="Enter Company Name"
+        
         //companues
         $scope.companies=["McKinsey","Bain","BCG","Fig"];
         //states
         $scope.states=["IL","NY","NJ"];
         //ages
+        
         $scope.ages=["18-25 Years Old","26-30 Years Old","31-35 Years Old"];
         //Init eventual effects
         $scope.$on('$includeContentLoaded', function(){
             initEffect();
-            var jobPhases=$(".phase");
-            if(jobPhases){
-                for(var i=0;i<jobPhases.length;i++){
-                    if($(jobPhases[i]).hasClass("selected")){
-                        moveCursor($(jobPhases[i]),$('.icon-cursor-red'),true);
-                    }
-                }
-            }
+            checkCursorPosition(".resume",".icon-cursor-red","vertical",true);
         });
         
         

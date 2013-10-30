@@ -11,22 +11,22 @@
         <div class="left presentation">
             <table>
                 <tr>
-                    <td><div class="icon-pencil"></div></td>
+                    <td><div class="icon-pencil link" onclick="apparition($('.popup'));movePopup($('.popup'),3,true)"></div></td>
                     <td><div class="icon-suitcase-red logo"></div></td>
                     <td><div>{{user.JobTitle}}</div></td>
                 </tr>
                 <tr>
-                    <td><div class="icon-pencil"></div></td>
+                    <td><div class="icon-pencil link" onclick="apparition($('.popup'));movePopup($('.popup'),1,true)"></div></td>
                     <td><div class="icon-building logo"></div></td>
                     <td><div>{{user.Website}}</div></td>
                 </tr>
                 <tr>
-                    <td><div class="icon-pencil"></div></td>
+                    <td><div class="icon-pencil link" onclick="apparition($('.popup'));movePopup($('.popup'),1,true)"></div></td>
                     <td><div class="icon-location logo"></div></td>
-                    <td><div>{{user.Location}}</div></td>
+                    <td><div>{{user.State}},&nbsp;{{user.Zipcode}}</div></td>
                 </tr>
                 <tr>
-                    <td><div class="icon-pencil"></div></td>
+                    <td><div class="icon-pencil link" onclick="apparition($('.popup'));movePopup($('.popup'),3,true)"></div></td>
                     <td><div class="icon-dollars logo"></div></td>
                     <td><div>{{user.Income}}</div></td>
                 </tr>
@@ -34,7 +34,7 @@
         </div>
         <div class="right job-phase">
             <div class="title">
-                <div class="icon-pencil inline"></div>
+                <div class="icon-pencil inline link" onclick="apparition($('.popup'));movePopup($('.popup'),2,true);            checkCursorPosition('.section2','.icon-cursor-orange-down','horizontal',true);"></div>
                 <div class="txt inline">What Phase of the Job Search Are You?</div>
             </div>
             <div class="phase-content">
@@ -43,19 +43,19 @@
                     <div class="icon-bar-cursor"></div>
                 </div>
                 <div class="left phases">
-                    <div class="phase link" ng-class="{true:'selected',false:''}[user.JobPhase=='Discovery']" onclick="moveCursor($(this),$('.icon-cursor-red'))">
+                    <div class="phase link" ng-class="{true:'selected',false:''}[user.JobPhase=='Discovery']" onclick="moveCursor($(this),$('.icon-cursor-red'))" ng-click="setJobPhase('Discovery')">
                         <i class="icon-search-orange-big"></i>
                         <span>Discovery</span>
                     </div>
-                    <div class="phase link" ng-class="{true:'selected',false:''}[user.JobPhase=='Find the Job']" onclick="moveCursor($(this),$('.icon-cursor-red'))">
+                    <div class="phase link" ng-class="{true:'selected',false:''}[user.JobPhase=='Find the Job']" onclick="moveCursor($(this),$('.icon-cursor-red'))" ng-click="setJobPhase('Find the Job')">
                         <i class="icon-twin-blue-big"></i>
                         <span>Find the Job</span>
                     </div>
-                    <div class="phase link" ng-class="{true:'selected',false:''}[user.JobPhase=='Get the Job']" onclick="moveCursor($(this),$('.icon-cursor-red'))">
+                    <div class="phase link" ng-class="{true:'selected',false:''}[user.JobPhase=='Get the Job']" onclick="moveCursor($(this),$('.icon-cursor-red'))" ng-click="setJobPhase('Get the Job')">
                         <i class="icon-check-red-big"></i>
                         <span>Get the Job</span>
                     </div>
-                    <div class="phase link" ng-class="{true:'selected',false:''}[user.JobPhase=='On the Job']" onclick="moveCursor($(this),$('.icon-cursor-red'))">
+                    <div class="phase link" ng-class="{true:'selected',false:''}[user.JobPhase=='On the Job']" onclick="moveCursor($(this),$('.icon-cursor-red'))" ng-click="setJobPhase('On the Job')">
                         <i class="icon-suitcase-green-big"></i>
                         <span>On the Job</span>
                     </div>
@@ -191,11 +191,11 @@
                                 <div class="left gender">
                                     <div class="message">enter your gender</div>
                                     <div>
-                                        <div class="custom-checkbox left">
-                                            <input id="male" type="checkbox"/><label for="male">Male</label>
+                                        <div class="custom-radio left">
+                                            <input id="male" ng-model="gender" type="radio" name="sex" value="male"/><label for="male">Male</label>
                                         </div>
-                                        <div class="custom-checkbox left">
-                                            <input id="female" type="checkbox"/><label for="female">Female</label>
+                                        <div class="custom-radio left">
+                                            <input id="female" ng-model="gender" type="radio" name="sex" value="female"/><label for="female">Female</label>
                                         </div>
                                     </div>
                                 </div>
@@ -233,7 +233,7 @@
                                     </div>
                                 </div>
                                 <div class="input-button medium left">
-                                    <input placeholder="Zipcode"/>
+                                    <input ng-model="zipcode" placeholder="Zipcode"/>
                                 </div>
                                 <div class="clear"></div>
                             </div>
@@ -243,11 +243,11 @@
                                 Previous
                                 <i class="icon-bigarrow-left-black icon left"></i>
                             </div>
-                            <div class="button-next back-white left" onclick="moveToPopup($('.popup'),2)">
+                            <div class="button-next back-white left" onclick="movePopup($('.popup'),2)">
                                 Next
                                 <i class="icon-bigarrow-right-black icon right"></i>
                             </div>
-                            <div class="button-save back-green right" onclick="">Save & Close</div>
+                            <div class="button-save back-green right" onclick="disparition($('.popup'))" ng-click="save()">Save & Close</div>
                             <div class="clear"></div>
                         </div>
                     </div>
@@ -255,7 +255,7 @@
                 <div class="section-wrapper">
                     <div class="section section2">
                         <div class="header">
-                            <span class"title">Did you know: XX% of the la population love hamburgers<i class="icon-x-black close" onclick="disparition($('.popup'))"></i></span>
+                            <span class"title">Did you know: XX% of the la population love hamburgers<i class="icon-x-black close" onclick="disparition($('.popup'));"></i></span>
                         </div>
                         <div class="content">
                               <div class="job-phase">
@@ -264,7 +264,7 @@
                                     <div class="bar"></div>
                                     <div class="icon-cursor-orange-down"></div>
                                 </div>
-                                <div class="phase left link" onclick="moveCursorHorizontal($(this),$('.icon-cursor-orange-down'))">
+                                <div class="phase left link" ng-class="{true:'selected',false:''}[user.JobPhase=='Discovery']" onclick="moveCursorHorizontal($(this),$('.icon-cursor-orange-down'));" ng-click="setJobPhase('Discovery')">
                                     <div class="title"> 
                                         <div class="icon-search-orange-big logo"></div>
                                         <div>Discovery</div>
@@ -273,7 +273,7 @@
                                         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec felis sed leo placerat imperdiet. Curabitur eu amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor."
                                     </div>
                                 </div>
-                                <div class="phase left link" onclick="moveCursorHorizontal($(this),$('.icon-cursor-orange-down'))">
+                                <div class="phase left link" ng-class="{true:'selected',false:''}[user.JobPhase=='Find the Job']"  onclick="moveCursorHorizontal($(this),$('.icon-cursor-orange-down'));" ng-click="setJobPhase('Find the Job')">
                                     <div class="title">
                                         <div class="icon-twin-blue-big logo"></div>
                                         <div>Find the Job</div>
@@ -282,7 +282,7 @@
                                          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec felis sed leo placerat imperdiet. Curabitur eu amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor."
                                     </div>
                                 </div>
-                                <div class="phase before-last left link" onclick="moveCursorHorizontal($(this),$('.icon-cursor-orange-down'))">
+                                <div class="phase before-last left link" ng-class="{true:'selected',false:''}[user.JobPhase=='Get the Job']" onclick="moveCursorHorizontal($(this),$('.icon-cursor-orange-down'));" ng-click="setJobPhase('Get the Job')">
                                     <div class="title">
                                         <div class="icon-check-red-big logo"></div>
                                         <div>Get the Job</div>
@@ -291,7 +291,7 @@
                                          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec felis sed leo placerat imperdiet. Curabitur eu amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor."
                                     </div>
                                 </div>
-                                <div class="phase right link" onclick="moveCursorHorizontal($(this),$('.icon-cursor-orange-down'))">
+                                <div class="phase right link" ng-class="{true:'selected',false:''}[user.JobPhase=='On the Job']"  onclick="moveCursorHorizontal($(this),$('.icon-cursor-orange-down'));" ng-click="setJobPhase('On the Job')">
                                     <div class="title">
                                         <div class="icon-suitcase-green-big logo"></div>
                                         <div>On the Job</div>
@@ -304,22 +304,22 @@
                             </div>  
                         </div>
                         <div class="footer-dialog">
-                            <div class="button-previous back-white left" onclick="moveToPopup($('.popup'),1)">
+                            <div class="button-previous back-white left" onclick="movePopup($('.popup'),1)">
                                 Previous
                                 <i class="icon-bigarrow-left-black icon left"></i>
                             </div>
-                            <div class="button-next back-white left" onclick="moveToPopup($('.popup'),3)">
+                            <div class="button-next back-white left" onclick="movePopup($('.popup'),3)">
                                 Next
                                 <i class="icon-bigarrow-right-black icon right"></i>
                             </div>
             
-                            <div class="button-save back-green right" onclick="">Save & Close</div>
+                            <div class="button-save back-green right" onclick="disparition($('.popup'))" ng-click="save()">Save & Close</div>
                             <div class="clear"></div>
                         </div>
                     </div>
                 </div>
                 <div class="section-wrapper">
-                    <div class="section section2">
+                    <div class="section section3">
                         <div class="header">
                             <span class"title">Did you know: XX% of the la population love hamburgers<i class="icon-x-black close" onclick="disparition($('.popup'))"></i></span>
                         </div>
@@ -374,16 +374,38 @@
                             </div>
                         </div>
                         <div class="footer-dialog">
-                            <div class="button-previous back-white left" onclick="moveToPopup($('.popup'),2)">
+                            <div class="button-previous back-white left" onclick="movePopup($('.popup'),2)">
                                 Previous
                                 <i class="icon-bigarrow-left-black icon left"></i>
                             </div>
-                            <div class="button-next back-white left" onclick="moveToPopup($('.popup'),4)">
+                            <div class="button-next back-white left" onclick="movePopup($('.popup'),4)">
                                 Next
                                 <i class="icon-bigarrow-right-black icon right"></i>
                             </div>
             
-                            <div class="button-save back-green right" onclick="">Save & Close</div>
+                            <div class="button-save back-green right" onclick="disparition($('.popup'))" ng-click="save()">Save & Close</div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-wrapper">
+                    <div class="section section4">
+                        <div class="header">
+                            <span class"title">Did you know: XX% of the la population love hamburgers<i class="icon-x-black close" onclick="disparition($('.popup'))"></i></span>
+                        </div>
+                        <div class="content">
+                        </div>
+                        <div class="footer-dialog">
+                            <div class="button-previous back-white left" onclick="movePopup($('.popup'),3)">
+                                Previous
+                                <i class="icon-bigarrow-left-black icon left"></i>
+                            </div>
+                            <div class="button-next back-white left" onclick="movePopup($('.popup'),5)">
+                                Next
+                                <i class="icon-bigarrow-right-black icon right"></i>
+                            </div>
+            
+                            <div class="button-save back-green right" onclick="disparition($('.popup'))" ng-click="save()">Save & Close</div>
                             <div class="clear"></div>
                         </div>
                     </div>

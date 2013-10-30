@@ -175,6 +175,24 @@ table td{
         content: "\2713";  
     }  
 }
+.custom-radio{
+    position:relative;
+    input[type=radio] {
+	    display: none;
+    } 
+    label:hover{ cursor:pointer;}
+    label:before{
+        content:"";
+        position:absolute;
+        left:0px;
+        top:50%;
+        text-align: center;  
+    }
+    label:hover:before { 
+        box-shadow:0px 0px 2px 0px rgba(0,0,0,0.3);
+        -webkit-box-shadow:0 0px 2px 0px rgba(0,0,0,0.3);
+    } 
+}
 .toggleMenu,.toggleMenuSimple{
     position:relative;
     .subMenu{
@@ -738,6 +756,9 @@ Menu with multiple button
     .home{
         margin-right:2.2%;
         width:14.54%;
+    }
+    .search{
+        width:12%;
     }
     .last{
          margin-right:0px;
@@ -2013,14 +2034,14 @@ DIALOG
 .dialog{
     z-index:300;
     display:none;
-    position:fixed;top:0px;left:0px;bottom:0px;right:0px;width:100%;height:100%;
+    position:absolute;top:0px;left:0px;bottom:0px;right:0px;width:100%;height:100%;
     .background{
         background:rgba(0,0,0,0.5);
         position:fixed;top:0px;left:0px;bottom:0px;right:0px;width:100%;height:100%;
     }
     .section{
         position:relative;display:none;
-        width:60%;margin:auto;margin-top:50px;background-color:rgb(243,245,245);
+        width:60%;margin:auto;margin-top:140px;background-color:rgb(243,245,245);
         .header{
             position:relative;
             font-size:27px;padding-left:30px;
@@ -2148,14 +2169,14 @@ Tool CSS
         margin:auto;
         margin-bottom:30px;
         .input-button{
-            padding-top:19px;padding-bottom:15px;
+            padding-top:21px;padding-bottom:17px;
             padding-left:15px;
             width:100%;height:100%;color:white;
             font-size:22px;
             border:none;background:none;
         }
         .industries,.occupations{
-            padding-top:22px;padding-bottom:17px;
+            padding-top:21px;padding-bottom:17px;
             font-size:22px;
             position:relative;
             .title{
@@ -2169,7 +2190,7 @@ Tool CSS
             }
             .subMenu{
                 left:0px;
-                top:65px;
+                top:64px;
                 font-size:17px;
                 line-height:40px;
                 color:white !important;
@@ -2291,7 +2312,7 @@ Career Scape
     .buttons-changes{
             width:23%;
             min-width:267px;
-            height:65px;
+            height:64px;
             float:left;
             background-color:$navcolor;
     }
@@ -2799,7 +2820,9 @@ Dashboard
     }
     .popup{
         .scrollable{
+            //option 1
             width:500%;
+            min-width:5 * 1200px;
         }
         .section-wrapper{
             width:20%;
@@ -2807,7 +2830,8 @@ Dashboard
             vertical-align:top;
         }
         .section{
-            width:90%;
+            //width:90%;
+            width:1150px;
             .header{
                 font-size:24px;
                 .grey{
@@ -2821,7 +2845,7 @@ Dashboard
                 display:none;
             }
             .content{
-                .custom-checkbox{
+                .custom-radio{
                     margin-right:25px;
                     position:relative;
                     input[type=checkbox] {
@@ -2842,11 +2866,11 @@ Dashboard
                         border-right:1px solid $lightGrey;
                         background:white;
                     }
-                    input[type=checkbox]:checked + label:before { 
+                    input[type=radio]:checked + label:before { 
                         background:$orange;
                     }  
                 }
-                .custom-checkbox{
+                .custom-radio{
                     font-size:23px;
                     color:$darkGrey;
                 }
