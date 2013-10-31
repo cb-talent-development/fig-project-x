@@ -5,7 +5,7 @@
                 <span ng-switch on="user">
                         <span ng-switch-when="none">
                             <span class="grey link toggleMenu">Sign Up&nbsp;<i class="icon-bigarrow-bottom-grey"></i>&nbsp;/
-                                <div class="subMenu" ng-include="'partials/home-submenu.html'"></div>
+                                <div class="subMenu" ng-include="'partials/home-submenu-offline.html'"></div>
                             </span>
                             <span ng-repeat="path in paths">
                                   <span class="{{path.color}}">{{path.txt}}</span>
@@ -13,7 +13,7 @@
                         </span>
                         <span ng-switch-default>
                             <span class="orange link toggleMenu">{{user.Name}}&nbsp;<i class="icon-bigarrow-bottom-orange"></i>&nbsp;/
-                                <div class="subMenu" ng-include="'partials/home-submenu.html'"></div>
+                                <div class="subMenu" ng-include="'partials/home-submenu-online.html'"></div>
                             </span>
                             <span ng-repeat="path in paths">
                                   <span class="{{path.color}}">{{path.txt}}</span>
