@@ -180,7 +180,7 @@ function HomePageCtr($scope, $http) {
         $scope.$on('$includeContentLoaded', function(){
             initEffect();
         });
-		$scope.firstConnection = false;
+		$scope.firstConnection = true;
     }
     $scope.init();    
 };
