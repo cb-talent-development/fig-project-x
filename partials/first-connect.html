@@ -1,0 +1,23 @@
+<div class="first-connect" ng-controller="FirstConnectCtr">
+    <div class="img-1" style="background: url('img/first-connect-title.png') center no-repeat;"></div>
+    <div class="content">
+        <i class="icon-arrow-left-big-blue" ng-click="pageClick(pageJobs.currentPage-1,'jobs','.job-results')"></i>
+        <div class="scrollable-content">
+            <div class="scrollable">
+				<div class="element" ng-repeat="page in firstConnect">
+					<a href="/"></a>
+                    <p>
+						{{ page.Text }}
+					</p>
+					<div class="img-2" style="background: url('{{ page.Img }}') center no-repeat;"></div>
+				</div>
+            </div>
+        </div>
+        <div class="pages">
+            <div class="ball" ng-class="{true: 'activated',false: 'nick' }[n==1]" ng-click="pageClick(n,'.first-connect')" ng-repeat="n in pageFirstConnect.pages"></div>
+        </div>
+        <i class="icon-arrow-right-big-blue" ng-click="pageClick(pageJobs.currentPage+1,'jobs','.job-results')"></i>
+    </div>
+		<div class="link button button-orange no-hover">Sign In or Register<b class="icon-bigarrow-right-white"></b></div>
+		<div class="link button button-lightBlue no-hover">Skip & Get Started<b class="icon-bigarrow-right-white"></b></div>
+</div>
