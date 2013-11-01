@@ -158,6 +158,7 @@ function HomePageCtr($scope, $http) {
         console.log("-> action <-");
         alert("here drop down Max! (console for line number)");
     }
+	
     /*
     Constructor
     */
@@ -179,6 +180,7 @@ function HomePageCtr($scope, $http) {
         $scope.$on('$includeContentLoaded', function(){
             initEffect();
         });
+		$scope.firstConnection = false;
     }
     $scope.init();    
 };

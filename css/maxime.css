@@ -34,6 +34,7 @@ HEADER BUTTONS
   color: #888; }
 
 .dubble {
+  position: absolute;
   width: 217%; }
   .dubble ul {
     margin: 0px;
@@ -83,21 +84,86 @@ PROFILE SUBMENU
     .profile-subMenu .buttons-part .button {
       width: 100%;
       margin: 0%; }
-    .profile-subMenu .buttons-part .orange {
-      background-color: #F47937;
-      color: white; }
-    .profile-subMenu .buttons-part .grey {
-      background-color: #EDEDED;
-      color: black; }
-    .profile-subMenu .buttons-part .blue {
-      background-color: #14153E;
-      color: white; }
     .profile-subMenu .buttons-part .button:first {
       margin-bottom: 5%; }
 
 /*
 END PROFILE SUBMENU
 */
+.first-connect {
+  width: 100%;
+  height: 840px;
+  text-align: center;
+  position: relative; }
+  .first-connect .img-1 {
+    margin-top: 30px;
+    width: 100%;
+    height: 256px; }
+  .first-connect .element {
+    width: 13.5%;
+    display: inline-block;
+    vertical-align: top; }
+    .first-connect .element .title {
+      padding-top: 30px;
+      padding-bottom: 40px;
+      font-size: 7em; }
+    .first-connect .element p {
+      width: 60%;
+      font-size: 2.3em;
+      text-align: center;
+      margin-left: 20%; }
+    .first-connect .element .img-2 {
+      width: 100%;
+      height: 357px; }
+  .first-connect .icon-arrow-left-big-blue, .first-connect .icon-arrow-right-big-blue {
+    position: absolute;
+    top: 300px;
+    margin-top: -26px;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none; }
+  .first-connect .icon-arrow-left-big-blue {
+    left: 100px; }
+  .first-connect .icon-arrow-right-big-blue {
+    right: 100px; }
+  .first-connect i:hover {
+    cursor: pointer; }
+  .first-connect .pages {
+    text-align: center; }
+    .first-connect .pages .activated {
+      background-color: #104e8b !important; }
+    .first-connect .pages .ball {
+      margin: 0px 5px;
+      display: inline-block;
+      vertical-align: top;
+      width: 15px;
+      height: 15px;
+      border-radius: 10px;
+      background-color: #ccd6de; }
+    .first-connect .pages .ball:hover {
+      cursor: pointer; }
+  .first-connect .button {
+    margin: 20px 5px;
+    width: 350px;
+    font-size: 1.9em;
+    font-family: HelveticaLightCondensed, sans-serif; }
+
+.button-grey {
+  background-color: #EDEDED;
+  color: black; }
+
+.button-blue {
+  background-color: #14153E;
+  color: white; }
+
+.button-lightBlue {
+  background-color: #4FC0EE;
+  color: white; }
+
+.button-orange {
+  background-color: #F47937;
+  color: white; }
+
 /*
 COLORS
 */

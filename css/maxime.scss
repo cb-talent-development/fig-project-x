@@ -13,6 +13,7 @@ $boxRed: #EE6363;
 $boxPurple: #CD6090;
 $boxLightGreen: #66CDAA;
 $boxDarkBlue: #104E9B;
+$lightBlue: rgb(204,214,222);
 $grey: rgb(167,167,167);
 $blue-1: #00D2FF;
 $blue-2: #00A6FF;
@@ -73,6 +74,16 @@ $phone-retina-height-small: 450px;
     @include shadow;
 }
 
+@mixin no_select{
+   -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+@mixin inline-top{
+   display:inline-block;
+   vertical-align:top;
+}
+
 /*
 END-REDONDANCE
 */
@@ -120,6 +131,7 @@ HEADER BUTTONS
 }
 
 .dubble{
+	position: absolute;
 	width: 217%;
 	ul{
 		margin: 0px;
@@ -176,18 +188,6 @@ PROFILE SUBMENU
 			width: 100%;
 			margin: 0%;
 		}
-		.orange{
-			background-color: #F47937;
-			color: white;
-		}
-		.grey{
-			background-color: #EDEDED;
-			color: black;
-		}
-		.blue{
-			background-color: #14153E;
-			color: white;
-		}
 		.button:first{
 			margin-bottom: 5%;
 		}
@@ -198,6 +198,89 @@ PROFILE SUBMENU
 END PROFILE SUBMENU
 */
 
+
+.first-connect{
+	width: 100%;
+	height: 840px;
+	text-align: center;
+	position: relative;
+	
+	.img-1{
+		margin-top: 30px;
+		width: 100%;
+		height: 256px;
+	}
+	.element{
+		width: 13.5%;
+		@include inline-top;
+		.title{
+			padding-top: 30px;
+			padding-bottom: 40px;
+			font-size: 7em;
+		}
+		p{
+			width: 60%;
+			font-size: 2.3em;
+			text-align: center;
+			margin-left: 20%;
+		}
+		.img-2{
+			width: 100%;
+			height: 357px;
+		}
+	}
+	.icon-arrow-left-big-blue,.icon-arrow-right-big-blue{
+		position:absolute;top:300px;margin-top:-26px;
+		@include no_select;
+	}
+	.icon-arrow-left-big-blue{
+            left:100px;
+	}
+	.icon-arrow-right-big-blue{
+		right:100px;
+	}
+	i:hover{
+		cursor:pointer;
+	}
+	.pages{
+		text-align:center;
+		.activated{
+			background-color:$navcolor !important;
+		}
+		.ball{
+			margin:0px 5px;
+			@include inline-top;
+			width:15px;height:15px;border-radius:10px;
+			background-color:$lightBlue;
+		}
+		.ball:hover{
+			cursor:pointer;
+		}
+	}
+	.button{
+		margin: 20px 5px;
+		width: 350px;
+		font-size: 1.9em;
+		font-family: HelveticaLightCondensed, sans-serif;
+	}
+}
+
+.button-grey{
+	background-color: #EDEDED;
+	color: black;
+}
+.button-blue{
+	background-color: #14153E;
+	color: white;
+}
+.button-lightBlue{
+	background-color: #4FC0EE;
+	color: white;
+}
+.button-orange{
+	background-color: #F47937;
+	color: white;
+}
 
 /*
 COLORS
