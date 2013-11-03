@@ -5,7 +5,9 @@ REDONDANCE
 //Variables
 
 //colors
-$navcolor: #104E8B;
+$navcolor: rgb(9,51,91);
+$lightnavcolor: rgb(29,71,111);
+$darknavcolor: rgb(0,11,61);
 $boxBlue: #00B2EE;
 $boxGreen: #008B00;
 $boxYellow: #EEAD0E;
@@ -88,12 +90,74 @@ $phone-retina-height-small: 450px;
 END-REDONDANCE
 */
 
+.subMenu{
+	a:hover{
+		text-decoration:none;
+	}
+}
 
 footer{
 	.section{
 		min-width: 180px;
 	}
 }
+
+
+/*
+NAVBAR
+*/
+
+.nav-menu{
+	.subMenu{
+		position: absolute;
+		top: 61px;
+		left: 0px;
+		width: 100%;
+		background-color: $navcolor;
+		border-top: 1px solid $lightnavcolor;
+		-webkit-box-shadow:0px -1px $darknavcolor;
+		display: none;
+		padding-left: 85px;
+		padding-top: 46px;
+		padding-bottom: 50px;
+		z-index: 1000;
+		.section{
+			@inline-top;
+			width: 300px;
+			padding-left: 30px;
+			border-left: 2px dotted $blue-4;
+			font-family: HelveticaCondensed, sans-serif;
+			h3{
+				margin: 0px;
+				margin-bottom: 35px;
+				color: $orange-5;
+				font-size: 1.2em;
+			}
+			ul{
+				margin: 0px;
+				padding: 0px;
+				li{
+					list-style-type: none;
+					margin: 0px;
+					margin-top: 8px;
+					padding: 0px;
+					a{
+						color: white;
+						font-size: 1.0em;
+					}
+					a:hover{
+						text-decoration: none;
+						color:rgba(255,255,255,0.8);
+					}
+				}
+				li:nth-child(1){
+					margin-top: 0px;
+				}
+			}
+		}
+	}
+}
+
 
 /*
 HEADER BUTTONS
@@ -201,12 +265,11 @@ END PROFILE SUBMENU
 
 .first-connect{
 	width: 100%;
-	height: 840px;
 	text-align: center;
 	position: relative;
 	
 	.img-1{
-		margin-top: 30px;
+		margin-top: 70px;
 		width: 100%;
 		height: 256px;
 	}
@@ -228,6 +291,11 @@ END PROFILE SUBMENU
 			width: 100%;
 			height: 357px;
 		}
+	}
+	.icon-close{
+		position: absolute;
+		right: 80px;
+		top: -30px;
 	}
 	.icon-arrow-left-big-blue,.icon-arrow-right-big-blue{
 		position:absolute;top:300px;margin-top:-26px;
@@ -258,7 +326,8 @@ END PROFILE SUBMENU
 		}
 	}
 	.button{
-		margin: 20px 5px;
+		margin: 60px 5px;
+		margin-bottom: 45px;
 		width: 350px;
 		font-size: 1.9em;
 		font-family: HelveticaLightCondensed, sans-serif;
