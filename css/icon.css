@@ -32,6 +32,16 @@ ICON css
       height: 7.5px;
       background-position: -4.5px -29px; } }
 
+.icon-close {
+  background-position: -235px -10px;
+  width: 30px;
+  height: 30px; }
+  @media only screen and (max-width: 768px) {
+    .icon-close {
+      background-position: -210px -20px;
+      width: 17px;
+      height: 17px; } }
+
 .icon-bar-darkgrey {
   background-position: -115px -55px;
   width: 2px;

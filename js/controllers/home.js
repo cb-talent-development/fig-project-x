@@ -159,6 +159,10 @@ function HomePageCtr($scope, $http) {
         alert("here drop down Max! (console for line number)");
     }
 	
+	$scope.closeFirstConnect= function(){
+		$scope.firstConnection = false;
+	}
+	
     /*
     Constructor
     */
