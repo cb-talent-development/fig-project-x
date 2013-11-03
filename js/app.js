@@ -1,4 +1,4 @@
-angular.module('CareerBuilder', ['ngSanitize']). 
+angular.module('CareerBuilder', ['ngSanitize','CareerDirectives']). 
 	config(['$routeProvider', function($routeProvider) { 
 	$routeProvider.
 		when('/advice-resources', {templateUrl: 'partials/main.html',controller:HomePageCtr}).
@@ -14,34 +14,7 @@ angular.module('CareerBuilder', ['ngSanitize']).
        //also call all the other configuration
        prepareWindow();
 	});
-}).directive('comment', ['$compile', '$http', '$templateCache', function($compile, $http, $templateCache) {
-    
-        var getTemplate = function() {
-            var templateUrl = 'partials/comment.html',
-            templateLoader = $http.get(templateUrl, {cache: $templateCache});
-            return templateLoader;
-
-        }
-
-        var linker = function(scope, element, attrs) {
-
-            var loader = getTemplate();
-            //put html
-            var promise = loader.success(function(html) {
-                element.html(html);
-                element.replaceWith($compile(element.html())(scope));
-            });
-        }
-
-        return {
-            restrict: 'E',
-            scope: {
-                comment:'=',
-                user:'='
-            },
-            link: linker
-        };
-    }]).directive('onKeyup', function() {
+}).directive('onKeyup', function() {
             return function(scope, element, attributs) {
             scope.safeApply = function(fn) {
               var phase = this.$root.$$phase;

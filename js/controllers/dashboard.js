@@ -26,22 +26,10 @@ function DashboardCtr($scope, $http,pagination) {
     $scope.setJobPhase=function(phase){
         $scope.user.JobPhase=phase;
     }
-    $scope.setSalary=function(id){
-        $scope.salaryValue=$scope.salaries[id];
-    }
-    $scope.setCompany=function(id){
-        $scope.companyName=$scope.companies[id];
-    }
     $scope.setJobTitle=function(id){
         $scope.jobTitleCorrected=$scope.jobTitles[id];
         $scope.jobTitle=$scope.jobTitleCorrected;
         $scope.correction="done";
-    }
-    $scope.setAge=function(id){
-        $scope.selectedAge=$scope.ages[id];
-    }
-    $scope.setState=function(id){
-        $scope.selectedState=$scope.states[id];
     }
     /*
     Page Click

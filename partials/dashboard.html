@@ -205,7 +205,7 @@
                                         <span class="title">{{selectedAge}}</span><b class="icon-bigarrow-bottom-grey grey-icon"></b>
                                         <i class=""></i>
                                         <div class="subMenu">
-                                            <div ng-repeat="age in ages" ng-click="setAge($index)">{{age}}</div>
+                                            <div ng-repeat="age in ages" select data-value="age" data-elem="selectedAge">{{age}}</div>
                                         </div>
                                     </div>
                                 </div>
@@ -229,7 +229,7 @@
                                     <span class="title">{{selectedState}}</span><b class="icon-bigarrow-bottom-grey grey-icon"></b>
                                     <i class=""></i>
                                     <div class="subMenu">
-                                        <div ng-click="setState($index)" ng-repeat="state in states">{{state}}</div>
+                                        <div ng-repeat="state in states" select data-value="state" data-elem="selectedState">{{state}}</div>
                                     </div>
                                 </div>
                                 <div class="input-button medium left">
@@ -356,7 +356,7 @@
                                         <span class="title">{{companyName}}</span><b class="icon-bigarrow-bottom-grey grey-icon"></b>
                                         <i class=""></i>
                                         <div class="subMenu">
-                                                <div ng-repeat="company in companies" ng-click="setCompany($index)">{{company}}</div>
+                                                <div ng-repeat="company in companies" select data-value="company" data-elem="companyName">{{company}}</div>
                                         </div>
                                     </div>
                                 </div>
@@ -366,7 +366,7 @@
                                         <span class="title">{{salaryValue}}</span><b class="icon-bigarrow-bottom-grey grey-icon"></b>
                                         <i class=""></i>
                                         <div class="subMenu">
-                                                <div ng-repeat="salary in salaries" ng-click="setSalary($index)">{{salary}}</div>
+                                                <div ng-repeat="salary in salaries" select data-value="salary" data-elem="salaryValue">{{salary}}</div>
                                         </div>
                                     </div>
                                 </div>
