@@ -538,39 +538,45 @@ Header css
 	@media only screen and (min-width:769px){
 		height: 60px;
 	}
-	li{
-		padding: 6px 8px;
-		@media only screen and (max-width: 768px){
-			padding: 0px;
-			margin: 0px;
-		}
-		a{
-			color: #fff;
-			font-size: 1.6em;
-			text-align: center;
+	ul{
+		margin: 0px;
+		padding: 0px;
+		li{
+			padding: 6px 8px;
 			@media only screen and (max-width: 768px){
-				text-align: left;
-				font-size: 1.3em;
+				padding: 0px;
+				margin: 0px;
+			}
+			a{
+				color: #fff;
+				font-size: 1.6em;
+				text-align: center;
+				@media only screen and (max-width: 768px){
+					text-align: left;
+					font-size: 1.3em;
+				}
+			}
+			span{
+				color: #fff;
+				font-size: 1.6em;
+			}
+			a:hover{
+				color:rgba(255,255,255,0.8);
 			}
 		}
-		span{
-			color: #fff;
-			font-size: 1.6em;
+		li.movable{
+			@media only screen and (max-width:768px){
+				border-top: solid 1px #083E7A;
+			}
 		}
-        a:hover{
-            color:rgba(255,255,255,0.8);
-        }
-	}
-    li.movable{
-		@media only screen and (max-width:768px){
-			border-top: solid 1px #083E7A;
-		}
-	}
-	li.br{
-		padding: 5px 15px;
-		margin-right: 5px;
-		#menu-button{
-			float: right;
+		li.br{
+			padding: 8px 15px;
+			margin-right: 5px;
+			height: 60px;
+			background-color: rgb(2,39,69);
+			#menu-button{
+				float: right;
+			}
 		}
 	}
 	span#menu-button{

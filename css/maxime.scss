@@ -274,22 +274,43 @@ END PROFILE SUBMENU
 		height: 256px;
 	}
 	.element{
-		width: 13.5%;
+		width: 13.46%;
 		@include inline-top;
-		.title{
-			padding-top: 30px;
-			padding-bottom: 40px;
-			font-size: 7em;
-		}
 		p{
 			width: 60%;
 			font-size: 2.3em;
 			text-align: center;
 			margin-left: 20%;
 		}
+	}
+	.element1{
 		.img-2{
 			width: 100%;
 			height: 357px;
+		}
+	}
+	.element2, .element3, .element4{
+		text-align: center;
+		.box, .box2{
+			@include whitebox;
+			@include inline-top;
+			margin: 50px 15px;
+			margin-top: 60px;
+		}
+		.box{
+			width: 275px;
+			height: 270px;
+			overflow: hidden;
+		}
+		.box2{
+			width: 875px;
+			height: 270px;
+		}
+	}
+	.element3, .element4{
+		i{
+			margin-top: 50px;
+			margin-left: 55px;
 		}
 	}
 	.icon-close{

@@ -329,33 +329,38 @@ Header css
   @media only screen and (min-width: 769px) {
     .navbar {
       height: 60px; } }
-  .navbar li {
-    padding: 6px 8px; }
-    @media only screen and (max-width: 768px) {
-      .navbar li {
-        padding: 0px;
-        margin: 0px; } }
-    .navbar li a {
-      color: #fff;
-      font-size: 1.6em;
-      text-align: center; }
+  .navbar ul {
+    margin: 0px;
+    padding: 0px; }
+    .navbar ul li {
+      padding: 6px 8px; }
       @media only screen and (max-width: 768px) {
-        .navbar li a {
-          text-align: left;
-          font-size: 1.3em; } }
-    .navbar li span {
-      color: #fff;
-      font-size: 1.6em; }
-    .navbar li a:hover {
-      color: rgba(255, 255, 255, 0.8); }
-  @media only screen and (max-width: 768px) {
-    .navbar li.movable {
-      border-top: solid 1px #083E7A; } }
-  .navbar li.br {
-    padding: 5px 15px;
-    margin-right: 5px; }
-    .navbar li.br #menu-button {
-      float: right; }
+        .navbar ul li {
+          padding: 0px;
+          margin: 0px; } }
+      .navbar ul li a {
+        color: #fff;
+        font-size: 1.6em;
+        text-align: center; }
+        @media only screen and (max-width: 768px) {
+          .navbar ul li a {
+            text-align: left;
+            font-size: 1.3em; } }
+      .navbar ul li span {
+        color: #fff;
+        font-size: 1.6em; }
+      .navbar ul li a:hover {
+        color: rgba(255, 255, 255, 0.8); }
+    @media only screen and (max-width: 768px) {
+      .navbar ul li.movable {
+        border-top: solid 1px #083E7A; } }
+    .navbar ul li.br {
+      padding: 8px 15px;
+      margin-right: 5px;
+      height: 60px;
+      background-color: #022745; }
+      .navbar ul li.br #menu-button {
+        float: right; }
   .navbar span#menu-button {
     position: absolute;
     top: 20px;
