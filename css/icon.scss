@@ -15,6 +15,7 @@ ICON css
     background: url('assets/zig.png') center center repeat-x;
 }
 @mixin dimensionPosition($posX,$posY,$height,$width,$rapp){
+    background-size:1500px * $rapp 1400px * $rapp;
     background-position: ($rapp * $posX) ($rapp * $posY);
     height: $height * $rapp;
     width: $width * $rapp;
@@ -1537,7 +1538,7 @@ ICON SAVED
 .icon-article-saved{
     @include dimensionPosition(-1008px,-583px,126px,102px,1);
     @media only screen and (max-width: 768px){
-        @include dimensionPosition(-893px,-583px,126px,102px,0.5);
+        @include dimensionPosition(-1008px,-583px,126px,102px,0.5);
 	}
 }
 .icon-resumePro-saved{

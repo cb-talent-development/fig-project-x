@@ -1746,71 +1746,85 @@ TOOLS
 ICON SAVED
 */
 .icon-jobinality-saved {
+  background-size: 1500px 1400px;
   background-position: -893px -588px;
   height: 117px;
   width: 101px; }
   @media only screen and (max-width: 768px) {
     .icon-jobinality-saved {
+      background-size: 750px 700px;
       background-position: -446.5px -294px;
       height: 58.5px;
       width: 50.5px; } }
 
 .icon-article-saved {
+  background-size: 1500px 1400px;
   background-position: -1008px -583px;
   height: 126px;
   width: 102px; }
   @media only screen and (max-width: 768px) {
     .icon-article-saved {
-      background-position: -446.5px -291.5px;
+      background-size: 750px 700px;
+      background-position: -504px -291.5px;
       height: 63px;
       width: 51px; } }
 
 .icon-resumePro-saved {
+  background-size: 1500px 1400px;
   background-position: -1125px -588px;
   height: 117px;
   width: 101px; }
   @media only screen and (max-width: 768px) {
     .icon-resumePro-saved {
+      background-size: 750px 700px;
       background-position: -562.5px -294px;
       height: 58.5px;
       width: 50.5px; } }
 
 .icon-video-saved {
+  background-size: 1500px 1400px;
   background-position: -1240px -583px;
   height: 126px;
   width: 101px; }
   @media only screen and (max-width: 768px) {
     .icon-video-saved {
+      background-size: 750px 700px;
       background-position: -620px -291.5px;
       height: 63px;
       width: 50.5px; } }
 
 .icon-image-saved {
+  background-size: 1500px 1400px;
   background-position: -1356px -583px;
   height: 126px;
   width: 101px; }
   @media only screen and (max-width: 768px) {
     .icon-image-saved {
+      background-size: 750px 700px;
       background-position: -678px -291.5px;
       height: 63px;
       width: 50.5px; } }
 
 .icon-locallyGrown-saved {
+  background-size: 1500px 1400px;
   background-position: -893px -743px;
   height: 115px;
   width: 113px; }
   @media only screen and (max-width: 768px) {
     .icon-locallyGrown-saved {
+      background-size: 750px 700px;
       background-position: -446.5px -371.5px;
       height: 57.5px;
       width: 56.5px; } }
 
 .icon-careerScape-saved {
+  background-size: 1500px 1400px;
   background-position: -1045px -739px;
   height: 123px;
   width: 114px; }
   @media only screen and (max-width: 768px) {
     .icon-careerScape-saved {
+      background-size: 750px 700px;
       background-position: -522.5px -369.5px;
       height: 61.5px;
       width: 57px; } }
