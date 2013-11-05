@@ -1528,7 +1528,7 @@ ICON SAVED
 	}
 }
 .icon-article-saved-big{
-    @include dimensionPosition(-1008px,-583px,126px,102px,2);
+    @include dimensionPosition(-1008px,-583px,126px,102px,1.7);
     @media only screen and (max-width: 768px){
         @include dimensionPosition(-1008px,-583px,126px,102px,1);
 	}
@@ -1546,7 +1546,7 @@ ICON SAVED
 	}
 }
 .icon-video-saved-big{
-    @include dimensionPosition(-1240px,-583px,126px,101px,2);
+    @include dimensionPosition(-1240px,-583px,126px,101px,1.7);
     @media only screen and (max-width: 768px){
         @include dimensionPosition(-1240px,-583px,126px,101px,1);
 	}
@@ -1558,7 +1558,7 @@ ICON SAVED
 	}
 }
 .icon-image-saved-big{
-    @include dimensionPosition(-1356px,-583px,126px,101px,2);
+    @include dimensionPosition(-1356px,-583px,126px,101px,1.7);
     @media only screen and (max-width: 768px){
         @include dimensionPosition(-1356px,-583px,126px,101px,1);
 	}

@@ -21,7 +21,7 @@
 				<div class="button home toggleMenu"><span>All Categories <b class="icon-bigarrow-bottom-grey grey-icon"></b></span>
 					<ul class="subMenu dropdown dubble">
 						<li ng-repeat="cat in dropCategories">
-							<a href="#" class="getClassById({{cat.Id}})" title="{{ cat.Title }}">{{ cat.Title | uppercase }} <b class="icon-arrow-right-green-1"></b></a>
+							<a href="#" class="{{ cat.Class }}" title="{{ cat.Title }}">{{ cat.Title | uppercase }} <b class="icon-arrow-right-{{ cat.Class }}"></b></a>
 						</li>
 					</ul>
 				</div>

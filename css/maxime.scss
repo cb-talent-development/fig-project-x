@@ -194,9 +194,6 @@ HEADER BUTTONS
 		margin-top: -20px;
 		margin-left: 10px;
 	}
-	a{
-		color: #888;
-	}
 	li:nth-child(odd){
 		background-color: #eee;
 	}
@@ -204,6 +201,9 @@ HEADER BUTTONS
 .simple{
 	li:nth-child(odd){
 		background-color: #eee;
+	}
+	a{
+		color: #888;
 	}
 }
 
@@ -308,6 +308,15 @@ HOMEPAGE SCROLLABLE CONTENT
 		.box2{
 			width: 875px;
 			height: 270px;
+		}
+	}
+	.element2{
+		i{
+			margin: 30px 0;
+			margin-left: 70px;
+		}
+		.icon-arrow-right-big-grey{
+			margin-top: 110px;
 		}
 	}
 	.element3, .element4{

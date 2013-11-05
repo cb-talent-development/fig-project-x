@@ -76,13 +76,13 @@ HEADER BUTTONS
   position: relative;
   margin-top: -20px;
   margin-left: 10px; }
-.dropdown > li a {
-  color: #888; }
 .dropdown > li li:nth-child(odd) {
   background-color: #eee; }
 
 .simple li:nth-child(odd) {
   background-color: #eee; }
+.simple a {
+  color: #888; }
 
 .dubble {
   position: absolute;
@@ -172,6 +172,11 @@ HOMEPAGE SCROLLABLE CONTENT
     .first-connect .element2 .box2, .first-connect .element3 .box2, .first-connect .element4 .box2 {
       width: 875px;
       height: 270px; }
+  .first-connect .element2 i {
+    margin: 30px 0;
+    margin-left: 70px; }
+  .first-connect .element2 .icon-arrow-right-big-grey {
+    margin-top: 110px; }
   .first-connect .element3 i, .first-connect .element4 i {
     margin-top: 50px;
     margin-left: 55px; }

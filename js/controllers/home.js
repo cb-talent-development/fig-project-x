@@ -4,7 +4,7 @@ function HomePageCtr($scope, $http) {
     */
     $scope.threeColumns=function(week,firstWeek){
             var date=new Date(week[0].PublicationDate);
-            date.setHours(date.getHours()+((6-date.getDay())*24));
+            date.setHours(date.getHours()+((6 - date.getDay())*24));
             var weeks_res={};
             var columns=[];
             var col0=[];
@@ -166,6 +166,11 @@ function HomePageCtr($scope, $http) {
 	$scope.loadDropdown = function(){
 		$http.get('data/json/dropdown-categories.json').success(function(data) {
 			$scope.dropCategories = data;
+			for(var i = 0; i < $scope.dropCategories.length; i++){
+				var cat = $scope.dropCategories[i];
+				cat.Class = getClassById(cat.Id);
+				$scope.dropCategories[i] = cat;	
+			}
 		});
 	}
 	

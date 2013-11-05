@@ -120,13 +120,13 @@ function getClassByCategory(article){
 }
 //function that match the category of an article to a class
 function getClassById(id){
-    if(id == "1")
+    if(id == 1)
         return "green-1";
-    else if(id == "2")
+    else if(id == 2)
         return "green-2";
-    else if(id == "3")
+    else if(id == 3)
         return "green-3";
-    else if(id == "4")
+    else if(id == 4)
         return "green-4";
     else if(id == "5")
         return "orange-1";
@@ -162,7 +162,7 @@ function getClassById(id){
         return "pink-2";
     else if(id == "21")
         return "pink-3";
-    else if(id == "22")
+    else
         return "red-4";
 }
 /*
