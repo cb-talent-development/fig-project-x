@@ -1447,83 +1447,69 @@ $rapp:0.75;
 TOOLS
 */
 .icon-careerscape-small{
-    background-position:-236px -785px;
-    height:175px;
-    width:171px;
+	@include dimensionPosition(-236px,-785px,175px,171px,1);
     @media only screen and (max-width: 768px){
-	   background-position: -118px -392.5px;
-       height:87.5px;
-       width:85.5px;
+	   @include dimensionPosition(-236px,-785px,175px,171px,0.5);
 	}
 }
 .icon-resumePro-small{
-    background-position:-450px -785px;
-    height:177px;
-    width:172px;
+	@include dimensionPosition(-450px,-785px,177px,172px,1);
     @media only screen and (max-width: 768px){
-	   background-position: -125px -392.5px;
-       height:86px;
-       width:88.5px;
+	   @include dimensionPosition(-450px,-785px,177px,172px,0.5);
 	}
 }
 .icon-localygrown-small{
-    background-position:-22px -785px;
-    height:177px;
-    width:186px;
+	@include dimensionPosition(-22px,-785px,177px,186px,1);
     @media only screen and (max-width: 768px){
-	   background-position: -11px -392.5px;
-       height:88.5px;
-       width:98px;
+	   @include dimensionPosition(-22px,-785px,177px,186px,0.5);
 	}
 }
 .icon-jobinality-small{
-    background-position:-664px -785px;
-    height:186px;
-    width:171px;
+    @include dimensionPosition(-664px,-785px,186px,171px,1);
     @media only screen and (max-width: 768px){
-	   background-position: -332px -392.5px;
-       height:98px;
-       width:85.5px;
+	   @include dimensionPosition(-664px,-785px,186px,171px,0.5);
 	}
 }
 .icon-careerscape{
-    background-position:-34px -1040px;
-    height:345px;
-    width:269px;
+	@include dimensionPosition(-34px,-1040px,345px,269px,1);
     @media only screen and (max-width: 768px){
-	   background-position: -17px -520px;
-       height:172.5px;
-       width:134.5px;
+	   @include dimensionPosition(-34px,-1040px,345px,269px,0.5);
+	}
+}
+.icon-resumePro{
+	@include dimensionPosition(-335px,-1040px,345px,269px,1);
+    @media only screen and (max-width: 768px){
+	   @include dimensionPosition(-34px,-1040px,345px,269px,0.5);
+	}
+}
+.icon-jobinality{
+	@include dimensionPosition(-635px,-1020px,365px,269px,1);
+    @media only screen and (max-width: 768px){
+	   @include dimensionPosition(-34px,-1040px,345px,269px,0.5);
+	}
+}
+.icon-locallygrown{
+	@include dimensionPosition(-935px,-1040px,345px,269px,1);
+    @media only screen and (max-width: 768px){
+	   @include dimensionPosition(-34px,-1040px,345px,269px,0.5);
 	}
 }
 .icon-button-post{
-    background-position:-464px -541px;
-    height:43px;
-    width:179px;
+	@include dimensionPosition(-464px,-541px,43px,179px,1);
     @media only screen and (max-width: 768px){
-	   background-position: -232px -270.5px;
-       height:21.5px;
-       width:89.5px;
+	@include dimensionPosition(-464px,-541px,43px,179px,0.5);
 	}
 }
 .icon-button-post-large{
-    background-position:-464px -593px;
-    height:43px;
-    width:387px;
+	@include dimensionPosition(-464px,-593px,43px,387px,1);
     @media only screen and (max-width: 768px){
-	   background-position: -232px -296.5px;
-       height:21.5px;
-       width:193.5px;
+	   @include dimensionPosition(-464px,-593px,43px,387px,0.5);
 	}
 }
 .icon-suitcase-job{
-    background-position:-181px -540px;
-    height:57px;
-    width:57px;
+	@include dimensionPosition(-181px,-540px,57px,57px,1);
     @media only screen and (max-width: 768px){
-	   background-position: -90.5px -270px;
-       height:28.5px;
-       width:28.5px;
+		@include dimensionPosition(-181px,-540px,57px,57px,0.5);
 	}
 }
 /*
@@ -1541,6 +1527,12 @@ ICON SAVED
         @include dimensionPosition(-1008px,-583px,126px,102px,0.5);
 	}
 }
+.icon-article-saved-big{
+    @include dimensionPosition(-1008px,-583px,126px,102px,2);
+    @media only screen and (max-width: 768px){
+        @include dimensionPosition(-1008px,-583px,126px,102px,1);
+	}
+}
 .icon-resumePro-saved{
     @include dimensionPosition(-1125px,-588px,117px,101px,1);
     @media only screen and (max-width: 768px){
@@ -1553,10 +1545,22 @@ ICON SAVED
         @include dimensionPosition(-1240px,-583px,126px,101px,0.5);
 	}
 }
+.icon-video-saved-big{
+    @include dimensionPosition(-1240px,-583px,126px,101px,2);
+    @media only screen and (max-width: 768px){
+        @include dimensionPosition(-1240px,-583px,126px,101px,1);
+	}
+}
 .icon-image-saved{
     @include dimensionPosition(-1356px,-583px,126px,101px,1);
     @media only screen and (max-width: 768px){
         @include dimensionPosition(-1356px,-583px,126px,101px,0.5);
+	}
+}
+.icon-image-saved-big{
+    @include dimensionPosition(-1356px,-583px,126px,101px,2);
+    @media only screen and (max-width: 768px){
+        @include dimensionPosition(-1356px,-583px,126px,101px,1);
 	}
 }
 .icon-locallyGrown-saved{

@@ -163,6 +163,12 @@ function HomePageCtr($scope, $http) {
 		$scope.firstConnection = false;
 	}
 	
+	$scope.loadDropdown = function(){
+		$http.get('data/json/dropdown-categories.json').success(function(data) {
+			$scope.dropCategories = data;
+		});
+	}
+	
     /*
     Constructor
     */
@@ -181,6 +187,7 @@ function HomePageCtr($scope, $http) {
             "color":"black"
         }]
         $scope.load('data/json/posts.json');
+		$scope.loadDropdown();
         $scope.$on('$includeContentLoaded', function(){
             initEffect();
         });

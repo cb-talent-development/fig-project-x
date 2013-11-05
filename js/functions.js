@@ -88,6 +88,7 @@ function resizeHandling(){
                 homeScope.computeElements();
             });
         }
+		$('li.movable').hide();
     }
     //if mode three column has to be called but has not already been called
     else if(!checkModeTwoColumns && modeTwoColumns){
@@ -99,6 +100,7 @@ function resizeHandling(){
                 homeScope.computeElements();
             });
         }
+		$('li.movable').show();
     }
 }
 //function that match the category of an article to a class
@@ -115,6 +117,53 @@ function getClassByCategory(article){
         return "pink-1";
     else if(article.Category.css == "coverletters")
         return "orange-3";
+}
+//function that match the category of an article to a class
+function getClassById(id){
+    if(id == "1")
+        return "green-1";
+    else if(id == "2")
+        return "green-2";
+    else if(id == "3")
+        return "green-3";
+    else if(id == "4")
+        return "green-4";
+    else if(id == "5")
+        return "orange-1";
+    else if(id == "6")
+        return "orange-2";
+    else if(id == "7")
+        return "orange-3";
+    else if(id == "8")
+        return "orange-4";
+    else if(id == "9")
+        return "orange-5";
+    else if(id == "10")
+        return "blue-1";
+    else if(id == "11")
+        return "blue-2";
+    else if(id == "12")
+        return "blue-3";
+    else if(id == "13")
+        return "blue-4";
+    else if(id == "14")
+        return "blue-5";
+    else if(id == "15")
+        return "blue-6";
+    else if(id == "16")
+        return "red-1";
+    else if(id == "17")
+        return "red-2";
+    else if(id == "18")
+        return "red-3";
+    else if(id == "19")
+        return "pink-1";
+    else if(id == "20")
+        return "pink-2";
+    else if(id == "21")
+        return "pink-3";
+    else if(id == "22")
+        return "red-4";
 }
 /*
 General search function

@@ -113,6 +113,7 @@ table td {
   .toggleMenu .subMenu, .toggleMenuSimple .subMenu {
     position: absolute;
     left: 0px;
+    width: 100%;
     z-index: 100;
     color: inherit;
     display: none;

@@ -1663,84 +1663,136 @@ OTHER
 TOOLS
 */
 .icon-careerscape-small {
+  background-size: 1500px 1400px;
   background-position: -236px -785px;
   height: 175px;
   width: 171px; }
   @media only screen and (max-width: 768px) {
     .icon-careerscape-small {
-      background-position: -118px -392.5px;
+      background-size: 750px 700px;
+      background-position: -118px -392.50000000000006px;
       height: 87.5px;
       width: 85.5px; } }
 
 .icon-resumePro-small {
+  background-size: 1500px 1400px;
   background-position: -450px -785px;
   height: 177px;
   width: 172px; }
   @media only screen and (max-width: 768px) {
     .icon-resumePro-small {
-      background-position: -125px -392.5px;
-      height: 86px;
-      width: 88.5px; } }
+      background-size: 750px 700px;
+      background-position: -225px -392.50000000000006px;
+      height: 88.5px;
+      width: 86px; } }
 
 .icon-localygrown-small {
+  background-size: 1500px 1400px;
   background-position: -22px -785px;
   height: 177px;
   width: 186px; }
   @media only screen and (max-width: 768px) {
     .icon-localygrown-small {
-      background-position: -11px -392.5px;
+      background-size: 750px 700px;
+      background-position: -11px -392.50000000000006px;
       height: 88.5px;
-      width: 98px; } }
+      width: 93px; } }
 
 .icon-jobinality-small {
+  background-size: 1500px 1400px;
   background-position: -664px -785px;
   height: 186px;
   width: 171px; }
   @media only screen and (max-width: 768px) {
     .icon-jobinality-small {
-      background-position: -332px -392.5px;
-      height: 98px;
+      background-size: 750px 700px;
+      background-position: -332px -392.50000000000006px;
+      height: 93px;
       width: 85.5px; } }
 
 .icon-careerscape {
+  background-size: 1500px 1400px;
   background-position: -34px -1040px;
   height: 345px;
   width: 269px; }
   @media only screen and (max-width: 768px) {
     .icon-careerscape {
+      background-size: 750px 700px;
       background-position: -17px -520px;
-      height: 172.5px;
+      height: 172.50000000000003px;
+      width: 134.5px; } }
+
+.icon-resumePro {
+  background-size: 1500px 1400px;
+  background-position: -335px -1040px;
+  height: 345px;
+  width: 269px; }
+  @media only screen and (max-width: 768px) {
+    .icon-resumePro {
+      background-size: 750px 700px;
+      background-position: -17px -520px;
+      height: 172.50000000000003px;
+      width: 134.5px; } }
+
+.icon-jobinality {
+  background-size: 1500px 1400px;
+  background-position: -635px -1020px;
+  height: 365px;
+  width: 269px; }
+  @media only screen and (max-width: 768px) {
+    .icon-jobinality {
+      background-size: 750px 700px;
+      background-position: -17px -520px;
+      height: 172.50000000000003px;
+      width: 134.5px; } }
+
+.icon-locallygrown {
+  background-size: 1500px 1400px;
+  background-position: -935px -1040px;
+  height: 345px;
+  width: 269px; }
+  @media only screen and (max-width: 768px) {
+    .icon-locallygrown {
+      background-size: 750px 700px;
+      background-position: -17px -520px;
+      height: 172.50000000000003px;
       width: 134.5px; } }
 
 .icon-button-post {
+  background-size: 1500px 1400px;
   background-position: -464px -541px;
   height: 43px;
   width: 179px; }
   @media only screen and (max-width: 768px) {
     .icon-button-post {
+      background-size: 750px 700px;
       background-position: -232px -270.5px;
-      height: 21.5px;
+      height: 21.500000000000004px;
       width: 89.5px; } }
 
 .icon-button-post-large {
+  background-size: 1500px 1400px;
   background-position: -464px -593px;
   height: 43px;
   width: 387px; }
   @media only screen and (max-width: 768px) {
     .icon-button-post-large {
+      background-size: 750px 700px;
       background-position: -232px -296.5px;
-      height: 21.5px;
+      height: 21.500000000000004px;
       width: 193.5px; } }
 
 .icon-suitcase-job {
+  background-size: 1500px 1400px;
   background-position: -181px -540px;
   height: 57px;
   width: 57px; }
   @media only screen and (max-width: 768px) {
     .icon-suitcase-job {
+      background-size: 750px 700px;
       background-position: -90.5px -270px;
-      height: 28.5px;
-      width: 28.5px; } }
+      height: 28.499999999999996px;
+      width: 28.499999999999996px; } }
 
 /*
 ICON SAVED
@@ -1769,6 +1821,18 @@ ICON SAVED
       height: 63px;
       width: 51px; } }
 
+.icon-article-saved-big {
+  background-size: 3000px 2800px;
+  background-position: -2016px -1166px;
+  height: 252px;
+  width: 204px; }
+  @media only screen and (max-width: 768px) {
+    .icon-article-saved-big {
+      background-size: 1500px 1400px;
+      background-position: -1008px -583px;
+      height: 126px;
+      width: 102px; } }
+
 .icon-resumePro-saved {
   background-size: 1500px 1400px;
   background-position: -1125px -588px;
@@ -1793,6 +1857,18 @@ ICON SAVED
       height: 63px;
       width: 50.5px; } }
 
+.icon-video-saved-big {
+  background-size: 3000px 2800px;
+  background-position: -2480px -1166px;
+  height: 252px;
+  width: 202px; }
+  @media only screen and (max-width: 768px) {
+    .icon-video-saved-big {
+      background-size: 1500px 1400px;
+      background-position: -1240px -583px;
+      height: 126px;
+      width: 101px; } }
+
 .icon-image-saved {
   background-size: 1500px 1400px;
   background-position: -1356px -583px;
@@ -1804,6 +1880,18 @@ ICON SAVED
       background-position: -678px -291.5px;
       height: 63px;
       width: 50.5px; } }
+
+.icon-image-saved-big {
+  background-size: 3000px 2800px;
+  background-position: -2712px -1166px;
+  height: 252px;
+  width: 202px; }
+  @media only screen and (max-width: 768px) {
+    .icon-image-saved-big {
+      background-size: 1500px 1400px;
+      background-position: -1356px -583px;
+      height: 126px;
+      width: 101px; } }
 
 .icon-locallyGrown-saved {
   background-size: 1500px 1400px;
