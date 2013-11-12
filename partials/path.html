@@ -5,7 +5,7 @@
                 <span ng-switch on="user">
                         <span ng-switch-when="none">
                             <span class="grey link toggleMenu">Sign Up&nbsp;<i class="icon-bigarrow-bottom-grey"></i>&nbsp;/
-                                <div class="subMenu" ng-include="'partials/home-submenu-offline.html'"></div>
+                                <div class="subMenu offline" ng-include="'partials/home-submenu-offline.html'"></div>
                             </span>
                             <span ng-repeat="path in paths">
                                   <span class="{{path.color}}">{{path.txt}}</span>

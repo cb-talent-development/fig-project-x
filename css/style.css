@@ -1,14 +1,14 @@
 /*check class*/
 .check {
   display: none;
-  width: 100%;
-  height: 6000px;
+  width: 1350px;
+  height: 5652px;
   position: absolute;
   top: 0px;
   left: 0px;
-  z-index: 100;
-  opacity: 0.2;
-  background: url("/info/x_internal_0000_article.png") no-repeat;
+  z-index: 0;
+  opacity: 0.8;
+  background: url("designs/x_0003_profile-v2-signedout-hover.png") no-repeat;
   background-size: 1400px 5652px; }
 
 .article-check {
@@ -108,9 +108,9 @@ table td {
     box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.3);
     -webkit-box-shadow: 0 0px 2px 0px rgba(0, 0, 0, 0.3); }
 
-.toggleMenu, .toggleMenuSimple {
+.toggleMenu, .toggleMenuSimple, .toggleMenuLarge {
   position: relative; }
-  .toggleMenu .subMenu, .toggleMenuSimple .subMenu {
+  .toggleMenu .subMenu, .toggleMenuSimple .subMenu, .toggleMenuLarge .subMenu {
     position: absolute;
     left: 0px;
     width: 100%;

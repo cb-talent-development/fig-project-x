@@ -318,7 +318,7 @@ function toggleEffect(event){
     var subMenu=$(this).find(".subMenu").first();
     if (!subMenu.is(':visible')) {
         subMenu.slideDown(config.timeAnim,function () { 
-            $(this).parent().removeClass("open") }
+            $(this).parent().addClass("open") }
         );
         return false;
     }

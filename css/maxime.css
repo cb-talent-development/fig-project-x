@@ -22,8 +22,8 @@ NAVBAR
   border-top: 1px solid #1d476f;
   -webkit-box-shadow: 0px -1px #000b3d;
   display: none;
-  padding-left: 85px;
-  padding-top: 46px;
+  padding-left: 90px;
+  padding-top: 54px;
   padding-bottom: 50px;
   z-index: 1000; }
   .nav-menu .subMenu .section {
@@ -31,13 +31,14 @@ NAVBAR
     width: 300px;
     height: 140px;
     padding-left: 30px;
-    border-left: 1px dashed #0169cb;
+    border-left: 1px dashed #3147ac;
     font-family: HelveticaCondensed, sans-serif; }
     .nav-menu .subMenu .section h3 {
       margin: 0px;
-      margin-bottom: 35px;
+      margin-bottom: 30px;
       color: #ff7e00;
-      font-size: 1.2em; }
+      font-size: 1.4em;
+      font-family: HelveticaCondensed, sans-serif; }
     .nav-menu .subMenu .section ul {
       margin: 0px;
       padding: 0px; }
@@ -45,6 +46,7 @@ NAVBAR
         list-style-type: none;
         margin: 0px;
         margin-top: 8px;
+        margin-left: 4px;
         padding: 0px; }
         .nav-menu .subMenu .section ul li a {
           color: white;
@@ -79,31 +81,48 @@ HEADER BUTTONS
 .dropdown > li li:nth-child(odd) {
   background-color: #eee; }
 
-.simple li:nth-child(odd) {
-  background-color: #eee; }
-.simple a {
-  color: #888; }
+.dubble.open {
+  width: 369px !important; }
 
-.dubble {
-  position: absolute;
-  width: 217% !important; }
-  .dubble li {
+.dubble.open + div {
+  display: none; }
+
+.toggleMenu:not(.dubble) ul {
+  z-index: 100; }
+  .toggleMenu:not(.dubble) ul li:nth-child(odd) {
+    background-color: #eee; }
+  .toggleMenu:not(.dubble) ul a {
+    color: #888; }
+
+.dubble ul {
+  z-index: 101 !important; }
+  .dubble ul li {
     position: relative;
     width: 50%;
     float: left; }
-    .dubble li b, .dubble li i {
+    .dubble ul li b, .dubble ul li i {
       position: absolute;
       margin-top: -5px;
       right: 15px; }
-  .dubble li:nth-child(4n + 2) {
+  .dubble ul li:nth-child(4n + 2) {
     background-color: #eee; }
-  .dubble li:nth-child(4n + 1) {
+  .dubble ul li:nth-child(4n + 1) {
     background-color: #eee; }
 
 /*
 PROFILE SUBMENU
 */
+.page-header .background-zig {
+  position: absolute;
+  top: 100px;
+  left: -90px;
+  border: 1px solid black; }
+.page-header .icon-triangle-white {
+  position: absolute;
+  top: -15px;
+  left: 30px; }
 .page-header .subMenu {
+  z-index: 999;
   width: 370px;
   left: -127px;
   top: 110px; }
@@ -117,19 +136,35 @@ PROFILE SUBMENU
     .page-header .subMenu .profile-subMenu h2 {
       width: 100%;
       text-align: center;
-      padding-top: 20px;
-      padding-bottom: 10px;
+      padding-top: 10px;
+      padding-bottom: 0px;
       color: black;
-      font-size: 0.8em; }
+      font-size: 0.8em;
+      font-family: HelveticaCondensed, sans-serif; }
     .page-header .subMenu .profile-subMenu p {
       width: 100%;
       text-align: center;
-      font-size: 0.4em;
+      font-size: 0.46em;
       color: #888;
-      margin-bottom: 30px; }
+      margin-bottom: 30px;
+      font-family: HelveticaLightCondensed, sans-serif; }
     .page-header .subMenu .profile-subMenu .button {
       width: 100%;
       margin: 0px; }
+    .page-header .subMenu .profile-subMenu .back-grey {
+      color: black; }
+.page-header .offline {
+  width: 390px !important;
+  left: -135px !important; }
+  .page-header .offline .profile-subMenu h2 {
+    padding-top: 25px;
+    padding-bottom: 20px;
+    font-size: 0.9em; }
+  .page-header .offline .profile-subMenu .border {
+    border-bottom: 1px solid #ccc;
+    margin: 48px -20px;
+    margin-bottom: 41px;
+    width: 390px; }
 
 /*
 HOMEPAGE SCROLLABLE CONTENT
@@ -264,7 +299,7 @@ COLORS
 
 .back-light-blue:hover {
   cursor: pointer;
-  background-color: #09333d !important;
+  background-color: #3bacda !important;
   color: white !important; }
 
 .back-orange {
@@ -285,7 +320,7 @@ COLORS
 
 .back-orange:hover {
   cursor: pointer;
-  background-color: #d65b15 !important;
+  background-color: #e0651f !important;
   color: white !important; }
 
 /*

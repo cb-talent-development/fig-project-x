@@ -813,6 +813,15 @@ STARS
 /*
 Arrow
 */
+
+//Sign up
+.icon-triangle-white{
+	@include dimensionPosition(-279px,-29px,7px,15px,3.0);
+	@media only screen and (max-width: 768px){
+        @include dimensionPosition(-893px,-743px,115px,113px,0.5);
+	}
+}
+
 //green
 @mixin icon-arrow-right{
     width: 8px;

@@ -125,8 +125,8 @@ NAVBAR
 		border-top: 1px solid $lightnavcolor;
 		-webkit-box-shadow:0px -1px $darknavcolor;
 		display: none;
-		padding-left: 85px;
-		padding-top: 46px;
+		padding-left: 90px;
+		padding-top: 54px;
 		padding-bottom: 50px;
 		z-index: 1000;
 		.section{
@@ -134,13 +134,14 @@ NAVBAR
 			width: 300px;
 			height: 140px;
 			padding-left: 30px;
-			border-left: 1px dashed $blue-4;
+			border-left: 1px dashed rgb(49,71,172);
 			font-family: HelveticaCondensed, sans-serif;
 			h3{
 				margin: 0px;
-				margin-bottom: 35px;
+				margin-bottom: 30px;
 				color: $orange-5;
-				font-size: 1.2em;
+				font-size: 1.4em;
+				font-family: HelveticaCondensed, sans-serif;
 			}
 			ul{
 				margin: 0px;
@@ -149,6 +150,7 @@ NAVBAR
 					list-style-type: none;
 					margin: 0px;
 					margin-top: 8px;
+					margin-left: 4px;
 					padding: 0px;
 					a{
 						color: white;
@@ -175,7 +177,7 @@ HEADER BUTTONS
 .dropdown{
 	margin: 0px;
 	padding: 0px;
-	position:absolute;top:42px;
+	position:absolute; top:42px;
 	-webkit-box-shadow:0px 1px 1px rgba(0,0,0,0.2);
 	li{
 		list-style-type: none;
@@ -198,34 +200,45 @@ HEADER BUTTONS
 		background-color: #eee;
 	}
 }
-.simple{
-	li:nth-child(odd){
-		background-color: #eee;
-	}
-	a{
-		color: #888;
+
+.dubble.open{
+	width: 369px !important;
+}
+.dubble.open + div{
+	display: none;
+}
+
+.toggleMenu:not(.dubble){
+	ul{
+		z-index: 100;
+		li:nth-child(odd){
+			background-color: #eee;
+		}
+		a{
+			color: #888;
+		}
 	}
 }
 
 .dubble{
-	position: absolute;
-	width: 217% !important;
-
-	li{
-		position: relative;
-		width: 50%;
-		float:left;
-		b,i{
-			position:absolute;
-			margin-top: -5px;
-			right:15px;
+	ul{
+		z-index: 101 !important;
+		li{
+			position: relative;
+			width: 50%;
+			float:left;
+			b,i{
+				position:absolute;
+				margin-top: -5px;
+				right:15px;
+			}
 		}
-	}
-	li:nth-child(4n + 2){
-		background-color: #eee;
-	}
-	li:nth-child(4n + 1){
-		background-color: #eee;
+		li:nth-child(4n + 2){
+			background-color: #eee;
+		}
+		li:nth-child(4n + 1){
+			background-color: #eee;
+		}
 	}
 }
 
@@ -233,7 +246,19 @@ HEADER BUTTONS
 PROFILE SUBMENU
 */
 .page-header{
+	.background-zig{
+		position: absolute;
+		top: 100px;
+		left: -90px;
+		border: 1px solid black;
+	}
+	.icon-triangle-white{
+		position: absolute;
+		top: -15px;
+		left: 30px;
+	}
 	.subMenu{
+		z-index: 999;
 		width: 370px;
 		left: -127px;
 		top: 110px;
@@ -243,21 +268,43 @@ PROFILE SUBMENU
 			h2{
 				width: 100%;
 				text-align: center;
-				padding-top: 20px;
-				padding-bottom: 10px;
+				padding-top: 10px;
+				padding-bottom: 0px;
 				color: black;
 				font-size: 0.8em;
+				font-family: HelveticaCondensed, sans-serif;
 			}
 			p{
 				width: 100%;
 				text-align: center;
-				font-size: 0.4em;
+				font-size: 0.46em;
 				color: #888;
 				margin-bottom: 30px;
+				font-family: HelveticaLightCondensed, sans-serif;
 			}
 			.button{
 				width: 100%;
 				margin: 0px;
+			}
+			.back-grey{
+				color: black;
+			}
+		}
+	}
+	.offline{
+		width: 390px !important;
+		left: -135px !important;
+		.profile-subMenu{
+			h2{
+				padding-top: 25px;
+				padding-bottom: 20px;
+				font-size: 0.9em;
+			}
+			.border{
+				border-bottom: 1px solid #ccc;
+				margin: 48px -20px;
+				margin-bottom: 41px;
+				width: 390px;
 			}
 		}
 	}
@@ -399,6 +446,7 @@ $dark-blue: rgb(0,31,41);
 
 //Light Blue
 $light-blue: rgb(79,192,238);
+$med-blue: rgb(59,172,218);
 @mixin back-light-blue{
     @include colorCommon;
     background-color:$light-blue !important;color:white;
@@ -411,13 +459,13 @@ $light-blue: rgb(79,192,238);
 }
 .back-light-blue:hover{
     cursor:pointer;
-    background-color:$blue !important;
+    background-color:$med-blue !important;
 	color: white !important;
 }
 
 //Orange
 $orange: rgb(244,121,55);
-$dark-orange: rgb(214,91,21); 
+$dark-orange: rgb(224,101,31); 
 @mixin back-orange{
     @include colorCommon;
     background-color:$orange !important;color:white;

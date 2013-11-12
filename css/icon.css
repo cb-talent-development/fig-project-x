@@ -935,6 +935,18 @@ STARS
 /*
 Arrow
 */
+.icon-triangle-white {
+  background-size: 4500px 4200px;
+  background-position: -837px -87px;
+  height: 21px;
+  width: 45px; }
+  @media only screen and (max-width: 768px) {
+    .icon-triangle-white {
+      background-size: 750px 700px;
+      background-position: -446.5px -371.5px;
+      height: 57.5px;
+      width: 56.5px; } }
+
 .icon-arrow-right-green-1 {
   width: 8px;
   height: 11px;

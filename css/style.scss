@@ -59,15 +59,15 @@ $phone-retina-height:620px;
 $phone-retina-height-small: 450px;
 /*check class*/
 .check{
-    display:none;
-    width:100%;
-    height:6000px;
+	display: none;
+    width:1350px;
+    height:5652px;
     position:absolute;
     top:0px;
     left:0px;
-    z-index:100;
-    opacity:0.2;
-    background: url("/info/x_internal_0000_article.png") no-repeat;
+    z-index:0;
+    opacity:0.8;
+    background: url("designs/x_0003_profile-v2-signedout-hover.png") no-repeat;
     //x_0005_profile-v2-signedout
     //x_internal_0000_article
 	background-size: 1400px 5652px;
@@ -193,7 +193,7 @@ table td{
         -webkit-box-shadow:0 0px 2px 0px rgba(0,0,0,0.3);
     } 
 }
-.toggleMenu,.toggleMenuSimple{
+.toggleMenu,.toggleMenuSimple,.toggleMenuLarge{
     position:relative;
     .subMenu{
         position:absolute;

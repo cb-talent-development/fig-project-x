@@ -1,3 +1,24 @@
+function toggleEffectLarge(event){
+    if(event!=undefined){
+        event.stopPropagation();
+    }
+    // If closed, close the others and open it
+    var subMenu=$(this).find(".subMenu").first();
+    if (!subMenu.is(':visible')) {
+		$(this).addClass("open");
+        subMenu.slideDown(config.timeAnim);
+        return false;
+    }
+	// If already open, close it
+    else {
+        subMenu.slideUp(config.timeAnim, function () { 
+            $(this).parent().removeClass("open") }
+        );
+        // Don't follow the link
+        return false;
+    }
+}
+
 function initMaxime(){
     /*
     Header effect
@@ -22,6 +43,10 @@ function initMaxime(){
 			return false;
 		}
     });
+	
+	var toggleMenuLarge=$(".toggleMenuLarge");
+	toggleMenuLarge.unbind('click');
+	toggleMenuLarge.click(toggleEffectLarge);
 	
 	if(checkIfModeTwoColumns()){
 		$('li.movable').hide();
