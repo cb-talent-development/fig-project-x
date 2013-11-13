@@ -167,7 +167,7 @@ Arrow big
 	}
 }
 .icon-play{
-    background-position:-476 -56px;
+    background-position:-476px -56px;
 	width: 16px;
 	height: 20px;
     margin-top:-10px;
@@ -178,6 +178,26 @@ Arrow big
         margin-left:-4px;
        height: 10px;
 	   background-position: -238px -28px;
+	}
+}
+.icon-play-button-large{
+    background-position:-65px -540px;
+	width: 70px;
+	height: 70px;
+    margin-top:-10px;
+    margin-left:-8px;
+    @media only screen and (max-width: 768px){
+       width: 8px;
+        margin-top:-5px;
+        margin-left:-4px;
+       height: 10px;
+	   background-position: -238px -28px;
+	}
+}
+.icon-image{
+	@include dimensionPosition(-2px, -416px, 40px, 40px, 1.0);
+    @media only screen and (max-width: 768px){
+		@include dimensionPosition(-2px, -416px, 40px, 40px, 0.7);
 	}
 }
 /*

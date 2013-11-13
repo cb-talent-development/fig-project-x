@@ -19,9 +19,22 @@
 </div>
 <div class="background-zig"></div>
     
-<div class="post">
+<div class="post post-{{post.Type}}">
     <h1 class="title">{{post.Headline}}</h1>
-    <div class="img-background">
+    <div class="img-background article-media">
+        <div class="{{post.visibilityPicture}} img" style="background: url('{{post.Media.Url}}') center no-repeat;background-size:90%;" alt=""></div>
+    </div>
+	 <div class="img-background video-media">
+        <div class="{{post.visibilityPicture}} img" style="background: url('{{post.Media.Url}}') center no-repeat;background-size:100%;" alt="">
+			<i class="icon-play-button-large"></i>
+			<div class="video-bar transp-black">
+				<i class="icon-play"></i>
+				<span class="play-bar"><span class="played-bar"></span></span>
+			</div>
+			<i class="icon-image"></i>
+		</div>
+	</div>
+	<div class="img-background image-media">
         <div class="{{post.visibilityPicture}} img" style="background: url('{{post.Media.Url}}') center no-repeat;background-size:90%;" alt=""></div>
     </div>
 	<div class="content">

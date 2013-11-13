@@ -27,7 +27,7 @@ function initMaxime(){
         if(checkIfModeTwoColumns())
 			var subMenu=$('li.movable');
         else
-			var subMenu=$('.nav-menu .subMenu');
+			var subMenu=$('.nav-menu.subMenu');
 		if (!subMenu.is(':visible')) {
 			subMenu.slideDown(config.timeAnim,function () { 
 				$(this).parent().removeClass("open") }

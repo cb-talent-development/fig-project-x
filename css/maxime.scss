@@ -116,24 +116,27 @@ NAVBAR
 */
 
 .nav-menu{
-	.subMenu{
-		position: absolute;
-		top: 61px;
-		left: 0px;
-		width: 100%;
-		background-color: $navcolor;
-		border-top: 1px solid $lightnavcolor;
-		-webkit-box-shadow:0px -1px $darknavcolor;
-		display: none;
-		padding-left: 90px;
+	background-color: $navcolor;
+	width: 100%;
+	position: absolute;
+	z-index: 1000;
+	top: 61px;
+	border-top: 1px solid $lightnavcolor;
+	-webkit-box-shadow:0px -1px $darknavcolor;
+	padding-bottom: 50px;
+	display: none;
+	.content{
+		@media (min-width: 1200px) { width: 1170px;}   
+		@media (max-width: 1200px) and (min-width: 768px) { width: 940px; }
+		@media (max-width: 979px) and (min-width: 768px) { width: 750px;} 
+		margin: 0px auto;
 		padding-top: 54px;
-		padding-bottom: 50px;
-		z-index: 1000;
 		.section{
 			@inline-top;
-			width: 300px;
+			@media (min-width: 1200px) { width: 300px; padding-left: 30px;}   
+			@media (max-width: 1200px) and (min-width: 980px) { width: 240px; padding-left: 20px;}
+			@media (max-width: 979px) and (min-width: 768px) { width: 190px; padding-left: 10px;} 
 			height: 140px;
-			padding-left: 30px;
 			border-left: 1px dashed rgb(49,71,172);
 			font-family: HelveticaCondensed, sans-serif;
 			h3{
@@ -141,6 +144,7 @@ NAVBAR
 				margin-bottom: 30px;
 				color: $orange-5;
 				font-size: 1.4em;
+				@media (max-width: 979px) and (min-width: 768px) { font-size: 1.2em;} 
 				font-family: HelveticaCondensed, sans-serif;
 			}
 			ul{
@@ -155,6 +159,7 @@ NAVBAR
 					a{
 						color: white;
 						font-size: 1.0em;
+						@media (max-width: 979px) and (min-width: 768px) { font-size: 0.8em;} 
 					}
 					a:hover{
 						text-decoration: none;
@@ -165,6 +170,11 @@ NAVBAR
 					margin-top: 0px;
 				}
 			}
+		}
+		.section:last-child{
+			@media (min-width: 1200px) { width:270px; }   
+			@media (max-width: 1200px) and (min-width: 980px) { width: 220px;}
+			@media (max-width: 979px) and (min-width: 768px) { width: 180px;} 
 		}
 	}
 }
