@@ -1738,7 +1738,7 @@ POST CSS
         @include full-size-phone;
     }
     .complement{
-        width:31.5%;
+        width:30%;
         float:right;
         @include full-size-phone;
         .social,.rating,.comments{
@@ -1748,11 +1748,11 @@ POST CSS
         }
         .social{
             height:90px;margin-bottom:30px;padding-top:23px;
-            padding-bottom:23px;padding-left:18px;
+            padding-bottom:23px;padding-left:15px;
             .icon-social{
                 @include inline-top;
                // height:40px;width:40px;background-color:blue;border-radius:30px;
-                margin-right:12px;
+                margin-right:10px;
             }
             .icon-social:hover{
                 cursor:pointer;
@@ -2011,8 +2011,21 @@ POST CSS
 	}
 }
 .post-image{
-	.article-media,.image-media{
+	.article-media,.video-media{
 		display: none;
+	}
+	.img-background{
+        width:65.6%;
+		.icon-image{
+			position: absolute;
+			top: 10px;
+			right: 10px;
+		}
+    }
+	.complement{
+		position: absolute;
+		left: 65%;
+		width:26.6% !important;
 	}
 }
 

@@ -1,55 +1,48 @@
-<span ng-switch on="firstConnection">
-	<!-- Variable "firstConnection in Home Controller -->
-	<span ng-switch-default>
-		<div ng-include="'partials/first-connect.html'"></div>
-	</span>
-	<span id="header" ng-switch-when="false">
-		<div ng-include="'partials/path.html'"></div>
-		<div class="menu-buttons">
-				<div class="button home toggleMenu"><span>Most Recent <b class="icon-bigarrow-bottom-grey grey-icon"></b></span>
-					<ul class="subMenu dropdown">
-						<li><a href="#" title="Most Popular">Most Popular</a></li>
-					</ul>
-				</div>
-				<div class="button home toggleMenu"><span>All Content <b class="icon-bigarrow-bottom-grey grey-icon"></b></span>
-					<ul class="subMenu dropdown">
-						<li><a href="#" title="Articles">Articles</a></li>
-						<li><a href="#" title="Infographics">Infographics</a></li>
-						<li><a href="#" title="Videos">Videos</a></li>
-					</ul>
-				</div>
-				<div class="button home toggleMenuLarge dubble"><span>All Categories <b class="icon-bigarrow-bottom-grey grey-icon"></b></span>
-					<ul class="subMenu dropdown">
-						<li ng-repeat="cat in dropCategories">
-							<a href="#" class="{{ cat.Class }}" title="{{ cat.Title }}">{{ cat.Title | uppercase }} <b class="icon-arrow-right-{{ cat.Class }}"></b></a>
-						</li>
-					</ul>
-				</div>
-				<div class="button home toggleMenu"><span>Filter By Industry <b class="icon-bigarrow-bottom-grey grey-icon"></b></span>
-					<ul class="subMenu dropdown">
-						<li><a href="#" title="Some text">Some text</a></li>
-						<li><a href="#" title="Some text">Some text</a></li>
-						<li><a href="#" title="Some text">Some text</a></li>
-					</ul>
-				</div>
-				<div class="button home toggleMenu"><span>Job Phase<b class="icon-bigarrow-bottom-grey grey-icon"></b></span>
-					<ul class="subMenu dropdown">
-						<li><a href="#" title="Some text"><b class="icon-search-people"></b>Discovery</a></li>
-						<li><a href="#" title="Some text"><b class="icon-check-red"></b>Get the Job</a></li>
-						<li><a href="#" title="Some text"><b class="icon-twin-blue"></b>Find the Job</a></li>
-						<li><a href="#" title="Some text"><b class="icon-suitcase-green"></b>On the Job</a></li>
-						<li><a href="#" title="Some text"><b class="icon-question"></b>What is this?</a></li>
-					</ul>        
-				</div>
-				<div class="input-button home last">
-					<form onsubmit="search($('#search-input'))">
-						<input id="search-input" placeholder="Search">
-					</form>
-					<i onclick="search($('#search-input'))" class="icon-search"></i>
-				</div>
+<div ng-include="'partials/first-connect.html'"></div>
+<div id="header" ng-include="'partials/path.html'"></div>
+<div class="menu-buttons">
+		<div class="button home toggleMenu"><span>Most Recent <b class="icon-bigarrow-bottom-grey grey-icon"></b></span>
+			<ul class="subMenu dropdown">
+				<li><a href="#" title="Most Popular">Most Popular</a></li>
+			</ul>
 		</div>
-	</span>
-</span>
+		<div class="button home toggleMenu"><span>All Content <b class="icon-bigarrow-bottom-grey grey-icon"></b></span>
+			<ul class="subMenu dropdown">
+				<li><a href="#" title="Articles">Articles</a></li>
+				<li><a href="#" title="Infographics">Infographics</a></li>
+				<li><a href="#" title="Videos">Videos</a></li>
+			</ul>
+		</div>
+		<div class="button home toggleMenuLarge dubble"><span>All Categories <b class="icon-bigarrow-bottom-grey grey-icon"></b></span>
+			<ul class="subMenu dropdown">
+				<li ng-repeat="cat in dropCategories">
+					<a href="#" class="{{ cat.Class }}" title="{{ cat.Title }}">{{ cat.Title | uppercase }} <b class="icon-arrow-right-{{ cat.Class }}"></b></a>
+				</li>
+			</ul>
+		</div>
+		<div class="button home toggleMenu"><span>Filter By Industry <b class="icon-bigarrow-bottom-grey grey-icon"></b></span>
+			<ul class="subMenu dropdown">
+				<li><a href="#" title="Some text">Some text</a></li>
+				<li><a href="#" title="Some text">Some text</a></li>
+				<li><a href="#" title="Some text">Some text</a></li>
+			</ul>
+		</div>
+		<div class="button home toggleMenu"><span>Job Phase<b class="icon-bigarrow-bottom-grey grey-icon"></b></span>
+			<ul class="subMenu dropdown">
+				<li><a href="#" title="Some text"><b class="icon-search-people"></b>Discovery</a></li>
+				<li><a href="#" title="Some text"><b class="icon-check-red"></b>Get the Job</a></li>
+				<li><a href="#" title="Some text"><b class="icon-twin-blue"></b>Find the Job</a></li>
+				<li><a href="#" title="Some text"><b class="icon-suitcase-green"></b>On the Job</a></li>
+				<li><a href="#" title="Some text"><b class="icon-question"></b>What is this?</a></li>
+			</ul>        
+		</div>
+		<div class="input-button home last">
+			<form onsubmit="search($('#search-input'))">
+				<input id="search-input" placeholder="Search">
+			</form>
+			<i onclick="search($('#search-input'))" class="icon-search"></i>
+		</div>
+</div>
 <div class="background-zig"></div>
 
 

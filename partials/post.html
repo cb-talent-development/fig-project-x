@@ -18,25 +18,35 @@
 		</div>
 </div>
 <div class="background-zig"></div>
-    
-<div class="post post-{{post.Type}}">
+
+<!--Select class from article type (video/image/article) -->
+<div class="post post-{{post.Type}}"> 
     <h1 class="title">{{post.Headline}}</h1>
+	<!--Disabled if type is video or image -->
     <div class="img-background article-media">
         <div class="{{post.visibilityPicture}} img" style="background: url('{{post.Media.Url}}') center no-repeat;background-size:90%;" alt=""></div>
     </div>
+	<!--Disabled if type is article or image -->
 	 <div class="img-background video-media">
         <div class="{{post.visibilityPicture}} img" style="background: url('{{post.Media.Url}}') center no-repeat;background-size:100%;" alt="">
 			<i class="icon-play-button-large"></i>
+			<!-- Video bar with play/pause button and progress bar -->
 			<div class="video-bar transp-black">
+				<!-- play/pause button -->
 				<i class="icon-play"></i>
+				<!-- progress bar -->
 				<span class="play-bar"><span class="played-bar"></span></span>
 			</div>
 			<i class="icon-image"></i>
 		</div>
 	</div>
-	<div class="img-background image-media">
-        <div class="{{post.visibilityPicture}} img" style="background: url('{{post.Media.Url}}') center no-repeat;background-size:90%;" alt=""></div>
+	<!--Disabled if type is article or video -->
+	<div class="img-background image-media infographic">
+        <div class="{{post.visibilityPicture}} img" style="background: url('{{post.Media.Url}}') center no-repeat;background-size:90%;" alt="">
+			<i class="icon-image"></i>
+		</div>
     </div>
+	<!--Text content -->
 	<div class="content">
         <div class="intro">{{post.ShortDescription}}</div>
         <div class="body" ng-bind-html-unsafe="post.BodyHtml"></div>

@@ -2561,7 +2561,7 @@ POST CSS
       .post .title {
         width: 100%; } }
   .post .complement {
-    width: 31.5%;
+    width: 30%;
     float: right; }
     @media only screen and (max-width: 768px) {
       .post .complement {
@@ -2578,11 +2578,11 @@ POST CSS
       margin-bottom: 30px;
       padding-top: 23px;
       padding-bottom: 23px;
-      padding-left: 18px; }
+      padding-left: 15px; }
       .post .complement .social .icon-social {
         display: inline-block;
         vertical-align: top;
-        margin-right: 12px; }
+        margin-right: 10px; }
       .post .complement .social .icon-social:hover {
         cursor: pointer;
         box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
@@ -2794,8 +2794,18 @@ POST CSS
     right: 10px;
     bottom: 10px; }
 
-.post-image .article-media, .post-image .image-media {
+.post-image .article-media, .post-image .video-media {
   display: none; }
+.post-image .img-background {
+  width: 65.6%; }
+  .post-image .img-background .icon-image {
+    position: absolute;
+    top: 10px;
+    right: 10px; }
+.post-image .complement {
+  position: absolute;
+  left: 65%;
+  width: 26.6% !important; }
 
 /*
 Tools dashboard & tool css
