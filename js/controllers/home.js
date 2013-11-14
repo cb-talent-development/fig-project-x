@@ -158,15 +158,6 @@ function HomePageCtr($scope, $http) {
         console.log("-> action <-");
         alert("here drop down Max! (console for line number)");
     }
-	$scope.changeConnectValue = function(){
-		$('.menu-buttons').slideDown('normal');
-		$('#header').slideDown('normal');
-	}
-	$scope.closeFirstConnect= function(){
-		$('.first-connect').slideUp('normal', function(){
-			$scope.changeConnectValue()
-		});
-	}
 	
 	$scope.loadDropdown = function(){
 		$http.get('data/json/dropdown-categories.json').success(function(data) {
@@ -177,13 +168,6 @@ function HomePageCtr($scope, $http) {
 				$scope.dropCategories[i] = cat;	
 			}
 		});
-	}
-	
-	$scope.hideHeader = function() {
-		if($scope.firstConnection){
-			$('.menu-buttons').hide();
-			$('#header').hide();
-		}
 	}
 	
     /*
@@ -209,7 +193,6 @@ function HomePageCtr($scope, $http) {
             initEffect();
         });
 		$scope.firstConnection = true;
-		$scope.hideHeader();
     }
     $scope.init();    
 };

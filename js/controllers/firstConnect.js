@@ -1,7 +1,5 @@
 function FirstConnectCtr($scope, $http ,pagination) {
-	/*
-    Page Click
-    */
+
     $scope.pageClick=function(page,class_element){
         if(!lock){
             var pages = $scope.pageFirstConnect;
@@ -13,9 +11,6 @@ function FirstConnectCtr($scope, $http ,pagination) {
             else{}
         }
     }
-    /*
-    Job for You
-    */
     $scope.loadPages=function(){
         $http.get("data/json/first-connect.json").success(function(data) {
            // Job recommandation
@@ -27,6 +22,33 @@ function FirstConnectCtr($scope, $http ,pagination) {
             $scope.pageFirstConnect.computePages();
 	   });
     }
+	$scope.showHeader= function(){
+		$('.menu-buttons').slideDown('normal');
+		$('#header').slideDown('normal');
+	}
+	$scope.hideHeader= function(){
+		$('.menu-buttons').hide();
+		$('#header').hide();
+	}
 	
+	$scope.closeFirstConnect= function(){
+		$('.first-connect').fadeOut('normal','linear', function(){
+			$scope.showHeader();
+		});
+	}
+	$scope.hideFirstConnect= function(){
+		$('.first-connect').hide();
+	}
+	
+	$scope.chooseHeader = function() {
+		if($scope.firstConnection && !checkIfModeTwoColumns()){
+			$scope.hideHeader();
+		}
+		else{
+			$scope.hideFirstConnect();
+		}
+	}
+	
+	$scope.chooseHeader();
 	$scope.loadPages();
 };

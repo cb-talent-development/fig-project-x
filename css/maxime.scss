@@ -94,6 +94,18 @@ $phone-retina-height-small: 450px;
     -webkit-box-shadow: $left $bottom $spread $thickness rgba(0,0,0,$opacity);
 }
 
+
+.visible-xs{
+	@media (min-width: 768px){
+		display: none;
+	}
+}
+.hidden-xs{
+	@media (max-width: 767px){
+		display: none;
+	}
+}
+
 /*
 END-REDONDANCE
 */

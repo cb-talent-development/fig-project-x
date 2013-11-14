@@ -532,65 +532,101 @@ Header css
         display:none;
     }
 }
-.navbar{
-    margin:0px;
-    z-index:1000;
+
+.navbar.hidden-xs{
 	background-color: $navcolor;
-	@media only screen and (min-width:769px){
-		height: 60px;
-	}
 	ul{
-		margin: 0px;
-		padding: 0px;
 		li{
 			padding: 6px 8px;
-			@media only screen and (max-width: 768px){
-				padding: 0px;
-				margin: 0px;
-			}
 			a{
-				color: #fff;
 				font-size: 1.6em;
 				text-align: center;
-				@media only screen and (max-width: 768px){
-					text-align: left;
-					font-size: 1.3em;
-				}
 			}
 			span{
 				color: #fff;
 				font-size: 1.6em;
 			}
-			a:hover{
-				color:rgba(255,255,255,0.8);
-			}
 		}
-		li.movable{
-			@media only screen and (max-width:768px){
-				border-top: solid 1px #083E7A;
-			}
-		}
-		li.br{
-			padding: 8px 15px;
-			margin-right: 5px;
-			height: 60px;
-			background-color: rgb(2,39,69);
-			#menu-button{
-				float: right;
-			}
+	}
+	.br{
+		padding: 8px 15px;
+		margin-right: 5px;
+		height: 60px;
+		background-color: rgb(2,39,69);
+		#menu-button{
+			float: right;
 		}
 	}
 	span#menu-button{
-		position:absolute;
 		top: 20px;
 		right: 75px;
-		@media only screen and (max-width: 768px){
-			right: 10px;
-		}
 	}
     .icon-career{
         margin-top:7px;
     }
+}
+
+.navbar.visible-xs{
+	background-color: rgb(2,39,69);
+	.br{
+		span{
+			position: absolute;
+			top: 10px;
+			right: 10px;
+		}
+	}
+	span#menu-button{
+		top: 16px;
+		left: 10px;
+	}
+	ul{
+		position: absolute;
+		top: 50px;
+		left: 0px;
+		z-index: 1000;
+		width: 100%;
+		background-color: rgb(2,39,69);
+	}
+	li{
+		width: 100%;
+		padding: 10px 45px;
+		list-style-type: none;
+		border-top: 1px solid $navcolor;
+		a{
+			font-size: 1.3em;
+			text-align: left;
+		}
+	}
+	li.inner{
+		padding: 15px 30px;
+	}
+	li:not(.default){
+		display: none;
+	}
+}
+
+.navbar{
+    margin:0px;
+    z-index:1000;
+	@media only screen and (min-width:769px){
+		height: 60px;
+	}
+	span#menu-button{
+		position:absolute;
+	}
+	ul{
+		margin: 0px;
+		padding: 0px;
+	}
+	li{
+		a{
+			color: #fff;
+		}
+		a:hover{
+			color:rgba(255,255,255,0.8);
+			text-decoration: none;
+		}
+	}
 }
 /*
 Home css

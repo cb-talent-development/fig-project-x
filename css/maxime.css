@@ -1,6 +1,14 @@
 /*
 REDONDANCE
 */
+@media (min-width: 768px) {
+  .visible-xs {
+    display: none; } }
+
+@media (max-width: 767px) {
+  .hidden-xs {
+    display: none; } }
+
 /*
 END-REDONDANCE
 */

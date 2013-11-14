@@ -1487,14 +1487,16 @@ OTHER
       width: 20px; } }
 
 .icon-menu-white {
+  background-size: 1500px 1400px;
   background-position: -55px -427px;
   height: 19px;
   width: 31px; }
   @media only screen and (max-width: 768px) {
     .icon-menu-white {
-      background-position: -27.5px -213.5px;
-      height: 10x;
-      width: 16px; } }
+      background-size: 1050px 979.9999999999999px;
+      background-position: -38.5px -298.9px;
+      height: 17.5px;
+      width: 21.7px; } }
 
 .icon-menu-orange {
   background-position: -101px -427px;

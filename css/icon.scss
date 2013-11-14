@@ -1259,13 +1259,9 @@ OTHER
 	}
 }
 .icon-menu-white{
-    background-position:-55px -427px;
-    height:19px;
-    width:31px;
+	@include dimensionPosition(-55px, -427px, 19px, 31px, 1.0);
     @media only screen and (max-width: 768px){
-	   background-position: -27.5px -213.5px;
-       height:10x;
-       width:16px;
+	   @include dimensionPosition(-55px, -427px, 25px, 31px, 0.7);
 	}
 }
 .icon-menu-orange{

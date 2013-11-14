@@ -323,54 +323,74 @@ Header css
     .page-header {
       display: none; } }
 
+.navbar.hidden-xs {
+  background-color: #09335b; }
+  .navbar.hidden-xs ul li {
+    padding: 6px 8px; }
+    .navbar.hidden-xs ul li a {
+      font-size: 1.6em;
+      text-align: center; }
+    .navbar.hidden-xs ul li span {
+      color: #fff;
+      font-size: 1.6em; }
+  .navbar.hidden-xs .br {
+    padding: 8px 15px;
+    margin-right: 5px;
+    height: 60px;
+    background-color: #022745; }
+    .navbar.hidden-xs .br #menu-button {
+      float: right; }
+  .navbar.hidden-xs span#menu-button {
+    top: 20px;
+    right: 75px; }
+  .navbar.hidden-xs .icon-career {
+    margin-top: 7px; }
+
+.navbar.visible-xs {
+  background-color: #022745; }
+  .navbar.visible-xs .br span {
+    position: absolute;
+    top: 10px;
+    right: 10px; }
+  .navbar.visible-xs span#menu-button {
+    top: 16px;
+    left: 10px; }
+  .navbar.visible-xs ul {
+    position: absolute;
+    top: 50px;
+    left: 0px;
+    z-index: 1000;
+    width: 100%;
+    background-color: #022745; }
+  .navbar.visible-xs li {
+    width: 100%;
+    padding: 10px 45px;
+    list-style-type: none;
+    border-top: 1px solid #09335b; }
+    .navbar.visible-xs li a {
+      font-size: 1.3em;
+      text-align: left; }
+  .navbar.visible-xs li.inner {
+    padding: 15px 30px; }
+  .navbar.visible-xs li:not(.default) {
+    display: none; }
+
 .navbar {
   margin: 0px;
-  z-index: 1000;
-  background-color: #09335b; }
+  z-index: 1000; }
   @media only screen and (min-width: 769px) {
     .navbar {
       height: 60px; } }
+  .navbar span#menu-button {
+    position: absolute; }
   .navbar ul {
     margin: 0px;
     padding: 0px; }
-    .navbar ul li {
-      padding: 6px 8px; }
-      @media only screen and (max-width: 768px) {
-        .navbar ul li {
-          padding: 0px;
-          margin: 0px; } }
-      .navbar ul li a {
-        color: #fff;
-        font-size: 1.6em;
-        text-align: center; }
-        @media only screen and (max-width: 768px) {
-          .navbar ul li a {
-            text-align: left;
-            font-size: 1.3em; } }
-      .navbar ul li span {
-        color: #fff;
-        font-size: 1.6em; }
-      .navbar ul li a:hover {
-        color: rgba(255, 255, 255, 0.8); }
-    @media only screen and (max-width: 768px) {
-      .navbar ul li.movable {
-        border-top: solid 1px #083E7A; } }
-    .navbar ul li.br {
-      padding: 8px 15px;
-      margin-right: 5px;
-      height: 60px;
-      background-color: #022745; }
-      .navbar ul li.br #menu-button {
-        float: right; }
-  .navbar span#menu-button {
-    position: absolute;
-    top: 20px;
-    right: 75px; }
-    @media only screen and (max-width: 768px) {
-      .navbar span#menu-button {
-        right: 10px; } }
-  .navbar .icon-career {
-    margin-top: 7px; }
+  .navbar li a {
+    color: #fff; }
+  .navbar li a:hover {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none; }
 
 /*
 Home css
