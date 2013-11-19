@@ -85,8 +85,14 @@ General CSS
     width:$total-width;
     display:block;
     margin:auto;
-    @media only screen and (max-width: 768px){
-        width:97%;
+	@media only screen and (max-width: 1200px) and (min-width: 980px){
+        width:975px;
+    }
+	@media only screen and (max-width: 979px) and (min-width: 768px){
+        width:765px;
+    }
+    @media only screen and (max-width: 767px){
+        width:95%;
     }
 }
 @mixin webkit-box{
@@ -528,9 +534,6 @@ Header css
 		border: 2px solid white;
 		margin-right: 15px;
 	}
-    @media only screen and (max-width:768px){
-        display:none;
-    }
 }
 
 .navbar.hidden-xs{
@@ -823,6 +826,11 @@ Menu with multiple button
             right:-25px;
             top:0px;
         }
+		@media (max-width: 767px){
+			margin-right:5px;
+			width:200px;
+			height:35px;
+		}
     }
     .person{
         width:33.3%;
@@ -830,18 +838,17 @@ Menu with multiple button
             position:absolute;
             left:0px;top:0.5px;
             width:42px;
-            height:41.5px;
+            height:33.5px;
         }
         .name{
-            margin-left:46px;
+            margin-left:35px;
         }
+		@media (max-width: 767px){
+			width:220px;
+		}
     }
 }
-.menu-buttons,.background-zig{
-    @media only screen and (max-width:768px){
-        display:none;
-    }
-}
+
 /*
 End buttons
 */
@@ -1772,6 +1779,21 @@ POST CSS
         min-width:240px;
         margin-left:0px;
         @include full-size-phone;
+		@media (max-width: 1200px) and (min-width: 980px){
+			font-size: 80px;
+			line-height:80px;
+			margin-top:40px;margin-bottom:30px;
+		}
+		@media (max-width: 979px) and (min-width: 768px){
+			font-size: 65px;
+			line-height:65px;
+			margin-top:25px;margin-bottom:20px;
+		}
+		@media (max-width: 767px){
+			font-size: 30px;
+			line-height:30px;
+			margin-top:15px;margin-bottom:15px;
+		}
     }
     .complement{
         width:30%;
@@ -1782,24 +1804,80 @@ POST CSS
             display:block;
             width:100%;
         }
+		.social,.rating{
+			@media (max-width: 767px){
+				width:48%;
+				float:left;
+			}
+		}
         .social{
             height:90px;margin-bottom:30px;padding-top:23px;
-            padding-bottom:23px;padding-left:15px;
+            padding-bottom:23px;padding-left:5px;padding-right: 5px;
+			text-align: center;
+			@media (max-width: 1200px) and (min-width: 980px){
+				height:70px;padding-top:15px;
+				padding-bottom:15.5px;
+			}
+			@media (max-width: 979px) and (min-width: 768px){
+				height:50px;padding-top:13.5px;
+				padding-bottom:12.5px;
+			}
+			@media (max-width: 767px){
+				height:75px;margin-bottom:45px;padding-top:23px;
+				padding-bottom:23px;
+				margin-right: 4%;
+			}
+			@media (max-width: 480px){
+				height:37.5px;margin-bottom:22.5px;padding-top:12px;
+				padding-bottom:12px;
+			}
             .icon-social{
                 @include inline-top;
                // height:40px;width:40px;background-color:blue;border-radius:30px;
                 margin-right:10px;
+				@media (max-width: 1200px){
+					margin-right:5px;
+				}
+				@media (max-width: 979px){
+					margin-right:5px;
+				}
+				@media (max-width: 767px){
+					margin-right:10px;
+				}
+				@media (max-width: 479px){
+					margin-right:2px;
+				}
             }
             .icon-social:hover{
                 cursor:pointer;
                 @include shadow-effect;
-                
             }
             .icon-save{
-                margin-right:3px;
+                margin-right:2px;
             }
-            .icone-bar{
+            .icon-bar-grey{
                 margin-top:8px;
+				margin-left:5px;
+				margin-right:8px;
+				@media (max-width: 1200px){
+					margin-top:7px;
+					margin-right:5px;
+				}
+				@media (max-width: 979px){
+					margin-top:0px;
+					margin-right:5px;
+				}
+				@media (max-width: 767px){
+					margin-top:7px;
+					margin-right:15px;
+					margin-left:6px;
+					margin-right:8px;
+				}
+				@media (max-width: 479px){
+					margin-top:1px;
+					margin-left:2px;
+					margin-right:4px;
+				}
             }
         }
         .rating{
@@ -1808,8 +1886,24 @@ POST CSS
             text-align:center;
             margin-bottom:30px;
             .icon{
-                margin:0px 4px;
+                margin:0px 5px;
             }
+			@media (max-width: 1200px) and (min-width: 980px){
+				height:70px;padding-top:15px;
+				padding-bottom:15.5px;
+			}
+			@media (max-width: 979px) and (min-width: 768px){
+				height:50px;padding-top:13.5px;
+				padding-bottom:12.5px;
+			}
+			@media (max-width: 767px){
+				height:75px;margin-bottom:5px;padding-top:20px;
+				padding-bottom:14px;
+			}
+			@media (max-width: 480px){
+				height:37.5px;margin-bottom:5px;padding-top:9px;
+				padding-bottom:9px;
+			}
         }
         .comments{
             min-height:40px;margin-bottom:0px;
@@ -1825,6 +1919,22 @@ POST CSS
             width:100%;
             height:100%;
         }
+		@media (max-width: 1200px) and (min-width: 980px){
+			height:450px;
+			margin-bottom:40px;
+		}
+		@media (max-width: 979px) and (min-width: 768px){
+			height:400px;
+			margin-bottom:33px;
+		}
+		@media (max-width: 767px){
+			height:300px;
+			margin-bottom:20px;
+		}
+		@media (max-width: 480px){
+			height:200px;
+			margin-bottom:10px;
+		}
     }
     .infographic,.content{
         width:65.6%;
@@ -1832,11 +1942,28 @@ POST CSS
     }
     .content{
         float:left;
+		padding: 0 10px;
         .intro{
             font-size:27px;
             line-height:36px;
             text-transform:uppercase;
             padding-bottom:3px;
+			@media (max-width: 1200px) and (min-width: 980px){
+				font-size:25px;
+				line-height:33px;
+			}
+			@media (max-width: 979px) and (min-width: 768px){
+				font-size:22px;
+				line-height:30px;
+			}
+			@media (max-width: 767px){
+				font-size:17px;
+				line-height:27px;
+			}
+			@media (max-width: 480px){
+				font-size:15px;
+				line-height:25px;
+			}
         }
         .hightlight{
             background-color:yellow;
@@ -1850,6 +1977,22 @@ POST CSS
         h3{
             margin-top:30px;margin-bottom:15px;
             font-size:18px;
+			@media (max-width: 1200px) and (min-width: 980px){
+				margin-top:25px;margin-bottom:13px;
+				font-size:17px;
+			}
+			@media (max-width: 979px) and (min-width: 768px){
+				margin-top:20px;margin-bottom:10px;
+				font-size:16px;
+			}
+			@media (max-width: 767px){
+				margin-top:15px;margin-bottom:8px;
+				font-size:15px;
+			}
+			@media (max-width: 480px){
+				margin-top:12px;margin-bottom:6px;
+				font-size:14px;
+			}
         }
         p{
             font-size:18px;
@@ -1857,6 +2000,30 @@ POST CSS
             margin:0px;
             padding-top:11px;
             padding-bottom:16px;
+			@media (max-width: 1200px) and (min-width: 980px){
+				font-size:17px;
+				line-height:23px;
+				padding-top:10px;
+				padding-bottom:15px;
+			}
+			@media (max-width: 979px) and (min-width: 768px){
+				font-size:16px;
+				line-height:21px;
+				padding-top:9px;
+				padding-bottom:13px;
+			}
+			@media (max-width: 767px){
+				font-size:14px;
+				line-height:19px;
+				padding-top:8px;
+				padding-bottom:12px;
+			}
+			@media (max-width: 480px){
+				font-size:13px;
+				line-height:17px;
+				padding-top:7px;
+				padding-bottom:10px;
+			}
         }
     }
     /*
@@ -1864,6 +2031,15 @@ POST CSS
     */
     .comments{
         .new-comment{
+			@media(max-width: 1200px) and (min-width: 980px){
+				font-size: 13px;
+			}
+			@media(max-width: 979px) and (min-width: 768px){
+				font-size: 12px;
+			}
+			@media(max-width: 479px){
+				font-size: 12px;
+			}
             padding:20px;
             position:relative;
             border-bottom:1px solid $lightGrey;
@@ -1894,6 +2070,27 @@ POST CSS
                     line-height:40px;height:40px;padding-left:10px;
                     top:0px;left:0px;width:100%;
                 }
+				@media(max-width: 1200px) and (min-width: 980px){
+					width: 220px;
+					input{
+						height:24px;
+						padding:3px;
+					}
+				}
+				@media(max-width: 979px) and (min-width: 768px){
+					width: 200px;
+					input{
+						height:20px;
+						padding: 4px;
+					}
+				}
+				@media(max-width: 479px){
+					width: 240px;
+					input{
+						height:20px;
+						padding: 4px;
+					}
+				}
             }
         }
         .comments-list{

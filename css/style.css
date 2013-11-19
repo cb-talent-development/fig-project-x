@@ -38,9 +38,15 @@ General CSS
   width: 1170px;
   display: block;
   margin: auto; }
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 1200px) and (min-width: 980px) {
     .main-container {
-      width: 97%; } }
+      width: 975px; } }
+  @media only screen and (max-width: 979px) and (min-width: 768px) {
+    .main-container {
+      width: 765px; } }
+  @media only screen and (max-width: 767px) {
+    .main-container {
+      width: 95%; } }
 
 .link {
   position: relative; }
@@ -319,9 +325,6 @@ Header css
     -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
     border: 2px solid white;
     margin-right: 15px; }
-  @media only screen and (max-width: 768px) {
-    .page-header {
-      display: none; } }
 
 .navbar.hidden-xs {
   background-color: #09335b; }
@@ -555,9 +558,15 @@ Menu with multiple button
   width: 1170px;
   display: block;
   margin: auto; }
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 1200px) and (min-width: 980px) {
     .menu-buttons {
-      width: 97%; } }
+      width: 975px; } }
+  @media only screen and (max-width: 979px) and (min-width: 768px) {
+    .menu-buttons {
+      width: 765px; } }
+  @media only screen and (max-width: 767px) {
+    .menu-buttons {
+      width: 95%; } }
   .menu-buttons .search-button {
     float: right; }
   .menu-buttons .home {
@@ -580,6 +589,11 @@ Menu with multiple button
       position: absolute;
       right: -25px;
       top: 0px; }
+    @media (max-width: 767px) {
+      .menu-buttons .element, .menu-buttons .person {
+        margin-right: 5px;
+        width: 200px;
+        height: 35px; } }
   .menu-buttons .person {
     width: 33.3%; }
     .menu-buttons .person .picture {
@@ -587,13 +601,12 @@ Menu with multiple button
       left: 0px;
       top: 0.5px;
       width: 42px;
-      height: 41.5px; }
+      height: 33.5px; }
     .menu-buttons .person .name {
-      margin-left: 46px; }
-
-@media only screen and (max-width: 768px) {
-  .menu-buttons, .background-zig {
-    display: none; } }
+      margin-left: 35px; }
+    @media (max-width: 767px) {
+      .menu-buttons .person {
+        width: 220px; } }
 
 /*
 End buttons
@@ -2452,9 +2465,15 @@ Load More button
   margin-top: 30px;
   margin-bottom: 55px;
   text-align: center; }
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 1200px) and (min-width: 980px) {
     .load-more {
-      width: 97%; } }
+      width: 975px; } }
+  @media only screen and (max-width: 979px) and (min-width: 768px) {
+    .load-more {
+      width: 765px; } }
+  @media only screen and (max-width: 767px) {
+    .load-more {
+      width: 95%; } }
   .load-more i.left {
     margin-top: -4px;
     position: absolute;
@@ -2529,9 +2548,15 @@ Related
   text-transform: uppercase;
   margin-top: 50px;
   margin-bottom: 50px; }
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 1200px) and (min-width: 980px) {
     .related h2.related-title {
-      width: 97%; } }
+      width: 975px; } }
+  @media only screen and (max-width: 979px) and (min-width: 768px) {
+    .related h2.related-title {
+      width: 765px; } }
+  @media only screen and (max-width: 767px) {
+    .related h2.related-title {
+      width: 95%; } }
 .related .related-container {
   margin-top: 5px;
   margin-bottom: 50px; }
@@ -2566,9 +2591,15 @@ POST CSS
   /*
   Comment-section
   */ }
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 1200px) and (min-width: 980px) {
     .post {
-      width: 97%; } }
+      width: 975px; } }
+  @media only screen and (max-width: 979px) and (min-width: 768px) {
+    .post {
+      width: 765px; } }
+  @media only screen and (max-width: 767px) {
+    .post {
+      width: 95%; } }
   .post .title {
     font-size: 90px;
     margin-top: 57px;
@@ -2580,6 +2611,24 @@ POST CSS
     @media only screen and (max-width: 768px) {
       .post .title {
         width: 100%; } }
+    @media (max-width: 1200px) and (min-width: 980px) {
+      .post .title {
+        font-size: 80px;
+        line-height: 80px;
+        margin-top: 40px;
+        margin-bottom: 30px; } }
+    @media (max-width: 979px) and (min-width: 768px) {
+      .post .title {
+        font-size: 65px;
+        line-height: 65px;
+        margin-top: 25px;
+        margin-bottom: 20px; } }
+    @media (max-width: 767px) {
+      .post .title {
+        font-size: 30px;
+        line-height: 30px;
+        margin-top: 15px;
+        margin-bottom: 15px; } }
   .post .complement {
     width: 30%;
     float: right; }
@@ -2593,25 +2642,87 @@ POST CSS
       background: white;
       display: block;
       width: 100%; }
+    @media (max-width: 767px) {
+      .post .complement .social, .post .complement .rating {
+        width: 48%;
+        float: left; } }
     .post .complement .social {
       height: 90px;
       margin-bottom: 30px;
       padding-top: 23px;
       padding-bottom: 23px;
-      padding-left: 15px; }
+      padding-left: 5px;
+      padding-right: 5px;
+      text-align: center; }
+      @media (max-width: 1200px) and (min-width: 980px) {
+        .post .complement .social {
+          height: 70px;
+          padding-top: 15px;
+          padding-bottom: 15.5px; } }
+      @media (max-width: 979px) and (min-width: 768px) {
+        .post .complement .social {
+          height: 50px;
+          padding-top: 13.5px;
+          padding-bottom: 12.5px; } }
+      @media (max-width: 767px) {
+        .post .complement .social {
+          height: 75px;
+          margin-bottom: 45px;
+          padding-top: 23px;
+          padding-bottom: 23px;
+          margin-right: 4%; } }
+      @media (max-width: 480px) {
+        .post .complement .social {
+          height: 37.5px;
+          margin-bottom: 22.5px;
+          padding-top: 12px;
+          padding-bottom: 12px; } }
       .post .complement .social .icon-social {
         display: inline-block;
         vertical-align: top;
         margin-right: 10px; }
+        @media (max-width: 1200px) {
+          .post .complement .social .icon-social {
+            margin-right: 5px; } }
+        @media (max-width: 979px) {
+          .post .complement .social .icon-social {
+            margin-right: 5px; } }
+        @media (max-width: 767px) {
+          .post .complement .social .icon-social {
+            margin-right: 10px; } }
+        @media (max-width: 479px) {
+          .post .complement .social .icon-social {
+            margin-right: 2px; } }
       .post .complement .social .icon-social:hover {
         cursor: pointer;
         box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
         -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
         border: none; }
       .post .complement .social .icon-save {
-        margin-right: 3px; }
-      .post .complement .social .icone-bar {
-        margin-top: 8px; }
+        margin-right: 2px; }
+      .post .complement .social .icon-bar-grey {
+        margin-top: 8px;
+        margin-left: 5px;
+        margin-right: 8px; }
+        @media (max-width: 1200px) {
+          .post .complement .social .icon-bar-grey {
+            margin-top: 7px;
+            margin-right: 5px; } }
+        @media (max-width: 979px) {
+          .post .complement .social .icon-bar-grey {
+            margin-top: 0px;
+            margin-right: 5px; } }
+        @media (max-width: 767px) {
+          .post .complement .social .icon-bar-grey {
+            margin-top: 7px;
+            margin-right: 15px;
+            margin-left: 6px;
+            margin-right: 8px; } }
+        @media (max-width: 479px) {
+          .post .complement .social .icon-bar-grey {
+            margin-top: 1px;
+            margin-left: 2px;
+            margin-right: 4px; } }
     .post .complement .rating {
       padding: 0px;
       padding-top: 23px;
@@ -2619,7 +2730,29 @@ POST CSS
       text-align: center;
       margin-bottom: 30px; }
       .post .complement .rating .icon {
-        margin: 0px 4px; }
+        margin: 0px 5px; }
+      @media (max-width: 1200px) and (min-width: 980px) {
+        .post .complement .rating {
+          height: 70px;
+          padding-top: 15px;
+          padding-bottom: 15.5px; } }
+      @media (max-width: 979px) and (min-width: 768px) {
+        .post .complement .rating {
+          height: 50px;
+          padding-top: 13.5px;
+          padding-bottom: 12.5px; } }
+      @media (max-width: 767px) {
+        .post .complement .rating {
+          height: 75px;
+          margin-bottom: 5px;
+          padding-top: 20px;
+          padding-bottom: 14px; } }
+      @media (max-width: 480px) {
+        .post .complement .rating {
+          height: 37.5px;
+          margin-bottom: 5px;
+          padding-top: 9px;
+          padding-bottom: 9px; } }
     .post .complement .comments {
       min-height: 40px;
       margin-bottom: 0px; }
@@ -2632,18 +2765,51 @@ POST CSS
     .post .img-background .img {
       width: 100%;
       height: 100%; }
+    @media (max-width: 1200px) and (min-width: 980px) {
+      .post .img-background {
+        height: 450px;
+        margin-bottom: 40px; } }
+    @media (max-width: 979px) and (min-width: 768px) {
+      .post .img-background {
+        height: 400px;
+        margin-bottom: 33px; } }
+    @media (max-width: 767px) {
+      .post .img-background {
+        height: 300px;
+        margin-bottom: 20px; } }
+    @media (max-width: 480px) {
+      .post .img-background {
+        height: 200px;
+        margin-bottom: 10px; } }
   .post .infographic, .post .i1, .post .i2, .post .v2, .post .i3, .post .v3, .post .content {
     width: 65.6%; }
     @media only screen and (max-width: 768px) {
       .post .infographic, .post .i1, .post .i2, .post .v2, .post .i3, .post .v3, .post .content {
         width: 100%; } }
   .post .content {
-    float: left; }
+    float: left;
+    padding: 0 10px; }
     .post .content .intro {
       font-size: 27px;
       line-height: 36px;
       text-transform: uppercase;
       padding-bottom: 3px; }
+      @media (max-width: 1200px) and (min-width: 980px) {
+        .post .content .intro {
+          font-size: 25px;
+          line-height: 33px; } }
+      @media (max-width: 979px) and (min-width: 768px) {
+        .post .content .intro {
+          font-size: 22px;
+          line-height: 30px; } }
+      @media (max-width: 767px) {
+        .post .content .intro {
+          font-size: 17px;
+          line-height: 27px; } }
+      @media (max-width: 480px) {
+        .post .content .intro {
+          font-size: 15px;
+          line-height: 25px; } }
     .post .content .hightlight {
       background-color: yellow;
       text-decoration: underline;
@@ -2659,16 +2825,69 @@ POST CSS
       margin-top: 30px;
       margin-bottom: 15px;
       font-size: 18px; }
+      @media (max-width: 1200px) and (min-width: 980px) {
+        .post .content h3 {
+          margin-top: 25px;
+          margin-bottom: 13px;
+          font-size: 17px; } }
+      @media (max-width: 979px) and (min-width: 768px) {
+        .post .content h3 {
+          margin-top: 20px;
+          margin-bottom: 10px;
+          font-size: 16px; } }
+      @media (max-width: 767px) {
+        .post .content h3 {
+          margin-top: 15px;
+          margin-bottom: 8px;
+          font-size: 15px; } }
+      @media (max-width: 480px) {
+        .post .content h3 {
+          margin-top: 12px;
+          margin-bottom: 6px;
+          font-size: 14px; } }
     .post .content p {
       font-size: 18px;
       line-height: 24px;
       margin: 0px;
       padding-top: 11px;
       padding-bottom: 16px; }
+      @media (max-width: 1200px) and (min-width: 980px) {
+        .post .content p {
+          font-size: 17px;
+          line-height: 23px;
+          padding-top: 10px;
+          padding-bottom: 15px; } }
+      @media (max-width: 979px) and (min-width: 768px) {
+        .post .content p {
+          font-size: 16px;
+          line-height: 21px;
+          padding-top: 9px;
+          padding-bottom: 13px; } }
+      @media (max-width: 767px) {
+        .post .content p {
+          font-size: 14px;
+          line-height: 19px;
+          padding-top: 8px;
+          padding-bottom: 12px; } }
+      @media (max-width: 480px) {
+        .post .content p {
+          font-size: 13px;
+          line-height: 17px;
+          padding-top: 7px;
+          padding-bottom: 10px; } }
   .post .comments .new-comment {
     padding: 20px;
     position: relative;
     border-bottom: 1px solid #cfcfcf; }
+    @media (max-width: 1200px) and (min-width: 980px) {
+      .post .comments .new-comment {
+        font-size: 13px; } }
+    @media (max-width: 979px) and (min-width: 768px) {
+      .post .comments .new-comment {
+        font-size: 12px; } }
+    @media (max-width: 479px) {
+      .post .comments .new-comment {
+        font-size: 12px; } }
     .post .comments .new-comment .img-user {
       float: left;
       width: 40px;
@@ -2701,6 +2920,24 @@ POST CSS
         top: 0px;
         left: 0px;
         width: 100%; }
+      @media (max-width: 1200px) and (min-width: 980px) {
+        .post .comments .new-comment .input {
+          width: 220px; }
+          .post .comments .new-comment .input input {
+            height: 24px;
+            padding: 3px; } }
+      @media (max-width: 979px) and (min-width: 768px) {
+        .post .comments .new-comment .input {
+          width: 200px; }
+          .post .comments .new-comment .input input {
+            height: 20px;
+            padding: 4px; } }
+      @media (max-width: 479px) {
+        .post .comments .new-comment .input {
+          width: 240px; }
+          .post .comments .new-comment .input input {
+            height: 20px;
+            padding: 4px; } }
   .post .comments .comments-list {
     padding: 20px;
     padding-bottom: 0px;
@@ -2983,9 +3220,15 @@ Tool CSS
   /*
   Button for tools
   */ }
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 1200px) and (min-width: 980px) {
     .tool {
-      width: 97%; } }
+      width: 975px; } }
+  @media only screen and (max-width: 979px) and (min-width: 768px) {
+    .tool {
+      width: 765px; } }
+  @media only screen and (max-width: 767px) {
+    .tool {
+      width: 95%; } }
   .tool .header-tool {
     width: 83%;
     margin: auto;
@@ -3155,9 +3398,15 @@ Locally Grown
   display: block;
   margin: auto;
   height: 590px; }
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 1200px) and (min-width: 980px) {
     .locallyGrown .mapbox {
-      width: 97%; } }
+      width: 975px; } }
+  @media only screen and (max-width: 979px) and (min-width: 768px) {
+    .locallyGrown .mapbox {
+      width: 765px; } }
+  @media only screen and (max-width: 767px) {
+    .locallyGrown .mapbox {
+      width: 95%; } }
 
 /*
 Career Scape
@@ -3316,9 +3565,15 @@ JOB RESULTS/RECOMMENDATIONS
   background: white;
   margin-bottom: 60px;
   background: white; }
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 1200px) and (min-width: 980px) {
     .job-results, .saved-content {
-      width: 97%; } }
+      width: 975px; } }
+  @media only screen and (max-width: 979px) and (min-width: 768px) {
+    .job-results, .saved-content {
+      width: 765px; } }
+  @media only screen and (max-width: 767px) {
+    .job-results, .saved-content {
+      width: 95%; } }
   .job-results .icon-arrow-left-big-blue, .job-results .icon-arrow-right-big-blue, .saved-content .icon-arrow-left-big-blue, .saved-content .icon-arrow-right-big-blue {
     position: absolute;
     top: 50%;
@@ -3415,9 +3670,15 @@ Dashboard
   width: 1170px;
   display: block;
   margin: auto; }
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 1200px) and (min-width: 980px) {
     .dashboard {
-      width: 97%; } }
+      width: 975px; } }
+  @media only screen and (max-width: 979px) and (min-width: 768px) {
+    .dashboard {
+      width: 765px; } }
+  @media only screen and (max-width: 767px) {
+    .dashboard {
+      width: 95%; } }
   .dashboard .resume {
     background-color: white;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);

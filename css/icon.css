@@ -53,14 +53,22 @@ ICON css
       background-position: -57.5px -27.5px; } }
 
 .icon-bar-grey {
+  background-size: 1500px 1400px;
   background-position: -150px -55px;
-  width: 2px;
-  height: 24px; }
-  @media only screen and (max-width: 768px) {
+  height: 24px;
+  width: 2px; }
+  @media only screen and (max-width: 767px) {
     .icon-bar-grey {
-      width: 1px;
+      background-size: 1050px 979.9999999999999px;
+      background-position: -105px -38.5px;
+      height: 16.799999999999997px;
+      width: 1.4px; } }
+  @media only screen and (max-width: 479px) {
+    .icon-bar-grey {
+      background-size: 750px 700px;
+      background-position: -75px -27.500000000000004px;
       height: 12px;
-      background-position: -77.5px -27.5px; } }
+      width: 1px; } }
 
 /**
 Arrow big
@@ -431,311 +439,531 @@ STARS
 /*BIG*/
 .icon-star-big-green-1 {
   background-size: 3000px 2800px;
-  width: 43px;
-  height: 42px;
-  background-position: -26px -381px; }
-  @media only screen and (max-width: 768px) {
+  background-position: -26px -380px;
+  height: 43px;
+  width: 42px; }
+  @media only screen and (max-width: 979px) {
     .icon-star-big-green-1 {
       background-size: 1500px 1400px;
-      width: 22px;
-      height: 21px; } }
-  @media only screen and (max-width: 768px) {
+      background-position: -13px -190px;
+      height: 21.500000000000004px;
+      width: 21px; } }
+  @media only screen and (max-width: 767px) {
     .icon-star-big-green-1 {
-      background-position: -13px -190px; } }
+      background-size: 2250px 2100px;
+      background-position: -19.5px -285px;
+      height: 32.25px;
+      width: 31.500000000000004px; } }
+  @media only screen and (max-width: 479px) {
+    .icon-star-big-green-1 {
+      background-size: 1125px 1050px;
+      background-position: -9.75px -142.5px;
+      height: 16.125px;
+      width: 15.750000000000002px; } }
 
 .icon-star-big-green-2 {
   background-size: 3000px 2800px;
-  width: 43px;
-  height: 42px;
-  background-position: -120px -381px; }
-  @media only screen and (max-width: 768px) {
+  background-position: -120spx -380px;
+  height: 43px;
+  width: 42px; }
+  @media only screen and (max-width: 979px) {
     .icon-star-big-green-2 {
       background-size: 1500px 1400px;
-      width: 22px;
-      height: 21px; } }
-  @media only screen and (max-width: 768px) {
+      background-position: -60spx -190px;
+      height: 21.500000000000004px;
+      width: 21px; } }
+  @media only screen and (max-width: 767px) {
     .icon-star-big-green-2 {
-      background-position: -60spx -190px; } }
+      background-size: 2250px 2100px;
+      background-position: -90spx -285px;
+      height: 32.25px;
+      width: 31.500000000000004px; } }
+  @media only screen and (max-width: 479px) {
+    .icon-star-big-green-2 {
+      background-size: 1125px 1050px;
+      background-position: -45spx -142.5px;
+      height: 16.125px;
+      width: 15.750000000000002px; } }
 
 .icon-star-big-green-3 {
   background-size: 3000px 2800px;
-  width: 43px;
-  height: 42px;
-  background-position: -214px -381px; }
-  @media only screen and (max-width: 768px) {
+  background-position: -214px -380px;
+  height: 43px;
+  width: 42px; }
+  @media only screen and (max-width: 979px) {
     .icon-star-big-green-3 {
       background-size: 1500px 1400px;
-      width: 22px;
-      height: 21px; } }
-  @media only screen and (max-width: 768px) {
+      background-position: -107px -190px;
+      height: 21.500000000000004px;
+      width: 21px; } }
+  @media only screen and (max-width: 767px) {
     .icon-star-big-green-3 {
-      background-position: -107px -190px; } }
+      background-size: 2250px 2100px;
+      background-position: -160.5px -285px;
+      height: 32.25px;
+      width: 31.500000000000004px; } }
+  @media only screen and (max-width: 479px) {
+    .icon-star-big-green-3 {
+      background-size: 1125px 1050px;
+      background-position: -80.25px -142.5px;
+      height: 16.125px;
+      width: 15.750000000000002px; } }
 
 .icon-star-big-green-4 {
   background-size: 3000px 2800px;
-  width: 43px;
-  height: 42px;
-  background-position: -308px -381px; }
-  @media only screen and (max-width: 768px) {
+  background-position: -308px -380px;
+  height: 43px;
+  width: 42px; }
+  @media only screen and (max-width: 979px) {
     .icon-star-big-green-4 {
       background-size: 1500px 1400px;
-      width: 22px;
-      height: 21px; } }
-  @media only screen and (max-width: 768px) {
+      background-position: -154px -190px;
+      height: 21.500000000000004px;
+      width: 21px; } }
+  @media only screen and (max-width: 767px) {
     .icon-star-big-green-4 {
-      background-position: -154px -190px; } }
+      background-size: 2250px 2100px;
+      background-position: -231px -285px;
+      height: 32.25px;
+      width: 31.500000000000004px; } }
+  @media only screen and (max-width: 479px) {
+    .icon-star-big-green-4 {
+      background-size: 1125px 1050px;
+      background-position: -115.5px -142.5px;
+      height: 16.125px;
+      width: 15.750000000000002px; } }
 
 .icon-star-big-orange-1 {
   background-size: 3000px 2800px;
-  width: 43px;
-  height: 42px;
-  background-position: -401px -381px; }
-  @media only screen and (max-width: 768px) {
+  background-position: -400px -380px;
+  height: 43px;
+  width: 42px; }
+  @media only screen and (max-width: 979px) {
     .icon-star-big-orange-1 {
       background-size: 1500px 1400px;
-      width: 22px;
-      height: 21px; } }
-  @media only screen and (max-width: 768px) {
+      background-position: -200px -190px;
+      height: 21.500000000000004px;
+      width: 21px; } }
+  @media only screen and (max-width: 767px) {
     .icon-star-big-orange-1 {
-      background-position: -200px -190px; } }
+      background-size: 2250px 2100px;
+      background-position: -300px -285px;
+      height: 32.25px;
+      width: 31.500000000000004px; } }
+  @media only screen and (max-width: 479px) {
+    .icon-star-big-orange-1 {
+      background-size: 1125px 1050px;
+      background-position: -150px -142.5px;
+      height: 16.125px;
+      width: 15.750000000000002px; } }
 
 .icon-star-big-orange-2 {
   background-size: 3000px 2800px;
-  width: 43px;
-  height: 42px;
-  background-position: -495px -381px; }
-  @media only screen and (max-width: 768px) {
+  background-position: -494px -380px;
+  height: 43px;
+  width: 42px; }
+  @media only screen and (max-width: 979px) {
     .icon-star-big-orange-2 {
       background-size: 1500px 1400px;
-      width: 22px;
-      height: 21px; } }
-  @media only screen and (max-width: 768px) {
+      background-position: -247px -190px;
+      height: 21.500000000000004px;
+      width: 21px; } }
+  @media only screen and (max-width: 767px) {
     .icon-star-big-orange-2 {
-      background-position: -247px -190px; } }
+      background-size: 2250px 2100px;
+      background-position: -370.5px -285px;
+      height: 32.25px;
+      width: 31.500000000000004px; } }
+  @media only screen and (max-width: 479px) {
+    .icon-star-big-orange-2 {
+      background-size: 1125px 1050px;
+      background-position: -185.25px -142.5px;
+      height: 16.125px;
+      width: 15.750000000000002px; } }
 
 .icon-star-big-orange-3 {
   background-size: 3000px 2800px;
-  width: 43px;
-  height: 42px;
-  background-position: -589px -381px; }
-  @media only screen and (max-width: 768px) {
+  background-position: -588px -380px;
+  height: 43px;
+  width: 42px; }
+  @media only screen and (max-width: 979px) {
     .icon-star-big-orange-3 {
       background-size: 1500px 1400px;
-      width: 22px;
-      height: 21px; } }
-  @media only screen and (max-width: 768px) {
+      background-position: -294px -190px;
+      height: 21.500000000000004px;
+      width: 21px; } }
+  @media only screen and (max-width: 767px) {
     .icon-star-big-orange-3 {
-      background-position: -294px -190px; } }
+      background-size: 2250px 2100px;
+      background-position: -441px -285px;
+      height: 32.25px;
+      width: 31.500000000000004px; } }
+  @media only screen and (max-width: 479px) {
+    .icon-star-big-orange-3 {
+      background-size: 1125px 1050px;
+      background-position: -220.50000000000003px -142.5px;
+      height: 16.125px;
+      width: 15.750000000000002px; } }
 
 .icon-star-big-orange-4 {
   background-size: 3000px 2800px;
-  width: 43px;
-  height: 42px;
-  background-position: -683px -381px; }
-  @media only screen and (max-width: 768px) {
+  background-position: -682px -380px;
+  height: 43px;
+  width: 42px; }
+  @media only screen and (max-width: 979px) {
     .icon-star-big-orange-4 {
       background-size: 1500px 1400px;
-      width: 22px;
-      height: 21px; } }
-  @media only screen and (max-width: 768px) {
+      background-position: -341px -190px;
+      height: 21.500000000000004px;
+      width: 21px; } }
+  @media only screen and (max-width: 767px) {
     .icon-star-big-orange-4 {
-      background-position: -341px -190px; } }
+      background-size: 2250px 2100px;
+      background-position: -511.5px -285px;
+      height: 32.25px;
+      width: 31.500000000000004px; } }
+  @media only screen and (max-width: 479px) {
+    .icon-star-big-orange-4 {
+      background-size: 1125px 1050px;
+      background-position: -255.75px -142.5px;
+      height: 16.125px;
+      width: 15.750000000000002px; } }
 
 .icon-star-big-orange-5 {
   background-size: 3000px 2800px;
-  width: 43px;
-  height: 42px;
-  background-position: -777px -381px; }
-  @media only screen and (max-width: 768px) {
+  background-position: -776px -380px;
+  height: 43px;
+  width: 42px; }
+  @media only screen and (max-width: 979px) {
     .icon-star-big-orange-5 {
       background-size: 1500px 1400px;
-      width: 22px;
-      height: 21px; } }
-  @media only screen and (max-width: 768px) {
+      background-position: -388px -190px;
+      height: 21.500000000000004px;
+      width: 21px; } }
+  @media only screen and (max-width: 767px) {
     .icon-star-big-orange-5 {
-      background-position: -388px -190px; } }
+      background-size: 2250px 2100px;
+      background-position: -582px -285px;
+      height: 32.25px;
+      width: 31.500000000000004px; } }
+  @media only screen and (max-width: 479px) {
+    .icon-star-big-orange-5 {
+      background-size: 1125px 1050px;
+      background-position: -291px -142.5px;
+      height: 16.125px;
+      width: 15.750000000000002px; } }
 
 .icon-star-big-blue-1 {
   background-size: 3000px 2800px;
-  width: 43px;
-  height: 42px;
-  background-position: -871px -381px; }
-  @media only screen and (max-width: 768px) {
+  background-position: -870px -380px;
+  height: 43px;
+  width: 42px; }
+  @media only screen and (max-width: 979px) {
     .icon-star-big-blue-1 {
       background-size: 1500px 1400px;
-      width: 22px;
-      height: 21px; } }
-  @media only screen and (max-width: 768px) {
+      background-position: -435px -190px;
+      height: 21.500000000000004px;
+      width: 21px; } }
+  @media only screen and (max-width: 767px) {
     .icon-star-big-blue-1 {
-      background-position: -435px -190px; } }
+      background-size: 2250px 2100px;
+      background-position: -652.5px -285px;
+      height: 32.25px;
+      width: 31.500000000000004px; } }
+  @media only screen and (max-width: 479px) {
+    .icon-star-big-blue-1 {
+      background-size: 1125px 1050px;
+      background-position: -326.25px -142.5px;
+      height: 16.125px;
+      width: 15.750000000000002px; } }
 
 .icon-star-big-blue-2 {
   background-size: 3000px 2800px;
-  width: 43px;
-  height: 42px;
-  background-position: -965px -381px; }
-  @media only screen and (max-width: 768px) {
+  background-position: -964px -380px;
+  height: 43px;
+  width: 42px; }
+  @media only screen and (max-width: 979px) {
     .icon-star-big-blue-2 {
       background-size: 1500px 1400px;
-      width: 22px;
-      height: 21px; } }
-  @media only screen and (max-width: 768px) {
+      background-position: -482px -190px;
+      height: 21.500000000000004px;
+      width: 21px; } }
+  @media only screen and (max-width: 767px) {
     .icon-star-big-blue-2 {
-      background-position: -482px -190px; } }
+      background-size: 2250px 2100px;
+      background-position: -723px -285px;
+      height: 32.25px;
+      width: 31.500000000000004px; } }
+  @media only screen and (max-width: 479px) {
+    .icon-star-big-blue-2 {
+      background-size: 1125px 1050px;
+      background-position: -361.50000000000006px -142.5px;
+      height: 16.125px;
+      width: 15.750000000000002px; } }
 
 .icon-star-big-blue-3 {
   background-size: 3000px 2800px;
-  width: 43px;
-  height: 42px;
-  background-position: -1058px -381px; }
-  @media only screen and (max-width: 768px) {
+  background-position: -1058px -380px;
+  height: 43px;
+  width: 42px; }
+  @media only screen and (max-width: 979px) {
     .icon-star-big-blue-3 {
       background-size: 1500px 1400px;
-      width: 22px;
-      height: 21px; } }
-  @media only screen and (max-width: 768px) {
+      background-position: -529px -190px;
+      height: 21.500000000000004px;
+      width: 21px; } }
+  @media only screen and (max-width: 767px) {
     .icon-star-big-blue-3 {
-      background-position: -529px -190px; } }
+      background-size: 2250px 2100px;
+      background-position: -793.5px -285px;
+      height: 32.25px;
+      width: 31.500000000000004px; } }
+  @media only screen and (max-width: 479px) {
+    .icon-star-big-blue-3 {
+      background-size: 1125px 1050px;
+      background-position: -396.75px -142.5px;
+      height: 16.125px;
+      width: 15.750000000000002px; } }
 
 .icon-star-big-blue-4 {
   background-size: 3000px 2800px;
-  width: 43px;
-  height: 42px;
-  background-position: -1152px -381px; }
-  @media only screen and (max-width: 768px) {
+  background-position: -1152px -380px;
+  height: 43px;
+  width: 42px; }
+  @media only screen and (max-width: 979px) {
     .icon-star-big-blue-4 {
       background-size: 1500px 1400px;
-      width: 22px;
-      height: 21px; } }
-  @media only screen and (max-width: 768px) {
+      background-position: -576px -190px;
+      height: 21.500000000000004px;
+      width: 21px; } }
+  @media only screen and (max-width: 767px) {
     .icon-star-big-blue-4 {
-      background-position: -576px -190px; } }
+      background-size: 2250px 2100px;
+      background-position: -864px -285px;
+      height: 32.25px;
+      width: 31.500000000000004px; } }
+  @media only screen and (max-width: 479px) {
+    .icon-star-big-blue-4 {
+      background-size: 1125px 1050px;
+      background-position: -432px -142.5px;
+      height: 16.125px;
+      width: 15.750000000000002px; } }
 
 .icon-star-big-blue-5 {
   background-size: 3000px 2800px;
-  width: 43px;
-  height: 42px;
-  background-position: -1246px -381px; }
-  @media only screen and (max-width: 768px) {
+  background-position: -1246px -380px;
+  height: 43px;
+  width: 42px; }
+  @media only screen and (max-width: 979px) {
     .icon-star-big-blue-5 {
       background-size: 1500px 1400px;
-      width: 22px;
-      height: 21px; } }
-  @media only screen and (max-width: 768px) {
+      background-position: -623px -190px;
+      height: 21.500000000000004px;
+      width: 21px; } }
+  @media only screen and (max-width: 767px) {
     .icon-star-big-blue-5 {
-      background-position: -623px -190px; } }
+      background-size: 2250px 2100px;
+      background-position: -934.5px -285px;
+      height: 32.25px;
+      width: 31.500000000000004px; } }
+  @media only screen and (max-width: 479px) {
+    .icon-star-big-blue-5 {
+      background-size: 1125px 1050px;
+      background-position: -467.25px -142.5px;
+      height: 16.125px;
+      width: 15.750000000000002px; } }
 
 .icon-star-blue-big-6 {
   background-size: 3000px 2800px;
-  width: 43px;
-  height: 42px;
-  background-position: -1340px -381px; }
-  @media only screen and (max-width: 768px) {
+  background-position: -1340px -380px;
+  height: 43px;
+  width: 42px; }
+  @media only screen and (max-width: 979px) {
     .icon-star-blue-big-6 {
       background-size: 1500px 1400px;
-      width: 22px;
-      height: 21px; } }
-  @media only screen and (max-width: 768px) {
+      background-position: -670px -190px;
+      height: 21.500000000000004px;
+      width: 21px; } }
+  @media only screen and (max-width: 767px) {
     .icon-star-blue-big-6 {
-      background-position: -670px -190px; } }
+      background-size: 2250px 2100px;
+      background-position: -1005px -285px;
+      height: 32.25px;
+      width: 31.500000000000004px; } }
+  @media only screen and (max-width: 479px) {
+    .icon-star-blue-big-6 {
+      background-size: 1125px 1050px;
+      background-position: -502.49999999999994px -142.5px;
+      height: 16.125px;
+      width: 15.750000000000002px; } }
 
 .icon-star-big-red-1 {
   background-size: 3000px 2800px;
-  width: 43px;
-  height: 42px;
-  background-position: -26px -475px; }
-  @media only screen and (max-width: 768px) {
+  background-position: -26px -475px;
+  height: 43px;
+  width: 42px; }
+  @media only screen and (max-width: 979px) {
     .icon-star-big-red-1 {
       background-size: 1500px 1400px;
-      width: 22px;
-      height: 21px; } }
-  @media only screen and (max-width: 768px) {
+      background-position: -13px -237.5px;
+      height: 21.500000000000004px;
+      width: 21px; } }
+  @media only screen and (max-width: 767px) {
     .icon-star-big-red-1 {
-      background-position: -13px -237px; } }
+      background-size: 2250px 2100px;
+      background-position: -19.5px -356.25px;
+      height: 32.25px;
+      width: 31.500000000000004px; } }
+  @media only screen and (max-width: 479px) {
+    .icon-star-big-red-1 {
+      background-size: 1125px 1050px;
+      background-position: -9.75px -178.125px;
+      height: 16.125px;
+      width: 15.750000000000002px; } }
 
 .icon-star-big-red-2 {
   background-size: 3000px 2800px;
-  width: 43px;
-  height: 42px;
-  background-position: -120px -475px; }
-  @media only screen and (max-width: 768px) {
+  background-position: -120px -475px;
+  height: 43px;
+  width: 42px; }
+  @media only screen and (max-width: 979px) {
     .icon-star-big-red-2 {
       background-size: 1500px 1400px;
-      width: 22px;
-      height: 21px; } }
-  @media only screen and (max-width: 768px) {
+      background-position: -60px -237.5px;
+      height: 21.500000000000004px;
+      width: 21px; } }
+  @media only screen and (max-width: 767px) {
     .icon-star-big-red-2 {
-      background-position: -60px -237px; } }
+      background-size: 2250px 2100px;
+      background-position: -90px -356.25px;
+      height: 32.25px;
+      width: 31.500000000000004px; } }
+  @media only screen and (max-width: 479px) {
+    .icon-star-big-red-2 {
+      background-size: 1125px 1050px;
+      background-position: -45px -178.125px;
+      height: 16.125px;
+      width: 15.750000000000002px; } }
 
 .icon-star-big-red-3 {
   background-size: 3000px 2800px;
-  width: 43px;
-  height: 42px;
-  background-position: -214px -475px; }
-  @media only screen and (max-width: 768px) {
+  background-position: -215px -475px;
+  height: 43px;
+  width: 42px; }
+  @media only screen and (max-width: 979px) {
     .icon-star-big-red-3 {
       background-size: 1500px 1400px;
-      width: 22px;
-      height: 21px; } }
-  @media only screen and (max-width: 768px) {
+      background-position: -107.5px -237.5px;
+      height: 21.500000000000004px;
+      width: 21px; } }
+  @media only screen and (max-width: 767px) {
     .icon-star-big-red-3 {
-      background-position: -107px -237px; } }
+      background-size: 2250px 2100px;
+      background-position: -161.25px -356.25px;
+      height: 32.25px;
+      width: 31.500000000000004px; } }
+  @media only screen and (max-width: 479px) {
+    .icon-star-big-red-3 {
+      background-size: 1125px 1050px;
+      background-position: -80.625px -178.125px;
+      height: 16.125px;
+      width: 15.750000000000002px; } }
 
 .icon-star-big-red-4 {
   background-size: 3000px 2800px;
-  width: 43px;
-  height: 42px;
-  background-position: -589px -475px; }
-  @media only screen and (max-width: 768px) {
+  background-position: -588px -475px;
+  height: 43px;
+  width: 42px; }
+  @media only screen and (max-width: 979px) {
     .icon-star-big-red-4 {
       background-size: 1500px 1400px;
-      width: 22px;
-      height: 21px; } }
-  @media only screen and (max-width: 768px) {
+      background-position: -294px -237.5px;
+      height: 21.500000000000004px;
+      width: 21px; } }
+  @media only screen and (max-width: 767px) {
     .icon-star-big-red-4 {
-      background-position: -294px -237px; } }
+      background-size: 2250px 2100px;
+      background-position: -441px -356.25px;
+      height: 32.25px;
+      width: 31.500000000000004px; } }
+  @media only screen and (max-width: 479px) {
+    .icon-star-big-red-4 {
+      background-size: 1125px 1050px;
+      background-position: -220.50000000000003px -178.125px;
+      height: 16.125px;
+      width: 15.750000000000002px; } }
 
 .icon-star-big-pink-1 {
   background-size: 3000px 2800px;
-  width: 43px;
-  height: 42px;
-  background-position: -308px -475px; }
-  @media only screen and (max-width: 768px) {
+  background-position: -308px -475px;
+  height: 43px;
+  width: 42px; }
+  @media only screen and (max-width: 979px) {
     .icon-star-big-pink-1 {
       background-size: 1500px 1400px;
-      width: 22px;
-      height: 21px; } }
-  @media only screen and (max-width: 768px) {
+      background-position: -154px -237.5px;
+      height: 21.500000000000004px;
+      width: 21px; } }
+  @media only screen and (max-width: 767px) {
     .icon-star-big-pink-1 {
-      background-position: -154px -237px; } }
+      background-size: 2250px 2100px;
+      background-position: -231px -356.25px;
+      height: 32.25px;
+      width: 31.500000000000004px; } }
+  @media only screen and (max-width: 479px) {
+    .icon-star-big-pink-1 {
+      background-size: 1125px 1050px;
+      background-position: -115.5px -178.125px;
+      height: 16.125px;
+      width: 15.750000000000002px; } }
 
 .icon-star-big-pink-2 {
   background-size: 3000px 2800px;
-  width: 43px;
-  height: 42px;
-  background-position: -401px -475px; }
-  @media only screen and (max-width: 768px) {
+  background-position: -400px -474px;
+  height: 43px;
+  width: 42px; }
+  @media only screen and (max-width: 979px) {
     .icon-star-big-pink-2 {
       background-size: 1500px 1400px;
-      width: 22px;
-      height: 21px; } }
-  @media only screen and (max-width: 768px) {
+      background-position: -200px -237px;
+      height: 21.500000000000004px;
+      width: 21px; } }
+  @media only screen and (max-width: 767px) {
     .icon-star-big-pink-2 {
-      background-position: -200px -237px; } }
+      background-size: 2250px 2100px;
+      background-position: -300px -355.5px;
+      height: 32.25px;
+      width: 31.500000000000004px; } }
+  @media only screen and (max-width: 479px) {
+    .icon-star-big-pink-2 {
+      background-size: 1125px 1050px;
+      background-position: -150px -177.75px;
+      height: 16.125px;
+      width: 15.750000000000002px; } }
 
 .icon-star-big-pink-3 {
   background-size: 3000px 2800px;
-  width: 43px;
-  height: 42px;
-  background-position: -495px -475px; }
-  @media only screen and (max-width: 768px) {
+  background-position: -494px -474px;
+  height: 43px;
+  width: 42px; }
+  @media only screen and (max-width: 979px) {
     .icon-star-big-pink-3 {
       background-size: 1500px 1400px;
-      width: 22px;
-      height: 21px; } }
-  @media only screen and (max-width: 768px) {
+      background-position: -247px -237px;
+      height: 21.500000000000004px;
+      width: 21px; } }
+  @media only screen and (max-width: 767px) {
     .icon-star-big-pink-3 {
-      background-position: -247px -237px; } }
+      background-size: 2250px 2100px;
+      background-position: -370.5px -355.5px;
+      height: 32.25px;
+      width: 31.500000000000004px; } }
+  @media only screen and (max-width: 479px) {
+    .icon-star-big-pink-3 {
+      background-size: 1125px 1050px;
+      background-position: -185.25px -177.75px;
+      height: 16.125px;
+      width: 15.750000000000002px; } }
 
 /*SMALL*/
 .icon-star-green-1 {
@@ -1384,64 +1612,184 @@ JOB PHASES
 SOCIAL
 */
 .icon-save {
+  background-size: 1500px 1400px;
   background-position: -659px -369px;
   height: 40px;
   width: 40px; }
+  @media only screen and (max-width: 1200px) {
+    .icon-save {
+      background-size: 1350px 1260px;
+      background-position: -593.1px -332.1px;
+      height: 36px;
+      width: 36px; } }
+  @media only screen and (max-width: 980px) {
+    .icon-save {
+      background-size: 900px 840px;
+      background-position: -395.40000000000003px -221.4px;
+      height: 24px;
+      width: 24px; } }
   @media only screen and (max-width: 768px) {
     .icon-save {
-      background-position: -329.5px -184.5px;
-      height: 20px;
-      width: 20px; } }
+      background-size: 1125px 1050px;
+      background-position: -494.24999999999994px -276.75px;
+      height: 30px;
+      width: 30px; } }
+  @media only screen and (max-width: 480px) {
+    .icon-save {
+      background-size: 555px 518px;
+      background-position: -243.82999999999998px -136.53px;
+      height: 14.8px;
+      width: 14.8px; } }
 
 .icon-mail {
+  background-size: 1500px 1400px;
   background-position: -707px -369px;
   height: 40px;
   width: 40px; }
+  @media only screen and (max-width: 1200px) {
+    .icon-mail {
+      background-size: 1350px 1260px;
+      background-position: -636.3000000000001px -332.1px;
+      height: 36px;
+      width: 36px; } }
+  @media only screen and (max-width: 980px) {
+    .icon-mail {
+      background-size: 900px 840px;
+      background-position: -424.2px -221.4px;
+      height: 24px;
+      width: 24px; } }
   @media only screen and (max-width: 768px) {
     .icon-mail {
-      background-position: -353.5px -184.5px;
-      height: 20px;
-      width: 20px; } }
+      background-size: 1125px 1050px;
+      background-position: -530.25px -276.75px;
+      height: 30px;
+      width: 30px; } }
+  @media only screen and (max-width: 480px) {
+    .icon-mail {
+      background-size: 555px 518px;
+      background-position: -261.59px -136.53px;
+      height: 14.8px;
+      width: 14.8px; } }
 
 .icon-twitter {
+  background-size: 1500px 1400px;
   background-position: -754px -369px;
   height: 40px;
   width: 40px; }
+  @media only screen and (max-width: 1200px) {
+    .icon-twitter {
+      background-size: 1350px 1260px;
+      background-position: -678.6px -332.1px;
+      height: 36px;
+      width: 36px; } }
+  @media only screen and (max-width: 980px) {
+    .icon-twitter {
+      background-size: 900px 840px;
+      background-position: -452.4px -221.4px;
+      height: 24px;
+      width: 24px; } }
   @media only screen and (max-width: 768px) {
     .icon-twitter {
-      background-position: -377px -184.5px;
-      height: 20px;
-      width: 20px; } }
+      background-size: 1125px 1050px;
+      background-position: -565.5px -276.75px;
+      height: 30px;
+      width: 30px; } }
+  @media only screen and (max-width: 480px) {
+    .icon-twitter {
+      background-size: 555px 518px;
+      background-position: -278.98px -136.53px;
+      height: 14.8px;
+      width: 14.8px; } }
 
 .icon-google {
+  background-size: 1500px 1400px;
   background-position: -801px -369px;
   height: 40px;
   width: 40px; }
+  @media only screen and (max-width: 1200px) {
+    .icon-google {
+      background-size: 1350px 1260px;
+      background-position: -720.8999999999999px -332.1px;
+      height: 36px;
+      width: 36px; } }
+  @media only screen and (max-width: 980px) {
+    .icon-google {
+      background-size: 900px 840px;
+      background-position: -480.5999999999999px -221.4px;
+      height: 24px;
+      width: 24px; } }
   @media only screen and (max-width: 768px) {
     .icon-google {
-      background-position: -400.5px -184.5px;
-      height: 20px;
-      width: 20px; } }
+      background-size: 1125px 1050px;
+      background-position: -600.75px -276.75px;
+      height: 30px;
+      width: 30px; } }
+  @media only screen and (max-width: 480px) {
+    .icon-google {
+      background-size: 555px 518px;
+      background-position: -296.37px -136.53px;
+      height: 14.8px;
+      width: 14.8px; } }
 
 .icon-face {
+  background-size: 1500px 1400px;
   background-position: -848px -369px;
   height: 40px;
   width: 40px; }
+  @media only screen and (max-width: 1200px) {
+    .icon-face {
+      background-size: 1350px 1260px;
+      background-position: -763.2px -332.1px;
+      height: 36px;
+      width: 36px; } }
+  @media only screen and (max-width: 980px) {
+    .icon-face {
+      background-size: 900px 840px;
+      background-position: -508.8px -221.4px;
+      height: 24px;
+      width: 24px; } }
   @media only screen and (max-width: 768px) {
     .icon-face {
-      background-position: -424px -184.5px;
-      height: 20px;
-      width: 20px; } }
+      background-size: 1125px 1050px;
+      background-position: -636px -276.75px;
+      height: 30px;
+      width: 30px; } }
+  @media only screen and (max-width: 480px) {
+    .icon-face {
+      background-size: 555px 518px;
+      background-position: -313.76px -136.53px;
+      height: 14.8px;
+      width: 14.8px; } }
 
 .icon-link {
+  background-size: 1500px 1400px;
   background-position: -895px -369px;
   height: 40px;
   width: 40px; }
+  @media only screen and (max-width: 1200px) {
+    .icon-link {
+      background-size: 1350px 1260px;
+      background-position: -805.5px -332.1px;
+      height: 36px;
+      width: 36px; } }
+  @media only screen and (max-width: 980px) {
+    .icon-link {
+      background-size: 900px 840px;
+      background-position: -537px -221.4px;
+      height: 24px;
+      width: 24px; } }
   @media only screen and (max-width: 768px) {
     .icon-link {
-      background-position: -447.5px -184.5px;
-      height: 20px;
-      width: 20px; } }
+      background-size: 1125px 1050px;
+      background-position: -671.25px -276.75px;
+      height: 30px;
+      width: 30px; } }
+  @media only screen and (max-width: 480px) {
+    .icon-link {
+      background-size: 555px 518px;
+      background-position: -331.15px -136.53px;
+      height: 14.8px;
+      width: 14.8px; } }
 
 .icon-question-big {
   background-position: -942px -369px;
@@ -1803,24 +2151,48 @@ TOOLS
   background-position: -464px -541px;
   height: 43px;
   width: 179px; }
+  @media only screen and (max-width: 1200px) {
+    .icon-button-post {
+      background-size: 1500px 1400px;
+      background-position: -495px -541px;
+      height: 43px;
+      width: 387px; } }
+  @media only screen and (max-width: 1200px) {
+    .icon-button-post {
+      background-size: 1500px 1400px;
+      background-position: -524px -541px;
+      height: 43px;
+      width: 387px; } }
   @media only screen and (max-width: 768px) {
     .icon-button-post {
-      background-size: 750px 700px;
-      background-position: -232px -270.5px;
-      height: 21.500000000000004px;
-      width: 89.5px; } }
+      background-size: 1200px 1120px;
+      background-position: -371.2px -432.80000000000007px;
+      height: 34.4px;
+      width: 143.20000000000002px; } }
 
 .icon-button-post-large {
   background-size: 1500px 1400px;
   background-position: -464px -593px;
   height: 43px;
   width: 387px; }
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 1200px) {
     .icon-button-post-large {
-      background-size: 750px 700px;
-      background-position: -232px -296.5px;
-      height: 21.500000000000004px;
-      width: 193.5px; } }
+      background-size: 1500px 1400px;
+      background-position: -526px -593px;
+      height: 43px;
+      width: 325px; } }
+  @media only screen and (max-width: 979px) {
+    .icon-button-post-large {
+      background-size: 1500px 1400px;
+      background-position: -597px -593px;
+      height: 43px;
+      width: 256px; } }
+  @media only screen and (max-width: 767px) {
+    .icon-button-post-large {
+      background-size: 1200px 1120px;
+      background-position: -491.20000000000005px -474.40000000000003px;
+      height: 34.4px;
+      width: 176px; } }
 
 .icon-suitcase-job {
   background-size: 1500px 1400px;

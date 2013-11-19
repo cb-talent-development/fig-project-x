@@ -59,13 +59,12 @@ ICON css
 	}
 }
 .icon-bar-grey{
-    background-position:-150px -55px;
-	width: 2px;
-	height: 24px;
-    @media only screen and (max-width: 768px){
-       width: 1px;
-       height: 12px;
-	   background-position: -77.5px -27.5px;
+	@include dimensionPosition(-150px, -55px, 24px, 2px, 1.0);
+    @media only screen and (max-width: 767px){
+		@include dimensionPosition(-150px, -55px, 24px, 2px, 0.7);
+	}
+    @media only screen and (max-width: 479px){
+		@include dimensionPosition(-150px, -55px, 24px, 2px, 0.5);
 	}
 }
 /**
@@ -445,164 +444,90 @@ STARS
        height: 21px;
     }
 }
+
+@mixin icon-star-big-dim($posx, $posy){
+	@include dimensionPosition($posx, $posy, 21.5px, 21px, 2.0);
+	@media only screen and (max-width: 979px){
+        @include dimensionPosition($posx, $posy, 21.5px, 21px, 1.0);
+	}
+    @media only screen and (max-width: 767px){
+        @include dimensionPosition($posx, $posy, 21.5px, 21px, 1.5);
+	}
+	@media only screen and (max-width: 479px){
+        @include dimensionPosition($posx, $posy, 21.5px, 21px, 0.75);
+	}
+}
 //green
 .icon-star-big-green-1{
-    @include icon-star-big;
-    background-position:-26px -381px;
-    @media only screen and (max-width: 768px){
-       background-position:-13px -190px;
-	}
+    @include icon-star-big-dim(-13px, -190px);
+
 }
 .icon-star-big-green-2{
-    @include icon-star-big;
-    background-position:-120px -381px;
-    @media only screen and (max-width: 768px){
-        background-position:-60spx -190px;
-	}
+    @include icon-star-big-dim(-60spx, -190px);
 }
 .icon-star-big-green-3{
-    @include icon-star-big;
-    background-position:-214px -381px;
-    @media only screen and (max-width: 768px){ 
-	   background-position: -107px -190px;
-	}
+    @include icon-star-big-dim(-107px, -190px);
 }
 .icon-star-big-green-4{
-    @include icon-star-big;
-    background-position:-308px -381px;
-    @media only screen and (max-width: 768px){
-	   background-position: -154px -190px;
-	}
+    @include icon-star-big-dim(-154px, -190px);
 }
 //orange
 .icon-star-big-orange-1{
-    @include icon-star-big;
-    background-position:-401px -381px;
-    @media only screen and (max-width: 768px){
-	   background-position: -200px -190px;
-	}
+    @include icon-star-big-dim(-200px, -190px);
 }
 .icon-star-big-orange-2{
-    @include icon-star-big;
-    background-position:-495px -381px;
-    @media only screen and (max-width: 768px){
-	   background-position: -247px -190px;
-	}
+    @include icon-star-big-dim(-247px, -190px);
 }
 .icon-star-big-orange-3{
-    @include icon-star-big;
-    background-position:-589px -381px;
-    @media only screen and (max-width: 768px){
-	   background-position: -294px -190px;
-	}
+    @include icon-star-big-dim(-294px, -190px);
 }
 .icon-star-big-orange-4{
-    @include icon-star-big;
-    background-position:-683px -381px;
-    @media only screen and (max-width: 768px){
-	   background-position: -341px -190px;
-	}
+    @include icon-star-big-dim(-341px, -190px);
 }
 .icon-star-big-orange-5{
-    @include icon-star-big;
-    background-position:-777px -381px;
-    @media only screen and (max-width: 768px){
-	   background-position: -388px -190px;
-	}
+    @include icon-star-big-dim(-388px, -190px);
 }
 //blue
 .icon-star-big-blue-1{
-    @include icon-star-big;
-    background-position:-871px -381px;
-    @media only screen and (max-width: 768px){
-	   background-position: -435px -190px;
-	}
+    @include icon-star-big-dim(-435px, -190px);
 }
 .icon-star-big-blue-2{
-    @include icon-star-big;
-    background-position:-965px -381px;
-    @media only screen and (max-width: 768px){
-	   background-position: -482px -190px;
-	}
+    @include icon-star-big-dim(-482px, -190px);
 }
 .icon-star-big-blue-3{
-    @include icon-star-big;
-    background-position:-1058px -381px;
-    @media only screen and (max-width: 768px){
-	   background-position: -529px -190px;
-	}
+    @include icon-star-big-dim(-529px, -190px);
 }
 .icon-star-big-blue-4{
-    @include icon-star-big;
-    background-position:-1152px -381px;
-    @media only screen and (max-width: 768px){
-	   background-position: -576px -190px;
-	}
+    @include icon-star-big-dim(-576px, -190px);
 }
 .icon-star-big-blue-5{
-    @include icon-star-big;
-    background-position:-1246px -381px;
-    @media only screen and (max-width: 768px){
-	   background-position: -623px -190px;
-	}
+    @include icon-star-big-dim(-623px, -190px);
 }
 .icon-star-blue-big-6{
-    @include icon-star-big;
-    background-position:-1340px -381px;
-    @media only screen and (max-width: 768px){
-	   background-position: -670px -190px;
-	}
+    @include icon-star-big-dim(-670px, -190px);
 }
 //red
 .icon-star-big-red-1{
-    @include icon-star-big;
-    background-position:-26px -475px;
-    @media only screen and (max-width: 768px){
-        background-position:-13px -237px;
-	}
+	@include icon-star-big-dim(-13px, -237.5px);
 }
 .icon-star-big-red-2{
-    @include icon-star-big;
-    background-position:-120px -475px;
-    @media only screen and (max-width: 768px){
-        background-position:-60px -237px;
-	}
+	@include icon-star-big-dim(-60px, -237.5px);
 }
 .icon-star-big-red-3{
-    @include icon-star-big;
-    background-position:-214px -475px;
-    @media only screen and (max-width: 768px){
-        background-position:-107px -237px;
-	}
+	@include icon-star-big-dim(-107.5px, -237.5px);
 }
 .icon-star-big-red-4{
-    @include icon-star-big;
-    background-position:-589px -475px;
-    @media only screen and (max-width: 768px){
-        background-position:-294px -237px;
-	}
+	@include icon-star-big-dim(-294px, -237.5px);
 }
 //pink
 .icon-star-big-pink-1{
-    @include icon-star-big;
-    background-position:-308px -475px;
-    @media only screen and (max-width: 768px){
-        background-position:-154px -237px;
-	}
+    @include icon-star-big-dim(-154px, -237.5px);
 }
 .icon-star-big-pink-2{
-    @include icon-star-big;
-    background-position:-401px -475px;
-    @media only screen and (max-width: 768px){
-        background-position:-200px -237px;
-	}
+    @include icon-star-big-dim(-200px, -237px);
 }
 .icon-star-big-pink-3{
-    @include icon-star-big;
-    background-position:-495px -475px;
-    @media only screen and (max-width: 768px){
-        background-position:-247px -237px;
-	}
+    @include icon-star-big-dim(-247px, -237px);
 }
 /*SMALL*/
 //green
@@ -1156,63 +1081,93 @@ JOB PHASES
 SOCIAL
 */
 .icon-save{
-    background-position:-659px -369px;
-    height:40px;
-    width:40px;
+    @include dimensionPosition(-659px, -369px, 40px, 40px, 1.0);
+	@media only screen and (max-width: 1200px){
+		@include dimensionPosition(-659px, -369px, 40px, 40px, 0.9);
+	}
+	@media only screen and (max-width: 980px){
+		@include dimensionPosition(-659px, -369px, 40px, 40px, 0.6);
+	}
     @media only screen and (max-width: 768px){
-	   background-position: -329.5px -184.5px;
-       height:20px;
-       width:20px;
+		@include dimensionPosition(-659px, -369px, 40px, 40px, 0.75);
+	}
+	@media only screen and (max-width: 480px){
+		@include dimensionPosition(-659px, -369px, 40px, 40px, 0.37);
 	}
 }
 .icon-mail{
-    background-position:-707px -369px;
-    height:40px;
-    width:40px;
+	@include dimensionPosition(-707px, -369px, 40px, 40px, 1.0);
+	@media only screen and (max-width: 1200px){
+		@include dimensionPosition(-707px, -369px, 40px, 40px, 0.9);
+	}
+	@media only screen and (max-width: 980px){
+		@include dimensionPosition(-707px, -369px, 40px, 40px, 0.6);
+	}
     @media only screen and (max-width: 768px){
-	   background-position: -353.5px -184.5px;
-       height:20px;
-       width:20px;
+		@include dimensionPosition(-707px, -369px, 40px, 40px, 0.75);
+	}
+	@media only screen and (max-width: 480px){
+		@include dimensionPosition(-707px, -369px, 40px, 40px, 0.37);
 	}
 }
 .icon-twitter{
-    background-position:-754px -369px;
-    height:40px;
-    width:40px;
+	@include dimensionPosition(-754px, -369px, 40px, 40px, 1.0);
+	@media only screen and (max-width: 1200px){
+		@include dimensionPosition(-754px, -369px, 40px, 40px, 0.9);
+	}
+	@media only screen and (max-width: 980px){
+		@include dimensionPosition(-754px, -369px, 40px, 40px, 0.6);
+	}
     @media only screen and (max-width: 768px){
-	   background-position: -377px -184.5px;
-       height:20px;
-       width:20px;
+		@include dimensionPosition(-754px, -369px, 40px, 40px, 0.75);
+	}
+	@media only screen and (max-width: 480px){
+		@include dimensionPosition(-754px, -369px, 40px, 40px, 0.37);
 	}
 }
 .icon-google{
-    background-position:-801px -369px;
-    height:40px;
-    width:40px;
+	@include dimensionPosition(-801px, -369px, 40px, 40px, 1.0);
+	@media only screen and (max-width: 1200px){
+		@include dimensionPosition(-801px, -369px, 40px, 40px, 0.9);
+	}
+	@media only screen and (max-width: 980px){
+		@include dimensionPosition(-801px, -369px, 40px, 40px, 0.6);
+	}
     @media only screen and (max-width: 768px){
-	   background-position: -400.5px -184.5px;
-       height:20px;
-       width:20px;
+		@include dimensionPosition(-801px, -369px, 40px, 40px, 0.75);
+	}
+	@media only screen and (max-width: 480px){
+		@include dimensionPosition(-801px, -369px, 40px, 40px, 0.37);
 	}
 }
 .icon-face{
-    background-position:-848px -369px;
-    height:40px;
-    width:40px;
+	@include dimensionPosition(-848px, -369px, 40px, 40px, 1.0);
+	@media only screen and (max-width: 1200px){
+		@include dimensionPosition(-848px, -369px, 40px, 40px, 0.9);
+	}
+	@media only screen and (max-width: 980px){
+		@include dimensionPosition(-848px, -369px, 40px, 40px, 0.6);
+	}
     @media only screen and (max-width: 768px){
-	   background-position: -424px -184.5px;
-       height:20px;
-       width:20px;
+		@include dimensionPosition(-848px, -369px, 40px, 40px, 0.75);
+	}
+	@media only screen and (max-width: 480px){
+		@include dimensionPosition(-848px, -369px, 40px, 40px, 0.37);
 	}
 }
 .icon-link{
-    background-position:-895px -369px;
-    height:40px;
-    width:40px;
+	@include dimensionPosition(-895px, -369px, 40px, 40px, 1.0);
+	@media only screen and (max-width: 1200px){
+		@include dimensionPosition(-895px, -369px, 40px, 40px, 0.9);
+	}
+	@media only screen and (max-width: 980px){
+		@include dimensionPosition(-895px, -369px, 40px, 40px, 0.6);
+	}
     @media only screen and (max-width: 768px){
-	   background-position: -447.5px -184.5px;
-       height:20px;
-       width:20px;
+		@include dimensionPosition(-895px, -369px, 40px, 40px, 0.75);
+	}
+	@media only screen and (max-width: 480px){
+		@include dimensionPosition(-895px, -369px, 40px, 40px, 0.37);
 	}
 }
 .icon-question-big{
@@ -1521,14 +1476,26 @@ TOOLS
 }
 .icon-button-post{
 	@include dimensionPosition(-464px,-541px,43px,179px,1);
+	@media only screen and (max-width: 1200px){
+	   @include dimensionPosition(-495px,-541px,43px,387px,1);
+	}
+	@media only screen and (max-width: 1200px){
+	   @include dimensionPosition(-524px,-541px,43px,387px,1);
+	}
     @media only screen and (max-width: 768px){
-	@include dimensionPosition(-464px,-541px,43px,179px,0.5);
+		@include dimensionPosition(-464px,-541px,43px,179px,0.8);
 	}
 }
 .icon-button-post-large{
 	@include dimensionPosition(-464px,-593px,43px,387px,1);
-    @media only screen and (max-width: 768px){
-	   @include dimensionPosition(-464px,-593px,43px,387px,0.5);
+	@media only screen and (max-width: 1200px){
+	   @include dimensionPosition(-526px,-593px,43px,325px,1);
+	}
+	@media only screen and (max-width: 979px){
+	   @include dimensionPosition(-597px,-593px,43px,256px,1);
+	}
+	@media only screen and (max-width: 767px){
+	   @include dimensionPosition(-614px,-593px,43px,220px,0.8);
 	}
 }
 .icon-suitcase-job{
