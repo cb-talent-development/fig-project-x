@@ -23,14 +23,16 @@ ICON css
       background-size: 1500px 1400px; } }
 
 .icon-search {
+  background-size: 1500px 1400px;
   background-position: -9px -58px;
-  width: 15px;
-  height: 15px; }
-  @media only screen and (max-width: 768px) {
+  height: 15px;
+  width: 15px; }
+  @media (max-width: 767px) {
     .icon-search {
-      width: 7.5px;
-      height: 7.5px;
-      background-position: -4.5px -29px; } }
+      background-size: 2250px 2100px;
+      background-position: -13.5px -87px;
+      height: 22.499999999999996px;
+      width: 22.499999999999996px; } }
 
 .icon-close {
   background-position: -235px -10px;
@@ -2160,39 +2162,51 @@ TOOLS
   @media only screen and (max-width: 1200px) {
     .icon-button-post {
       background-size: 1500px 1400px;
-      background-position: -524px -541px;
+      background-position: -493px -542px;
       height: 43px;
       width: 387px; } }
   @media only screen and (max-width: 768px) {
     .icon-button-post {
-      background-size: 1200px 1120px;
-      background-position: -371.2px -432.80000000000007px;
-      height: 34.4px;
-      width: 143.20000000000002px; } }
+      background-size: 1500px 1400px;
+      background-position: -493px -542px;
+      height: 43px;
+      width: 160px; } }
+  @media only screen and (max-width: 479px) {
+    .icon-button-post {
+      background-size: 1500px 1400px;
+      background-position: -498px -542px;
+      height: 43px;
+      width: 160px; } }
 
 .icon-button-post-large {
   background-size: 1500px 1400px;
-  background-position: -464px -593px;
+  background-position: -464px -592px;
   height: 43px;
   width: 387px; }
   @media only screen and (max-width: 1200px) {
     .icon-button-post-large {
       background-size: 1500px 1400px;
-      background-position: -526px -593px;
+      background-position: -526px -592px;
       height: 43px;
       width: 325px; } }
   @media only screen and (max-width: 979px) {
     .icon-button-post-large {
       background-size: 1500px 1400px;
-      background-position: -597px -593px;
+      background-position: -597px -592px;
       height: 43px;
       width: 256px; } }
   @media only screen and (max-width: 767px) {
     .icon-button-post-large {
-      background-size: 1200px 1120px;
-      background-position: -491.20000000000005px -474.40000000000003px;
-      height: 34.4px;
-      width: 176px; } }
+      background-size: 1500px 1400px;
+      background-position: -441px -592px;
+      height: 43px;
+      width: 220px; } }
+  @media only screen and (max-width: 479px) {
+    .icon-button-post-large {
+      background-size: 1500px 1400px;
+      background-position: -601px -592px;
+      height: 43px;
+      width: 220px; } }
 
 .icon-suitcase-job {
   background-size: 1500px 1400px;

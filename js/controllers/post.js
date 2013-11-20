@@ -8,7 +8,7 @@ function PostCtr($scope,$http,$routeParams){
             postPretreatment(data,"big-");
             $scope.post=data;
             $scope.paths=[{
-                "txt":" Advice & Resource /",
+                "txt":" Advice & Resource",
                 "color":"black"
             },
             {

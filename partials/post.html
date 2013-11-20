@@ -1,21 +1,21 @@
 <div ng-include="'partials/path.html'"></div>
 <div class="menu-buttons">
-		<div class="icon-button-post-large button person">
-            <div class="picture" style="background: url('{{post.Author.Media.Url}}') center no-repeat;"></div>
-            <span class="name">author: {{post.Author.Name}}</span>
-        </div>
-        <div class="icon-button-post button element"><span>{{post.Type}}</span>
-        </div>
-		<div class="icon-button-post button element"><span>{{post.OnetIndustry.Name}}</span>
-        </div>
-        <div class="icon-button-post button element"><span>{{post.CareerPhase}}</span>
-        </div>
-		<div class="input-button search home">
-			<form onsubmit="search($('#search-input'))">
-				<input id="search-input" placeholder="Search">
-			</form>
-            <i onclick="search($('#search-input'))" class="icon-search"></i>
-		</div>
+	<div class="icon-button-post-large button person">
+		<div class="picture" style="background: url('{{post.Author.Media.Url}}') center no-repeat;"></div>
+		<span class="name">author: {{post.Author.Name}}</span>
+	</div>
+	<div class="icon-button-post button element"><span>{{post.Type}}</span>
+	</div>
+	<div class="icon-button-post button element"><span>{{post.OnetIndustry.Name}}</span>
+	</div>
+	<div class="icon-button-post button element"><span>{{post.CareerPhase}}</span>
+	</div>
+	<div class="input-button search home">
+		<form class="hidden-xs" onsubmit="search($('#search-input'))">
+			<input id="search-input" placeholder="Search" class="hidden-xs"><input id="search-input" class="visible-xs">
+		</form>
+		<i onclick="search($('#search-input'))" class="icon-search hidden-xs"></i><i onclick="" class="icon-search visible-xs"></i>
+	</div>
 </div>
 <div class="background-zig"></div>
 

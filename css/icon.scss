@@ -29,13 +29,9 @@ ICON css
 	}
 }
 .icon-search {
-    background-position:-9px -58px;
-	width: 15px;
-	height: 15px;
-    @media only screen and (max-width: 768px){
-       width: 7.5px;
-       height: 7.5px;
-	   background-position: -4.5px -29px;
+	@include dimensionPosition(-9px, -58px, 15px, 15px, 1.0);
+	@media( max-width: 767px){
+		@include dimensionPosition(-9px, -58px, 15px, 15px, 1.5);
 	}
 }
 .icon-close{
@@ -1480,22 +1476,28 @@ TOOLS
 	   @include dimensionPosition(-495px,-541px,43px,387px,1);
 	}
 	@media only screen and (max-width: 1200px){
-	   @include dimensionPosition(-524px,-541px,43px,387px,1);
+	   @include dimensionPosition(-493px,-542px,43px,387px,1);
 	}
     @media only screen and (max-width: 768px){
-		@include dimensionPosition(-464px,-541px,43px,179px,0.8);
+		@include dimensionPosition(-493px,-542px,43px,160px,1);
+	}
+	@media only screen and (max-width: 479px){
+		@include dimensionPosition(-498px,-542px,43px,160px,1);
 	}
 }
 .icon-button-post-large{
-	@include dimensionPosition(-464px,-593px,43px,387px,1);
+	@include dimensionPosition(-464px,-592px,43px,387px,1);
 	@media only screen and (max-width: 1200px){
-	   @include dimensionPosition(-526px,-593px,43px,325px,1);
+	   @include dimensionPosition(-526px,-592px,43px,325px,1);
 	}
 	@media only screen and (max-width: 979px){
-	   @include dimensionPosition(-597px,-593px,43px,256px,1);
+	   @include dimensionPosition(-597px,-592px,43px,256px,1);
 	}
 	@media only screen and (max-width: 767px){
-	   @include dimensionPosition(-614px,-593px,43px,220px,0.8);
+	   @include dimensionPosition(-441px,-592px,43px,220px,1);
+	}
+	@media only screen and (max-width: 479px){
+	   @include dimensionPosition(-601px,-592px,43px,220px,1);
 	}
 }
 .icon-suitcase-job{

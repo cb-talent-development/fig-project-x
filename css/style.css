@@ -299,29 +299,43 @@ Header css
   margin: 30px 0px;
   padding: 0px;
   border: none; }
-  .page-header h1 {
-    font-size: 50px;
-    display: inline; }
-    .page-header h1 img {
-      vertical-align: middle; }
-  .page-header .grey {
-    color: #bbbbbb; }
-  .page-header .orange {
-    color: #ee7835; }
-  .page-header .black {
-    color: #232323; }
-  .page-header .icon-bigarrow-bottom-orange {
-    position: relative;
-    top: 45px; }
-  .page-header .button-signout {
-    margin-top: 32px;
-    font-size: 16px;
-    padding-left: 10px;
-    width: 170px; }
+  .page-header .block {
+    line-height: 1.1; }
+    .page-header .block h1 {
+      font-size: 50px;
+      display: inline; }
+      .page-header .block h1 img {
+        vertical-align: middle; }
+    .page-header .block .grey {
+      color: #bbb; }
+      @media (max-width: 767px) {
+        .page-header .block .grey {
+          display: none; } }
+    .page-header .block .orange {
+      color: #ee7835; }
+    .page-header .block .black {
+      color: #232323; }
+    .page-header .block span {
+      display: inline-block; }
+      @media (max-width: 767px) {
+        .page-header .block span {
+          font-size: 25px !important; } }
+    .page-header .block .icon-bigarrow-bottom-orange {
+      position: relative;
+      top: 20px;
+      right: 3px; }
+      @media (max-width: 767px) {
+        .page-header .block .icon-bigarrow-bottom-orange {
+          right: 0px;
+          top: 14px; } }
+    .page-header .block .button-signout {
+      margin-top: 32px;
+      font-size: 16px;
+      padding-left: 10px;
+      width: 170px; }
   .page-header #profil-pic {
     height: 100px;
     width: 100px;
-    display: inline;
     -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
     border: 2px solid white;
     margin-right: 15px; }
@@ -545,9 +559,16 @@ General buttons classes
     display: block;
     width: 100%;
     height: 100%; }
+    @media (max-width: 79px) {
+      .input-button input {
+        paddding: 0px; } }
   .input-button .icon-search {
     margin-top: -8px;
     opacity: 0.8; }
+    @media (max-width: 767px) {
+      .input-button .icon-search {
+        margin-top: -11px !important;
+        margin-right: -6px; } }
 
 /*
 Menu with multiple button
@@ -567,6 +588,14 @@ Menu with multiple button
   @media only screen and (max-width: 767px) {
     .menu-buttons {
       width: 95%; } }
+  @media (max-width: 767px) {
+    .menu-buttons {
+      width: 470px;
+      height: 215px; } }
+  @media (max-width: 479px) {
+    .menu-buttons {
+      width: 300px;
+      height: 215px; } }
   .menu-buttons .search-button {
     float: right; }
   .menu-buttons .home {
@@ -574,26 +603,38 @@ Menu with multiple button
     width: 14.54%; }
   .menu-buttons .search {
     width: 12%; }
+    @media (max-width: 767px) {
+      .menu-buttons .search {
+        height: 40px;
+        width: 40px; } }
   .menu-buttons .last {
     margin-right: 0px; }
-  .menu-buttons .button b, .menu-buttons .input-button b {
-    top: 20px; }
+  .menu-buttons .button, .menu-buttons .input-button {
+    margin-bottom: 10px; }
+    .menu-buttons .button b, .menu-buttons .input-button b {
+      top: 20px; }
   .menu-buttons .element, .menu-buttons .person {
     text-transform: capitalize;
     -moz-box-shadow: none;
     -webkit-box-shadow: none;
     box-shadow: none;
     margin-right: 1.235%;
-    width: 15.4%; }
+    width: 15.4%;
+    float: left; }
     .menu-buttons .element .icon-arrow, .menu-buttons .person .icon-arrow {
       position: absolute;
       right: -25px;
       top: 0px; }
+    @media (max-width: 979px) {
+      .menu-buttons .element, .menu-buttons .person {
+        width: 167px; } }
     @media (max-width: 767px) {
       .menu-buttons .element, .menu-buttons .person {
-        margin-right: 5px;
-        width: 200px;
-        height: 35px; } }
+        height: 40px;
+        width: 150px; } }
+    @media (max-width: 479px) {
+      .menu-buttons .element, .menu-buttons .person {
+        width: 145px; } }
   .menu-buttons .person {
     width: 33.3%; }
     .menu-buttons .person .picture {
@@ -601,12 +642,20 @@ Menu with multiple button
       left: 0px;
       top: 0.5px;
       width: 42px;
-      height: 33.5px; }
+      height: 42px; }
+      @media (max-width: 767px) {
+        .menu-buttons .person .picture {
+          height: 39px;
+          width: 39px; } }
     .menu-buttons .person .name {
       margin-left: 35px; }
     @media (max-width: 767px) {
       .menu-buttons .person {
-        width: 220px; } }
+        height: 40px;
+        width: 410px; } }
+    @media (max-width: 479px) {
+      .menu-buttons .person {
+        width: 249px; } }
 
 /*
 End buttons

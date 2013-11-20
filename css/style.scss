@@ -501,35 +501,51 @@ Header css
     margin:30px 0px;
     padding:0px;
 	border: none;
-	h1{
-		font-size: 50px;
-		display: inline;
-		img{
-			vertical-align:middle;
+	.block{
+		line-height: 1.1;
+		h1{
+			font-size: 50px;
+			display: inline;
+			img{
+				vertical-align:middle;
+			}
+		}
+		.grey{
+			color: #bbb;
+			@media (max-width: 767px){
+				display: none;
+			}
+		}
+		.orange{
+			color: $orange;
+		}
+		.black{
+			color: rgb(35,35,35);
+		}
+		span{
+			display: inline-block;
+			@media(max-width: 767px){
+				font-size: 25px !important;
+			}
+		}
+		.icon-bigarrow-bottom-orange{
+			position:relative;
+			top:20px;
+			right: 3px;
+			@media(max-width: 767px){
+				right: 0px;
+				top: 14px;
+			}
+		}
+		.button-signout{
+			margin-top:32px;
+			font-size:16px;
+			padding-left:10px;width:170px;
 		}
 	}
-	.grey{
-		color: #bbb
-	}
-    .orange{
-        color: $orange;
-    }
-    .black{
-        color: rgb(35,35,35);
-    }
-    .icon-bigarrow-bottom-orange{
-        position:relative;
-        top:45px;
-    }
-    .button-signout{
-        margin-top:32px;
-        font-size:16px;
-        padding-left:10px;width:170px;
-    }
 	#profil-pic{
 		height: 100px;
 		width: 100px;
-		display: inline;
 		-webkit-box-shadow:0 1px 2px rgba(0,0,0,0.2);
 		border: 2px solid white;
 		margin-right: 15px;
@@ -783,10 +799,17 @@ General buttons classes
         display:block;
         width:100%;
         height:100%;
+		@media (max-width: 79px){
+			paddding: 0px;
+		}
     }
     .icon-search{
         margin-top:-8px;
         opacity:0.8;
+		@media (max-width: 767px){
+			margin-top: -11px !important;
+			margin-right: -6px;
+		}
     }
 }
 /*
@@ -795,6 +818,14 @@ Menu with multiple button
 .menu-buttons{
     padding-top:40px;padding-bottom:40px;
     @include main-block;
+	@media (max-width: 767px){
+		width: 470px;
+		height: 215px;
+	}
+	@media (max-width: 479px){
+		width: 300px;
+		height: 215px;
+	}
     .search-button{
         float:right;
     }
@@ -804,14 +835,20 @@ Menu with multiple button
     }
     .search{
         width:12%;
+		@media (max-width: 767px){
+			height: 40px;
+			width: 40px;
+		}
     }
     .last{
          margin-right:0px;
     }
+
     .button{
         b{
             top:20px;
         }
+		margin-bottom: 10px;
 
     }
     .element,.person{
@@ -821,15 +858,21 @@ Menu with multiple button
         box-shadow:none;
         margin-right:1.235%;
         width:15.4%;
+		float: left;
         .icon-arrow{
             position:absolute;
             right:-25px;
             top:0px;
         }
+		@media (max-width: 979px){
+			width: 167px;
+		}
 		@media (max-width: 767px){
-			margin-right:5px;
-			width:200px;
-			height:35px;
+			height: 40px;
+			width: 150px;
+		}
+		@media (max-width: 479px){
+			width: 145px;
 		}
     }
     .person{
@@ -838,13 +881,21 @@ Menu with multiple button
             position:absolute;
             left:0px;top:0.5px;
             width:42px;
-            height:33.5px;
+            height:42px;
+			@media (max-width: 767px){
+				height: 39px;
+				width: 39px;
+			}
         }
         .name{
             margin-left:35px;
         }
 		@media (max-width: 767px){
-			width:220px;
+			height: 40px;
+			width: 410px;
+		}
+		@media (max-width: 479px){
+			width: 249px;
 		}
     }
 }
