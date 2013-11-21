@@ -67,13 +67,9 @@ ICON css
 Arrow big
 **/
 .icon-bigarrow-bottom-grey{
-    background-position:-42px -63px;
-	width: 15px;
-	height: 8px;
+	@include dimensionPosition(-42px, -63px, 15px, 16px, 1.0);
     @media only screen and (max-width: 768px){
-       width: 7.5px;
-       height: 4px;
-	   background-position: -21px -31.5px;
+		@include dimensionPosition(-42px, -63px, 15px, 16px, 0.7);
 	}
 }
 .icon-bigarrow-bottom-orange{

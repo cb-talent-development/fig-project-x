@@ -76,14 +76,16 @@ ICON css
 Arrow big
 **/
 .icon-bigarrow-bottom-grey {
+  background-size: 1500px 1400px;
   background-position: -42px -63px;
-  width: 15px;
-  height: 8px; }
+  height: 15px;
+  width: 16px; }
   @media only screen and (max-width: 768px) {
     .icon-bigarrow-bottom-grey {
-      width: 7.5px;
-      height: 4px;
-      background-position: -21px -31.5px; } }
+      background-size: 1050px 979.9999999999999px;
+      background-position: -29.4px -44.099999999999994px;
+      height: 10.5px;
+      width: 11.2px; } }
 
 .icon-bigarrow-bottom-orange {
   background-position: -76px -63px;

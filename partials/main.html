@@ -1,6 +1,6 @@
 <div ng-include="'partials/first-connect.html'"></div>
 <div id="header" ng-include="'partials/path.html'"></div>
-<div class="menu-buttons">
+<div class="menu-buttons hidden-xs">
 		<div class="button home toggleMenu"><span>Most Recent <b class="icon-bigarrow-bottom-grey grey-icon"></b></span>
 			<ul class="subMenu dropdown">
 				<li><a href="#" title="Most Popular">Most Popular</a></li>
@@ -41,6 +41,19 @@
 				<input id="search-input" placeholder="Search">
 			</form>
 			<i onclick="search($('#search-input'))" class="icon-search"></i>
+		</div>
+</div>
+<div class="menu-buttons visible-xs">
+		<div class="button home toggleMenu"><span>Filter Content<b class="icon-bigarrow-bottom-grey grey-icon"></b></span>
+			<ul class="subMenu dropdown">
+				<li><a href="#" title="Most Popular">Most Popular</a></li>
+			</ul>
+		</div>
+		<div class="input-button search last">
+			<form onsubmit="search($('#search-input'))">
+				<input id="search-input" placeholder="">
+			</form>
+			<i onclick="" class="icon-search"></i>
 		</div>
 </div>
 <div class="background-zig"></div>
