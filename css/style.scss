@@ -255,7 +255,7 @@ $green-color:rgb(112,194,57);
 $dark-green-color:rgb(95,174,45);
 @mixin back-green{
     @include colorCommon;
-    background-color:$green-color !important;color:white;
+    background-color:$green-color !important;color:white !important;
 }
 .back-green-no-hover{
     @include back-green;

@@ -104,13 +104,9 @@ Arrow big
 }
 //
 .icon-check{
-    background-position:-273 -56px;
-	width: 22px;
-	height: 22px;
+    @include dimensionPosition( -273px, -56px, 22px, 22px, 1.0);
     @media only screen and (max-width: 768px){
-       width: 11px;
-       height: 11px;
-	   background-position: -136.5px -28px;
+       @include dimensionPosition( -273px, -56px, 22px, 22px, 0.7);
 	}
 }
 .icon-box-white{
@@ -134,7 +130,7 @@ Arrow big
 	}
 }
 .icon-box-checked{
-    background-position:-376 -59px;
+    background-position:-376px -59px;
 	width: 15px;
 	height: 15px;
     @media only screen and (max-width: 768px){
@@ -751,6 +747,10 @@ STARS
 Arrow
 */
 
+.icon-right-black{
+	@include dimensionPosition(-532px, -425px, 30px, 30px, 1.0);
+}
+
 //Sign up
 .icon-triangle-white{
 	@include dimensionPosition(-279px,-29px,7px,15px,3.0);
@@ -1173,23 +1173,15 @@ SOCIAL
 	}
 }
 .icon-check-lightgreen{
-    background-position:-989px -369px;
-    height:40px;
-    width:40px;
+	@include dimensionPosition(-989px, -369px, 41px, 40px, 0.7);
     @media only screen and (max-width: 768px){
-	   background-position: -494.5px -184.5px;
-       height:20px;
-       width:20px;
+	   @include dimensionPosition(-989px, -369px, 41px, 40px, 0.5);
 	}
 }
 .icon-check-big{
-    background-position:-707px -416px;
-    height:40px;
-    width:40px;
+	@include dimensionPosition(-708px, -416px, 41px, 41px, 0.7);
     @media only screen and (max-width: 768px){
-	   background-position: -353.5px -208px;
-       height:20px;
-       width:20px;
+		@include dimensionPosition(-708px, -416px, 41px, 41px, 0.5);
 	}
 }
 /*

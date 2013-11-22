@@ -14,5 +14,16 @@
             "Alt": "string",
             "Title": "string",
             "MetaTags": "string"
-    }
+    },
+	"Mail":"berniernico@hotmail.com",
+	"Phone":"555-123-4789",
+    "JobPhase":"Find the Job",
+    "JobTitle":"Senior Manager, Consumer Strategy & Insights",
+    "Website":"www.careerbuilder.com",
+    "Income":"$125,000-$150,000",
+    "State":"IL",
+	"City":"Ridgefield",
+    "Zipcode":"61261",
+    "Adress":"123 Maple Lane",
+    "Gender":"male"
 }

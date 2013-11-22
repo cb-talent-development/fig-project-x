@@ -118,14 +118,16 @@ Arrow big
       background-position: -122.5px -29.5px; } }
 
 .icon-check {
-  background-position: -273 -56px;
-  width: 22px;
-  height: 22px; }
+  background-size: 1500px 1400px;
+  background-position: -273px -56px;
+  height: 22px;
+  width: 22px; }
   @media only screen and (max-width: 768px) {
     .icon-check {
-      width: 11px;
-      height: 11px;
-      background-position: -136.5px -28px; } }
+      background-size: 1050px 979.9999999999999px;
+      background-position: -191.1px -39.199999999999996px;
+      height: 15.4px;
+      width: 15.4px; } }
 
 .icon-box-white {
   background-position: -340 -56px;
@@ -148,7 +150,7 @@ Arrow big
       background-position: -153px -28px; } }
 
 .icon-box-checked {
-  background-position: -376 -59px;
+  background-position: -376px -59px;
   width: 15px;
   height: 15px; }
   @media only screen and (max-width: 768px) {
@@ -1193,6 +1195,12 @@ STARS
 /*
 Arrow
 */
+.icon-right-black {
+  background-size: 1500px 1400px;
+  background-position: -532px -425px;
+  height: 30px;
+  width: 30px; }
+
 .icon-triangle-white {
   background-size: 4500px 4200px;
   background-position: -837px -87px;
@@ -1806,24 +1814,28 @@ SOCIAL
       width: 20px; } }
 
 .icon-check-lightgreen {
-  background-position: -989px -369px;
-  height: 40px;
-  width: 40px; }
+  background-size: 1050px 979.9999999999999px;
+  background-position: -692.3px -258.3px;
+  height: 28.7px;
+  width: 28px; }
   @media only screen and (max-width: 768px) {
     .icon-check-lightgreen {
+      background-size: 750px 700px;
       background-position: -494.5px -184.5px;
-      height: 20px;
+      height: 20.5px;
       width: 20px; } }
 
 .icon-check-big {
-  background-position: -707px -416px;
-  height: 40px;
-  width: 40px; }
+  background-size: 1050px 979.9999999999999px;
+  background-position: -495.59999999999997px -291.2px;
+  height: 28.7px;
+  width: 28.7px; }
   @media only screen and (max-width: 768px) {
     .icon-check-big {
-      background-position: -353.5px -208px;
-      height: 20px;
-      width: 20px; } }
+      background-size: 750px 700px;
+      background-position: -354px -208px;
+      height: 20.5px;
+      width: 20.5px; } }
 
 /*
 OTHER

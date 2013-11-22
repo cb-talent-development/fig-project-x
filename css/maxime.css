@@ -300,6 +300,125 @@ HOMEPAGE SCROLLABLE CONTENT
     font-family: HelveticaLightCondensed, sans-serif; }
 
 /*
+RESUME HERO
+*/
+.resume-hero {
+  padding-bottom: 100px;
+  width: 1170px;
+  display: block;
+  margin: auto; }
+  @media only screen and (max-width: 1200px) and (min-width: 980px) {
+    .resume-hero {
+      width: 975px; } }
+  @media only screen and (max-width: 979px) and (min-width: 768px) {
+    .resume-hero {
+      width: 765px; } }
+  @media only screen and (max-width: 767px) {
+    .resume-hero {
+      width: 95%; } }
+  .resume-hero .resume-buttons {
+    margin-bottom: 30px;
+    margin-top: -30px !important;
+    padding: 0px; }
+    .resume-hero .resume-buttons .button {
+      width: 170px;
+      margin: 0px;
+      margin-left: 27px;
+      padding-left: 40px; }
+      .resume-hero .resume-buttons .button i {
+        left: 11px;
+        top: 11px; }
+    .resume-hero .resume-buttons .button:first-child {
+      margin-left: 0px; }
+  .resume-hero .content .button-list {
+    width: 370px; }
+    .resume-hero .content .button-list .button {
+      width: 100%;
+      height: 60px;
+      padding-left: 50px;
+      padding-top: 18px;
+      margin-top: 10px;
+      font-size: 20px;
+      color: black; }
+      .resume-hero .content .button-list .button .icon-check-lightgreen, .resume-hero .content .button-list .button .icon-check-big {
+        left: 15px;
+        top: 15px; }
+      .resume-hero .content .button-list .button .icon-check-lightgreen {
+        display: none; }
+      .resume-hero .content .button-list .button .icon-right-black {
+        right: 0px;
+        top: 18px; }
+    .resume-hero .content .button-list .button:first-child {
+      margin-top: 0px; }
+    .resume-hero .content .button-list .button:hover {
+      color: #a7a7a7 !important; }
+      .resume-hero .content .button-list .button:hover .icon-check-big {
+        display: none; }
+      .resume-hero .content .button-list .button:hover .icon-check-lightgreen {
+        display: block; }
+  .resume-hero .content .resume-content {
+    background-color: white;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    border: none;
+    background: white;
+    width: 770px;
+    margin-left: 30px;
+    display: inline-block;
+    font-family: "Times New Roman",Georgia,Serif; }
+    .resume-hero .content .resume-content h2 {
+      font-size: 20px;
+      background-color: #c7c7c7;
+      margin: 0px;
+      padding: 20px;
+      font-family: "Times New Roman",Georgia,Serif; }
+    .resume-hero .content .resume-content .presentation {
+      padding: 20px; }
+      .resume-hero .content .resume-content .presentation .name {
+        font-size: 30px;
+        font-weight: 500; }
+      .resume-hero .content .resume-content .presentation ul {
+        padding-left: 20px;
+        list-style-type: diamond; }
+        .resume-hero .content .resume-content .presentation ul li {
+          padding: 0px 25px;
+          padding-left: 0px; }
+    .resume-hero .content .resume-content h3 {
+      text-align: center;
+      margin: 20px 0px;
+      font-weight: 900;
+      font-size: 15px;
+      font-family: "Times New Roman",Georgia,Serif; }
+    .resume-hero .content .resume-content .sortable .element {
+      border: solid 2px white;
+      position: relative; }
+      .resume-hero .content .resume-content .sortable .element h4 {
+        text-align: center;
+        padding: 0px;
+        font-weight: 800;
+        font-size: 16px;
+        font-family: "Times New Roman",Georgia,Serif; }
+      .resume-hero .content .resume-content .sortable .element .icons {
+        position: absolute;
+        top: 0px;
+        left: 30px; }
+        .resume-hero .content .resume-content .sortable .element .icons .button {
+          width: 30px;
+          height: 30px;
+          margin-left: 10px; }
+          .resume-hero .content .resume-content .sortable .element .icons .button i {
+            top: 5px;
+            left: 4px; }
+        .resume-hero .content .resume-content .sortable .element .icons .button:first-child {
+          margin-right: 10px;
+          margin-left: 0px; }
+      .resume-hero .content .resume-content .sortable .element p {
+        margin: 30px; }
+    .resume-hero .content .resume-content .sortable .element:hover {
+      border: solid 2px #e6e6e6;
+      cursor: pointer; }
+
+/*
 COLORS
 */
 .back-blue {
@@ -363,6 +482,69 @@ COLORS
 .back-orange:hover {
   cursor: pointer;
   background-color: #e0651f !important;
+  color: white !important; }
+
+.back-red {
+  padding-top: 12px;
+  padding-bottom: 8px;
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.3);
+  background-color: red !important;
+  color: white; }
+
+.back-red-no-hover {
+  padding-top: 12px;
+  padding-bottom: 8px;
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.3);
+  background-color: red !important;
+  color: white; }
+
+.back-red:hover {
+  cursor: pointer;
+  background-color: #e10000 !important;
+  color: white !important; }
+
+.back-pink {
+  padding-top: 12px;
+  padding-bottom: 8px;
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.3);
+  background-color: #6d1fa4 !important;
+  color: white; }
+
+.back-pink-no-hover {
+  padding-top: 12px;
+  padding-bottom: 8px;
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.3);
+  background-color: #6d1fa4 !important;
+  color: white; }
+
+.back-pink:hover {
+  cursor: pointer;
+  background-color: #4f0186 !important;
+  color: white !important; }
+
+.back-darkgrey {
+  padding-top: 12px;
+  padding-bottom: 8px;
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.3);
+  background-color: gray !important;
+  color: white; }
+
+.back-darkgrey-no-hover {
+  padding-top: 12px;
+  padding-bottom: 8px;
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.3);
+  background-color: gray !important;
+  color: white; }
+
+.back-darkgrey:hover {
+  cursor: pointer;
+  background-color: #626262 !important;
   color: white !important; }
 
 /*

@@ -167,7 +167,7 @@ COLOR
   box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.3);
   -webkit-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.3);
   background-color: #70c239 !important;
-  color: white; }
+  color: white !important; }
 
 .back-green {
   padding-top: 12px;
@@ -175,7 +175,7 @@ COLOR
   box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.3);
   -webkit-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.3);
   background-color: #70c239 !important;
-  color: white; }
+  color: white !important; }
 
 .back-green:hover {
   cursor: pointer;
