@@ -3728,7 +3728,7 @@ JOB RESULTS/RECOMMENDATIONS
         font-size: 16px;
         line-height: 18px;
         color: #9d9d9d; }
-      .saved-content .content .save .content-save .date {
+      .saved-content .content .save .content-save .date, .saved-content .content .save .content-save .level {
         font-size: 14px;
         line-height: 16px;
         color: #9d9d9d; }

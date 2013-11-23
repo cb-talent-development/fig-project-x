@@ -552,10 +552,16 @@ RESUME HERO
 				font-size: 15px;
 				font-family:"Times New Roman",Georgia,Serif;
 			}
-			.sortable{
-				.element{
+			ul.sortable{
+				margin: 0px;
+				padding: 0px;
+				list-style-type: none;
+				li.element{
+					margin: 0px;
+					padding: 0px;
 					border: solid 2px white;
 					position:relative;
+					background-color: white;
 					h4{
 						text-align: center;
 						padding: 0px;

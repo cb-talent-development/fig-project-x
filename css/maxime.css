@@ -389,34 +389,41 @@ RESUME HERO
       font-weight: 900;
       font-size: 15px;
       font-family: "Times New Roman",Georgia,Serif; }
-    .resume-hero .content .resume-content .sortable .element {
-      border: solid 2px white;
-      position: relative; }
-      .resume-hero .content .resume-content .sortable .element h4 {
-        text-align: center;
+    .resume-hero .content .resume-content ul.sortable {
+      margin: 0px;
+      padding: 0px;
+      list-style-type: none; }
+      .resume-hero .content .resume-content ul.sortable li.element {
+        margin: 0px;
         padding: 0px;
-        font-weight: 800;
-        font-size: 16px;
-        font-family: "Times New Roman",Georgia,Serif; }
-      .resume-hero .content .resume-content .sortable .element .icons {
-        position: absolute;
-        top: 0px;
-        left: 30px; }
-        .resume-hero .content .resume-content .sortable .element .icons .button {
-          width: 30px;
-          height: 30px;
-          margin-left: 10px; }
-          .resume-hero .content .resume-content .sortable .element .icons .button i {
-            top: 5px;
-            left: 4px; }
-        .resume-hero .content .resume-content .sortable .element .icons .button:first-child {
-          margin-right: 10px;
-          margin-left: 0px; }
-      .resume-hero .content .resume-content .sortable .element p {
-        margin: 30px; }
-    .resume-hero .content .resume-content .sortable .element:hover {
-      border: solid 2px #e6e6e6;
-      cursor: pointer; }
+        border: solid 2px white;
+        position: relative;
+        background-color: white; }
+        .resume-hero .content .resume-content ul.sortable li.element h4 {
+          text-align: center;
+          padding: 0px;
+          font-weight: 800;
+          font-size: 16px;
+          font-family: "Times New Roman",Georgia,Serif; }
+        .resume-hero .content .resume-content ul.sortable li.element .icons {
+          position: absolute;
+          top: 0px;
+          left: 30px; }
+          .resume-hero .content .resume-content ul.sortable li.element .icons .button {
+            width: 30px;
+            height: 30px;
+            margin-left: 10px; }
+            .resume-hero .content .resume-content ul.sortable li.element .icons .button i {
+              top: 5px;
+              left: 4px; }
+          .resume-hero .content .resume-content ul.sortable li.element .icons .button:first-child {
+            margin-right: 10px;
+            margin-left: 0px; }
+        .resume-hero .content .resume-content ul.sortable li.element p {
+          margin: 30px; }
+      .resume-hero .content .resume-content ul.sortable .element:hover {
+        border: solid 2px #e6e6e6;
+        cursor: pointer; }
 
 /*
 COLORS

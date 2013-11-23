@@ -54,11 +54,20 @@ function ToolCtr($scope, $http,$routeParams,pagination) {
                 $scope.help=data;
 	    });
     }
+	$scope.loadResumeHero=function(){
+        if($scope.resumeHero.length==0){
+            $http.get("data/json/resume-hero.json").success(function(data) {
+                // Job recommandation
+                $scope.resumeHero=data;
+	       });
+        }
+    }
     $scope.init=function(){
         var name=$routeParams.toolName;
         $scope.help={};
         $scope.loadHelp(name);
         $scope.occupations=[];
+		$scope.resumeHero=[];
         $scope.industries=[];
         if(name=="career-scape"){
             $scope.txt="Career Scape";
@@ -97,9 +106,11 @@ function ToolCtr($scope, $http,$routeParams,pagination) {
         $scope.savedIndustry="Choose an Industry";
         checkUserInfo($scope,$http);
         $scope.jobResulstTitle="Job for You:";
+		$scope.resumeHeroTitle="My Resumes, ";
         $scope.loadJob();
         $scope.loadIndustries();
         $scope.loadOccupations();
+        $scope.loadResumeHero();
     }
     $scope.init();
     $scope.$on('$includeContentLoaded', function(){
@@ -173,6 +184,20 @@ function LocallyGrownCtr($scope, $http){
 Jobinality
 */
 function JobinalityCtr($scope, $http){
+    /*
+    Constructor
+    */
+    $scope.init=function(){
+        //...
+    }
+    $scope.init();
+    
+    
+}
+/*
+Jobinality
+*/
+function ResumeHeroCtr($scope, $http){
     /*
     Constructor
     */
