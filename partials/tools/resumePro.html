@@ -23,7 +23,7 @@
 			<div class="button back-white" onclick="apparition($('.add-section'))"><i class="icon-add-section"></i>Add Section<i class="icon-right-black"></i></div>
 		</div>
 		<div class="resume-content left">
-			<h2>Preview of: <b>"For {{currentResume.Title}}"</b></h2>
+			<h2>Preview of: <b>"{{currentResume.Title}}"</b></h2>
 			<div class="presentation">
 				<div class="name">{{user.Name}}</div>
 				<ul>
@@ -35,39 +35,15 @@
 			</div>
 			<h3>MARKETING & RESEARCH PROFESSIONNAL</h3>
 			<ul class="sortable" id="sortable">
-				<li class="element ui-state-default">
+				<li class="element ui-state-default" ng-repeat="section in sections">
 					<div class="icons">
 						<div class="button back-green"><i class="icon-add-button"></i></div>
 						<div class="separation"></div>
 						<div class="button back-grey"><i class="icon-drag-button"></i></div>
 						<div class="button back-grey"><i class="icon-edit-button"></i></div>
 					</div>
-					<h4>Summary of Qualifications</h4>
-					<p>
-						Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat 
-						volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-					</p>
-					<p>
-						Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat 
-						volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-					</p>
-				</li>
-				<li class="element ui-state-default">
-					<div class="icons">
-						<div class="button back-green"><i class="icon-add-button"></i></div>
-						<div class="separation"></div>
-						<div class="button back-grey"><i class="icon-drag-button"></i></div>
-						<div class="button back-grey"><i class="icon-edit-button"></i></div>
-					</div>
-					<h4>Summary of Qualifications</h4>
-					<p>
-						Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat 
-						volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-					</p>
-					<p>
-						Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat 
-						volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-					</p>
+					<h4>{{section.Title}}</h4>
+					<div class="section-content" ng-bind-html="section.Content"></div>
 				</li>
 			</ul>
 		</div>
@@ -121,7 +97,7 @@
 			<div class="background" onclick="disparition($('.delete-resume'))"></div>
 			<div class="section">
 				<div class="header">
-					<span class"title">Delete {{currentResume.Title}}</span><i class="icon-x-black close" onclick="disparition($('.delete-resume'))"></i>
+					<span class"title">Delete "{{currentResume.Title}}"?</span><i class="icon-x-black close" onclick="disparition($('.delete-resume'))"></i>
 				</div>
 				<div class="content">
 					<div class="save link">

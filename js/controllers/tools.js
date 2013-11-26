@@ -206,6 +206,7 @@ function ResumeHeroCtr($scope, $http){
 		$scope.currentResume.Class="";
 		$scope.currentResume = resume;
 		$scope.currentResume.Class="selected";
+		$scope.sections = $scope.currentResume.Data;
 		return false;
 	}
 	$scope.addItem = function(item){
@@ -220,6 +221,7 @@ function ResumeHeroCtr($scope, $http){
 		$scope.resumeHero.splice(i, 1);
 		$scope.currentResume = $scope.resumeHero[i];
 		$scope.currentResume.Class="selected";
+		$scope.sections = $scope.currentResume.Data;
 		disparition($('.delete-resume'));
 	}
     
@@ -227,6 +229,8 @@ function ResumeHeroCtr($scope, $http){
 		if($scope.resumeHero[0]){
 			$scope.currentResume = $scope.resumeHero[0];
 			$scope.currentResume.Class="selected";
+			$scope.sections = $scope.currentResume.Data;
+			alert($scope.sections);
 		}else{
 			$scope.resumeHero[0] = null; //a finir
 		}

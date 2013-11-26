@@ -422,7 +422,7 @@ RESUME HERO
             height: 30px;
             border: 1px dotted #a7a7a7;
             display: inline-block; }
-        .resume-hero .content .resume-content ul.sortable li.element p {
+        .resume-hero .content .resume-content ul.sortable li.element .section-content {
           margin: 30px; }
       .resume-hero .content .resume-content ul.sortable .element:hover {
         border: solid 2px #e6e6e6;
