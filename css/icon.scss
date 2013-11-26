@@ -1,13 +1,17 @@
 /*
 ICON css
 */
+
+$sprite-width: 3000px;
+$sprite-height: 3597px;
+
 *[class^=icon-]{
     display: inline-block;
 	vertical-align: top;
     background: url("assets/x_sprite.png") no-repeat;
-    background-size: 1500px 1400px;
+    background-size: $sprite-width/2 $sprite-height/2;
     @media only screen and (max-width: 768px){
-        background-size: 750px 700px;
+        background-size: $sprite-width/4 $sprite-height/4;
 	}
 }
 .background-zig{
@@ -15,7 +19,7 @@ ICON css
     background: url('assets/zig.png') center center repeat-x;
 }
 @mixin dimensionPosition($posX,$posY,$height,$width,$rapp){
-    background-size:1500px * $rapp 1400px * $rapp;
+    background-size:$sprite-width/2 * $rapp $sprite-height/2 * $rapp;
     background-position: ($rapp * $posX) ($rapp * $posY);
     height: $height * $rapp;
     width: $width * $rapp;
@@ -1405,6 +1409,78 @@ $rapp:0.75;
 	   background-position: -77.5px -272.5px;
        height:96px;
        width:3px;
+	}
+}
+.icon-new-resume-button{
+	@include dimensionPosition(-765px,-427px,30px,30px,1);
+	@media (max-width: 767px){
+		@include dimensionPosition(-765px,-427x,30px,30px,0.7);
+	}
+}
+.icon-change-resume-button{
+	@include dimensionPosition(-810px,-427px,30px,30px,1);
+	@media (max-width: 767px){
+		@include dimensionPosition(-810px,-427px,30px,30px,0.7);
+	}
+}
+.icon-export-resume-button{
+	@include dimensionPosition(-860px,-427px,30px,30px,1);
+	@media (max-width: 767px){
+		@include dimensionPosition(-1139px,-427px,30px,30px,0.7);
+	}
+}
+.icon-post-resume-button{
+	@include dimensionPosition(-905px,-428px,30px,30px,1);
+	@media (max-width: 767px){
+		@include dimensionPosition(-1183px,-428px,30px,30px,0.7);
+	}
+}
+.icon-delete-resume-button{
+	@include dimensionPosition(-953px,-427px,30px,30px,1);
+	@media (max-width: 767px){
+		@include dimensionPosition(-946,-427px,30px,30px,0.7);
+	}
+}
+.icon-add-section{
+	@include dimensionPosition(-1276px,-421px,30px,30px,1);
+	@media (max-width: 767px){
+		@include dimensionPosition(-1276px,-421px,30px,30px,0.7);
+	}
+}
+.icon-add-button{
+	@include dimensionPosition(-1046px,-426px,30px,30px,1);
+	@media (max-width: 767px){
+		@include dimensionPosition(-1046px,-426px,30px,30px,0.7);
+	}
+}
+.icon-drag-button{
+	@include dimensionPosition(-1093px,-426px,30px,30px,1);
+	@media (max-width: 767px){
+		@include dimensionPosition(-1093px,-426px,30px,30px,0.7);
+	}
+}
+.icon-edit-button{
+	@include dimensionPosition(-1139px,-426px,30px,30px,1);
+	@media (max-width: 767px){
+		@include dimensionPosition(-1139px,-426px,30px,30px,0.7);
+	}
+}
+.icon-not-completed{
+	@include dimensionPosition(-1183px,-421px,30px,30px,1);
+	@media (max-width: 767px){
+		@include dimensionPosition(-1183px,-421px,30px,30px,0.7);
+	}
+}
+.icon-completed-check{
+	@include dimensionPosition(-1231px,-421px,30px,30px,1);
+	@media (max-width: 767px){
+		@include dimensionPosition(-1231px,-421px,30px,30px,0.7);
+	}
+}
+.icon-add-section{
+	@include dimensionPosition(-1276px,-421px,30px,30px,1);
+	@media (max-width: 767px){
+		@include dimensionPosition(-1276px,-421px,30px,30px,0.7);
 	}
 }
 /*

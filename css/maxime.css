@@ -340,11 +340,9 @@ RESUME HERO
       margin-top: 10px;
       font-size: 20px;
       color: black; }
-      .resume-hero .content .button-list .button .icon-check-lightgreen, .resume-hero .content .button-list .button .icon-check-big {
+      .resume-hero .content .button-list .button .icon-completed-check, .resume-hero .content .button-list .button .icon-not-completed, .resume-hero .content .button-list .button .icon-add-section {
         left: 15px;
         top: 15px; }
-      .resume-hero .content .button-list .button .icon-check-lightgreen {
-        display: none; }
       .resume-hero .content .button-list .button .icon-right-black {
         right: 0px;
         top: 18px; }
@@ -419,6 +417,11 @@ RESUME HERO
           .resume-hero .content .resume-content ul.sortable li.element .icons .button:first-child {
             margin-right: 10px;
             margin-left: 0px; }
+          .resume-hero .content .resume-content ul.sortable li.element .icons .separation {
+            width: 1px;
+            height: 30px;
+            border: 1px dotted #a7a7a7;
+            display: inline-block; }
         .resume-hero .content .resume-content ul.sortable li.element p {
           margin: 30px; }
       .resume-hero .content .resume-content ul.sortable .element:hover {

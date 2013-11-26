@@ -3272,7 +3272,8 @@ DIALOG
     .dialog .section .content {
       width: 100%; }
     .dialog .section .footer-dialog {
-      padding: 22px; }
+      padding: 22px;
+      border-top: 1px solid #cfcfcf; }
       .dialog .section .footer-dialog .button-save, .dialog .section .footer-dialog .button-next, .dialog .section .footer-dialog .button-previous {
         position: relative;
         padding: 0px 14px;
@@ -3467,6 +3468,78 @@ Tool CSS
         margin: auto; }
     .tool .save-section .section .footer-dialog .button, .tool .save-section .section .footer-dialog .input-button {
       float: right; }
+  .tool .add-section .section {
+    width: 1200px; }
+    .tool .add-section .section .header {
+      padding: 20px; }
+    .tool .add-section .section .title-edit {
+      border-bottom: 1px solid #cfcfcf;
+      padding: 20px; }
+      .tool .add-section .section .title-edit .label {
+        margin: 0px;
+        padding: 0px;
+        margin-bottom: 20px;
+        display: block;
+        color: #9d9d9d;
+        background: none;
+        text-align: left;
+        font-size: 20px; }
+      .tool .add-section .section .title-edit input {
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+        -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+        border: none;
+        background: white;
+        height: 70px;
+        width: 500px;
+        border: none;
+        display: block;
+        padding: 10px;
+        font-size: 30px; }
+    .tool .add-section .section .content {
+      border-bottom: 1px solid #cfcfcf;
+      padding: 20px; }
+      .tool .add-section .section .content .button-menu {
+        width: 1170px; }
+        .tool .add-section .section .content .button-menu .button-group {
+          display: inline-block;
+          float: left;
+          width: 170px;
+          margin-left: 28px;
+          height: 40px; }
+          .tool .add-section .section .content .button-menu .button-group .button, .tool .add-section .section .content .button-menu .button-group .input-button {
+            display: inline-block;
+            float: left;
+            height: 40px;
+            margin: 0px;
+            color: black;
+            font-weight: 550; }
+            .tool .add-section .section .content .button-menu .button-group .button .icon-bigarrow-right-black, .tool .add-section .section .content .button-menu .button-group .input-button .icon-bigarrow-right-black {
+              top: 13px; }
+            .tool .add-section .section .content .button-menu .button-group .button .icon-bigarrow-bottom-grey, .tool .add-section .section .content .button-menu .button-group .input-button .icon-bigarrow-bottom-grey {
+              top: 18px; }
+          .tool .add-section .section .content .button-menu .button-group .plain {
+            width: 170px; }
+          .tool .add-section .section .content .button-menu .button-group .two {
+            width: 85px; }
+          .tool .add-section .section .content .button-menu .button-group .three {
+            width: 56.6px; }
+        .tool .add-section .section .content .button-menu .button-group:first-child {
+          margin-left: 0px; }
+      .tool .add-section .section .content textarea {
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+        -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+        border: none;
+        background: white;
+        width: 100%;
+        height: 300px;
+        border: none;
+        margin-top: 20px;
+        padding: 10px;
+        font-size: 30px; }
+    .tool .add-section .section .footer-dialog .button, .tool .add-section .section .footer-dialog .input-button {
+      float: right;
+      background-color: #70c239;
+      color: white !important; }
 
 /*
 Locally Grown
@@ -3637,7 +3710,7 @@ JOB RESULTS/RECOMMENDATIONS
   .scrollable .step {
     display: inline-block; }
 
-.job-results, .saved-content {
+.job-results, .saved-content, .delete-items {
   width: 1170px;
   display: block;
   margin: auto;
@@ -3650,52 +3723,52 @@ JOB RESULTS/RECOMMENDATIONS
   margin-bottom: 60px;
   background: white; }
   @media only screen and (max-width: 1200px) and (min-width: 980px) {
-    .job-results, .saved-content {
+    .job-results, .saved-content, .delete-items {
       width: 975px; } }
   @media only screen and (max-width: 979px) and (min-width: 768px) {
-    .job-results, .saved-content {
+    .job-results, .saved-content, .delete-items {
       width: 765px; } }
   @media only screen and (max-width: 767px) {
-    .job-results, .saved-content {
+    .job-results, .saved-content, .delete-items {
       width: 95%; } }
-  .job-results .icon-arrow-left-big-blue, .job-results .icon-arrow-right-big-blue, .saved-content .icon-arrow-left-big-blue, .saved-content .icon-arrow-right-big-blue {
+  .job-results .icon-arrow-left-big-blue, .job-results .icon-arrow-right-big-blue, .saved-content .icon-arrow-left-big-blue, .saved-content .icon-arrow-right-big-blue, .delete-items .icon-arrow-left-big-blue, .delete-items .icon-arrow-right-big-blue {
     position: absolute;
     top: 50%;
     margin-top: -26px;
     -moz-user-select: none;
     -webkit-user-select: none;
     -ms-user-select: none; }
-  .job-results .icon-arrow-left-big-blue, .saved-content .icon-arrow-left-big-blue {
+  .job-results .icon-arrow-left-big-blue, .saved-content .icon-arrow-left-big-blue, .delete-items .icon-arrow-left-big-blue {
     left: 40px; }
-  .job-results .icon-arrow-right-big-blue, .saved-content .icon-arrow-right-big-blue {
+  .job-results .icon-arrow-right-big-blue, .saved-content .icon-arrow-right-big-blue, .delete-items .icon-arrow-right-big-blue {
     right: 40px; }
-  .job-results i:hover, .saved-content i:hover {
+  .job-results i:hover, .saved-content i:hover, .delete-items i:hover {
     cursor: pointer; }
-  .job-results .title, .saved-content .title {
+  .job-results .title, .saved-content .title, .delete-items .title {
     font-size: 20px;
     padding: 0px 25px;
     padding-top: 22px;
     padding-bottom: 20px;
     border-bottom: 1px solid #9d9d9d; }
-  .job-results .content, .saved-content .content {
+  .job-results .content, .saved-content .content, .delete-items .content {
     position: relative; }
-    .job-results .content .scrollable-content, .saved-content .content .scrollable-content {
+    .job-results .content .scrollable-content, .saved-content .content .scrollable-content, .delete-items .content .scrollable-content {
       width: 80%;
       height: 82%; }
-    .job-results .content .scrollable, .saved-content .content .scrollable {
+    .job-results .content .scrollable, .saved-content .content .scrollable, .delete-items .content .scrollable {
       height: 100%; }
-    .job-results .content .job-recommandation, .job-results .content .save, .saved-content .content .job-recommandation, .saved-content .content .save {
+    .job-results .content .job-recommandation, .job-results .content .save, .saved-content .content .job-recommandation, .saved-content .content .save, .delete-items .content .job-recommandation, .delete-items .content .save {
       text-align: center;
       text-transform: uppercase;
       height: 100%;
       width: 187px;
       display: inline-block;
       vertical-align: top; }
-    .job-results .content .pages, .saved-content .content .pages {
+    .job-results .content .pages, .saved-content .content .pages, .delete-items .content .pages {
       text-align: center; }
-      .job-results .content .pages .activated, .saved-content .content .pages .activated {
+      .job-results .content .pages .activated, .saved-content .content .pages .activated, .delete-items .content .pages .activated {
         background-color: #09335b !important; }
-      .job-results .content .pages .ball, .saved-content .content .pages .ball {
+      .job-results .content .pages .ball, .saved-content .content .pages .ball, .delete-items .content .pages .ball {
         margin: 0px 5px;
         display: inline-block;
         vertical-align: top;
@@ -3703,7 +3776,7 @@ JOB RESULTS/RECOMMENDATIONS
         height: 15px;
         border-radius: 10px;
         background-color: #ccd6de; }
-      .job-results .content .pages .ball:hover, .saved-content .content .pages .ball:hover {
+      .job-results .content .pages .ball:hover, .saved-content .content .pages .ball:hover, .delete-items .content .pages .ball:hover {
         cursor: pointer; }
 
 .saved-content .title {
@@ -3712,6 +3785,8 @@ JOB RESULTS/RECOMMENDATIONS
   height: 325px; }
   .saved-content .content .scrollable-content {
     height: 85%; }
+  .saved-content .content .selected {
+    border: 2px solid red; }
   .saved-content .content .save {
     margin-top: 45px;
     position: relative;

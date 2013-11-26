@@ -201,10 +201,35 @@ function ResumeHeroCtr($scope, $http){
     /*
     Constructor
     */
+	
+	$scope.selectResume = function(resume){
+		$scope.currentResume.Class="";
+		$scope.currentResume = resume;
+		$scope.currentResume.Class="selected";
+		return false;
+	}
+	$scope.addItem = function(item){
+		$scope.resumeHero.push(item);
+		$scope.newItem = null;
+	}
+	$scope.removeItem = function(){
+		var i = $scope.currentResume.Id;
+		for(var j = i; j < $scope.resumeHero.length; j++){
+			$scope.resumeHero[j].Id = $scope.resumeHero[j].Id - 1;
+		}
+		$scope.resumeHero.splice(i, 1);
+		$scope.currentResume = $scope.resumeHero[i];
+		$scope.currentResume.Class="selected";
+		disparition($('.delete-resume'));
+	}
+    
     $scope.init=function(){
-        //...
+		if($scope.resumeHero[0]){
+			$scope.currentResume = $scope.resumeHero[0];
+			$scope.currentResume.Class="selected";
+		}else{
+			$scope.resumeHero[0] = null; //a finir
+		}
     }
     $scope.init();
-    
-    
 }

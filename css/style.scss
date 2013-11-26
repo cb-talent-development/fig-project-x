@@ -29,6 +29,7 @@ $pink-2: #CD6090;
 $pink-3: #CD6090;
 
 $orange: rgb(244,125,61);
+$green: rgb(112, 194, 57);
 
 $lightBlue: rgb(204,214,222);
 $darkGrey:rgb(128, 128, 128);
@@ -2456,6 +2457,7 @@ DIALOG
         .content{width:100%;}
         .footer-dialog{
             padding:22px;
+			border-top: 1px solid $lightGrey;
                 .button-save,.button-next,.button-previous{
                     position:relative;
                     padding:0px 14px;
@@ -2663,6 +2665,93 @@ Tool CSS
             }
         }
     }
+	.add-section{
+		.section{
+			width: 1200px;
+			.header{
+				padding: 20px;
+			}
+			.title-edit{
+				border-bottom: 1px solid $lightGrey;
+				padding: 20px;
+				.label{
+					margin: 0px;
+					padding: 0px;
+					margin-bottom: 20px;
+					display: block;
+					color: $grey;
+					background: none;
+					text-align: left;
+					font-size: 20px;
+				}
+				input{
+					@include shadow;
+					height: 70px;
+					width: 500px;
+					border: none;
+					display: block;
+					padding: 10px;
+					font-size: 30px;
+				}
+			}
+			.content{
+				border-bottom: 1px solid $lightGrey;
+				padding: 20px;
+				.button-menu{
+					width: 1170px;
+					.button-group{
+						display: inline-block;
+						float: left;
+						width: 170px;
+						margin-left: 28px;
+						height: 40px;
+						.button{
+							display: inline-block;
+							float: left;
+							height: 40px;
+							margin: 0px;
+							color: black;
+							font-weight: 550;
+							.icon-bigarrow-right-black{
+								top: 13px;
+							}
+							.icon-bigarrow-bottom-grey{
+								top: 18px;
+							}
+						}
+						.plain{
+							width: 170px;
+						}
+						.two{
+							width: 85px;
+						}
+						.three{
+							width: 56.6px;
+						}
+					}
+					.button-group:first-child{
+						margin-left: 0px;
+					}
+				}
+				textarea{
+					@include shadow;
+					width: 100%;
+					height: 300px;
+					border: none;	
+					margin-top: 20px;
+					padding: 10px;
+					font-size: 30px;
+				}
+			}
+			.footer-dialog{
+				.button{
+					float:right;
+					background-color: $green;
+					color: white !important;
+				}
+			}
+		}
+	}
 }
 /*
 Locally Grown
@@ -2852,7 +2941,7 @@ JOB RESULTS/RECOMMENDATIONS
         display:inline-block;
     }
 }
-.job-results,.saved-content{
+.job-results,.saved-content, .delete-items{
         @include main-block;
         text-align:center;
         position:relative;
@@ -2877,7 +2966,6 @@ JOB RESULTS/RECOMMENDATIONS
             padding:0px 25px;
             padding-top:22px;
             padding-bottom:20px;
-            
             border-bottom:1px solid $grey;
         }
         .content{
@@ -2921,6 +3009,9 @@ JOB RESULTS/RECOMMENDATIONS
         .scrollable-content{
             height:85%;
         }
+		.selected{
+			border: 2px solid red;
+		}
         .save{
             margin-top:45px;
             position:relative;

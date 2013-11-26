@@ -2,28 +2,28 @@
 	<div ng-include="'partials/tools/parts/resume-hero.html'">
 	</div>
 	<div class="resume-buttons">
-		<div class="button back-green"><i class="icon-question"></i> New Resume </div>
-		<div class="button back-pink"><i class="icon-question"></i> New Resume </div>
-		<div class="button back-blue"><i class="icon-question"></i> New Resume </div>
-		<div class="button back-orange"><i class="icon-question"></i> New Resume </div>
-		<div class="button back-red"><i class="icon-question"></i> New Resume </div>
-		<div class="button back-darkgrey"><i class="icon-question"></i> New Resume </div>
+		<div class="button back-green"><i class="icon-new-resume-button"></i> New Resume </div>
+		<div class="button back-pink"><i class="icon-change-resume-button"></i>Change Template</div>
+		<div class="button back-blue"><i class="icon-export-resume-button"></i>Export Resume</div>
+		<div class="button back-orange"><i class="icon-post-resume-button"></i>Post Resume</div>
+		<div class="button back-red" onclick="apparition($('.delete-resume'))"><i class="icon-delete-resume-button"></i>Delete Resume</div>
+		<div class="button back-darkgrey"><i class="icon-question"></i>Help</div>
 	</div>
 	<div class="content">
 		<div class="button-list left">
-			<div class="button back-white"><i class="icon-check-lightgreen"></i><i class="icon-check-big"></i>Contact Information<i class="icon-right-black"></i></div>
-			<div class="button back-white"><i class="icon-check-lightgreen"></i><i class="icon-check-big"></i>Work Experience<i class="icon-right-black"></i></div>
-			<div class="button back-white"><i class="icon-check-lightgreen"></i><i class="icon-check-big"></i>Education & Career Training<i class="icon-right-black"></i></div>
-			<div class="button back-white"><i class="icon-check-lightgreen"></i><i class="icon-check-big"></i>Skills<i class="icon-right-black"></i></div>
-			<div class="button back-white"><i class="icon-check-lightgreen"></i><i class="icon-check-big"></i>Awards & Honors<i class="icon-right-black"></i></div>
-			<div class="button back-white"><i class="icon-check-lightgreen"></i><i class="icon-check-big"></i>Tools & Technology<i class="icon-right-black"></i></div>
-			<div class="button back-white"><i class="icon-check-lightgreen"></i><i class="icon-check-big"></i>Publications<i class="icon-right-black"></i></div>
-			<div class="button back-white"><i class="icon-check-lightgreen"></i><i class="icon-check-big"></i>Affiliations<i class="icon-right-black"></i></div>
-			<div class="button back-white"><i class="icon-check-lightgreen"></i><i class="icon-check-big"></i>Volunteer Work<i class="icon-right-black"></i></div>
-			<div class="button back-white"><i class="icon-check-lightgreen"></i><i class="icon-check-big"></i>Add Section<i class="icon-right-black"></i></div>
+			<div class="button back-white"><i class="icon-completed-check"></i>Contact Information<i class="icon-right-black"></i></div>
+			<div class="button back-white"><i class="icon-completed-check"></i>Work Experience<i class="icon-right-black"></i></div>
+			<div class="button back-white"><i class="icon-completed-check"></i>Education & Career Training<i class="icon-right-black"></i></div>
+			<div class="button back-white"><i class="icon-completed-check"></i>Skills<i class="icon-right-black"></i></div>
+			<div class="button back-white"><i class="icon-not-completed"></i>Awards & Honors<i class="icon-right-black"></i></div>
+			<div class="button back-white"><i class="icon-not-completed"></i>Tools & Technology<i class="icon-right-black"></i></div>
+			<div class="button back-white"><i class="icon-not-completed"></i>Publications<i class="icon-right-black"></i></div>
+			<div class="button back-white"><i class="icon-not-completed"></i>Affiliations<i class="icon-right-black"></i></div>
+			<div class="button back-white"><i class="icon-not-completed"></i>Volunteer Work<i class="icon-right-black"></i></div>
+			<div class="button back-white" onclick="apparition($('.add-section'))"><i class="icon-add-section"></i>Add Section<i class="icon-right-black"></i></div>
 		</div>
 		<div class="resume-content left">
-			<h2>Preview of: <b>"For Franklin EDC Hospital"</b></h2>
+			<h2>Preview of: <b>"For {{currentResume.Title}}"</b></h2>
 			<div class="presentation">
 				<div class="name">{{user.Name}}</div>
 				<ul>
@@ -37,9 +37,10 @@
 			<ul class="sortable" id="sortable">
 				<li class="element ui-state-default">
 					<div class="icons">
-						<div class="button back-green"><i class="icon-question"></i></div>
-						<div class="button back-grey"><i class="icon-question"></i></div>
-						<div class="button back-grey"><i class="icon-question"></i></div>
+						<div class="button back-green"><i class="icon-add-button"></i></div>
+						<div class="separation"></div>
+						<div class="button back-grey"><i class="icon-drag-button"></i></div>
+						<div class="button back-grey"><i class="icon-edit-button"></i></div>
 					</div>
 					<h4>Summary of Qualifications</h4>
 					<p>
@@ -53,41 +54,10 @@
 				</li>
 				<li class="element ui-state-default">
 					<div class="icons">
-						<div class="button back-green"><i class="icon-question"></i></div>
-						<div class="button back-grey"><i class="icon-question"></i></div>
-						<div class="button back-grey"><i class="icon-question"></i></div>
-					</div>
-					<h4>Summary of Qualifications</h4>
-					<p>
-						Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat 
-						volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-					</p>
-					<p>
-						Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat 
-						volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-					</p>
-				</li>
-				<li class="element ui-state-default">
-					<div class="icons">
-						<div class="button back-green"><i class="icon-question"></i></div>
-						<div class="button back-grey"><i class="icon-question"></i></div>
-						<div class="button back-grey"><i class="icon-question"></i></div>
-					</div>
-					<h4>Summary of Qualifications</h4>
-					<p>
-						Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat 
-						volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-					</p>
-					<p>
-						Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat 
-						volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-					</p>
-				</li>
-				<li class="element ui-state-default">
-					<div class="icons">
-						<div class="button back-green"><i class="icon-question"></i></div>
-						<div class="button back-grey"><i class="icon-question"></i></div>
-						<div class="button back-grey"><i class="icon-question"></i></div>
+						<div class="button back-green"><i class="icon-add-button"></i></div>
+						<div class="separation"></div>
+						<div class="button back-grey"><i class="icon-drag-button"></i></div>
+						<div class="button back-grey"><i class="icon-edit-button"></i></div>
 					</div>
 					<h4>Summary of Qualifications</h4>
 					<p>
@@ -102,6 +72,75 @@
 			</ul>
 		</div>
 		<div class="clear"></div>
+		<div class="add-section dialog">
+			<div class="background" onclick="disparition($('.add-section'))"></div>
+			<div class="section">
+				<div class="header">
+					<span class"title">Template modal for ResumeHero</span><i class="icon-x-black close" onclick="disparition($('.add-section'))"></i>
+				</div>
+				<div class="title-edit">
+					<i class="label">EDIT SECTION TITLE</i>
+					<input placeholder="Title"/>
+				</div>
+				<div class="content">
+					<div class="button-menu">
+						<div class="button-group">
+							<div class="button plain">Normal Text<i class="icon-bigarrow-bottom-grey"></i></div>
+						</div>
+						<div class="button-group">
+							<div class="button three">Bold</div>
+							<div class="button three">Italic</div>
+							<div class="button three">UL</div>
+						</div>
+						<div class="button-group">
+							<div class="button two"></div>
+							<div class="button two"></div>
+						</div>
+						<div class="button-group">
+							<div class="button two"></div>
+							<div class="button two"></div>
+						</div>
+						<div class="button-group">
+							<div class="button three"></div>
+							<div class="button three"></div>
+							<div class="button three"></div>
+						</div>
+						<div class="button-group">
+							<div class="button plain">Check Spelling<i class="icon-bigarrow-right-black"></i></div>
+						</div>
+					</div>
+					<textarea placeholder="Content"></textarea>
+				</div>
+				<div class="footer-dialog">
+					<div class="button green" onclick="">Save & Close</div>
+					<div class="clear"></div>
+				</div>
+			</div>
+		</div>
+		<div class="delete-resume dialog">
+			<div class="background" onclick="disparition($('.delete-resume'))"></div>
+			<div class="section">
+				<div class="header">
+					<span class"title">Delete {{currentResume.Title}}</span><i class="icon-x-black close" onclick="disparition($('.delete-resume'))"></i>
+				</div>
+				<div class="content">
+					<div class="save link">
+						<a href="/"></a>
+						<div class="icon-resumePro-saved"></div>
+						<div class="content-save">
+							<div class="name">{{currentResume.Title}}</div>
+							<div class="type">{{currentResume.Type}}</div>
+							<div class="level">{{currentResume.Level}}</div>
+						</div>
+					</div>
+				</div>
+				<div class="footer-dialog">
+					<div class="button back-white" onclick="disparition($('.delete-resume'))">Cancel</div>
+					<div class="button back-red right" ng-click="removeItem()">Delete</div>
+					<div class="clear"></div>
+				</div>
+			</div>
+		</div>
 	</div>
 </div>
 
