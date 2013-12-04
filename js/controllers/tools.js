@@ -202,27 +202,36 @@ function ResumeHeroCtr($scope, $http){
     Constructor
     */
 	
+	//Select the current Resume
 	$scope.selectResume = function(resume){
 		$scope.currentResume.Class="";
 		$scope.currentResume = resume;
 		$scope.currentResume.Class="selected";
 		$scope.sections = $scope.currentResume.Data;
 		return false;
-	}
-	$scope.addItem = function(item){
-		$scope.resumeHero.push(item);
-		$scope.newItem = null;
-	}
+	}	
+	
+	//Delete the current selected Resume
 	$scope.removeItem = function(){
 		var i = $scope.currentResume.Id;
 		for(var j = i; j < $scope.resumeHero.length; j++){
 			$scope.resumeHero[j].Id = $scope.resumeHero[j].Id - 1;
 		}
 		$scope.resumeHero.splice(i, 1);
-		$scope.currentResume = $scope.resumeHero[i];
+		$scope.currentResume = $scope.resumeHero[i]; //Select automatically the next resume
 		$scope.currentResume.Class="selected";
 		$scope.sections = $scope.currentResume.Data;
-		disparition($('.delete-resume'));
+		disparition($('.delete-resume')); //Close pop-up
+	}
+	
+	//Add a new edited section in the current selected resume
+	$scope.saveSection = function () {
+		var content = $('.textarea').val();
+		$scope.currentResume.Data.push({
+			'Title':$scope.newSectionTitle,
+			'Content':content
+	   });
+	   disparition($('.add-section')); //close pop-up
 	}
     
     $scope.init=function(){
@@ -230,10 +239,10 @@ function ResumeHeroCtr($scope, $http){
 			$scope.currentResume = $scope.resumeHero[0];
 			$scope.currentResume.Class="selected";
 			$scope.sections = $scope.currentResume.Data;
-			alert($scope.sections);
 		}else{
 			$scope.resumeHero[0] = null; //a finir
 		}
+		apparition($('.get-started-resume'));
     }
     $scope.init();
 }

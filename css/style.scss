@@ -506,51 +506,50 @@ Header css
 	@media(max-width: 767px){
 		@include main-block;
 	}
-	.block{
-		line-height: 1.1;
-		h1{
-			font-size: 50px;
-			display: inline;
-			img{
-				vertical-align:middle;
-			}
+	line-height: 1.1;
+	h1{
+		font-size: 50px;
+		display: inline;
+		img{
+			vertical-align:middle;
 		}
-		.grey{
-			color: #bbb;
-			@media (max-width: 767px){
-				display: none;
-			}
+	}
+	.grey{
+		color: #bbb;
+		@media (max-width: 767px){
+			display: none;
 		}
-		.orange{
-			color: $orange;
+	}
+	.orange{
+		color: $orange;
+	}
+	.black{
+		color: rgb(35,35,35);
+	}
+	span{
+		display: inline-block;
+		@media(max-width: 767px){
+			font-size: 25px !important;
 		}
-		.black{
-			color: rgb(35,35,35);
+	}
+	.icon-bigarrow-bottom-orange{
+		position:relative;
+		top:20px;
+		right: 3px;
+		@media(max-width: 767px){
+			right: 0px;
+			top: 14px;
 		}
-		span{
-			display: inline-block;
-			@media(max-width: 767px){
-				font-size: 25px !important;
-			}
-		}
-		.icon-bigarrow-bottom-orange{
-			position:relative;
-			top:20px;
-			right: 3px;
-			@media(max-width: 767px){
-				right: 0px;
-				top: 14px;
-			}
-		}
-		.button-signout{
-			margin-top:32px;
-			font-size:16px;
-			padding-left:10px;width:170px;
-		}
+	}
+	.button-signout{
+		margin-top:32px;
+		font-size:16px !important;
+		padding-left:10px;width:170px;
 	}
 	#profil-pic{
 		height: 100px;
 		width: 100px;
+		display: inline-block;
 		@media(max-width: 767px){
 			height: 70px;
 			width: 70px;
@@ -580,14 +579,21 @@ Header css
 		padding: 8px 15px;
 		margin-right: 5px;
 		height: 60px;
-		background-color: rgb(2,39,69);
 		#menu-button{
 			float: right;
 		}
 	}
 	span#menu-button{
-		top: 20px;
-		right: 75px;
+		top: 10px;
+		right: 85px;
+		padding: 10px;
+	}
+	span#menu-button:hover{
+		background-color: rgb(2,39,69);
+	}
+	span#menu-button:active{
+		padding: 9px;
+		border: ridge 1px rgb(40,79,109);
 	}
     .icon-career{
         margin-top:7px;
@@ -595,17 +601,25 @@ Header css
 }
 
 .navbar.visible-xs{
-	background-color: rgb(2,39,69);
+	background-color: $navcolor;
 	.br{
+		width: 50px;
+		height: 50px;
+		float: left;
+		margin-left: -15px;
 		span{
 			position: absolute;
-			top: 10px;
-			right: 10px;
+			top: 15px;
+			left: 15px;
 		}
 	}
 	span#menu-button{
-		top: 16px;
-		left: 10px;
+		top: 11px;
+		right: 15px;
+		padding: 5px;
+	}
+	span#menu-button:active{
+		background-color: rgb(2,39,69);
 	}
 	ul{
 		position: absolute;
@@ -613,23 +627,18 @@ Header css
 		left: 0px;
 		z-index: 1000;
 		width: 100%;
-		background-color: rgb(2,39,69);
+		background-color: $navcolor;
 	}
 	li{
 		width: 100%;
-		padding: 10px 45px;
+		padding: 10px 20px;
 		list-style-type: none;
-		border-top: 1px solid $navcolor;
+		display: none;
+		border-top: 1px solid rgb(2,39,69);
 		a{
 			font-size: 1.3em;
 			text-align: left;
 		}
-	}
-	li.inner{
-		padding: 15px 30px;
-	}
-	li:not(.default){
-		display: none;
 	}
 }
 
@@ -641,6 +650,7 @@ Header css
 	}
 	span#menu-button{
 		position:absolute;
+		border-radius: 5px;
 	}
 	ul{
 		margin: 0px;
@@ -654,6 +664,9 @@ Header css
 			color:rgba(255,255,255,0.8);
 			text-decoration: none;
 		}
+	}
+	.br{
+		background-color: rgb(2,39,69);
 	}
 }
 /*
@@ -767,7 +780,7 @@ General buttons classes
     background:green;
     color:white;
 }
-.button{
+.button, .btn{
     @include shadow;
     @include button-style;
 }
@@ -835,10 +848,6 @@ Menu with multiple button
         width:14.54%;
 		@media (max-width: 767px){
 			height: 40px;
-			width: 415px;
-		}
-		@media (max-width: 479px){
-			height: 40px;
 			width: 250px;
 		}
     }
@@ -858,6 +867,10 @@ Menu with multiple button
             top:20px;
         }
 		margin-bottom: 10px;
+		@media (max-width: 767px){
+			font-size: 15px;
+			padding-bottom: 8px !important;
+		}
 
     }
     .element,.person{
@@ -911,7 +924,7 @@ Menu with multiple button
 
 .menu-buttons, .page-header{
 	@media (max-width: 767px){
-		width: 470px;
+		width: 300px;
 		padding-top: 15px;padding-bottom:5px;
 	}
 	@media (max-width: 479px){
@@ -2643,6 +2656,16 @@ Tool CSS
     .dialog{
         .section{
             .content{padding:15px;}
+			.label{
+				margin: 0px;
+				padding: 0px;
+				margin-bottom: 20px;
+				display: block;
+				color: $grey;
+				background: none;
+				text-align: left;
+				font-size: 20px;
+			}
         }
     }
     .help-section{
@@ -2674,16 +2697,6 @@ Tool CSS
 			.title-edit{
 				border-bottom: 1px solid $lightGrey;
 				padding: 20px;
-				.label{
-					margin: 0px;
-					padding: 0px;
-					margin-bottom: 20px;
-					display: block;
-					color: $grey;
-					background: none;
-					text-align: left;
-					font-size: 20px;
-				}
 				input{
 					@include shadow;
 					height: 70px;
@@ -2697,41 +2710,60 @@ Tool CSS
 			.content{
 				border-bottom: 1px solid $lightGrey;
 				padding: 20px;
-				.button-menu{
+				.wysihtml5-toolbar{
 					width: 1170px;
-					.button-group{
+					list-style-type: none;
+					padding-left: 0px;
+					.dropdown{
+						position: static !important;
+						margin-left: -26px;
+						.btn{
+							width: 180px ! important;
+						}
+						.dropdown-menu{
+							top: 281px;
+							left: 21px;
+							border-radius: 0px !important;
+							width: 182px;
+						}
+					}
+					.btn-group{
 						display: inline-block;
 						float: left;
-						width: 170px;
 						margin-left: 28px;
 						height: 40px;
-						.button{
-							display: inline-block;
-							float: left;
-							height: 40px;
-							margin: 0px;
-							color: black;
-							font-weight: 550;
-							.icon-bigarrow-right-black{
-								top: 13px;
-							}
-							.icon-bigarrow-bottom-grey{
-								top: 18px;
-							}
-						}
-						.plain{
-							width: 170px;
-						}
-						.two{
-							width: 85px;
-						}
-						.three{
-							width: 56.6px;
+						.btn{
+							margin-left: 0px;
 						}
 					}
-					.button-group:first-child{
-						margin-left: 0px;
+					.btn{
+						border-radius: 0px;
+						display: inline-block;
+						float: left;
+						height: 40px;
+						margin: 0px;
+						color: black;
+						font-weight: 550;
+						margin-left: 28px;
+						min-width: 40px;
+						.icon-bigarrow-right-black{
+							top: 13px;
+						}
+						.icon-bigarrow-bottom-grey{
+							top: 18px;
+						}
+						.glyphicon{
+							top: 11px;
+							left: 11px;
+						}
+						.current-font{
+							margin-left: 20px;
+						}
 					}
+					#bold-button{font-weight: bold;}
+					#italic-button{font-style: italic;}
+					#underline-button{text-decoration:underline;}
+					
 				}
 				textarea{
 					@include shadow;
@@ -2748,6 +2780,45 @@ Tool CSS
 					float:right;
 					background-color: $green;
 					color: white !important;
+				}
+			}
+		}
+	}
+	.get-started-resume{
+		.section{
+			width: 1280px !important;
+			.header{
+				.title{
+					font-weight: normal;
+				}
+				.label{
+					display: inline-block;
+					font-size: 27px;
+				}
+			}
+			.content{
+				border-bottom: 1px solid $lightGrey;
+				padding: 20px;
+				input{
+					@include shadow;
+					margin-left: 20px;
+					width: 400px;
+					height: 70px;
+					border: none;
+					display: inline-block;
+					padding: 10px;
+					font-size: 30px;
+				}
+				input:first-child{
+					margin-bottom: 20px;
+				}
+				.no-margin{
+					margin-left: 0px;
+				}
+			}
+			.footer-dialog{
+				.button:first-child{
+					margin-right: 20px;
 				}
 			}
 		}
@@ -2941,6 +3012,12 @@ JOB RESULTS/RECOMMENDATIONS
         display:inline-block;
     }
 }
+.delete-resume{
+	.save{
+		text-align: center;
+	}
+}
+
 .job-results,.saved-content, .delete-items{
         @include main-block;
         text-align:center;
@@ -3002,7 +3079,7 @@ JOB RESULTS/RECOMMENDATIONS
             }
         }
 }
-.saved-content{
+.saved-content, .delete-items{
     .title{text-align:left;}
     .content{
         height:325px;

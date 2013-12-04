@@ -1,8 +1,8 @@
 <div class="container">
 		<div class="page-header">
 			<h1>
-                <img id="profil-pic" class="img-circle img-responsive" ng-src="{{user=='none' && 'img/me.jpg'|| user.Media.Url}}" alt="photo de profile"/>
-                <span ng-switch on="user">
+				<img id="profil-pic" class="img-circle img-responsive" ng-src="{{user=='none' && 'img/me.jpg'|| user.Media.Url}}" alt="photo de profile"/>
+				<span ng-switch on="user">
 					<span ng-switch-when="none">
 						<span class="grey link toggleMenu">Sign Up&nbsp;<i class="icon-bigarrow-bottom-grey"></i>&nbsp;/
 							<div class="subMenu offline" ng-include="'partials/home-submenu-offline.html'"></div>
@@ -19,11 +19,11 @@
 							  <span class="{{path.color}}">&nbsp;/{{path.txt}}</span>
 						</span>
 					</span>
-                </span>
-                <div class="button-signout link right back-white" ng-class="{true:'visible',false:'invisible'}[page=='dashboard']">
-                    <span>Signout</span>
-                    <i class="icon-bigarrow-right-black"></i>
-                </div>
+				</span>
+				<div class="button-signout link right back-white" ng-class="{true:'visible',false:'invisible'}[page=='dashboard']">
+					<span>Signout</span>
+					<i class="icon-bigarrow-right-black"></i>
+				</div>
             </h1>
 		</div>
 </div>

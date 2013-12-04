@@ -2,6 +2,7 @@
     "Name":"Nicolas Bernier",
     "LastName":"Benier",
     "FirstName":"Nicolas",
+	"FirstConnection":"true",
     "Media":{
             "id": "string",
             "Type": "photo",

@@ -179,7 +179,7 @@ General function that handle user caching
 function checkUserInfo($scope,$http){
     if(window.user==undefined || window.user==null || window.user.Url==undefined){
         //call api me
-        $http.get("data/json/user.json").success(function(data){
+        $http.get("data/json/user-full.json").success(function(data){
             if(data){
                 window.user=data;
             }else{
@@ -382,6 +382,7 @@ function apparition(elem){
     section.css('top','-1000px')
     section.css("display","block");
     section.animate({top: '0px'},400);
+	$("html, body").animate({ scrollTop: 0 }, 600);
 }
 function disparition(elem){
     section=elem.find(".section");

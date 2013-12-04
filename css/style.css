@@ -299,7 +299,8 @@ Header css
 .page-header {
   margin: 30px 0px;
   padding: 0px;
-  border: none; }
+  border: none;
+  line-height: 1.1; }
   @media (max-width: 767px) {
     .page-header {
       width: 1170px;
@@ -314,43 +315,42 @@ Header css
     @media only screen and (max-width: 767px) and (max-width: 767px) {
       .page-header {
         width: 95%; } }
-  .page-header .block {
-    line-height: 1.1; }
-    .page-header .block h1 {
-      font-size: 50px;
-      display: inline; }
-      .page-header .block h1 img {
-        vertical-align: middle; }
-    .page-header .block .grey {
-      color: #bbb; }
-      @media (max-width: 767px) {
-        .page-header .block .grey {
-          display: none; } }
-    .page-header .block .orange {
-      color: #ee7835; }
-    .page-header .block .black {
-      color: #232323; }
-    .page-header .block span {
-      display: inline-block; }
-      @media (max-width: 767px) {
-        .page-header .block span {
-          font-size: 25px !important; } }
-    .page-header .block .icon-bigarrow-bottom-orange {
-      position: relative;
-      top: 20px;
-      right: 3px; }
-      @media (max-width: 767px) {
-        .page-header .block .icon-bigarrow-bottom-orange {
-          right: 0px;
-          top: 14px; } }
-    .page-header .block .button-signout {
-      margin-top: 32px;
-      font-size: 16px;
-      padding-left: 10px;
-      width: 170px; }
+  .page-header h1 {
+    font-size: 50px;
+    display: inline; }
+    .page-header h1 img {
+      vertical-align: middle; }
+  .page-header .grey {
+    color: #bbb; }
+    @media (max-width: 767px) {
+      .page-header .grey {
+        display: none; } }
+  .page-header .orange {
+    color: #ee7835; }
+  .page-header .black {
+    color: #232323; }
+  .page-header span {
+    display: inline-block; }
+    @media (max-width: 767px) {
+      .page-header span {
+        font-size: 25px !important; } }
+  .page-header .icon-bigarrow-bottom-orange {
+    position: relative;
+    top: 20px;
+    right: 3px; }
+    @media (max-width: 767px) {
+      .page-header .icon-bigarrow-bottom-orange {
+        right: 0px;
+        top: 14px; } }
+  .page-header .button-signout {
+    margin-top: 32px;
+    font-size: 16px !important;
+    padding-left: 10px;
+    width: 170px; }
   .page-header #profil-pic {
     height: 100px;
     width: 100px;
+    display: inline-block;
     -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
     border: 2px solid white;
     margin-right: 15px; }
@@ -372,44 +372,54 @@ Header css
   .navbar.hidden-xs .br {
     padding: 8px 15px;
     margin-right: 5px;
-    height: 60px;
-    background-color: #022745; }
+    height: 60px; }
     .navbar.hidden-xs .br #menu-button {
       float: right; }
   .navbar.hidden-xs span#menu-button {
-    top: 20px;
-    right: 75px; }
+    top: 10px;
+    right: 85px;
+    padding: 10px; }
+  .navbar.hidden-xs span#menu-button:hover {
+    background-color: #022745; }
+  .navbar.hidden-xs span#menu-button:active {
+    padding: 9px;
+    border: ridge 1px #284f6d; }
   .navbar.hidden-xs .icon-career {
     margin-top: 7px; }
 
 .navbar.visible-xs {
-  background-color: #022745; }
-  .navbar.visible-xs .br span {
-    position: absolute;
-    top: 10px;
-    right: 10px; }
+  background-color: #09335b; }
+  .navbar.visible-xs .br {
+    width: 50px;
+    height: 50px;
+    float: left;
+    margin-left: -15px; }
+    .navbar.visible-xs .br span {
+      position: absolute;
+      top: 15px;
+      left: 15px; }
   .navbar.visible-xs span#menu-button {
-    top: 16px;
-    left: 10px; }
+    top: 11px;
+    right: 15px;
+    padding: 5px; }
+  .navbar.visible-xs span#menu-button:active {
+    background-color: #022745; }
   .navbar.visible-xs ul {
     position: absolute;
     top: 50px;
     left: 0px;
     z-index: 1000;
     width: 100%;
-    background-color: #022745; }
+    background-color: #09335b; }
   .navbar.visible-xs li {
     width: 100%;
-    padding: 10px 45px;
+    padding: 10px 20px;
     list-style-type: none;
-    border-top: 1px solid #09335b; }
+    display: none;
+    border-top: 1px solid #022745; }
     .navbar.visible-xs li a {
       font-size: 1.3em;
       text-align: left; }
-  .navbar.visible-xs li.inner {
-    padding: 15px 30px; }
-  .navbar.visible-xs li:not(.default) {
-    display: none; }
 
 .navbar {
   margin: 0px;
@@ -418,7 +428,8 @@ Header css
     .navbar {
       height: 60px; } }
   .navbar span#menu-button {
-    position: absolute; }
+    position: absolute;
+    border-radius: 5px; }
   .navbar ul {
     margin: 0px;
     padding: 0px; }
@@ -427,6 +438,8 @@ Header css
   .navbar li a:hover {
     color: rgba(255, 255, 255, 0.8);
     text-decoration: none; }
+  .navbar .br {
+    background-color: #022745; }
 
 /*
 Home css
@@ -501,7 +514,7 @@ General buttons classes
   background: green;
   color: white; }
 
-.button, .input-button {
+.button, .input-button, .btn {
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
   border: none;
@@ -516,7 +529,7 @@ General buttons classes
   padding-right: 15px;
   text-align: left;
   color: gray; }
-  .button b, .input-button b, .button i, .input-button i {
+  .button b, .input-button b, .button i, .input-button i, .btn b, .btn i {
     position: absolute;
     top: 50%;
     right: 15px; }
@@ -615,10 +628,6 @@ Menu with multiple button
     @media (max-width: 767px) {
       .menu-buttons .home {
         height: 40px;
-        width: 415px; } }
-    @media (max-width: 479px) {
-      .menu-buttons .home {
-        height: 40px;
         width: 250px; } }
   .menu-buttons .search {
     width: 12%; }
@@ -632,6 +641,10 @@ Menu with multiple button
     margin-bottom: 10px; }
     .menu-buttons .button b, .menu-buttons .input-button b {
       top: 20px; }
+    @media (max-width: 767px) {
+      .menu-buttons .button, .menu-buttons .input-button {
+        font-size: 15px;
+        padding-bottom: 8px !important; } }
   .menu-buttons .element, .menu-buttons .person {
     text-transform: capitalize;
     -moz-box-shadow: none;
@@ -678,7 +691,7 @@ Menu with multiple button
 
 @media (max-width: 767px) {
   .menu-buttons, .page-header {
-    width: 470px;
+    width: 300px;
     padding-top: 15px;
     padding-bottom: 5px; } }
 @media (max-width: 479px) {
@@ -3454,6 +3467,15 @@ Tool CSS
     border-top-color: #09335b; }
   .tool .dialog .section .content {
     padding: 15px; }
+  .tool .dialog .section .label {
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 20px;
+    display: block;
+    color: #9d9d9d;
+    background: none;
+    text-align: left;
+    font-size: 20px; }
   .tool .help-section .section {
     width: 85%; }
   .tool .save-section .section {
@@ -3475,15 +3497,6 @@ Tool CSS
     .tool .add-section .section .title-edit {
       border-bottom: 1px solid #cfcfcf;
       padding: 20px; }
-      .tool .add-section .section .title-edit .label {
-        margin: 0px;
-        padding: 0px;
-        margin-bottom: 20px;
-        display: block;
-        color: #9d9d9d;
-        background: none;
-        text-align: left;
-        font-size: 20px; }
       .tool .add-section .section .title-edit input {
         box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
         -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
@@ -3498,33 +3511,52 @@ Tool CSS
     .tool .add-section .section .content {
       border-bottom: 1px solid #cfcfcf;
       padding: 20px; }
-      .tool .add-section .section .content .button-menu {
-        width: 1170px; }
-        .tool .add-section .section .content .button-menu .button-group {
+      .tool .add-section .section .content .wysihtml5-toolbar {
+        width: 1170px;
+        list-style-type: none;
+        padding-left: 0px; }
+        .tool .add-section .section .content .wysihtml5-toolbar .dropdown {
+          position: static !important;
+          margin-left: -26px; }
+          .tool .add-section .section .content .wysihtml5-toolbar .dropdown .btn {
+            width: 180px !important; }
+          .tool .add-section .section .content .wysihtml5-toolbar .dropdown .dropdown-menu {
+            top: 281px;
+            left: 21px;
+            border-radius: 0px !important;
+            width: 182px; }
+        .tool .add-section .section .content .wysihtml5-toolbar .btn-group {
           display: inline-block;
           float: left;
-          width: 170px;
           margin-left: 28px;
           height: 40px; }
-          .tool .add-section .section .content .button-menu .button-group .button, .tool .add-section .section .content .button-menu .button-group .input-button {
-            display: inline-block;
-            float: left;
-            height: 40px;
-            margin: 0px;
-            color: black;
-            font-weight: 550; }
-            .tool .add-section .section .content .button-menu .button-group .button .icon-bigarrow-right-black, .tool .add-section .section .content .button-menu .button-group .input-button .icon-bigarrow-right-black {
-              top: 13px; }
-            .tool .add-section .section .content .button-menu .button-group .button .icon-bigarrow-bottom-grey, .tool .add-section .section .content .button-menu .button-group .input-button .icon-bigarrow-bottom-grey {
-              top: 18px; }
-          .tool .add-section .section .content .button-menu .button-group .plain {
-            width: 170px; }
-          .tool .add-section .section .content .button-menu .button-group .two {
-            width: 85px; }
-          .tool .add-section .section .content .button-menu .button-group .three {
-            width: 56.6px; }
-        .tool .add-section .section .content .button-menu .button-group:first-child {
-          margin-left: 0px; }
+          .tool .add-section .section .content .wysihtml5-toolbar .btn-group .btn {
+            margin-left: 0px; }
+        .tool .add-section .section .content .wysihtml5-toolbar .btn {
+          border-radius: 0px;
+          display: inline-block;
+          float: left;
+          height: 40px;
+          margin: 0px;
+          color: black;
+          font-weight: 550;
+          margin-left: 28px;
+          min-width: 40px; }
+          .tool .add-section .section .content .wysihtml5-toolbar .btn .icon-bigarrow-right-black {
+            top: 13px; }
+          .tool .add-section .section .content .wysihtml5-toolbar .btn .icon-bigarrow-bottom-grey {
+            top: 18px; }
+          .tool .add-section .section .content .wysihtml5-toolbar .btn .glyphicon {
+            top: 11px;
+            left: 11px; }
+          .tool .add-section .section .content .wysihtml5-toolbar .btn .current-font {
+            margin-left: 20px; }
+        .tool .add-section .section .content .wysihtml5-toolbar #bold-button {
+          font-weight: bold; }
+        .tool .add-section .section .content .wysihtml5-toolbar #italic-button {
+          font-style: italic; }
+        .tool .add-section .section .content .wysihtml5-toolbar #underline-button {
+          text-decoration: underline; }
       .tool .add-section .section .content textarea {
         box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
         -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
@@ -3540,6 +3572,34 @@ Tool CSS
       float: right;
       background-color: #70c239;
       color: white !important; }
+  .tool .get-started-resume .section {
+    width: 1280px !important; }
+    .tool .get-started-resume .section .header .title {
+      font-weight: normal; }
+    .tool .get-started-resume .section .header .label {
+      display: inline-block;
+      font-size: 27px; }
+    .tool .get-started-resume .section .content {
+      border-bottom: 1px solid #cfcfcf;
+      padding: 20px; }
+      .tool .get-started-resume .section .content input {
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+        -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+        border: none;
+        background: white;
+        margin-left: 20px;
+        width: 400px;
+        height: 70px;
+        border: none;
+        display: inline-block;
+        padding: 10px;
+        font-size: 30px; }
+      .tool .get-started-resume .section .content input:first-child {
+        margin-bottom: 20px; }
+      .tool .get-started-resume .section .content .no-margin {
+        margin-left: 0px; }
+    .tool .get-started-resume .section .footer-dialog .button:first-child, .tool .get-started-resume .section .footer-dialog .input-button:first-child {
+      margin-right: 20px; }
 
 /*
 Locally Grown
@@ -3710,6 +3770,9 @@ JOB RESULTS/RECOMMENDATIONS
   .scrollable .step {
     display: inline-block; }
 
+.delete-resume .save {
+  text-align: center; }
+
 .job-results, .saved-content, .delete-items {
   width: 1170px;
   display: block;
@@ -3779,31 +3842,31 @@ JOB RESULTS/RECOMMENDATIONS
       .job-results .content .pages .ball:hover, .saved-content .content .pages .ball:hover, .delete-items .content .pages .ball:hover {
         cursor: pointer; }
 
-.saved-content .title {
+.saved-content .title, .delete-items .title {
   text-align: left; }
-.saved-content .content {
+.saved-content .content, .delete-items .content {
   height: 325px; }
-  .saved-content .content .scrollable-content {
+  .saved-content .content .scrollable-content, .delete-items .content .scrollable-content {
     height: 85%; }
-  .saved-content .content .selected {
+  .saved-content .content .selected, .delete-items .content .selected {
     border: 2px solid red; }
-  .saved-content .content .save {
+  .saved-content .content .save, .delete-items .content .save {
     margin-top: 45px;
     position: relative;
     height: 210px;
     font-size: 18px; }
-    .saved-content .content .save .content-save {
+    .saved-content .content .save .content-save, .delete-items .content .save .content-save {
       position: absolute;
       top: 145px;
       width: 100%; }
-      .saved-content .content .save .content-save .name {
+      .saved-content .content .save .content-save .name, .delete-items .content .save .content-save .name {
         color: black;
         margin-bottom: 3px; }
-      .saved-content .content .save .content-save .type {
+      .saved-content .content .save .content-save .type, .delete-items .content .save .content-save .type {
         font-size: 16px;
         line-height: 18px;
         color: #9d9d9d; }
-      .saved-content .content .save .content-save .date, .saved-content .content .save .content-save .level {
+      .saved-content .content .save .content-save .date, .saved-content .content .save .content-save .level, .delete-items .content .save .content-save .date, .delete-items .content .save .content-save .level {
         font-size: 14px;
         line-height: 16px;
         color: #9d9d9d; }

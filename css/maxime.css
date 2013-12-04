@@ -123,8 +123,12 @@ HEADER BUTTONS
 .dropdown > li li:nth-child(odd) {
   background-color: #eee; }
 
-.dubble.open {
-  width: 369px !important; }
+@media (min-width: 768px) {
+  .dubble.open {
+    width: 400px !important; } }
+@media (max-width: 767px) {
+  .dubble.open {
+    width: 300px !important; } }
 
 .dubble.open + div {
   display: none; }

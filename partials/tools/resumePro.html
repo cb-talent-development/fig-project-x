@@ -56,39 +56,13 @@
 				</div>
 				<div class="title-edit">
 					<i class="label">EDIT SECTION TITLE</i>
-					<input placeholder="Title"/>
+					<input placeholder="Title" ng-model="newSectionTitle"/>
 				</div>
 				<div class="content">
-					<div class="button-menu">
-						<div class="button-group">
-							<div class="button plain">Normal Text<i class="icon-bigarrow-bottom-grey"></i></div>
-						</div>
-						<div class="button-group">
-							<div class="button three">Bold</div>
-							<div class="button three">Italic</div>
-							<div class="button three">UL</div>
-						</div>
-						<div class="button-group">
-							<div class="button two"></div>
-							<div class="button two"></div>
-						</div>
-						<div class="button-group">
-							<div class="button two"></div>
-							<div class="button two"></div>
-						</div>
-						<div class="button-group">
-							<div class="button three"></div>
-							<div class="button three"></div>
-							<div class="button three"></div>
-						</div>
-						<div class="button-group">
-							<div class="button plain">Check Spelling<i class="icon-bigarrow-right-black"></i></div>
-						</div>
-					</div>
-					<textarea placeholder="Content"></textarea>
+					<textarea class="textarea" placeholder="Content"></textarea>
 				</div>
 				<div class="footer-dialog">
-					<div class="button green" onclick="">Save & Close</div>
+					<div class="button green" ng-click="saveSection()">Save & Close</div>
 					<div class="clear"></div>
 				</div>
 			</div>
@@ -117,8 +91,37 @@
 				</div>
 			</div>
 		</div>
+		<div class="get-started-resume dialog">
+			<div class="background" onclick="disparition($('.get-started-resume'))"></div>
+			<div class="section">
+				<div class="header">
+					<span class"title">Let's Get Started.&nbsp</span><i class="label">Did you know, Jean-jacques aime les moules</i><i class="icon-x-black close" onclick="disparition($('.get-started-resume'))"></i>
+				</div>
+				<div class="content">
+					<input class="no-margin" placeholder="First Name"/><input placeholder="Last Name"/><input placeholder="Email Adress"/>
+				</div>
+				<div class="content">
+					<input class="no-margin" placeholder="Street Adress"/><input placeholder="Additionnal Adress (Apt, Suite)"/></br>
+					<input class="no-margin" placeholder="City"/><input placeholder="State"/><input placeholder="ZipCode"/>
+				</div>
+				<div class="content">
+					<input class="no-margin" placeholder="Phone Number"/><input placeholder="Mobile Number"/>
+				</div>
+				<div class="footer-dialog">
+					<div class="button back-white" onclick="">Previous<i class="icon-bigarrow-left-black"></i></div>
+					<div class="button back-white" onclick="">Next<i class="icon-bigarrow-right-black"></i></div>
+					<div class="button back-green right" ng-click="disparition($('.get-started-resume'))">Save & Close</div>
+					<div class="clear"></div>
+				</div>
+			</div>
+		</div>
 	</div>
 </div>
+
+<script src="lib/bootstrap/js/wysihtml5-0.3.0.js"></script>
+<script src="lib/bootstrap/js/bootstrap-wysihtml5.js"></script>
+<script src="lib/prettyprint/js/prettyprint.js"></script>
+<script src="lib/jQuery/jquery.spellchecker.js"></script>
 
 <script>
 	$(function() {
@@ -132,4 +135,63 @@
 		});
 		$( "ul, li" ).disableSelection();
 	});
+	
+	(function() {
+		var element = $('.textarea');
+
+		element.wysihtml5({
+		toolbar: {
+		   "spellchecker":
+			  "<li>" +
+				  "<a class='btn' data-wysihtml5-command='spellcheck'>" + 
+				  "<i class='icon-spellchecker spellchecker-button-icon'></i></a>" +
+			  "</li>"
+		},
+		stylesheets: [
+		  "./css/jquery.spellchecker.css"
+		],     
+		});
+
+		var wysihtml5 = element.data('wysihtml5');
+		var body = $(wysihtml5.editor.composer.iframe).contents().find('body');
+
+		var toggle = (function() {
+
+		var spellchecker = null;
+
+		function create() {
+
+		  spellchecker = new $.SpellChecker(body, {
+			lang: 'en',
+			parser: 'html',
+			webservice: {
+			  path: "../webservices/php/SpellChecker.php",
+			  driver: 'pspell'
+			},
+			suggestBox: {
+			  position: 'below'
+			}
+		  });
+
+		  spellchecker.on('check.success', function() {
+			alert('There are no incorrectly spelt words.');
+		  });
+
+		  spellchecker.check();
+		}
+
+		function destroy() {
+		  spellchecker.destroy();
+		  spellchecker = null;
+		}
+
+		function toggle() {
+		  (!spellchecker) ? create() : destroy();
+		}
+
+		return toggle;
+		})();
+
+		wysihtml5.toolbar.find('[data-wysihtml5-command="spellcheck"]').click(toggle);
+	})();
 </script>

@@ -15,12 +15,16 @@ ICON css
   background: url("assets/zig.png") center center repeat-x; }
 
 .icon-career {
-  width: 142px;
+  background-size: 1500px 1798.5px;
+  background-position: -13px -10px;
   height: 24px;
-  background-position: -13px -10px; }
+  width: 142px; }
   @media only screen and (max-width: 768px) {
     .icon-career {
-      background-size: 1500px 1400px; } }
+      background-size: 1050px 1258.9499999999998px;
+      background-position: -124.6px -7px;
+      height: 16.799999999999997px;
+      width: 18.2px; } }
 
 .icon-search {
   background-size: 1500px 1798.5px;
@@ -35,14 +39,28 @@ ICON css
       width: 22.499999999999996px; } }
 
 .icon-close {
-  background-position: -235px -10px;
-  width: 30px;
-  height: 30px; }
+  background-size: 1500px 1798.5px;
+  background-position: -430px -420px;
+  height: 40px;
+  width: 40px; }
   @media only screen and (max-width: 768px) {
     .icon-close {
-      background-position: -210px -20px;
-      width: 17px;
-      height: 17px; } }
+      background-size: 1050px 1258.9499999999998px;
+      background-position: -301px -294px;
+      height: 28px;
+      width: 28px; } }
+
+.icon-close:hover {
+  background-size: 1500px 1798.5px;
+  background-position: -475px -420px;
+  height: 40px;
+  width: 40px; }
+  @media only screen and (max-width: 768px) {
+    .icon-close:hover {
+      background-size: 1050px 1258.9499999999998px;
+      background-position: -301px -329px;
+      height: 28px;
+      width: 28px; } }
 
 .icon-bar-darkgrey {
   background-position: -115px -55px;
@@ -88,24 +106,28 @@ Arrow big
       width: 11.2px; } }
 
 .icon-bigarrow-bottom-orange {
+  background-size: 1500px 1798.5px;
   background-position: -76px -63px;
-  width: 15px;
-  height: 8px; }
+  height: 15px;
+  width: 8px; }
   @media only screen and (max-width: 768px) {
     .icon-bigarrow-bottom-orange {
-      width: 7.5px;
-      height: 4px;
-      background-position: -38px -31.5px; } }
+      background-size: 1050px 1258.9499999999998px;
+      background-position: -53.199999999999996px -44.099999999999994px;
+      height: 10.5px;
+      width: 5.6px; } }
 
 .icon-bigarrow-right-black {
+  background-size: 1500px 1798.5px;
   background-position: -212px -59px;
-  width: 9px;
-  height: 17px; }
+  height: 17px;
+  width: 9px; }
   @media only screen and (max-width: 768px) {
     .icon-bigarrow-right-black {
-      width: 5px;
-      height: 9px;
-      background-position: -106px -29.5px; } }
+      background-size: 1500px 1798.5px;
+      background-position: -212px -59px;
+      height: 17px;
+      width: 9px; } }
 
 .icon-bigarrow-right-white {
   background-position: -245px -59px;
@@ -973,14 +995,16 @@ STARS
 
 /*SMALL*/
 .icon-star-green-1 {
+  background-size: 1500px 1798.5px;
   background-position: -13px -190px;
-  width: 22px;
-  height: 21px; }
+  height: 22px;
+  width: 21px; }
   @media only screen and (max-width: 768px) {
     .icon-star-green-1 {
-      width: 11px;
-      height: 10.5px;
-      background-position: -6.5px -95px; } }
+      background-size: 1050px 1258.9499999999998px;
+      background-position: -9.1px -133px;
+      height: 15.4px;
+      width: 14.7px; } }
 
 .icon-star-green-2 {
   background-position: -60px -190px;
@@ -1214,268 +1238,268 @@ Arrow
       width: 56.5px; } }
 
 .icon-arrow-right-green-1 {
-  width: 8px;
+  background-size: 1500px 1798.5px;
+  background-position: -20px -289px;
   height: 11px;
-  background-position: -20px -289px; }
+  width: 8px; }
   @media only screen and (max-width: 768px) {
     .icon-arrow-right-green-1 {
-      width: 4px;
-      height: 5.5px; } }
-  @media only screen and (max-width: 768px) {
-    .icon-arrow-right-green-1 {
-      background-position: -10px -144.5px; } }
+      background-size: 1050px 1258.9499999999998px;
+      background-position: -14px -202.29999999999998px;
+      height: 7.7px;
+      width: 5.6px; } }
 
 .icon-arrow-right-green-2 {
-  width: 8px;
+  background-size: 1500px 1798.5px;
+  background-position: -67px -289px;
   height: 11px;
-  background-position: -67px -289px; }
+  width: 8px; }
   @media only screen and (max-width: 768px) {
     .icon-arrow-right-green-2 {
-      width: 4px;
-      height: 5.5px; } }
-  @media only screen and (max-width: 768px) {
-    .icon-arrow-right-green-2 {
-      background-position: -33.5px -144.5px; } }
+      background-size: 1050px 1258.9499999999998px;
+      background-position: -46.9px -202.29999999999998px;
+      height: 7.7px;
+      width: 5.6px; } }
 
 .icon-arrow-right-green-3 {
-  width: 8px;
+  background-size: 1500px 1798.5px;
+  background-position: -114px -289px;
   height: 11px;
-  background-position: -114px -289px; }
+  width: 8px; }
   @media only screen and (max-width: 768px) {
     .icon-arrow-right-green-3 {
-      width: 4px;
-      height: 5.5px; } }
-  @media only screen and (max-width: 768px) {
-    .icon-arrow-right-green-3 {
-      background-position: -57px -144.5px; } }
+      background-size: 1050px 1258.9499999999998px;
+      background-position: -79.8px -202.29999999999998px;
+      height: 7.7px;
+      width: 5.6px; } }
 
 .icon-arrow-right-green-4 {
-  width: 8px;
+  background-size: 1500px 1798.5px;
+  background-position: -161px -289px;
   height: 11px;
-  background-position: -161px -289px; }
+  width: 8px; }
   @media only screen and (max-width: 768px) {
     .icon-arrow-right-green-4 {
-      width: 4px;
-      height: 5.5px; } }
-  @media only screen and (max-width: 768px) {
-    .icon-arrow-right-green-4 {
-      background-position: -80.5px -144.5px; } }
+      background-size: 1050px 1258.9499999999998px;
+      background-position: -112.69999999999999px -202.29999999999998px;
+      height: 7.7px;
+      width: 5.6px; } }
 
 .icon-arrow-right-orange-1 {
-  width: 8px;
+  background-size: 1500px 1798.5px;
+  background-position: -208px -289px;
   height: 11px;
-  background-position: -208px -289px; }
+  width: 8px; }
   @media only screen and (max-width: 768px) {
     .icon-arrow-right-orange-1 {
-      width: 4px;
-      height: 5.5px; } }
-  @media only screen and (max-width: 768px) {
-    .icon-arrow-right-orange-1 {
-      background-position: -104px -144.5px; } }
+      background-size: 1050px 1258.9499999999998px;
+      background-position: -145.6px -202.29999999999998px;
+      height: 7.7px;
+      width: 5.6px; } }
 
 .icon-arrow-right-orange-2 {
-  width: 8px;
+  background-size: 1500px 1798.5px;
+  background-position: -255px -289px;
   height: 11px;
-  background-position: -255px -289px; }
+  width: 8px; }
   @media only screen and (max-width: 768px) {
     .icon-arrow-right-orange-2 {
-      width: 4px;
-      height: 5.5px; } }
-  @media only screen and (max-width: 768px) {
-    .icon-arrow-right-orange-2 {
-      background-position: -127.5px -144.5px; } }
+      background-size: 1050px 1258.9499999999998px;
+      background-position: -178.5px -202.29999999999998px;
+      height: 7.7px;
+      width: 5.6px; } }
 
 .icon-arrow-right-orange-3 {
-  width: 8px;
+  background-size: 1500px 1798.5px;
+  background-position: -302px -289px;
   height: 11px;
-  background-position: -302px -289px; }
+  width: 8px; }
   @media only screen and (max-width: 768px) {
     .icon-arrow-right-orange-3 {
-      width: 4px;
-      height: 5.5px; } }
-  @media only screen and (max-width: 768px) {
-    .icon-arrow-right-orange-3 {
-      background-position: -151px -144.5px; } }
+      background-size: 1050px 1258.9499999999998px;
+      background-position: -211.39999999999998px -202.29999999999998px;
+      height: 7.7px;
+      width: 5.6px; } }
 
 .icon-arrow-right-orange-4 {
-  width: 8px;
+  background-size: 1500px 1798.5px;
+  background-position: -349px -289px;
   height: 11px;
-  background-position: -349px -289px; }
+  width: 8px; }
   @media only screen and (max-width: 768px) {
     .icon-arrow-right-orange-4 {
-      width: 4px;
-      height: 5.5px; } }
-  @media only screen and (max-width: 768px) {
-    .icon-arrow-right-orange-4 {
-      background-position: -174.5px -144.5px; } }
+      background-size: 1050px 1258.9499999999998px;
+      background-position: -244.29999999999998px -202.29999999999998px;
+      height: 7.7px;
+      width: 5.6px; } }
 
 .icon-arrow-right-orange-5 {
-  width: 8px;
+  background-size: 1500px 1798.5px;
+  background-position: -396px -289px;
   height: 11px;
-  background-position: -396px -289px; }
+  width: 8px; }
   @media only screen and (max-width: 768px) {
     .icon-arrow-right-orange-5 {
-      width: 4px;
-      height: 5.5px; } }
-  @media only screen and (max-width: 768px) {
-    .icon-arrow-right-orange-5 {
-      background-position: -198px -144.5px; } }
+      background-size: 1050px 1258.9499999999998px;
+      background-position: -277.2px -202.29999999999998px;
+      height: 7.7px;
+      width: 5.6px; } }
 
 .icon-arrow-right-blue-1 {
-  width: 8px;
+  background-size: 1500px 1798.5px;
+  background-position: -443px -289px;
   height: 11px;
-  background-position: -443px -289px; }
+  width: 8px; }
   @media only screen and (max-width: 768px) {
     .icon-arrow-right-blue-1 {
-      width: 4px;
-      height: 5.5px; } }
-  @media only screen and (max-width: 768px) {
-    .icon-arrow-right-blue-1 {
-      background-position: -221.5px -144.5px; } }
+      background-size: 1050px 1258.9499999999998px;
+      background-position: -310.09999999999997px -202.29999999999998px;
+      height: 7.7px;
+      width: 5.6px; } }
 
 .icon-arrow-right-blue-2 {
-  width: 8px;
+  background-size: 1500px 1798.5px;
+  background-position: -490px -289px;
   height: 11px;
-  background-position: -490px -289px; }
+  width: 8px; }
   @media only screen and (max-width: 768px) {
     .icon-arrow-right-blue-2 {
-      width: 4px;
-      height: 5.5px; } }
-  @media only screen and (max-width: 768px) {
-    .icon-arrow-right-blue-2 {
-      background-position: -245px -144.5px; } }
+      background-size: 1050px 1258.9499999999998px;
+      background-position: -343px -202.29999999999998px;
+      height: 7.7px;
+      width: 5.6px; } }
 
 .icon-arrow-right-blue-3 {
-  width: 8px;
+  background-size: 1500px 1798.5px;
+  background-position: -537px -289px;
   height: 11px;
-  background-position: -537px -289px; }
+  width: 8px; }
   @media only screen and (max-width: 768px) {
     .icon-arrow-right-blue-3 {
-      width: 4px;
-      height: 5.5px; } }
-  @media only screen and (max-width: 768px) {
-    .icon-arrow-right-blue-3 {
-      background-position: -268.5px -144.5px; } }
+      background-size: 1050px 1258.9499999999998px;
+      background-position: -375.8999999999999px -202.29999999999998px;
+      height: 7.7px;
+      width: 5.6px; } }
 
 .icon-arrow-right-blue-4 {
-  width: 8px;
+  background-size: 1500px 1798.5px;
+  background-position: -584px -289px;
   height: 11px;
-  background-position: -584px -289px; }
+  width: 8px; }
   @media only screen and (max-width: 768px) {
     .icon-arrow-right-blue-4 {
-      width: 4px;
-      height: 5.5px; } }
-  @media only screen and (max-width: 768px) {
-    .icon-arrow-right-blue-4 {
-      background-position: -292px -144.5px; } }
+      background-size: 1050px 1258.9499999999998px;
+      background-position: -408.79999999999995px -202.29999999999998px;
+      height: 7.7px;
+      width: 5.6px; } }
 
 .icon-arrow-right-blue-5 {
-  width: 8px;
+  background-size: 1500px 1798.5px;
+  background-position: -631px -289px;
   height: 11px;
-  background-position: -631px -289px; }
+  width: 8px; }
   @media only screen and (max-width: 768px) {
     .icon-arrow-right-blue-5 {
-      width: 4px;
-      height: 5.5px; } }
-  @media only screen and (max-width: 768px) {
-    .icon-arrow-right-blue-5 {
-      background-position: -315.5px -144.5px; } }
+      background-size: 1050px 1258.9499999999998px;
+      background-position: -441.7px -202.29999999999998px;
+      height: 7.7px;
+      width: 5.6px; } }
 
 .icon-arrow-right-blue-6 {
-  width: 8px;
+  background-size: 1500px 1798.5px;
+  background-position: -678px -289px;
   height: 11px;
-  background-position: -678px -289px; }
+  width: 8px; }
   @media only screen and (max-width: 768px) {
     .icon-arrow-right-blue-6 {
-      width: 4px;
-      height: 5.5px; } }
-  @media only screen and (max-width: 768px) {
-    .icon-arrow-right-blue-6 {
-      background-position: -339px -144.5px; } }
+      background-size: 1050px 1258.9499999999998px;
+      background-position: -474.59999999999997px -202.29999999999998px;
+      height: 7.7px;
+      width: 5.6px; } }
 
 .icon-arrow-right-red-1 {
-  width: 8px;
+  background-size: 1500px 1798.5px;
+  background-position: -20px -336px;
   height: 11px;
-  background-position: -20px -336px; }
+  width: 8px; }
   @media only screen and (max-width: 768px) {
     .icon-arrow-right-red-1 {
-      width: 4px;
-      height: 5.5px; } }
-  @media only screen and (max-width: 768px) {
-    .icon-arrow-right-red-1 {
-      background-position: -10px -168px; } }
+      background-size: 1050px 1258.9499999999998px;
+      background-position: -14px -235.2px;
+      height: 7.7px;
+      width: 5.6px; } }
 
 .icon-arrow-right-red-2 {
-  width: 8px;
+  background-size: 1500px 1798.5px;
+  background-position: -67px -336px;
   height: 11px;
-  background-position: -67px -336px; }
+  width: 8px; }
   @media only screen and (max-width: 768px) {
     .icon-arrow-right-red-2 {
-      width: 4px;
-      height: 5.5px; } }
-  @media only screen and (max-width: 768px) {
-    .icon-arrow-right-red-2 {
-      background-position: -33.5px -168px; } }
+      background-size: 1050px 1258.9499999999998px;
+      background-position: -46.9px -235.2px;
+      height: 7.7px;
+      width: 5.6px; } }
 
 .icon-arrow-right-red-3 {
-  width: 8px;
+  background-size: 1500px 1798.5px;
+  background-position: -114px -336px;
   height: 11px;
-  background-position: -114px -336px; }
+  width: 8px; }
   @media only screen and (max-width: 768px) {
     .icon-arrow-right-red-3 {
-      width: 4px;
-      height: 5.5px; } }
-  @media only screen and (max-width: 768px) {
-    .icon-arrow-right-red-3 {
-      background-position: -57px -168px; } }
+      background-size: 1050px 1258.9499999999998px;
+      background-position: -79.8px -235.2px;
+      height: 7.7px;
+      width: 5.6px; } }
 
 .icon-arrow-right-red-4 {
-  width: 8px;
+  background-size: 1500px 1798.5px;
+  background-position: -302px -336px;
   height: 11px;
-  background-position: -302px -336px; }
+  width: 8px; }
   @media only screen and (max-width: 768px) {
     .icon-arrow-right-red-4 {
-      width: 4px;
-      height: 5.5px; } }
-  @media only screen and (max-width: 768px) {
-    .icon-arrow-right-red-4 {
-      background-position: -156px -168px; } }
+      background-size: 1050px 1258.9499999999998px;
+      background-position: -211.39999999999998px -235.2px;
+      height: 7.7px;
+      width: 5.6px; } }
 
 .icon-arrow-right-pink-1 {
-  width: 8px;
+  background-size: 1500px 1798.5px;
+  background-position: -161px -336px;
   height: 11px;
-  background-position: -161px -336px; }
+  width: 8px; }
   @media only screen and (max-width: 768px) {
     .icon-arrow-right-pink-1 {
-      width: 4px;
-      height: 5.5px; } }
-  @media only screen and (max-width: 768px) {
-    .icon-arrow-right-pink-1 {
-      background-position: -80.5px -168px; } }
+      background-size: 1050px 1258.9499999999998px;
+      background-position: -112.69999999999999px -235.2px;
+      height: 7.7px;
+      width: 5.6px; } }
 
 .icon-arrow-right-pink-2 {
-  width: 8px;
+  background-size: 1500px 1798.5px;
+  background-position: -208px -336px;
   height: 11px;
-  background-position: -208px -336px; }
+  width: 8px; }
   @media only screen and (max-width: 768px) {
     .icon-arrow-right-pink-2 {
-      width: 4px;
-      height: 5.5px; } }
-  @media only screen and (max-width: 768px) {
-    .icon-arrow-right-pink-2 {
-      background-position: -104px -168px; } }
+      background-size: 1050px 1258.9499999999998px;
+      background-position: -145.6px -235.2px;
+      height: 7.7px;
+      width: 5.6px; } }
 
 .icon-arrow-right-pink-3 {
-  width: 8px;
+  background-size: 1500px 1798.5px;
+  background-position: -255px -336px;
   height: 11px;
-  background-position: -255px -336px; }
+  width: 8px; }
   @media only screen and (max-width: 768px) {
     .icon-arrow-right-pink-3 {
-      width: 4px;
-      height: 5.5px; } }
-  @media only screen and (max-width: 768px) {
-    .icon-arrow-right-pink-3 {
-      background-position: -122.5px -168px; } }
+      background-size: 1050px 1258.9499999999998px;
+      background-position: -178.5px -235.2px;
+      height: 7.7px;
+      width: 5.6px; } }
 
 /*
 JOB PHASES
@@ -1863,14 +1887,16 @@ OTHER
       width: 21.7px; } }
 
 .icon-menu-orange {
+  background-size: 1500px 1798.5px;
   background-position: -101px -427px;
   height: 19px;
   width: 31px; }
   @media only screen and (max-width: 768px) {
     .icon-menu-orange {
-      background-position: -50.5px -213.5px;
-      height: 10x;
-      width: 16px; } }
+      background-size: 1050px 1258.9499999999998px;
+      background-position: -70.69999999999999px -298.9px;
+      height: 17.5px;
+      width: 21.7px; } }
 
 .icon-pencil {
   background-size: 1065px 994px;

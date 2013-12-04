@@ -238,7 +238,12 @@ HEADER BUTTONS
 }
 
 .dubble.open{
-	width: 369px !important;
+	@media (min-width: 768px){
+		width: 400px !important;
+	}
+	@media (max-width: 767px){
+		width: 300px !important;
+	}
 }
 .dubble.open + div{
 	display: none;
