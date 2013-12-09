@@ -233,7 +233,38 @@ function ResumeHeroCtr($scope, $http){
 	   });
 	   disparition($('.add-section')); //close pop-up
 	}
-    
+    $scope.previous = function() {
+		if($scope.actualPage > 1){
+			$scope.actualPage--;
+			if($scope.actualPage == '1'){
+				$('#previous-button').addClass('inactive');
+			}else if($scope.actualPage == '4'){
+				$('#next-button').removeClass('inactive');
+			}
+		}
+		return false;
+	}
+	$scope.next = function() {
+		if($scope.actualPage < 5){
+			$scope.actualPage++;
+			if($scope.actualPage == '5'){
+				$('#next-button').addClass('inactive');
+			}else if($scope.actualPage == '2'){
+				$('#previous-button').removeClass('inactive');
+			}
+		}
+		return false;
+	}
+	/*
+	*/
+	$scope.changeType = function(otherElem,thisElem){
+		var other = $('#'+otherElem);
+		var elem = $('#'+thisElem);
+		if(other.hasClass("selected")){
+			other.removeClass("selected");
+			elem.addClass("selected");
+		}
+	}
     $scope.init=function(){
 		if($scope.resumeHero[0]){
 			$scope.currentResume = $scope.resumeHero[0];
@@ -242,6 +273,9 @@ function ResumeHeroCtr($scope, $http){
 		}else{
 			$scope.resumeHero[0] = null; //a finir
 		}
+		$scope.totalPages = 5;
+		$scope.actualPage = 1;
+		$('#previous-button').addClass('inactive');
 		apparition($('.get-started-resume'));
     }
     $scope.init();

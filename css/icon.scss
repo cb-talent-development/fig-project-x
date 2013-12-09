@@ -1535,6 +1535,13 @@ TOOLS
 /*
 ICON SAVED
 */
+
+.icon-welcome{
+    @include dimensionPosition(-53px,-1465px,203px,235px,1.0);
+    @media only screen and (max-width: 768px){
+        @include dimensionPosition(-10px,-1498px,203px,185px,0.8);
+	}
+}
 .icon-jobinality-saved{
     @include dimensionPosition(-893px,-588px,117px,101px,1);
     @media only screen and (max-width: 768px){
@@ -1551,6 +1558,12 @@ ICON SAVED
     @include dimensionPosition(-1008px,-583px,126px,102px,1.7);
     @media only screen and (max-width: 768px){
         @include dimensionPosition(-1008px,-583px,126px,102px,1);
+	}
+}
+.icon-welcome-article-saved-big{
+    @include dimensionPosition(-324px,-1498px,203px,186px,1.1);
+    @media only screen and (max-width: 768px){
+        @include dimensionPosition(-324px,-1498px,203px,186px,0.8);
 	}
 }
 .icon-resumePro-saved{
@@ -1571,14 +1584,26 @@ ICON SAVED
         @include dimensionPosition(-1240px,-583px,126px,101px,1);
 	}
 }
+.icon-welcome-video-saved-big{
+    @include dimensionPosition(-748px,-1498px,203px,185px,1.1);
+    @media only screen and (max-width: 768px){
+        @include dimensionPosition(-748px,-1498px,203px,185px,0.8);
+	}
+}
 .icon-image-saved{
     @include dimensionPosition(-1356px,-583px,126px,101px,1);
     @media only screen and (max-width: 768px){
         @include dimensionPosition(-1356px,-583px,126px,101px,0.5);
 	}
 }
+.icon-welcome-image-saved-big{
+    @include dimensionPosition(-536px,-1498px,203px,184px,1.1);
+    @media only screen and (max-width: 768px){
+        @include dimensionPosition(-536px,-1498px,203px,185px,0.8);
+	}
+}
 .icon-image-saved-big{
-    @include dimensionPosition(-1356px,-583px,126px,101px,1.7);
+    @include dimensionPosition(-1240px,-583px,126px,101px,1.7);
     @media only screen and (max-width: 768px){
         @include dimensionPosition(-1356px,-583px,126px,101px,1);
 	}

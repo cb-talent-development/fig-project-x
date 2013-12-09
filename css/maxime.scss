@@ -401,10 +401,13 @@ HOMEPAGE SCROLLABLE CONTENT
 	.element2{
 		i{
 			margin: 30px 0;
-			margin-left: 70px;
+			margin-left: 50px;
 		}
 		.icon-arrow-right-big-grey{
 			margin-top: 110px;
+		}
+		i.icon-welcome{
+			margin-left: 10px;
 		}
 	}
 	.element3, .element4{
@@ -468,14 +471,38 @@ RESUME HERO
 .resume-hero{
 	padding-bottom: 100px;
 	@include main-block;
+	.saved-content{
+		@media(max-width: 767px){
+			width: 100%;
+		}
+	}
 	.resume-buttons{
 		margin-bottom: 30px;
 		margin-top: -30px !important;
 		padding: 0px;
+		@media (max-width: 767px){
+			width: 100%;
+			margin-left: auto;
+			margin-right: auto;
+			margin-bottom: 0px;
+			margin-top: -50px !important;
+			.button{
+				width: 48.06%;
+				margin-left: 0px;
+				margin-bottom: 10px;
+			}
+			.button:nth-child(2n){
+				margin-left: 3%;
+			}
+		}
+		@media (min-width: 768px){
+			.button{
+				width: 170px;
+				margin: 0px;
+				margin-left: 27px;
+			}
+		}
 		.button{
-			width: 170px;
-			margin: 0px;
-			margin-left: 27px;
 			padding-left: 40px;
 			i{
 				left: 11px;
@@ -489,6 +516,9 @@ RESUME HERO
 	.content{
 		.button-list{
 			width: 370px;
+			@media(max-width: 767px){
+				width: 100%;
+			}
 			.button{
 				width: 100%;
 				height: 60px;
@@ -504,6 +534,14 @@ RESUME HERO
 				.icon-right-black{
 					right: 0px;
 					top: 18px;
+				}
+				@media(max-width: 767px){
+					height: 40px;
+					padding-top: 11px;
+					font-size: 17px;
+					.icon-right-black,.icon-completed-check, .icon-not-completed, .icon-add-section{
+						top: 8px;
+					}
 				}
 			}
 			.button:first-child{
@@ -525,6 +563,11 @@ RESUME HERO
 			margin-left: 30px;
 			display: inline-block;
 			font-family:"Times New Roman",Georgia,Serif;
+			@media(max-width: 767px){
+				width: 100%;
+				margin: 0px;
+				margin-top: 10px;
+			}
 			h2{
 				font-size: 20px;
 				background-color: rgb(199, 199, 199);
@@ -535,8 +578,11 @@ RESUME HERO
 			.presentation{
 				padding: 20px;
 				.name{
-					font-size: 30px;
+					font-size: 20px;
 					font-weight: 500;
+					@media(max-width: 767px){
+						font-size: 15px;
+					}
 				}
 				ul{
 					padding-left: 20px;
@@ -544,6 +590,10 @@ RESUME HERO
 					li{
 						padding: 0px 25px;
 						padding-left:0px;
+						@media(max-width: 767px){
+							font-size: 6px;
+							padding-right: 18px;
+						}
 					}
 				}
 			}
@@ -553,6 +603,9 @@ RESUME HERO
 				font-weight: 900;
 				font-size: 15px;
 				font-family:"Times New Roman",Georgia,Serif;
+				@media(max-width: 767px){
+					font-size: 12px;
+				}
 			}
 			ul.sortable{
 				margin: 0px;
@@ -564,17 +617,24 @@ RESUME HERO
 					border: solid 2px white;
 					position:relative;
 					background-color: white;
+					font-size: 8px;
 					h4{
 						text-align: center;
 						padding: 0px;
 						font-weight: 800;
 						font-size: 16px;
 						font-family:"Times New Roman",Georgia,Serif;
+						@media (max-width: 767px){
+							font-size: 11px;
+						}
 					}
 					.icons{
 						position: absolute;
 						top: 0px;
 						left: 30px;
+						@media (max-width: 767px){
+							left: 20px;
+						}
 						.button{
 							width: 30px;
 							height: 30px;
@@ -583,20 +643,39 @@ RESUME HERO
 								top: 5px;
 								left: 4px;
 							}
+							@media (max-width: 767px){
+								width: 19px !important;
+								height: 19px;
+								padding: 0px;
+								margin-left: 7px;
+								i{
+									top: 2px;
+									left: 2px;
+								}
+							}
 						}
 						.button:first-child{
 							margin-right: 10px;
 							margin-left: 0px;
+							@media (max-width: 767px){
+								margin-right: 7px;
+							}
 						}
 						.separation{
-						width: 1px;
-						height: 30px;
-						border: 1px dotted $grey;
-						display: inline-block;
+							width: 1px;
+							height: 30px;
+							border: 1px dotted $grey;
+							display: inline-block;
+							@media (max-width: 767px){
+								height: 18px;
+							}
 						}
 					}
 					.section-content{
 						margin: 30px;
+						@media(max-width: 767px){
+							margin:20px;
+						}
 					}
 				}
 				.element:hover{

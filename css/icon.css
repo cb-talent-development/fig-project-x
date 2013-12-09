@@ -2407,6 +2407,18 @@ TOOLS
 /*
 ICON SAVED
 */
+.icon-welcome {
+  background-size: 1500px 1798.5px;
+  background-position: -53px -1465px;
+  height: 203px;
+  width: 235px; }
+  @media only screen and (max-width: 768px) {
+    .icon-welcome {
+      background-size: 1200px 1438.8000000000002px;
+      background-position: -8px -1198.4px;
+      height: 162.4px;
+      width: 148px; } }
+
 .icon-jobinality-saved {
   background-size: 1500px 1798.5px;
   background-position: -893px -588px;
@@ -2442,6 +2454,18 @@ ICON SAVED
       background-position: -1008px -583px;
       height: 126px;
       width: 102px; } }
+
+.icon-welcome-article-saved-big {
+  background-size: 1650.0000000000005px 1978.3500000000001px;
+  background-position: -356.40000000000003px -1647.8px;
+  height: 223.3px;
+  width: 204.60000000000002px; }
+  @media only screen and (max-width: 768px) {
+    .icon-welcome-article-saved-big {
+      background-size: 1200px 1438.8000000000002px;
+      background-position: -259.2px -1198.4px;
+      height: 162.4px;
+      width: 148.8px; } }
 
 .icon-resumePro-saved {
   background-size: 1500px 1798.5px;
@@ -2479,6 +2503,18 @@ ICON SAVED
       height: 126px;
       width: 101px; } }
 
+.icon-welcome-video-saved-big {
+  background-size: 1650.0000000000005px 1978.3500000000001px;
+  background-position: -822.8000000000001px -1647.8px;
+  height: 223.3px;
+  width: 203.50000000000003px; }
+  @media only screen and (max-width: 768px) {
+    .icon-welcome-video-saved-big {
+      background-size: 1200px 1438.8000000000002px;
+      background-position: -598.4px -1198.4px;
+      height: 162.4px;
+      width: 148px; } }
+
 .icon-image-saved {
   background-size: 1500px 1798.5px;
   background-position: -1356px -583px;
@@ -2491,9 +2527,21 @@ ICON SAVED
       height: 63px;
       width: 50.5px; } }
 
+.icon-welcome-image-saved-big {
+  background-size: 1650.0000000000005px 1978.3500000000001px;
+  background-position: -589.6px -1647.8px;
+  height: 223.3px;
+  width: 202.4px; }
+  @media only screen and (max-width: 768px) {
+    .icon-welcome-image-saved-big {
+      background-size: 1200px 1438.8000000000002px;
+      background-position: -428.8px -1198.4px;
+      height: 162.4px;
+      width: 148px; } }
+
 .icon-image-saved-big {
   background-size: 2550px 3057.45px;
-  background-position: -2305.2px -991.1px;
+  background-position: -2108px -991.1px;
   height: 214.2px;
   width: 171.7px; }
   @media only screen and (max-width: 768px) {

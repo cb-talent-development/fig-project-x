@@ -762,6 +762,15 @@ General buttons classes
     @include shadow-effect;
     background:white;
 }
+@mixin invert-shadow-effect{
+    box-shadow:0px -1px 1px rgba(0,0,0,0.2);
+    -webkit-box-shadow:0px -1px 1px rgba(0,0,0,0.2);
+    border:none;
+}
+@mixin invert-shadow{
+    @include invert-shadow-effect;
+    background:white;
+}
 @mixin button-style{
     font-size:18px;
     @include inline-top; 
@@ -2470,7 +2479,6 @@ DIALOG
         .content{width:100%;}
         .footer-dialog{
             padding:22px;
-			border-top: 1px solid $lightGrey;
                 .button-save,.button-next,.button-previous{
                     position:relative;
                     padding:0px 14px;
@@ -2787,6 +2795,9 @@ Tool CSS
 	.get-started-resume{
 		.section{
 			width: 1280px !important;
+			@media(max-width: 767px){
+				width: 470px !important;
+			}
 			.header{
 				.title{
 					font-weight: normal;
@@ -2799,8 +2810,8 @@ Tool CSS
 			.content{
 				border-bottom: 1px solid $lightGrey;
 				padding: 20px;
-				input{
-					@include shadow;
+				input, .button{
+					@include invert-shadow;
 					margin-left: 20px;
 					width: 400px;
 					height: 70px;
@@ -2808,21 +2819,110 @@ Tool CSS
 					display: inline-block;
 					padding: 10px;
 					font-size: 30px;
+					@media (max-width: 767px){
+						margin-left: 10px;
+						height: 50px;
+						font-size: 20px;
+						width: 210px;
+					}
+				}
+				.button{
+					@include shadow;
+					margin-right: -6px;
+					padding-top: 17px;
+					ul{
+						top: 70px;
+					}
 				}
 				input:first-child{
 					margin-bottom: 20px;
+					@media(max-width: 767px){
+						margin-bottom: 10px;
+					}
 				}
 				.no-margin{
 					margin-left: 0px;
+				}
+				.no-margin-resp{
+					@media(max-width: 767px){
+						margin-left: 0px;
+					}
+				}
+			}
+			.buttons-changes{
+				width: 100%;
+				.button-change{
+					width: 33%;
+					color: rgb(130, 130, 130);
+					.title{
+						font-size: 27px;
+					}
+					.txt{
+						padding: 10px 42px;
+						padding-right: 35px;
+						font-family: HelveticaRoman, sans-serif;
+						font-size: 16px;
+					}
+					.carre{
+						height: 30px;
+						width: 30px;
+					}
+				}
+				.button-change.selected{
+					.title{
+						color: black;
+					}
+				}
+				.button-change:not(.selected){
+					.carre{
+						border-top: 1px outset rgb(200, 200, 200);
+					}
+				}
+				.button-change.txt, .button-change.title{
+					color: rgb(130, 130, 130);
 				}
 			}
 			.footer-dialog{
 				.button:first-child{
 					margin-right: 20px;
 				}
+				.inactive{
+					opacity: 0.5;
+				}
+				#next-button{
+					padding-right: 35px;
+				}
+				i{
+					top: 14px;
+				}
 			}
 		}
 	}
+}
+.careerScape, .resume-hero{
+	.button-change{
+        color:white;
+        font-size:18px;
+        display: inline-block;
+        .carre{
+            float:left;
+            width:20px;
+            height:20px;
+            background:white;
+            position:relative;
+            margin-right:10px;
+        }
+        .txt{
+            float:left;            
+        }
+        
+    }
+    .button-change:hover{
+        cursor:pointer
+    }
+    .buttons-changes .selected .carre,.buttons-changes .selected:hover .carre{
+        background:rgb(238,120,53);
+    }
 }
 /*
 Locally Grown
@@ -2861,42 +2961,23 @@ Career Scape
             height:64px;
             float:left;
             background-color:$navcolor;
-    }
-    .button-change{
-        color:white;
-        font-size:18px;
-        padding-top:23px;padding-bottom:10px;
-        display:inline-block;
-        height:100%;
-        width:49%;
-        .carre{
-            float:left;
-            width:20px;
-            height:20px;
-            background:white;
-            position:relative;
-            margin-left:15px;
-            margin-right:10px;
-        }
-        .txt{
-            float:left;            
-        }
-        
-    }
-    .button-change:hover{
-        cursor:pointer
-    }
-    .button-change:hover:not(.selected) .txt{
-        color:rgba(255,255,255,0.8);
-    }
-    .button-change:hover:not(.selected) .carre{
-        background-color:rgba(255,255,255,0.8);
-    }
-    .buttons-changes .selected .txt,.buttons-changes .selected:hover .txt{
-        color:rgb(238,120,53);
-    }
-    .buttons-changes .selected .carre,.buttons-changes .selected:hover .carre{
-        background:rgb(238,120,53);
+			.button-change{
+				padding-top:23px;padding-bottom:10px;
+				height:100%;
+				width:49%;
+				.carre{
+					margin-left:15px;
+				}
+			}
+			.button-change:hover:not(.selected) .txt{
+				color:rgba(255,255,255,0.8);
+			}
+			.button-change:hover:not(.selected) .carre{
+				background-color:rgba(255,255,255,0.8);
+			}
+			.buttons-changes .selected .txt,.buttons-changes .selected:hover .txt{
+				color:rgb(238,120,53);
+			}
     }
     .zoom{
         width:38px;
@@ -3013,8 +3094,14 @@ JOB RESULTS/RECOMMENDATIONS
     }
 }
 .delete-resume{
+	.section{
+		width: 450px;
+	}
 	.save{
 		text-align: center;
+	}
+	.footer-dialog{
+		border-top:1px solid $lightGrey;
 	}
 }
 

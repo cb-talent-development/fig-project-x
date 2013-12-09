@@ -3285,8 +3285,7 @@ DIALOG
     .dialog .section .content {
       width: 100%; }
     .dialog .section .footer-dialog {
-      padding: 22px;
-      border-top: 1px solid #cfcfcf; }
+      padding: 22px; }
       .dialog .section .footer-dialog .button-save, .dialog .section .footer-dialog .button-next, .dialog .section .footer-dialog .button-previous {
         position: relative;
         padding: 0px 14px;
@@ -3574,6 +3573,9 @@ Tool CSS
       color: white !important; }
   .tool .get-started-resume .section {
     width: 1280px !important; }
+    @media (max-width: 767px) {
+      .tool .get-started-resume .section {
+        width: 470px !important; } }
     .tool .get-started-resume .section .header .title {
       font-weight: normal; }
     .tool .get-started-resume .section .header .label {
@@ -3582,9 +3584,9 @@ Tool CSS
     .tool .get-started-resume .section .content {
       border-bottom: 1px solid #cfcfcf;
       padding: 20px; }
-      .tool .get-started-resume .section .content input {
-        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-        -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+      .tool .get-started-resume .section .content input, .tool .get-started-resume .section .content .button, .tool .get-started-resume .section .content .input-button {
+        box-shadow: 0px -1px 1px rgba(0, 0, 0, 0.2);
+        -webkit-box-shadow: 0px -1px 1px rgba(0, 0, 0, 0.2);
         border: none;
         background: white;
         margin-left: 20px;
@@ -3594,12 +3596,78 @@ Tool CSS
         display: inline-block;
         padding: 10px;
         font-size: 30px; }
+        @media (max-width: 767px) {
+          .tool .get-started-resume .section .content input, .tool .get-started-resume .section .content .button, .tool .get-started-resume .section .content .input-button {
+            margin-left: 10px;
+            height: 50px;
+            font-size: 20px;
+            width: 210px; } }
+      .tool .get-started-resume .section .content .button, .tool .get-started-resume .section .content .input-button {
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+        -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+        border: none;
+        background: white;
+        margin-right: -6px;
+        padding-top: 17px; }
+        .tool .get-started-resume .section .content .button ul, .tool .get-started-resume .section .content .input-button ul {
+          top: 70px; }
       .tool .get-started-resume .section .content input:first-child {
         margin-bottom: 20px; }
+        @media (max-width: 767px) {
+          .tool .get-started-resume .section .content input:first-child {
+            margin-bottom: 10px; } }
       .tool .get-started-resume .section .content .no-margin {
         margin-left: 0px; }
+      @media (max-width: 767px) {
+        .tool .get-started-resume .section .content .no-margin-resp {
+          margin-left: 0px; } }
+    .tool .get-started-resume .section .buttons-changes {
+      width: 100%; }
+      .tool .get-started-resume .section .buttons-changes .button-change {
+        width: 33%;
+        color: #828282; }
+        .tool .get-started-resume .section .buttons-changes .button-change .title {
+          font-size: 27px; }
+        .tool .get-started-resume .section .buttons-changes .button-change .txt {
+          padding: 10px 42px;
+          padding-right: 35px;
+          font-family: HelveticaRoman, sans-serif;
+          font-size: 16px; }
+        .tool .get-started-resume .section .buttons-changes .button-change .carre {
+          height: 30px;
+          width: 30px; }
+      .tool .get-started-resume .section .buttons-changes .button-change.selected .title {
+        color: black; }
+      .tool .get-started-resume .section .buttons-changes .button-change:not(.selected) .carre {
+        border-top: 1px outset #c8c8c8; }
+      .tool .get-started-resume .section .buttons-changes .button-change.txt, .tool .get-started-resume .section .buttons-changes .button-change.title {
+        color: #828282; }
     .tool .get-started-resume .section .footer-dialog .button:first-child, .tool .get-started-resume .section .footer-dialog .input-button:first-child {
       margin-right: 20px; }
+    .tool .get-started-resume .section .footer-dialog .inactive {
+      opacity: 0.5; }
+    .tool .get-started-resume .section .footer-dialog #next-button {
+      padding-right: 35px; }
+    .tool .get-started-resume .section .footer-dialog i {
+      top: 14px; }
+
+.careerScape .button-change, .resume-hero .button-change {
+  color: white;
+  font-size: 18px;
+  display: inline-block; }
+  .careerScape .button-change .carre, .resume-hero .button-change .carre {
+    float: left;
+    width: 20px;
+    height: 20px;
+    background: white;
+    position: relative;
+    margin-right: 10px; }
+  .careerScape .button-change .txt, .resume-hero .button-change .txt {
+    float: left; }
+.careerScape .button-change:hover, .resume-hero .button-change:hover {
+  cursor: pointer; }
+.careerScape .buttons-changes .selected .carre, .careerScape .buttons-changes .selected:hover .carre, .resume-hero .buttons-changes .selected .carre, .resume-hero .buttons-changes .selected:hover .carre {
+  background: #ee7835; }
 
 /*
 Locally Grown
@@ -3652,34 +3720,19 @@ Career Scape
     height: 64px;
     float: left;
     background-color: #09335b; }
-  .careerScape .button-change {
-    color: white;
-    font-size: 18px;
-    padding-top: 23px;
-    padding-bottom: 10px;
-    display: inline-block;
-    height: 100%;
-    width: 49%; }
-    .careerScape .button-change .carre {
-      float: left;
-      width: 20px;
-      height: 20px;
-      background: white;
-      position: relative;
-      margin-left: 15px;
-      margin-right: 10px; }
-    .careerScape .button-change .txt {
-      float: left; }
-  .careerScape .button-change:hover {
-    cursor: pointer; }
-  .careerScape .button-change:hover:not(.selected) .txt {
-    color: rgba(255, 255, 255, 0.8); }
-  .careerScape .button-change:hover:not(.selected) .carre {
-    background-color: rgba(255, 255, 255, 0.8); }
-  .careerScape .buttons-changes .selected .txt, .careerScape .buttons-changes .selected:hover .txt {
-    color: #ee7835; }
-  .careerScape .buttons-changes .selected .carre, .careerScape .buttons-changes .selected:hover .carre {
-    background: #ee7835; }
+    .careerScape .buttons-changes .button-change {
+      padding-top: 23px;
+      padding-bottom: 10px;
+      height: 100%;
+      width: 49%; }
+      .careerScape .buttons-changes .button-change .carre {
+        margin-left: 15px; }
+    .careerScape .buttons-changes .button-change:hover:not(.selected) .txt {
+      color: rgba(255, 255, 255, 0.8); }
+    .careerScape .buttons-changes .button-change:hover:not(.selected) .carre {
+      background-color: rgba(255, 255, 255, 0.8); }
+    .careerScape .buttons-changes .buttons-changes .selected .txt, .careerScape .buttons-changes .buttons-changes .selected:hover .txt {
+      color: #ee7835; }
   .careerScape .zoom {
     width: 38px;
     font-weight: 600;
@@ -3770,8 +3823,12 @@ JOB RESULTS/RECOMMENDATIONS
   .scrollable .step {
     display: inline-block; }
 
+.delete-resume .section {
+  width: 450px; }
 .delete-resume .save {
   text-align: center; }
+.delete-resume .footer-dialog {
+  border-top: 1px solid #cfcfcf; }
 
 .job-results, .saved-content, .delete-items {
   width: 1170px;

@@ -94,22 +94,106 @@
 		<div class="get-started-resume dialog">
 			<div class="background" onclick="disparition($('.get-started-resume'))"></div>
 			<div class="section">
-				<div class="header">
-					<span class"title">Let's Get Started.&nbsp</span><i class="label">Did you know, Jean-jacques aime les moules</i><i class="icon-x-black close" onclick="disparition($('.get-started-resume'))"></i>
-				</div>
-				<div class="content">
-					<input class="no-margin" placeholder="First Name"/><input placeholder="Last Name"/><input placeholder="Email Adress"/>
-				</div>
-				<div class="content">
-					<input class="no-margin" placeholder="Street Adress"/><input placeholder="Additionnal Adress (Apt, Suite)"/></br>
-					<input class="no-margin" placeholder="City"/><input placeholder="State"/><input placeholder="ZipCode"/>
-				</div>
-				<div class="content">
-					<input class="no-margin" placeholder="Phone Number"/><input placeholder="Mobile Number"/>
+				<div ng-switch on="actualPage">
+					<div ng-switch-when='1'>
+						<div class="header">
+							<span class"title">Let's Get Started.&nbsp</span><i class="label">Did you know, Jean-jacques aime les moules</i><i class="icon-x-black close" onclick="disparition($('.get-started-resume'))"></i>
+						</div>
+						<div class="content">
+							<input class="no-margin" placeholder="First Name"/><input placeholder="Last Name"/><input class="no-margin-resp" placeholder="Email Adress"/>
+						</div>
+						<div class="content">
+							<input class="no-margin" placeholder="Street Adress"/>
+							<input placeholder="Additionnal Adress (Apt, Suite)"/>
+							</br>
+							<input class="no-margin" placeholder="City"/>
+							<div class="button link toggleMenu">State<i class="icon-bigarrow-bottom-grey"></i>
+								<ul class="subMenu dropdown">
+									<li>Australia</li>
+									<li>Belgium</li>
+									<li>Dutchland</li>
+									<li>France</li>
+									<li>United Kingdoms</li>
+									<li>USA</li>
+								</ul>
+							</div>
+							<input placeholder="ZipCode"/>
+						</div>
+						<div class="content">
+							<input class="no-margin" placeholder="Phone Number"/><input placeholder="Mobile Number"/>
+						</div>
+					</div>
+					<div ng-switch-when='2'>
+						<div class="header">
+							<span class"title">Add Basic Skills.<i class="icon-x-black close" onclick="disparition($('.get-started-resume'))"></i>
+						</div>
+						<div class="content">
+							<div class="buttons-changes">
+								<div id="monitoring" class="button-change selected" ng-click="changeType('reading','monitoring')">
+									<div class="carre"></div>
+									<div class="title">Monitoring</div>
+									<div class="txt">
+										Monitoring/Assessing performance of yourself, others individuals, or organizations to make improvements or take corrective action.
+									</div>
+								</div>
+								<div id="speaking" class="button-change selected" ng-click="changeType('writing','speaking')">
+									<div class="carre"></div>
+									<div class="title">Speaking</div>
+									<div class="txt">
+										Monitoring/Assessing performance of yourself, others individuals, or organizations to make improvements or take corrective action.
+									</div>
+								</div>
+								<div id="science" class="button-change selected" ng-click="changeType('mathematics','science')">
+									<div class="carre"></div>
+									<div class="title">Science</div>
+									<div class="txt">
+										Using scientific rules and methods to solve problems.
+									</div>
+								</div>
+								<div id="reading" class="button-change" ng-click="changeType('monitoring','reading')">
+									<div class="carre"></div>
+									<div class="title">Reading Comprehension</div>
+									<div class="txt">
+										Understanding written sentences and paragraphs in work related documents.
+									</div>
+								</div>
+								<div id="writing" class="button-change" ng-click="changeType('speaking','writing')">
+									<div class="carre"></div>
+									<div class="title">Writing</div>
+									<div class="txt">
+										Communicating effectively in writing as appropriate for the needs of the audience.
+									</div>
+								</div>
+								<div id="mathematics" class="button-change" ng-click="changeType('science','mathematics')">
+									<div class="carre"></div>
+									<div class="title">Mathematics</div>
+									<div class="txt">
+										Using mathematics to solve problems.
+									</div>
+								</div>
+							</div>
+							<div class="clear"></div>
+						</div>
+					</div>
+					<div ng-switch-when='3'>
+						<div class="header">
+							<span class"title">Let's Get Started.<i class="icon-x-black close" onclick="disparition($('.get-started-resume'))"></i>
+						</div>
+					</div>
+					<div ng-switch-when='4'>
+						<div class="header">
+							<span class"title">Let's Get Started.<i class="icon-x-black close" onclick="disparition($('.get-started-resume'))"></i>
+						</div>
+					</div>
+					<div ng-switch-when='5'>
+						<div class="header">
+							<span class"title">Let's Get Started.<i class="icon-x-black close" onclick="disparition($('.get-started-resume'))"></i>
+						</div>
+					</div>
 				</div>
 				<div class="footer-dialog">
-					<div class="button back-white" onclick="">Previous<i class="icon-bigarrow-left-black"></i></div>
-					<div class="button back-white" onclick="">Next<i class="icon-bigarrow-right-black"></i></div>
+					<div id="previous-button" class="button back-white" ng-click="previous()">Previous<i class="icon-bigarrow-left-black"></i></div>
+					<div id="next-button" class="button back-white" ng-click="next()">Next<i class="icon-bigarrow-right-black"></i></div>
 					<div class="button back-green right" ng-click="disparition($('.get-started-resume'))">Save & Close</div>
 					<div class="clear"></div>
 				</div>
