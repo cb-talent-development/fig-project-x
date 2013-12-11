@@ -534,8 +534,8 @@ Header css
 	}
 	.icon-bigarrow-bottom-orange{
 		position:relative;
-		top:20px;
-		right: 3px;
+		top: 30px;
+		right: 0px;
 		@media(max-width: 767px){
 			right: 0px;
 			top: 14px;
@@ -2412,7 +2412,7 @@ Tools dashboard & tool css
             .icon-careerscape-small{
                 margin-left:-70px;
             }
-            .icon-resumePro-small{
+            .icon-resumeHero-small{
                 margin-left:-73.5px;
             }
             .icon-jobinality-small{
@@ -2567,7 +2567,7 @@ Tool CSS
                 height:100%;
                 margin-right:18px;
             }
-            .icon-jobinality-small,.icon-resumePro-small,.icon-localygrown-small,.icon-careerscape-small{
+            .icon-jobinality-small,.icon-resumeHero-small,.icon-localygrown-small,.icon-careerscape-small{
                 position:absolute;
                 top:-20px;left:73px;
             }
@@ -2598,6 +2598,42 @@ Tool CSS
         .icon-bar-grey{
             margin:9px;
         }
+		@media(max-width: 479px){
+			width: 300px;
+			height: 320px;
+			.title-social{
+				width: 100%;
+				height: 100%;
+				.icon-jobinality-small,.icon-resumeHero-small,.icon-localygrown-small,.icon-careerscape-small{
+					position:absolute;
+					top:30px;left:50%;margin-left: -40px;
+				}
+				.title{
+					top:200px;
+					width: 300px;
+					text-align: center;
+					text-transform:capitalize;
+					font-size:25px;
+					line-height:108px;
+					height:60px;
+					left:0px;
+				}
+				.social{
+					width: 100%;
+					height: 30px;
+					text-align: center;
+					clear: both;
+					position: absolute;
+					bottom: 0px;
+				}
+							}
+			.icon-bar-grey{
+				padding-top: 3px;
+			}
+			.icon-question{
+				display: inline-block !important;
+			}
+		}
     }
     .buttons_zoom{
         position:absolute;
@@ -2618,11 +2654,17 @@ Tool CSS
             width:100%;height:100%;color:white;
             font-size:22px;
             border:none;background:none;
+			@media(max-width: 479px){
+				width: 300px;
+			}
         }
         .industries,.occupations{
             padding-top:21px;padding-bottom:17px;
             font-size:22px;
             position:relative;
+			@media(max-width: 479px){
+				margin-top: 10px;
+			}
             .title{
                 margin-left:20px;
             }
@@ -2661,13 +2703,27 @@ Tool CSS
             float:left;
             width:23%;
             margin-left:30px;
-            height:100%;
+            height:100%;	
+			@media(max-width: 479px){
+				width: 300px;
+				margin-left: 0px;
+				.subMenu{
+					z-index: 1002;
+				}
+			}
         }
         .occupations{
             @include blue-element;
             float:right;
             width:48.7%;
             height:100%;
+			@media(max-width: 479px){
+				width: 300px;
+				float:left;
+				.subMenu{
+					z-index: 1001;
+				}
+			}
             .elem{
                 float:left;
                 width:50%;
@@ -3083,11 +3139,18 @@ Locally Grown
             min-width:267px;
             float:left;
             @include blue-element;
+			@media(max-width: 479px){
+				width: 300px;
+			}
         }
     }
     .mapbox{
         @include main-block;
         height:590px;
+		@media(max-width: 479px){
+			width: 300px;
+			margin-top: 0px;
+		}
     }
 }
 

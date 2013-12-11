@@ -1,0 +1,276 @@
+<div class="resume-hero" ng-controller="ResumeHeroCtr">
+	<div ng-include="'partials/tools/parts/resume-hero.html'">
+	</div>
+	<div class="resume-buttons">
+		<div class="button back-green"><i class="icon-new-resume-button"></i>New Resume</div>
+		<div class="button back-pink"><i class="icon-change-resume-button"></i>Change Template</div>
+		<div class="button back-blue"><i class="icon-export-resume-button"></i>Export Resume</div>
+		<div class="button back-orange"><i class="icon-post-resume-button"></i>Post Resume</div>
+		<div class="button back-red" onclick="apparition($('.delete-resume'))"><i class="icon-delete-resume-button"></i>Delete Resume</div>
+		<div class="button back-darkgrey"><i class="icon-question"></i>Help</div>
+	</div>
+	<div class="content">
+		<div class="button-list left">
+			<div class="button back-white"><i class="icon-completed-check"></i>Contact Information<i class="icon-right-black"></i></div>
+			<div class="button back-white"><i class="icon-completed-check"></i>Work Experience<i class="icon-right-black"></i></div>
+			<div class="button back-white"><i class="icon-completed-check"></i>Education & Career Training<i class="icon-right-black"></i></div>
+			<div class="button back-white"><i class="icon-completed-check"></i>Skills<i class="icon-right-black"></i></div>
+			<div class="button back-white"><i class="icon-not-completed"></i>Awards & Honors<i class="icon-right-black"></i></div>
+			<div class="button back-white"><i class="icon-not-completed"></i>Tools & Technology<i class="icon-right-black"></i></div>
+			<div class="button back-white"><i class="icon-not-completed"></i>Publications<i class="icon-right-black"></i></div>
+			<div class="button back-white"><i class="icon-not-completed"></i>Affiliations<i class="icon-right-black"></i></div>
+			<div class="button back-white"><i class="icon-not-completed"></i>Volunteer Work<i class="icon-right-black"></i></div>
+			<div class="button back-white" onclick="apparition($('.add-section'))"><i class="icon-add-section"></i>Add Section<i class="icon-right-black"></i></div>
+		</div>
+		<div class="resume-content left">
+			<h2>Preview of: <b>"{{currentResume.Title}}"</b></h2>
+			<div class="presentation">
+				<div class="name">{{user.Name}}</div>
+				<ul>
+					<li class="info left">{{user.Adress}}</li>
+					<li class="info left">{{user.City}}, {{user.State}}, {{user.Zipcode}}</li>
+					<li class="info left">{{user.Phone}}</li>
+					<li class="info left">{{user.Mail}}</li>
+				</ul>
+			</div>
+			<h3>MARKETING & RESEARCH PROFESSIONNAL</h3>
+			<ul class="sortable" id="sortable">
+				<li class="element ui-state-default" ng-repeat="section in sections">
+					<div class="icons">
+						<div class="button back-green"><i class="icon-add-button"></i></div>
+						<div class="separation"></div>
+						<div class="button back-grey"><i class="icon-drag-button"></i></div>
+						<div class="button back-grey"><i class="icon-edit-button"></i></div>
+					</div>
+					<h4>{{section.Title}}</h4>
+					<div class="section-content" ng-bind-html="section.Content"></div>
+				</li>
+			</ul>
+		</div>
+		<div class="clear"></div>
+		<div class="add-section dialog">
+			<div class="background" onclick="disparition($('.add-section'))"></div>
+			<div class="section">
+				<div class="header">
+					<span class"title">Template modal for ResumeHero</span><i class="icon-x-black close" onclick="disparition($('.add-section'))"></i>
+				</div>
+				<div class="title-edit">
+					<i class="label">EDIT SECTION TITLE</i>
+					<input placeholder="Title" ng-model="newSectionTitle"/>
+				</div>
+				<div class="content">
+					<textarea class="textarea" placeholder="Content"></textarea>
+				</div>
+				<div class="footer-dialog">
+					<div class="button green" ng-click="saveSection()">Save & Close</div>
+					<div class="clear"></div>
+				</div>
+			</div>
+		</div>
+		<div class="delete-resume dialog">
+			<div class="background" onclick="disparition($('.delete-resume'))"></div>
+			<div class="section">
+				<div class="header">
+					<span class"title">Delete "{{currentResume.Title}}"?</span><i class="icon-x-black close" onclick="disparition($('.delete-resume'))"></i>
+				</div>
+				<div class="content">
+					<div class="save link">
+						<a href="/"></a>
+						<div class="icon-resumePro-saved"></div>
+						<div class="content-save">
+							<div class="name">{{currentResume.Title}}</div>
+							<div class="type">{{currentResume.Type}}</div>
+							<div class="level">{{currentResume.Level}}</div>
+						</div>
+					</div>
+				</div>
+				<div class="footer-dialog">
+					<div class="button back-white" onclick="disparition($('.delete-resume'))">Cancel</div>
+					<div class="button back-red right" ng-click="removeItem()">Delete</div>
+					<div class="clear"></div>
+				</div>
+			</div>
+		</div>
+		<div class="get-started-resume dialog">
+			<div class="background" onclick="disparition($('.get-started-resume'))"></div>
+			<div class="section">
+				<div ng-switch on="actualPage">
+					<div ng-switch-when='1'>
+						<div class="header">
+							<span class"title">Let's Get Started.&nbsp</span><i class="label">Did you know, Jean-jacques aime les moules</i><i class="icon-x-black close" onclick="disparition($('.get-started-resume'))"></i>
+						</div>
+						<div class="content">
+							<input class="no-margin no-margin-resp" placeholder="First Name"/><input placeholder="Last Name"/><input class="no-margin-resp" placeholder="Email Adress"/>
+						</div>
+						<div class="content">
+							<input class="no-margin no-margin-resp" placeholder="Street Adress"/>
+							<input placeholder="Additionnal Adress (Apt, Suite)"/>
+							</br>
+							<input class="no-margin no-margin-resp" placeholder="City"/>
+							<div class="button link toggleMenu">{{ selectedCountry }}<i class="icon-bigarrow-bottom-grey"></i>
+								<ul class="subMenu dropdown">
+									<li ng-repeat="country in countries" select data-value="country" data-elem="selectedCountry">{{ country }}</li>
+								</ul>
+							</div>
+							<input class="no-margin-resp" placeholder="ZipCode"/>
+						</div>
+						<div class="content">
+							<input class="no-margin no-margin-resp" placeholder="Phone Number"/><input placeholder="Mobile Number"/>
+						</div>
+					</div>
+					<div ng-switch-when='2'>
+						<div class="header">
+							<span class"title">Add Basic Skills.<i class="icon-x-black close" onclick="disparition($('.get-started-resume'))"></i>
+						</div>
+						<div class="content">
+							<div class="buttons-changes">
+								<div id="monitoring" class="button-change selected" ng-click="changeType('monitoring')">
+									<div class="carre"></div>
+									<div class="title">Monitoring</div>
+									<div class="txt">
+										Monitoring/Assessing performance of yourself, others individuals, or organizations to make improvements or take corrective action.
+									</div>
+								</div>
+								<div id="speaking" class="button-change selected" ng-click="changeType('speaking')">
+									<div class="carre"></div>
+									<div class="title">Speaking</div>
+									<div class="txt">
+										Monitoring/Assessing performance of yourself, others individuals, or organizations to make improvements or take corrective action.
+									</div>
+								</div>
+								<div id="science" class="button-change selected" ng-click="changeType('science')">
+									<div class="carre"></div>
+									<div class="title">Science</div>
+									<div class="txt">
+										Using scientific rules and methods to solve problems.
+									</div>
+								</div>
+								<div id="reading" class="button-change" ng-click="changeType('reading')">
+									<div class="carre"></div>
+									<div class="title">Reading Comprehension</div>
+									<div class="txt">
+										Understanding written sentences and paragraphs in work related documents.
+									</div>
+								</div>
+								<div id="writing" class="button-change" ng-click="changeType('writing')">
+									<div class="carre"></div>
+									<div class="title">Writing</div>
+									<div class="txt">
+										Communicating effectively in writing as appropriate for the needs of the audience.
+									</div>
+								</div>
+								<div id="mathematics" class="button-change" ng-click="changeType('mathematics')">
+									<div class="carre"></div>
+									<div class="title">Mathematics</div>
+									<div class="txt">
+										Using mathematics to solve problems.
+									</div>
+								</div>
+							</div>
+							<div class="clear"></div>
+						</div>
+					</div>
+					<div ng-switch-when='3'>
+						<div class="header">
+							<span class"title">Let's Get Started.<i class="icon-x-black close" onclick="disparition($('.get-started-resume'))"></i>
+						</div>
+					</div>
+					<div ng-switch-when='4'>
+						<div class="header">
+							<span class"title">Let's Get Started.<i class="icon-x-black close" onclick="disparition($('.get-started-resume'))"></i>
+						</div>
+					</div>
+					<div ng-switch-when='5'>
+						<div class="header">
+							<span class"title">Let's Get Started.<i class="icon-x-black close" onclick="disparition($('.get-started-resume'))"></i>
+						</div>
+					</div>
+				</div>
+				<div class="footer-dialog">
+					<div id="previous-button" class="button back-white" ng-click="previous()">Previous<i class="icon-bigarrow-left-black"></i></div>
+					<div id="next-button" class="button back-white" ng-click="next()">Next<i class="icon-bigarrow-right-black"></i></div>
+					<div class="button back-green right" ng-click="disparition($('.get-started-resume'))">Save & Close</div>
+					<div class="clear"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script src="lib/bootstrap/js/wysihtml5-0.3.0.js"></script>
+<script src="lib/bootstrap/js/bootstrap-wysihtml5.js"></script>
+<script src="lib/prettyprint/js/prettyprint.js"></script>
+<script src="lib/jQuery/jquery.spellchecker.js"></script>
+
+<script>
+	$(function() {
+		$( "#sortable" ).sortable({
+			revert: true
+		});
+		$( "#draggable" ).draggable({
+			connectToSortable: "#sortable",
+			helper: "clone",
+			revert: "invalid"
+		});
+		$( "ul, li" ).disableSelection();
+	});
+	
+	(function() {
+		var element = $('.textarea');
+
+		element.wysihtml5({
+		toolbar: {
+		   "spellchecker":
+			  "<li>" +
+				  "<a class='btn' data-wysihtml5-command='spellcheck'>" + 
+				  "<i class='icon-spellchecker spellchecker-button-icon'></i></a>" +
+			  "</li>"
+		},
+		stylesheets: [
+		  "./css/jquery.spellchecker.css"
+		],     
+		});
+
+		var wysihtml5 = element.data('wysihtml5');
+		var body = $(wysihtml5.editor.composer.iframe).contents().find('body');
+
+		var toggle = (function() {
+
+		var spellchecker = null;
+
+		function create() {
+
+		  spellchecker = new $.SpellChecker(body, {
+			lang: 'en',
+			parser: 'html',
+			webservice: {
+			  path: "../webservices/php/SpellChecker.php",
+			  driver: 'pspell'
+			},
+			suggestBox: {
+			  position: 'below'
+			}
+		  });
+
+		  spellchecker.on('check.success', function() {
+			alert('There are no incorrectly spelt words.');
+		  });
+
+		  spellchecker.check();
+		}
+
+		function destroy() {
+		  spellchecker.destroy();
+		  spellchecker = null;
+		}
+
+		function toggle() {
+		  (!spellchecker) ? create() : destroy();
+		}
+
+		return toggle;
+		})();
+
+		wysihtml5.toolbar.find('[data-wysihtml5-command="spellcheck"]').click(toggle);
+	})();
+</script>

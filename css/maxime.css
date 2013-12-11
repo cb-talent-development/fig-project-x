@@ -170,7 +170,7 @@ PROFILE SUBMENU
 .page-header .subMenu {
   z-index: 999;
   width: 370px;
-  left: -127px;
+  left: -143px;
   top: 110px; }
   .page-header .subMenu .profile-subMenu {
     background-color: white;
@@ -199,6 +199,18 @@ PROFILE SUBMENU
       margin: 0px; }
     .page-header .subMenu .profile-subMenu .back-grey {
       color: black; }
+  @media (max-width: 479px) {
+    .page-header .subMenu {
+      width: 300px;
+      left: -103px;
+      top: 100px; }
+      .page-header .subMenu .profile-subMenu {
+        padding: 10px;
+        padding-bottom: 0px;
+        margin: 0px; }
+        .page-header .subMenu .profile-subMenu .button {
+          margin-bottom: 10px;
+          width: 280px; } }
 .page-header .offline {
   width: 390px !important;
   left: -135px !important; }

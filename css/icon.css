@@ -108,14 +108,14 @@ Arrow big
 .icon-bigarrow-bottom-orange {
   background-size: 1500px 1798.5px;
   background-position: -76px -63px;
-  height: 15px;
-  width: 8px; }
+  height: 8px;
+  width: 15px; }
   @media only screen and (max-width: 768px) {
     .icon-bigarrow-bottom-orange {
       background-size: 1050px 1258.9499999999998px;
       background-position: -53.199999999999996px -44.099999999999994px;
-      height: 10.5px;
-      width: 5.6px; } }
+      height: 5.6px;
+      width: 10.5px; } }
 
 .icon-bigarrow-right-black {
   background-size: 1500px 1798.5px;
@@ -1901,10 +1901,16 @@ OTHER
       width: 21.7px; } }
 
 .icon-pencil {
-  background-size: 1500px 1798.5px;
-  background-position: -150px -422px;
-  height: 28px;
-  width: 28px; }
+  background-size: 1050px 1258.9499999999998px;
+  background-position: -105px -295.4px;
+  height: 19.599999999999998px;
+  width: 19.599999999999998px; }
+  @media only screen and (max-width: 768px) {
+    .icon-pencil {
+      background-size: 750px 899.25px;
+      background-position: -75px -211px;
+      height: 14px;
+      width: 14px; } }
 
 .icon-pencil-big {
   background-position: -150px -422px;
@@ -2243,13 +2249,13 @@ TOOLS
       height: 87.5px;
       width: 85.5px; } }
 
-.icon-resumePro-small {
+.icon-resumeHero-small {
   background-size: 1500px 1798.5px;
   background-position: -450px -785px;
   height: 177px;
   width: 172px; }
   @media only screen and (max-width: 768px) {
-    .icon-resumePro-small {
+    .icon-resumeHero-small {
       background-size: 750px 899.25px;
       background-position: -225px -392.50000000000006px;
       height: 88.5px;
@@ -2291,13 +2297,13 @@ TOOLS
       height: 172.50000000000003px;
       width: 134.5px; } }
 
-.icon-resumePro {
+.icon-resumeHero {
   background-size: 1500px 1798.5px;
   background-position: -335px -1040px;
   height: 345px;
   width: 269px; }
   @media only screen and (max-width: 768px) {
-    .icon-resumePro {
+    .icon-resumeHero {
       background-size: 750px 899.25px;
       background-position: -17px -520px;
       height: 172.50000000000003px;

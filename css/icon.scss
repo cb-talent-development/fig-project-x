@@ -77,9 +77,9 @@ Arrow big
 	}
 }
 .icon-bigarrow-bottom-orange{
-	@include dimensionPosition(-76px, -63px, 15px, 8px, 1.0);
+	@include dimensionPosition(-76px, -63px, 8px, 15px, 1.0);
     @media only screen and (max-width: 768px){
-        @include dimensionPosition(-76px, -63px, 15px, 8px, 0.7);
+        @include dimensionPosition(-76px, -63px, 8px, 15px, 0.7);
 	}
 }
 .icon-bigarrow-right-black{
@@ -1176,8 +1176,9 @@ OTHER
 	}
 }
 .icon-pencil{
-	@include dimensionPosition(-150px, -422px, 28px, 28px, 1.0);
+	@include dimensionPosition(-150px, -422px, 28px, 28px, 0.7);
     @media only screen and (max-width: 768px){
+		@include dimensionPosition(-150px, -422px, 28px, 28px, 0.5);
 	}
 }
 .icon-pencil-big{
@@ -1437,7 +1438,7 @@ TOOLS
 	   @include dimensionPosition(-236px,-785px,175px,171px,0.5);
 	}
 }
-.icon-resumePro-small{
+.icon-resumeHero-small{
 	@include dimensionPosition(-450px,-785px,177px,172px,1);
     @media only screen and (max-width: 768px){
 	   @include dimensionPosition(-450px,-785px,177px,172px,0.5);
@@ -1461,7 +1462,7 @@ TOOLS
 	   @include dimensionPosition(-34px,-1040px,345px,269px,0.5);
 	}
 }
-.icon-resumePro{
+.icon-resumeHero{
 	@include dimensionPosition(-335px,-1040px,345px,269px,1);
     @media only screen and (max-width: 768px){
 	   @include dimensionPosition(-34px,-1040px,345px,269px,0.5);

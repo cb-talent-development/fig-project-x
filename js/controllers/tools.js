@@ -89,11 +89,11 @@ function ToolCtr($scope, $http,$routeParams,pagination) {
             $scope.logo="icon-jobinality-small";
 
         }
-        else if(name=="resume-pro"){
-            $scope.txt="Resume Pro";
-            $scope.template="partials/tools/resumePro.html";
-            $scope.title={"part1":"Resume","part2":"Pro"};
-            $scope.logo="icon-resumePro-small";
+        else if(name=="resume-hero"){
+            $scope.txt="Resume Hero";
+            $scope.template="partials/tools/resumeHero.html";
+            $scope.title={"part1":"Resume","part2":"Hero"};
+            $scope.logo="icon-resumeHero-small";
         }
         $scope.paths=[{
             "txt":" Career Tools ",
@@ -257,11 +257,11 @@ function ResumeHeroCtr($scope, $http){
 	}
 	/*
 	*/
-	$scope.changeType = function(otherElem,thisElem){
-		var other = $('#'+otherElem);
+	$scope.changeType = function(thisElem){
 		var elem = $('#'+thisElem);
-		if(other.hasClass("selected")){
-			other.removeClass("selected");
+		if(elem.hasClass("selected")){
+			elem.removeClass("selected");
+		}else{
 			elem.addClass("selected");
 		}
 	}

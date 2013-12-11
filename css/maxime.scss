@@ -301,7 +301,7 @@ PROFILE SUBMENU
 	.subMenu{
 		z-index: 999;
 		width: 370px;
-		left: -127px;
+		left: -143px;
 		top: 110px;
 		.profile-subMenu{
 			@include whitebox;
@@ -329,6 +329,20 @@ PROFILE SUBMENU
 			}
 			.back-grey{
 				color: black;
+			}
+		}
+		@media(max-width: 479px){
+			width: 300px;
+			left: -103px;
+			top: 100px;
+			.profile-subMenu{
+				padding: 10px;
+				padding-bottom: 0px;
+				margin: 0px;
+				.button{
+					margin-bottom: 10px;
+					width: 280px;
+				}
 			}
 		}
 	}
