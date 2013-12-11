@@ -2,7 +2,7 @@
 	<div ng-include="'partials/tools/parts/resume-hero.html'">
 	</div>
 	<div class="resume-buttons">
-		<div class="button back-green"><i class="icon-new-resume-button"></i> New Resume </div>
+		<div class="button back-green"><i class="icon-new-resume-button"></i>New Resume</div>
 		<div class="button back-pink"><i class="icon-change-resume-button"></i>Change Template</div>
 		<div class="button back-blue"><i class="icon-export-resume-button"></i>Export Resume</div>
 		<div class="button back-orange"><i class="icon-post-resume-button"></i>Post Resume</div>
@@ -100,27 +100,22 @@
 							<span class"title">Let's Get Started.&nbsp</span><i class="label">Did you know, Jean-jacques aime les moules</i><i class="icon-x-black close" onclick="disparition($('.get-started-resume'))"></i>
 						</div>
 						<div class="content">
-							<input class="no-margin" placeholder="First Name"/><input placeholder="Last Name"/><input class="no-margin-resp" placeholder="Email Adress"/>
+							<input class="no-margin no-margin-resp" placeholder="First Name"/><input placeholder="Last Name"/><input class="no-margin-resp" placeholder="Email Adress"/>
 						</div>
 						<div class="content">
-							<input class="no-margin" placeholder="Street Adress"/>
+							<input class="no-margin no-margin-resp" placeholder="Street Adress"/>
 							<input placeholder="Additionnal Adress (Apt, Suite)"/>
 							</br>
-							<input class="no-margin" placeholder="City"/>
-							<div class="button link toggleMenu">State<i class="icon-bigarrow-bottom-grey"></i>
+							<input class="no-margin no-margin-resp" placeholder="City"/>
+							<div class="button link toggleMenu">{{ selectedCountry }}<i class="icon-bigarrow-bottom-grey"></i>
 								<ul class="subMenu dropdown">
-									<li>Australia</li>
-									<li>Belgium</li>
-									<li>Dutchland</li>
-									<li>France</li>
-									<li>United Kingdoms</li>
-									<li>USA</li>
+									<li ng-repeat="country in countries" select data-value="country" data-elem="selectedCountry">{{ country }}</li>
 								</ul>
 							</div>
-							<input placeholder="ZipCode"/>
+							<input class="no-margin-resp" placeholder="ZipCode"/>
 						</div>
 						<div class="content">
-							<input class="no-margin" placeholder="Phone Number"/><input placeholder="Mobile Number"/>
+							<input class="no-margin no-margin-resp" placeholder="Phone Number"/><input placeholder="Mobile Number"/>
 						</div>
 					</div>
 					<div ng-switch-when='2'>

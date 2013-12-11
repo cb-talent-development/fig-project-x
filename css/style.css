@@ -358,6 +358,9 @@ Header css
       .page-header #profil-pic {
         height: 70px;
         width: 70px; } }
+  @media (max-width: 479px) {
+    .page-header .block {
+      width: 200px; } }
 
 .navbar.hidden-xs {
   background-color: #09335b; }
@@ -366,6 +369,8 @@ Header css
     .navbar.hidden-xs ul li a {
       font-size: 1.6em;
       text-align: center; }
+    .navbar.hidden-xs ul li a:hover {
+      background-color: #09335b !important; }
     .navbar.hidden-xs ul li span {
       color: #fff;
       font-size: 1.6em; }
@@ -3255,6 +3260,9 @@ DIALOG
     margin: auto;
     margin-top: 140px;
     background-color: #f3f5f5; }
+    @media (max-width: 479px) {
+      .dialog .section {
+        width: 300px; } }
     .dialog .section .header {
       position: relative;
       font-size: 27px;
@@ -3262,13 +3270,20 @@ DIALOG
       padding-right: 15px;
       padding-top: 20px;
       font-weight: bold;
-      padding-bottom: 12px;
       border-bottom: 1px solid #cfcfcf; }
+      @media (max-width: 479px) {
+        .dialog .section .header {
+          font-size: 15px;
+          padding: 10px;
+          height: 60px; } }
       .dialog .section .header .close {
         position: absolute;
-        top: 50%;
         right: 20px;
-        margin-top: -15px; }
+        top: 20px; }
+        @media (max-width: 479px) {
+          .dialog .section .header .close {
+            right: 10px;
+            top: 10px; } }
     .dialog .section .intro {
       width: 100%;
       font-weight: 18px;
@@ -3306,6 +3321,18 @@ DIALOG
         padding-right: 40px; }
         .dialog .section .footer-dialog .button-next i {
           right: 15px; }
+      @media (max-width: 479px) {
+        .dialog .section .footer-dialog {
+          padding: 10px; }
+          .dialog .section .footer-dialog .button-save, .dialog .section .footer-dialog .button-next, .dialog .section .footer-dialog .button-previous {
+            font-size: 15px;
+            padding: 5px; }
+          .dialog .section .footer-dialog .button-next i, .dialog .section .footer-dialog .button-previous i {
+            position: absolute;
+            top: 10px;
+            right: 10px; }
+          .dialog .section .footer-dialog .button:first-child, .dialog .section .footer-dialog .input-button:first-child {
+            margin-right: 10px; } }
 
 /*
 Tool CSS
@@ -3491,14 +3518,22 @@ Tool CSS
       float: right; }
   .tool .add-section .section {
     width: 1200px; }
+    @media (max-width: 479px) {
+      .tool .add-section .section {
+        width: 300px; }
+        .tool .add-section .section .header {
+          padding: 5px; } }
     .tool .add-section .section .header {
       padding: 20px; }
     .tool .add-section .section .title-edit {
       border-bottom: 1px solid #cfcfcf;
       padding: 20px; }
+      @media (max-width: 479px) {
+        .tool .add-section .section .title-edit {
+          padding: 10px; } }
       .tool .add-section .section .title-edit input {
-        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-        -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+        box-shadow: 0px -1px 1px rgba(0, 0, 0, 0.2);
+        -webkit-box-shadow: 0px -1px 1px rgba(0, 0, 0, 0.2);
         border: none;
         background: white;
         height: 70px;
@@ -3507,13 +3542,25 @@ Tool CSS
         display: block;
         padding: 10px;
         font-size: 30px; }
+        @media (max-width: 479px) {
+          .tool .add-section .section .title-edit input {
+            padding: 5px;
+            height: 30px;
+            font-size: 20px;
+            width: 280px; } }
     .tool .add-section .section .content {
       border-bottom: 1px solid #cfcfcf;
       padding: 20px; }
+      @media (max-width: 479px) {
+        .tool .add-section .section .content {
+          padding: 5px; } }
       .tool .add-section .section .content .wysihtml5-toolbar {
         width: 1170px;
         list-style-type: none;
         padding-left: 0px; }
+        @media (max-width: 479px) {
+          .tool .add-section .section .content .wysihtml5-toolbar {
+            width: 270px; } }
         .tool .add-section .section .content .wysihtml5-toolbar .dropdown {
           position: static !important;
           margin-left: -26px; }
@@ -3524,6 +3571,11 @@ Tool CSS
             left: 21px;
             border-radius: 0px !important;
             width: 182px; }
+          @media (max-width: 479px) {
+            .tool .add-section .section .content .wysihtml5-toolbar .dropdown .btn {
+              width: 130px !important; }
+            .tool .add-section .section .content .wysihtml5-toolbar .dropdown .dropdown-menu {
+              width: 132px; } }
         .tool .add-section .section .content .wysihtml5-toolbar .btn-group {
           display: inline-block;
           float: left;
@@ -3531,6 +3583,17 @@ Tool CSS
           height: 40px; }
           .tool .add-section .section .content .wysihtml5-toolbar .btn-group .btn {
             margin-left: 0px; }
+          @media (max-width: 479px) {
+            .tool .add-section .section .content .wysihtml5-toolbar .btn-group {
+              width: 130px; } }
+        @media (max-width: 479px) {
+          .tool .add-section .section .content .wysihtml5-toolbar div.btn-group:nth-child(1) {
+            margin-left: 23px;
+            margin-right: -20px; } }
+        @media (max-width: 479px) {
+          .tool .add-section .section .content .wysihtml5-toolbar div.btn-group:nth-child(2) {
+            margin-left: 0px;
+            margin-right: -20px; } }
         .tool .add-section .section .content .wysihtml5-toolbar .btn {
           border-radius: 0px;
           display: inline-block;
@@ -3550,6 +3613,18 @@ Tool CSS
             left: 11px; }
           .tool .add-section .section .content .wysihtml5-toolbar .btn .current-font {
             margin-left: 20px; }
+          @media (max-width: 479px) {
+            .tool .add-section .section .content .wysihtml5-toolbar .btn {
+              width: 33%;
+              height: 25px;
+              font-size: 15px;
+              padding: 5px;
+              padding-top: 2px;
+              overflow: hidden;
+              margin-left: 30px; }
+              .tool .add-section .section .content .wysihtml5-toolbar .btn .glyphicon {
+                top: 6px;
+                left: 6px; } }
         .tool .add-section .section .content .wysihtml5-toolbar #bold-button {
           font-weight: bold; }
         .tool .add-section .section .content .wysihtml5-toolbar #italic-button {
@@ -3576,14 +3651,23 @@ Tool CSS
     @media (max-width: 767px) {
       .tool .get-started-resume .section {
         width: 470px !important; } }
+    @media (max-width: 480px) {
+      .tool .get-started-resume .section {
+        width: 300px !important; } }
     .tool .get-started-resume .section .header .title {
       font-weight: normal; }
     .tool .get-started-resume .section .header .label {
       display: inline-block;
       font-size: 27px; }
+      @media (max-width: 479px) {
+        .tool .get-started-resume .section .header .label {
+          font-size: 13px; } }
     .tool .get-started-resume .section .content {
       border-bottom: 1px solid #cfcfcf;
       padding: 20px; }
+      @media (max-width: 480px) {
+        .tool .get-started-resume .section .content {
+          padding: 10px; } }
       .tool .get-started-resume .section .content input, .tool .get-started-resume .section .content .button, .tool .get-started-resume .section .content .input-button {
         box-shadow: 0px -1px 1px rgba(0, 0, 0, 0.2);
         -webkit-box-shadow: 0px -1px 1px rgba(0, 0, 0, 0.2);
@@ -3595,13 +3679,20 @@ Tool CSS
         border: none;
         display: inline-block;
         padding: 10px;
-        font-size: 30px; }
-        @media (max-width: 767px) {
+        font-size: 30px;
+        text-overflow: ellipsis; }
+        @media (max-width: 767px) and (min-width: 480px) {
           .tool .get-started-resume .section .content input, .tool .get-started-resume .section .content .button, .tool .get-started-resume .section .content .input-button {
             margin-left: 10px;
             height: 50px;
             font-size: 20px;
-            width: 210px; } }
+            width: 210px !important; } }
+        @media (max-width: 479px) {
+          .tool .get-started-resume .section .content input, .tool .get-started-resume .section .content .button, .tool .get-started-resume .section .content .input-button {
+            margin-left: 10px;
+            height: 30px;
+            font-size: 20px;
+            width: 135px !important; } }
       .tool .get-started-resume .section .content .button, .tool .get-started-resume .section .content .input-button {
         box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
         -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
@@ -3611,16 +3702,30 @@ Tool CSS
         padding-top: 17px; }
         .tool .get-started-resume .section .content .button ul, .tool .get-started-resume .section .content .input-button ul {
           top: 70px; }
-      .tool .get-started-resume .section .content input:first-child {
-        margin-bottom: 20px; }
-        @media (max-width: 767px) {
-          .tool .get-started-resume .section .content input:first-child {
-            margin-bottom: 10px; } }
+      .tool .get-started-resume .section .content .button:not(.open), .tool .get-started-resume .section .content .input-button:not(.open) {
+        overflow: hidden; }
       .tool .get-started-resume .section .content .no-margin {
         margin-left: 0px; }
-      @media (max-width: 767px) {
+        @media (min-width: 480px) {
+          .tool .get-started-resume .section .content .no-margin {
+            margin-bottom: 10px; } }
+      @media (max-width: 479px) {
         .tool .get-started-resume .section .content .no-margin-resp {
-          margin-left: 0px; } }
+          margin-left: 0px;
+          margin-bottom: 10px !important; } }
+      @media (max-width: 479px) {
+        .tool .get-started-resume .section .content input:not(.no-margin-resp) {
+          margin-right: -5px; } }
+      @media (max-width: 479px) {
+        .tool .get-started-resume .section .content .link {
+          padding-top: 4px; } }
+      @media (max-width: 479px) {
+        .tool .get-started-resume .section .content .link .subMenu {
+          top: 31px; }
+          .tool .get-started-resume .section .content .link .subMenu li {
+            height: 30px;
+            padding: 5px 10px;
+            font-size: 19px; } }
     .tool .get-started-resume .section .buttons-changes {
       width: 100%; }
       .tool .get-started-resume .section .buttons-changes .button-change {
@@ -3650,6 +3755,19 @@ Tool CSS
       padding-right: 35px; }
     .tool .get-started-resume .section .footer-dialog i {
       top: 14px; }
+    @media (max-width: 479px) {
+      .tool .get-started-resume .section .footer-dialog {
+        padding: 10px; }
+        .tool .get-started-resume .section .footer-dialog .button:first-child, .tool .get-started-resume .section .footer-dialog .input-button:first-child {
+          margin-right: 10px; }
+        .tool .get-started-resume .section .footer-dialog .button, .tool .get-started-resume .section .footer-dialog .input-button {
+          font-size: 15px;
+          padding: 5px; }
+        .tool .get-started-resume .section .footer-dialog #next-button {
+          padding-right: 20px; }
+        .tool .get-started-resume .section .footer-dialog i {
+          top: 7px;
+          right: 7px; } }
 
 .careerScape .button-change, .resume-hero .button-change {
   color: white;
@@ -3823,8 +3941,9 @@ JOB RESULTS/RECOMMENDATIONS
   .scrollable .step {
     display: inline-block; }
 
-.delete-resume .section {
-  width: 450px; }
+@media (min-width: 480px) {
+  .delete-resume .section {
+    width: 450px; } }
 .delete-resume .save {
   text-align: center; }
 .delete-resume .footer-dialog {
@@ -3858,6 +3977,9 @@ JOB RESULTS/RECOMMENDATIONS
     -moz-user-select: none;
     -webkit-user-select: none;
     -ms-user-select: none; }
+    @media (max-width: 479px) {
+      .job-results .icon-arrow-left-big-blue, .job-results .icon-arrow-right-big-blue, .saved-content .icon-arrow-left-big-blue, .saved-content .icon-arrow-right-big-blue, .delete-items .icon-arrow-left-big-blue, .delete-items .icon-arrow-right-big-blue {
+        top: 96%; } }
   .job-results .icon-arrow-left-big-blue, .saved-content .icon-arrow-left-big-blue, .delete-items .icon-arrow-left-big-blue {
     left: 40px; }
   .job-results .icon-arrow-right-big-blue, .saved-content .icon-arrow-right-big-blue, .delete-items .icon-arrow-right-big-blue {
@@ -3870,11 +3992,21 @@ JOB RESULTS/RECOMMENDATIONS
     padding-top: 22px;
     padding-bottom: 20px;
     border-bottom: 1px solid #9d9d9d; }
+    @media (max-width: 479px) {
+      .job-results .title, .saved-content .title, .delete-items .title {
+        font-size: 14px;
+        padding: 0px 15px;
+        padding-top: 12px;
+        padding-bottom: 10px; } }
   .job-results .content, .saved-content .content, .delete-items .content {
     position: relative; }
     .job-results .content .scrollable-content, .saved-content .content .scrollable-content, .delete-items .content .scrollable-content {
       width: 80%;
       height: 82%; }
+      @media (max-width: 479px) {
+        .job-results .content .scrollable-content, .saved-content .content .scrollable-content, .delete-items .content .scrollable-content {
+          width: 100%;
+          height: 80%; } }
     .job-results .content .scrollable, .saved-content .content .scrollable, .delete-items .content .scrollable {
       height: 100%; }
     .job-results .content .job-recommandation, .job-results .content .save, .saved-content .content .job-recommandation, .saved-content .content .save, .delete-items .content .job-recommandation, .delete-items .content .save {
@@ -3884,8 +4016,15 @@ JOB RESULTS/RECOMMENDATIONS
       width: 187px;
       display: inline-block;
       vertical-align: top; }
+      @media (max-width: 479px) {
+        .job-results .content .job-recommandation, .job-results .content .save, .saved-content .content .job-recommandation, .saved-content .content .save, .delete-items .content .job-recommandation, .delete-items .content .save {
+          width: 100px; } }
     .job-results .content .pages, .saved-content .content .pages, .delete-items .content .pages {
       text-align: center; }
+      @media (max-width: 479px) {
+        .job-results .content .pages, .saved-content .content .pages, .delete-items .content .pages {
+          border-top: 1px #9d9d9d solid;
+          padding-top: 13px; } }
       .job-results .content .pages .activated, .saved-content .content .pages .activated, .delete-items .content .pages .activated {
         background-color: #09335b !important; }
       .job-results .content .pages .ball, .saved-content .content .pages .ball, .delete-items .content .pages .ball {
@@ -3896,6 +4035,11 @@ JOB RESULTS/RECOMMENDATIONS
         height: 15px;
         border-radius: 10px;
         background-color: #ccd6de; }
+        @media (max-width: 479px) {
+          .job-results .content .pages .ball, .saved-content .content .pages .ball, .delete-items .content .pages .ball {
+            width: 10px;
+            height: 10px;
+            border-radius: 7px; } }
       .job-results .content .pages .ball:hover, .saved-content .content .pages .ball:hover, .delete-items .content .pages .ball:hover {
         cursor: pointer; }
 
@@ -3903,30 +4047,54 @@ JOB RESULTS/RECOMMENDATIONS
   text-align: left; }
 .saved-content .content, .delete-items .content {
   height: 325px; }
+  @media (max-width: 479px) {
+    .saved-content .content, .delete-items .content {
+      height: 200px; } }
   .saved-content .content .scrollable-content, .delete-items .content .scrollable-content {
     height: 85%; }
-  .saved-content .content .selected, .delete-items .content .selected {
-    border: 2px solid red; }
+    @media (max-width: 479px) {
+      .saved-content .content .scrollable-content, .delete-items .content .scrollable-content {
+        height: 80%; } }
+  .saved-content .content .save:not(.selected), .delete-items .content .save:not(.selected) {
+    opacity: 0.7; }
   .saved-content .content .save, .delete-items .content .save {
     margin-top: 45px;
     position: relative;
     height: 210px;
     font-size: 18px; }
+    @media (max-width: 479px) {
+      .saved-content .content .save, .delete-items .content .save {
+        height: 160px;
+        margin-top: 20px; } }
     .saved-content .content .save .content-save, .delete-items .content .save .content-save {
       position: absolute;
       top: 145px;
       width: 100%; }
+      @media (max-width: 479px) {
+        .saved-content .content .save .content-save, .delete-items .content .save .content-save {
+          top: 75px; } }
       .saved-content .content .save .content-save .name, .delete-items .content .save .content-save .name {
         color: black;
         margin-bottom: 3px; }
+        @media (max-width: 479px) {
+          .saved-content .content .save .content-save .name, .delete-items .content .save .content-save .name {
+            font-size: 15px; } }
       .saved-content .content .save .content-save .type, .delete-items .content .save .content-save .type {
         font-size: 16px;
         line-height: 18px;
         color: #9d9d9d; }
+        @media (max-width: 479px) {
+          .saved-content .content .save .content-save .type, .delete-items .content .save .content-save .type {
+            font-size: 11px;
+            line-height: 13px; } }
       .saved-content .content .save .content-save .date, .saved-content .content .save .content-save .level, .delete-items .content .save .content-save .date, .delete-items .content .save .content-save .level {
         font-size: 14px;
         line-height: 16px;
         color: #9d9d9d; }
+        @media (max-width: 479px) {
+          .saved-content .content .save .content-save .date, .saved-content .content .save .content-save .level, .delete-items .content .save .content-save .date, .delete-items .content .save .content-save .level {
+            font-size: 9px;
+            line-height: 11px; } }
 
 .job-results .content {
   height: 275px; }
@@ -4312,9 +4480,11 @@ Dashboard
       padding-top: 25px;
       padding-bottom: 30px; }
     .dashboard .popup .section .footer-dialog {
-      border-top: 1px solid #cfcfcf;
-      padding-top: 12px;
-      padding-bottom: 15px; }
+      border-top: 1px solid #cfcfcf; }
+      @media (min-width: 480px) {
+        .dashboard .popup .section .footer-dialog {
+          padding-top: 12px;
+          padding-bottom: 15px; } }
 
 .saved-content-page .saved-content {
   margin-top: 65px; }

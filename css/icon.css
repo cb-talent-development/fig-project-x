@@ -1585,14 +1585,16 @@ JOB PHASES
       width: 22px; } }
 
 .icon-question {
+  background-size: 1500px 1798.5px;
   background-position: -387px -379px;
   height: 22px;
   width: 22px; }
   @media only screen and (max-width: 768px) {
     .icon-question {
-      background-position: -193.5px -189.5px;
-      height: 11px;
-      width: 11px; } }
+      background-size: 1050px 1258.9499999999998px;
+      background-position: -270.9px -265.3px;
+      height: 15.4px;
+      width: 15.4px; } }
 
 .icon-search-orange-big {
   background-position: -426px -370px;
@@ -1899,19 +1901,10 @@ OTHER
       width: 21.7px; } }
 
 .icon-pencil {
-  background-size: 1065px 994px;
-  background-position: -106px -300px;
-  height: 20px;
-  width: 20px; }
-  @media only screen and (max-width: 768px) {
-    .icon-pencil {
-      background-size: -1275px 1190px;
-      background-position: -127px -358px;
-      height: 23px;
-      width: 23px;
-      	   /*background-position: -75px -221px;
-             height:14x;
-             width:14px;*/ } }
+  background-size: 1500px 1798.5px;
+  background-position: -150px -422px;
+  height: 28px;
+  width: 28px; }
 
 .icon-pencil-big {
   background-position: -150px -422px;
@@ -1985,13 +1978,15 @@ OTHER
       width: 16px; } }
 
 .icon-x-black {
+  background-size: 1500px 1798.5px;
   background-position: -431px -422px;
   height: 30px;
   width: 30px; }
   @media only screen and (max-width: 768px) {
     .icon-x-black {
+      background-size: 750px 899.25px;
       background-position: -215.5px -211px;
-      height: 15x;
+      height: 15px;
       width: 15px; } }
 
 .icon-x-white {
@@ -2121,7 +2116,7 @@ OTHER
   @media (max-width: 767px) {
     .icon-export-resume-button {
       background-size: 1050px 1258.9499999999998px;
-      background-position: -797.3px -298.9px;
+      background-position: -602px -298.9px;
       height: 21px;
       width: 21px; } }
 
@@ -2133,7 +2128,7 @@ OTHER
   @media (max-width: 767px) {
     .icon-post-resume-button {
       background-size: 1050px 1258.9499999999998px;
-      background-position: -828.0999999999999px -299.59999999999997px;
+      background-position: -633.5px -299.59999999999997px;
       height: 21px;
       width: 21px; } }
 
@@ -2145,7 +2140,7 @@ OTHER
   @media (max-width: 767px) {
     .icon-delete-resume-button {
       background-size: 1050px 1258.9499999999998px;
-      background-position: -662.1999999999999 -298.9px;
+      background-position: -667.0999999999999px -298.9px;
       height: 21px;
       width: 21px; } }
 

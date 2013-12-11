@@ -980,13 +980,9 @@ JOB PHASES
 	}
 }
 .icon-question{
-    background-position:-387px -379px;
-    height:22px;
-    width:22px;
+	@include dimensionPosition(-387px, -379px, 22px, 22px, 1.0);
     @media only screen and (max-width: 768px){
-	   background-position: -193.5px -189.5px;
-       height:11px;
-       width:11px;
+	   @include dimensionPosition(-387px, -379px, 22px, 22px, 0.7);
 	}
 }
 .icon-search-orange-big{
@@ -1180,17 +1176,8 @@ OTHER
 	}
 }
 .icon-pencil{
-    background-size:1065px 994px;
-    background-position:-106px -300px;
-    height:20px;
-    width:20px;
+	@include dimensionPosition(-150px, -422px, 28px, 28px, 1.0);
     @media only screen and (max-width: 768px){
-        background-size:-1275px 1190px;
-        background-position:-127px -358px;
-        height:23px;width:23px;
-	   /*background-position: -75px -221px;
-       height:14x;
-       width:14px;*/
 	}
 }
 .icon-pencil-big{
@@ -1266,13 +1253,9 @@ $rapp:0.75;
 	}
 }
 .icon-x-black{
-    background-position:-431px -422px;
-    height:30px;
-    width:30px;
+	@include dimensionPosition(-431px, -422px, 30px, 30px, 1.0);
     @media only screen and (max-width: 768px){
-	   background-position: -215.5px -211px;
-       height:15x;
-       width:15px;
+	   @include dimensionPosition(-431px, -422px, 30px, 30px, 0.5);
 	}
 }
 .icon-x-white{
@@ -1388,19 +1371,19 @@ $rapp:0.75;
 .icon-export-resume-button{
 	@include dimensionPosition(-860px,-427px,30px,30px,1);
 	@media (max-width: 767px){
-		@include dimensionPosition(-1139px,-427px,30px,30px,0.7);
+		@include dimensionPosition(-860px,-427px,30px,30px,0.7);
 	}
 }
 .icon-post-resume-button{
 	@include dimensionPosition(-905px,-428px,30px,30px,1);
 	@media (max-width: 767px){
-		@include dimensionPosition(-1183px,-428px,30px,30px,0.7);
+		@include dimensionPosition(-905px,-428px,30px,30px,0.7);
 	}
 }
 .icon-delete-resume-button{
 	@include dimensionPosition(-953px,-427px,30px,30px,1);
 	@media (max-width: 767px){
-		@include dimensionPosition(-946,-427px,30px,30px,0.7);
+		@include dimensionPosition(-953px,-427px,30px,30px,0.7);
 	}
 }
 .icon-add-section{

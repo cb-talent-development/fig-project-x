@@ -96,7 +96,7 @@ function ToolCtr($scope, $http,$routeParams,pagination) {
             $scope.logo="icon-resumePro-small";
         }
         $scope.paths=[{
-            "txt":" Career Tools /",
+            "txt":" Career Tools ",
             "color":"grey"
         },
         {
@@ -266,6 +266,8 @@ function ResumeHeroCtr($scope, $http){
 		}
 	}
     $scope.init=function(){
+		$scope.countries=["Australia","Belgium","Dutchland","France","United Kingdoms","USA"];
+		$scope.selectedCountry = "State";
 		if($scope.resumeHero[0]){
 			$scope.currentResume = $scope.resumeHero[0];
 			$scope.currentResume.Class="selected";

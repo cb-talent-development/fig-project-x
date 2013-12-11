@@ -317,9 +317,8 @@ function toggleEffect(event){
     // If already open, close it
     var subMenu=$(this).find(".subMenu").first();
     if (!subMenu.is(':visible')) {
-        subMenu.slideDown(config.timeAnim,function () { 
-            $(this).parent().addClass("open") }
-        );
+		subMenu.parent().addClass("open")
+        subMenu.slideDown(config.timeAnim);
         return false;
     }
     // If closed, close the others and open it
