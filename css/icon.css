@@ -130,14 +130,10 @@ Arrow big
       width: 9px; } }
 
 .icon-bigarrow-right-white {
+  background-size: 1500px 1798.5px;
   background-position: -245px -59px;
-  width: 9px;
-  height: 15px; }
-  @media only screen and (max-width: 768px) {
-    .icon-bigarrow-right-white {
-      width: 5px;
-      height: 8px;
-      background-position: -122.5px -29.5px; } }
+  height: 15px;
+  width: 9px; }
 
 .icon-check {
   background-size: 1500px 1798.5px;
@@ -2244,10 +2240,10 @@ TOOLS
   width: 171px; }
   @media only screen and (max-width: 768px) {
     .icon-careerscape-small {
-      background-size: 750px 899.25px;
-      background-position: -118px -392.50000000000006px;
-      height: 87.5px;
-      width: 85.5px; } }
+      background-size: 1650.0000000000005px 1978.3500000000001px;
+      background-position: -259.6px -863.5000000000001px;
+      height: 192.50000000000003px;
+      width: 188.10000000000002px; } }
 
 .icon-resumeHero-small {
   background-size: 1500px 1798.5px;
@@ -2256,10 +2252,10 @@ TOOLS
   width: 172px; }
   @media only screen and (max-width: 768px) {
     .icon-resumeHero-small {
-      background-size: 750px 899.25px;
-      background-position: -225px -392.50000000000006px;
-      height: 88.5px;
-      width: 86px; } }
+      background-size: 1650.0000000000005px 1978.3500000000001px;
+      background-position: -495.00000000000006px -863.5000000000001px;
+      height: 194.70000000000002px;
+      width: 189.20000000000002px; } }
 
 .icon-localygrown-small {
   background-size: 1500px 1798.5px;
@@ -2268,10 +2264,10 @@ TOOLS
   width: 186px; }
   @media only screen and (max-width: 768px) {
     .icon-localygrown-small {
-      background-size: 750px 899.25px;
-      background-position: -11px -392.50000000000006px;
-      height: 88.5px;
-      width: 93px; } }
+      background-size: 1650.0000000000005px 1978.3500000000001px;
+      background-position: -24.2px -863.5000000000001px;
+      height: 194.70000000000002px;
+      width: 204.60000000000002px; } }
 
 .icon-jobinality-small {
   background-size: 1500px 1798.5px;
@@ -2280,10 +2276,10 @@ TOOLS
   width: 171px; }
   @media only screen and (max-width: 768px) {
     .icon-jobinality-small {
-      background-size: 750px 899.25px;
-      background-position: -332px -392.50000000000006px;
-      height: 93px;
-      width: 85.5px; } }
+      background-size: 1650.0000000000005px 1978.3500000000001px;
+      background-position: -730.4000000000001px -863.5000000000001px;
+      height: 204.60000000000002px;
+      width: 188.10000000000002px; } }
 
 .icon-careerscape {
   background-size: 1500px 1798.5px;
@@ -2292,10 +2288,10 @@ TOOLS
   width: 269px; }
   @media only screen and (max-width: 768px) {
     .icon-careerscape {
-      background-size: 750px 899.25px;
-      background-position: -17px -520px;
-      height: 172.50000000000003px;
-      width: 134.5px; } }
+      background-size: 1650.0000000000005px 1978.3500000000001px;
+      background-position: -37.400000000000006px -1144px;
+      height: 379.5px;
+      width: 295.90000000000003px; } }
 
 .icon-resumeHero {
   background-size: 1500px 1798.5px;
@@ -2304,10 +2300,10 @@ TOOLS
   width: 269px; }
   @media only screen and (max-width: 768px) {
     .icon-resumeHero {
-      background-size: 750px 899.25px;
-      background-position: -17px -520px;
-      height: 172.50000000000003px;
-      width: 134.5px; } }
+      background-size: 1650.0000000000005px 1978.3500000000001px;
+      background-position: -37.400000000000006px -1144px;
+      height: 379.5px;
+      width: 295.90000000000003px; } }
 
 .icon-jobinality {
   background-size: 1500px 1798.5px;
@@ -2396,14 +2392,14 @@ TOOLS
 .icon-suitcase-job {
   background-size: 1500px 1798.5px;
   background-position: -181px -540px;
-  height: 57px;
-  width: 57px; }
+  height: 58px;
+  width: 58px; }
   @media only screen and (max-width: 768px) {
     .icon-suitcase-job {
       background-size: 750px 899.25px;
       background-position: -90.5px -270px;
-      height: 28.499999999999996px;
-      width: 28.499999999999996px; } }
+      height: 29px;
+      width: 29px; } }
 
 /*
 ICON SAVED

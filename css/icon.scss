@@ -89,14 +89,7 @@ Arrow big
 	}
 }
 .icon-bigarrow-right-white{
-    background-position:-245px -59px;
-	width: 9px;
-	height: 15px;
-    @media only screen and (max-width: 768px){
-       width: 5px;
-       height: 8px;
-	   background-position: -122.5px -29.5px;
-	}
+    @include dimensionPosition(-245px, -59px, 15px, 9px, 1.0);
 }
 //
 .icon-check{
@@ -1435,37 +1428,37 @@ TOOLS
 .icon-careerscape-small{
 	@include dimensionPosition(-236px,-785px,175px,171px,1);
     @media only screen and (max-width: 768px){
-	   @include dimensionPosition(-236px,-785px,175px,171px,0.5);
+	   @include dimensionPosition(-236px,-785px,175px,171px,1.1);
 	}
 }
 .icon-resumeHero-small{
 	@include dimensionPosition(-450px,-785px,177px,172px,1);
     @media only screen and (max-width: 768px){
-	   @include dimensionPosition(-450px,-785px,177px,172px,0.5);
+	   @include dimensionPosition(-450px,-785px,177px,172px,1.1);
 	}
 }
 .icon-localygrown-small{
 	@include dimensionPosition(-22px,-785px,177px,186px,1);
     @media only screen and (max-width: 768px){
-	   @include dimensionPosition(-22px,-785px,177px,186px,0.5);
+	   @include dimensionPosition(-22px,-785px,177px,186px,1.1);
 	}
 }
 .icon-jobinality-small{
     @include dimensionPosition(-664px,-785px,186px,171px,1);
     @media only screen and (max-width: 768px){
-	   @include dimensionPosition(-664px,-785px,186px,171px,0.5);
+	   @include dimensionPosition(-664px,-785px,186px,171px,1.1);
 	}
 }
 .icon-careerscape{
 	@include dimensionPosition(-34px,-1040px,345px,269px,1);
     @media only screen and (max-width: 768px){
-	   @include dimensionPosition(-34px,-1040px,345px,269px,0.5);
+	   @include dimensionPosition(-34px,-1040px,345px,269px,1.1);
 	}
 }
 .icon-resumeHero{
 	@include dimensionPosition(-335px,-1040px,345px,269px,1);
     @media only screen and (max-width: 768px){
-	   @include dimensionPosition(-34px,-1040px,345px,269px,0.5);
+	   @include dimensionPosition(-34px,-1040px,345px,269px,1.1);
 	}
 }
 .icon-jobinality{
@@ -1511,9 +1504,9 @@ TOOLS
 	}
 }
 .icon-suitcase-job{
-	@include dimensionPosition(-181px,-540px,57px,57px,1);
+	@include dimensionPosition(-181px,-540px,58px,58px,1);
     @media only screen and (max-width: 768px){
-		@include dimensionPosition(-181px,-540px,57px,57px,0.5);
+		@include dimensionPosition(-181px,-540px,58px,58px,0.5);
 	}
 }
 /*

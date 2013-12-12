@@ -2600,20 +2600,23 @@ Tool CSS
         }
 		@media(max-width: 479px){
 			width: 300px;
-			height: 320px;
+			height: 300px;
+			margin: 0px;
+			margin-bottom: 10px;
+			margin-top: 10px;
 			.title-social{
 				width: 100%;
 				height: 100%;
 				.icon-jobinality-small,.icon-resumeHero-small,.icon-localygrown-small,.icon-careerscape-small{
 					position:absolute;
-					top:30px;left:50%;margin-left: -40px;
+					top:30px;left:50%;margin-left: -80px;
 				}
 				.title{
-					top:200px;
+					top:160px;
 					width: 300px;
 					text-align: center;
 					text-transform:capitalize;
-					font-size:25px;
+					font-size:27px;
 					line-height:108px;
 					height:60px;
 					left:0px;
@@ -2648,6 +2651,9 @@ Tool CSS
         width:100%;
         margin:auto;
         margin-bottom:30px;
+		@media(max-width: 479px){
+			margin-bottom: 10px;
+		}
         .input-button{
             padding-top:21px;padding-bottom:17px;
             padding-left:15px;
@@ -2656,6 +2662,9 @@ Tool CSS
             border:none;background:none;
 			@media(max-width: 479px){
 				width: 300px;
+				padding-top: 12px;
+				padding-bottom: 10px;
+				font-size:18px;
 			}
         }
         .industries,.occupations{
@@ -2664,6 +2673,9 @@ Tool CSS
             position:relative;
 			@media(max-width: 479px){
 				margin-top: 10px;
+				padding-top: 12px;
+				padding-bottom: 10px;
+				font-size:18px;
 			}
             .title{
                 margin-left:20px;
@@ -2673,6 +2685,10 @@ Tool CSS
                 top:32.5px;
                 margin-top:-2px;
                 position:absolute;
+				@media(max-width: 479px){
+					top: 22.5px;
+				}
+				
             }
             .subMenu{
                 left:0px;
@@ -2741,6 +2757,10 @@ Tool CSS
         font-size:20px;
         line-height:65px;
         height:60px;
+		@media(max-width: 479px){
+			width: 300px;
+			font-size: 13px;
+		}
     }
     .arrow{
         margin-top:7px;margin-bottom:3px;
@@ -3054,6 +3074,10 @@ Tool CSS
 					.carre{
 						height: 30px;
 						width: 30px;
+						@media(max-width: 479px){
+							height: 15px;
+							width: 15px;
+						}
 					}
 				}
 				.button-change.selected{
@@ -3149,7 +3173,7 @@ Locally Grown
         height:590px;
 		@media(max-width: 479px){
 			width: 300px;
-			margin-top: 0px;
+			margin: 0px;
 		}
     }
 }
@@ -3161,11 +3185,19 @@ Career Scape
     canvas{
         background-color:white;
         margin:auto;cursor:move;padding:0px;display:block;z-index:1;
+		@media(max-width:479px){
+			width: 300px;
+			margin: 0px;
+		}
     }
     .canvas-container{
         margin:auto;
         text-align:center;
         position:relative;
+		@media(max-width:479px){
+			width: 300px;
+			margin: 0px;
+		}
     }
     .buttons-changes{
             width:23%;
@@ -3179,6 +3211,18 @@ Career Scape
 				width:49%;
 				.carre{
 					margin-left:15px;
+				}
+			}
+			@media(max-width: 479px){
+				width: 300px;
+				height: 40px;
+				.button-change{
+					padding-top: 11px;
+					.carre{
+						margin-left: 11px;
+						width: 17px;
+						height: 17px;
+					}
 				}
 			}
 			.button-change:hover:not(.selected) .txt{
@@ -3230,6 +3274,12 @@ Career Scape
         -moz-box-shadow: 0px 2px 2px rgba(0,0,0,0.3);
         -webkit-box-shadow: 0px 2px 2px rgba(0,0,0,0.3);
         box-shadow: 0px 2px 2px rgba(0,0,0,0.3);
+		@media(max-width:479px){
+			width: 80px;
+			height: 120px;
+			top: 5px;
+			right: 25px;
+		}
     }
     .legend > div{
         position:relative;
@@ -3239,6 +3289,9 @@ Career Scape
         /*border-bottom:1.5px solid rgba(200,200,200,0.7);
         border-right:1.5px solid rgba(200,200,200,0.7);
         border-left:1.5px solid rgba(200,200,200,0.7);*/
+		@media(max-width: 479px){
+			height: 60px;
+		}
     }
     .legend >div.growth{
         border-bottom:1.5px solid rgba(200,200,200,0.7);
@@ -3256,6 +3309,13 @@ Career Scape
         width:68px;
         height:68px;
         border-radius:39px;
+		@media(max-width: 479px){
+			top:6px;
+			right:6.5px;
+			width:17px;
+			height:17px;
+			border-radius:10px;
+		}
     }
     .legend .medium{
         top:24px;
@@ -3263,28 +3323,51 @@ Career Scape
         width:54px;
         height:54px;
         border-radius:32px;
-        
+        @media(max-width: 479px){
+			top:6px;
+			right:22px;
+			width:13.5px;
+			height:13.5px;
+			border-radius:8px;
+		}
     }
     .legend .small{
         top:24px;
         right:133px;
         width:38px;
         height:38px;
-        border-radius:24px;            
+        border-radius:24px;
+		@media(max-width: 479px){
+			top:6px;
+			right:33px;
+			width:9.5px;
+			height:9.5px;
+			border-radius:6px;
+		}		
     }
     .legend .info{
         text-align:left;
         position:absolute;
         bottom:18px;
         left:22px;
+		@media(max-width:479px){
+			bottom: 5px;
+			left: 7px;
+		}
     }
     .legend .info .title{
         font-weight:200;
         font-size:18px;
+		@media(max-width:479px){
+			font-size: 10px;
+		}
     }
     .legend .info .comment{
         font-style:italic;
         font-size:12px;
+		@media(max-width:479px){
+			font-size: 7px;
+		}
     }
     /*
     /END Legend part
@@ -3320,87 +3403,102 @@ JOB RESULTS/RECOMMENDATIONS
 }
 
 .job-results,.saved-content, .delete-items{
-        @include main-block;
-        text-align:center;
-        position:relative;
-        @include shadow;
-        margin-bottom:60px;
-        background:white;
-        .icon-arrow-left-big-blue,.icon-arrow-right-big-blue{
-            position:absolute;top:50%;margin-top:-26px;
-            @include no_select;
+	@include main-block;
+	text-align:center;
+	position:relative;
+	@include shadow;
+	margin-bottom:60px;
+	background:white;
+	@media(max-width:479px){
+		margin: 0px;
+		margin-bottom:60px;
+		width: 300px;
+	}
+	.icon-arrow-left-big-blue,.icon-arrow-right-big-blue{
+		position:absolute;top:50%;margin-top:-26px;
+		@include no_select;
+		@media(max-width: 479px){
+			top: 96%;
+		}
+	}
+	.icon-arrow-left-big-blue{
+		left:40px;
+	}
+	.icon-arrow-right-big-blue{
+		right:40px;
+	}
+	i:hover{
+		cursor:pointer;
+	}
+	.title{
+		font-size:20px;
+		padding:0px 25px;
+		padding-top:22px;
+		padding-bottom:20px;
+		border-bottom:1px solid $grey;
+		@media(max-width: 479px){
+			font-size:14px;
+			padding:0px 15px;
+			padding-top:12px;
+			padding-bottom:10px;
+		}
+	}
+	.content{
+		position:relative;
+		.scrollable-content{
+			width:80%;
+			height:82%;
 			@media(max-width: 479px){
-				top: 96%;
+				width: 100%;
+				height: 80%;
 			}
-        }
-        .icon-arrow-left-big-blue{
-            left:40px;
-        }
-        .icon-arrow-right-big-blue{
-            right:40px;
-        }
-        i:hover{
-            cursor:pointer;
-        }
-        .title{
-            font-size:20px;
-            padding:0px 25px;
-            padding-top:22px;
-            padding-bottom:20px;
-            border-bottom:1px solid $grey;
+		}
+		.scrollable{
+			height:100%;
+		}
+		.job-recommandation,.save{
+			text-align:center;
+			text-transform:uppercase;
+			height:100%;
+			width:187px;
 			@media(max-width: 479px){
-				font-size:14px;
-				padding:0px 15px;
-				padding-top:12px;
-				padding-bottom:10px;
+				width: 100px;
 			}
-        }
-        .content{
-            position:relative;
-            .scrollable-content{
-                width:80%;
-                height:82%;
+			@include inline-top;
+		}
+		.pages{
+			text-align:center;
+			@media(max-width: 479px){
+				border-top: 1px $grey solid;
+				padding-top: 13px;
+			}
+			.activated{
+				background-color:$navcolor !important;
+			}
+			.ball{
+				margin:0px 5px;
+				@include inline-top;
+				width:15px;height:15px;border-radius:10px;
+				background-color:$lightBlue;
 				@media(max-width: 479px){
-					width: 100%;
-					height: 80%;
+					width:10px;height:10px;border-radius:7px;
 				}
-            }
-            .scrollable{
-                height:100%;
-            }
-            .job-recommandation,.save{
-                text-align:center;
-                text-transform:uppercase;
-                height:100%;
-                width:187px;
-				@media(max-width: 479px){
-					width: 100px;
-				}
-                @include inline-top;
-            }
-            .pages{
-                text-align:center;
-				@media(max-width: 479px){
-					border-top: 1px $grey solid;
-					padding-top: 13px;
-				}
-                .activated{
-                    background-color:$navcolor !important;
-                }
-                .ball{
-                    margin:0px 5px;
-                    @include inline-top;
-                    width:15px;height:15px;border-radius:10px;
-                    background-color:$lightBlue;
-					@media(max-width: 479px){
-						width:10px;height:10px;border-radius:7px;
-					}
-                }
-                .ball:hover{
-                    cursor:pointer;
-                }
-            }
-        }
+			}
+			.ball:hover{
+				cursor:pointer;
+			}
+		}
+	}
+}
+
+.job-results{
+	.content{
+		.scrollable-content{
+			@media(max-width: 479px){
+				height: 75%;
+			}
+		}
+	}
 }
 .saved-content, .delete-items{
     .title{text-align:left;}
@@ -3481,6 +3579,22 @@ JOB RESULTS/RECOMMENDATIONS
                 color:$grey;
             }
         }
+		@media(max-width:479px){
+			height: 150px;
+			.job-recommandation{
+				 .icon-suitcase-job{
+					margin-top:15px;
+					margin-bottom:5px;
+				}
+				.title-job{
+					font-size: 13px;
+				}
+				.info-job{
+					font-size: 10px;
+					line-height: 12px;
+				}
+			}
+		}
     }
 }
 /*

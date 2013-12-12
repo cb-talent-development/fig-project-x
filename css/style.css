@@ -3407,7 +3407,10 @@ Tool CSS
     @media (max-width: 479px) {
       .tool .header-tool {
         width: 300px;
-        height: 320px; }
+        height: 300px;
+        margin: 0px;
+        margin-bottom: 10px;
+        margin-top: 10px; }
         .tool .header-tool .title-social {
           width: 100%;
           height: 100%; }
@@ -3415,13 +3418,13 @@ Tool CSS
             position: absolute;
             top: 30px;
             left: 50%;
-            margin-left: -40px; }
+            margin-left: -80px; }
           .tool .header-tool .title-social .title {
-            top: 200px;
+            top: 160px;
             width: 300px;
             text-align: center;
             text-transform: capitalize;
-            font-size: 25px;
+            font-size: 27px;
             line-height: 108px;
             height: 60px;
             left: 0px; }
@@ -3447,6 +3450,9 @@ Tool CSS
     width: 100%;
     margin: auto;
     margin-bottom: 30px; }
+    @media (max-width: 479px) {
+      .tool .selector {
+        margin-bottom: 10px; } }
     .tool .selector .input-button {
       padding-top: 21px;
       padding-bottom: 17px;
@@ -3459,7 +3465,10 @@ Tool CSS
       background: none; }
       @media (max-width: 479px) {
         .tool .selector .input-button {
-          width: 300px; } }
+          width: 300px;
+          padding-top: 12px;
+          padding-bottom: 10px;
+          font-size: 18px; } }
     .tool .selector .industries, .tool .selector .occupations {
       padding-top: 21px;
       padding-bottom: 17px;
@@ -3467,7 +3476,10 @@ Tool CSS
       position: relative; }
       @media (max-width: 479px) {
         .tool .selector .industries, .tool .selector .occupations {
-          margin-top: 10px; } }
+          margin-top: 10px;
+          padding-top: 12px;
+          padding-bottom: 10px;
+          font-size: 18px; } }
       .tool .selector .industries .title, .tool .selector .occupations .title {
         margin-left: 20px; }
       .tool .selector .industries b, .tool .selector .occupations b {
@@ -3475,6 +3487,9 @@ Tool CSS
         top: 32.5px;
         margin-top: -2px;
         position: absolute; }
+        @media (max-width: 479px) {
+          .tool .selector .industries b, .tool .selector .occupations b {
+            top: 22.5px; } }
       .tool .selector .industries .subMenu, .tool .selector .occupations .subMenu {
         left: 0px;
         top: 64px;
@@ -3531,6 +3546,10 @@ Tool CSS
     font-size: 20px;
     line-height: 65px;
     height: 60px; }
+    @media (max-width: 479px) {
+      .tool .messages-jobs {
+        width: 300px;
+        font-size: 13px; } }
   .tool .arrow {
     margin-top: 7px;
     margin-bottom: 3px;
@@ -3791,6 +3810,10 @@ Tool CSS
         .tool .get-started-resume .section .buttons-changes .button-change .carre {
           height: 30px;
           width: 30px; }
+          @media (max-width: 479px) {
+            .tool .get-started-resume .section .buttons-changes .button-change .carre {
+              height: 15px;
+              width: 15px; } }
       .tool .get-started-resume .section .buttons-changes .button-change.selected .title {
         color: black; }
       .tool .get-started-resume .section .buttons-changes .button-change:not(.selected) .carre {
@@ -3866,7 +3889,7 @@ Locally Grown
   @media (max-width: 479px) {
     .locallyGrown .mapbox {
       width: 300px;
-      margin-top: 0px; } }
+      margin: 0px; } }
 
 /*
 Career Scape
@@ -3885,10 +3908,18 @@ Career Scape
     padding: 0px;
     display: block;
     z-index: 1; }
+    @media (max-width: 479px) {
+      .careerScape canvas {
+        width: 300px;
+        margin: 0px; } }
   .careerScape .canvas-container {
     margin: auto;
     text-align: center;
     position: relative; }
+    @media (max-width: 479px) {
+      .careerScape .canvas-container {
+        width: 300px;
+        margin: 0px; } }
   .careerScape .buttons-changes {
     width: 23%;
     min-width: 267px;
@@ -3902,6 +3933,16 @@ Career Scape
       width: 49%; }
       .careerScape .buttons-changes .button-change .carre {
         margin-left: 15px; }
+    @media (max-width: 479px) {
+      .careerScape .buttons-changes {
+        width: 300px;
+        height: 40px; }
+        .careerScape .buttons-changes .button-change {
+          padding-top: 11px; }
+          .careerScape .buttons-changes .button-change .carre {
+            margin-left: 11px;
+            width: 17px;
+            height: 17px; } }
     .careerScape .buttons-changes .button-change:hover:not(.selected) .txt {
       color: rgba(255, 255, 255, 0.8); }
     .careerScape .buttons-changes .button-change:hover:not(.selected) .carre {
@@ -3940,6 +3981,12 @@ Career Scape
     -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
     -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3); }
+    @media (max-width: 479px) {
+      .careerScape .legend {
+        width: 80px;
+        height: 120px;
+        top: 5px;
+        right: 25px; } }
   .careerScape .legend > div {
     position: relative;
     width: 100%;
@@ -3948,6 +3995,9 @@ Career Scape
     /*border-bottom:1.5px solid rgba(200,200,200,0.7);
     border-right:1.5px solid rgba(200,200,200,0.7);
     border-left:1.5px solid rgba(200,200,200,0.7);*/ }
+    @media (max-width: 479px) {
+      .careerScape .legend > div {
+        height: 60px; } }
   .careerScape .legend > div.growth {
     border-bottom: 1.5px solid rgba(200, 200, 200, 0.7); }
   .careerScape .legend .ball {
@@ -3961,29 +4011,60 @@ Career Scape
     width: 68px;
     height: 68px;
     border-radius: 39px; }
+    @media (max-width: 479px) {
+      .careerScape .legend .big {
+        top: 6px;
+        right: 6.5px;
+        width: 17px;
+        height: 17px;
+        border-radius: 10px; } }
   .careerScape .legend .medium {
     top: 24px;
     right: 85px;
     width: 54px;
     height: 54px;
     border-radius: 32px; }
+    @media (max-width: 479px) {
+      .careerScape .legend .medium {
+        top: 6px;
+        right: 22px;
+        width: 13.5px;
+        height: 13.5px;
+        border-radius: 8px; } }
   .careerScape .legend .small {
     top: 24px;
     right: 133px;
     width: 38px;
     height: 38px;
     border-radius: 24px; }
+    @media (max-width: 479px) {
+      .careerScape .legend .small {
+        top: 6px;
+        right: 33px;
+        width: 9.5px;
+        height: 9.5px;
+        border-radius: 6px; } }
   .careerScape .legend .info {
     text-align: left;
     position: absolute;
     bottom: 18px;
     left: 22px; }
+    @media (max-width: 479px) {
+      .careerScape .legend .info {
+        bottom: 5px;
+        left: 7px; } }
   .careerScape .legend .info .title {
     font-weight: 200;
     font-size: 18px; }
+    @media (max-width: 479px) {
+      .careerScape .legend .info .title {
+        font-size: 10px; } }
   .careerScape .legend .info .comment {
     font-style: italic;
     font-size: 12px; }
+    @media (max-width: 479px) {
+      .careerScape .legend .info .comment {
+        font-size: 7px; } }
 
 /*
 JOB RESULTS/RECOMMENDATIONS
@@ -4027,6 +4108,11 @@ JOB RESULTS/RECOMMENDATIONS
   @media only screen and (max-width: 767px) {
     .job-results, .saved-content, .delete-items {
       width: 95%; } }
+  @media (max-width: 479px) {
+    .job-results, .saved-content, .delete-items {
+      margin: 0px;
+      margin-bottom: 60px;
+      width: 300px; } }
   .job-results .icon-arrow-left-big-blue, .job-results .icon-arrow-right-big-blue, .saved-content .icon-arrow-left-big-blue, .saved-content .icon-arrow-right-big-blue, .delete-items .icon-arrow-left-big-blue, .delete-items .icon-arrow-right-big-blue {
     position: absolute;
     top: 50%;
@@ -4100,6 +4186,10 @@ JOB RESULTS/RECOMMENDATIONS
       .job-results .content .pages .ball:hover, .saved-content .content .pages .ball:hover, .delete-items .content .pages .ball:hover {
         cursor: pointer; }
 
+@media (max-width: 479px) {
+  .job-results .content .scrollable-content {
+    height: 75%; } }
+
 .saved-content .title, .delete-items .title {
   text-align: left; }
 .saved-content .content, .delete-items .content {
@@ -4166,6 +4256,17 @@ JOB RESULTS/RECOMMENDATIONS
     .job-results .content .job-recommandation .info-job {
       line-height: 23px;
       color: #9d9d9d; }
+  @media (max-width: 479px) {
+    .job-results .content {
+      height: 150px; }
+      .job-results .content .job-recommandation .icon-suitcase-job {
+        margin-top: 15px;
+        margin-bottom: 5px; }
+      .job-results .content .job-recommandation .title-job {
+        font-size: 13px; }
+      .job-results .content .job-recommandation .info-job {
+        font-size: 10px;
+        line-height: 12px; } }
 
 /*
 Dashboard
