@@ -1860,6 +1860,69 @@ SOCIAL
       width: 20.5px; } }
 
 /*
+STEPS
+*/
+.icon-step-1 {
+  background-size: 1500px 1798.5px;
+  background-position: -3px -463px;
+  height: 75px;
+  width: 251px; }
+  @media only screen and (max-width: 768px) {
+    .icon-step-1 {
+      background-size: 750px 899.25px;
+      background-position: -1.5px -231.5px;
+      height: 37.5px;
+      width: 125.5px; } }
+
+.icon-step-2 {
+  background-size: 1500px 1798.5px;
+  background-position: -257px -463px;
+  height: 75px;
+  width: 278px; }
+  @media only screen and (max-width: 768px) {
+    .icon-step-2 {
+      background-size: 750px 899.25px;
+      background-position: -127.5px -231.5px;
+      height: 37.5px;
+      width: 140px; } }
+
+.icon-step-3 {
+  background-size: 1500px 1798.5px;
+  background-position: -538px -463px;
+  height: 75px;
+  width: 287px; }
+  @media only screen and (max-width: 768px) {
+    .icon-step-3 {
+      background-size: 750px 899.25px;
+      background-position: -267.5px -231.5px;
+      height: 37.5px;
+      width: 145px; } }
+
+.icon-step-4 {
+  background-size: 1500px 1798.5px;
+  background-position: -829px -463px;
+  height: 75px;
+  width: 288px; }
+  @media only screen and (max-width: 768px) {
+    .icon-step-4 {
+      background-size: 750px 899.25px;
+      background-position: -412.5px -231.5px;
+      height: 37.5px;
+      width: 146px; } }
+
+.icon-step-5 {
+  background-size: 1500px 1798.5px;
+  background-position: -1121px -463px;
+  height: 75px;
+  width: 251px; }
+  @media only screen and (max-width: 768px) {
+    .icon-step-5 {
+      background-size: 750px 899.25px;
+      background-position: -560.5px -231.5px;
+      height: 37.5px;
+      width: 125.5px; } }
+
+/*
 OTHER
 */
 .icon-extend {

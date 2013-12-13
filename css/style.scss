@@ -2990,6 +2990,26 @@ Tool CSS
 				@media (max-width: 480px){
 					padding:10px;
 				}
+				.icon-step-1, .icon-step-2, .icon-step-3, .icon-step-4, .icon-step-5{
+					margin-right: -28px;
+					padding: 21px 95px;
+					margin-bottom: 20px;
+					color: white;
+					font-size: 28px;
+					@media(max-width: 479px){
+						font-size: 20px;
+						padding: 8px 45px;
+					}
+				}
+				.icon-step-1{
+					padding: 21px 70px;
+					@media(max-width: 479px){
+						padding: 8px 32px;
+					}
+				}
+				.icon-step-5{
+					padding-right: 0px;
+				}
 				input, .button{
 					@include invert-shadow;
 					margin-left: 20px;
@@ -3027,7 +3047,7 @@ Tool CSS
 				.no-margin{
 					margin-left: 0px;
 					@media(min-width: 480px){
-						margin-bottom: 10px;
+						margin-bottom: 20px;
 					}
 				}
 				.no-margin-resp{

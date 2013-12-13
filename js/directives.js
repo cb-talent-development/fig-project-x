@@ -81,29 +81,47 @@ dir.directive('select',[function(){
 }]);
 
 dir.directive('comment', ['$compile', '$http', '$templateCache', function($compile, $http, $templateCache) {
-    
-        var getTemplate = function() {
-            var templateUrl = 'partials/comment.html',
-            templateLoader = $http.get(templateUrl, {cache: $templateCache});
-            return templateLoader;
+	var getTemplate = function() {
+		var templateUrl = 'partials/comment.html',
+		templateLoader = $http.get(templateUrl, {cache: $templateCache});
+		return templateLoader;
 
-        }
+	}
 
-        var linker = function(scope, element, attrs) {
-            var loader = getTemplate();
-            //put html
-            var promise = loader.success(function(html) {
-                element.html(html);
-                element.replaceWith($compile(element.html())(scope));
-            });
-        }
+	var linker = function(scope, element, attrs) {
+		var loader = getTemplate();
+		//put html
+		var promise = loader.success(function(html) {
+			element.html(html);
+			element.replaceWith($compile(element.html())(scope));
+		});
+	}
 
-        return {
-            restrict: 'E',
-            scope: {
-                comment:'=',
-                user:'='
-            },
-            link: linker
-        };
+	return {
+		restrict: 'E',
+		scope: {
+			comment:'=',
+			user:'='
+		},
+		link: linker
+	};
 }]);
+
+dir.directive('steps', function(){
+	return{
+		restrict: 'E',
+		replace: true,
+        transclude: true,
+		template: '<div class="steps"><span id="etape"></span></div>',
+		scope: {
+                nbrSteps:'=',
+				firstConnect:'='
+        },
+		link: function(attrs){
+			for(var i = attrs.nbrSteps; i>0 && attrs.firstConnect; i--){
+				$('#etape').prepend("<span class='icon-step-"+i+"'>Step "+i+"</span>");
+			}
+			return true;
+		}
+	};
+});

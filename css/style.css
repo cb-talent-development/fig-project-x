@@ -3737,6 +3737,23 @@ Tool CSS
       @media (max-width: 480px) {
         .tool .get-started-resume .section .content {
           padding: 10px; } }
+      .tool .get-started-resume .section .content .icon-step-1, .tool .get-started-resume .section .content .icon-step-2, .tool .get-started-resume .section .content .icon-step-3, .tool .get-started-resume .section .content .icon-step-4, .tool .get-started-resume .section .content .icon-step-5 {
+        margin-right: -28px;
+        padding: 21px 95px;
+        margin-bottom: 20px;
+        color: white;
+        font-size: 28px; }
+        @media (max-width: 479px) {
+          .tool .get-started-resume .section .content .icon-step-1, .tool .get-started-resume .section .content .icon-step-2, .tool .get-started-resume .section .content .icon-step-3, .tool .get-started-resume .section .content .icon-step-4, .tool .get-started-resume .section .content .icon-step-5 {
+            font-size: 20px;
+            padding: 8px 45px; } }
+      .tool .get-started-resume .section .content .icon-step-1 {
+        padding: 21px 70px; }
+        @media (max-width: 479px) {
+          .tool .get-started-resume .section .content .icon-step-1 {
+            padding: 8px 32px; } }
+      .tool .get-started-resume .section .content .icon-step-5 {
+        padding-right: 0px; }
       .tool .get-started-resume .section .content input, .tool .get-started-resume .section .content .button, .tool .get-started-resume .section .content .input-button {
         box-shadow: 0px -1px 1px rgba(0, 0, 0, 0.2);
         -webkit-box-shadow: 0px -1px 1px rgba(0, 0, 0, 0.2);
@@ -3777,7 +3794,7 @@ Tool CSS
         margin-left: 0px; }
         @media (min-width: 480px) {
           .tool .get-started-resume .section .content .no-margin {
-            margin-bottom: 10px; } }
+            margin-bottom: 20px; } }
       @media (max-width: 479px) {
         .tool .get-started-resume .section .content .no-margin-resp {
           margin-left: 0px;

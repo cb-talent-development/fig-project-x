@@ -1144,6 +1144,40 @@ SOCIAL
 	}
 }
 /*
+STEPS
+*/
+.icon-step-1{
+	@include dimensionPosition(-3px, -463px, 75px, 251px, 1.0);
+	@media only screen and (max-width: 768px){
+		@include dimensionPosition(-3px, -463px, 75px, 251px, 0.5);
+	}
+}
+.icon-step-2{
+	@include dimensionPosition(-257px, -463px, 75px, 278px, 1.0);
+	@media only screen and (max-width: 768px){
+		@include dimensionPosition(-255px, -463px, 75px, 280px, 0.5);
+	}
+}
+.icon-step-3{
+	@include dimensionPosition(-538px, -463px, 75px, 287px, 1.0);
+	@media only screen and (max-width: 768px){
+		@include dimensionPosition(-535px, -463px, 75px, 290px, 0.5);
+	}
+}
+.icon-step-4{
+	@include dimensionPosition(-829px, -463px, 75px, 288px, 1.0);
+	@media only screen and (max-width: 768px){
+		@include dimensionPosition(-825px, -463px, 75px, 292px, 0.5);
+	}
+}
+.icon-step-5{
+	@include dimensionPosition(-1121px, -463px, 75px, 251px, 1.0);
+	@media only screen and (max-width: 768px){
+		@include dimensionPosition(-1121px, -463px, 75px, 251px, 0.5);
+	}
+}
+
+/*
 OTHER
 */
 .icon-extend{
