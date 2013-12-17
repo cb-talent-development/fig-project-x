@@ -154,6 +154,51 @@
 						<div class="content">
 							<steps nbr-steps="2" first-connect="true"></steps>
 						</div>
+						<div class="content">
+							<div class="divider left">
+								<div class="label">JOB TITLE</div>
+								<input placeholder="Career Builder"/>
+							</div>
+							<div class="divider left">
+								<div class="label">COMPANY</div>
+								<input placeholder="Career Builder"/>
+							</div>
+							<div class="divider left">
+								<div class="label">LOCATION</div>
+								<input placeholder="Chicago, IL"/>
+							</div>
+							<div class="divider left">
+								<div class="label">START DATE</div>
+								<div class="button date first left link toggleMenu">{{ selectedMonth }}<i class="icon-bigarrow-bottom-grey"></i>
+									<ul class="subMenu dropdown">
+										<li ng-repeat="month in months" select data-value="month" data-elem="selectedMonth">{{ month }}</li>
+									</ul>
+								</div>
+								<div class="button date left link toggleMenu">{{ selectedYear }}<i class="icon-bigarrow-bottom-grey"></i>
+									<ul class="subMenu dropdown">
+										<li ng-repeat="year in years" select data-value="year" data-elem="selectedYear">{{ year }}</li>
+									</ul>
+								</div>
+							</div>
+							<div class="divider left">
+								<div class="label">END DATE</div>
+								<div class="button date first left link toggleMenu">{{ selectedMonth }}<i class="icon-bigarrow-bottom-grey"></i>
+									<ul class="subMenu dropdown">
+										<li ng-repeat="month in months" select data-value="month" data-elem="selectedMonth">{{ month }}</li>
+									</ul>
+								</div>
+								<div class="button date left link toggleMenu">{{ selectedYear }}<i class="icon-bigarrow-bottom-grey"></i>
+									<ul class="subMenu dropdown">
+										<li ng-repeat="year in years" select data-value="year" data-elem="selectedYear">{{ year }}</li>
+									</ul>
+								</div>
+							</div>
+							<div class="clear"></div>
+							<div>
+								<div class="label">DESCRIBE YOUR ROLE, RESPONSABILITIES, AND ACHIEVEMENTS:</div>
+								<textarea id="role" placeholder="I am a looser because..."/>
+							</div>
+						</div>
 					</div>
 					<div ng-switch-when='3'>
 						<div class="header">
@@ -164,24 +209,37 @@
 						</div>
 						<div class="content">
 							<div class="divider left">
-								<div class="label">Education</div>
-								<input placeholder="placeholder"/>
+								<div class="label">EDUCATION TYPE</div>
+								<div class="button link toggleMenu">{{ selectedDiploma }}<i class="icon-bigarrow-bottom-grey"></i>
+									<ul class="subMenu dropdown">
+										<li ng-repeat="diploma in diplomas" select data-value="diploma" data-elem="selectedDiploma">{{ diploma }}</li>
+									</ul>
+								</div>
 							</div>
 							<div class="divider left">
-								<div class="label">Education</div>
-								<input placeholder="placeholder"/>
+								<div class="label">SPECIALIZATION</div>
+								<input placeholder="Design"/>
 							</div>
 							<div class="divider left">
-								<div class="label">Education</div>
-								<input placeholder="placeholder"/>
+								<div class="label">INSTITUTION</div>
+								<input placeholder="Kutztown University"/>
 							</div>
 							<div class="divider left">
-								<div class="label">Education</div>
-								<input placeholder="placeholder"/>
+								<div class="label">LOCATION</div>
+								<input placeholder="Kutztown, PA"/>
 							</div>
 							<div class="divider left">
-								<div class="label">Education</div>
-								<input placeholder="placeholder"/>
+								<div class="label">DATE GRADUATED</div>
+								<div class="button date first left link toggleMenu">{{ selectedMonth }}<i class="icon-bigarrow-bottom-grey"></i>
+									<ul class="subMenu dropdown">
+										<li ng-repeat="month in months" select data-value="month" data-elem="selectedMonth">{{ month }}</li>
+									</ul>
+								</div>
+								<div class="button date left link toggleMenu">{{ selectedYear }}<i class="icon-bigarrow-bottom-grey"></i>
+									<ul class="subMenu dropdown">
+										<li ng-repeat="year in years" select data-value="year" data-elem="selectedYear">{{ year }}</li>
+									</ul>
+								</div>
 							</div>
 							<div class="clear"></div>
 							<div class="label">SELECT SKILLS FROM ONE OR MORE OF THE SIX SKILLS GROUPS BELOW:</div>
@@ -239,6 +297,34 @@
 						<div class="content">
 							<steps nbr-steps="4" first-connect="true"></steps>
 						</div>
+						<div class="content">
+							<div class="divider left">
+								<div class="label">AWARD TITLE</div>
+								<input placeholder="Emmy"/>
+							</div>
+							<div class="divider left">
+								<div class="label">AWARD DATE</div>
+								<div class="button date first left link toggleMenu">{{ selectedMonth }}<i class="icon-bigarrow-bottom-grey"></i>
+									<ul class="subMenu dropdown">
+										<li ng-repeat="month in months" select data-value="month" data-elem="selectedMonth">{{ month }}</li>
+									</ul>
+								</div>
+								<div class="button date left link toggleMenu">{{ selectedYear }}<i class="icon-bigarrow-bottom-grey"></i>
+									<ul class="subMenu dropdown">
+										<li ng-repeat="year in years" select data-value="year" data-elem="selectedYear">{{ year }}</li>
+									</ul>
+								</div>
+							</div>
+							<div class="clear"></div>
+							<div>
+								<div class="label">
+									PLEASE LIST YOUR TECHNICAL SKILLS, STARTING WITH YOUR MOST REVELANT TECHNICAL SKILLS FIRST.</br>
+									THESE CAN INLUDE BUT ARE NOT LIMITED TO COMPUTER SKILLS (EX: C++, SQL, WINDOWS, HTML).</br>
+									YOU CAN ALSO ADD THE NUMBER OF YEARS USED OR YOUR SKILL LEVEL.
+								</div>
+								<textarea id="technical-skills" placeholder="Jessica has led development for ..."/>
+							</div>
+						</div>
 					</div>
 					<div ng-switch-when='5'>
 						<div class="header">
@@ -246,6 +332,10 @@
 						</div>
 						<div class="content">
 							<steps nbr-steps="5" first-connect="true"></steps>
+						</div>
+						<div class="content">
+							<div class="label">ENTER VOLUNTEER WORK, PUBLICATION, AFFILIATIONS OR OTHER DETAILS TO EXTEND YOUR RESUME.</div>
+							<textarea id="extra-skills" placeholder="Jessica has volunteer for..."/>
 						</div>
 					</div>
 				</div>
