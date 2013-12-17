@@ -70,7 +70,15 @@ $phone-retina-height-small: 450px;
     @include shadow-effect;
     background:white;
 }
-
+@mixin invert-shadow-effect{
+    box-shadow:0px -1px 1px rgba(0,0,0,0.2);
+    -webkit-box-shadow:0px -1px 1px rgba(0,0,0,0.2);
+    border:none;
+}
+@mixin invert-shadow{
+    @include invert-shadow-effect;
+    background:white;
+}
 @mixin whitebox{
 	background-color: white;
     @include shadow;
@@ -823,6 +831,36 @@ $dark-darkgrey: rgb(98,98,98);
     background-color:$dark-darkgrey !important;
 	color: white !important;
 }
+
+
+/*
+RESUME HERO POP
+*/
+.export-resume{
+	.section{
+		width: 1170px !important;
+		.header{
+			padding-bottom: 20px;
+		}
+		.content{
+			border-bottom: 1px solid $grey;
+			.divider{
+				width: 50%;
+				margin-bottom: 20px;
+				.button, input{
+					height: 60px;
+					width: 500px;
+					font-size: 30px;
+					padding:15px;
+				}		
+				input{
+					@include invert-shadow;
+				}
+			}
+		}
+	}
+}
+
 
 /*
 COLORS

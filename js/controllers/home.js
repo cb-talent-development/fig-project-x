@@ -170,6 +170,18 @@ function HomePageCtr($scope, $http) {
 		});
 	}
 	
+	$scope.setFilters = function(){
+		$scope.mostMenu = ["Most Recent", "Most Popular"];
+		$scope.selectedMost = $scope.mostMenu[0];
+		$scope.contentMenu = ["All Content", "Articles", "Infographics", "Videos"];
+		$scope.selectedContent = "All Content";
+		$scope.selectedCategory = "All Categories";
+		$scope.industryMenu = ["Some Text 1", "Some Text 2", "Some Text 3", "Some Text 4", "Some Text 5"];
+		$scope.selectedIndustry = "Filter By Industry";
+		$scope.jobMenu = ["Discovery", "Get the Job", "Find the Job", "On the Job", "What is this?"];
+		$scope.selectedJob = "Filter By Industry";
+	}
+	
     /*
     Constructor
     */
@@ -189,6 +201,7 @@ function HomePageCtr($scope, $http) {
         }]
         $scope.load('data/json/posts.json');
 		$scope.loadDropdown();
+		$scope.setFilters();
         $scope.$on('$includeContentLoaded', function(){
             initEffect();
         });

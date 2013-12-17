@@ -4,7 +4,7 @@
 	<div class="resume-buttons">
 		<div class="button back-green"><i class="icon-new-resume-button"></i>New Resume</div>
 		<div class="button back-pink"><i class="icon-change-resume-button"></i>Change Template</div>
-		<div class="button back-blue"><i class="icon-export-resume-button"></i>Export Resume</div>
+		<div class="button back-blue" onclick="apparition($('.export-resume'))"><i class="icon-export-resume-button"></i>Export Resume</div>
 		<div class="button back-orange"><i class="icon-post-resume-button"></i>Post Resume</div>
 		<div class="button back-red" onclick="apparition($('.delete-resume'))"><i class="icon-delete-resume-button"></i>Delete Resume</div>
 		<div class="button back-darkgrey"><i class="icon-question"></i>Help</div>
@@ -67,6 +67,34 @@
 				</div>
 			</div>
 		</div>
+		<div class="export-resume dialog">
+			<div class="background" onclick="disparition($('.export-resume'))"></div>
+			<div class="section">
+				<div class="header">
+					<span class"title">Export Resume</span><i class="icon-x-black close" onclick="disparition($('.export-resume'))"></i>
+				</div>
+				<div class="content">
+					<div class="divider left">
+						<div class="label">DOCUMENT TYPE</div>
+						<div class="button link toggleMenu">{{ selectedType }}<i class="icon-bigarrow-bottom-grey"></i>
+							<ul class="subMenu dropdown">
+								<li ng-repeat="type in types" select data-value="type" data-elem="selectedType">{{ type }}</li>
+							</ul>
+						</div>
+					</div>
+					<div class="divider left">
+						<div class="label">SAVE AS</div>
+						<input placeholder="Freshstart, New"></input>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div class="footer-dialog">
+					<div class="button back-white" onclick="disparition($('.export-resume'))">Cancel</div>
+					<div class="button back-green right" ng-click="">Comfirm</div>
+					<div class="clear"></div>
+				</div>
+			</div>
+		</div>
 		<div class="delete-resume dialog">
 			<div class="background" onclick="disparition($('.delete-resume'))"></div>
 			<div class="section">
@@ -121,10 +149,42 @@
 					</div>
 					<div ng-switch-when='2'>
 						<div class="header">
-							<span class"title">Add Basic Skills.<i class="icon-x-black close" onclick="disparition($('.get-started-resume'))"></i>
+							<span class"title">Let's Get Started.<i class="icon-x-black close" onclick="disparition($('.get-started-resume'))"></i>
 						</div>
 						<div class="content">
 							<steps nbr-steps="2" first-connect="true"></steps>
+						</div>
+					</div>
+					<div ng-switch-when='3'>
+						<div class="header">
+							<span class"title">Add your Education and Skills.<i class="icon-x-black close" onclick="disparition($('.get-started-resume'))"></i>
+						</div>
+						<div class="content">
+							<steps nbr-steps="3" first-connect="true"></steps>
+						</div>
+						<div class="content">
+							<div class="divider left">
+								<div class="label">Education</div>
+								<input placeholder="placeholder"/>
+							</div>
+							<div class="divider left">
+								<div class="label">Education</div>
+								<input placeholder="placeholder"/>
+							</div>
+							<div class="divider left">
+								<div class="label">Education</div>
+								<input placeholder="placeholder"/>
+							</div>
+							<div class="divider left">
+								<div class="label">Education</div>
+								<input placeholder="placeholder"/>
+							</div>
+							<div class="divider left">
+								<div class="label">Education</div>
+								<input placeholder="placeholder"/>
+							</div>
+							<div class="clear"></div>
+							<div class="label">SELECT SKILLS FROM ONE OR MORE OF THE SIX SKILLS GROUPS BELOW:</div>
 							<div class="buttons-changes">
 								<div id="monitoring" class="button-change selected" ng-click="changeType('monitoring')">
 									<div class="carre"></div>
@@ -170,14 +230,6 @@
 								</div>
 							</div>
 							<div class="clear"></div>
-						</div>
-					</div>
-					<div ng-switch-when='3'>
-						<div class="header">
-							<span class"title">Let's Get Started.<i class="icon-x-black close" onclick="disparition($('.get-started-resume'))"></i>
-						</div>
-						<div class="content">
-							<steps nbr-steps="3" first-connect="true"></steps>
 						</div>
 					</div>
 					<div ng-switch-when='4'>

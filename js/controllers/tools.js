@@ -268,6 +268,8 @@ function ResumeHeroCtr($scope, $http){
     $scope.init=function(){
 		$scope.countries=["Australia","Belgium","Dutchland","France","United Kingdoms","USA"];
 		$scope.selectedCountry = "State";
+		$scope.types=["Microsoft Word", "PDF", "PowerPoint"];
+		$scope.selectedType=$scope.types[0];
 		if($scope.resumeHero[0]){
 			$scope.currentResume = $scope.resumeHero[0];
 			$scope.currentResume.Class="selected";

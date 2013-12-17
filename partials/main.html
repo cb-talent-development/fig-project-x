@@ -1,16 +1,15 @@
 <div ng-include="'partials/first-connect.html'"></div>
 <div id="header" ng-include="'partials/path.html'"></div>
 <div class="menu-buttons hidden-xs">
-		<div class="button home toggleMenu"><span>Most Recent <b class="icon-bigarrow-bottom-grey grey-icon"></b></span>
+		<div class="button home toggleMenu"><span>{{ selectedMost }}<b class="icon-bigarrow-bottom-grey grey-icon"></b></span>
 			<ul class="subMenu dropdown">
-				<li><a href="#" title="Most Popular">Most Popular</a></li>
+				<li ng-repeat="most in mostMenu" select data-value="most" data-elem="selectedMost"><a href="#">{{ most }}</a></li>
 			</ul>
 		</div>
-		<div class="button home toggleMenu"><span>All Content <b class="icon-bigarrow-bottom-grey grey-icon"></b></span>
+
+		<div class="button home toggleMenu"><span>{{ selectedContent }}<b class="icon-bigarrow-bottom-grey grey-icon"></b></span>
 			<ul class="subMenu dropdown">
-				<li><a href="#" title="Articles">Articles</a></li>
-				<li><a href="#" title="Infographics">Infographics</a></li>
-				<li><a href="#" title="Videos">Videos</a></li>
+				<li ng-repeat="content in contentMenu" select data-value="content" data-elem="selectedContent"><a href="#">{{ content }}</a></li>
 			</ul>
 		</div>
 		<div class="button home toggleMenuLarge dubble"><span>All Categories <b class="icon-bigarrow-bottom-grey grey-icon"></b></span>
@@ -20,11 +19,9 @@
 				</li>
 			</ul>
 		</div>
-		<div class="button home toggleMenu"><span>Filter By Industry <b class="icon-bigarrow-bottom-grey grey-icon"></b></span>
+		<div class="button home toggleMenu"><span> {{ selectedIndustry }} <b class="icon-bigarrow-bottom-grey grey-icon"></b></span>
 			<ul class="subMenu dropdown">
-				<li><a href="#" title="Some text">Some text</a></li>
-				<li><a href="#" title="Some text">Some text</a></li>
-				<li><a href="#" title="Some text">Some text</a></li>
+				<li ng-repeat="industry in industryMenu" select data-value="industry" data-elem="selectedIndustry"> {{ industry }}</li>
 			</ul>
 		</div>
 		<div class="button home toggleMenu"><span>Job Phase<b class="icon-bigarrow-bottom-grey grey-icon"></b></span>
