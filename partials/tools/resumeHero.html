@@ -3,7 +3,7 @@
 	</div>
 	<div class="resume-buttons">
 		<div class="button back-green"><i class="icon-new-resume-button"></i>New Resume</div>
-		<div class="button back-pink"><i class="icon-change-resume-button"></i>Change Template</div>
+		<div class="button back-pink" onclick="apparition($('.template-resume'))"><i class="icon-change-resume-button"></i>Change Template</div>
 		<div class="button back-blue" onclick="apparition($('.export-resume'))"><i class="icon-export-resume-button"></i>Export Resume</div>
 		<div class="button back-orange"><i class="icon-post-resume-button"></i>Post Resume</div>
 		<div class="button back-red" onclick="apparition($('.delete-resume'))"><i class="icon-delete-resume-button"></i>Delete Resume</div>
@@ -63,6 +63,52 @@
 				</div>
 				<div class="footer-dialog">
 					<div class="button green" ng-click="saveSection()">Save & Close</div>
+					<div class="clear"></div>
+				</div>
+			</div>
+		</div>
+		<div class="template-resume dialog">
+			<div class="background" onclick="disparition($('.template-resume'))"></div>
+			<div class="section">
+				<div class="header">
+					<span class"title">Select Your Template</span><i class="icon-x-black close" onclick="disparition($('.template-resume'))"></i>
+				</div>
+				<div class="content">
+					<div class="left divider">
+						<div class="label">DOCUMENT TYPE</div>
+						<div class="button link toggleMenu">{{ selectedTemplate }}<i class="icon-bigarrow-bottom-grey"></i>
+							<ul class="subMenu dropdown">
+								<li ng-repeat="template in templates" select data-value="template" data-elem="selectedTemplate">{{ template }}</li>
+							</ul>
+						</div>
+					</div>
+					<div class="left divider">
+						<div class="label">DOCUMENT NAME</div>
+						<input placeholder="Freshstart, New"/>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div class="content template-content">
+					<i class="icon-arrow-left-big-blue" ng-click="pageClickTemp(pageTemplate.currentPage-1,'userTemplate','.template-content')"></i>
+					<div class="scrollable-content">
+						<div class="scrollable">
+							<div class="save" ng-repeat="userTemplate in userTemplates">   
+								<div class="icon-article-saved icon"></div>
+								<div class="content-save">
+									<div class="name">{{userTemplate.Name}}</div>
+									<div class="type">{{userTemplate.Type}}</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="pages">
+						<div class="ball" ng-class="{true: 'activated',false: 'nick' }[n==1]" ng-click="pageClickTemp(n,'userTemplate','.template-content')" ng-repeat="n in pageTemplate.pages"></div>
+					</div>
+					<i class="icon-arrow-right-big-blue" ng-click="pageClickTemp(pageTemplate.currentPage+1,'userTemplate','.template-content')"></i>
+				</div>
+				<div class="footer-dialog">
+					<div class="button back-white" onclick="disparition($('.template-resume'))">Cancel</div>
+					<div class="button back-green right" ng-click="">Comfirm</div>
 					<div class="clear"></div>
 				</div>
 			</div>

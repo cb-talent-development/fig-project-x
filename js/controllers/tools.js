@@ -15,6 +15,25 @@ function ToolCtr($scope, $http,$routeParams,pagination) {
             else{}
         }
     }
+	$scope.pageClickTemp=function(page,type,class_element){
+        if(!lock){
+            if(page<=$scope.pageTemplate.pages.length && page>0){
+                $scope.pageTemplate.currentPage=page;
+                scrollHorizontal($scope.pageTemplate.currentPage,$(class_element));
+            }
+            else{}
+        }
+    }
+	
+	$scope.pageClickResume=function(page,type,class_element){
+        if(!lock){
+            if(page<=$scope.pageResume.pages.length && page>0){
+                $scope.pageResume.currentPage=page;
+                scrollHorizontal($scope.pageResume.currentPage,$(class_element));
+            }
+            else{}
+        }
+    }
     /*
     Constructor
     */
@@ -23,7 +42,7 @@ function ToolCtr($scope, $http,$routeParams,pagination) {
            // Job recommandation
             $scope.jobs=data;
             $scope.pageJobs=new pagination();
-            $scope.pageJobs.limit=5;
+            $scope.pageJobs.limit=3;
             $scope.pageJobs.totalElem=data.length;
             $scope.pageJobs.computePages();
 	   });
@@ -44,6 +63,16 @@ function ToolCtr($scope, $http,$routeParams,pagination) {
 	       });
         }
     }
+	$scope.loadTemplates = function(){
+		$http.get("data/json/templates.json").success(function(data) {
+           // Job recommandation
+            $scope.userTemplates=data;
+			$scope.pageTemplate=new pagination();
+            $scope.pageTemplate.limit=5;
+            $scope.pageTemplate.totalElem=data.length;
+            $scope.pageTemplate.computePages();
+	   });
+	}
     $scope.saveIndustry=function(industry){
         $scope.industryId=industry.id;
         $scope.savedIndustry=industry.Name;
@@ -59,6 +88,10 @@ function ToolCtr($scope, $http,$routeParams,pagination) {
             $http.get("data/json/resume-hero.json").success(function(data) {
                 // Job recommandation
                 $scope.resumeHero=data;
+				$scope.pageResume=new pagination();
+				$scope.pageResume.limit=5;
+				$scope.pageResume.totalElem=data.length;
+				$scope.pageResume.computePages();
 	       });
         }
     }
@@ -110,6 +143,7 @@ function ToolCtr($scope, $http,$routeParams,pagination) {
         $scope.loadJob();
         $scope.loadIndustries();
         $scope.loadOccupations();
+		$scope.loadTemplates();
         $scope.loadResumeHero();
     }
     $scope.init();
@@ -265,6 +299,8 @@ function ResumeHeroCtr($scope, $http){
 			elem.addClass("selected");
 		}
 	}
+	
+	
     $scope.init=function(){
 		$scope.countries=["Australia","Belgium","Dutchland","France","United Kingdoms","USA"];
 		$scope.selectedCountry = "State";
@@ -276,6 +312,8 @@ function ResumeHeroCtr($scope, $http){
 		$scope.selectedMonth=$scope.months[0];
 		$scope.years=["2013", "2012", "2011", "2010", "2009", "2008", "2007", "2006", "2005", "2004", "2003", "2002", "2001", "2000", "1999", "1998", "1997", "1996", "1995", "1994", "1993", "1992", "1991", "1990", "1989", "1988", "1987", "1986", "1985", "1984", "1983", "1982", "1981", "1980", "1979", "1978", "1977", "1976", "1975", "1974", "1973", "1972", "1971", "1970"];
 		$scope.selectedYear=$scope.years[0];
+		$scope.templates=["Reference", "Traditional", "Functional"];
+		$scope.selectedTemplate=$scope.templates[0];
 		if($scope.resumeHero[0]){
 			$scope.currentResume = $scope.resumeHero[0];
 			$scope.currentResume.Class="selected";

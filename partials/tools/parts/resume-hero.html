@@ -1,7 +1,7 @@
 <div class="saved-content">
     <div class="title">{{resumeHeroTitle}}{{user.Name}}</div>
     <div class="content">
-        <i class="icon-arrow-left-big-blue" ng-click="pageClick(pageJobs.currentPage-1,'jobs','.saved-content')"></i>
+        <i class="icon-arrow-left-big-blue" ng-click="pageClickResume(pageResume.currentPage-1,'jobs','.saved-content')"></i>
         <div class="scrollable-content">
             <div class="scrollable">
                 <div class="save link {{resume.Class}}"  ng-click="selectResume(resume)" ng-repeat="resume in resumeHero">
@@ -15,8 +15,8 @@
             </div>
         </div>
         <div class="pages">
-            <div class="ball" ng-class="{true: 'activated',false: 'nick' }[n==1]" ng-click="pageClick(n,'jobs','.saved-content')" ng-repeat="n in pageJobs.pages"></div>
+            <div class="ball" ng-class="{true: 'activated',false: 'nick' }[n==1]" ng-click="pageClickResume(n,'jobs','.saved-content')" ng-repeat="n in pageResume.pages"></div>
         </div>
-        <i class="icon-arrow-right-big-blue" ng-click="pageClick(pageJobs.currentPage+1,'jobs','.saved-content')"></i>
+        <i class="icon-arrow-right-big-blue" ng-click="pageClickResume(pageResume.currentPage+1,'jobs','.saved-content')"></i>
     </div>
 </div>
