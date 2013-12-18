@@ -119,6 +119,12 @@ General CSS
    display:inline-block;
    vertical-align:top;
 }
+@mixin font-size($font-size){
+    font-size:$font-size;
+    @media only screen and (max-width:768px) {
+        font-size:$font-size * $rapp-resp-text;
+    }
+}
 .visible{
     display:block;
 }
@@ -224,6 +230,9 @@ ICON-ARROW
     i,b{position:absolute;top:50%;right:10px;}
     .icon-bigarrow-right-black,.icon-bigarrow-right-white{
         margin-top:-8.5px;
+    }
+    .icon-bigarrow-bottom-grey{
+        margin-top:-5.5px;
     }
 }
 /*
@@ -539,7 +548,7 @@ Header css
 	}
 	.icon-bigarrow-bottom-orange{
 		position:relative;
-		top: 30px;
+		top: 15px;
 		right: 0px;
 		@media(max-width: 767px){
 			right: 0px;
@@ -3568,6 +3577,13 @@ JOB RESULTS/RECOMMENDATIONS
 		}
 	}
 }
+.resume-hero{
+    .saved-content{
+        .save:not(.selected){
+			opacity: 0.7;
+		}
+    }
+}
 .saved-content, .delete-items{
     .title{text-align:left;}
     .content{
@@ -3581,9 +3597,7 @@ JOB RESULTS/RECOMMENDATIONS
 				height: 80%;
 			}
         }
-		.save:not(.selected){
-			opacity: 0.7;
-		}
+		
         .save{
             margin-top:45px;
             position:relative;
@@ -3758,16 +3772,15 @@ Dashboard
     }
     .saved-content{
         margin-bottom:25px;
+    }
+    .job-results,.saved-content{
+        .title{text-align:left;}
         .button-edit{
             margin-top:-8px;
             margin-right:-12px;
             font-size:14px;
             position:relative;padding-left:10px;padding-right:40px;
         }
-    }
-    .job-results,.saved-content{
-        .title{text-align:left;}
-        
     }
     .content{
         .col-left,.col-right{
@@ -3857,13 +3870,24 @@ Dashboard
             }
         }
         .add-elem,.technology-elem,.skill,.occupation,.income{
-            font-size:16px;
+            @include font-size(16px);
             text-align:center;
             padding-top:12px;
             padding-bottom:8px;
         }
         .occupation,.technology-elem{
             @include blue-element;
+        }
+        .add-elem-input{
+            @include font-size(16px);
+            input{
+                padding:12px;
+                margin:0px;
+                padding-top:12px;
+                padding-bottom:8px;
+                background:rgb(237,237,237);
+                border:1px dashed rgb(190,190,190);
+            }
         }
         .add-elem{
             background:rgb(237,237,237);
@@ -3873,8 +3897,11 @@ Dashboard
             .left{
                 margin-right:26px;
             }
-            .add-elem,.skill{
+            .add-elem,.add-elem-input,.skill{
                 width:46%;
+            }
+            .add-elem-input{
+                float:left;
             }
             .add-elem{margin:0;}
             .skill{
@@ -3884,11 +3911,12 @@ Dashboard
             }
         }
         .technology{
-            .add-tech,.technology-elem{
-                padding-top:12px;
-                padding-bottom:8px;
+            .add-elem,.add-elem-input input,.technology-elem{
+                width:100%;
             }
             .technology-elem{
+                padding-top:12px;
+                padding-bottom:8px;
                 margin-bottom:20px;
             }
         }

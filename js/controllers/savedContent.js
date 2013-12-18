@@ -23,7 +23,7 @@ function SavedContentCtr($scope, $http) {
         $scope.loadSaved();
         $scope.page="dashboard";
         $scope.paths=[{
-                "txt":" Dashboard /",
+                "txt":" Dashboard",
                 "color":"black"
             },
             {

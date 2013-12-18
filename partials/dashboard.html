@@ -159,7 +159,10 @@
                 </div>
                 <div class="content">
                     <div class="skill" ng-class="{true:'left',false:'right'}[$index%2==0]" ng-repeat="skill in skills">{{skill.Name}}</div>
-                    <div class="add-elem link left">+ Add a Skill</div>
+                    <div ng-hide="inputSkill.show" class="add-elem link left" ng-click="addSkill()">+ Add a Skill</div>
+                    <form ng-show="inputSkill.show" class="add-elem-input" ng-submit="addSkill()">
+                        <input placeholder="New Skill" ng-model="inputSkill.value"/>
+                    </form>
                     <div class="clear"></div>
                 </div>
             </div>
@@ -170,7 +173,10 @@
                 </div>
                 <div class="content">
                     <div class="technology-elem" ng-repeat="technology in technologies">{{technology.Name}}</div>
-                    <div class="link add-elem">+ Add more Tools & Technologies</div>
+                    <div ng-hide="inputTechnology.show" class="link add-elem" ng-click="addTech()">+ Add more Tools & Technologies</div>
+                    <form ng-show="inputTechnology.show" class="add-elem-input" ng-submit="addTech()">
+                        <input placeholder="New Tool or Technology" ng-model="inputTechnology.value"/>
+                    </form>
                 </div>
             </div>
         </div>

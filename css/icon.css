@@ -15,49 +15,49 @@ ICON css
   background: url("assets/zig.png") center center repeat-x; }
 
 .icon-career {
-  background-size: 1500px 1798.5px;
+  background-size: 1500px 1799px;
   background-position: -13px -10px;
   height: 24px;
   width: 142px; }
   @media only screen and (max-width: 768px) {
     .icon-career {
-      background-size: 1050px 1258.9499999999998px;
-      background-position: -124.6px -7px;
-      height: 16.799999999999997px;
-      width: 18.2px; } }
+      background-size: 1050px 1259px;
+      background-position: -124px -7px;
+      height: 17px;
+      width: 19px; } }
 
 .icon-search {
-  background-size: 1500px 1798.5px;
+  background-size: 1500px 1799px;
   background-position: -9px -58px;
   height: 15px;
   width: 15px; }
   @media (max-width: 767px) {
     .icon-search {
-      background-size: 2250px 2697.75px;
-      background-position: -13.5px -87px;
-      height: 22.499999999999996px;
-      width: 22.499999999999996px; } }
+      background-size: 2250px 2698px;
+      background-position: -13px -87px;
+      height: 23px;
+      width: 23px; } }
 
 .icon-close {
-  background-size: 1500px 1798.5px;
+  background-size: 1500px 1799px;
   background-position: -430px -420px;
   height: 40px;
   width: 40px; }
   @media only screen and (max-width: 768px) {
     .icon-close {
-      background-size: 1050px 1258.9499999999998px;
+      background-size: 1050px 1259px;
       background-position: -301px -294px;
       height: 28px;
       width: 28px; } }
 
 .icon-close:hover {
-  background-size: 1500px 1798.5px;
+  background-size: 1500px 1799px;
   background-position: -475px -420px;
   height: 40px;
   width: 40px; }
   @media only screen and (max-width: 768px) {
     .icon-close:hover {
-      background-size: 1050px 1258.9499999999998px;
+      background-size: 1050px 1259px;
       background-position: -301px -329px;
       height: 28px;
       width: 28px; } }
@@ -73,20 +73,20 @@ ICON css
       background-position: -57.5px -27.5px; } }
 
 .icon-bar-grey {
-  background-size: 1500px 1798.5px;
+  background-size: 1500px 1799px;
   background-position: -150px -55px;
   height: 24px;
   width: 2px; }
   @media only screen and (max-width: 767px) {
     .icon-bar-grey {
-      background-size: 1050px 1258.9499999999998px;
-      background-position: -105px -38.5px;
-      height: 16.799999999999997px;
-      width: 1.4px; } }
+      background-size: 1050px 1259px;
+      background-position: -105px -38px;
+      height: 17px;
+      width: 2px; } }
   @media only screen and (max-width: 479px) {
     .icon-bar-grey {
-      background-size: 750px 899.25px;
-      background-position: -75px -27.500000000000004px;
+      background-size: 750px 900px;
+      background-position: -75px -27px;
       height: 12px;
       width: 1px; } }
 
@@ -94,58 +94,58 @@ ICON css
 Arrow big
 **/
 .icon-bigarrow-bottom-grey {
-  background-size: 1500px 1798.5px;
+  background-size: 1500px 1799px;
   background-position: -42px -63px;
   height: 15px;
   width: 16px; }
   @media only screen and (max-width: 768px) {
     .icon-bigarrow-bottom-grey {
-      background-size: 1050px 1258.9499999999998px;
-      background-position: -29.4px -44.099999999999994px;
-      height: 10.5px;
-      width: 11.2px; } }
+      background-size: 1050px 1259px;
+      background-position: -29px -44px;
+      height: 11px;
+      width: 12px; } }
 
 .icon-bigarrow-bottom-orange {
-  background-size: 1500px 1798.5px;
+  background-size: 1500px 1799px;
   background-position: -76px -63px;
-  height: 8px;
+  height: 9px;
   width: 15px; }
   @media only screen and (max-width: 768px) {
     .icon-bigarrow-bottom-orange {
-      background-size: 1050px 1258.9499999999998px;
-      background-position: -53.199999999999996px -44.099999999999994px;
-      height: 5.6px;
-      width: 10.5px; } }
+      background-size: 1050px 1259px;
+      background-position: -53px -44px;
+      height: 7px;
+      width: 11px; } }
 
 .icon-bigarrow-right-black {
-  background-size: 1500px 1798.5px;
+  background-size: 1500px 1799px;
   background-position: -212px -59px;
   height: 17px;
   width: 9px; }
   @media only screen and (max-width: 768px) {
     .icon-bigarrow-right-black {
-      background-size: 1500px 1798.5px;
+      background-size: 1500px 1799px;
       background-position: -212px -59px;
       height: 17px;
       width: 9px; } }
 
 .icon-bigarrow-right-white {
-  background-size: 1500px 1798.5px;
+  background-size: 1500px 1799px;
   background-position: -245px -59px;
   height: 15px;
   width: 9px; }
 
 .icon-check {
-  background-size: 1500px 1798.5px;
+  background-size: 1500px 1799px;
   background-position: -273px -56px;
   height: 22px;
   width: 22px; }
   @media only screen and (max-width: 768px) {
     .icon-check {
-      background-size: 1050px 1258.9499999999998px;
-      background-position: -191.1px -39.199999999999996px;
-      height: 15.4px;
-      width: 15.4px; } }
+      background-size: 1050px 1259px;
+      background-position: -191px -39px;
+      height: 16px;
+      width: 16px; } }
 
 .icon-box-white {
   background-position: -340 -56px;
@@ -220,14 +220,14 @@ Arrow big
       background-position: -238px -28px; } }
 
 .icon-image {
-  background-size: 1500px 1798.5px;
+  background-size: 1500px 1799px;
   background-position: -2px -416px;
   height: 40px;
   width: 40px; }
   @media only screen and (max-width: 768px) {
     .icon-image {
-      background-size: 1050px 1258.9499999999998px;
-      background-position: -1.4px -291.2px;
+      background-size: 1050px 1259px;
+      background-position: -1px -291px;
       height: 28px;
       width: 28px; } }
 
@@ -468,22 +468,22 @@ STARS
   width: 42px; }
   @media only screen and (max-width: 979px) {
     .icon-star-big-green-1 {
-      background-size: 1500px 1798.5px;
+      background-size: 1500px 1799px;
       background-position: -13px -190px;
-      height: 21.500000000000004px;
+      height: 22px;
       width: 21px; } }
   @media only screen and (max-width: 767px) {
     .icon-star-big-green-1 {
-      background-size: 2250px 2697.75px;
-      background-position: -19.5px -285px;
-      height: 32.25px;
-      width: 31.500000000000004px; } }
+      background-size: 2250px 2698px;
+      background-position: -19px -285px;
+      height: 33px;
+      width: 32px; } }
   @media only screen and (max-width: 479px) {
     .icon-star-big-green-1 {
-      background-size: 1125px 1348.875px;
-      background-position: -9.75px -142.5px;
-      height: 16.125px;
-      width: 15.750000000000002px; } }
+      background-size: 1125px 1349px;
+      background-position: -9px -142px;
+      height: 17px;
+      width: 16px; } }
 
 .icon-star-big-green-2 {
   background-size: 3000px 3597px;
@@ -492,22 +492,22 @@ STARS
   width: 42px; }
   @media only screen and (max-width: 979px) {
     .icon-star-big-green-2 {
-      background-size: 1500px 1798.5px;
+      background-size: 1500px 1799px;
       background-position: -60spx -190px;
-      height: 21.500000000000004px;
+      height: 22px;
       width: 21px; } }
   @media only screen and (max-width: 767px) {
     .icon-star-big-green-2 {
-      background-size: 2250px 2697.75px;
+      background-size: 2250px 2698px;
       background-position: -90spx -285px;
-      height: 32.25px;
-      width: 31.500000000000004px; } }
+      height: 33px;
+      width: 32px; } }
   @media only screen and (max-width: 479px) {
     .icon-star-big-green-2 {
-      background-size: 1125px 1348.875px;
-      background-position: -45spx -142.5px;
-      height: 16.125px;
-      width: 15.750000000000002px; } }
+      background-size: 1125px 1349px;
+      background-position: -45spx -142px;
+      height: 17px;
+      width: 16px; } }
 
 .icon-star-big-green-3 {
   background-size: 3000px 3597px;
@@ -516,22 +516,22 @@ STARS
   width: 42px; }
   @media only screen and (max-width: 979px) {
     .icon-star-big-green-3 {
-      background-size: 1500px 1798.5px;
+      background-size: 1500px 1799px;
       background-position: -107px -190px;
-      height: 21.500000000000004px;
+      height: 22px;
       width: 21px; } }
   @media only screen and (max-width: 767px) {
     .icon-star-big-green-3 {
-      background-size: 2250px 2697.75px;
-      background-position: -160.5px -285px;
-      height: 32.25px;
-      width: 31.500000000000004px; } }
+      background-size: 2250px 2698px;
+      background-position: -160px -285px;
+      height: 33px;
+      width: 32px; } }
   @media only screen and (max-width: 479px) {
     .icon-star-big-green-3 {
-      background-size: 1125px 1348.875px;
-      background-position: -80.25px -142.5px;
-      height: 16.125px;
-      width: 15.750000000000002px; } }
+      background-size: 1125px 1349px;
+      background-position: -80px -142px;
+      height: 17px;
+      width: 16px; } }
 
 .icon-star-big-green-4 {
   background-size: 3000px 3597px;
@@ -540,22 +540,22 @@ STARS
   width: 42px; }
   @media only screen and (max-width: 979px) {
     .icon-star-big-green-4 {
-      background-size: 1500px 1798.5px;
+      background-size: 1500px 1799px;
       background-position: -154px -190px;
-      height: 21.500000000000004px;
+      height: 22px;
       width: 21px; } }
   @media only screen and (max-width: 767px) {
     .icon-star-big-green-4 {
-      background-size: 2250px 2697.75px;
+      background-size: 2250px 2698px;
       background-position: -231px -285px;
-      height: 32.25px;
-      width: 31.500000000000004px; } }
+      height: 33px;
+      width: 32px; } }
   @media only screen and (max-width: 479px) {
     .icon-star-big-green-4 {
-      background-size: 1125px 1348.875px;
-      background-position: -115.5px -142.5px;
-      height: 16.125px;
-      width: 15.750000000000002px; } }
+      background-size: 1125px 1349px;
+      background-position: -115px -142px;
+      height: 17px;
+      width: 16px; } }
 
 .icon-star-big-orange-1 {
   background-size: 3000px 3597px;
@@ -564,22 +564,22 @@ STARS
   width: 42px; }
   @media only screen and (max-width: 979px) {
     .icon-star-big-orange-1 {
-      background-size: 1500px 1798.5px;
+      background-size: 1500px 1799px;
       background-position: -200px -190px;
-      height: 21.500000000000004px;
+      height: 22px;
       width: 21px; } }
   @media only screen and (max-width: 767px) {
     .icon-star-big-orange-1 {
-      background-size: 2250px 2697.75px;
+      background-size: 2250px 2698px;
       background-position: -300px -285px;
-      height: 32.25px;
-      width: 31.500000000000004px; } }
+      height: 33px;
+      width: 32px; } }
   @media only screen and (max-width: 479px) {
     .icon-star-big-orange-1 {
-      background-size: 1125px 1348.875px;
-      background-position: -150px -142.5px;
-      height: 16.125px;
-      width: 15.750000000000002px; } }
+      background-size: 1125px 1349px;
+      background-position: -150px -142px;
+      height: 17px;
+      width: 16px; } }
 
 .icon-star-big-orange-2 {
   background-size: 3000px 3597px;
@@ -588,22 +588,22 @@ STARS
   width: 42px; }
   @media only screen and (max-width: 979px) {
     .icon-star-big-orange-2 {
-      background-size: 1500px 1798.5px;
+      background-size: 1500px 1799px;
       background-position: -247px -190px;
-      height: 21.500000000000004px;
+      height: 22px;
       width: 21px; } }
   @media only screen and (max-width: 767px) {
     .icon-star-big-orange-2 {
-      background-size: 2250px 2697.75px;
-      background-position: -370.5px -285px;
-      height: 32.25px;
-      width: 31.500000000000004px; } }
+      background-size: 2250px 2698px;
+      background-position: -370px -285px;
+      height: 33px;
+      width: 32px; } }
   @media only screen and (max-width: 479px) {
     .icon-star-big-orange-2 {
-      background-size: 1125px 1348.875px;
-      background-position: -185.25px -142.5px;
-      height: 16.125px;
-      width: 15.750000000000002px; } }
+      background-size: 1125px 1349px;
+      background-position: -185px -142px;
+      height: 17px;
+      width: 16px; } }
 
 .icon-star-big-orange-3 {
   background-size: 3000px 3597px;
@@ -612,22 +612,22 @@ STARS
   width: 42px; }
   @media only screen and (max-width: 979px) {
     .icon-star-big-orange-3 {
-      background-size: 1500px 1798.5px;
+      background-size: 1500px 1799px;
       background-position: -294px -190px;
-      height: 21.500000000000004px;
+      height: 22px;
       width: 21px; } }
   @media only screen and (max-width: 767px) {
     .icon-star-big-orange-3 {
-      background-size: 2250px 2697.75px;
+      background-size: 2250px 2698px;
       background-position: -441px -285px;
-      height: 32.25px;
-      width: 31.500000000000004px; } }
+      height: 33px;
+      width: 32px; } }
   @media only screen and (max-width: 479px) {
     .icon-star-big-orange-3 {
-      background-size: 1125px 1348.875px;
-      background-position: -220.50000000000003px -142.5px;
-      height: 16.125px;
-      width: 15.750000000000002px; } }
+      background-size: 1125px 1349px;
+      background-position: -220px -142px;
+      height: 17px;
+      width: 16px; } }
 
 .icon-star-big-orange-4 {
   background-size: 3000px 3597px;
@@ -636,22 +636,22 @@ STARS
   width: 42px; }
   @media only screen and (max-width: 979px) {
     .icon-star-big-orange-4 {
-      background-size: 1500px 1798.5px;
+      background-size: 1500px 1799px;
       background-position: -341px -190px;
-      height: 21.500000000000004px;
+      height: 22px;
       width: 21px; } }
   @media only screen and (max-width: 767px) {
     .icon-star-big-orange-4 {
-      background-size: 2250px 2697.75px;
-      background-position: -511.5px -285px;
-      height: 32.25px;
-      width: 31.500000000000004px; } }
+      background-size: 2250px 2698px;
+      background-position: -511px -285px;
+      height: 33px;
+      width: 32px; } }
   @media only screen and (max-width: 479px) {
     .icon-star-big-orange-4 {
-      background-size: 1125px 1348.875px;
-      background-position: -255.75px -142.5px;
-      height: 16.125px;
-      width: 15.750000000000002px; } }
+      background-size: 1125px 1349px;
+      background-position: -255px -142px;
+      height: 17px;
+      width: 16px; } }
 
 .icon-star-big-orange-5 {
   background-size: 3000px 3597px;
@@ -660,22 +660,22 @@ STARS
   width: 42px; }
   @media only screen and (max-width: 979px) {
     .icon-star-big-orange-5 {
-      background-size: 1500px 1798.5px;
+      background-size: 1500px 1799px;
       background-position: -388px -190px;
-      height: 21.500000000000004px;
+      height: 22px;
       width: 21px; } }
   @media only screen and (max-width: 767px) {
     .icon-star-big-orange-5 {
-      background-size: 2250px 2697.75px;
+      background-size: 2250px 2698px;
       background-position: -582px -285px;
-      height: 32.25px;
-      width: 31.500000000000004px; } }
+      height: 33px;
+      width: 32px; } }
   @media only screen and (max-width: 479px) {
     .icon-star-big-orange-5 {
-      background-size: 1125px 1348.875px;
-      background-position: -291px -142.5px;
-      height: 16.125px;
-      width: 15.750000000000002px; } }
+      background-size: 1125px 1349px;
+      background-position: -291px -142px;
+      height: 17px;
+      width: 16px; } }
 
 .icon-star-big-blue-1 {
   background-size: 3000px 3597px;
@@ -684,22 +684,22 @@ STARS
   width: 42px; }
   @media only screen and (max-width: 979px) {
     .icon-star-big-blue-1 {
-      background-size: 1500px 1798.5px;
+      background-size: 1500px 1799px;
       background-position: -435px -190px;
-      height: 21.500000000000004px;
+      height: 22px;
       width: 21px; } }
   @media only screen and (max-width: 767px) {
     .icon-star-big-blue-1 {
-      background-size: 2250px 2697.75px;
-      background-position: -652.5px -285px;
-      height: 32.25px;
-      width: 31.500000000000004px; } }
+      background-size: 2250px 2698px;
+      background-position: -652px -285px;
+      height: 33px;
+      width: 32px; } }
   @media only screen and (max-width: 479px) {
     .icon-star-big-blue-1 {
-      background-size: 1125px 1348.875px;
-      background-position: -326.25px -142.5px;
-      height: 16.125px;
-      width: 15.750000000000002px; } }
+      background-size: 1125px 1349px;
+      background-position: -326px -142px;
+      height: 17px;
+      width: 16px; } }
 
 .icon-star-big-blue-2 {
   background-size: 3000px 3597px;
@@ -708,22 +708,22 @@ STARS
   width: 42px; }
   @media only screen and (max-width: 979px) {
     .icon-star-big-blue-2 {
-      background-size: 1500px 1798.5px;
+      background-size: 1500px 1799px;
       background-position: -482px -190px;
-      height: 21.500000000000004px;
+      height: 22px;
       width: 21px; } }
   @media only screen and (max-width: 767px) {
     .icon-star-big-blue-2 {
-      background-size: 2250px 2697.75px;
+      background-size: 2250px 2698px;
       background-position: -723px -285px;
-      height: 32.25px;
-      width: 31.500000000000004px; } }
+      height: 33px;
+      width: 32px; } }
   @media only screen and (max-width: 479px) {
     .icon-star-big-blue-2 {
-      background-size: 1125px 1348.875px;
-      background-position: -361.50000000000006px -142.5px;
-      height: 16.125px;
-      width: 15.750000000000002px; } }
+      background-size: 1125px 1349px;
+      background-position: -361px -142px;
+      height: 17px;
+      width: 16px; } }
 
 .icon-star-big-blue-3 {
   background-size: 3000px 3597px;
@@ -732,22 +732,22 @@ STARS
   width: 42px; }
   @media only screen and (max-width: 979px) {
     .icon-star-big-blue-3 {
-      background-size: 1500px 1798.5px;
+      background-size: 1500px 1799px;
       background-position: -529px -190px;
-      height: 21.500000000000004px;
+      height: 22px;
       width: 21px; } }
   @media only screen and (max-width: 767px) {
     .icon-star-big-blue-3 {
-      background-size: 2250px 2697.75px;
-      background-position: -793.5px -285px;
-      height: 32.25px;
-      width: 31.500000000000004px; } }
+      background-size: 2250px 2698px;
+      background-position: -793px -285px;
+      height: 33px;
+      width: 32px; } }
   @media only screen and (max-width: 479px) {
     .icon-star-big-blue-3 {
-      background-size: 1125px 1348.875px;
-      background-position: -396.75px -142.5px;
-      height: 16.125px;
-      width: 15.750000000000002px; } }
+      background-size: 1125px 1349px;
+      background-position: -396px -142px;
+      height: 17px;
+      width: 16px; } }
 
 .icon-star-big-blue-4 {
   background-size: 3000px 3597px;
@@ -756,22 +756,22 @@ STARS
   width: 42px; }
   @media only screen and (max-width: 979px) {
     .icon-star-big-blue-4 {
-      background-size: 1500px 1798.5px;
+      background-size: 1500px 1799px;
       background-position: -576px -190px;
-      height: 21.500000000000004px;
+      height: 22px;
       width: 21px; } }
   @media only screen and (max-width: 767px) {
     .icon-star-big-blue-4 {
-      background-size: 2250px 2697.75px;
+      background-size: 2250px 2698px;
       background-position: -864px -285px;
-      height: 32.25px;
-      width: 31.500000000000004px; } }
+      height: 33px;
+      width: 32px; } }
   @media only screen and (max-width: 479px) {
     .icon-star-big-blue-4 {
-      background-size: 1125px 1348.875px;
-      background-position: -432px -142.5px;
-      height: 16.125px;
-      width: 15.750000000000002px; } }
+      background-size: 1125px 1349px;
+      background-position: -432px -142px;
+      height: 17px;
+      width: 16px; } }
 
 .icon-star-big-blue-5 {
   background-size: 3000px 3597px;
@@ -780,22 +780,22 @@ STARS
   width: 42px; }
   @media only screen and (max-width: 979px) {
     .icon-star-big-blue-5 {
-      background-size: 1500px 1798.5px;
+      background-size: 1500px 1799px;
       background-position: -623px -190px;
-      height: 21.500000000000004px;
+      height: 22px;
       width: 21px; } }
   @media only screen and (max-width: 767px) {
     .icon-star-big-blue-5 {
-      background-size: 2250px 2697.75px;
-      background-position: -934.5px -285px;
-      height: 32.25px;
-      width: 31.500000000000004px; } }
+      background-size: 2250px 2698px;
+      background-position: -934px -285px;
+      height: 33px;
+      width: 32px; } }
   @media only screen and (max-width: 479px) {
     .icon-star-big-blue-5 {
-      background-size: 1125px 1348.875px;
-      background-position: -467.25px -142.5px;
-      height: 16.125px;
-      width: 15.750000000000002px; } }
+      background-size: 1125px 1349px;
+      background-position: -467px -142px;
+      height: 17px;
+      width: 16px; } }
 
 .icon-star-blue-big-6 {
   background-size: 3000px 3597px;
@@ -804,22 +804,22 @@ STARS
   width: 42px; }
   @media only screen and (max-width: 979px) {
     .icon-star-blue-big-6 {
-      background-size: 1500px 1798.5px;
+      background-size: 1500px 1799px;
       background-position: -670px -190px;
-      height: 21.500000000000004px;
+      height: 22px;
       width: 21px; } }
   @media only screen and (max-width: 767px) {
     .icon-star-blue-big-6 {
-      background-size: 2250px 2697.75px;
+      background-size: 2250px 2698px;
       background-position: -1005px -285px;
-      height: 32.25px;
-      width: 31.500000000000004px; } }
+      height: 33px;
+      width: 32px; } }
   @media only screen and (max-width: 479px) {
     .icon-star-blue-big-6 {
-      background-size: 1125px 1348.875px;
-      background-position: -502.49999999999994px -142.5px;
-      height: 16.125px;
-      width: 15.750000000000002px; } }
+      background-size: 1125px 1349px;
+      background-position: -502px -142px;
+      height: 17px;
+      width: 16px; } }
 
 .icon-star-big-red-1 {
   background-size: 3000px 3597px;
@@ -828,22 +828,22 @@ STARS
   width: 42px; }
   @media only screen and (max-width: 979px) {
     .icon-star-big-red-1 {
-      background-size: 1500px 1798.5px;
-      background-position: -13px -237.5px;
-      height: 21.500000000000004px;
+      background-size: 1500px 1799px;
+      background-position: -13px -237px;
+      height: 22px;
       width: 21px; } }
   @media only screen and (max-width: 767px) {
     .icon-star-big-red-1 {
-      background-size: 2250px 2697.75px;
-      background-position: -19.5px -356.25px;
-      height: 32.25px;
-      width: 31.500000000000004px; } }
+      background-size: 2250px 2698px;
+      background-position: -19px -356px;
+      height: 33px;
+      width: 32px; } }
   @media only screen and (max-width: 479px) {
     .icon-star-big-red-1 {
-      background-size: 1125px 1348.875px;
-      background-position: -9.75px -178.125px;
-      height: 16.125px;
-      width: 15.750000000000002px; } }
+      background-size: 1125px 1349px;
+      background-position: -9px -178px;
+      height: 17px;
+      width: 16px; } }
 
 .icon-star-big-red-2 {
   background-size: 3000px 3597px;
@@ -852,22 +852,22 @@ STARS
   width: 42px; }
   @media only screen and (max-width: 979px) {
     .icon-star-big-red-2 {
-      background-size: 1500px 1798.5px;
-      background-position: -60px -237.5px;
-      height: 21.500000000000004px;
+      background-size: 1500px 1799px;
+      background-position: -60px -237px;
+      height: 22px;
       width: 21px; } }
   @media only screen and (max-width: 767px) {
     .icon-star-big-red-2 {
-      background-size: 2250px 2697.75px;
-      background-position: -90px -356.25px;
-      height: 32.25px;
-      width: 31.500000000000004px; } }
+      background-size: 2250px 2698px;
+      background-position: -90px -356px;
+      height: 33px;
+      width: 32px; } }
   @media only screen and (max-width: 479px) {
     .icon-star-big-red-2 {
-      background-size: 1125px 1348.875px;
-      background-position: -45px -178.125px;
-      height: 16.125px;
-      width: 15.750000000000002px; } }
+      background-size: 1125px 1349px;
+      background-position: -45px -178px;
+      height: 17px;
+      width: 16px; } }
 
 .icon-star-big-red-3 {
   background-size: 3000px 3597px;
@@ -876,22 +876,22 @@ STARS
   width: 42px; }
   @media only screen and (max-width: 979px) {
     .icon-star-big-red-3 {
-      background-size: 1500px 1798.5px;
-      background-position: -107.5px -237.5px;
-      height: 21.500000000000004px;
+      background-size: 1500px 1799px;
+      background-position: -107px -237px;
+      height: 22px;
       width: 21px; } }
   @media only screen and (max-width: 767px) {
     .icon-star-big-red-3 {
-      background-size: 2250px 2697.75px;
-      background-position: -161.25px -356.25px;
-      height: 32.25px;
-      width: 31.500000000000004px; } }
+      background-size: 2250px 2698px;
+      background-position: -161px -356px;
+      height: 33px;
+      width: 32px; } }
   @media only screen and (max-width: 479px) {
     .icon-star-big-red-3 {
-      background-size: 1125px 1348.875px;
-      background-position: -80.625px -178.125px;
-      height: 16.125px;
-      width: 15.750000000000002px; } }
+      background-size: 1125px 1349px;
+      background-position: -80px -178px;
+      height: 17px;
+      width: 16px; } }
 
 .icon-star-big-red-4 {
   background-size: 3000px 3597px;
@@ -900,22 +900,22 @@ STARS
   width: 42px; }
   @media only screen and (max-width: 979px) {
     .icon-star-big-red-4 {
-      background-size: 1500px 1798.5px;
-      background-position: -294px -237.5px;
-      height: 21.500000000000004px;
+      background-size: 1500px 1799px;
+      background-position: -294px -237px;
+      height: 22px;
       width: 21px; } }
   @media only screen and (max-width: 767px) {
     .icon-star-big-red-4 {
-      background-size: 2250px 2697.75px;
-      background-position: -441px -356.25px;
-      height: 32.25px;
-      width: 31.500000000000004px; } }
+      background-size: 2250px 2698px;
+      background-position: -441px -356px;
+      height: 33px;
+      width: 32px; } }
   @media only screen and (max-width: 479px) {
     .icon-star-big-red-4 {
-      background-size: 1125px 1348.875px;
-      background-position: -220.50000000000003px -178.125px;
-      height: 16.125px;
-      width: 15.750000000000002px; } }
+      background-size: 1125px 1349px;
+      background-position: -220px -178px;
+      height: 17px;
+      width: 16px; } }
 
 .icon-star-big-pink-1 {
   background-size: 3000px 3597px;
@@ -924,22 +924,22 @@ STARS
   width: 42px; }
   @media only screen and (max-width: 979px) {
     .icon-star-big-pink-1 {
-      background-size: 1500px 1798.5px;
-      background-position: -154px -237.5px;
-      height: 21.500000000000004px;
+      background-size: 1500px 1799px;
+      background-position: -154px -237px;
+      height: 22px;
       width: 21px; } }
   @media only screen and (max-width: 767px) {
     .icon-star-big-pink-1 {
-      background-size: 2250px 2697.75px;
-      background-position: -231px -356.25px;
-      height: 32.25px;
-      width: 31.500000000000004px; } }
+      background-size: 2250px 2698px;
+      background-position: -231px -356px;
+      height: 33px;
+      width: 32px; } }
   @media only screen and (max-width: 479px) {
     .icon-star-big-pink-1 {
-      background-size: 1125px 1348.875px;
-      background-position: -115.5px -178.125px;
-      height: 16.125px;
-      width: 15.750000000000002px; } }
+      background-size: 1125px 1349px;
+      background-position: -115px -178px;
+      height: 17px;
+      width: 16px; } }
 
 .icon-star-big-pink-2 {
   background-size: 3000px 3597px;
@@ -948,22 +948,22 @@ STARS
   width: 42px; }
   @media only screen and (max-width: 979px) {
     .icon-star-big-pink-2 {
-      background-size: 1500px 1798.5px;
+      background-size: 1500px 1799px;
       background-position: -200px -237px;
-      height: 21.500000000000004px;
+      height: 22px;
       width: 21px; } }
   @media only screen and (max-width: 767px) {
     .icon-star-big-pink-2 {
-      background-size: 2250px 2697.75px;
-      background-position: -300px -355.5px;
-      height: 32.25px;
-      width: 31.500000000000004px; } }
+      background-size: 2250px 2698px;
+      background-position: -300px -355px;
+      height: 33px;
+      width: 32px; } }
   @media only screen and (max-width: 479px) {
     .icon-star-big-pink-2 {
-      background-size: 1125px 1348.875px;
-      background-position: -150px -177.75px;
-      height: 16.125px;
-      width: 15.750000000000002px; } }
+      background-size: 1125px 1349px;
+      background-position: -150px -177px;
+      height: 17px;
+      width: 16px; } }
 
 .icon-star-big-pink-3 {
   background-size: 3000px 3597px;
@@ -972,35 +972,35 @@ STARS
   width: 42px; }
   @media only screen and (max-width: 979px) {
     .icon-star-big-pink-3 {
-      background-size: 1500px 1798.5px;
+      background-size: 1500px 1799px;
       background-position: -247px -237px;
-      height: 21.500000000000004px;
+      height: 22px;
       width: 21px; } }
   @media only screen and (max-width: 767px) {
     .icon-star-big-pink-3 {
-      background-size: 2250px 2697.75px;
-      background-position: -370.5px -355.5px;
-      height: 32.25px;
-      width: 31.500000000000004px; } }
+      background-size: 2250px 2698px;
+      background-position: -370px -355px;
+      height: 33px;
+      width: 32px; } }
   @media only screen and (max-width: 479px) {
     .icon-star-big-pink-3 {
-      background-size: 1125px 1348.875px;
-      background-position: -185.25px -177.75px;
-      height: 16.125px;
-      width: 15.750000000000002px; } }
+      background-size: 1125px 1349px;
+      background-position: -185px -177px;
+      height: 17px;
+      width: 16px; } }
 
 /*SMALL*/
 .icon-star-green-1 {
-  background-size: 1500px 1798.5px;
+  background-size: 1500px 1799px;
   background-position: -13px -190px;
   height: 22px;
   width: 21px; }
   @media only screen and (max-width: 768px) {
     .icon-star-green-1 {
-      background-size: 1050px 1258.9499999999998px;
-      background-position: -9.1px -133px;
-      height: 15.4px;
-      width: 14.7px; } }
+      background-size: 1050px 1259px;
+      background-position: -9px -133px;
+      height: 16px;
+      width: 15px; } }
 
 .icon-star-green-2 {
   background-position: -60px -190px;
@@ -1216,286 +1216,286 @@ STARS
 Arrow
 */
 .icon-right-black {
-  background-size: 1500px 1798.5px;
+  background-size: 1500px 1799px;
   background-position: -532px -425px;
   height: 30px;
   width: 30px; }
 
 .icon-triangle-white {
-  background-size: 4500px 5395.5px;
+  background-size: 4500px 5396px;
   background-position: -837px -87px;
   height: 21px;
   width: 45px; }
   @media only screen and (max-width: 768px) {
     .icon-triangle-white {
-      background-size: 750px 899.25px;
-      background-position: -446.5px -371.5px;
-      height: 57.5px;
-      width: 56.5px; } }
+      background-size: 750px 900px;
+      background-position: -446px -371px;
+      height: 58px;
+      width: 57px; } }
 
 .icon-arrow-right-green-1 {
-  background-size: 1500px 1798.5px;
+  background-size: 1500px 1799px;
   background-position: -20px -289px;
   height: 11px;
   width: 8px; }
   @media only screen and (max-width: 768px) {
     .icon-arrow-right-green-1 {
-      background-size: 1050px 1258.9499999999998px;
-      background-position: -14px -202.29999999999998px;
-      height: 7.7px;
-      width: 5.6px; } }
+      background-size: 1050px 1259px;
+      background-position: -14px -202px;
+      height: 8px;
+      width: 6px; } }
 
 .icon-arrow-right-green-2 {
-  background-size: 1500px 1798.5px;
+  background-size: 1500px 1799px;
   background-position: -67px -289px;
   height: 11px;
   width: 8px; }
   @media only screen and (max-width: 768px) {
     .icon-arrow-right-green-2 {
-      background-size: 1050px 1258.9499999999998px;
-      background-position: -46.9px -202.29999999999998px;
-      height: 7.7px;
-      width: 5.6px; } }
+      background-size: 1050px 1259px;
+      background-position: -46px -202px;
+      height: 8px;
+      width: 6px; } }
 
 .icon-arrow-right-green-3 {
-  background-size: 1500px 1798.5px;
+  background-size: 1500px 1799px;
   background-position: -114px -289px;
   height: 11px;
   width: 8px; }
   @media only screen and (max-width: 768px) {
     .icon-arrow-right-green-3 {
-      background-size: 1050px 1258.9499999999998px;
-      background-position: -79.8px -202.29999999999998px;
-      height: 7.7px;
-      width: 5.6px; } }
+      background-size: 1050px 1259px;
+      background-position: -79px -202px;
+      height: 8px;
+      width: 6px; } }
 
 .icon-arrow-right-green-4 {
-  background-size: 1500px 1798.5px;
+  background-size: 1500px 1799px;
   background-position: -161px -289px;
   height: 11px;
   width: 8px; }
   @media only screen and (max-width: 768px) {
     .icon-arrow-right-green-4 {
-      background-size: 1050px 1258.9499999999998px;
-      background-position: -112.69999999999999px -202.29999999999998px;
-      height: 7.7px;
-      width: 5.6px; } }
+      background-size: 1050px 1259px;
+      background-position: -112px -202px;
+      height: 8px;
+      width: 6px; } }
 
 .icon-arrow-right-orange-1 {
-  background-size: 1500px 1798.5px;
+  background-size: 1500px 1799px;
   background-position: -208px -289px;
   height: 11px;
   width: 8px; }
   @media only screen and (max-width: 768px) {
     .icon-arrow-right-orange-1 {
-      background-size: 1050px 1258.9499999999998px;
-      background-position: -145.6px -202.29999999999998px;
-      height: 7.7px;
-      width: 5.6px; } }
+      background-size: 1050px 1259px;
+      background-position: -145px -202px;
+      height: 8px;
+      width: 6px; } }
 
 .icon-arrow-right-orange-2 {
-  background-size: 1500px 1798.5px;
+  background-size: 1500px 1799px;
   background-position: -255px -289px;
   height: 11px;
   width: 8px; }
   @media only screen and (max-width: 768px) {
     .icon-arrow-right-orange-2 {
-      background-size: 1050px 1258.9499999999998px;
-      background-position: -178.5px -202.29999999999998px;
-      height: 7.7px;
-      width: 5.6px; } }
+      background-size: 1050px 1259px;
+      background-position: -178px -202px;
+      height: 8px;
+      width: 6px; } }
 
 .icon-arrow-right-orange-3 {
-  background-size: 1500px 1798.5px;
+  background-size: 1500px 1799px;
   background-position: -302px -289px;
   height: 11px;
   width: 8px; }
   @media only screen and (max-width: 768px) {
     .icon-arrow-right-orange-3 {
-      background-size: 1050px 1258.9499999999998px;
-      background-position: -211.39999999999998px -202.29999999999998px;
-      height: 7.7px;
-      width: 5.6px; } }
+      background-size: 1050px 1259px;
+      background-position: -211px -202px;
+      height: 8px;
+      width: 6px; } }
 
 .icon-arrow-right-orange-4 {
-  background-size: 1500px 1798.5px;
+  background-size: 1500px 1799px;
   background-position: -349px -289px;
   height: 11px;
   width: 8px; }
   @media only screen and (max-width: 768px) {
     .icon-arrow-right-orange-4 {
-      background-size: 1050px 1258.9499999999998px;
-      background-position: -244.29999999999998px -202.29999999999998px;
-      height: 7.7px;
-      width: 5.6px; } }
+      background-size: 1050px 1259px;
+      background-position: -244px -202px;
+      height: 8px;
+      width: 6px; } }
 
 .icon-arrow-right-orange-5 {
-  background-size: 1500px 1798.5px;
+  background-size: 1500px 1799px;
   background-position: -396px -289px;
   height: 11px;
   width: 8px; }
   @media only screen and (max-width: 768px) {
     .icon-arrow-right-orange-5 {
-      background-size: 1050px 1258.9499999999998px;
-      background-position: -277.2px -202.29999999999998px;
-      height: 7.7px;
-      width: 5.6px; } }
+      background-size: 1050px 1259px;
+      background-position: -277px -202px;
+      height: 8px;
+      width: 6px; } }
 
 .icon-arrow-right-blue-1 {
-  background-size: 1500px 1798.5px;
+  background-size: 1500px 1799px;
   background-position: -443px -289px;
   height: 11px;
   width: 8px; }
   @media only screen and (max-width: 768px) {
     .icon-arrow-right-blue-1 {
-      background-size: 1050px 1258.9499999999998px;
-      background-position: -310.09999999999997px -202.29999999999998px;
-      height: 7.7px;
-      width: 5.6px; } }
+      background-size: 1050px 1259px;
+      background-position: -310px -202px;
+      height: 8px;
+      width: 6px; } }
 
 .icon-arrow-right-blue-2 {
-  background-size: 1500px 1798.5px;
+  background-size: 1500px 1799px;
   background-position: -490px -289px;
   height: 11px;
   width: 8px; }
   @media only screen and (max-width: 768px) {
     .icon-arrow-right-blue-2 {
-      background-size: 1050px 1258.9499999999998px;
-      background-position: -343px -202.29999999999998px;
-      height: 7.7px;
-      width: 5.6px; } }
+      background-size: 1050px 1259px;
+      background-position: -343px -202px;
+      height: 8px;
+      width: 6px; } }
 
 .icon-arrow-right-blue-3 {
-  background-size: 1500px 1798.5px;
+  background-size: 1500px 1799px;
   background-position: -537px -289px;
   height: 11px;
   width: 8px; }
   @media only screen and (max-width: 768px) {
     .icon-arrow-right-blue-3 {
-      background-size: 1050px 1258.9499999999998px;
-      background-position: -375.8999999999999px -202.29999999999998px;
-      height: 7.7px;
-      width: 5.6px; } }
+      background-size: 1050px 1259px;
+      background-position: -375px -202px;
+      height: 8px;
+      width: 6px; } }
 
 .icon-arrow-right-blue-4 {
-  background-size: 1500px 1798.5px;
+  background-size: 1500px 1799px;
   background-position: -584px -289px;
   height: 11px;
   width: 8px; }
   @media only screen and (max-width: 768px) {
     .icon-arrow-right-blue-4 {
-      background-size: 1050px 1258.9499999999998px;
-      background-position: -408.79999999999995px -202.29999999999998px;
-      height: 7.7px;
-      width: 5.6px; } }
+      background-size: 1050px 1259px;
+      background-position: -408px -202px;
+      height: 8px;
+      width: 6px; } }
 
 .icon-arrow-right-blue-5 {
-  background-size: 1500px 1798.5px;
+  background-size: 1500px 1799px;
   background-position: -631px -289px;
   height: 11px;
   width: 8px; }
   @media only screen and (max-width: 768px) {
     .icon-arrow-right-blue-5 {
-      background-size: 1050px 1258.9499999999998px;
-      background-position: -441.7px -202.29999999999998px;
-      height: 7.7px;
-      width: 5.6px; } }
+      background-size: 1050px 1259px;
+      background-position: -441px -202px;
+      height: 8px;
+      width: 6px; } }
 
 .icon-arrow-right-blue-6 {
-  background-size: 1500px 1798.5px;
+  background-size: 1500px 1799px;
   background-position: -678px -289px;
   height: 11px;
   width: 8px; }
   @media only screen and (max-width: 768px) {
     .icon-arrow-right-blue-6 {
-      background-size: 1050px 1258.9499999999998px;
-      background-position: -474.59999999999997px -202.29999999999998px;
-      height: 7.7px;
-      width: 5.6px; } }
+      background-size: 1050px 1259px;
+      background-position: -474px -202px;
+      height: 8px;
+      width: 6px; } }
 
 .icon-arrow-right-red-1 {
-  background-size: 1500px 1798.5px;
+  background-size: 1500px 1799px;
   background-position: -20px -336px;
   height: 11px;
   width: 8px; }
   @media only screen and (max-width: 768px) {
     .icon-arrow-right-red-1 {
-      background-size: 1050px 1258.9499999999998px;
-      background-position: -14px -235.2px;
-      height: 7.7px;
-      width: 5.6px; } }
+      background-size: 1050px 1259px;
+      background-position: -14px -235px;
+      height: 8px;
+      width: 6px; } }
 
 .icon-arrow-right-red-2 {
-  background-size: 1500px 1798.5px;
+  background-size: 1500px 1799px;
   background-position: -67px -336px;
   height: 11px;
   width: 8px; }
   @media only screen and (max-width: 768px) {
     .icon-arrow-right-red-2 {
-      background-size: 1050px 1258.9499999999998px;
-      background-position: -46.9px -235.2px;
-      height: 7.7px;
-      width: 5.6px; } }
+      background-size: 1050px 1259px;
+      background-position: -46px -235px;
+      height: 8px;
+      width: 6px; } }
 
 .icon-arrow-right-red-3 {
-  background-size: 1500px 1798.5px;
+  background-size: 1500px 1799px;
   background-position: -114px -336px;
   height: 11px;
   width: 8px; }
   @media only screen and (max-width: 768px) {
     .icon-arrow-right-red-3 {
-      background-size: 1050px 1258.9499999999998px;
-      background-position: -79.8px -235.2px;
-      height: 7.7px;
-      width: 5.6px; } }
+      background-size: 1050px 1259px;
+      background-position: -79px -235px;
+      height: 8px;
+      width: 6px; } }
 
 .icon-arrow-right-red-4 {
-  background-size: 1500px 1798.5px;
+  background-size: 1500px 1799px;
   background-position: -302px -336px;
   height: 11px;
   width: 8px; }
   @media only screen and (max-width: 768px) {
     .icon-arrow-right-red-4 {
-      background-size: 1050px 1258.9499999999998px;
-      background-position: -211.39999999999998px -235.2px;
-      height: 7.7px;
-      width: 5.6px; } }
+      background-size: 1050px 1259px;
+      background-position: -211px -235px;
+      height: 8px;
+      width: 6px; } }
 
 .icon-arrow-right-pink-1 {
-  background-size: 1500px 1798.5px;
+  background-size: 1500px 1799px;
   background-position: -161px -336px;
   height: 11px;
   width: 8px; }
   @media only screen and (max-width: 768px) {
     .icon-arrow-right-pink-1 {
-      background-size: 1050px 1258.9499999999998px;
-      background-position: -112.69999999999999px -235.2px;
-      height: 7.7px;
-      width: 5.6px; } }
+      background-size: 1050px 1259px;
+      background-position: -112px -235px;
+      height: 8px;
+      width: 6px; } }
 
 .icon-arrow-right-pink-2 {
-  background-size: 1500px 1798.5px;
+  background-size: 1500px 1799px;
   background-position: -208px -336px;
   height: 11px;
   width: 8px; }
   @media only screen and (max-width: 768px) {
     .icon-arrow-right-pink-2 {
-      background-size: 1050px 1258.9499999999998px;
-      background-position: -145.6px -235.2px;
-      height: 7.7px;
-      width: 5.6px; } }
+      background-size: 1050px 1259px;
+      background-position: -145px -235px;
+      height: 8px;
+      width: 6px; } }
 
 .icon-arrow-right-pink-3 {
-  background-size: 1500px 1798.5px;
+  background-size: 1500px 1799px;
   background-position: -255px -336px;
   height: 11px;
   width: 8px; }
   @media only screen and (max-width: 768px) {
     .icon-arrow-right-pink-3 {
-      background-size: 1050px 1258.9499999999998px;
-      background-position: -178.5px -235.2px;
-      height: 7.7px;
-      width: 5.6px; } }
+      background-size: 1050px 1259px;
+      background-position: -178px -235px;
+      height: 8px;
+      width: 6px; } }
 
 /*
 JOB PHASES
@@ -1581,16 +1581,16 @@ JOB PHASES
       width: 22px; } }
 
 .icon-question {
-  background-size: 1500px 1798.5px;
+  background-size: 1500px 1799px;
   background-position: -387px -379px;
   height: 22px;
   width: 22px; }
   @media only screen and (max-width: 768px) {
     .icon-question {
-      background-size: 1050px 1258.9499999999998px;
-      background-position: -270.9px -265.3px;
-      height: 15.4px;
-      width: 15.4px; } }
+      background-size: 1050px 1259px;
+      background-position: -270px -265px;
+      height: 16px;
+      width: 16px; } }
 
 .icon-search-orange-big {
   background-position: -426px -370px;
@@ -1646,184 +1646,184 @@ JOB PHASES
 SOCIAL
 */
 .icon-save {
-  background-size: 1500px 1798.5px;
+  background-size: 1500px 1799px;
   background-position: -659px -369px;
   height: 40px;
   width: 40px; }
   @media only screen and (max-width: 1200px) {
     .icon-save {
-      background-size: 1350px 1618.65px;
-      background-position: -593.1px -332.1px;
+      background-size: 1350px 1619px;
+      background-position: -593px -332px;
       height: 36px;
       width: 36px; } }
   @media only screen and (max-width: 980px) {
     .icon-save {
-      background-size: 900px 1079.1px;
-      background-position: -395.40000000000003px -221.4px;
+      background-size: 900px 1080px;
+      background-position: -395px -221px;
       height: 24px;
       width: 24px; } }
   @media only screen and (max-width: 768px) {
     .icon-save {
-      background-size: 1125px 1348.875px;
-      background-position: -494.24999999999994px -276.75px;
+      background-size: 1125px 1349px;
+      background-position: -494px -276px;
       height: 30px;
       width: 30px; } }
   @media only screen and (max-width: 480px) {
     .icon-save {
-      background-size: 555px 665.4449999999999px;
-      background-position: -243.82999999999998px -136.53px;
-      height: 14.8px;
-      width: 14.8px; } }
+      background-size: 555px 666px;
+      background-position: -243px -136px;
+      height: 15px;
+      width: 15px; } }
 
 .icon-mail {
-  background-size: 1500px 1798.5px;
+  background-size: 1500px 1799px;
   background-position: -707px -369px;
   height: 40px;
   width: 40px; }
   @media only screen and (max-width: 1200px) {
     .icon-mail {
-      background-size: 1350px 1618.65px;
-      background-position: -636.3000000000001px -332.1px;
+      background-size: 1350px 1619px;
+      background-position: -636px -332px;
       height: 36px;
       width: 36px; } }
   @media only screen and (max-width: 980px) {
     .icon-mail {
-      background-size: 900px 1079.1px;
-      background-position: -424.2px -221.4px;
+      background-size: 900px 1080px;
+      background-position: -424px -221px;
       height: 24px;
       width: 24px; } }
   @media only screen and (max-width: 768px) {
     .icon-mail {
-      background-size: 1125px 1348.875px;
-      background-position: -530.25px -276.75px;
+      background-size: 1125px 1349px;
+      background-position: -530px -276px;
       height: 30px;
       width: 30px; } }
   @media only screen and (max-width: 480px) {
     .icon-mail {
-      background-size: 555px 665.4449999999999px;
-      background-position: -261.59px -136.53px;
-      height: 14.8px;
-      width: 14.8px; } }
+      background-size: 555px 666px;
+      background-position: -261px -136px;
+      height: 15px;
+      width: 15px; } }
 
 .icon-twitter {
-  background-size: 1500px 1798.5px;
+  background-size: 1500px 1799px;
   background-position: -754px -369px;
   height: 40px;
   width: 40px; }
   @media only screen and (max-width: 1200px) {
     .icon-twitter {
-      background-size: 1350px 1618.65px;
-      background-position: -678.6px -332.1px;
+      background-size: 1350px 1619px;
+      background-position: -678px -332px;
       height: 36px;
       width: 36px; } }
   @media only screen and (max-width: 980px) {
     .icon-twitter {
-      background-size: 900px 1079.1px;
-      background-position: -452.4px -221.4px;
+      background-size: 900px 1080px;
+      background-position: -452px -221px;
       height: 24px;
       width: 24px; } }
   @media only screen and (max-width: 768px) {
     .icon-twitter {
-      background-size: 1125px 1348.875px;
-      background-position: -565.5px -276.75px;
+      background-size: 1125px 1349px;
+      background-position: -565px -276px;
       height: 30px;
       width: 30px; } }
   @media only screen and (max-width: 480px) {
     .icon-twitter {
-      background-size: 555px 665.4449999999999px;
-      background-position: -278.98px -136.53px;
-      height: 14.8px;
-      width: 14.8px; } }
+      background-size: 555px 666px;
+      background-position: -278px -136px;
+      height: 15px;
+      width: 15px; } }
 
 .icon-google {
-  background-size: 1500px 1798.5px;
+  background-size: 1500px 1799px;
   background-position: -801px -369px;
   height: 40px;
   width: 40px; }
   @media only screen and (max-width: 1200px) {
     .icon-google {
-      background-size: 1350px 1618.65px;
-      background-position: -720.8999999999999px -332.1px;
+      background-size: 1350px 1619px;
+      background-position: -720px -332px;
       height: 36px;
       width: 36px; } }
   @media only screen and (max-width: 980px) {
     .icon-google {
-      background-size: 900px 1079.1px;
-      background-position: -480.5999999999999px -221.4px;
+      background-size: 900px 1080px;
+      background-position: -480px -221px;
       height: 24px;
       width: 24px; } }
   @media only screen and (max-width: 768px) {
     .icon-google {
-      background-size: 1125px 1348.875px;
-      background-position: -600.75px -276.75px;
+      background-size: 1125px 1349px;
+      background-position: -600px -276px;
       height: 30px;
       width: 30px; } }
   @media only screen and (max-width: 480px) {
     .icon-google {
-      background-size: 555px 665.4449999999999px;
-      background-position: -296.37px -136.53px;
-      height: 14.8px;
-      width: 14.8px; } }
+      background-size: 555px 666px;
+      background-position: -296px -136px;
+      height: 15px;
+      width: 15px; } }
 
 .icon-face {
-  background-size: 1500px 1798.5px;
+  background-size: 1500px 1799px;
   background-position: -848px -369px;
   height: 40px;
   width: 40px; }
   @media only screen and (max-width: 1200px) {
     .icon-face {
-      background-size: 1350px 1618.65px;
-      background-position: -763.2px -332.1px;
+      background-size: 1350px 1619px;
+      background-position: -763px -332px;
       height: 36px;
       width: 36px; } }
   @media only screen and (max-width: 980px) {
     .icon-face {
-      background-size: 900px 1079.1px;
-      background-position: -508.8px -221.4px;
+      background-size: 900px 1080px;
+      background-position: -508px -221px;
       height: 24px;
       width: 24px; } }
   @media only screen and (max-width: 768px) {
     .icon-face {
-      background-size: 1125px 1348.875px;
-      background-position: -636px -276.75px;
+      background-size: 1125px 1349px;
+      background-position: -636px -276px;
       height: 30px;
       width: 30px; } }
   @media only screen and (max-width: 480px) {
     .icon-face {
-      background-size: 555px 665.4449999999999px;
-      background-position: -313.76px -136.53px;
-      height: 14.8px;
-      width: 14.8px; } }
+      background-size: 555px 666px;
+      background-position: -313px -136px;
+      height: 15px;
+      width: 15px; } }
 
 .icon-link {
-  background-size: 1500px 1798.5px;
+  background-size: 1500px 1799px;
   background-position: -895px -369px;
   height: 40px;
   width: 40px; }
   @media only screen and (max-width: 1200px) {
     .icon-link {
-      background-size: 1350px 1618.65px;
-      background-position: -805.5px -332.1px;
+      background-size: 1350px 1619px;
+      background-position: -805px -332px;
       height: 36px;
       width: 36px; } }
   @media only screen and (max-width: 980px) {
     .icon-link {
-      background-size: 900px 1079.1px;
-      background-position: -537px -221.4px;
+      background-size: 900px 1080px;
+      background-position: -537px -221px;
       height: 24px;
       width: 24px; } }
   @media only screen and (max-width: 768px) {
     .icon-link {
-      background-size: 1125px 1348.875px;
-      background-position: -671.25px -276.75px;
+      background-size: 1125px 1349px;
+      background-position: -671px -276px;
       height: 30px;
       width: 30px; } }
   @media only screen and (max-width: 480px) {
     .icon-link {
-      background-size: 555px 665.4449999999999px;
-      background-position: -331.15px -136.53px;
-      height: 14.8px;
-      width: 14.8px; } }
+      background-size: 555px 666px;
+      background-position: -331px -136px;
+      height: 15px;
+      width: 15px; } }
 
 .icon-question-big {
   background-position: -942px -369px;
@@ -1836,91 +1836,91 @@ SOCIAL
       width: 20px; } }
 
 .icon-check-lightgreen {
-  background-size: 1050px 1258.9499999999998px;
-  background-position: -692.3px -258.3px;
-  height: 28.7px;
+  background-size: 1050px 1259px;
+  background-position: -692px -258px;
+  height: 29px;
   width: 28px; }
   @media only screen and (max-width: 768px) {
     .icon-check-lightgreen {
-      background-size: 750px 899.25px;
-      background-position: -494.5px -184.5px;
-      height: 20.5px;
+      background-size: 750px 900px;
+      background-position: -494px -184px;
+      height: 21px;
       width: 20px; } }
 
 .icon-check-big {
-  background-size: 1050px 1258.9499999999998px;
-  background-position: -495.59999999999997px -291.2px;
-  height: 28.7px;
-  width: 28.7px; }
+  background-size: 1050px 1259px;
+  background-position: -495px -291px;
+  height: 29px;
+  width: 29px; }
   @media only screen and (max-width: 768px) {
     .icon-check-big {
-      background-size: 750px 899.25px;
+      background-size: 750px 900px;
       background-position: -354px -208px;
-      height: 20.5px;
-      width: 20.5px; } }
+      height: 21px;
+      width: 21px; } }
 
 /*
 STEPS
 */
 .icon-step-1 {
-  background-size: 1500px 1798.5px;
+  background-size: 1500px 1799px;
   background-position: -3px -463px;
   height: 75px;
   width: 251px; }
   @media only screen and (max-width: 768px) {
     .icon-step-1 {
-      background-size: 750px 899.25px;
-      background-position: -1.5px -231.5px;
-      height: 37.5px;
-      width: 125.5px; } }
+      background-size: 750px 900px;
+      background-position: -1px -231px;
+      height: 38px;
+      width: 126px; } }
 
 .icon-step-2 {
-  background-size: 1500px 1798.5px;
+  background-size: 1500px 1799px;
   background-position: -257px -463px;
   height: 75px;
   width: 278px; }
   @media only screen and (max-width: 768px) {
     .icon-step-2 {
-      background-size: 750px 899.25px;
-      background-position: -127.5px -231.5px;
-      height: 37.5px;
+      background-size: 750px 900px;
+      background-position: -127px -231px;
+      height: 38px;
       width: 140px; } }
 
 .icon-step-3 {
-  background-size: 1500px 1798.5px;
+  background-size: 1500px 1799px;
   background-position: -538px -463px;
   height: 75px;
   width: 287px; }
   @media only screen and (max-width: 768px) {
     .icon-step-3 {
-      background-size: 750px 899.25px;
-      background-position: -267.5px -231.5px;
-      height: 37.5px;
+      background-size: 750px 900px;
+      background-position: -267px -231px;
+      height: 38px;
       width: 145px; } }
 
 .icon-step-4 {
-  background-size: 1500px 1798.5px;
+  background-size: 1500px 1799px;
   background-position: -829px -463px;
   height: 75px;
   width: 288px; }
   @media only screen and (max-width: 768px) {
     .icon-step-4 {
-      background-size: 750px 899.25px;
-      background-position: -412.5px -231.5px;
-      height: 37.5px;
+      background-size: 750px 900px;
+      background-position: -412px -231px;
+      height: 38px;
       width: 146px; } }
 
 .icon-step-5 {
-  background-size: 1500px 1798.5px;
+  background-size: 1500px 1799px;
   background-position: -1121px -463px;
   height: 75px;
   width: 251px; }
   @media only screen and (max-width: 768px) {
     .icon-step-5 {
-      background-size: 750px 899.25px;
-      background-position: -560.5px -231.5px;
-      height: 37.5px;
-      width: 125.5px; } }
+      background-size: 750px 900px;
+      background-position: -560px -231px;
+      height: 38px;
+      width: 126px; } }
 
 /*
 OTHER
@@ -1936,49 +1936,39 @@ OTHER
       width: 20px; } }
 
 .icon-menu-white {
-  background-size: 1500px 1798.5px;
+  background-size: 1500px 1799px;
   background-position: -55px -427px;
   height: 19px;
   width: 31px; }
   @media only screen and (max-width: 768px) {
     .icon-menu-white {
-      background-size: 1050px 1258.9499999999998px;
-      background-position: -38.5px -298.9px;
-      height: 17.5px;
-      width: 21.7px; } }
+      background-size: 1050px 1259px;
+      background-position: -38px -298px;
+      height: 18px;
+      width: 22px; } }
 
 .icon-menu-orange {
-  background-size: 1500px 1798.5px;
+  background-size: 1500px 1799px;
   background-position: -101px -427px;
   height: 19px;
   width: 31px; }
   @media only screen and (max-width: 768px) {
     .icon-menu-orange {
-      background-size: 1050px 1258.9499999999998px;
-      background-position: -70.69999999999999px -298.9px;
-      height: 17.5px;
-      width: 21.7px; } }
+      background-size: 1050px 1259px;
+      background-position: -70px -298px;
+      height: 18px;
+      width: 22px; } }
 
 .icon-pencil {
-  background-size: 1050px 1258.9499999999998px;
-  background-position: -105px -295.4px;
-  height: 19.599999999999998px;
-  width: 19.599999999999998px; }
+  background-size: 1050px 1259px;
+  background-position: -105px -295px;
+  height: 20px;
+  width: 20px; }
   @media only screen and (max-width: 768px) {
     .icon-pencil {
-      background-size: 750px 899.25px;
+      background-size: 750px 900px;
       background-position: -75px -211px;
       height: 14px;
-      width: 14px; } }
-
-.icon-pencil-big {
-  background-position: -150px -422px;
-  height: 28px;
-  width: 28px; }
-  @media only screen and (max-width: 768px) {
-    .icon-pencil-big {
-      background-position: -75px -221px;
-      height: 14x;
       width: 14px; } }
 
 .icon-suitcase-red {
@@ -1992,15 +1982,16 @@ OTHER
       width: 22px; } }
 
 .icon-suitcase-red-medium {
-  background-size: 1125px 1050px;
-  background-position: -142.5px -311.25px;
-  height: 32.25px;
-  width: 32.25px; }
+  background-size: 1125px 1349px;
+  background-position: -142px -311px;
+  height: 33px;
+  width: 33px; }
   @media only screen and (max-width: 768px) {
     .icon-suitcase-red-medium {
-      background-position: -71.25px -155.625px;
-      height: 16.5x;
-      width: 17.5px; } }
+      background-size: 750px 900px;
+      background-position: -95px -207px;
+      height: 22px;
+      width: 22px; } }
 
 .icon-building {
   background-position: -236px -415px;
@@ -2033,24 +2024,26 @@ OTHER
       width: 22px; } }
 
 .icon-graduation {
+  background-size: 1500px 1799px;
   background-position: -382px -420px;
   height: 32px;
   width: 32px; }
   @media only screen and (max-width: 768px) {
     .icon-graduation {
-      background-position: -191px -210px;
-      height: 16x;
-      width: 16px; } }
+      background-size: 1200px 1439px;
+      background-position: -305px -336px;
+      height: 26px;
+      width: 26px; } }
 
 .icon-x-black {
-  background-size: 1500px 1798.5px;
+  background-size: 1500px 1799px;
   background-position: -431px -422px;
   height: 30px;
   width: 30px; }
   @media only screen and (max-width: 768px) {
     .icon-x-black {
-      background-size: 750px 899.25px;
-      background-position: -215.5px -211px;
+      background-size: 750px 900px;
+      background-position: -215px -211px;
       height: 15px;
       width: 15px; } }
 
@@ -2150,146 +2143,146 @@ OTHER
       width: 3px; } }
 
 .icon-new-resume-button {
-  background-size: 1500px 1798.5px;
+  background-size: 1500px 1799px;
   background-position: -765px -427px;
   height: 30px;
   width: 30px; }
   @media (max-width: 767px) {
     .icon-new-resume-button {
-      background-size: 1050px 1258.9499999999998px;
-      background-position: -535.5px -298.9x;
+      background-size: 1050px 1259px;
+      background-position: -535px -298x;
       height: 21px;
       width: 21px; } }
 
 .icon-change-resume-button {
-  background-size: 1500px 1798.5px;
+  background-size: 1500px 1799px;
   background-position: -810px -427px;
   height: 30px;
   width: 30px; }
   @media (max-width: 767px) {
     .icon-change-resume-button {
-      background-size: 1050px 1258.9499999999998px;
-      background-position: -567px -298.9px;
+      background-size: 1050px 1259px;
+      background-position: -567px -298px;
       height: 21px;
       width: 21px; } }
 
 .icon-export-resume-button {
-  background-size: 1500px 1798.5px;
+  background-size: 1500px 1799px;
   background-position: -860px -427px;
   height: 30px;
   width: 30px; }
   @media (max-width: 767px) {
     .icon-export-resume-button {
-      background-size: 1050px 1258.9499999999998px;
-      background-position: -602px -298.9px;
+      background-size: 1050px 1259px;
+      background-position: -602px -298px;
       height: 21px;
       width: 21px; } }
 
 .icon-post-resume-button {
-  background-size: 1500px 1798.5px;
+  background-size: 1500px 1799px;
   background-position: -905px -428px;
   height: 30px;
   width: 30px; }
   @media (max-width: 767px) {
     .icon-post-resume-button {
-      background-size: 1050px 1258.9499999999998px;
-      background-position: -633.5px -299.59999999999997px;
+      background-size: 1050px 1259px;
+      background-position: -633px -299px;
       height: 21px;
       width: 21px; } }
 
 .icon-delete-resume-button {
-  background-size: 1500px 1798.5px;
+  background-size: 1500px 1799px;
   background-position: -953px -427px;
   height: 30px;
   width: 30px; }
   @media (max-width: 767px) {
     .icon-delete-resume-button {
-      background-size: 1050px 1258.9499999999998px;
-      background-position: -667.0999999999999px -298.9px;
+      background-size: 1050px 1259px;
+      background-position: -667px -298px;
       height: 21px;
       width: 21px; } }
 
 .icon-add-section {
-  background-size: 1500px 1798.5px;
+  background-size: 1500px 1799px;
   background-position: -1276px -421px;
   height: 30px;
   width: 30px; }
   @media (max-width: 767px) {
     .icon-add-section {
-      background-size: 1050px 1258.9499999999998px;
-      background-position: -893.1999999999999px -294.7px;
+      background-size: 1050px 1259px;
+      background-position: -893px -294px;
       height: 21px;
       width: 21px; } }
 
 .icon-add-button {
-  background-size: 1500px 1798.5px;
+  background-size: 1500px 1799px;
   background-position: -1046px -426px;
   height: 30px;
   width: 30px; }
   @media (max-width: 767px) {
     .icon-add-button {
-      background-size: 1050px 1258.9499999999998px;
-      background-position: -732.1999999999999px -298.2px;
+      background-size: 1050px 1259px;
+      background-position: -732px -298px;
       height: 21px;
       width: 21px; } }
 
 .icon-drag-button {
-  background-size: 1500px 1798.5px;
+  background-size: 1500px 1799px;
   background-position: -1093px -426px;
   height: 30px;
   width: 30px; }
   @media (max-width: 767px) {
     .icon-drag-button {
-      background-size: 1050px 1258.9499999999998px;
-      background-position: -765.0999999999999px -298.2px;
+      background-size: 1050px 1259px;
+      background-position: -765px -298px;
       height: 21px;
       width: 21px; } }
 
 .icon-edit-button {
-  background-size: 1500px 1798.5px;
+  background-size: 1500px 1799px;
   background-position: -1139px -426px;
   height: 30px;
   width: 30px; }
   @media (max-width: 767px) {
     .icon-edit-button {
-      background-size: 1050px 1258.9499999999998px;
-      background-position: -797.3px -298.2px;
+      background-size: 1050px 1259px;
+      background-position: -797px -298px;
       height: 21px;
       width: 21px; } }
 
 .icon-not-completed {
-  background-size: 1500px 1798.5px;
+  background-size: 1500px 1799px;
   background-position: -1183px -421px;
   height: 30px;
   width: 30px; }
   @media (max-width: 767px) {
     .icon-not-completed {
-      background-size: 1050px 1258.9499999999998px;
-      background-position: -828.0999999999999px -294.7px;
+      background-size: 1050px 1259px;
+      background-position: -828px -294px;
       height: 21px;
       width: 21px; } }
 
 .icon-completed-check {
-  background-size: 1500px 1798.5px;
+  background-size: 1500px 1799px;
   background-position: -1231px -421px;
   height: 30px;
   width: 30px; }
   @media (max-width: 767px) {
     .icon-completed-check {
-      background-size: 1050px 1258.9499999999998px;
-      background-position: -861.6999999999999px -294.7px;
+      background-size: 1050px 1259px;
+      background-position: -861px -294px;
       height: 21px;
       width: 21px; } }
 
 .icon-add-section {
-  background-size: 1500px 1798.5px;
+  background-size: 1500px 1799px;
   background-position: -1276px -421px;
   height: 30px;
   width: 30px; }
   @media (max-width: 767px) {
     .icon-add-section {
-      background-size: 1050px 1258.9499999999998px;
-      background-position: -893.1999999999999px -294.7px;
+      background-size: 1050px 1259px;
+      background-position: -893px -294px;
       height: 21px;
       width: 21px; } }
 
@@ -2297,170 +2290,170 @@ OTHER
 TOOLS
 */
 .icon-careerscape-small {
-  background-size: 1500px 1798.5px;
+  background-size: 1500px 1799px;
   background-position: -236px -785px;
   height: 175px;
   width: 171px; }
   @media only screen and (max-width: 768px) {
     .icon-careerscape-small {
-      background-size: 1650.0000000000005px 1978.3500000000001px;
-      background-position: -259.6px -863.5000000000001px;
-      height: 192.50000000000003px;
-      width: 188.10000000000002px; } }
+      background-size: 1651px 1979px;
+      background-position: -259px -863px;
+      height: 193px;
+      width: 189px; } }
 
 .icon-resumeHero-small {
-  background-size: 1500px 1798.5px;
+  background-size: 1500px 1799px;
   background-position: -450px -785px;
   height: 177px;
   width: 172px; }
   @media only screen and (max-width: 768px) {
     .icon-resumeHero-small {
-      background-size: 1650.0000000000005px 1978.3500000000001px;
-      background-position: -495.00000000000006px -863.5000000000001px;
-      height: 194.70000000000002px;
-      width: 189.20000000000002px; } }
+      background-size: 1651px 1979px;
+      background-position: -495px -863px;
+      height: 195px;
+      width: 190px; } }
 
 .icon-localygrown-small {
-  background-size: 1500px 1798.5px;
+  background-size: 1500px 1799px;
   background-position: -22px -785px;
   height: 177px;
   width: 186px; }
   @media only screen and (max-width: 768px) {
     .icon-localygrown-small {
-      background-size: 1650.0000000000005px 1978.3500000000001px;
-      background-position: -24.2px -863.5000000000001px;
-      height: 194.70000000000002px;
-      width: 204.60000000000002px; } }
+      background-size: 1651px 1979px;
+      background-position: -24px -863px;
+      height: 195px;
+      width: 205px; } }
 
 .icon-jobinality-small {
-  background-size: 1500px 1798.5px;
+  background-size: 1500px 1799px;
   background-position: -664px -785px;
   height: 186px;
   width: 171px; }
   @media only screen and (max-width: 768px) {
     .icon-jobinality-small {
-      background-size: 1650.0000000000005px 1978.3500000000001px;
-      background-position: -730.4000000000001px -863.5000000000001px;
-      height: 204.60000000000002px;
-      width: 188.10000000000002px; } }
+      background-size: 1651px 1979px;
+      background-position: -730px -863px;
+      height: 205px;
+      width: 189px; } }
 
 .icon-careerscape {
-  background-size: 1500px 1798.5px;
+  background-size: 1500px 1799px;
   background-position: -34px -1040px;
   height: 345px;
   width: 269px; }
   @media only screen and (max-width: 768px) {
     .icon-careerscape {
-      background-size: 1650.0000000000005px 1978.3500000000001px;
-      background-position: -37.400000000000006px -1144px;
-      height: 379.5px;
-      width: 295.90000000000003px; } }
+      background-size: 1651px 1979px;
+      background-position: -37px -1144px;
+      height: 380px;
+      width: 296px; } }
 
 .icon-resumeHero {
-  background-size: 1500px 1798.5px;
+  background-size: 1500px 1799px;
   background-position: -335px -1040px;
   height: 345px;
   width: 269px; }
   @media only screen and (max-width: 768px) {
     .icon-resumeHero {
-      background-size: 1650.0000000000005px 1978.3500000000001px;
-      background-position: -37.400000000000006px -1144px;
-      height: 379.5px;
-      width: 295.90000000000003px; } }
+      background-size: 1651px 1979px;
+      background-position: -37px -1144px;
+      height: 380px;
+      width: 296px; } }
 
 .icon-jobinality {
-  background-size: 1500px 1798.5px;
+  background-size: 1500px 1799px;
   background-position: -635px -1020px;
   height: 365px;
   width: 269px; }
   @media only screen and (max-width: 768px) {
     .icon-jobinality {
-      background-size: 750px 899.25px;
+      background-size: 750px 900px;
       background-position: -17px -520px;
-      height: 172.50000000000003px;
-      width: 134.5px; } }
+      height: 173px;
+      width: 135px; } }
 
 .icon-locallygrown {
-  background-size: 1500px 1798.5px;
+  background-size: 1500px 1799px;
   background-position: -935px -1040px;
   height: 345px;
   width: 269px; }
   @media only screen and (max-width: 768px) {
     .icon-locallygrown {
-      background-size: 750px 899.25px;
+      background-size: 750px 900px;
       background-position: -17px -520px;
-      height: 172.50000000000003px;
-      width: 134.5px; } }
+      height: 173px;
+      width: 135px; } }
 
 .icon-button-post {
-  background-size: 1500px 1798.5px;
+  background-size: 1500px 1799px;
   background-position: -464px -541px;
   height: 43px;
   width: 179px; }
   @media only screen and (max-width: 1200px) {
     .icon-button-post {
-      background-size: 1500px 1798.5px;
+      background-size: 1500px 1799px;
       background-position: -495px -541px;
       height: 43px;
       width: 387px; } }
   @media only screen and (max-width: 1200px) {
     .icon-button-post {
-      background-size: 1500px 1798.5px;
+      background-size: 1500px 1799px;
       background-position: -493px -542px;
       height: 43px;
       width: 387px; } }
   @media only screen and (max-width: 768px) {
     .icon-button-post {
-      background-size: 1500px 1798.5px;
+      background-size: 1500px 1799px;
       background-position: -493px -542px;
       height: 43px;
       width: 160px; } }
   @media only screen and (max-width: 479px) {
     .icon-button-post {
-      background-size: 1500px 1798.5px;
+      background-size: 1500px 1799px;
       background-position: -498px -542px;
       height: 43px;
       width: 160px; } }
 
 .icon-button-post-large {
-  background-size: 1500px 1798.5px;
+  background-size: 1500px 1799px;
   background-position: -464px -592px;
   height: 43px;
   width: 387px; }
   @media only screen and (max-width: 1200px) {
     .icon-button-post-large {
-      background-size: 1500px 1798.5px;
+      background-size: 1500px 1799px;
       background-position: -526px -592px;
       height: 43px;
       width: 325px; } }
   @media only screen and (max-width: 979px) {
     .icon-button-post-large {
-      background-size: 1500px 1798.5px;
+      background-size: 1500px 1799px;
       background-position: -597px -592px;
       height: 43px;
       width: 256px; } }
   @media only screen and (max-width: 767px) {
     .icon-button-post-large {
-      background-size: 1500px 1798.5px;
+      background-size: 1500px 1799px;
       background-position: -441px -592px;
       height: 43px;
       width: 220px; } }
   @media only screen and (max-width: 479px) {
     .icon-button-post-large {
-      background-size: 1500px 1798.5px;
+      background-size: 1500px 1799px;
       background-position: -601px -592px;
       height: 43px;
       width: 220px; } }
 
 .icon-suitcase-job {
-  background-size: 1500px 1798.5px;
+  background-size: 1500px 1799px;
   background-position: -181px -540px;
   height: 58px;
   width: 58px; }
   @media only screen and (max-width: 768px) {
     .icon-suitcase-job {
-      background-size: 750px 899.25px;
-      background-position: -90.5px -270px;
+      background-size: 750px 900px;
+      background-position: -90px -270px;
       height: 29px;
       width: 29px; } }
 
@@ -2468,169 +2461,169 @@ TOOLS
 ICON SAVED
 */
 .icon-welcome {
-  background-size: 1500px 1798.5px;
+  background-size: 1500px 1799px;
   background-position: -53px -1465px;
   height: 203px;
   width: 235px; }
   @media only screen and (max-width: 768px) {
     .icon-welcome {
-      background-size: 1200px 1438.8000000000002px;
-      background-position: -8px -1198.4px;
-      height: 162.4px;
+      background-size: 1200px 1439px;
+      background-position: -8px -1198px;
+      height: 163px;
       width: 148px; } }
 
 .icon-jobinality-saved {
-  background-size: 1500px 1798.5px;
+  background-size: 1500px 1799px;
   background-position: -893px -588px;
   height: 117px;
   width: 101px; }
   @media only screen and (max-width: 768px) {
     .icon-jobinality-saved {
-      background-size: 750px 899.25px;
-      background-position: -446.5px -294px;
-      height: 58.5px;
-      width: 50.5px; } }
+      background-size: 750px 900px;
+      background-position: -446px -294px;
+      height: 59px;
+      width: 51px; } }
 
 .icon-article-saved {
-  background-size: 1500px 1798.5px;
+  background-size: 1500px 1799px;
   background-position: -1008px -583px;
   height: 126px;
   width: 102px; }
   @media only screen and (max-width: 768px) {
     .icon-article-saved {
-      background-size: 750px 899.25px;
-      background-position: -504px -291.5px;
+      background-size: 750px 900px;
+      background-position: -504px -291px;
       height: 63px;
       width: 51px; } }
 
 .icon-article-saved-big {
-  background-size: 2550px 3057.45px;
-  background-position: -1713.6px -991.1px;
-  height: 214.2px;
-  width: 173.4px; }
+  background-size: 2550px 3058px;
+  background-position: -1713px -991px;
+  height: 215px;
+  width: 174px; }
   @media only screen and (max-width: 768px) {
     .icon-article-saved-big {
-      background-size: 1500px 1798.5px;
+      background-size: 1500px 1799px;
       background-position: -1008px -583px;
       height: 126px;
       width: 102px; } }
 
 .icon-welcome-article-saved-big {
-  background-size: 1650.0000000000005px 1978.3500000000001px;
-  background-position: -356.40000000000003px -1647.8px;
-  height: 223.3px;
-  width: 204.60000000000002px; }
+  background-size: 1651px 1979px;
+  background-position: -356px -1647px;
+  height: 224px;
+  width: 205px; }
   @media only screen and (max-width: 768px) {
     .icon-welcome-article-saved-big {
-      background-size: 1200px 1438.8000000000002px;
-      background-position: -259.2px -1198.4px;
-      height: 162.4px;
-      width: 148.8px; } }
+      background-size: 1200px 1439px;
+      background-position: -259px -1198px;
+      height: 163px;
+      width: 149px; } }
 
 .icon-resumePro-saved {
-  background-size: 1500px 1798.5px;
+  background-size: 1500px 1799px;
   background-position: -1125px -588px;
   height: 117px;
   width: 101px; }
   @media only screen and (max-width: 768px) {
     .icon-resumePro-saved {
-      background-size: 750px 899.25px;
-      background-position: -562.5px -294px;
-      height: 58.5px;
-      width: 50.5px; } }
+      background-size: 750px 900px;
+      background-position: -562px -294px;
+      height: 59px;
+      width: 51px; } }
 
 .icon-video-saved {
-  background-size: 1500px 1798.5px;
+  background-size: 1500px 1799px;
   background-position: -1240px -583px;
   height: 126px;
   width: 101px; }
   @media only screen and (max-width: 768px) {
     .icon-video-saved {
-      background-size: 750px 899.25px;
-      background-position: -620px -291.5px;
+      background-size: 750px 900px;
+      background-position: -620px -291px;
       height: 63px;
-      width: 50.5px; } }
+      width: 51px; } }
 
 .icon-video-saved-big {
-  background-size: 2550px 3057.45px;
-  background-position: -2108px -991.1px;
-  height: 214.2px;
-  width: 171.7px; }
+  background-size: 2550px 3058px;
+  background-position: -2108px -991px;
+  height: 215px;
+  width: 172px; }
   @media only screen and (max-width: 768px) {
     .icon-video-saved-big {
-      background-size: 1500px 1798.5px;
+      background-size: 1500px 1799px;
       background-position: -1240px -583px;
       height: 126px;
       width: 101px; } }
 
 .icon-welcome-video-saved-big {
-  background-size: 1650.0000000000005px 1978.3500000000001px;
-  background-position: -822.8000000000001px -1647.8px;
-  height: 223.3px;
-  width: 203.50000000000003px; }
+  background-size: 1651px 1979px;
+  background-position: -822px -1647px;
+  height: 224px;
+  width: 204px; }
   @media only screen and (max-width: 768px) {
     .icon-welcome-video-saved-big {
-      background-size: 1200px 1438.8000000000002px;
-      background-position: -598.4px -1198.4px;
-      height: 162.4px;
+      background-size: 1200px 1439px;
+      background-position: -598px -1198px;
+      height: 163px;
       width: 148px; } }
 
 .icon-image-saved {
-  background-size: 1500px 1798.5px;
+  background-size: 1500px 1799px;
   background-position: -1356px -583px;
   height: 126px;
   width: 101px; }
   @media only screen and (max-width: 768px) {
     .icon-image-saved {
-      background-size: 750px 899.25px;
-      background-position: -678px -291.5px;
+      background-size: 750px 900px;
+      background-position: -678px -291px;
       height: 63px;
-      width: 50.5px; } }
+      width: 51px; } }
 
 .icon-welcome-image-saved-big {
-  background-size: 1650.0000000000005px 1978.3500000000001px;
-  background-position: -589.6px -1647.8px;
-  height: 223.3px;
-  width: 202.4px; }
+  background-size: 1651px 1979px;
+  background-position: -589px -1647px;
+  height: 224px;
+  width: 203px; }
   @media only screen and (max-width: 768px) {
     .icon-welcome-image-saved-big {
-      background-size: 1200px 1438.8000000000002px;
-      background-position: -428.8px -1198.4px;
-      height: 162.4px;
+      background-size: 1200px 1439px;
+      background-position: -428px -1198px;
+      height: 163px;
       width: 148px; } }
 
 .icon-image-saved-big {
-  background-size: 2550px 3057.45px;
-  background-position: -2108px -991.1px;
-  height: 214.2px;
-  width: 171.7px; }
+  background-size: 2550px 3058px;
+  background-position: -2108px -991px;
+  height: 215px;
+  width: 172px; }
   @media only screen and (max-width: 768px) {
     .icon-image-saved-big {
-      background-size: 1500px 1798.5px;
+      background-size: 1500px 1799px;
       background-position: -1356px -583px;
       height: 126px;
       width: 101px; } }
 
 .icon-locallyGrown-saved {
-  background-size: 1500px 1798.5px;
+  background-size: 1500px 1799px;
   background-position: -893px -743px;
   height: 115px;
   width: 113px; }
   @media only screen and (max-width: 768px) {
     .icon-locallyGrown-saved {
-      background-size: 750px 899.25px;
-      background-position: -446.5px -371.5px;
-      height: 57.5px;
-      width: 56.5px; } }
+      background-size: 750px 900px;
+      background-position: -446px -371px;
+      height: 58px;
+      width: 57px; } }
 
 .icon-careerScape-saved {
-  background-size: 1500px 1798.5px;
+  background-size: 1500px 1799px;
   background-position: -1045px -739px;
   height: 123px;
   width: 114px; }
   @media only screen and (max-width: 768px) {
     .icon-careerScape-saved {
-      background-size: 750px 899.25px;
-      background-position: -522.5px -369.5px;
-      height: 61.5px;
+      background-size: 750px 900px;
+      background-position: -522px -369px;
+      height: 62px;
       width: 57px; } }

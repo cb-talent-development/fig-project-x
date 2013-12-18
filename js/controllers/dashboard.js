@@ -134,6 +134,43 @@ function DashboardCtr($scope, $http,pagination) {
         $scope.jobTitle=$scope.user.JobTitle;
         $scope.salaryValue=$scope.user.Income;
     }
+    //Add Skill/technology
+    $scope.sendSkillTech=function(url,input,values,name){
+        input.show=false;
+        if(input.value!=""){
+                values.push({"Name":input.value});
+                input.value="";
+                //TODO:...
+                $http.post(url,{name:input.value})
+                .success(function(data){
+                    console.log(data);
+                })
+                .error(function(data){
+                    console.log(data);
+                });
+        }
+    }
+    
+    $scope.addSkill=function(){
+        console.log($scope.inputSkill);
+        if($scope.inputSkill.show){
+            var url="test";
+            $scope.sendSkillTech(url,$scope.inputSkill,$scope.skills,"skill");
+        }
+        else{
+            $scope.inputSkill.show=true;
+        }
+    }
+    $scope.addTech=function(){
+        console.log($scope.inputTechnology);
+        if($scope.inputTechnology.show){
+            var url="test";
+            $scope.sendSkillTech(url,$scope.inputTechnology,$scope.technologies,"technology");
+        }
+        else{
+            $scope.inputTechnology.show=true;
+        }
+    }
     /*
         Constructor
     */
@@ -169,6 +206,10 @@ function DashboardCtr($scope, $http,pagination) {
         //ages
         
         $scope.ages=["18-25 Years Old","26-30 Years Old","31-35 Years Old"];
+        //skill/technology
+        $scope.inputSkill=input();
+        $scope.inputTechnology=input();
+        console.log($scope.inputSkill);
         //Init eventual effects
         $scope.$on('$includeContentLoaded', function(){
             initEffect();

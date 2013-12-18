@@ -137,6 +137,8 @@ ICON-ARROW
   right: 10px; }
 .link .icon-bigarrow-right-black, .link .icon-bigarrow-right-white {
   margin-top: -8.5px; }
+.link .icon-bigarrow-bottom-grey {
+  margin-top: -5.5px; }
 
 /*
 COLOR
@@ -339,7 +341,7 @@ Header css
         font-size: 25px !important; } }
   .page-header .icon-bigarrow-bottom-orange {
     position: relative;
-    top: 30px;
+    top: 15px;
     right: 0px; }
     @media (max-width: 767px) {
       .page-header .icon-bigarrow-bottom-orange {
@@ -3759,7 +3761,6 @@ Tool CSS
       .tool .get-started-resume .section .content .icon-step-1, .tool .get-started-resume .section .content .icon-step-2, .tool .get-started-resume .section .content .icon-step-3, .tool .get-started-resume .section .content .icon-step-4, .tool .get-started-resume .section .content .icon-step-5 {
         margin-right: -28px;
         padding: 21px 95px;
-        margin-bottom: 20px;
         color: white;
         font-size: 28px; }
         @media (max-width: 479px) {
@@ -3841,8 +3842,6 @@ Tool CSS
         margin-bottom: 20px; }
     .tool .get-started-resume .section .divider:first-child, .tool .get-started-resume .section .divider:nth-child(4) {
       margin-left: -20px; }
-    .tool .get-started-resume .section .clear {
-      margin-bottom: 20px; }
   .tool .get-started-resume .buttons-changes {
     width: 100%;
     margin-top: 20px; }
@@ -4239,6 +4238,9 @@ JOB RESULTS/RECOMMENDATIONS
   .job-results .content .scrollable-content {
     height: 75%; } }
 
+.resume-hero .saved-content .save:not(.selected) {
+  opacity: 0.7; }
+
 .saved-content .title, .delete-items .title {
   text-align: left; }
 .saved-content .content, .delete-items .content {
@@ -4251,8 +4253,6 @@ JOB RESULTS/RECOMMENDATIONS
     @media (max-width: 479px) {
       .saved-content .content .scrollable-content, .delete-items .content .scrollable-content {
         height: 80%; } }
-  .saved-content .content .save:not(.selected), .delete-items .content .save:not(.selected) {
-    opacity: 0.7; }
   .saved-content .content .save, .delete-items .content .save {
     margin-top: 45px;
     position: relative;
@@ -4409,15 +4409,15 @@ Dashboard
           top: 1px; }
   .dashboard .saved-content {
     margin-bottom: 25px; }
-    .dashboard .saved-content .button-edit {
-      margin-top: -8px;
-      margin-right: -12px;
-      font-size: 14px;
-      position: relative;
-      padding-left: 10px;
-      padding-right: 40px; }
   .dashboard .job-results .title, .dashboard .saved-content .title {
     text-align: left; }
+  .dashboard .job-results .button-edit, .dashboard .saved-content .button-edit {
+    margin-top: -8px;
+    margin-right: -12px;
+    font-size: 14px;
+    position: relative;
+    padding-left: 10px;
+    padding-right: 40px; }
   .dashboard .content .col-left, .dashboard .content .col-right {
     width: 370px; }
   .dashboard .content .col-left {
@@ -4489,26 +4489,44 @@ Dashboard
     text-align: center;
     padding-top: 12px;
     padding-bottom: 8px; }
+    @media only screen and (max-width: 768px) {
+      .dashboard .content .add-elem, .dashboard .content .technology-elem, .dashboard .content .skill, .dashboard .content .occupation, .dashboard .content .income {
+        font-size: 14.4px; } }
   .dashboard .content .occupation, .dashboard .content .technology-elem {
     background-color: #09335b;
     color: white; }
+  .dashboard .content .add-elem-input {
+    font-size: 16px; }
+    @media only screen and (max-width: 768px) {
+      .dashboard .content .add-elem-input {
+        font-size: 14.4px; } }
+    .dashboard .content .add-elem-input input {
+      padding: 12px;
+      margin: 0px;
+      padding-top: 12px;
+      padding-bottom: 8px;
+      background: #ededed;
+      border: 1px dashed #bebebe; }
   .dashboard .content .add-elem {
     background: #ededed;
     border: 1px dashed #bebebe; }
   .dashboard .content .skills .left {
     margin-right: 26px; }
-  .dashboard .content .skills .add-elem, .dashboard .content .skills .skill {
+  .dashboard .content .skills .add-elem, .dashboard .content .skills .add-elem-input, .dashboard .content .skills .skill {
     width: 46%; }
+  .dashboard .content .skills .add-elem-input {
+    float: left; }
   .dashboard .content .skills .add-elem {
     margin: 0; }
   .dashboard .content .skills .skill {
     color: white;
     margin-bottom: 20px;
     background: #5c1a47; }
-  .dashboard .content .technology .add-tech, .dashboard .content .technology .technology-elem {
-    padding-top: 12px;
-    padding-bottom: 8px; }
+  .dashboard .content .technology .add-elem, .dashboard .content .technology .add-elem-input input, .dashboard .content .technology .technology-elem {
+    width: 100%; }
   .dashboard .content .technology .technology-elem {
+    padding-top: 12px;
+    padding-bottom: 8px;
     margin-bottom: 20px; }
   .dashboard .content .career-goals {
     font-size: 19px; }

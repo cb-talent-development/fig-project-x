@@ -8,7 +8,7 @@ function GetStartedCtr($http, $scope){
 		$scope.actualPage++;
 		return false;
 	}
-	$scope.init(){
+	$scope.init=function(){
 		$scope.totalPages = 5;
 		$scope.actualPage = 1;
 		alert('1');

@@ -19,10 +19,10 @@ $sprite-height: 3597px;
     background: url('assets/zig.png') center center repeat-x;
 }
 @mixin dimensionPosition($posX,$posY,$height,$width,$rapp){
-    background-size:$sprite-width/2 * $rapp $sprite-height/2 * $rapp;
-    background-position: ($rapp * $posX) ($rapp * $posY);
-    height: $height * $rapp;
-    width: $width * $rapp;
+    background-size:ceil($sprite-width/2 * $rapp) ceil($sprite-height/2 * $rapp);
+    background-position: ceil($rapp * $posX) ceil($rapp * $posY);
+    height: ceil($height * $rapp);
+    width: ceil($width * $rapp);
 }
 .icon-career {
 	@include dimensionPosition( -13px, -10px, 24px, 142px, 1.0);
@@ -77,9 +77,9 @@ Arrow big
 	}
 }
 .icon-bigarrow-bottom-orange{
-	@include dimensionPosition(-76px, -63px, 8px, 15px, 1.0);
+	@include dimensionPosition(-76px, -63px, 9px, 15px, 1.0);
     @media only screen and (max-width: 768px){
-        @include dimensionPosition(-76px, -63px, 8px, 15px, 0.7);
+        @include dimensionPosition(-76px, -63px, 9px, 15px, 0.7);
 	}
 }
 .icon-bigarrow-right-black{
@@ -1208,16 +1208,6 @@ OTHER
 		@include dimensionPosition(-150px, -422px, 28px, 28px, 0.5);
 	}
 }
-.icon-pencil-big{
-    background-position:-150px -422px;
-    height:28px;
-    width:28px;
-    @media only screen and (max-width: 768px){
-	   background-position: -75px -221px;
-       height:14x;
-       width:14px;
-	}
-}
 .icon-suitcase-red{
     background-position:-190px -415px;
     height:43px;
@@ -1230,14 +1220,9 @@ OTHER
 }
 $rapp:0.75;
 .icon-suitcase-red-medium{
-    background-size:1500px * $rapp 1400px * $rapp;
-    background-position:-190px * $rapp -415px * $rapp;
-    height:43px * $rapp;
-    width:43px * $rapp;
+    @include dimensionPosition(-190px, -415px, 43px, 43px, 0.75);
     @media only screen and (max-width: 768px){
-	   background-position: -95px * $rapp -207.5px * $rapp;
-       height:22x * $rapp;
-       width:22px * $rapp + 1;
+	   @include dimensionPosition(-190px, -415px, 43px, 43px, 0.5);
 	}
 }
 .icon-building{
@@ -1271,13 +1256,9 @@ $rapp:0.75;
 	}
 }
 .icon-graduation{
-    background-position:-382px -420px;
-    height:32px;
-    width:32px;
+    @include dimensionPosition(-382px, -420px, 32px, 32px, 1.0);
     @media only screen and (max-width: 768px){
-	   background-position: -191px -210px;
-       height:16x;
-       width:16px;
+        @include dimensionPosition(-382px, -420px, 32px, 32px, 0.8);
 	}
 }
 .icon-x-black{

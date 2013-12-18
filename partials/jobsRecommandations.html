@@ -1,6 +1,11 @@
 <div class="job-results">
-    <div class="title">{{jobResulstTitle}}</div>
-    <div class="content">
+    <div class="title">{{jobResulstTitle}}
+            <div ng-show="(page=='dashboard')" onclick="slideEffect($(this),$('#content-job'),275)" class="right button-edit back-grey link">
+                <span>Collpase</span>
+                <i class="icon-bigarrow-bottom-grey"></i>
+            </div>
+    </div>
+    <div id="content-job" class="content">
         <i class="icon-arrow-left-big-blue" ng-click="pageClick(pageJobs.currentPage-1,'jobs','.job-results')"></i>
         <div class="scrollable-content">
             <div class="scrollable">

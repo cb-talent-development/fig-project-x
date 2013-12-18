@@ -165,6 +165,16 @@ function getClassById(id){
     else
         return "red-4";
 }
+function input(value){
+    if(!value)
+        value="";
+    return {
+        'required':false,
+        'error':false,
+        'value':value,
+        'show':false
+    };
+}
 /*
 General search function
 */
@@ -328,6 +338,30 @@ function toggleEffect(event){
         );
         // Don't follow the link
         return false;
+    }
+}
+function slideEffect(button,elem,height){
+    console.log(button);
+    console.log(elem);
+    if(!button.hasClass("selected")){
+        button.addClass("selected");
+    }
+    else{
+        button.removeClass("selected");
+    }
+    if (!elem.is(':visible')) {
+        elem.css('display','block');
+        elem.animate({'opacity':'+=1.0','height':height+'px'},config.timeAnim);
+       // elem.slideDown(config.timeAnim);
+    }
+    // If closed, close the others and open it
+    else {
+        elem.animate({'opacity':'-=1.5','height':'0px'},config.timeAnim,function(){
+            elem.css('display','none');
+        });
+        //elem.slideUp(config.timeAnim);
+
+
     }
 }
 /*
