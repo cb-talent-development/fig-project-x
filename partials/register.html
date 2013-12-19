@@ -1,0 +1,414 @@
+<div class="dialog dashboard-popup">
+    <div class="background" onclick="disparition($('.dashboard-popup'))"></div>
+    <div class="scrollable-content">
+        <div class="scrollable">
+            <div class="section-wrapper">
+                <div class="section section1">
+                    <div class="header">
+                        <span class"title">Did you know: XX% of the la population love hamburgers<i class="icon-x-black close" onclick="disparition($('.dashboard-popup'))"></i></span>
+                    </div>
+                    <div class="content-dialog">
+                        <div class="content">
+                            <steps nbr-steps="1" first-connect="true" message="messageStep"></steps>
+                          </div>
+                        <div class="content general">
+                            <div class="left gender">
+                                <div class="message">enter your gender</div>
+                                <div>
+                                    <div class="custom-radio left">
+                                        <input id="male" ng-model="register.userInfo.gender.value" type="radio" name="sex" value="male"/><label for="male">Male</label>
+                                    </div>
+                                    <div class="custom-radio left">
+                                        <input id="female" ng-model="register.userInfo.gender.value" type="radio" name="sex" value="female"/><label for="female">Female</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="left">
+                                <div class="message large"><span>enter your age range:</span><span class="right optional">optional</span></div>
+                                <div class="large select toggleMenu">
+                                    <span class="title">{{register.userInfo.age.value}}</span><b class="icon-bigarrow-bottom-grey grey-icon"></b>
+                                    <i class=""></i>
+                                    <div class="subMenu">
+                                        <div ng-repeat="age in register.lists.ages" select data-value="age" data-elem="register.userInfo.age.value">{{age}}</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="content address">
+                            <div class="message">Please Enter Your Street address</div>
+                            <div class="street">
+                                <div class="input-button large street left">
+                                    <input ng-model="register.userInfo.address.street.value" placeholder="Street Address"/>
+                                </div>
+                                <div class="input-button medium left">
+                                    <input ng-model="register.userInfo.address.apt.value" placeholder="Apt/Suite"/>
+                                </div>
+                                <div class="input-button large left">
+                                    <input ng-model="register.userInfo.address.city.value" placeholder="City"/>
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+                            <div class="medium select toggleMenu left">
+                                <span class="title">{{register.userInfo.address.state.value}}</span><b class="icon-bigarrow-bottom-grey grey-icon"></b>
+                                <i class=""></i>
+                                <div class="subMenu">
+                                    <div ng-repeat="state in register.lists.states" select data-value="state" data-elem="register.userInfo.address.state.value">{{state}}</div>
+                                </div>
+                            </div>
+                            <div class="input-button medium left">
+                                <input ng-model="register.userInfo.address.zipcode.value" placeholder="Zipcode"/>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                    <div class="footer-dialog">
+                        <div class="button-previous back-white left selected" onclick="">
+                            Previous
+                            <i class="icon-bigarrow-left-black icon left"></i>
+                        </div>
+                        <div class="button-next back-white left" onclick="movePopup($('.dashboard-popup'),2)">
+                            Next
+                            <i class="icon-bigarrow-right-black icon right"></i>
+                        </div>
+                        <div class="button-save back-green right" onclick="disparition($('.dashboard-popup'))" ng-click="register.save()">Save & Close</div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-wrapper">
+                <div class="section section2">
+                    <div class="header">
+                        <span class"title">Did you know: XX% of the la population love hamburgers<i class="icon-x-black close" onclick="disparition($('.dashboard-popup'));"></i></span>
+                    </div>
+                    <div class="content-dialog">
+                          <div class="content">
+                            <steps nbr-steps="2" first-connect="true" message="messageStep"></steps>
+                          </div>
+                          <div class="content job-phase">
+                            <div class="message">Select your current job phase:</div>
+                            <div class="cursor">
+                                <div class="bar"></div>
+                                <div class="icon-cursor-orange-down"></div>
+                            </div>
+                            <div class="phase left link" ng-class="{true:'selected',false:''}[register.userInfo.job.phase=='Discovery']" onclick="moveCursorHorizontal($(this),$('.icon-cursor-orange-down'));" ng-click="register.setJobPhase('Discovery')">
+                                <div class="title"> 
+                                    <div class="icon-search-orange-big logo"></div>
+                                    <div>Discovery</div>
+                                </div>
+                                <div class="description">
+                                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec felis sed leo placerat imperdiet. Curabitur eu amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor."
+                                </div>
+                            </div>
+                            <div class="phase left link" ng-class="{true:'selected',false:''}[register.userInfo.job.phase=='Find the Job']"  onclick="moveCursorHorizontal($(this),$('.icon-cursor-orange-down'));" ng-click="register.setJobPhase('Find the Job')">
+                                <div class="title">
+                                    <div class="icon-twin-blue-big logo"></div>
+                                    <div>Find the Job</div>
+                                </div>
+                                <div class="description">
+                                     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec felis sed leo placerat imperdiet. Curabitur eu amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor."
+                                </div>
+                            </div>
+                            <div class="phase before-last left link" ng-class="{true:'selected',false:''}[register.userInfo.job.phase=='Get the Job']" onclick="moveCursorHorizontal($(this),$('.icon-cursor-orange-down'));" ng-click="register.setJobPhase('Get the Job')">
+                                <div class="title">
+                                    <div class="icon-check-red-big logo"></div>
+                                    <div>Get the Job</div>
+                                </div>
+                                <div class="description">
+                                     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec felis sed leo placerat imperdiet. Curabitur eu amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor."
+                                </div>
+                            </div>
+                            <div class="phase right link" ng-class="{true:'selected',false:''}[register.userInfo.job.phase=='On the Job']"  onclick="moveCursorHorizontal($(this),$('.icon-cursor-orange-down'));" ng-click="register.setJobPhase('On the Job')">
+                                <div class="title">
+                                    <div class="icon-suitcase-green-big logo"></div>
+                                    <div>On the Job</div>
+                                </div>
+                                <div class="description">
+                                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec felis sed leo placerat imperdiet. Curabitur eu amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor."
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+                        </div>  
+                    </div>
+                    <div class="footer-dialog">
+                        <div class="button-previous back-white left" onclick="movePopup($('.dashboard-popup'),1)">
+                            Previous
+                            <i class="icon-bigarrow-left-black icon left"></i>
+                        </div>
+                        <div class="button-next back-white left" onclick="movePopup($('.dashboard-popup'),3)">
+                            Next
+                            <i class="icon-bigarrow-right-black icon right"></i>
+                        </div>
+        
+                        <div class="button-save back-green right" onclick="disparition($('.dashboard-popup'))" ng-click="register.save()">Save & Close</div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-wrapper">
+                <div class="section section3">
+                    <div class="header">
+                        <span class"title">Did you know: XX% of the la population love hamburgers<i class="icon-x-black close" onclick="disparition($('.dashboard-popup'))"></i></span>
+                    </div>
+                    <div class="content-dialog">
+                        <div class="content">
+                            <steps nbr-steps="3" first-connect="true" message="messageStep"></steps>
+                        </div>
+                        <div class="content job-occupation">
+                            <div class="element left">
+                                <div class="entry">
+                                    <div class="message large"><span>What do you do for a living?</span><span class="right optional">optional</span></div>
+                                    <div class="input-button large">
+                                        <input ng-model="register.userInfo.job.name.value" placeholder="Enter Job Title" ng-change="register.checkJobTitle()"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="element-correction right" ng-show="register.userInfo.job.name.error">
+                                <div class="icon-arrow-right-big-orange left logo"></div>
+                                <div class="correction left">
+                                    <div class="mess message-large" ng-hide="register.userInfo.job.isCorrected">We do not have '<span class="wrong">{{register.userInfo.job.name.value}}</span>' in our database. Please select a similar job occupation below so we can help better serve you.
+                                    </div>
+                                    <div class="large select toggleMenu">
+                                        <span class="title">{{register.userInfo.job.corrected}}</span><b class="icon-bigarrow-bottom-grey grey-icon"></b>
+                                        <i class=""></i>
+                                        <div class="subMenu">
+                                            <div ng-repeat="title in register.lists.jobTitles" ng-click="register.setJobTitle($index)">{{title}}</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="content job-info">
+                            <div class="left">
+                                <div class="message large"><span>What's your current company?</span><span class="right optional">optional</span></div>
+                                <div class="large select toggleMenu">
+                                    <span class="title">{{register.userInfo.company.value}}</span><b class="icon-bigarrow-bottom-grey grey-icon"></b>
+                                    <i class=""></i>
+                                    <div class="subMenu">
+                                            <div ng-repeat="company in register.lists.companies" select data-value="company" data-elem="register.userInfo.company.value">{{company}}</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="right">
+                                <div class="message large"><span>You current salary</span><span class="right optional">optional</span></div>
+                                <div class="large select toggleMenu">
+                                    <span class="title">{{register.userInfo.salary.value}}</span><b class="icon-bigarrow-bottom-grey grey-icon"></b>
+                                    <i class=""></i>
+                                    <div class="subMenu">
+                                            <div ng-repeat="salary in register.lists.salaries" select data-value="salary" data-elem="register.userInfo.salary.value">{{salary}}</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                    <div class="footer-dialog">
+                        <div class="button-previous back-white left" onclick="movePopup($('.dashboard-popup'),2)">
+                            Previous
+                            <i class="icon-bigarrow-left-black icon left"></i>
+                        </div>
+                        <div class="button-next back-white left" onclick="movePopup($('.dashboard-popup'),4)">
+                            Next
+                            <i class="icon-bigarrow-right-black icon right"></i>
+                        </div>
+        
+                        <div class="button-save back-green right" onclick="disparition($('.dashboard-popup'))" ng-click="register.save()">Save & Close</div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-wrapper">
+                <div class="section section4">
+                    <div class="header">
+                        <span class"title">Did you know: XX% of the la population love hamburgers<i class="icon-x-black close" onclick="disparition($('.dashboard-popup'))"></i></span>
+                    </div>
+                    <div class="content-dialog">
+                        <div class="content">
+                            <steps nbr-steps="4" first-connect="true" message="messageStep"></steps>
+                        </div>
+                        <div class="content">
+                            <div class="left">
+                                <div class="message large"><span>Educational experience</span><span class="right optional">optional</span></div>
+                                <div class="large select toggleMenu">
+                                    <span class="title">{{register.userInfo.school.institutionType.value}}</span><b class="icon-bigarrow-bottom-grey grey-icon"></b>
+                                    <i class=""></i>
+                                    <div class="subMenu">
+                                            <div ng-repeat="institution in register.lists.institutions" select data-value="institution" data-elem="register.userInfo.school.institutionType.value">{{institution}}</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="right">
+                                <div class="message large"><span>Type of degree earned</span><span class="right optional">optional</span></div>
+                                <div class="large select toggleMenu">
+                                    <span class="title">{{register.userInfo.school.degreeType.value}}</span><b class="icon-bigarrow-bottom-grey grey-icon"></b>
+                                    <i class=""></i>
+                                    <div class="subMenu">
+                                            <div ng-repeat="degree in register.lists.degrees" select data-value="degree" data-elem="register.userInfo.school.degreeType.value">{{degree}}</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="content school-name">
+                            <div class="element left">
+                                <div class="entry">
+                                    <div class="message large"><span>School you attended:</span><span class="right optional">optional</span></div>
+                                    <div class="input-button large">
+                                        <input ng-model="register.userInfo.school.name.value" placeholder="Enter Job Title" ng-change="register.checkSchool()"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="element-correction right" ng-show="register.userInfo.school.name.error">
+                                <div class="icon-arrow-right-big-orange left logo"></div>
+                                <div class="correction left">
+                                    <div class="mess message-large" ng-hide="register.userInfo.school.isCorrected">We do not have '<span class="wrong">{{register.userInfo.school.name.value}}</span>' in our database. Please select a similar school name below so we can help better serve you.
+                                    </div>
+                                    <div class="large select toggleMenu">
+                                        <span class="title">{{register.userInfo.school.corrected}}</span><b class="icon-bigarrow-bottom-grey grey-icon"></b>
+                                        <i class=""></i>
+                                        <div class="subMenu">
+                                            <div ng-repeat="school in register.lists.schools" ng-click="register.setSchool($index)">{{school}}</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                    <div class="footer-dialog">
+                        <div class="button-previous back-white left" onclick="movePopup($('.dashboard-popup'),3)">
+                            Previous
+                            <i class="icon-bigarrow-left-black icon left"></i>
+                        </div>
+                        <div class="button-next back-white left" onclick="movePopup($('.dashboard-popup'),5)">
+                            Next
+                            <i class="icon-bigarrow-right-black icon right"></i>
+                        </div>
+        
+                        <div class="button-save back-green right" onclick="disparition($('.dashboard-popup'))" ng-click="register.save()">Save & Close</div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-wrapper">
+                <div class="section section5">
+                    <div class="header">
+                        <span class"title">Did you know: XX% of the la population love hamburgers<i class="icon-x-black close" onclick="disparition($('.dashboard-popup'))"></i></span>
+                    </div>
+                    <div class="content-dialog">
+                        <div class="content">
+                            <steps nbr-steps="5" first-connect="true" message="messageStep"></steps>
+                        </div>
+                    </div>
+                    <div class="selectable skills">
+                        <div class="selectable-title first">
+                            <div class="left link" onclick="simpleSlideEffect($('.skills .selectable-button'),$('.skills .selectable-content'))">
+                                <div class="selectable-button" >
+                                    <div class="icon-plus"></div>
+                                    <div class="icon-minus"></div>
+                                </div>
+                                <span>Skills</span>
+                            </div>
+                            <div class="right icon-completed">
+                                <i ng-show="register.userInfo.skills.state.completed" class="icon-check-big-green"></i>
+                                <i ng-hide="register.userInfo.skills.state.completed" class="icon-minus-round"></i>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="selectable-content">
+                            <div class="check-box-1" ng-repeat="skill in register.userInfo.skills.list">
+                                <input id="skill-{{$index}}" type="checkbox" ng-checked="skill.checked"/>
+                                <label for="skill-{{$index}}" ng-click="register.selectRemoveSkills(skill.id)"><b>{{skill.Name}}</b><span> &minus; {{skill.Description}}</span></label>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                    <div class="selectable technologies">
+                        <div class="selectable-title first">
+                            <div class="left link" onclick="simpleSlideEffect($('.technologies .selectable-button'),$('.technologies .selectable-content'))">
+                                <div class="selectable-button">
+                                    <div class="icon-plus"></div>
+                                    <div class="icon-minus"></div>
+                                </div>
+                                <span>Tools & Technologies</span>
+                            </div>
+                            <div class="right icon-completed">
+                                <i ng-show="register.userInfo.technologies.state.completed" class="icon-check-big-green"></i>
+                                <i ng-hide="register.userInfo.technologies.state.completed" class="icon-minus-round"></i>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="selectable-content">
+                            <div class="check-box-1" ng-repeat="technology in register.userInfo.technologies.list">
+                                <input id="technology-{{$index}}" type="checkbox" ng-checked="technology.checked"/>
+                                <label for="technology-{{$index}}" ng-click="register.selectRemoveTech(technology.id)"><b>{{technology.Name}}</b><span> &minus; {{technology.Description}}</span></label>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                    <div class="selectable goals">
+                        <div class="selectable-title first">
+                            <div class="left link" onclick="simpleSlideEffect($('.goals .selectable-button'),$('.goals .selectable-content'))">
+                                <div class="selectable-button">
+                                    <div class="icon-plus"></div>
+                                    <div class="icon-minus"></div>
+                                </div>
+                                <span>Career Goals</span>
+                            </div>
+                            <div class="right icon-completed">
+                                <i ng-show="register.userInfo.goals.state.completed" class="icon-check-big-green"></i>
+                                <i ng-hide="register.userInfo.goals.state.completed" class="icon-minus-round"></i>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="selectable-content">
+                            <div class="left">
+                                <div class="message medium"><span>whats your employment status?</span><span class="right optional">optional</span></div>
+                                <div class="medium select toggleMenu left">
+                                    <span class="title">{{register.userInfo.goals.employement.value}}</span><b class="icon-bigarrow-bottom-grey grey-icon"></b>
+                                    <i class=""></i>
+                                    <div class="subMenu">
+                                        <div ng-repeat="employ in register.lists.employements" select data-value="employ" data-elem="register.userInfo.goals.employement.value">{{employ}}</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="left">
+                                <div class="message medium"><span>what do you want to be?</span><span class="right optional">optional</span></div>
+                                <div class="input-button medium">
+                                    <input ng-model="register.userInfo.goals.desired.value" placeholder="Enter Desired Title"/>
+                                </div>
+                            </div>
+                            
+                            <div class="right">
+                                <div class="message medium"><span>what industry do you love?</span><span class="right optional">optional</span></div>
+                                <div class="medium select toggleMenu left">
+                                    <span class="title">{{register.userInfo.goals.industry.value}}</span><b class="icon-bigarrow-bottom-grey grey-icon"></b>
+                                    <i class=""></i>
+                                    <div class="subMenu">
+                                        <div ng-repeat="industry in register.lists.industries" select data-value="industry" data-elem="register.userInfo.goals.industry.value">{{industry}}</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                    <div class="footer-dialog">
+                        <div class="button-previous back-white left" onclick="movePopup($('.dashboard-popup'),4)">
+                            Previous
+                            <i class="icon-bigarrow-left-black icon left"></i>
+                        </div>
+                        <div class="button-next back-white left selected">
+                            Next
+                            <i class="icon-bigarrow-right-black icon right"></i>
+                        </div>
+        
+                        <div class="button-save back-green right" onclick="disparition($('.dashboard-popup'))" ng-click="register.save()">Save & Close</div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
