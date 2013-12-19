@@ -5,6 +5,60 @@ var config={
     /*LOCALY GROWN PART */
     "step":100,
     "step_counties":250,
+    "technologiesList":[
+    {
+        "id":1,
+        "Name":"Knockout js",
+        "Description":"The ability to generate or use different sets of rules for combining or grouping things in different ways"
+    },
+    {
+        "id":2,
+        "Name":"Laravel",
+        "Description":"The ability to generate or use different sets of rules for combining or grouping things in different ways"
+    },
+    {
+        "id":3,
+        "Name":"Flexibility of Closure",
+        "Description":"The ability to generate or use different sets of rules for combining or grouping things in different ways"
+    }, 
+    {
+        "id":4,
+        "Name":"Fluency of Ideas",
+        "Description":"The ability to generate or use different sets of rules for combining or grouping things in different ways"
+    },
+    {
+        "id":5,
+        "Name":"Inductive Reasoning",
+        "Description":"The ability to generate or use different sets of rules for combining or grouping things in different ways"
+    }
+    ],
+    "skillsList":[
+    {
+        "id":1,
+        "Name":"Category Flexibility",
+        "Description":"The ability to generate or use different sets of rules for combining or grouping things in different ways"
+    },
+    {
+        "id":2,
+        "Name":"Deductive Reasoning",
+        "Description":"The ability to generate or use different sets of rules for combining or grouping things in different ways"
+    },
+    {
+        "id":3,
+        "Name":"Flexibility of Closure",
+        "Description":"The ability to generate or use different sets of rules for combining or grouping things in different ways"
+    }, 
+    {
+        "id":4,
+        "Name":"Fluency of Ideas",
+        "Description":"The ability to generate or use different sets of rules for combining or grouping things in different ways"
+    },
+    {
+        "id":5,
+        "Name":"Inductive Reasoning",
+        "Description":"The ability to generate or use different sets of rules for combining or grouping things in different ways"
+    }
+    ],
     /*CAREERSCAPE PART*/
     //zoom speed is depending on zoom_step (to allow exact zoom controll) (time is possible but not the zoom strength)
     "canvas-font":"HelveticaLightCondensed",

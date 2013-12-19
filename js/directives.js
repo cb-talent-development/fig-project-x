@@ -108,20 +108,31 @@ dir.directive('comment', ['$compile', '$http', '$templateCache', function($compi
 }]);
 
 dir.directive('steps', function(){
+    var template='<div class="steps"><span class="etape"></span></div>';
 	return{
 		restrict: 'E',
 		replace: true,
         transclude: true,
-		template: '<div class="steps"><span id="etape"></span></div>',
+		template: template,
 		scope: {
                 nbrSteps:'=',
-				firstConnect:'='
+				firstConnect:'=',
+                message:'='
         },
-		link: function(attrs){
+		link: function(scope, element, attrs){
+            var message,string;
+            if(attrs.message){
+                message=scope.message;
+            }
 			for(var i = attrs.nbrSteps; i>0 && attrs.firstConnect; i--){
-				$('#etape').prepend("<span class='icon-step-"+i+"'>Step "+i+"</span>");
+                if(message){
+                    string=message[i-1];
+                }
+                else{
+                    string="Step "+i;
+                }
+				element.find(".etape").prepend("<div class='icon-step-"+i+"'><span>"+string+"</span></div>");
 			}
-			return true;
 		}
 	};
 });

@@ -1,13 +1,23 @@
-[{
+[
+{
+        "id":1,
+        "Name":"Category Flexibility",
+        "Description":"The ability to generate or use different sets of rules for combining or grouping things in different ways"
+},    
+{
+    "id":10,
     "Name":"Mathematics"
 },
  {
+    "id":20,
     "Name":"Business"
 },
  {
+    "id":30,
     "Name":"Web app."
 },
  {
+    "id":40,
     "Name":"Machine Learning"
 }
 ]

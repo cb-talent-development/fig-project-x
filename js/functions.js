@@ -34,6 +34,24 @@ function range (low, high, step) {
 
   return matrix;
 }
+Array.prototype.indexOfObject=function(elem,index){
+    for(var i=0;i<this.length;i++){
+        var current=this[i];
+        if(elem[(index)?index:"id"]==current[(index)?index:"id"]){
+            return i;
+        }
+    }
+    return -1;
+}
+Array.prototype.getById=function(value,index){
+    for(var i=0;i<this.length;i++){
+        var current=this[i];
+        if(current[(index)?index:"id"]==value){
+            return current;
+        }
+    }
+    return -1;
+}
 //Variable for the months
 var monthNames = [ "January", "February", "March", "April", "May", "June",
     "July", "August", "September", "October", "November", "December" ];
@@ -340,9 +358,22 @@ function toggleEffect(event){
         return false;
     }
 }
+function simpleSlideEffect(button,elem){
+    if(!button.hasClass("selected")){
+        button.addClass("selected");
+    }
+    else{
+        button.removeClass("selected");
+    }
+    if (!elem.is(':visible')) {
+        elem.slideDown(config.timeAnim);
+    }
+    // If closed, close the others and open it
+    else {
+        elem.slideUp(config.timeAnim);
+    }
+}
 function slideEffect(button,elem,height){
-    console.log(button);
-    console.log(elem);
     if(!button.hasClass("selected")){
         button.addClass("selected");
     }

@@ -87,6 +87,45 @@ GENERAL CSS
 /*
 General CSS
 */
+/*
+ICON FOR CHECKBOX
+*/
+$sprite-width: 3000px;
+$sprite-height: 3597px;
+@mixin dimensionPosition($posX,$posY,$height,$width,$rapp){
+    display: inline-block;
+	vertical-align: top;
+    background: url("assets/x_sprite.png") no-repeat;
+    background-size:ceil($sprite-width/2 * $rapp) ceil($sprite-height/2 * $rapp);
+    background-position: ceil($rapp * $posX) ceil($rapp * $posY);
+    height: ceil($height * $rapp);
+    width: ceil($width * $rapp);
+}
+.icon-box-white{
+    @include dimensionPosition( -340px, -56px, 21px, 21px, 1.0);
+    @media only screen and (max-width: 768px){
+        @include dimensionPosition( -340px, -56px, 21px, 21px, 0.7);
+	}
+}
+.icon-box-orange{
+    @include dimensionPosition( -306px, -56px, 21px, 21px, 1.0);
+    @media only screen and (max-width: 768px){
+        @include dimensionPosition( -306px, -56px, 21px, 21px, 0.7);
+	}
+}
+.icon-box-checked{
+    @include dimensionPosition( -376px, -59px, 16px, 16px, 1.0);
+    @media only screen and (max-width: 768px){
+        @include dimensionPosition( -376px, -59px, 16px, 16px, 0.7);
+	}
+}
+.icon-box-not-checked{
+    @include dimensionPosition( -409px, -59px, 16px, 16px, 1.0);
+    @media only screen and (max-width: 768px){
+        @include dimensionPosition( -409px, -59px, 16px, 16px, 0.7);
+	}
+}
+
 @mixin main-block{
     width:$total-width;
     display:block;
@@ -172,6 +211,7 @@ table td{
 .inline{
     @include inline-top;
 }
+
 .custom-checkbox{
     position:relative;
     input[type=checkbox] {
@@ -182,7 +222,6 @@ table td{
         content:"";
         position:absolute;
         left:0px;
-        top:50%;
         text-align: center;  
     }
     label:hover:before { 
@@ -190,8 +229,45 @@ table td{
         -webkit-box-shadow:0 0px 2px 0px rgba(0,0,0,0.3);
     }
     input[type=checkbox]:checked + label:before { 
-        content: "\2713";  
+        //content: "\2713";  
     }  
+}
+.check-box-1{
+    @extend .custom-checkbox;
+    label{
+        b,span{
+            opacity:0.5;
+            transition: opacity 1s;
+            -webkit-transition: opacity 1s;
+        }
+        font-weight:normal;
+    }
+    label{
+        font-family: HelveticaNeue;
+        margin-left:25px;
+    }
+    label:before{
+        margin-top:4px;
+        opacity:1.0 !important;
+        @extend .icon-box-not-checked;
+    }
+    input[type=checkbox]:checked + label {
+        b,span{
+            opacity:1.0;
+        }
+    } 
+    input[type=checkbox]:checked + label:before { 
+        @extend .icon-box-checked;
+    } 
+}
+.check-box-2{
+    @extend .custom-checkbox;
+    label:before{
+        @extend .icon-box-white;
+    }
+    input[type=checkbox]:checked + label:before { 
+        @extend .icon-box-orange;
+    } 
 }
 .custom-radio{
     position:relative;
@@ -825,6 +901,7 @@ General buttons classes
 .select{
     @include shadow;
     @include button-style;
+    border-bottom:2px solid $lightGrey;
     b,i{margin-top:-4.5px;}
     .subMenu{
         @include shadow;
@@ -843,6 +920,7 @@ General buttons classes
 .input-button{
     margin:0px;
     @extend .button;
+    border-top:2px solid $lightGrey;
     padding:0px;
     box-shadow:0 -1px 1px rgba(0,0,0,0.2);
     -webkit-box-shadow:0 -1px 1px rgba(0,0,0,0.2);
@@ -2539,7 +2617,7 @@ DIALOG
         }
         .content{width:100%;}
         .footer-dialog{
-            padding:22px;
+            padding:20px;
 			.button-save,.button-next,.button-previous{
 				position:relative;
 				padding:0px 14px;
@@ -3007,7 +3085,7 @@ Tool CSS
 	}
 	.get-started-resume{
 		.section{
-			width: 1280px !important;
+			width: 1204px !important;
 			@media(max-width: 767px){
 				width: 470px !important;
 			}
@@ -3028,29 +3106,6 @@ Tool CSS
 			}
 			.content{
 				border-bottom: 1px solid $lightGrey;
-				padding: 20px;
-				@media (max-width: 480px){
-					padding:10px;
-				}
-				.icon-step-1, .icon-step-2, .icon-step-3, .icon-step-4, .icon-step-5{
-					margin-right: -28px;
-					padding: 21px 95px;
-					color: white;
-					font-size: 28px;
-					@media(max-width: 479px){
-						font-size: 20px;
-						padding: 8px 45px;
-					}
-				}
-				.icon-step-1{
-					padding: 21px 70px;
-					@media(max-width: 479px){
-						padding: 8px 32px;
-					}
-				}
-				.icon-step-5{
-					padding-right: 0px;
-				}
 				input, .button{
 					@include invert-shadow;
 					margin-left: 20px;
@@ -3203,6 +3258,288 @@ Tool CSS
 			}
 		}
 	}
+}
+.dashboard-popup,.get-started-resume{
+    .content{
+        padding: 20px;
+        border-bottom:1px solid $lightGrey;
+        @media (max-width: 768px){
+            padding:10px;
+        }
+        .icon-step-1, .icon-step-2, .icon-step-3, .icon-step-4, .icon-step-5{
+            margin-right: -28px;
+            display:inline-block;
+            vertical-align:top;
+            text-align:center;
+            padding-top:26px;
+            color: white;
+            @include font-size(23px);
+            @media(max-width: 479px){
+                padding-top:13px;
+            }
+            span{
+               position:relative;right:15px;
+               @media only screen and (max-width:768px){
+               }
+            }
+        }
+        .icon-step-5{
+            span{
+                left:15px;  
+                right:0px;
+            }
+        }
+    }
+}
+.dashboard-popup{
+    .scrollable{
+        //option 1
+        width:500%;
+        min-width:5 * 1204px;
+    }
+    .section-wrapper{
+        width:20%;
+        float:left;
+    }
+    .section{
+        //width:90%;
+        width:1204px;
+        .header{
+            font-size:24px;
+            .grey{
+                color:$grey;
+            }
+        }
+        .step{
+            width:1204px;
+        }
+        .step1{
+            display:none;
+        }
+        .custom-radio{
+            margin-right:25px;
+            position:relative;
+            input[type=checkbox] {
+                display: none;
+            } 
+            label{margin-left:40px;}
+            label:hover{ cursor:pointer;}
+            label:before{
+                height:20px;
+                width:20px;
+                content:"";
+                position:absolute;
+                left:0px;
+                top:50%;
+                text-align: center;  
+                margin-top:-15px;
+                @include box-shadow(0.5px,-1px,2px,0px,0.3);
+                border-right:1px solid $lightGrey;
+                background:white;
+            }
+            input[type=radio]:checked + label:before { 
+                background:$orange;
+            }  
+        }
+        .custom-radio{
+            font-size:23px;
+            color:$darkGrey;
+        }
+        .message{
+            font-size:17px;
+            text-transform:uppercase;
+            color:rgb(178,178,178);
+            margin-bottom:10px;
+        }
+        .optional{color:$lightGrey;text-transform:uppercase;font-size:17px;}
+        .select,input,input[placeholder]{  
+            padding-top:20px;padding-bottom:16px;
+            font-size:23px;
+        }   
+        .large{width:465px;margin-right:25px;}
+        .medium{width:370px;margin-right:25px;}
+        .right{
+            .large{
+                margin-right:0px;
+            }
+        }
+        .address{
+            .street{margin-bottom:20px;}
+            .large{width:365px;margin-right:25px;}
+            .medium{width:170px;margin-right:25px;}
+        }
+        .general{
+            .gender{margin-right:149px;
+                .custom-checkbox{margin-top:15px;}
+            }
+            
+        }
+        .job-phase{
+            padding-top:25px;
+            .cursor{
+                margin-top:20px;
+                margin-bottom:45px;
+                position:relative;
+                .bar{
+                    border-radius:8px;
+                    height:15px;
+                    background:rgb(231,235,235);
+                }
+                .icon-cursor-orange-down{
+                    position:absolute;
+                    top:-5px;
+                    left:10px;
+                    background:orange;
+                    height:30px;
+                    width:20px
+                }
+            }
+            .phase{
+                opacity:0.6;
+                @include whitebox;
+                width:23.35%;
+                height:295px;
+                text-align:center;
+                margin-bottom:15px;
+                .title{font-size:20px;padding-top:20px;padding-bottom:25px;
+                    .logo{
+                        margin-bottom:15px;
+                    }
+                    border-bottom:1px solid $lightGrey;
+                }
+                .description{
+                    padding:0px 30px;
+                    font-size:15px;
+                    line-height:20px;
+                    padding-top:25px;
+                    @include webkit-box;
+                    -webkit-line-clamp: 6;
+                }
+            }
+            .left{margin-right:2.2%;}
+            .before-last{
+                margin-right:0px;
+            }
+             .phase[class~="selected"]{
+                opacity:1;
+            }
+        }
+        .job-occupation{
+            height:200px;
+        }
+        .school-name{
+            height:210px;
+        }
+        .job-occupation,.school-name{
+            .large{
+                width:465px;margin:0px;
+            }
+            .message-large{
+                width:87%;margin:0px;
+            }
+            .element{
+                height:100%;
+                width:42%;
+                position:relative;
+                .entry{position:absolute;bottom:10px;
+                    .message{margin-bottom:10px;}
+                }
+                
+            }
+            .element-correction{
+                height:100%;
+                width:50.7%;
+                position:relative;
+                .logo{
+                    position:absolute;
+                    bottom:10px;
+                }
+                .correction{
+                    width:465px;
+                    position:absolute;
+                    bottom:10px;
+                    right:0px;
+                    .mess{
+                        @include font-size(17px);
+                        line-height:23px;
+                        margin-bottom:10px;
+                        text-transform:uppercase;
+                        color:$orange;
+                        @include webkit-box;
+                        -webkit-line-clamp:4;
+                    }
+                    .wrong{color:black;}
+                    .select{border:1px solid $orange;}
+                }
+            }
+        }
+        .selectable{
+            .selectable-title{
+                padding:20px;
+                padding-bottom:5px;
+                padding-top:35px;
+                @include font-size(47px);
+                .selectable-button{
+                    display:inline-block;
+                    width:33px;
+                    .icon-plus{
+                        position:relative;
+                        top:1px;
+                        display:block;
+                    }
+                    .icon-minus{
+                        position:relative;
+                        top:-14px;
+                        display:none;
+                    }
+                }
+                .selectable-button[class~=selected]{
+                    .icon-plus{
+                        display:none;
+                    }
+                    .icon-minus{
+                        display:block;
+                    }
+                }
+                .icon-completed{
+                    i{
+                        top:6px;
+                        margin-right:0px;
+                    }
+                }
+                border-bottom:8px solid rgb(232,232,232);
+            }
+            .selectable-content{
+                border-top:1px solid rgb(201,202,203);
+                display:none;
+                padding:50px 20px;
+                padding-bottom:0px;
+                .check-box-1{
+                    float:left;
+                    padding-bottom:30px;
+                    padding-right:3.5%;
+                    width:33.3%;
+                    @include font-size(19px);
+                }
+            }
+        }
+        .goals{
+            .medium{
+                width:363px;
+            }
+            .selectable-content{
+                padding:20px;
+                padding-top:30px;
+                border-bottom:1px solid rgb(201,202,203);
+            }
+        }
+        .footer-dialog{
+            @media(min-width: 480px){
+                padding-top:12px;
+                padding-bottom:15px;
+            }
+        }
+    }
 }
 
 .careerScape, .resume-hero{
@@ -3684,6 +4021,9 @@ Dashboard
 */
 .dashboard{
     @include main-block;
+    .job-results{
+        margin-bottom:25px;
+    }
     .resume{
         @include whitebox;
         position:relative;
@@ -3925,192 +4265,6 @@ Dashboard
             .content{
                 .goal{margin-top:31px;width:80%;}
                 .first{margin-top:0px;}
-            }
-        }
-    }
-    .popup{
-        .scrollable{
-            //option 1
-            width:500%;
-            min-width:5 * 1200px;
-        }
-        .section-wrapper{
-            width:20%;
-            display:inline-block;
-            vertical-align:top;
-        }
-        .section{
-            //width:90%;
-            width:1150px;
-            .header{
-                font-size:24px;
-                .grey{
-                    color:$grey;
-                }
-            }
-            .step{
-                width:1150px;
-            }
-            .step1{
-                display:none;
-            }
-            .content{
-                .custom-radio{
-                    margin-right:25px;
-                    position:relative;
-                    input[type=checkbox] {
-                        display: none;
-                    } 
-                    label{margin-left:40px;}
-                    label:hover{ cursor:pointer;}
-                    label:before{
-                        height:20px;
-                        width:20px;
-                        content:"";
-                        position:absolute;
-                        left:0px;
-                        top:50%;
-                        text-align: center;  
-                        margin-top:-15px;
-                        @include box-shadow(0.5px,-1px,2px,0px,0.3);
-                        border-right:1px solid $lightGrey;
-                        background:white;
-                    }
-                    input[type=radio]:checked + label:before { 
-                        background:$orange;
-                    }  
-                }
-                .custom-radio{
-                    font-size:23px;
-                    color:$darkGrey;
-                }
-                .message{
-                    font-size:17px;
-                    text-transform:uppercase;
-                    color:rgb(178,178,178);
-                    margin-bottom:10px;
-                }
-                .optional{color:$lightGrey;text-transform:uppercase;font-size:17px;}
-                .select,input,input[placeholder]{  
-                    padding-top:20px;padding-bottom:16px;
-                    font-size:23px;
-                }   
-                .large{width:370px;margin-right:25px;}
-                .medium{width:170px;margin-right:25px;}
-                .address{
-                    padding:17px;
-                    .street{margin-bottom:20px;}
-                }
-                .general{
-                    padding:17px;
-                    border-bottom:1px solid $lightGrey;
-                    .gender{margin-right:135px;
-                        .custom-checkbox{margin-top:15px;}
-                    }
-                    
-                }
-                .job-phase{
-                    padding:0px 15px;
-                    padding-top:25px;
-                    .cursor{
-                        margin-top:20px;
-                        margin-bottom:45px;
-                        position:relative;
-                        .bar{
-                            border-radius:8px;
-                            height:15px;
-                            background:rgb(231,235,235);
-                        }
-                        .icon-cursor-orange-down{
-                            position:absolute;
-                            top:-5px;
-                            left:10px;
-                            background:orange;
-                            height:30px;
-                            width:20px
-                        }
-                    }
-                    .phase{
-                        opacity:0.6;
-                        @include whitebox;
-                        width:23.35%;
-                        height:295px;
-                        text-align:center;
-                        margin-bottom:15px;
-                        .title{font-size:20px;padding-top:20px;padding-bottom:25px;
-                            .logo{
-                                margin-bottom:15px;
-                            }
-                            border-bottom:1px solid $lightGrey;
-                        }
-                        .description{
-                            padding:0px 30px;
-                            font-size:15px;
-                            line-height:20px;
-                            padding-top:25px;
-                            @include webkit-box;
-                            -webkit-line-clamp: 6;
-                        }
-                    }
-                    .left{margin-right:2.2%;}
-                    .before-last{
-                        margin-right:0px;
-                    }
-                     .phase[class~="selected"]{
-                        opacity:1;
-                    }
-                }
-                .job-occupation{
-                    .large{width:465px;margin:0px;}
-                    padding:0px 20px;
-                    height:200px;
-                    border-bottom:1px solid $lightGrey;
-                    .job{
-                        height:100%;
-                        width:42%;
-                        position:relative;
-                        .entry{position:absolute;bottom:30px;
-                            .message{margin-bottom:10px;}
-                        }
-                        
-                    }
-                    .job-correction{
-                        height:200px;
-                        width:50.7%;
-                        position:relative;
-                        .logo{
-                            position:absolute;
-                            bottom:30px;
-                        }
-                        .correction{
-                            position:absolute;
-                            bottom:30px;
-                            right:0px;
-                            .mess{
-                                font-size:16px;
-                                margin-bottom:10px;
-                                text-transform:uppercase;
-                                color:$orange;
-                                @include webkit-box;
-                                -webkit-line-clamp:4;
-                            }
-                            .wrong{color:black;}
-                            .select{border:1px solid $orange;}
-                        }
-                    }
-                }
-                .job-info{
-                    padding:0px 15px;
-                    padding-top:25px;padding-bottom:30px;
-                    
-                }
-            }
-            .footer-dialog{
-                border-top:1px solid $lightGrey;
-				@media(min-width: 480px){
-					padding-top:12px;
-					padding-bottom:15px;
-				}
             }
         }
     }

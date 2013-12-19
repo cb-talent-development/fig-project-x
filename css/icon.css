@@ -147,36 +147,6 @@ Arrow big
       height: 16px;
       width: 16px; } }
 
-.icon-box-white {
-  background-position: -340 -56px;
-  width: 20px;
-  height: 20px; }
-  @media only screen and (max-width: 768px) {
-    .icon-box-white {
-      width: 10px;
-      height: 10px;
-      background-position: -170px -28px; } }
-
-.icon-box-orange {
-  background-position: -306 -56px;
-  width: 21px;
-  height: 20px; }
-  @media only screen and (max-width: 768px) {
-    .icon-box-orange {
-      width: 11px;
-      height: 10px;
-      background-position: -153px -28px; } }
-
-.icon-box-checked {
-  background-position: -376px -59px;
-  width: 15px;
-  height: 15px; }
-  @media only screen and (max-width: 768px) {
-    .icon-box-checked {
-      width: 7.5px;
-      height: 7.5px;
-      background-position: -138px -29.5px; } }
-
 .icon-pause {
   background-position: -443 -58px;
   width: 14px;
@@ -1633,14 +1603,16 @@ JOB PHASES
       width: 20px; } }
 
 .icon-cursor-red {
+  background-size: 1500px 1799px;
   background-position: -623px -382px;
-  height: 15px;
+  height: 17px;
   width: 22px; }
   @media only screen and (max-width: 768px) {
     .icon-cursor-red {
-      background-position: -311.5px -191px;
-      height: 7.5px;
-      width: 11px; } }
+      background-size: 1050px 1259px;
+      background-position: -436px -267px;
+      height: 12px;
+      width: 16px; } }
 
 /*
 SOCIAL
@@ -1863,10 +1835,10 @@ SOCIAL
 STEPS
 */
 .icon-step-1 {
-  background-size: 1500px 1799px;
-  background-position: -3px -463px;
-  height: 75px;
-  width: 251px; }
+  background-size: 1410px 1691px;
+  background-position: -2px -435px;
+  height: 71px;
+  width: 237px; }
   @media only screen and (max-width: 768px) {
     .icon-step-1 {
       background-size: 750px 900px;
@@ -1875,10 +1847,10 @@ STEPS
       width: 126px; } }
 
 .icon-step-2 {
-  background-size: 1500px 1799px;
-  background-position: -257px -463px;
-  height: 75px;
-  width: 278px; }
+  background-size: 1410px 1691px;
+  background-position: -241px -435px;
+  height: 71px;
+  width: 262px; }
   @media only screen and (max-width: 768px) {
     .icon-step-2 {
       background-size: 750px 900px;
@@ -1887,10 +1859,10 @@ STEPS
       width: 140px; } }
 
 .icon-step-3 {
-  background-size: 1500px 1799px;
-  background-position: -538px -463px;
-  height: 75px;
-  width: 287px; }
+  background-size: 1410px 1691px;
+  background-position: -505px -435px;
+  height: 71px;
+  width: 271px; }
   @media only screen and (max-width: 768px) {
     .icon-step-3 {
       background-size: 750px 900px;
@@ -1899,10 +1871,10 @@ STEPS
       width: 145px; } }
 
 .icon-step-4 {
-  background-size: 1500px 1799px;
-  background-position: -829px -463px;
-  height: 75px;
-  width: 288px; }
+  background-size: 1410px 1691px;
+  background-position: -779px -435px;
+  height: 71px;
+  width: 271px; }
   @media only screen and (max-width: 768px) {
     .icon-step-4 {
       background-size: 750px 900px;
@@ -1911,10 +1883,10 @@ STEPS
       width: 146px; } }
 
 .icon-step-5 {
-  background-size: 1500px 1799px;
-  background-position: -1121px -463px;
-  height: 75px;
-  width: 251px; }
+  background-size: 1410px 1691px;
+  background-position: -1053px -435px;
+  height: 71px;
+  width: 236px; }
   @media only screen and (max-width: 768px) {
     .icon-step-5 {
       background-size: 750px 900px;
@@ -2068,34 +2040,52 @@ OTHER
       width: 6px; } }
 
 .icon-plus {
+  background-size: 1500px 1799px;
   background-position: -573px -423px;
   height: 30px;
   width: 30px; }
   @media only screen and (max-width: 768px) {
     .icon-plus {
-      background-position: -287.5px -211.5px;
-      height: 15x;
-      width: 15px; } }
+      background-size: 900px 1080px;
+      background-position: -343px -253px;
+      height: 18px;
+      width: 18px; } }
 
 .icon-minus {
+  background-size: 1500px 1799px;
   background-position: -620px -435px;
-  height: 2px;
+  height: 4px;
   width: 27px; }
   @media only screen and (max-width: 768px) {
     .icon-minus {
-      background-position: -310px -217.5px;
-      height: 1x;
-      width: 13.5px; } }
+      background-size: 900px 1080px;
+      background-position: -372px -261px;
+      height: 3px;
+      width: 17px; } }
 
 .icon-minus-round {
+  background-size: 1500px 1799px;
   background-position: -660px -416px;
-  height: 40px;
-  width: 40px; }
+  height: 42px;
+  width: 42px; }
   @media only screen and (max-width: 768px) {
     .icon-minus-round {
-      background-position: -330px -208px;
-      height: 20px;
-      width: 20px; } }
+      background-size: 900px 1080px;
+      background-position: -396px -249px;
+      height: 26px;
+      width: 26px; } }
+
+.icon-check-big-green {
+  background-size: 1500px 1799px;
+  background-position: -708px -416px;
+  height: 41px;
+  width: 41px; }
+  @media only screen and (max-width: 768px) {
+    .icon-check-big-green {
+      background-size: 900px 1080px;
+      background-position: -424px -249px;
+      height: 25px;
+      width: 25px; } }
 
 .icon-arrow-right-big-grey {
   background-position: -419px -542px;

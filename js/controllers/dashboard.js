@@ -15,9 +15,18 @@ function DashboardCtr($scope, $http,pagination) {
         if($scope.jobTitle.length>=5){
             //...
             $scope.showErrorJob=true;
-            $scope.correction="not-done";
+            $scope.correctionJob="not-done";
             $scope.jobTitles=["Public Relations Specialist","Sales Manager","Mcdonald Manager","Donut Seller"];
             $scope.jobTitleCorrected=$scope.jobTitles[0];
+        }
+    }
+    $scope.checkSchool=function(){
+         if($scope.schoolName.length>=3){
+            //...
+            $scope.showErrorSchool=true;
+            $scope.correctionSchool="not-done";
+            $scope.schools=["Harvard","Princeton","MIT"];
+            $scope.schoolCorrected=$scope.schools[0];
         }
     }
     /*
@@ -26,10 +35,15 @@ function DashboardCtr($scope, $http,pagination) {
     $scope.setJobPhase=function(phase){
         $scope.user.JobPhase=phase;
     }
+    $scope.setSchool=function(id){
+        $scope.schoolCorrected=$scope.schools[id];
+        $scope.schoolName=$scope.schoolCorrected;
+        $scope.correctionSchool="done";
+    }
     $scope.setJobTitle=function(id){
         $scope.jobTitleCorrected=$scope.jobTitles[id];
         $scope.jobTitle=$scope.jobTitleCorrected;
-        $scope.correction="done";
+        $scope.correctionJob="done";
     }
     /*
     Page Click
@@ -98,6 +112,9 @@ function DashboardCtr($scope, $http,pagination) {
     $scope.loadEducation=function(){
         $http.get("data/json/education.json").success(function(data) {
             $scope.educations=data; 
+            $scope.institutionType=$scope.educations[0].Institution;
+            $scope.degreeType=$scope.educations[0].Type;
+            $scope.schoolName=$scope.educations[0].Place;
 	   });
     }
     /*
@@ -114,6 +131,15 @@ function DashboardCtr($scope, $http,pagination) {
     $scope.loadSkill=function(){
         $http.get("data/json/skills.json").success(function(data) {
             $scope.skills=data; 
+            for(var i=0;i<$scope.skills.length;i++){
+                $scope.skillsSelected.push($scope.skills[i]);
+                for(var j=0;j<$scope.skillsList.length;j++){
+                    if($scope.skills[i]["id"]==$scope.skillsList[j]["id"]){
+                        $scope.skillsList[j].checked=true;
+                        break;
+                    }
+                }
+            }
 	   });
     }
     /*
@@ -122,6 +148,16 @@ function DashboardCtr($scope, $http,pagination) {
     $scope.loadTechnologies=function(){
         $http.get("data/json/technologies.json").success(function(data) {
             $scope.technologies=data;
+            console.log(data);
+            for(var i=0;i<$scope.technologies.length;i++){
+                $scope.technologiesSelected.push($scope.technologies[i]);
+                for(var j=0;j<$scope.technologiesList.length;j++){
+                    if($scope.technologies[i]["id"]==$scope.technologiesList[j]["id"]){
+                        $scope.technologiesList[j].checked=true;
+                        break;
+                    }
+                }
+            }
 	   });
     }
 
@@ -144,6 +180,7 @@ function DashboardCtr($scope, $http,pagination) {
                 $http.post(url,{name:input.value})
                 .success(function(data){
                     console.log(data);
+                    //use callback to add it to the skillsSelected
                 })
                 .error(function(data){
                     console.log(data);
@@ -170,6 +207,47 @@ function DashboardCtr($scope, $http,pagination) {
         else{
             $scope.inputTechnology.show=true;
         }
+    }
+    //add remove element into selected skills/technologies
+    //we need three lists: 1) to show, 2)the saved one 3)the choosen one
+    $scope.selectRemoveTech=function(id){
+        var elem=$scope.technologiesList.getById(id);
+        index=$scope.technologiesSelected.indexOfObject(elem);
+        if(index>-1){
+            //already selected
+            $scope.technologiesSelected.splice(index, 1);
+        }
+        else{
+            $scope.technologiesSelected.push(elem);
+        }
+        ($scope.technologiesSelected.length>0)?$scope.technologyState.completed=true:$scope.technologyState.completed=false;
+    }
+    $scope.selectRemoveSkills=function(id){
+        var elem=$scope.skillsList.getById(id);
+        index=$scope.skillsSelected.indexOfObject(elem);
+        if(index>-1){
+            //already selected
+            $scope.skillsSelected.splice(index, 1);
+        }
+        else{
+            $scope.skillsSelected.push(elem);
+        }
+        ($scope.skillsSelected.length>0)?$scope.skillState.completed=true:$scope.skillState.completed=false;
+    }
+    /*
+    Save function that does everything
+    */
+    $scope.save=function(){
+        //HUGE FUNCTION
+        //skills
+        //TODO: save skills
+        $scope.skills=$scope.skillsSelected;
+        //technologies
+        //TODO: save tech
+        $scope.technologies=$scope.technologiesSelected;
+        
+        //goals
+        //...
     }
     /*
         Constructor
@@ -203,13 +281,32 @@ function DashboardCtr($scope, $http,pagination) {
         $scope.companies=["McKinsey","Bain","BCG","Fig"];
         //states
         $scope.states=["IL","NY","NJ"];
+        //degrees
+        $scope.degrees=["Master Degree","Bacheloper Degree","Phd"]
+        //institution
+        $scope.institutions=["College","Upper High School","Formation"];
         //ages
-        
+        //messages step=
+        $scope.messageStep=["THE BASICS","JOB PHASE","OCCUPATION","EDUCATION","SKILLS & ABILITIES"];
         $scope.ages=["18-25 Years Old","26-30 Years Old","31-35 Years Old"];
         //skill/technology
         $scope.inputSkill=input();
         $scope.inputTechnology=input();
-        console.log($scope.inputSkill);
+        //state
+        $scope.skillState={'completed':false};
+        $scope.technologyState={'completed':false};
+        $scope.goalState={'completed':false};
+        
+        $scope.skillsList=config.skillsList;
+        $scope.skillsSelected=[];
+        $scope.technologiesSelected=[];
+        $scope.technologiesList=config.technologiesList;
+        
+        $scope.goalsInput={
+            "employement":input(),
+            "desired":input(),
+            "industry":input()
+        }
         //Init eventual effects
         $scope.$on('$includeContentLoaded', function(){
             initEffect();

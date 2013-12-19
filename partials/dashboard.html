@@ -2,7 +2,7 @@
 <div class="dashboard">
     <div class="resume">
         <div class="left person">
-            <i class="icon-pencil link" onclick="apparition($('.popup'))"></i>
+            <i class="icon-pencil link" onclick="apparition($('.dashboard-popup'))"></i>
             <div class="picture" style="background: url('{{user.Media.Url}}') center no-repeat;background-size:160%;"></div>
             <div class="name">{{user.Name}}</div>
             <div class="mail">{{user.Mail}}</div>
@@ -11,22 +11,22 @@
         <div class="left presentation">
             <table>
                 <tr>
-                    <td><div class="icon-pencil link" onclick="apparition($('.popup'));movePopup($('.popup'),3,true)"></div></td>
+                    <td><div class="icon-pencil link" onclick="apparition($('.dashboard-popup'));movePopup($('.dashboard-popup'),3,true)"></div></td>
                     <td><div class="icon-suitcase-red logo"></div></td>
                     <td><div>{{user.JobTitle}}</div></td>
                 </tr>
                 <tr>
-                    <td><div class="icon-pencil link" onclick="apparition($('.popup'));movePopup($('.popup'),1,true)"></div></td>
+                    <td><div class="icon-pencil link" onclick="apparition($('.dashboard-popup'));movePopup($('.dashboard-popup'),1,true)"></div></td>
                     <td><div class="icon-building logo"></div></td>
                     <td><div>{{user.Website}}</div></td>
                 </tr>
                 <tr>
-                    <td><div class="icon-pencil link" onclick="apparition($('.popup'));movePopup($('.popup'),1,true)"></div></td>
+                    <td><div class="icon-pencil link" onclick="apparition($('.dashboard-popup'));movePopup($('.dashboard-popup'),1,true)"></div></td>
                     <td><div class="icon-location logo"></div></td>
                     <td><div>{{user.State}},&nbsp;{{user.Zipcode}}</div></td>
                 </tr>
                 <tr>
-                    <td><div class="icon-pencil link" onclick="apparition($('.popup'));movePopup($('.popup'),3,true)"></div></td>
+                    <td><div class="icon-pencil link" onclick="apparition($('.dashboard-popup'));movePopup($('.dashboard-popup'),3,true)"></div></td>
                     <td><div class="icon-dollars logo"></div></td>
                     <td><div>{{user.Income}}</div></td>
                 </tr>
@@ -34,7 +34,7 @@
         </div>
         <div class="right job-phase">
             <div class="title">
-                <div class="icon-pencil inline link" onclick="apparition($('.popup'));movePopup($('.popup'),2,true);            checkCursorPosition('.section2','.icon-cursor-orange-down','horizontal',true);"></div>
+                <div class="icon-pencil inline link" onclick="apparition($('.dashboard-popup'));movePopup($('.dashboard-popup'),2,true);            checkCursorPosition('.section2','.icon-cursor-orange-down','horizontal',true);"></div>
                 <div class="txt inline">What Phase of the Job Search Are You?</div>
             </div>
             <div class="phase-content">
@@ -122,7 +122,7 @@
         <div class="col-left left">
             <div class="education">
                 <div class="title-section">
-                    <span class="icon-pencil"></span>
+                    <span class="icon-pencil link" onclick="apparition($('.dashboard-popup'));movePopup($('.dashboard-popup'),4,true);"></span>
                     <span class="title">Education</span>
                 </div>
                 <div class="content">
@@ -142,7 +142,7 @@
             </div>
             <div class="career-goals">
                 <div class="title-section">
-                    <span class="icon-pencil"></span>
+                    <span class="icon-pencil link" onclick="apparition($('.dashboard-popup'));movePopup($('.dashboard-popup'),5,true)"></span>
                     <span class="title">Career Goals</span>
                 </div>
                 <div class="content">
@@ -154,7 +154,7 @@
         <div class="col-right right">
             <div class="skills">
                 <div class="title-section">
-                    <span class="icon-pencil"></span>
+                    <span class="icon-pencil link" onclick="apparition($('.dashboard-popup'));movePopup($('.dashboard-popup'),5,true)"></span>
                     <span class="title">Skills</span>
                 </div>
                 <div class="content">
@@ -168,7 +168,7 @@
             </div>
             <div class="technology">
                 <div class="title-section">
-                    <span class="icon-pencil"></span>
+                    <span class="icon-pencil link" onclick="apparition($('.dashboard-popup'));movePopup($('.dashboard-popup'),5,true)"></span>
                     <span class="title">Tools & Technology</span>
                 </div>
                 <div class="content">
@@ -183,18 +183,20 @@
         <div class="clear"></div>
     </div>
     
-    <div class="dialog popup">
-        <div class="background" onclick="disparition($('.popup'))"></div>
+    <div class="dialog dashboard-popup">
+        <div class="background" onclick="disparition($('.dashboard-popup'))"></div>
         <div class="scrollable-content">
             <div class="scrollable">
                 <div class="section-wrapper">
                     <div class="section section1">
                         <div class="header">
-                            <span class"title">Did you know: XX% of the la population love hamburgers<i class="icon-x-black close" onclick="disparition($('.popup'))"></i></span>
+                            <span class"title">Did you know: XX% of the la population love hamburgers<i class="icon-x-black close" onclick="disparition($('.dashboard-popup'))"></i></span>
                         </div>
-                        <div ng-include="'step.html'"></div>
-                        <div class="content">
-                            <div class="general">
+                        <div class="content-dialog">
+                            <div class="content">
+                                <steps nbr-steps="1" first-connect="true" message="messageStep"></steps>
+                              </div>
+                            <div class="content general">
                                 <div class="left gender">
                                     <div class="message">enter your gender</div>
                                     <div>
@@ -218,7 +220,7 @@
                                 </div>
                                 <div class="clear"></div>
                             </div>
-                            <div class="address">
+                            <div class="content address">
                                 <div class="message">Please Enter Your Street address</div>
                                 <div class="street">
                                     <div class="input-button large street left">
@@ -250,11 +252,11 @@
                                 Previous
                                 <i class="icon-bigarrow-left-black icon left"></i>
                             </div>
-                            <div class="button-next back-white left" onclick="movePopup($('.popup'),2)">
+                            <div class="button-next back-white left" onclick="movePopup($('.dashboard-popup'),2)">
                                 Next
                                 <i class="icon-bigarrow-right-black icon right"></i>
                             </div>
-                            <div class="button-save back-green right" onclick="disparition($('.popup'))" ng-click="save()">Save & Close</div>
+                            <div class="button-save back-green right" onclick="disparition($('.dashboard-popup'))" ng-click="save()">Save & Close</div>
                             <div class="clear"></div>
                         </div>
                     </div>
@@ -262,10 +264,13 @@
                 <div class="section-wrapper">
                     <div class="section section2">
                         <div class="header">
-                            <span class"title">Did you know: XX% of the la population love hamburgers<i class="icon-x-black close" onclick="disparition($('.popup'));"></i></span>
+                            <span class"title">Did you know: XX% of the la population love hamburgers<i class="icon-x-black close" onclick="disparition($('.dashboard-popup'));"></i></span>
                         </div>
-                        <div class="content">
-                              <div class="job-phase">
+                        <div class="content-dialog">
+                              <div class="content">
+                                <steps nbr-steps="2" first-connect="true" message="messageStep"></steps>
+                              </div>
+                              <div class="content job-phase">
                                 <div class="message">Select your current job phase:</div>
                                 <div class="cursor">
                                     <div class="bar"></div>
@@ -311,16 +316,16 @@
                             </div>  
                         </div>
                         <div class="footer-dialog">
-                            <div class="button-previous back-white left" onclick="movePopup($('.popup'),1)">
+                            <div class="button-previous back-white left" onclick="movePopup($('.dashboard-popup'),1)">
                                 Previous
                                 <i class="icon-bigarrow-left-black icon left"></i>
                             </div>
-                            <div class="button-next back-white left" onclick="movePopup($('.popup'),3)">
+                            <div class="button-next back-white left" onclick="movePopup($('.dashboard-popup'),3)">
                                 Next
                                 <i class="icon-bigarrow-right-black icon right"></i>
                             </div>
             
-                            <div class="button-save back-green right" onclick="disparition($('.popup'))" ng-click="save()">Save & Close</div>
+                            <div class="button-save back-green right" onclick="disparition($('.dashboard-popup'))" ng-click="save()">Save & Close</div>
                             <div class="clear"></div>
                         </div>
                     </div>
@@ -328,11 +333,14 @@
                 <div class="section-wrapper">
                     <div class="section section3">
                         <div class="header">
-                            <span class"title">Did you know: XX% of the la population love hamburgers<i class="icon-x-black close" onclick="disparition($('.popup'))"></i></span>
+                            <span class"title">Did you know: XX% of the la population love hamburgers<i class="icon-x-black close" onclick="disparition($('.dashboard-popup'))"></i></span>
                         </div>
-                        <div class="content">
-                            <div class="job-occupation">
-                                <div class="job left">
+                        <div class="content-dialog">
+                            <div class="content">
+                                <steps nbr-steps="3" first-connect="true" message="messageStep"></steps>
+                            </div>
+                            <div class="content job-occupation">
+                                <div class="element left">
                                     <div class="entry">
                                         <div class="message large"><span>enter your age range:</span><span class="right optional">optional</span></div>
                                         <div class="input-button large">
@@ -340,10 +348,10 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="job-correction right" ng-class="{true:'invisible',false:'visible'}[showErrorJob==false]">
+                                <div class="element-correction right" ng-show="showErrorJob">
                                     <div class="icon-arrow-right-big-orange left logo"></div>
                                     <div class="correction left">
-                                        <div class="mess large" ng-class="{true:'invisible',false:'visible'}[correction=='done']">We do not have '<span class="wrong">{{jobTitle}}</span>' in our database. Please select a similar job occupation below so we can help better serve you.
+                                        <div class="mess message-large" ng-class="{true:'invisible',false:'visible'}[correctionJob=='done']">We do not have '<span class="wrong">{{jobTitle}}</span>' in our database. Please select a similar job occupation below so we can help better serve you.
                                         </div>
                                         <div class="large select toggleMenu">
                                             <span class="title">{{jobTitleCorrected}}</span><b class="icon-bigarrow-bottom-grey grey-icon"></b>
@@ -353,10 +361,10 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="clear"></div>
                                 </div>
+                                <div class="clear"></div>
                             </div>
-                            <div class="job-info">
+                            <div class="content job-info">
                                 <div class="left">
                                     <div class="message large"><span>What's your current company?</span><span class="right optional">optional</span></div>
                                     <div class="large select toggleMenu">
@@ -381,16 +389,16 @@
                             </div>
                         </div>
                         <div class="footer-dialog">
-                            <div class="button-previous back-white left" onclick="movePopup($('.popup'),2)">
+                            <div class="button-previous back-white left" onclick="movePopup($('.dashboard-popup'),2)">
                                 Previous
                                 <i class="icon-bigarrow-left-black icon left"></i>
                             </div>
-                            <div class="button-next back-white left" onclick="movePopup($('.popup'),4)">
+                            <div class="button-next back-white left" onclick="movePopup($('.dashboard-popup'),4)">
                                 Next
                                 <i class="icon-bigarrow-right-black icon right"></i>
                             </div>
             
-                            <div class="button-save back-green right" onclick="disparition($('.popup'))" ng-click="save()">Save & Close</div>
+                            <div class="button-save back-green right" onclick="disparition($('.dashboard-popup'))" ng-click="save()">Save & Close</div>
                             <div class="clear"></div>
                         </div>
                     </div>
@@ -398,21 +406,190 @@
                 <div class="section-wrapper">
                     <div class="section section4">
                         <div class="header">
-                            <span class"title">Did you know: XX% of the la population love hamburgers<i class="icon-x-black close" onclick="disparition($('.popup'))"></i></span>
+                            <span class"title">Did you know: XX% of the la population love hamburgers<i class="icon-x-black close" onclick="disparition($('.dashboard-popup'))"></i></span>
                         </div>
-                        <div class="content">
+                        <div class="content-dialog">
+                            <div class="content">
+                                <steps nbr-steps="4" first-connect="true" message="messageStep"></steps>
+                            </div>
+                            <div class="content">
+                                <div class="left">
+                                    <div class="message large"><span>Educational experience</span><span class="right optional">optional</span></div>
+                                    <div class="large select toggleMenu">
+                                        <span class="title">{{institutionType}}</span><b class="icon-bigarrow-bottom-grey grey-icon"></b>
+                                        <i class=""></i>
+                                        <div class="subMenu">
+                                                <div ng-repeat="institution in institutions" select data-value="institution" data-elem="institutionType">{{institution}}</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="right">
+                                    <div class="message large"><span>Type of degree earned</span><span class="right optional">optional</span></div>
+                                    <div class="large select toggleMenu">
+                                        <span class="title">{{degreeType}}</span><b class="icon-bigarrow-bottom-grey grey-icon"></b>
+                                        <i class=""></i>
+                                        <div class="subMenu">
+                                                <div ng-repeat="degree in degrees" select data-value="degree" data-elem="degreeType">{{degree}}</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="content school-name">
+                                <div class="element left">
+                                    <div class="entry">
+                                        <div class="message large"><span>School you attended:</span><span class="right optional">optional</span></div>
+                                        <div class="input-button large">
+                                            <input ng-model="schoolName" placeholder="Enter Job Title" ng-change="checkSchool()"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="element-correction right" ng-show="showErrorSchool">
+                                    <div class="icon-arrow-right-big-orange left logo"></div>
+                                    <div class="correction left">
+                                        <div class="mess message-large" ng-class="{true:'invisible',false:'visible'}[correctionSchool=='done']">We do not have '<span class="wrong">{{schoolName}}</span>' in our database. Please select a similar school name below so we can help better serve you.
+                                        </div>
+                                        <div class="large select toggleMenu">
+                                            <span class="title">{{schoolCorrected}}</span><b class="icon-bigarrow-bottom-grey grey-icon"></b>
+                                            <i class=""></i>
+                                            <div class="subMenu">
+                                                <div ng-repeat="school in schools" ng-click="setSchool($index)">{{school}}</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
                         </div>
                         <div class="footer-dialog">
-                            <div class="button-previous back-white left" onclick="movePopup($('.popup'),3)">
+                            <div class="button-previous back-white left" onclick="movePopup($('.dashboard-popup'),3)">
                                 Previous
                                 <i class="icon-bigarrow-left-black icon left"></i>
                             </div>
-                            <div class="button-next back-white left" onclick="movePopup($('.popup'),5)">
+                            <div class="button-next back-white left" onclick="movePopup($('.dashboard-popup'),5)">
                                 Next
                                 <i class="icon-bigarrow-right-black icon right"></i>
                             </div>
             
-                            <div class="button-save back-green right" onclick="disparition($('.popup'))" ng-click="save()">Save & Close</div>
+                            <div class="button-save back-green right" onclick="disparition($('.dashboard-popup'))" ng-click="save()">Save & Close</div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-wrapper">
+                    <div class="section section5">
+                        <div class="header">
+                            <span class"title">Did you know: XX% of the la population love hamburgers<i class="icon-x-black close" onclick="disparition($('.dashboard-popup'))"></i></span>
+                        </div>
+                        <div class="content-dialog">
+                            <div class="content">
+                                <steps nbr-steps="5" first-connect="true" message="messageStep"></steps>
+                            </div>
+                        </div>
+                        <div class="selectable skills">
+                            <div class="selectable-title first">
+                                <div class="left link" onclick="simpleSlideEffect($('.skills .selectable-button'),$('.skills .selectable-content'))">
+                                    <div class="selectable-button" >
+                                        <div class="icon-plus"></div>
+                                        <div class="icon-minus"></div>
+                                    </div>
+                                    <span>Skills</span>
+                                </div>
+                                <div class="right icon-completed">
+                                    <i ng-show="skillState.completed" class="icon-check-big-green"></i>
+                                    <i ng-hide="skillState.completed" class="icon-minus-round"></i>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="selectable-content">
+                                <div class="check-box-1" ng-repeat="skill in skillsList">
+                                    <input id="skill-{{$index}}" type="checkbox" ng-checked="skill.checked"/>
+                                    <label for="skill-{{$index}}" ng-click="selectRemoveSkills(skill.id)"><b>{{skill.Name}}</b><span> &minus; {{skill.Description}}</span></label>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                        <div class="selectable technologies">
+                            <div class="selectable-title first">
+                                <div class="left link" onclick="simpleSlideEffect($('.technologies .selectable-button'),$('.technologies .selectable-content'))">
+                                    <div class="selectable-button">
+                                        <div class="icon-plus"></div>
+                                        <div class="icon-minus"></div>
+                                    </div>
+                                    <span>Tools & Technologies</span>
+                                </div>
+                                <div class="right icon-completed">
+                                    <i ng-show="technologyState.completed" class="icon-check-big-green"></i>
+                                    <i ng-hide="technologyState.completed" class="icon-minus-round"></i>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="selectable-content">
+                                <div class="check-box-1" ng-repeat="technology in technologiesList">
+                                    <input id="technology-{{$index}}" type="checkbox" ng-checked="technology.checked"/>
+                                    <label for="technology-{{$index}}" ng-click="selectRemoveTech(technology.id)"><b>{{technology.Name}}</b><span> &minus; {{technology.Description}}</span></label>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                        <div class="selectable goals">
+                            <div class="selectable-title first">
+                                <div class="left link" onclick="simpleSlideEffect($('.goals .selectable-button'),$('.goals .selectable-content'))">
+                                    <div class="selectable-button">
+                                        <div class="icon-plus"></div>
+                                        <div class="icon-minus"></div>
+                                    </div>
+                                    <span>Career Goals</span>
+                                </div>
+                                <div class="right icon-completed">
+                                    <i ng-show="goalState.completed" class="icon-check-big-green"></i>
+                                    <i ng-hide="goalState.completed" class="icon-minus-round"></i>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="selectable-content">
+                                <div class="left">
+                                    <div class="message medium"><span>whats your employment status?</span><span class="right optional">optional</span></div>
+                                    <div class="medium select toggleMenu left">
+                                        <span class="title">Full-Time Employement</span><b class="icon-bigarrow-bottom-grey grey-icon"></b>
+                                        <i class=""></i>
+                                        <div class="subMenu">
+                                            <div ng-repeat="employ in empoyements" select data-value="employ" data-elem="selectedEmployement">{{employ}}</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="left">
+                                    <div class="message medium"><span>what do you want to be?</span><span class="right optional">optional</span></div>
+                                    <div class="input-button medium">
+                                        <input placeholder="Enter Desired Title"/>
+                                    </div>
+                                </div>
+                                
+                                <div class="right">
+                                    <div class="message medium"><span>what industry do you love?</span><span class="right optional">optional</span></div>
+                                    <div class="medium select toggleMenu left">
+                                        <span class="title">Choose Industry</span><b class="icon-bigarrow-bottom-grey grey-icon"></b>
+                                        <i class=""></i>
+                                        <div class="subMenu">
+                                            <div ng-repeat="industry in industries" select data-value="industry" data-elem="selectedIndustry">{{industry}}</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                        <div class="footer-dialog">
+                            <div class="button-previous back-white left" onclick="movePopup($('.dashboard-popup'),4)">
+                                Previous
+                                <i class="icon-bigarrow-left-black icon left"></i>
+                            </div>
+                            <div class="button-next back-white left selected">
+                                Next
+                                <i class="icon-bigarrow-right-black icon right"></i>
+                            </div>
+            
+                            <div class="button-save back-green right" onclick="disparition($('.dashboard-popup'))" ng-click="save()">Save & Close</div>
                             <div class="clear"></div>
                         </div>
                     </div>

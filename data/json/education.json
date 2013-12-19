@@ -1,14 +1,20 @@
 [{
+    "Type":"Phd",
+    "Institution":"University",
     "Name":"Doctorate, Journalism",
     "Place":"Harvard University, Cambridge",
     "Period":"June 2013 - Present"
 },
  {
+    "Type":"Bachelor Degree",
+    "Institution":"University",
     "Name":"BA, Journalism",
     "Place":"Harvard University, Cambridge",
     "Period":"Septembr 2008 - June 2013"
 },
  {
+    "Type":"Phd Degree",
+    "Institution":"University",
     "Name":"Doctorate, Journalism",
     "Place":"Harvard University, Cambridge",
     "Period":"June 2013 - Present"
