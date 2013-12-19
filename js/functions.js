@@ -52,6 +52,13 @@ Array.prototype.getById=function(value,index){
     }
     return -1;
 }
+Array.prototype.replace=function(newArray){
+    this.splice(0,this.length);
+    //array is empty now
+    for(var i=0;i<newArray.length;i++){
+        this.push(newArray[i]);
+    }
+}
 //Variable for the months
 var monthNames = [ "January", "February", "March", "April", "May", "June",
     "July", "August", "September", "October", "November", "December" ];

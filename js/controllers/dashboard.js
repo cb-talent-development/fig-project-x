@@ -1,16 +1,16 @@
-function DashboardCtr($scope, $http,pagination) {
+function DashboardCtr($scope, $http,pagination,register) {
     /*
     Save function
     */
-    $scope.save=function(){
+    /*$scope.save=function(){
         checkCursorPosition('.resume','.icon-cursor-red','vertical',true);
         //...
         console.log("save");
-    }
-    /*
-    Check Job Title
-    */
-    $scope.checkJobTitle=function(){        
+    }*/
+    //
+    //Check Job Title
+    //
+   /* $scope.checkJobTitle=function(){        
         console.log($scope.jobTitle);
         if($scope.jobTitle.length>=5){
             //...
@@ -29,9 +29,9 @@ function DashboardCtr($scope, $http,pagination) {
             $scope.schoolCorrected=$scope.schools[0];
         }
     }
-    /*
-    Setter
-    */
+    //
+    //Setter
+    //
     $scope.setJobPhase=function(phase){
         $scope.user.JobPhase=phase;
     }
@@ -45,6 +45,7 @@ function DashboardCtr($scope, $http,pagination) {
         $scope.jobTitle=$scope.jobTitleCorrected;
         $scope.correctionJob="done";
     }
+    */
     /*
     Page Click
     */
@@ -95,7 +96,7 @@ function DashboardCtr($scope, $http,pagination) {
     $scope.loadInfo=function(){
         $http.get("data/json/user-full.json").success(function(data) {
             $scope.user=data;
-            $scope.initInput();
+            $scope.register.initInput(user);
 	   });
     }
     /*
@@ -104,6 +105,7 @@ function DashboardCtr($scope, $http,pagination) {
     $scope.loadWorkExperience=function(){
         $http.get("data/json/workexperience.json").success(function(data) {
             $scope.workExperiences=data;
+            $scope.register.workExperiences=data;
 	   });
     }
     /*
@@ -112,9 +114,7 @@ function DashboardCtr($scope, $http,pagination) {
     $scope.loadEducation=function(){
         $http.get("data/json/education.json").success(function(data) {
             $scope.educations=data; 
-            $scope.institutionType=$scope.educations[0].Institution;
-            $scope.degreeType=$scope.educations[0].Type;
-            $scope.schoolName=$scope.educations[0].Place;
+            $scope.register.setEducation($scope.educations);
 	   });
     }
     /*
@@ -123,6 +123,7 @@ function DashboardCtr($scope, $http,pagination) {
     $scope.loadCareerGoals=function(){
         $http.get("data/json/careergoals.json").success(function(data) {
             $scope.careerGoals=data;
+            $scope.register.careerGoals=data;
 	   });
     }
     /*
@@ -131,15 +132,7 @@ function DashboardCtr($scope, $http,pagination) {
     $scope.loadSkill=function(){
         $http.get("data/json/skills.json").success(function(data) {
             $scope.skills=data; 
-            for(var i=0;i<$scope.skills.length;i++){
-                $scope.skillsSelected.push($scope.skills[i]);
-                for(var j=0;j<$scope.skillsList.length;j++){
-                    if($scope.skills[i]["id"]==$scope.skillsList[j]["id"]){
-                        $scope.skillsList[j].checked=true;
-                        break;
-                    }
-                }
-            }
+            $scope.register.setSkills($scope.skills);
 	   });
     }
     /*
@@ -149,18 +142,10 @@ function DashboardCtr($scope, $http,pagination) {
         $http.get("data/json/technologies.json").success(function(data) {
             $scope.technologies=data;
             console.log(data);
-            for(var i=0;i<$scope.technologies.length;i++){
-                $scope.technologiesSelected.push($scope.technologies[i]);
-                for(var j=0;j<$scope.technologiesList.length;j++){
-                    if($scope.technologies[i]["id"]==$scope.technologiesList[j]["id"]){
-                        $scope.technologiesList[j].checked=true;
-                        break;
-                    }
-                }
-            }
+            $scope.register.setTechnologies($scope.technologies);
 	   });
     }
-
+    /*
     //Input initialisation
     $scope.initInput=function(){
         $scope.selectedAge="Select Age Range";
@@ -169,12 +154,13 @@ function DashboardCtr($scope, $http,pagination) {
         $scope.zipcode=$scope.user.Zipcode;
         $scope.jobTitle=$scope.user.JobTitle;
         $scope.salaryValue=$scope.user.Income;
-    }
+    }*/
+    //*//
     //Add Skill/technology
-    $scope.sendSkillTech=function(url,input,values,name){
+    $scope.sendSkillTech=function(url,input,name){
         input.show=false;
         if(input.value!=""){
-                values.push({"Name":input.value});
+                $scope.register.addskillTech(name,{"Name":input.value});
                 input.value="";
                 //TODO:...
                 $http.post(url,{name:input.value})
@@ -192,7 +178,7 @@ function DashboardCtr($scope, $http,pagination) {
         console.log($scope.inputSkill);
         if($scope.inputSkill.show){
             var url="test";
-            $scope.sendSkillTech(url,$scope.inputSkill,$scope.skills,"skill");
+            $scope.sendSkillTech(url,$scope.inputSkill,"skill");
         }
         else{
             $scope.inputSkill.show=true;
@@ -202,12 +188,13 @@ function DashboardCtr($scope, $http,pagination) {
         console.log($scope.inputTechnology);
         if($scope.inputTechnology.show){
             var url="test";
-            $scope.sendSkillTech(url,$scope.inputTechnology,$scope.technologies,"technology");
+            $scope.sendSkillTech(url,$scope.inputTechnology,"technology");
         }
         else{
             $scope.inputTechnology.show=true;
         }
     }
+    /*
     //add remove element into selected skills/technologies
     //we need three lists: 1) to show, 2)the saved one 3)the choosen one
     $scope.selectRemoveTech=function(id){
@@ -234,9 +221,9 @@ function DashboardCtr($scope, $http,pagination) {
         }
         ($scope.skillsSelected.length>0)?$scope.skillState.completed=true:$scope.skillState.completed=false;
     }
-    /*
-    Save function that does everything
-    */
+    ////////////////////////////////////////
+    // Save function that does everything //
+    ////////////////////////////////////////
     $scope.save=function(){
         //HUGE FUNCTION
         //skills
@@ -248,7 +235,7 @@ function DashboardCtr($scope, $http,pagination) {
         
         //goals
         //...
-    }
+    }*/
     /*
         Constructor
     */
@@ -268,10 +255,16 @@ function DashboardCtr($scope, $http,pagination) {
         $scope.loadTechnologies();
         $scope.loadCareerGoals();
         //page
+        $scope.register=new register($scope);
+        
         $scope.page="dashboard";
         //Message
         $scope.jobResulstTitle="Latest Job for You";
-        $scope.savedContentTitle="Saved Content";        
+        $scope.savedContentTitle="Saved Content";  
+        
+        $scope.inputSkill=input();
+        $scope.inputTechnology=input();
+        /*
         //Part job title
         $scope.salaries=["$25,000-$50,000","$50,000-$75,000","$75,000-$100,000","$125,000-$150,000"];
         $scope.showErrorJob=false;
@@ -306,7 +299,7 @@ function DashboardCtr($scope, $http,pagination) {
             "employement":input(),
             "desired":input(),
             "industry":input()
-        }
+        }*/
         //Init eventual effects
         $scope.$on('$includeContentLoaded', function(){
             initEffect();

@@ -65,15 +65,19 @@ dir.directive('tempP', function() {
 
 dir.directive('select',[function(){
     return{
+        scope:{
+            elem: '=',
+            value: '='
+        },
         link: function (scope, element, attrs,controller) {
-            scope.value=attrs.value;
-            scope.elem=attrs.elem;
-            var content=scope.$eval(scope.value);
-            element.text(content);
+            //scope.value=attrs.value;
+            //scope.elem=attrs.elem;
+            //console.log(scope);
+            //var content=scope.$eval(scope.value);
+            element.text(scope.value);
             element.click(function(e){
-                var parent=scope.$parent;
-                parent.$apply(function(){
-                    parent[scope.elem]=content;
+                scope.$apply(function(scope){
+                    scope.elem=scope.value;
                 });
             });
         }
