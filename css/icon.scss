@@ -93,9 +93,9 @@ Arrow big
 }
 //
 .icon-check{
-    @include dimensionPosition( -273px, -56px, 22px, 22px, 1.0);
+    @include dimensionPosition( -273px, -56px, 24px, 24px, 1.0);
     @media only screen and (max-width: 768px){
-       @include dimensionPosition( -273px, -56px, 22px, 22px, 0.7);
+       @include dimensionPosition( -273px, -56px, 24px, 24px, 0.7);
 	}
 }
 .icon-pause{
@@ -1142,6 +1142,36 @@ STEPS
 		@include dimensionPosition(-1121px, -463px, 75px, 251px, 0.5);
 	}
 }
+.icon-step-1-grey{
+	@include dimensionPosition(-3px, -1716px, 75px, 252px, 0.94);
+	@media only screen and (max-width: 768px){
+	   @include dimensionPosition(-3px, -1716px, 75px, 252px, 0.5);
+	}
+}
+.icon-step-2-grey{
+	@include dimensionPosition(-256px, -1716px, 75px, 278px, 0.94);
+	@media only screen and (max-width: 768px){
+		@include dimensionPosition(-255px, -1716px, 75px, 278px, 0.5);
+	}
+}
+.icon-step-3-grey{
+	@include dimensionPosition(-537px, -1716px, 75px, 289px, 0.94);
+	@media only screen and (max-width: 768px){
+		@include dimensionPosition(-537px, -1716px, 75px, 289px, 0.5);
+	}
+}
+.icon-step-4-grey{
+	@include dimensionPosition(-829px, -1716px, 75px, 287px, 0.94);
+	@media only screen and (max-width: 768px){
+		@include dimensionPosition(-829px, -1716px, 75px, 287px, 0.5);
+	}
+}
+.icon-step-5-grey{
+	@include dimensionPosition(-1121px, -1716px, 75px, 251px, 0.94);
+	@media only screen and (max-width: 768px){
+		@include dimensionPosition(-1121px, -1716px, 75px, 251px, 0.5);
+	}
+}
 
 /*
 OTHER
@@ -1157,7 +1187,7 @@ OTHER
 	}
 }
 .icon-menu-white{
-	@include dimensionPosition(-55px, -427px, 19px, 31px, 1.0);
+	@include dimensionPosition(-55px, -427px, 20px, 31px, 1.0);
     @media only screen and (max-width: 768px){
 	   @include dimensionPosition(-55px, -427px, 25px, 31px, 0.7);
 	}
@@ -1570,5 +1600,33 @@ ICON SAVED
     @include dimensionPosition(-1045px,-739px,123px,114px,1);
     @media only screen and (max-width: 768px){
         @include dimensionPosition(-1045px,-739px,123px,114px,0.5);
+	}
+}
+/*
+ICON PRESENTATION (ONLY FOUR)
+*/
+
+.icon-locallyGrown-presentation{
+    @include dimensionPosition(-893px,-743px,117px,116px,0.6);
+    @media only screen and (max-width: 768px){
+        @include dimensionPosition(-893px,-743px,117px,116px,0.4);
+	}
+}
+.icon-careerScape-presentation{
+    @include dimensionPosition(-1045px,-739px,125px,114px,0.6);
+    @media only screen and (max-width: 768px){
+        @include dimensionPosition(-1045px,-739px,125px,114px,0.4);
+	}
+}
+.icon-article-presentation{
+    @include dimensionPosition(-1008px,-583px,128px,102px,0.6);
+    @media only screen and (max-width: 768px){
+        @include dimensionPosition(-1008px,-583px,128px,102px,0.4);
+	}
+}
+.icon-resumePro-presentation{
+    @include dimensionPosition(-1125px,-588px,119px,101px,0.64);
+    @media only screen and (max-width: 768px){
+        @include dimensionPosition(-1125px,-588px,119px,101px,0.44);
 	}
 }

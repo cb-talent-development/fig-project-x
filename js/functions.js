@@ -220,6 +220,7 @@ function checkUserInfo($scope,$http){
             }else{
                 window.user="none";
             }
+            window.user="none";
             $scope.user=window.user;
         }).error(function(data, status, headers, config) {
             window.user="none";
@@ -380,16 +381,19 @@ function simpleSlideEffect(button,elem){
         elem.slideUp(config.timeAnim);
     }
 }
-function slideEffect(button,elem,height){
+function slideEffect(button,elem,height,textOpen,textClose){
     if(!button.hasClass("selected")){
         button.addClass("selected");
     }
     else{
         button.removeClass("selected");
     }
+    //slide down
     if (!elem.is(':visible')) {
         elem.css('display','block');
         elem.animate({'opacity':'+=1.0','height':height+'px'},config.timeAnim);
+        if(textOpen)
+            button.find("span").text(textOpen);
        // elem.slideDown(config.timeAnim);
     }
     // If closed, close the others and open it
@@ -397,9 +401,8 @@ function slideEffect(button,elem,height){
         elem.animate({'opacity':'-=1.5','height':'0px'},config.timeAnim,function(){
             elem.css('display','none');
         });
-        //elem.slideUp(config.timeAnim);
-
-
+        if(textClose)
+            button.find("span").text(textClose);
     }
 }
 /*
@@ -453,7 +456,7 @@ function apparition(elem){
     section.css('top','-1000px')
     section.css("display","block");
     section.animate({top: '0px'},400);
-	$("html, body").animate({ scrollTop: 0 }, 600);
+    scrollTo($(".dialog"))
 }
 function disparition(elem){
     section=elem.find(".section");
@@ -461,6 +464,8 @@ function disparition(elem){
        section.css("display","none");
        elem.fadeOut(200);             
     });
+    $("html, body").css('overflow','scroll');
+
 }
 /*
 Functions move cursor
@@ -552,4 +557,92 @@ function initEffect(){
     //Initialization maxime
     initMaxime()
 
+}
+/*
+Preview Picture
+*/
+//preview
+function createPreview(file,preview){
+        var reader = new FileReader();
+        reader.onload = function() {
+            preview.css('background-image','url('+this.result+')');             
+        };
+         
+        reader.readAsDataURL(file);
+}
+var allowedTypes = ['png', 'jpg', 'jpeg', 'gif'];
+function showPreview(files,preview){
+    hasChanged=true;
+    if(window.File && window.FileList && window.FileReader){
+        console.log(files);
+        if(files!=undefined){
+            for(var i=0;i<files.length;i++){
+                var file=files[i];
+                
+                var imgType = file.name.split('.');
+                imgType = imgType[imgType.length - 1];
+                imgType=imgType.toLowerCase();
+                if(allowedTypes.indexOf(imgType) != -1) {
+                    createPreview(file,preview);
+                }
+                else{
+                    alert("wrong format");
+                }
+            }
+        }
+    }
+    else{
+        alert("Preview and upload picture not yet supported for this browser, try to update your browser");
+    }
+}
+/*
+Facebook POST
+*/
+function postToFeed(url,description,title,picture) {
+        var obj = {
+          method: 'feed',
+          link: url,
+          picture: picture,
+          name: title,
+          caption: '',
+          description: description
+        };
+
+        function callback(response) {
+			console.log("posted");
+
+        }
+
+        FB.ui(obj, callback);
+}
+/*
+Scroll top + open login
+*/
+function scrollTo(elem,fast){
+    if(fast)
+        time=0;
+    else
+        time=config.timeAnim;
+    if(elem){
+        $("body,html").animate({  
+                scrollTop:elem.offset().top-70 
+        },time);  
+    }
+}
+/*
+Initialisation
+*/
+function init($scope,register){
+    if(!window.register && !document.register){
+        $scope.register=new register($scope);
+        window.register=$scope.register;
+        document.register=window.register
+    }
+    else if(window.register){
+        $scope.register=window.register;
+    }
+    else if(document.register){
+        $scope.register=document.register;
+    }
+    //console.log($scope.register);
 }

@@ -2,8 +2,9 @@
 <div class="dashboard">
     <div class="resume">
         <div class="left person">
-            <i class="icon-pencil link" onclick="apparition($('.dashboard-popup'))"></i>
+            <i class="icon-pencil link" onclick="apparition($('.dashboard-popup'));movePopup($('.dashboard-popup'),7,true)"></i>
             <div class="picture" style="background: url('{{user.Media.Url}}') center no-repeat;background-size:160%;"></div>
+            <i class="icon-pencil edit-name link" onclick="apparition($('.dashboard-popup'));movePopup($('.dashboard-popup'),1,true)"></i>
             <div class="name">{{user.Name}}</div>
             <div class="mail">{{user.Mail}}</div>
 
@@ -11,22 +12,22 @@
         <div class="left presentation">
             <table>
                 <tr>
-                    <td><div class="icon-pencil link" onclick="apparition($('.dashboard-popup'));movePopup($('.dashboard-popup'),3,true)"></div></td>
+                    <td><div class="icon-pencil link" onclick="apparition($('.dashboard-popup'));movePopup($('.dashboard-popup'),4,true)"></div></td>
                     <td><div class="icon-suitcase-red logo"></div></td>
                     <td><div>{{user.JobTitle}}</div></td>
                 </tr>
                 <tr>
-                    <td><div class="icon-pencil link" onclick="apparition($('.dashboard-popup'));movePopup($('.dashboard-popup'),1,true)"></div></td>
+                    <td><div class="icon-pencil link" onclick="apparition($('.dashboard-popup'));movePopup($('.dashboard-popup'),2,true)"></div></td>
                     <td><div class="icon-building logo"></div></td>
                     <td><div>{{user.Website}}</div></td>
                 </tr>
                 <tr>
-                    <td><div class="icon-pencil link" onclick="apparition($('.dashboard-popup'));movePopup($('.dashboard-popup'),1,true)"></div></td>
+                    <td><div class="icon-pencil link" onclick="apparition($('.dashboard-popup'));movePopup($('.dashboard-popup'),2,true)"></div></td>
                     <td><div class="icon-location logo"></div></td>
                     <td><div>{{user.State}},&nbsp;{{user.Zipcode}}</div></td>
                 </tr>
                 <tr>
-                    <td><div class="icon-pencil link" onclick="apparition($('.dashboard-popup'));movePopup($('.dashboard-popup'),3,true)"></div></td>
+                    <td><div class="icon-pencil link" onclick="apparition($('.dashboard-popup'));movePopup($('.dashboard-popup'),4,true)"></div></td>
                     <td><div class="icon-dollars logo"></div></td>
                     <td><div>{{user.Income}}</div></td>
                 </tr>
@@ -34,7 +35,7 @@
         </div>
         <div class="right job-phase">
             <div class="title">
-                <div class="icon-pencil inline link" onclick="apparition($('.dashboard-popup'));movePopup($('.dashboard-popup'),2,true);            checkCursorPosition('.section2','.icon-cursor-orange-down','horizontal',true);"></div>
+                <div class="icon-pencil inline link" onclick="apparition($('.dashboard-popup'));movePopup($('.dashboard-popup'),3,true);            checkCursorPosition('.section2','.icon-cursor-orange-down','horizontal',true);"></div>
                 <div class="txt inline">What Phase of the Job Search Are You?</div>
             </div>
             <div class="phase-content">
@@ -122,7 +123,7 @@
         <div class="col-left left">
             <div class="education">
                 <div class="title-section">
-                    <span class="icon-pencil link" onclick="apparition($('.dashboard-popup'));movePopup($('.dashboard-popup'),4,true);"></span>
+                    <span class="icon-pencil link" onclick="apparition($('.dashboard-popup'));movePopup($('.dashboard-popup'),5,true);"></span>
                     <span class="title">Education</span>
                 </div>
                 <div class="content">
@@ -142,7 +143,7 @@
             </div>
             <div class="career-goals">
                 <div class="title-section">
-                    <span class="icon-pencil link" onclick="apparition($('.dashboard-popup'));movePopup($('.dashboard-popup'),5,true)"></span>
+                    <span class="icon-pencil link" onclick="apparition($('.dashboard-popup'));movePopup($('.dashboard-popup'),6,true)"></span>
                     <span class="title">Career Goals</span>
                 </div>
                 <div class="content">
@@ -154,7 +155,7 @@
         <div class="col-right right">
             <div class="skills">
                 <div class="title-section">
-                    <span class="icon-pencil link" onclick="apparition($('.dashboard-popup'));movePopup($('.dashboard-popup'),5,true)"></span>
+                    <span class="icon-pencil link" onclick="apparition($('.dashboard-popup'));movePopup($('.dashboard-popup'),6,true)"></span>
                     <span class="title">Skills</span>
                 </div>
                 <div class="content">
@@ -168,7 +169,7 @@
             </div>
             <div class="technology">
                 <div class="title-section">
-                    <span class="icon-pencil link" onclick="apparition($('.dashboard-popup'));movePopup($('.dashboard-popup'),5,true)"></span>
+                    <span class="icon-pencil link" onclick="apparition($('.dashboard-popup'));movePopup($('.dashboard-popup'),6,true)"></span>
                     <span class="title">Tools & Technology</span>
                 </div>
                 <div class="content">

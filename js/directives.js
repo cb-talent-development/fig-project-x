@@ -124,11 +124,21 @@ dir.directive('steps', function(){
                 message:'='
         },
 		link: function(scope, element, attrs){
+            
             var message,string;
-            if(attrs.message){
+            if(scope.message){
                 message=scope.message;
             }
-			for(var i = attrs.nbrSteps; i>0 && attrs.firstConnect; i--){
+            for(var i = 5; i>scope.nbrSteps && scope.firstConnect; i--){
+                if(message){
+                    string=message[i-1];
+                }
+                else{
+                    string="Step "+i;
+                }
+				element.find(".etape").prepend("<div class='icon-step-"+i+"-grey'><span>"+string+"</span></div>");
+			}
+            for(var i = scope.nbrSteps; i>0 && scope.firstConnect; i--){
                 if(message){
                     string=message[i-1];
                 }

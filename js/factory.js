@@ -5,7 +5,6 @@ module.factory('register',['$http',function($http) {
         this.init();
     }
     register.prototype.init=function(){
-                
         //list to display (if too long, should be loaded on the server)
         this.lists={
             'salaries':["$25,000-$50,000","$50,000-$75,000","$75,000-$100,000","$125,000-$150,000"],
@@ -33,17 +32,22 @@ module.factory('register',['$http',function($http) {
                 'name':input(),
                 'corrected':'',
                 'isCorrected':true,
-                'institutionType':input(),
-                'degreeType':input()
+                'institutionType':input("Type of Institution"),
+                'degreeType':input("Degree Type")
             },
+            'email':input(),
+            'firstName':input(),
+            'lastName':input(),
+            'password':input(),
+            'confirmPassword':input(),
             'gender':input(),
-            'salary':input(),
+            'salary':input("Choose Your Salary"),
             'age':input("Select Age Range"),
             'company':input("Choose Your Company"),
             'address':{
                 'street':input(),
                 'zipcode':input(),
-                'state':input(),
+                'state':input("State"),
                 'apt':input(),
                 'city':input()
                 
@@ -74,6 +78,8 @@ module.factory('register',['$http',function($http) {
             }
             
         }
+        this.user='none';
+        console.log(this);
     }
     /*
     Save function that does everything
@@ -93,22 +99,36 @@ module.factory('register',['$http',function($http) {
         
         //change user Info so that the changing can be seen 
         //...
-        //call api server and once the response is get: this.user=response.user (only ok for the general data)
+        //call api server and once the response is get: this.user=response.user + scope.user=user(only ok for the general data)
+        //recontruct user
         //...
+        if(this.user!='none'){
+           disparition($('.dashboard-popup')); 
+        }
+        else{
+            alert("Make sure that you have filled everything...");
+        }
     }
     //Input initialisation
     register.prototype.initInput=function(user){
+        console.log("INIT INPUT");
         this.user=user;
+        if(user && user != 'none'){
         //address
-        this.userInfo.address.state.value=this.user.State;
-        this.userInfo.address.zipcode.value=this.user.Zipcode;
-        //gender
-        this.userInfo.gender.value=this.user.Gender;
-        //job
-        this.userInfo.job.name.value=this.user.JobTitle;
-        //salary
-        this.userInfo.salary.value=this.user.Income;
-        //...
+            this.userInfo.address.state.value=this.user.State;
+            this.userInfo.address.zipcode.value=this.user.Zipcode;
+            //gender
+            this.userInfo.gender.value=this.user.Gender;
+            //job
+            this.userInfo.job.name.value=this.user.JobTitle;
+            //salary
+            this.userInfo.salary.value=this.user.Income;
+            //...
+            this.userInfo.firstName.value=this.user.FirstName;
+            this.userInfo.lastName.value=this.user.LastName;
+            this.userInfo.email.value=this.user.Mail;
+            //this.user.Mail="lol@lol.com";
+        }
     }
     /*
     Check Job Title
@@ -224,5 +244,83 @@ module.factory('register',['$http',function($http) {
         }
         (this.userInfo.skills.selected.length>0)?this.userInfo.skills.state.completed=true:this.userInfo.skills.state.completed=false;
     }
+    register.prototype.facebookConnect=function(){
+        alert("facebook connect !");
+    }
+    register.prototype.googleConnect=function(){
+        alert("google connect !");
+    }
     return register;
 }]);
+
+module.factory('formData',function(){
+    function formData($scope){
+        this.$scope=$scope;
+        if(!window.FormData){
+            alert("Your browser does not support FormData, try to update it");
+        }
+        else{
+            this.form=new FormData();
+        }
+    }
+    formData.prototype.setData=function(datas){
+        for(data in datas){
+            if(typeof datas[data]==='object'){
+                console.log(datas[data]);
+                if(datas[data].length !=undefined){
+                    console.log("array");
+                    if(datas[data].length>0){
+                        for(var i=0;i<datas[data].length;i++){
+                            var elem=datas[data][i];
+                            for(key in elem){
+                                this.form.append(data+"["+i+"]["+key+"]",elem[key]);
+                            }
+                        }
+                    }
+                }
+                else{
+                    console.log("json");
+                   for(key in datas[data]){
+                        this.form.append(data+"["+key+"]",datas[data][key]);
+                    } 
+                }
+            }
+            else{
+                this.form.append(data,datas[data]);
+            }
+        }
+    }
+    formData.prototype.setFile=function(files){
+        //var files=fileInput[0].files;
+        if(files.length!=0){
+            this.form.append('file',files[0]);
+        }    
+    }
+    formData.prototype.send=function(url,callback,progressFunction){
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST',url); 
+        progress={};
+        var self=this;
+        xhr.onload = function() {
+                if (callback && typeof(callback) === "function") {  
+                    self.$scope.$apply(function(){
+                        console.log(xhr.response);
+                        callback.call(this,JSON.parse(xhr.response));
+                    });
+                }
+        };
+        xhr.upload.onprogress = function(e) {
+                progress.value = e.loaded;
+                progress.max = e.total;
+                console.log(progress);
+                if (progressFunction && typeof(progressFunction) === "function") {
+                    self.$scope.$apply(function(){
+                        progressFunction.call(this,progress);
+                    });
+                }
+        };
+        xhr.send(this.form);
+
+    }
+    return  formData;
+});

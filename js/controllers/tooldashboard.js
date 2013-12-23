@@ -1,8 +1,9 @@
-function ToolDashBoardCtr($scope, $http) {
+function ToolDashBoardCtr($scope, $http,register) {
     /*
     Constructor
     */
     $scope.init=function(){
+        init($scope,register);
         checkUserInfo($scope,$http);
         $scope.paths=[{
             "txt":" Career Tools",

@@ -1,52 +1,5 @@
 function DashboardCtr($scope, $http,pagination,register) {
     /*
-    Save function
-    */
-    /*$scope.save=function(){
-        checkCursorPosition('.resume','.icon-cursor-red','vertical',true);
-        //...
-        console.log("save");
-    }*/
-    //
-    //Check Job Title
-    //
-   /* $scope.checkJobTitle=function(){        
-        console.log($scope.jobTitle);
-        if($scope.jobTitle.length>=5){
-            //...
-            $scope.showErrorJob=true;
-            $scope.correctionJob="not-done";
-            $scope.jobTitles=["Public Relations Specialist","Sales Manager","Mcdonald Manager","Donut Seller"];
-            $scope.jobTitleCorrected=$scope.jobTitles[0];
-        }
-    }
-    $scope.checkSchool=function(){
-         if($scope.schoolName.length>=3){
-            //...
-            $scope.showErrorSchool=true;
-            $scope.correctionSchool="not-done";
-            $scope.schools=["Harvard","Princeton","MIT"];
-            $scope.schoolCorrected=$scope.schools[0];
-        }
-    }
-    //
-    //Setter
-    //
-    $scope.setJobPhase=function(phase){
-        $scope.user.JobPhase=phase;
-    }
-    $scope.setSchool=function(id){
-        $scope.schoolCorrected=$scope.schools[id];
-        $scope.schoolName=$scope.schoolCorrected;
-        $scope.correctionSchool="done";
-    }
-    $scope.setJobTitle=function(id){
-        $scope.jobTitleCorrected=$scope.jobTitles[id];
-        $scope.jobTitle=$scope.jobTitleCorrected;
-        $scope.correctionJob="done";
-    }
-    */
-    /*
     Page Click
     */
     $scope.pageClick=function(page,type,class_element){
@@ -96,7 +49,7 @@ function DashboardCtr($scope, $http,pagination,register) {
     $scope.loadInfo=function(){
         $http.get("data/json/user-full.json").success(function(data) {
             $scope.user=data;
-            $scope.register.initInput(user);
+            $scope.register.initInput(data);
 	   });
     }
     /*
@@ -141,105 +94,14 @@ function DashboardCtr($scope, $http,pagination,register) {
     $scope.loadTechnologies=function(){
         $http.get("data/json/technologies.json").success(function(data) {
             $scope.technologies=data;
-            console.log(data);
             $scope.register.setTechnologies($scope.technologies);
 	   });
     }
     /*
-    //Input initialisation
-    $scope.initInput=function(){
-        $scope.selectedAge="Select Age Range";
-        $scope.selectedState=$scope.user.State;
-        $scope.gender=$scope.user.Gender;
-        $scope.zipcode=$scope.user.Zipcode;
-        $scope.jobTitle=$scope.user.JobTitle;
-        $scope.salaryValue=$scope.user.Income;
-    }*/
-    //*//
-    //Add Skill/technology
-    $scope.sendSkillTech=function(url,input,name){
-        input.show=false;
-        if(input.value!=""){
-                $scope.register.addskillTech(name,{"Name":input.value});
-                input.value="";
-                //TODO:...
-                $http.post(url,{name:input.value})
-                .success(function(data){
-                    console.log(data);
-                    //use callback to add it to the skillsSelected
-                })
-                .error(function(data){
-                    console.log(data);
-                });
-        }
-    }
-    
-    $scope.addSkill=function(){
-        console.log($scope.inputSkill);
-        if($scope.inputSkill.show){
-            var url="test";
-            $scope.sendSkillTech(url,$scope.inputSkill,"skill");
-        }
-        else{
-            $scope.inputSkill.show=true;
-        }
-    }
-    $scope.addTech=function(){
-        console.log($scope.inputTechnology);
-        if($scope.inputTechnology.show){
-            var url="test";
-            $scope.sendSkillTech(url,$scope.inputTechnology,"technology");
-        }
-        else{
-            $scope.inputTechnology.show=true;
-        }
-    }
-    /*
-    //add remove element into selected skills/technologies
-    //we need three lists: 1) to show, 2)the saved one 3)the choosen one
-    $scope.selectRemoveTech=function(id){
-        var elem=$scope.technologiesList.getById(id);
-        index=$scope.technologiesSelected.indexOfObject(elem);
-        if(index>-1){
-            //already selected
-            $scope.technologiesSelected.splice(index, 1);
-        }
-        else{
-            $scope.technologiesSelected.push(elem);
-        }
-        ($scope.technologiesSelected.length>0)?$scope.technologyState.completed=true:$scope.technologyState.completed=false;
-    }
-    $scope.selectRemoveSkills=function(id){
-        var elem=$scope.skillsList.getById(id);
-        index=$scope.skillsSelected.indexOfObject(elem);
-        if(index>-1){
-            //already selected
-            $scope.skillsSelected.splice(index, 1);
-        }
-        else{
-            $scope.skillsSelected.push(elem);
-        }
-        ($scope.skillsSelected.length>0)?$scope.skillState.completed=true:$scope.skillState.completed=false;
-    }
-    ////////////////////////////////////////
-    // Save function that does everything //
-    ////////////////////////////////////////
-    $scope.save=function(){
-        //HUGE FUNCTION
-        //skills
-        //TODO: save skills
-        $scope.skills=$scope.skillsSelected;
-        //technologies
-        //TODO: save tech
-        $scope.technologies=$scope.technologiesSelected;
-        
-        //goals
-        //...
-    }*/
-    /*
         Constructor
     */
     $scope.init=function(){
+        init($scope,register);
         $scope.paths=[{
             "txt":" Dashboard",
             "color":"black"
@@ -255,7 +117,6 @@ function DashboardCtr($scope, $http,pagination,register) {
         $scope.loadTechnologies();
         $scope.loadCareerGoals();
         //page
-        $scope.register=new register($scope);
         
         $scope.page="dashboard";
         //Message
@@ -264,42 +125,7 @@ function DashboardCtr($scope, $http,pagination,register) {
         
         $scope.inputSkill=input();
         $scope.inputTechnology=input();
-        /*
-        //Part job title
-        $scope.salaries=["$25,000-$50,000","$50,000-$75,000","$75,000-$100,000","$125,000-$150,000"];
-        $scope.showErrorJob=false;
-        $scope.companyName="Enter Company Name"
         
-        //companues
-        $scope.companies=["McKinsey","Bain","BCG","Fig"];
-        //states
-        $scope.states=["IL","NY","NJ"];
-        //degrees
-        $scope.degrees=["Master Degree","Bacheloper Degree","Phd"]
-        //institution
-        $scope.institutions=["College","Upper High School","Formation"];
-        //ages
-        //messages step=
-        $scope.messageStep=["THE BASICS","JOB PHASE","OCCUPATION","EDUCATION","SKILLS & ABILITIES"];
-        $scope.ages=["18-25 Years Old","26-30 Years Old","31-35 Years Old"];
-        //skill/technology
-        $scope.inputSkill=input();
-        $scope.inputTechnology=input();
-        //state
-        $scope.skillState={'completed':false};
-        $scope.technologyState={'completed':false};
-        $scope.goalState={'completed':false};
-        
-        $scope.skillsList=config.skillsList;
-        $scope.skillsSelected=[];
-        $scope.technologiesSelected=[];
-        $scope.technologiesList=config.technologiesList;
-        
-        $scope.goalsInput={
-            "employement":input(),
-            "desired":input(),
-            "industry":input()
-        }*/
         //Init eventual effects
         $scope.$on('$includeContentLoaded', function(){
             initEffect();

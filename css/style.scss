@@ -4,32 +4,41 @@
 $navcolor: rgb(9,51,91);
 $darkBlue:rgb(8,46,82);
 $color-promo:#104E9B;
-//color box
-//... lot to continue
-$blue-1: #00B2EE;
-$blue-2: #104E9B;
-$blue-3: #104E9B;
-$blue-4: #104E9B;
-$blue-5: #104E9B;
-$blue-6: #104E9B;
-$green-1: #66CDAA;
-$green-2: #66CDAA;
-$green-3: #008B00;
-$green-4: #66CDAA;
-$orange-1: #EEAD0E;
-$orange-2: #EEAD0E;
-$orange-3: #EEAD0E;
-$orange-4: #EEAD0E;
-$red-1: #EE6363;
-$red-2: red;
-$red-3: #EE6363;
-$red-4: darkred;
-$pink-1: #CD6090;
-$pink-2: #CD6090;
-$pink-3: #CD6090;
+//colors
+$lightnavcolor: rgb(29,71,111);
+$darknavcolor: rgb(0,11,61);
+$boxBlue: #00B2EE;
+$boxGreen: #008B00;
+$boxYellow: #EEAD0E;
+$boxRed: #EE6363;
+$boxPurple: #CD6090;
+$boxLightGreen: #66CDAA;
+$boxDarkBlue: #104E9B;
+$lightBlue: rgb(204,214,222);
+$grey: rgb(167,167,167);
 
-$orange: rgb(244,125,61);
-$green: rgb(112, 194, 57);
+$blue-1: #00D2FF;
+$blue-2: #00A6FF;
+$blue-3: #1B96D9;
+$blue-4: #0169CB;
+$blue-5: #003D7B;
+$blue-6: #41A9E0;
+$green-1: #64D438;
+$green-2: #39BD59;
+$green-3: #177230;
+$green-4: #39B059;
+$orange-1: #FECB1B;
+$orange-2: #FFAE00;
+$orange-3: #FF5400;
+$orange-4: #D84700;
+$orange-5: #FF7E00;
+$red-1: #F6492C;
+$red-2: #FF2400;
+$red-3: #CD0E44;
+$red-4: #EA0000;
+$pink-1: #E7007D;
+$pink-2: #CD6090;
+$pink-3: #DB0CAD;
 
 $lightBlue: rgb(204,214,222);
 $darkGrey:rgb(128, 128, 128);
@@ -39,6 +48,7 @@ $backgroundGrey: #E7E7E7;
 $orange: rgb(238,120,53);
 $orangeHover: rgba(238,120,53,0.8);
 $red-delete:rgb(214,57,46);
+$green: rgb(112, 194, 57);
 //animation
 $transition-time:1s;
 //...
@@ -287,6 +297,27 @@ table td{
         -webkit-box-shadow:0 0px 2px 0px rgba(0,0,0,0.3);
     } 
 }
+/*
+Custom input
+*/
+.custom-input-file{
+    position:relative;
+    overflow:hidden !important;
+    input[type=file] {
+        font:200px monospace !important;
+        position:absolute;
+        color:rgba(255,255,255,0);
+        top:0px;
+        right:0px;
+        z-index:1;
+    } 
+    input[type=file]:hover{
+        cursor:pointer;
+    }
+}
+.custom-input-file:hover{
+    cursor:pointer;
+}
 .toggleMenu,.toggleMenuSimple,.toggleMenuLarge{
     position:relative;
     .subMenu{
@@ -297,13 +328,20 @@ table td{
         color:inherit;
         display:none;
         background-color:inherit;
+        max-height:230px;
+        overflow-y:scroll;
     }
+}
+.background-image{
+    background-position:center;
+    background-size:cover;
+    background-repeat:no-repeat;
 }
 /*
 ICON-ARROW
 */
 .link{
-    i,b{position:absolute;top:50%;right:10px;}
+    i,b{position:absolute;top:50%;right:18px;}
     .icon-bigarrow-right-black,.icon-bigarrow-right-white{
         margin-top:-8.5px;
     }
@@ -315,7 +353,12 @@ ICON-ARROW
 COLOR
 */
 @mixin shadow-color{
-    @include box-shadow(0px,1px,1px,0px,0.3);
+    @include box-shadow(0px,2px,2px,0px,0.2);
+}
+@mixin white-box{
+    background-color:white;
+    @include shadow-color;
+    padding:25px 30px;
 }
 $grey-color:rgb(237,237,237);
 $dark-grey-color:rgb(207,207,207);
@@ -378,6 +421,10 @@ $dark-green-color:rgb(95,174,45);
 }
 .white{
     color:white !important;
+}
+//orange
+.orange{
+    color:rgb(236,102,51);
 }
 /*
 Arrow
@@ -653,6 +700,10 @@ Header css
 			width: 200px;
 		}
 	}
+    .subMenu{
+        max-height:none;
+        overflow:auto;
+    }
 }
 
 .navbar.hidden-xs{
@@ -873,7 +924,7 @@ General buttons classes
     font-size:18px;
     @include inline-top; 
     position:relative;
-    padding-top:11px;padding-bottom:11px;
+    padding-top:16px;padding-bottom:11px;
     padding-left:15px;padding-right:15px;
     text-align:left;
     color:$darkGrey;
@@ -2571,14 +2622,15 @@ DIALOG
 .dialog{
     z-index:300;
     display:none;
-    position:absolute;top:0px;left:0px;bottom:0px;right:0px;width:100%;height:100%;
+    position:absolute;top:0px;left:0px;right:0px;width:100%;height:100%;
     .background{
         background:rgba(0,0,0,0.5);
-        position:fixed;top:0px;left:0px;bottom:0px;right:0px;width:100%;height:100%;
+        position:fixed;top:0px;left:0px;bottom:0px;right:0px;width:100%;min-height:100%;
     }
     .section{
         position:relative;display:none;
         width:60%;margin:auto;margin-top:140px;background-color:rgb(243,245,245);
+        margin-bottom:140px;//security
 		@media(max-width:479px){
 			width: 300px;
 		}
@@ -3259,6 +3311,28 @@ Tool CSS
 		}
 	}
 }
+/*
+SOCIAL
+*/
+.button-social{
+    color:white;
+    width:130px;
+    @include font-size(27px);
+    padding-top:18px;padding-bottom:12px;
+    padding-left:20px;padding-right:20px;
+}
+.button-google{
+    background-color:rgb(194,83,57);
+}
+.button-google:hover{
+    background-color:rgb(184,73,47);
+}
+.button-facebook{
+    background-color:rgb(64,93,149);
+}
+.button-facebook:hover{
+    background-color:rgb(54,83,139);
+}
 .dashboard-popup,.get-started-resume{
     .content{
         padding: 20px;
@@ -3266,7 +3340,7 @@ Tool CSS
         @media (max-width: 768px){
             padding:10px;
         }
-        .icon-step-1, .icon-step-2, .icon-step-3, .icon-step-4, .icon-step-5{
+        .icon-step-1, .icon-step-2, .icon-step-3, .icon-step-4, .icon-step-5,.icon-step-1-grey, .icon-step-2-grey, .icon-step-3-grey, .icon-step-4-grey, .icon-step-5-grey{
             margin-right: -28px;
             display:inline-block;
             vertical-align:top;
@@ -3283,7 +3357,7 @@ Tool CSS
                }
             }
         }
-        .icon-step-5{
+        .icon-step-5,.icon-step-5-grey{
             span{
                 left:15px;  
                 right:0px;
@@ -3294,11 +3368,11 @@ Tool CSS
 .dashboard-popup{
     .scrollable{
         //option 1
-        width:500%;
-        min-width:5 * 1204px;
+        width:800%;
+        min-width:8 * 1250px;
     }
     .section-wrapper{
-        width:20%;
+        width:12.5%;
         float:left;
     }
     .section{
@@ -3358,8 +3432,11 @@ Tool CSS
         }   
         .large{width:465px;margin-right:25px;}
         .medium{width:370px;margin-right:25px;}
+        .last{
+            margin-right:0px;
+        }
         .right{
-            .large{
+            .large,.medium{
                 margin-right:0px;
             }
         }
@@ -3473,54 +3550,52 @@ Tool CSS
                 }
             }
         }
-        .selectable{
-            .selectable-title{
-                padding:20px;
-                padding-bottom:5px;
-                padding-top:35px;
-                @include font-size(47px);
-                .selectable-button{
-                    display:inline-block;
-                    width:33px;
-                    .icon-plus{
-                        position:relative;
-                        top:1px;
-                        display:block;
-                    }
-                    .icon-minus{
-                        position:relative;
-                        top:-14px;
-                        display:none;
-                    }
+        .selectable-title{
+            padding:20px;
+            padding-bottom:5px;
+            padding-top:35px;
+            @include font-size(47px);
+            .selectable-button{
+                display:inline-block;
+                width:33px;
+                .icon-plus{
+                    position:relative;
+                    top:1px;
+                    display:block;
                 }
-                .selectable-button[class~=selected]{
-                    .icon-plus{
-                        display:none;
-                    }
-                    .icon-minus{
-                        display:block;
-                    }
+                .icon-minus{
+                    position:relative;
+                    top:-14px;
+                    display:none;
                 }
-                .icon-completed{
-                    i{
-                        top:6px;
-                        margin-right:0px;
-                    }
-                }
-                border-bottom:8px solid rgb(232,232,232);
             }
-            .selectable-content{
-                border-top:1px solid rgb(201,202,203);
-                display:none;
-                padding:50px 20px;
-                padding-bottom:0px;
-                .check-box-1{
-                    float:left;
-                    padding-bottom:30px;
-                    padding-right:3.5%;
-                    width:33.3%;
-                    @include font-size(19px);
+            .selectable-button[class~=selected]{
+                .icon-plus{
+                    display:none;
                 }
+                .icon-minus{
+                    display:block;
+                }
+            }
+            .icon-completed{
+                i{
+                    top:6px;
+                    margin-right:0px;
+                }
+            }
+            border-bottom:8px solid rgb(232,232,232);
+        }
+        .selectable-content{
+            border-top:1px solid rgb(201,202,203);
+            display:none;
+            padding:50px 20px;
+            padding-bottom:0px;
+            .check-box-1{
+                float:left;
+                padding-bottom:30px;
+                padding-right:3.5%;
+                width:33.3%;
+                @include font-size(19px);
             }
         }
         .goals{
@@ -3537,6 +3612,84 @@ Tool CSS
             @media(min-width: 480px){
                 padding-top:12px;
                 padding-bottom:15px;
+            }
+        }
+        .user-info{
+            .name-info{
+                margin-bottom:20px;
+            }
+            .explanation{
+                width:59%;
+                @include font-size(27px);
+                .presentation{
+                    margin-bottom:40px;
+                }
+            }
+            .info{
+                @include font-size(22px);
+                width:370px;
+                @include white-box;
+                .strength {
+                    margin:15px 0px;
+                }
+                .icon{
+                    margin:0px 3px;
+                }
+            }   
+        }
+    }
+    .section-photo{
+         width:1000px;
+        .change-picture{
+            padding:40px;
+            text-align:center;
+            border-bottom:1px solid rgb(201,202,203);
+            .photo{
+                margin:auto;
+                width:320px;
+                height:320px;
+                border-radius:200px;
+                -webkit-box-shadow:0 1px 2px rgba(0,0,0,0.2);
+                border: 7px solid white;
+                margin-bottom:50px; 
+            }
+            .buttons{
+                .button-upload-wrapper{
+                    display:inline-block;
+                    vertical-align:top;
+                    position:relative;
+                    .message{
+                        position:absolute;
+                        top:-30px;
+                        left:0px;
+                    }
+                }
+                .button{
+                    @extend .button-social
+                }
+                .button-upload{
+                    width:330px;margin-right:25px;
+                    background-color:rgb(63,93,149);
+                    .message{
+                        position:absolute;top:-30px;left:0px;
+                    }
+                }
+                .button-upload:hover{
+                   background-color:rgb(53,83,139);
+                }
+                .button-edit{
+                    margin-right:25px;
+                    background-color:rgb(238,124,51); 
+                }
+                .button-edit:hover{
+                   background-color:rgb(228,114,41);  
+                }
+                .button-delete{
+                    background-color:rgb(233,63,51); 
+                }
+                .button-delete:hover{
+                    background-color:rgb(223,53,41);  
+                }
             }
         }
     }
@@ -4045,6 +4198,11 @@ Dashboard
                 top:45px;
                 left:30px;
                 
+            }
+            .edit-name{
+                position:absolute;
+                top:247px;
+                left:30px;
             }
             .picture{
                 width:175px;height:175px;

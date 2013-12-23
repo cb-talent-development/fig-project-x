@@ -1,4 +1,4 @@
-function PostCtr($scope,$http,$routeParams){
+function PostCtr($scope,$http,$routeParams,register){
     /*
     load an post from url
     */
@@ -163,6 +163,7 @@ function PostCtr($scope,$http,$routeParams){
     Constructor
     */
     $scope.init=function(){ 
+        init($scope,register);
         $scope.inputComment="";
         $scope.actualPosition=0;
 

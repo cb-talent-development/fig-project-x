@@ -5,12 +5,119 @@
             <div class="section-wrapper">
                 <div class="section section1">
                     <div class="header">
+                        <span class"title">Let's Get Started<i class="icon-x-black close" onclick="disparition($('.dashboard-popup'))"></i></span>
+                    </div>
+                    <div class="content-dialog user-info">
+                       <div class="content presentation" ng-show="register.user=='none'">
+                           <div class="left explanation">
+                                <div class="presentation">At Career Builder, everyday, our experts create powerful advice and resources to help you build the life you want. But we know when it comes to career paths there is no one size fits all. So tell us about yourself and we can personalize the experience just for you.</div>
+                                <div class="orange">We know your time is important, this will take less than 2 minutes</div>
+                           </div>
+                           <div class="right info">
+                                <div class="message"><span>By Joining us You get access to:</span></div>
+                                <div class="strength">
+                                    <span class="icon-check"></span>
+                                    <span>Tailored Content</span>
+                                </div>
+                                <div class="strength">
+                                    <span class="icon-check"></span>
+                                    <span>Personalized Career Tools</span>
+                                </div>
+                                <div class="strength">
+                                    <span class="icon-check"></span>
+                                    <span>Targeted Job Suggestions</span>
+                                </div>
+                                <div>
+                                    <span class="icon-locallyGrown-presentation icon"></span>
+                                    <span class="icon-careerScape-presentation icon"></span>
+                                    <span class="icon-article-presentation icon"></span>
+                                    <span class="icon-resumePro-presentation icon"></span>
+                                </div>
+                           </div>
+                           <div class="clear"></div>
+                       </div>
+                       <div class="content social" ng-show="register.user=='none'"> 
+                            <div class="message medium"><span>Sign up with your social network of choice:</span></div>
+                           <div class="button-facebook button-social medium left link" ng-click="register.facebookConnect()">
+                                <span>Sign Up With Facebook</span>
+                                <i class="icon-bigarrow-right-white"></i>
+                            </div>
+                            <div class="button-google button-social left medium link" ng-click="register.googleConnect()">
+                                <span>Sign Up With Google+</span>
+                                <i class="icon-bigarrow-right-white"></i>
+                            </div>
+                            <div class="clear"></div>
+                       </div>
+                        <div class="content" ng-show="register.user=='none'"> 
+                           <div class="message"><b>Or</b> Register the old fashon way</div>
+                           <div class="name-info">
+                               <div class="input-button medium left">
+                                    <input ng-model="register.userInfo.firstName.value" placeholder="First Name"/>
+                                </div>
+                                <div class="input-button medium left">
+                                    <input ng-model="register.userInfo.lastName.value" placeholder="Last Name"/>
+                                </div>
+                                <div class="input-button medium last right">
+                                    <input ng-model="register.userInfo.email.value" placeholder="Email Address"/>
+                                </div>
+                                   
+                               <div class="clear"></div>
+                            </div>
+                            <div class="input-button medium left">
+                                <input ng-model="register.userInfo.password.value" placeholder="Password"/>
+                            </div>
+                            <div class="input-button medium left">
+                                <input ng-model="register.userInfo.confirmPassword.value" placeholder="Confirm Password"/>
+                            </div>
+                           <div class="clear"></div>
+                       </div>
+                       <div class="content" ng-show="register.user!='none'">
+                           <div class="message">Update your Basic information</div>
+                           <div class="name-info">
+                               <div class="input-button medium left">
+                                    <input ng-model="register.userInfo.firstName.value" placeholder="First Name"/>
+                                </div>
+                                <div class="input-button medium left">
+                                    <input ng-model="register.userInfo.lastName.value" placeholder="Last Name"/>
+                                </div>
+                                <div class="input-button medium last right">
+                                    <input ng-model="register.userInfo.email.value" placeholder="Email Address"/>
+                                </div>
+                                   
+                               <div class="clear"></div>
+                            </div>
+                            <div class="input-button medium left">
+                                <input ng-model="register.userInfo.password.value" placeholder="New Password"/>
+                            </div>
+                            <div class="input-button medium left">
+                                <input ng-model="register.userInfo.confirmPassword.value" placeholder="Confirm New Password"/>
+                            </div>
+                           <div class="clear"></div>
+                       </div>
+                    </div>
+                    <div class="footer-dialog">
+                        <div class="button-previous back-white left selected">
+                            Previous
+                            <i class="icon-bigarrow-left-black icon left"></i>
+                        </div>
+                        <div class="button-next back-white left" onclick="movePopup($('.dashboard-popup'),2)">
+                            Next
+                            <i class="icon-bigarrow-right-black icon right"></i>
+                        </div>
+                        <div class="button-save back-green right" ng-click="register.save()">Save & Close</div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-wrapper">
+                <div class="section section2">
+                    <div class="header">
                         <span class"title">Did you know: XX% of the la population love hamburgers<i class="icon-x-black close" onclick="disparition($('.dashboard-popup'))"></i></span>
                     </div>
                     <div class="content-dialog">
-                        <div class="content">
-                            <steps nbr-steps="1" first-connect="true" message="messageStep"></steps>
-                          </div>
+                        <div class="content" ng-show="(register.user=='none')">
+                            <steps nbr-steps="1" first-connect="true" message="register.lists.messageStep"></steps>
+                        </div>
                         <div class="content general">
                             <div class="left gender">
                                 <div class="message">enter your gender</div>
@@ -63,27 +170,27 @@
                         </div>
                     </div>
                     <div class="footer-dialog">
-                        <div class="button-previous back-white left selected" onclick="">
+                        <div class="button-previous back-white left" onclick="movePopup($('.dashboard-popup'),1)">
                             Previous
                             <i class="icon-bigarrow-left-black icon left"></i>
                         </div>
-                        <div class="button-next back-white left" onclick="movePopup($('.dashboard-popup'),2)">
+                        <div class="button-next back-white left" onclick="movePopup($('.dashboard-popup'),3)">
                             Next
                             <i class="icon-bigarrow-right-black icon right"></i>
                         </div>
-                        <div class="button-save back-green right" onclick="disparition($('.dashboard-popup'))" ng-click="register.save()">Save & Close</div>
+                        <div class="button-save back-green right" ng-click="register.save()">Save & Close</div>
                         <div class="clear"></div>
                     </div>
                 </div>
             </div>
             <div class="section-wrapper">
-                <div class="section section2">
+                <div class="section section3">
                     <div class="header">
                         <span class"title">Did you know: XX% of the la population love hamburgers<i class="icon-x-black close" onclick="disparition($('.dashboard-popup'));"></i></span>
                     </div>
                     <div class="content-dialog">
-                          <div class="content">
-                            <steps nbr-steps="2" first-connect="true" message="messageStep"></steps>
+                          <div class="content" ng-show="(register.user=='none')">
+                            <steps nbr-steps="2" first-connect="true" message="register.lists.messageStep"></steps>
                           </div>
                           <div class="content job-phase">
                             <div class="message">Select your current job phase:</div>
@@ -131,28 +238,28 @@
                         </div>  
                     </div>
                     <div class="footer-dialog">
-                        <div class="button-previous back-white left" onclick="movePopup($('.dashboard-popup'),1)">
+                        <div class="button-previous back-white left" onclick="movePopup($('.dashboard-popup'),2)">
                             Previous
                             <i class="icon-bigarrow-left-black icon left"></i>
                         </div>
-                        <div class="button-next back-white left" onclick="movePopup($('.dashboard-popup'),3)">
+                        <div class="button-next back-white left" onclick="movePopup($('.dashboard-popup'),4)">
                             Next
                             <i class="icon-bigarrow-right-black icon right"></i>
                         </div>
         
-                        <div class="button-save back-green right" onclick="disparition($('.dashboard-popup'))" ng-click="register.save()">Save & Close</div>
+                        <div class="button-save back-green right" ng-click="register.save()">Save & Close</div>
                         <div class="clear"></div>
                     </div>
                 </div>
             </div>
             <div class="section-wrapper">
-                <div class="section section3">
+                <div class="section section4">
                     <div class="header">
                         <span class"title">Did you know: XX% of the la population love hamburgers<i class="icon-x-black close" onclick="disparition($('.dashboard-popup'))"></i></span>
                     </div>
                     <div class="content-dialog">
-                        <div class="content">
-                            <steps nbr-steps="3" first-connect="true" message="messageStep"></steps>
+                        <div class="content" ng-show="(register.user=='none')">
+                            <steps nbr-steps="3" first-connect="true" message="register.lists.messageStep"></steps>
                         </div>
                         <div class="content job-occupation">
                             <div class="element left">
@@ -204,28 +311,28 @@
                         </div>
                     </div>
                     <div class="footer-dialog">
-                        <div class="button-previous back-white left" onclick="movePopup($('.dashboard-popup'),2)">
+                        <div class="button-previous back-white left" onclick="movePopup($('.dashboard-popup'),3)">
                             Previous
                             <i class="icon-bigarrow-left-black icon left"></i>
                         </div>
-                        <div class="button-next back-white left" onclick="movePopup($('.dashboard-popup'),4)">
+                        <div class="button-next back-white left" onclick="movePopup($('.dashboard-popup'),5)">
                             Next
                             <i class="icon-bigarrow-right-black icon right"></i>
                         </div>
         
-                        <div class="button-save back-green right" onclick="disparition($('.dashboard-popup'))" ng-click="register.save()">Save & Close</div>
+                        <div class="button-save back-green right" ng-click="register.save()">Save & Close</div>
                         <div class="clear"></div>
                     </div>
                 </div>
             </div>
             <div class="section-wrapper">
-                <div class="section section4">
+                <div class="section section5">
                     <div class="header">
                         <span class"title">Did you know: XX% of the la population love hamburgers<i class="icon-x-black close" onclick="disparition($('.dashboard-popup'))"></i></span>
                     </div>
                     <div class="content-dialog">
-                        <div class="content">
-                            <steps nbr-steps="4" first-connect="true" message="messageStep"></steps>
+                        <div class="content" ng-show="(register.user=='none')">
+                            <steps nbr-steps="4" first-connect="true" message="register.lists.messageStep"></steps>
                         </div>
                         <div class="content">
                             <div class="left">
@@ -277,28 +384,28 @@
                         </div>
                     </div>
                     <div class="footer-dialog">
-                        <div class="button-previous back-white left" onclick="movePopup($('.dashboard-popup'),3)">
+                        <div class="button-previous back-white left" onclick="movePopup($('.dashboard-popup'),4)">
                             Previous
                             <i class="icon-bigarrow-left-black icon left"></i>
                         </div>
-                        <div class="button-next back-white left" onclick="movePopup($('.dashboard-popup'),5)">
+                        <div class="button-next back-white left" onclick="movePopup($('.dashboard-popup'),6)">
                             Next
                             <i class="icon-bigarrow-right-black icon right"></i>
                         </div>
         
-                        <div class="button-save back-green right" onclick="disparition($('.dashboard-popup'))" ng-click="register.save()">Save & Close</div>
+                        <div class="button-save back-green right"  ng-click="register.save()">Save & Close</div>
                         <div class="clear"></div>
                     </div>
                 </div>
             </div>
             <div class="section-wrapper">
-                <div class="section section5">
+                <div class="section section6">
                     <div class="header">
                         <span class"title">Did you know: XX% of the la population love hamburgers<i class="icon-x-black close" onclick="disparition($('.dashboard-popup'))"></i></span>
                     </div>
                     <div class="content-dialog">
-                        <div class="content">
-                            <steps nbr-steps="5" first-connect="true" message="messageStep"></steps>
+                        <div class="content" ng-show="(register.user=='none')">
+                            <steps nbr-steps="5" first-connect="true" message="register.lists.messageStep"></steps>
                         </div>
                     </div>
                     <div class="selectable skills">
@@ -395,16 +502,57 @@
                         </div>
                     </div>
                     <div class="footer-dialog">
-                        <div class="button-previous back-white left" onclick="movePopup($('.dashboard-popup'),4)">
+                        <div class="button-previous back-white left" onclick="movePopup($('.dashboard-popup'),5)">
                             Previous
                             <i class="icon-bigarrow-left-black icon left"></i>
                         </div>
-                        <div class="button-next back-white left selected">
+                        <div class="button-next back-white left" onclick="movePopup($('.dashboard-popup'),7)">
                             Next
                             <i class="icon-bigarrow-right-black icon right"></i>
                         </div>
         
-                        <div class="button-save back-green right" onclick="disparition($('.dashboard-popup'))" ng-click="register.save()">Save & Close</div>
+                        <div class="button-save back-green right"  ng-click="register.save()">Save & Close</div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-wrapper">
+                <div class="section section-photo">
+                    <div class="header">
+                        <span class"title">Change Your Dashboard Photo<i class="icon-x-black close" onclick="disparition($('.dashboard-popup'))"></i></span>
+                    </div>
+                    <div class="content-dialog change-picture">
+                        <div id="preview" class="photo background-image" style="background-image:url('{{user.Media.Url}}')"></div>
+                        <div class="buttons">
+                            <div class="button-upload-wrapper">
+                                <div class="message">JPG, PNG & GIF ACCEPTED</div>
+                                <div class="button-upload button custom-input-file link">
+                                    <span>Upload Image</span>
+                                    <i class="icon-bigarrow-right-white"></i>
+                                    <input type="file" onchange="showPreview($(this)[0].files,$('#preview'))"/> 
+                                </div>
+                            </div>
+                            <div class="button-edit button link">
+                                <span>Edit</span>
+                                <i class="icon-bigarrow-right-white"></i>
+                            </div>
+                            <div class="button-delete button link">
+                                <span>Delete</span>
+                                <i class="icon-bigarrow-right-white"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-dialog">
+                        <div class="button-previous back-white left" onclick="movePopup($('.dashboard-popup'),6)">
+                            Previous
+                            <i class="icon-bigarrow-left-black icon left"></i>
+                        </div>
+                        <div class="button-next back-white left selected" onclick="">
+                            Next
+                            <i class="icon-bigarrow-right-black icon right"></i>
+                        </div>
+        
+                        <div class="button-save back-green right" ng-click="register.save()">Save & Close</div>
                         <div class="clear"></div>
                     </div>
                 </div>

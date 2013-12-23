@@ -1,7 +1,7 @@
 /*
 Tools controller
 */
-function ToolCtr($scope, $http,$routeParams,pagination) {
+function ToolCtr($scope, $http,$routeParams,pagination,register) {
     
     /*
     Page Click
@@ -96,6 +96,7 @@ function ToolCtr($scope, $http,$routeParams,pagination) {
         }
     }
     $scope.init=function(){
+        init($scope,register);
         var name=$routeParams.toolName;
         $scope.help={};
         $scope.loadHelp(name);

@@ -1,4 +1,4 @@
-function SavedContentCtr($scope, $http) {
+function SavedContentCtr($scope, $http,register) {
     /*
     Saved Content
     */
@@ -19,6 +19,7 @@ function SavedContentCtr($scope, $http) {
     Constructor
     */
     $scope.init=function(){
+        init($scope,register);
         checkUserInfo($scope,$http);
         $scope.loadSaved();
         $scope.page="dashboard";

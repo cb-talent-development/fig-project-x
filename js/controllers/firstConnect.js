@@ -51,4 +51,7 @@ function FirstConnectCtr($scope, $http ,pagination) {
 	
 	$scope.chooseHeader();
 	$scope.loadPages();
+    $scope.init=function(){
+        //init();
+    }
 };

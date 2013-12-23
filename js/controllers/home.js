@@ -1,4 +1,4 @@
-function HomePageCtr($scope, $http) {
+function HomePageCtr($scope, $http,register) {
     /*
     Function that organise the data of one week to be able to create three columns of any form
     */
@@ -186,6 +186,7 @@ function HomePageCtr($scope, $http) {
     Constructor
     */
     $scope.init=function(){
+        init($scope,register);
         //Init at three columns
         $scope.modeTwo=false;
         $scope.inputSearch="";

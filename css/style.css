@@ -204,6 +204,25 @@ table td {
     box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.3);
     -webkit-box-shadow: 0 0px 2px 0px rgba(0, 0, 0, 0.3); }
 
+/*
+Custom input
+*/
+.custom-input-file {
+  position: relative;
+  overflow: hidden !important; }
+  .custom-input-file input[type=file] {
+    font: 200px monospace !important;
+    position: absolute;
+    color: rgba(255, 255, 255, 0);
+    top: 0px;
+    right: 0px;
+    z-index: 1; }
+  .custom-input-file input[type=file]:hover {
+    cursor: pointer; }
+
+.custom-input-file:hover {
+  cursor: pointer; }
+
 .toggleMenu, .toggleMenuSimple, .toggleMenuLarge {
   position: relative; }
   .toggleMenu .subMenu, .toggleMenuSimple .subMenu, .toggleMenuLarge .subMenu {
@@ -213,7 +232,14 @@ table td {
     z-index: 100;
     color: inherit;
     display: none;
-    background-color: inherit; }
+    background-color: inherit;
+    max-height: 230px;
+    overflow-y: scroll; }
+
+.background-image {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat; }
 
 /*
 ICON-ARROW
@@ -221,7 +247,7 @@ ICON-ARROW
 .link i, .link b {
   position: absolute;
   top: 50%;
-  right: 10px; }
+  right: 18px; }
 .link .icon-bigarrow-right-black, .link .icon-bigarrow-right-white {
   margin-top: -8.5px; }
 .link .icon-bigarrow-bottom-grey {
@@ -298,6 +324,9 @@ COLOR
 
 .white {
   color: white !important; }
+
+.orange {
+  color: #ec6633; }
 
 /*
 Arrow
@@ -453,6 +482,9 @@ Header css
   @media (max-width: 479px) {
     .page-header .block {
       width: 200px; } }
+  .page-header .subMenu {
+    max-height: none;
+    overflow: auto; }
 
 .navbar.hidden-xs {
   background-color: #09335b; }
@@ -620,7 +652,7 @@ General buttons classes
   display: inline-block;
   vertical-align: top;
   position: relative;
-  padding-top: 11px;
+  padding-top: 16px;
   padding-bottom: 11px;
   padding-left: 15px;
   padding-right: 15px;
@@ -646,7 +678,7 @@ General buttons classes
   display: inline-block;
   vertical-align: top;
   position: relative;
-  padding-top: 11px;
+  padding-top: 16px;
   padding-bottom: 11px;
   padding-left: 15px;
   padding-right: 15px;
@@ -818,14 +850,14 @@ General box template
   background: white;
   overflow: hidden;
   position: relative;
-  border-left: solid 7px #eead0e; }
+  border-left: solid 7px #fecb1b; }
   @media only screen and (max-width: 768px) {
     .box-orange-1 {
-      border-left: solid 3px #eead0e; } }
+      border-left: solid 3px #fecb1b; } }
   .box-orange-1 .subtitle {
-    color: #eead0e; }
+    color: #fecb1b; }
   .box-orange-1 .comment {
-    color: #eead0e; }
+    color: #fecb1b; }
 
 .box-orange-2 {
   background-color: white;
@@ -835,14 +867,14 @@ General box template
   background: white;
   overflow: hidden;
   position: relative;
-  border-left: solid 7px #eead0e; }
+  border-left: solid 7px #ffae00; }
   @media only screen and (max-width: 768px) {
     .box-orange-2 {
-      border-left: solid 3px #eead0e; } }
+      border-left: solid 3px #ffae00; } }
   .box-orange-2 .subtitle {
-    color: #eead0e; }
+    color: #ffae00; }
   .box-orange-2 .comment {
-    color: #eead0e; }
+    color: #ffae00; }
 
 .box-orange-3 {
   background-color: white;
@@ -852,14 +884,14 @@ General box template
   background: white;
   overflow: hidden;
   position: relative;
-  border-left: solid 7px #eead0e; }
+  border-left: solid 7px #ff5400; }
   @media only screen and (max-width: 768px) {
     .box-orange-3 {
-      border-left: solid 3px #eead0e; } }
+      border-left: solid 3px #ff5400; } }
   .box-orange-3 .subtitle {
-    color: #eead0e; }
+    color: #ff5400; }
   .box-orange-3 .comment {
-    color: #eead0e; }
+    color: #ff5400; }
 
 .box-orange-4 {
   background-color: white;
@@ -869,14 +901,14 @@ General box template
   background: white;
   overflow: hidden;
   position: relative;
-  border-left: solid 7px #eead0e; }
+  border-left: solid 7px #d84700; }
   @media only screen and (max-width: 768px) {
     .box-orange-4 {
-      border-left: solid 3px #eead0e; } }
+      border-left: solid 3px #d84700; } }
   .box-orange-4 .subtitle {
-    color: #eead0e; }
+    color: #d84700; }
   .box-orange-4 .comment {
-    color: #eead0e; }
+    color: #d84700; }
 
 .box-green-1 {
   background-color: white;
@@ -886,14 +918,14 @@ General box template
   background: white;
   overflow: hidden;
   position: relative;
-  border-left: solid 7px mediumaquamarine; }
+  border-left: solid 7px #64d438; }
   @media only screen and (max-width: 768px) {
     .box-green-1 {
-      border-left: solid 3px mediumaquamarine; } }
+      border-left: solid 3px #64d438; } }
   .box-green-1 .subtitle {
-    color: mediumaquamarine; }
+    color: #64d438; }
   .box-green-1 .comment {
-    color: mediumaquamarine; }
+    color: #64d438; }
 
 .box-green-2 {
   background-color: white;
@@ -903,14 +935,14 @@ General box template
   background: white;
   overflow: hidden;
   position: relative;
-  border-left: solid 7px mediumaquamarine; }
+  border-left: solid 7px #39bd59; }
   @media only screen and (max-width: 768px) {
     .box-green-2 {
-      border-left: solid 3px mediumaquamarine; } }
+      border-left: solid 3px #39bd59; } }
   .box-green-2 .subtitle {
-    color: mediumaquamarine; }
+    color: #39bd59; }
   .box-green-2 .comment {
-    color: mediumaquamarine; }
+    color: #39bd59; }
 
 .box-green-3 {
   background-color: white;
@@ -920,14 +952,14 @@ General box template
   background: white;
   overflow: hidden;
   position: relative;
-  border-left: solid 7px #008b00; }
+  border-left: solid 7px #177230; }
   @media only screen and (max-width: 768px) {
     .box-green-3 {
-      border-left: solid 3px #008b00; } }
+      border-left: solid 3px #177230; } }
   .box-green-3 .subtitle {
-    color: #008b00; }
+    color: #177230; }
   .box-green-3 .comment {
-    color: #008b00; }
+    color: #177230; }
 
 .box-green-4 {
   background-color: white;
@@ -937,14 +969,14 @@ General box template
   background: white;
   overflow: hidden;
   position: relative;
-  border-left: solid 7px mediumaquamarine; }
+  border-left: solid 7px #39b059; }
   @media only screen and (max-width: 768px) {
     .box-green-4 {
-      border-left: solid 3px mediumaquamarine; } }
+      border-left: solid 3px #39b059; } }
   .box-green-4 .subtitle {
-    color: mediumaquamarine; }
+    color: #39b059; }
   .box-green-4 .comment {
-    color: mediumaquamarine; }
+    color: #39b059; }
 
 .box-blue-1 {
   background-color: white;
@@ -954,14 +986,14 @@ General box template
   background: white;
   overflow: hidden;
   position: relative;
-  border-left: solid 7px #00b2ee; }
+  border-left: solid 7px #00d2ff; }
   @media only screen and (max-width: 768px) {
     .box-blue-1 {
-      border-left: solid 3px #00b2ee; } }
+      border-left: solid 3px #00d2ff; } }
   .box-blue-1 .subtitle {
-    color: #00b2ee; }
+    color: #00d2ff; }
   .box-blue-1 .comment {
-    color: #00b2ee; }
+    color: #00d2ff; }
 
 .box-blue-2 {
   background-color: white;
@@ -971,14 +1003,14 @@ General box template
   background: white;
   overflow: hidden;
   position: relative;
-  border-left: solid 7px #104e9b; }
+  border-left: solid 7px #00a6ff; }
   @media only screen and (max-width: 768px) {
     .box-blue-2 {
-      border-left: solid 3px #104e9b; } }
+      border-left: solid 3px #00a6ff; } }
   .box-blue-2 .subtitle {
-    color: #104e9b; }
+    color: #00a6ff; }
   .box-blue-2 .comment {
-    color: #104e9b; }
+    color: #00a6ff; }
 
 .box-blue-3 {
   background-color: white;
@@ -988,14 +1020,14 @@ General box template
   background: white;
   overflow: hidden;
   position: relative;
-  border-left: solid 7px #104e9b; }
+  border-left: solid 7px #1b96d9; }
   @media only screen and (max-width: 768px) {
     .box-blue-3 {
-      border-left: solid 3px #104e9b; } }
+      border-left: solid 3px #1b96d9; } }
   .box-blue-3 .subtitle {
-    color: #104e9b; }
+    color: #1b96d9; }
   .box-blue-3 .comment {
-    color: #104e9b; }
+    color: #1b96d9; }
 
 .box-blue-4 {
   background-color: white;
@@ -1005,14 +1037,14 @@ General box template
   background: white;
   overflow: hidden;
   position: relative;
-  border-left: solid 7px #104e9b; }
+  border-left: solid 7px #0169cb; }
   @media only screen and (max-width: 768px) {
     .box-blue-4 {
-      border-left: solid 3px #104e9b; } }
+      border-left: solid 3px #0169cb; } }
   .box-blue-4 .subtitle {
-    color: #104e9b; }
+    color: #0169cb; }
   .box-blue-4 .comment {
-    color: #104e9b; }
+    color: #0169cb; }
 
 .box-blue-5 {
   background-color: white;
@@ -1022,14 +1054,14 @@ General box template
   background: white;
   overflow: hidden;
   position: relative;
-  border-left: solid 7px #104e9b; }
+  border-left: solid 7px #003d7b; }
   @media only screen and (max-width: 768px) {
     .box-blue-5 {
-      border-left: solid 3px #104e9b; } }
+      border-left: solid 3px #003d7b; } }
   .box-blue-5 .subtitle {
-    color: #104e9b; }
+    color: #003d7b; }
   .box-blue-5 .comment {
-    color: #104e9b; }
+    color: #003d7b; }
 
 .box-blue-6 {
   background-color: white;
@@ -1039,14 +1071,14 @@ General box template
   background: white;
   overflow: hidden;
   position: relative;
-  border-left: solid 7px #104e9b; }
+  border-left: solid 7px #41a9e0; }
   @media only screen and (max-width: 768px) {
     .box-blue-6 {
-      border-left: solid 3px #104e9b; } }
+      border-left: solid 3px #41a9e0; } }
   .box-blue-6 .subtitle {
-    color: #104e9b; }
+    color: #41a9e0; }
   .box-blue-6 .comment {
-    color: #104e9b; }
+    color: #41a9e0; }
 
 .box-red-1 {
   background-color: white;
@@ -1056,14 +1088,14 @@ General box template
   background: white;
   overflow: hidden;
   position: relative;
-  border-left: solid 7px #ee6363; }
+  border-left: solid 7px #f6492c; }
   @media only screen and (max-width: 768px) {
     .box-red-1 {
-      border-left: solid 3px #ee6363; } }
+      border-left: solid 3px #f6492c; } }
   .box-red-1 .subtitle {
-    color: #ee6363; }
+    color: #f6492c; }
   .box-red-1 .comment {
-    color: #ee6363; }
+    color: #f6492c; }
 
 .box-red-2 {
   background-color: white;
@@ -1073,14 +1105,14 @@ General box template
   background: white;
   overflow: hidden;
   position: relative;
-  border-left: solid 7px red; }
+  border-left: solid 7px #ff2400; }
   @media only screen and (max-width: 768px) {
     .box-red-2 {
-      border-left: solid 3px red; } }
+      border-left: solid 3px #ff2400; } }
   .box-red-2 .subtitle {
-    color: red; }
+    color: #ff2400; }
   .box-red-2 .comment {
-    color: red; }
+    color: #ff2400; }
 
 .box-red-3 {
   background-color: white;
@@ -1090,14 +1122,14 @@ General box template
   background: white;
   overflow: hidden;
   position: relative;
-  border-left: solid 7px #ee6363; }
+  border-left: solid 7px #cd0e44; }
   @media only screen and (max-width: 768px) {
     .box-red-3 {
-      border-left: solid 3px #ee6363; } }
+      border-left: solid 3px #cd0e44; } }
   .box-red-3 .subtitle {
-    color: #ee6363; }
+    color: #cd0e44; }
   .box-red-3 .comment {
-    color: #ee6363; }
+    color: #cd0e44; }
 
 .box-red-4 {
   background-color: white;
@@ -1107,14 +1139,14 @@ General box template
   background: white;
   overflow: hidden;
   position: relative;
-  border-left: solid 7px darkred; }
+  border-left: solid 7px #ea0000; }
   @media only screen and (max-width: 768px) {
     .box-red-4 {
-      border-left: solid 3px darkred; } }
+      border-left: solid 3px #ea0000; } }
   .box-red-4 .subtitle {
-    color: darkred; }
+    color: #ea0000; }
   .box-red-4 .comment {
-    color: darkred; }
+    color: #ea0000; }
 
 .box-pink-1 {
   background-color: white;
@@ -1124,14 +1156,14 @@ General box template
   background: white;
   overflow: hidden;
   position: relative;
-  border-left: solid 7px #cd6090; }
+  border-left: solid 7px #e7007d; }
   @media only screen and (max-width: 768px) {
     .box-pink-1 {
-      border-left: solid 3px #cd6090; } }
+      border-left: solid 3px #e7007d; } }
   .box-pink-1 .subtitle {
-    color: #cd6090; }
+    color: #e7007d; }
   .box-pink-1 .comment {
-    color: #cd6090; }
+    color: #e7007d; }
 
 .box-pink-2 {
   background-color: white;
@@ -1158,14 +1190,14 @@ General box template
   background: white;
   overflow: hidden;
   position: relative;
-  border-left: solid 7px #cd6090; }
+  border-left: solid 7px #db0cad; }
   @media only screen and (max-width: 768px) {
     .box-pink-3 {
-      border-left: solid 3px #cd6090; } }
+      border-left: solid 3px #db0cad; } }
   .box-pink-3 .subtitle {
-    color: #cd6090; }
+    color: #db0cad; }
   .box-pink-3 .comment {
-    color: #cd6090; }
+    color: #db0cad; }
 
 /*Background css*/
 .background-img-plain {
@@ -3350,7 +3382,6 @@ DIALOG
   position: absolute;
   top: 0px;
   left: 0px;
-  bottom: 0px;
   right: 0px;
   width: 100%;
   height: 100%; }
@@ -3362,14 +3393,15 @@ DIALOG
     bottom: 0px;
     right: 0px;
     width: 100%;
-    height: 100%; }
+    min-height: 100%; }
   .dialog .section {
     position: relative;
     display: none;
     width: 60%;
     margin: auto;
     margin-top: 140px;
-    background-color: #f3f5f5; }
+    background-color: #f3f5f5;
+    margin-bottom: 140px; }
     @media (max-width: 479px) {
       .dialog .section {
         width: 300px; } }
@@ -3959,13 +3991,40 @@ Tool CSS
         top: 7px;
         right: 7px; } }
 
+/*
+SOCIAL
+*/
+.button-social, .dashboard-popup .section-photo .change-picture .buttons .button, .dashboard-popup .section-photo .change-picture .buttons .input-button {
+  color: white;
+  width: 130px;
+  font-size: 27px;
+  padding-top: 18px;
+  padding-bottom: 12px;
+  padding-left: 20px;
+  padding-right: 20px; }
+  @media only screen and (max-width: 768px) {
+    .button-social, .dashboard-popup .section-photo .change-picture .buttons .button, .dashboard-popup .section-photo .change-picture .buttons .input-button {
+      font-size: 24.3px; } }
+
+.button-google {
+  background-color: #c25339; }
+
+.button-google:hover {
+  background-color: #b8492f; }
+
+.button-facebook {
+  background-color: #405d95; }
+
+.button-facebook:hover {
+  background-color: #36538b; }
+
 .dashboard-popup .content, .get-started-resume .content {
   padding: 20px;
   border-bottom: 1px solid #cfcfcf; }
   @media (max-width: 768px) {
     .dashboard-popup .content, .get-started-resume .content {
       padding: 10px; } }
-  .dashboard-popup .content .icon-step-1, .dashboard-popup .content .icon-step-2, .dashboard-popup .content .icon-step-3, .dashboard-popup .content .icon-step-4, .dashboard-popup .content .icon-step-5, .get-started-resume .content .icon-step-1, .get-started-resume .content .icon-step-2, .get-started-resume .content .icon-step-3, .get-started-resume .content .icon-step-4, .get-started-resume .content .icon-step-5 {
+  .dashboard-popup .content .icon-step-1, .dashboard-popup .content .icon-step-2, .dashboard-popup .content .icon-step-3, .dashboard-popup .content .icon-step-4, .dashboard-popup .content .icon-step-5, .dashboard-popup .content .icon-step-1-grey, .dashboard-popup .content .icon-step-2-grey, .dashboard-popup .content .icon-step-3-grey, .dashboard-popup .content .icon-step-4-grey, .dashboard-popup .content .icon-step-5-grey, .get-started-resume .content .icon-step-1, .get-started-resume .content .icon-step-2, .get-started-resume .content .icon-step-3, .get-started-resume .content .icon-step-4, .get-started-resume .content .icon-step-5, .get-started-resume .content .icon-step-1-grey, .get-started-resume .content .icon-step-2-grey, .get-started-resume .content .icon-step-3-grey, .get-started-resume .content .icon-step-4-grey, .get-started-resume .content .icon-step-5-grey {
     margin-right: -28px;
     display: inline-block;
     vertical-align: top;
@@ -3974,23 +4033,23 @@ Tool CSS
     color: white;
     font-size: 23px; }
     @media only screen and (max-width: 768px) {
-      .dashboard-popup .content .icon-step-1, .dashboard-popup .content .icon-step-2, .dashboard-popup .content .icon-step-3, .dashboard-popup .content .icon-step-4, .dashboard-popup .content .icon-step-5, .get-started-resume .content .icon-step-1, .get-started-resume .content .icon-step-2, .get-started-resume .content .icon-step-3, .get-started-resume .content .icon-step-4, .get-started-resume .content .icon-step-5 {
+      .dashboard-popup .content .icon-step-1, .dashboard-popup .content .icon-step-2, .dashboard-popup .content .icon-step-3, .dashboard-popup .content .icon-step-4, .dashboard-popup .content .icon-step-5, .dashboard-popup .content .icon-step-1-grey, .dashboard-popup .content .icon-step-2-grey, .dashboard-popup .content .icon-step-3-grey, .dashboard-popup .content .icon-step-4-grey, .dashboard-popup .content .icon-step-5-grey, .get-started-resume .content .icon-step-1, .get-started-resume .content .icon-step-2, .get-started-resume .content .icon-step-3, .get-started-resume .content .icon-step-4, .get-started-resume .content .icon-step-5, .get-started-resume .content .icon-step-1-grey, .get-started-resume .content .icon-step-2-grey, .get-started-resume .content .icon-step-3-grey, .get-started-resume .content .icon-step-4-grey, .get-started-resume .content .icon-step-5-grey {
         font-size: 20.7px; } }
     @media (max-width: 479px) {
-      .dashboard-popup .content .icon-step-1, .dashboard-popup .content .icon-step-2, .dashboard-popup .content .icon-step-3, .dashboard-popup .content .icon-step-4, .dashboard-popup .content .icon-step-5, .get-started-resume .content .icon-step-1, .get-started-resume .content .icon-step-2, .get-started-resume .content .icon-step-3, .get-started-resume .content .icon-step-4, .get-started-resume .content .icon-step-5 {
+      .dashboard-popup .content .icon-step-1, .dashboard-popup .content .icon-step-2, .dashboard-popup .content .icon-step-3, .dashboard-popup .content .icon-step-4, .dashboard-popup .content .icon-step-5, .dashboard-popup .content .icon-step-1-grey, .dashboard-popup .content .icon-step-2-grey, .dashboard-popup .content .icon-step-3-grey, .dashboard-popup .content .icon-step-4-grey, .dashboard-popup .content .icon-step-5-grey, .get-started-resume .content .icon-step-1, .get-started-resume .content .icon-step-2, .get-started-resume .content .icon-step-3, .get-started-resume .content .icon-step-4, .get-started-resume .content .icon-step-5, .get-started-resume .content .icon-step-1-grey, .get-started-resume .content .icon-step-2-grey, .get-started-resume .content .icon-step-3-grey, .get-started-resume .content .icon-step-4-grey, .get-started-resume .content .icon-step-5-grey {
         padding-top: 13px; } }
-    .dashboard-popup .content .icon-step-1 span, .dashboard-popup .content .icon-step-2 span, .dashboard-popup .content .icon-step-3 span, .dashboard-popup .content .icon-step-4 span, .dashboard-popup .content .icon-step-5 span, .get-started-resume .content .icon-step-1 span, .get-started-resume .content .icon-step-2 span, .get-started-resume .content .icon-step-3 span, .get-started-resume .content .icon-step-4 span, .get-started-resume .content .icon-step-5 span {
+    .dashboard-popup .content .icon-step-1 span, .dashboard-popup .content .icon-step-2 span, .dashboard-popup .content .icon-step-3 span, .dashboard-popup .content .icon-step-4 span, .dashboard-popup .content .icon-step-5 span, .dashboard-popup .content .icon-step-1-grey span, .dashboard-popup .content .icon-step-2-grey span, .dashboard-popup .content .icon-step-3-grey span, .dashboard-popup .content .icon-step-4-grey span, .dashboard-popup .content .icon-step-5-grey span, .get-started-resume .content .icon-step-1 span, .get-started-resume .content .icon-step-2 span, .get-started-resume .content .icon-step-3 span, .get-started-resume .content .icon-step-4 span, .get-started-resume .content .icon-step-5 span, .get-started-resume .content .icon-step-1-grey span, .get-started-resume .content .icon-step-2-grey span, .get-started-resume .content .icon-step-3-grey span, .get-started-resume .content .icon-step-4-grey span, .get-started-resume .content .icon-step-5-grey span {
       position: relative;
       right: 15px; }
-  .dashboard-popup .content .icon-step-5 span, .get-started-resume .content .icon-step-5 span {
+  .dashboard-popup .content .icon-step-5 span, .dashboard-popup .content .icon-step-5-grey span, .get-started-resume .content .icon-step-5 span, .get-started-resume .content .icon-step-5-grey span {
     left: 15px;
     right: 0px; }
 
 .dashboard-popup .scrollable {
-  width: 500%;
-  min-width: 6020px; }
+  width: 800%;
+  min-width: 10000px; }
 .dashboard-popup .section-wrapper {
-  width: 20%;
+  width: 12.5%;
   float: left; }
 .dashboard-popup .section {
   width: 1204px; }
@@ -4048,7 +4107,9 @@ Tool CSS
   .dashboard-popup .section .medium {
     width: 370px;
     margin-right: 25px; }
-  .dashboard-popup .section .right .large {
+  .dashboard-popup .section .last {
+    margin-right: 0px; }
+  .dashboard-popup .section .right .large, .dashboard-popup .section .right .medium {
     margin-right: 0px; }
   .dashboard-popup .section .address .street {
     margin-bottom: 20px; }
@@ -4160,46 +4221,46 @@ Tool CSS
         color: black; }
       .dashboard-popup .section .job-occupation .element-correction .correction .select, .dashboard-popup .section .school-name .element-correction .correction .select {
         border: 1px solid #ee7835; }
-  .dashboard-popup .section .selectable .selectable-title {
+  .dashboard-popup .section .selectable-title {
     padding: 20px;
     padding-bottom: 5px;
     padding-top: 35px;
     font-size: 47px;
     border-bottom: 8px solid #e8e8e8; }
     @media only screen and (max-width: 768px) {
-      .dashboard-popup .section .selectable .selectable-title {
+      .dashboard-popup .section .selectable-title {
         font-size: 42.3px; } }
-    .dashboard-popup .section .selectable .selectable-title .selectable-button {
+    .dashboard-popup .section .selectable-title .selectable-button {
       display: inline-block;
       width: 33px; }
-      .dashboard-popup .section .selectable .selectable-title .selectable-button .icon-plus {
+      .dashboard-popup .section .selectable-title .selectable-button .icon-plus {
         position: relative;
         top: 1px;
         display: block; }
-      .dashboard-popup .section .selectable .selectable-title .selectable-button .icon-minus {
+      .dashboard-popup .section .selectable-title .selectable-button .icon-minus {
         position: relative;
         top: -14px;
         display: none; }
-    .dashboard-popup .section .selectable .selectable-title .selectable-button[class~=selected] .icon-plus {
+    .dashboard-popup .section .selectable-title .selectable-button[class~=selected] .icon-plus {
       display: none; }
-    .dashboard-popup .section .selectable .selectable-title .selectable-button[class~=selected] .icon-minus {
+    .dashboard-popup .section .selectable-title .selectable-button[class~=selected] .icon-minus {
       display: block; }
-    .dashboard-popup .section .selectable .selectable-title .icon-completed i {
+    .dashboard-popup .section .selectable-title .icon-completed i {
       top: 6px;
       margin-right: 0px; }
-  .dashboard-popup .section .selectable .selectable-content {
+  .dashboard-popup .section .selectable-content {
     border-top: 1px solid #c9cacb;
     display: none;
     padding: 50px 20px;
     padding-bottom: 0px; }
-    .dashboard-popup .section .selectable .selectable-content .check-box-1 {
+    .dashboard-popup .section .selectable-content .check-box-1 {
       float: left;
       padding-bottom: 30px;
       padding-right: 3.5%;
       width: 33.3%;
       font-size: 19px; }
       @media only screen and (max-width: 768px) {
-        .dashboard-popup .section .selectable .selectable-content .check-box-1 {
+        .dashboard-popup .section .selectable-content .check-box-1 {
           font-size: 17.1px; } }
   .dashboard-popup .section .goals .medium {
     width: 363px; }
@@ -4211,6 +4272,71 @@ Tool CSS
     .dashboard-popup .section .footer-dialog {
       padding-top: 12px;
       padding-bottom: 15px; } }
+  .dashboard-popup .section .user-info .name-info {
+    margin-bottom: 20px; }
+  .dashboard-popup .section .user-info .explanation {
+    width: 59%;
+    font-size: 27px; }
+    @media only screen and (max-width: 768px) {
+      .dashboard-popup .section .user-info .explanation {
+        font-size: 24.3px; } }
+    .dashboard-popup .section .user-info .explanation .presentation {
+      margin-bottom: 40px; }
+  .dashboard-popup .section .user-info .info {
+    font-size: 22px;
+    width: 370px;
+    background-color: white;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.2);
+    padding: 25px 30px; }
+    @media only screen and (max-width: 768px) {
+      .dashboard-popup .section .user-info .info {
+        font-size: 19.8px; } }
+    .dashboard-popup .section .user-info .info .strength {
+      margin: 15px 0px; }
+    .dashboard-popup .section .user-info .info .icon {
+      margin: 0px 3px; }
+.dashboard-popup .section-photo {
+  width: 1000px; }
+  .dashboard-popup .section-photo .change-picture {
+    padding: 40px;
+    text-align: center;
+    border-bottom: 1px solid #c9cacb; }
+    .dashboard-popup .section-photo .change-picture .photo {
+      margin: auto;
+      width: 320px;
+      height: 320px;
+      border-radius: 200px;
+      -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+      border: 7px solid white;
+      margin-bottom: 50px; }
+    .dashboard-popup .section-photo .change-picture .buttons .button-upload-wrapper {
+      display: inline-block;
+      vertical-align: top;
+      position: relative; }
+      .dashboard-popup .section-photo .change-picture .buttons .button-upload-wrapper .message {
+        position: absolute;
+        top: -30px;
+        left: 0px; }
+    .dashboard-popup .section-photo .change-picture .buttons .button-upload {
+      width: 330px;
+      margin-right: 25px;
+      background-color: #3f5d95; }
+      .dashboard-popup .section-photo .change-picture .buttons .button-upload .message {
+        position: absolute;
+        top: -30px;
+        left: 0px; }
+    .dashboard-popup .section-photo .change-picture .buttons .button-upload:hover {
+      background-color: #35538b; }
+    .dashboard-popup .section-photo .change-picture .buttons .button-edit {
+      margin-right: 25px;
+      background-color: #ee7c33; }
+    .dashboard-popup .section-photo .change-picture .buttons .button-edit:hover {
+      background-color: #e47229; }
+    .dashboard-popup .section-photo .change-picture .buttons .button-delete {
+      background-color: #e93f33; }
+    .dashboard-popup .section-photo .change-picture .buttons .button-delete:hover {
+      background-color: #df3529; }
 
 .careerScape .button-change, .resume-hero .button-change {
   color: white;
@@ -4678,6 +4804,10 @@ Dashboard
       .dashboard .resume .person .icon-pencil {
         position: absolute;
         top: 45px;
+        left: 30px; }
+      .dashboard .resume .person .edit-name {
+        position: absolute;
+        top: 247px;
         left: 30px; }
       .dashboard .resume .person .picture {
         width: 175px;
