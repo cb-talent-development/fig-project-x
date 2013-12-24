@@ -45,7 +45,7 @@ $sprite-height: 3597px;
 .icon-close:hover{
 	@include dimensionPosition(-475px, -420px, 40px, 40px, 1.0);
 	@media only screen and (max-width: 768px){
-		@include dimensionPosition(-430px, -470px, 40px, 40px, 0.7);
+	   @include dimensionPosition(-475px, -420px, 40px, 40px, 0.7);
 	}
 }
 .icon-bar-darkgrey{
@@ -863,83 +863,51 @@ Arrow
 JOB PHASES
 */
 .icon-search-orange{
-    background-position:-13px -379px;
-    height:22px;
-    width:22px;
+    @include dimensionPosition(-13px, -379px, 24px, 24px, 1.0);
     @media only screen and (max-width: 768px){
-	   background-position: -6.5px -189.5px;
-       height:11px;
-       width:11px;
+        @include dimensionPosition(-13px, -379px, 24px, 24px, 0.8);
 	}
 }
 .icon-check-red{
-    background-position:-60px -380px;
-    height:22px;
-    width:22px;
+    @include dimensionPosition(-60px, -379px, 24px, 24px, 1.0);
     @media only screen and (max-width: 768px){
-	   background-position: -30px -190px;
-       height:11px;
-       width:11px;
+        @include dimensionPosition(-60px, -379px, 24px, 24px, 0.8);
 	}
 }
 .icon-twin-blue{
-    background-position:-106px -379px;
-    height:22px;
-    width:22px;
+    @include dimensionPosition(-106px, -379px, 24px, 24px, 1.0);
     @media only screen and (max-width: 768px){
-	   background-position: -53px -189.5px;
-       height:11px;
-       width:11px;
+        @include dimensionPosition(-106px, -379px, 24px, 24px, 0.8);
 	}
 }
 .icon-suitcase-green{
-    background-position:-153px -378px;
-    height:22px;
-    width:22px;
+    @include dimensionPosition(-153px, -378px, 24px, 24px, 1.0);
     @media only screen and (max-width: 768px){
-	   background-position: -71.5px -189px;
-       height:11px;
-       width:11px;
+        @include dimensionPosition(-153px, -378px, 24px, 24px, 0.8);
 	}
 }
 .icon-search-people{
-    background-position:-189px -379px;
-    height:22px;
-    width:44px;
+    @include dimensionPosition(-189px, -379px, 24px, 46px, 1.0);
     @media only screen and (max-width: 768px){
-	   background-position: -94.5px -189.5px;
-       height:11px;
-       width:22px;
+	   @include dimensionPosition(-189px, -379px, 24px, 46px, 0.8);
 	}
 }
 .icon-check-people{
-    background-position:-236px -379px;
-    height:22px;
-    width:44px;
+    @include dimensionPosition(-236px, -379px, 24px, 46px, 1.0);
     @media only screen and (max-width: 768px){
-	   background-position: -118px -189.5px;
-       height:11px;
-       width:22px;
+        @include dimensionPosition(-236px, -379px, 24px, 46px, 0.8);
 	}
 }
 .icon-twin-people{
-    background-position:-282px -379px;
-    height:22px;
-    width:44px;
+    @include dimensionPosition(-282px, -379px, 24px, 46px, 1.0);
     @media only screen and (max-width: 768px){
-	   background-position: -141px -189.5px;
-       height:11px;
-       width:22px;
+	    @include dimensionPosition(-282px, -379px, 24px, 46px, 0.8);
 	}
 }
 .icon-suitcase-people{
-    background-position:-329px -379px;
-    height:22px;
-    width:44px;
+    @include dimensionPosition(-329px, -379px, 24px, 46px, 1.0);
     @media only screen and (max-width: 768px){
-	   background-position: -164.5px -189.5px;
-       height:11px;
-       width:22px;
+        @include dimensionPosition(-329px, -379px, 24px, 46px, 0.8);
 	}
 }
 .icon-question{
@@ -1463,7 +1431,7 @@ TOOLS
 .icon-resumeHero{
 	@include dimensionPosition(-335px,-1040px,345px,269px,1);
     @media only screen and (max-width: 768px){
-	   @include dimensionPosition(-34px,-1040px,345px,269px,1.1);
+	   @include dimensionPosition(-335px,-1040px,345px,269px,0.7);
 	}
 }
 .icon-jobinality{
@@ -1495,17 +1463,8 @@ TOOLS
 }
 .icon-button-post-large{
 	@include dimensionPosition(-464px,-592px,43px,387px,1);
-	@media only screen and (max-width: 1200px){
-	   @include dimensionPosition(-526px,-592px,43px,325px,1);
-	}
-	@media only screen and (max-width: 979px){
-	   @include dimensionPosition(-597px,-592px,43px,256px,1);
-	}
-	@media only screen and (max-width: 767px){
-	   @include dimensionPosition(-441px,-592px,43px,220px,1);
-	}
-	@media only screen and (max-width: 479px){
-	   @include dimensionPosition(-601px,-592px,43px,220px,1);
+	@media only screen and (max-width: 728px){
+	   @include dimensionPosition(-544px,-592px,43px,307px,1);
 	}
 }
 .icon-suitcase-job{
@@ -1519,69 +1478,57 @@ ICON SAVED
 */
 
 .icon-welcome{
-    @include dimensionPosition(-53px,-1465px,203px,235px,1.0);
+    @include dimensionPosition(-53px,-1465px,203px,235px,0.8);
     @media only screen and (max-width: 768px){
-        @include dimensionPosition(-10px,-1498px,203px,185px,0.8);
-	}
-}
-.icon-jobinality-saved{
-    @include dimensionPosition(-893px,-588px,117px,101px,1);
-    @media only screen and (max-width: 768px){
-        @include dimensionPosition(-893px,-588px,117px,101px,0.5);
+        @include dimensionPosition(-53px,-1498px,203px,235px,0.4);
 	}
 }
 .icon-article-saved{
     @include dimensionPosition(-1008px,-583px,126px,102px,1);
     @media only screen and (max-width: 768px){
-        @include dimensionPosition(-1008px,-583px,126px,102px,0.5);
+        @include dimensionPosition(-1008px,-583px,126px,102px,0.4);
 	}
 }
 .icon-article-saved-big{
-    @include dimensionPosition(-1008px,-583px,126px,102px,1.7);
+    @include dimensionPosition(-1008px,-583px,126px,102px,0.8);
     @media only screen and (max-width: 768px){
-        @include dimensionPosition(-1008px,-583px,126px,102px,1);
+        @include dimensionPosition(-1008px,-583px,126px,102px,0.4);
 	}
 }
 .icon-welcome-article-saved-big{
-    @include dimensionPosition(-324px,-1498px,203px,186px,1.1);
+    @include dimensionPosition(-324px,-1498px,203px,186px,0.8);
     @media only screen and (max-width: 768px){
-        @include dimensionPosition(-324px,-1498px,203px,186px,0.8);
-	}
-}
-.icon-resumePro-saved{
-    @include dimensionPosition(-1125px,-588px,117px,101px,1);
-    @media only screen and (max-width: 768px){
-        @include dimensionPosition(-1125px,-588px,117px,101px,0.5);
+        @include dimensionPosition(-324px,-1498px,203px,186px,0.4);
 	}
 }
 .icon-video-saved{
     @include dimensionPosition(-1240px,-583px,126px,101px,1);
     @media only screen and (max-width: 768px){
-        @include dimensionPosition(-1240px,-583px,126px,101px,0.5);
+        @include dimensionPosition(-1240px,-583px,126px,101px,0.4);
 	}
 }
 .icon-video-saved-big{
-    @include dimensionPosition(-1240px,-583px,126px,101px,1.7);
+    @include dimensionPosition(-1240px,-583px,126px,101px,0.8);
     @media only screen and (max-width: 768px){
-        @include dimensionPosition(-1240px,-583px,126px,101px,1);
+        @include dimensionPosition(-1240px,-583px,126px,101px,0.4);
 	}
 }
 .icon-welcome-video-saved-big{
-    @include dimensionPosition(-748px,-1498px,203px,185px,1.1);
+    @include dimensionPosition(-748px,-1498px,203px,185px,0.8);
     @media only screen and (max-width: 768px){
-        @include dimensionPosition(-748px,-1498px,203px,185px,0.8);
+        @include dimensionPosition(-748px,-1498px,203px,185px,0.4);
 	}
 }
 .icon-image-saved{
     @include dimensionPosition(-1356px,-583px,126px,101px,1);
     @media only screen and (max-width: 768px){
-        @include dimensionPosition(-1356px,-583px,126px,101px,0.5);
+        @include dimensionPosition(-1356px,-583px,126px,101px,0.4);
 	}
 }
 .icon-welcome-image-saved-big{
-    @include dimensionPosition(-536px,-1498px,203px,184px,1.1);
+    @include dimensionPosition(-536px,-1498px,203px,184px,0.8);
     @media only screen and (max-width: 768px){
-        @include dimensionPosition(-536px,-1498px,203px,185px,0.8);
+        @include dimensionPosition(-536px,-1498px,203px,185px,0.4);
 	}
 }
 .icon-image-saved-big{
@@ -1590,16 +1537,22 @@ ICON SAVED
         @include dimensionPosition(-1356px,-583px,126px,101px,1);
 	}
 }
-.icon-locallyGrown-saved{
-    @include dimensionPosition(-893px,-743px,115px,113px,1);
+.icon-resumeHero-saved{
+	@include dimensionPosition(-335px,-1040px,345px,269px,1);
     @media only screen and (max-width: 768px){
-        @include dimensionPosition(-893px,-743px,115px,113px,0.5);
+	   @include dimensionPosition(-335px,-1040px,345px,269px,0.4);
 	}
 }
-.icon-careerScape-saved{
-    @include dimensionPosition(-1045px,-739px,123px,114px,1);
+.icon-locallygrown-saved{
+	@include dimensionPosition(-935px,-1040px,345px,269px,1);
     @media only screen and (max-width: 768px){
-        @include dimensionPosition(-1045px,-739px,123px,114px,0.5);
+	   @include dimensionPosition(-935px,-1040px,345px,269px,0.4);
+	}
+}
+.icon-careerscape-saved{
+    @include dimensionPosition(-34px,-1040px,345px,269px,1);
+    @media only screen and (max-width: 768px){
+        @include dimensionPosition(-34px,-1040px,345px,269px,0.4);
 	}
 }
 /*

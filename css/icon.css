@@ -58,7 +58,7 @@ ICON css
   @media only screen and (max-width: 768px) {
     .icon-close:hover {
       background-size: 1050px 1259px;
-      background-position: -301px -329px;
+      background-position: -332px -294px;
       height: 28px;
       width: 28px; } }
 
@@ -1471,84 +1471,100 @@ Arrow
 JOB PHASES
 */
 .icon-search-orange {
+  background-size: 1500px 1799px;
   background-position: -13px -379px;
-  height: 22px;
-  width: 22px; }
+  height: 24px;
+  width: 24px; }
   @media only screen and (max-width: 768px) {
     .icon-search-orange {
-      background-position: -6.5px -189.5px;
-      height: 11px;
-      width: 11px; } }
+      background-size: 1200px 1439px;
+      background-position: -10px -303px;
+      height: 20px;
+      width: 20px; } }
 
 .icon-check-red {
-  background-position: -60px -380px;
-  height: 22px;
-  width: 22px; }
+  background-size: 1500px 1799px;
+  background-position: -60px -379px;
+  height: 24px;
+  width: 24px; }
   @media only screen and (max-width: 768px) {
     .icon-check-red {
-      background-position: -30px -190px;
-      height: 11px;
-      width: 11px; } }
+      background-size: 1200px 1439px;
+      background-position: -48px -303px;
+      height: 20px;
+      width: 20px; } }
 
 .icon-twin-blue {
+  background-size: 1500px 1799px;
   background-position: -106px -379px;
-  height: 22px;
-  width: 22px; }
+  height: 24px;
+  width: 24px; }
   @media only screen and (max-width: 768px) {
     .icon-twin-blue {
-      background-position: -53px -189.5px;
-      height: 11px;
-      width: 11px; } }
+      background-size: 1200px 1439px;
+      background-position: -84px -303px;
+      height: 20px;
+      width: 20px; } }
 
 .icon-suitcase-green {
+  background-size: 1500px 1799px;
   background-position: -153px -378px;
-  height: 22px;
-  width: 22px; }
+  height: 24px;
+  width: 24px; }
   @media only screen and (max-width: 768px) {
     .icon-suitcase-green {
-      background-position: -71.5px -189px;
-      height: 11px;
-      width: 11px; } }
+      background-size: 1200px 1439px;
+      background-position: -122px -302px;
+      height: 20px;
+      width: 20px; } }
 
 .icon-search-people {
+  background-size: 1500px 1799px;
   background-position: -189px -379px;
-  height: 22px;
-  width: 44px; }
+  height: 24px;
+  width: 46px; }
   @media only screen and (max-width: 768px) {
     .icon-search-people {
-      background-position: -94.5px -189.5px;
-      height: 11px;
-      width: 22px; } }
+      background-size: 1200px 1439px;
+      background-position: -151px -303px;
+      height: 20px;
+      width: 37px; } }
 
 .icon-check-people {
+  background-size: 1500px 1799px;
   background-position: -236px -379px;
-  height: 22px;
-  width: 44px; }
+  height: 24px;
+  width: 46px; }
   @media only screen and (max-width: 768px) {
     .icon-check-people {
-      background-position: -118px -189.5px;
-      height: 11px;
-      width: 22px; } }
+      background-size: 1200px 1439px;
+      background-position: -188px -303px;
+      height: 20px;
+      width: 37px; } }
 
 .icon-twin-people {
+  background-size: 1500px 1799px;
   background-position: -282px -379px;
-  height: 22px;
-  width: 44px; }
+  height: 24px;
+  width: 46px; }
   @media only screen and (max-width: 768px) {
     .icon-twin-people {
-      background-position: -141px -189.5px;
-      height: 11px;
-      width: 22px; } }
+      background-size: 1200px 1439px;
+      background-position: -225px -303px;
+      height: 20px;
+      width: 37px; } }
 
 .icon-suitcase-people {
+  background-size: 1500px 1799px;
   background-position: -329px -379px;
-  height: 22px;
-  width: 44px; }
+  height: 24px;
+  width: 46px; }
   @media only screen and (max-width: 768px) {
     .icon-suitcase-people {
-      background-position: -164.5px -189.5px;
-      height: 11px;
-      width: 22px; } }
+      background-size: 1200px 1439px;
+      background-position: -263px -303px;
+      height: 20px;
+      width: 37px; } }
 
 .icon-question {
   background-size: 1500px 1799px;
@@ -2406,10 +2422,10 @@ TOOLS
   width: 269px; }
   @media only screen and (max-width: 768px) {
     .icon-resumeHero {
-      background-size: 1651px 1979px;
-      background-position: -37px -1144px;
-      height: 380px;
-      width: 296px; } }
+      background-size: 1050px 1259px;
+      background-position: -234px -728px;
+      height: 242px;
+      width: 189px; } }
 
 .icon-jobinality {
   background-size: 1500px 1799px;
@@ -2470,30 +2486,12 @@ TOOLS
   background-position: -464px -592px;
   height: 43px;
   width: 387px; }
-  @media only screen and (max-width: 1200px) {
+  @media only screen and (max-width: 728px) {
     .icon-button-post-large {
       background-size: 1500px 1799px;
-      background-position: -526px -592px;
+      background-position: -544px -592px;
       height: 43px;
-      width: 325px; } }
-  @media only screen and (max-width: 979px) {
-    .icon-button-post-large {
-      background-size: 1500px 1799px;
-      background-position: -597px -592px;
-      height: 43px;
-      width: 256px; } }
-  @media only screen and (max-width: 767px) {
-    .icon-button-post-large {
-      background-size: 1500px 1799px;
-      background-position: -441px -592px;
-      height: 43px;
-      width: 220px; } }
-  @media only screen and (max-width: 479px) {
-    .icon-button-post-large {
-      background-size: 1500px 1799px;
-      background-position: -601px -592px;
-      height: 43px;
-      width: 220px; } }
+      width: 307px; } }
 
 .icon-suitcase-job {
   background-size: 1500px 1799px;
@@ -2511,28 +2509,16 @@ TOOLS
 ICON SAVED
 */
 .icon-welcome {
-  background-size: 1500px 1799px;
-  background-position: -53px -1465px;
-  height: 203px;
-  width: 235px; }
+  background-size: 1200px 1439px;
+  background-position: -42px -1172px;
+  height: 163px;
+  width: 188px; }
   @media only screen and (max-width: 768px) {
     .icon-welcome {
-      background-size: 1200px 1439px;
-      background-position: -8px -1198px;
-      height: 163px;
-      width: 148px; } }
-
-.icon-jobinality-saved {
-  background-size: 1500px 1799px;
-  background-position: -893px -588px;
-  height: 117px;
-  width: 101px; }
-  @media only screen and (max-width: 768px) {
-    .icon-jobinality-saved {
-      background-size: 750px 900px;
-      background-position: -446px -294px;
-      height: 59px;
-      width: 51px; } }
+      background-size: 600px 720px;
+      background-position: -21px -599px;
+      height: 82px;
+      width: 94px; } }
 
 .icon-article-saved {
   background-size: 1500px 1799px;
@@ -2541,46 +2527,34 @@ ICON SAVED
   width: 102px; }
   @media only screen and (max-width: 768px) {
     .icon-article-saved {
-      background-size: 750px 900px;
-      background-position: -504px -291px;
-      height: 63px;
-      width: 51px; } }
+      background-size: 600px 720px;
+      background-position: -403px -233px;
+      height: 51px;
+      width: 41px; } }
 
 .icon-article-saved-big {
-  background-size: 2550px 3058px;
-  background-position: -1713px -991px;
-  height: 215px;
-  width: 174px; }
+  background-size: 1200px 1439px;
+  background-position: -806px -466px;
+  height: 101px;
+  width: 82px; }
   @media only screen and (max-width: 768px) {
     .icon-article-saved-big {
-      background-size: 1500px 1799px;
-      background-position: -1008px -583px;
-      height: 126px;
-      width: 102px; } }
+      background-size: 600px 720px;
+      background-position: -403px -233px;
+      height: 51px;
+      width: 41px; } }
 
 .icon-welcome-article-saved-big {
-  background-size: 1651px 1979px;
-  background-position: -356px -1647px;
-  height: 224px;
-  width: 205px; }
+  background-size: 1200px 1439px;
+  background-position: -259px -1198px;
+  height: 163px;
+  width: 149px; }
   @media only screen and (max-width: 768px) {
     .icon-welcome-article-saved-big {
-      background-size: 1200px 1439px;
-      background-position: -259px -1198px;
-      height: 163px;
-      width: 149px; } }
-
-.icon-resumePro-saved {
-  background-size: 1500px 1799px;
-  background-position: -1125px -588px;
-  height: 117px;
-  width: 101px; }
-  @media only screen and (max-width: 768px) {
-    .icon-resumePro-saved {
-      background-size: 750px 900px;
-      background-position: -562px -294px;
-      height: 59px;
-      width: 51px; } }
+      background-size: 600px 720px;
+      background-position: -129px -599px;
+      height: 82px;
+      width: 75px; } }
 
 .icon-video-saved {
   background-size: 1500px 1799px;
@@ -2589,34 +2563,34 @@ ICON SAVED
   width: 101px; }
   @media only screen and (max-width: 768px) {
     .icon-video-saved {
-      background-size: 750px 900px;
-      background-position: -620px -291px;
-      height: 63px;
-      width: 51px; } }
+      background-size: 600px 720px;
+      background-position: -496px -233px;
+      height: 51px;
+      width: 41px; } }
 
 .icon-video-saved-big {
-  background-size: 2550px 3058px;
-  background-position: -2108px -991px;
-  height: 215px;
-  width: 172px; }
+  background-size: 1200px 1439px;
+  background-position: -992px -466px;
+  height: 101px;
+  width: 81px; }
   @media only screen and (max-width: 768px) {
     .icon-video-saved-big {
-      background-size: 1500px 1799px;
-      background-position: -1240px -583px;
-      height: 126px;
-      width: 101px; } }
+      background-size: 600px 720px;
+      background-position: -496px -233px;
+      height: 51px;
+      width: 41px; } }
 
 .icon-welcome-video-saved-big {
-  background-size: 1651px 1979px;
-  background-position: -822px -1647px;
-  height: 224px;
-  width: 204px; }
+  background-size: 1200px 1439px;
+  background-position: -598px -1198px;
+  height: 163px;
+  width: 148px; }
   @media only screen and (max-width: 768px) {
     .icon-welcome-video-saved-big {
-      background-size: 1200px 1439px;
-      background-position: -598px -1198px;
-      height: 163px;
-      width: 148px; } }
+      background-size: 600px 720px;
+      background-position: -299px -599px;
+      height: 82px;
+      width: 74px; } }
 
 .icon-image-saved {
   background-size: 1500px 1799px;
@@ -2625,22 +2599,22 @@ ICON SAVED
   width: 101px; }
   @media only screen and (max-width: 768px) {
     .icon-image-saved {
-      background-size: 750px 900px;
-      background-position: -678px -291px;
-      height: 63px;
-      width: 51px; } }
+      background-size: 600px 720px;
+      background-position: -542px -233px;
+      height: 51px;
+      width: 41px; } }
 
 .icon-welcome-image-saved-big {
-  background-size: 1651px 1979px;
-  background-position: -589px -1647px;
-  height: 224px;
-  width: 203px; }
+  background-size: 1200px 1439px;
+  background-position: -428px -1198px;
+  height: 163px;
+  width: 148px; }
   @media only screen and (max-width: 768px) {
     .icon-welcome-image-saved-big {
-      background-size: 1200px 1439px;
-      background-position: -428px -1198px;
-      height: 163px;
-      width: 148px; } }
+      background-size: 600px 720px;
+      background-position: -214px -599px;
+      height: 82px;
+      width: 74px; } }
 
 .icon-image-saved-big {
   background-size: 2550px 3058px;
@@ -2654,29 +2628,41 @@ ICON SAVED
       height: 126px;
       width: 101px; } }
 
-.icon-locallyGrown-saved {
+.icon-resumeHero-saved {
   background-size: 1500px 1799px;
-  background-position: -893px -743px;
-  height: 115px;
-  width: 113px; }
+  background-position: -335px -1040px;
+  height: 345px;
+  width: 269px; }
   @media only screen and (max-width: 768px) {
-    .icon-locallyGrown-saved {
-      background-size: 750px 900px;
-      background-position: -446px -371px;
-      height: 58px;
-      width: 57px; } }
+    .icon-resumeHero-saved {
+      background-size: 600px 720px;
+      background-position: -134px -416px;
+      height: 138px;
+      width: 108px; } }
 
-.icon-careerScape-saved {
+.icon-locallygrown-saved {
   background-size: 1500px 1799px;
-  background-position: -1045px -739px;
-  height: 123px;
-  width: 114px; }
+  background-position: -935px -1040px;
+  height: 345px;
+  width: 269px; }
   @media only screen and (max-width: 768px) {
-    .icon-careerScape-saved {
-      background-size: 750px 900px;
-      background-position: -522px -369px;
-      height: 62px;
-      width: 57px; } }
+    .icon-locallygrown-saved {
+      background-size: 600px 720px;
+      background-position: -374px -416px;
+      height: 138px;
+      width: 108px; } }
+
+.icon-careerscape-saved {
+  background-size: 1500px 1799px;
+  background-position: -34px -1040px;
+  height: 345px;
+  width: 269px; }
+  @media only screen and (max-width: 768px) {
+    .icon-careerscape-saved {
+      background-size: 600px 720px;
+      background-position: -13px -416px;
+      height: 138px;
+      width: 108px; } }
 
 /*
 ICON PRESENTATION (ONLY FOUR)

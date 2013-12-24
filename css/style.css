@@ -98,6 +98,9 @@ ICON FOR CHECKBOX
       height: 12px;
       width: 12px; } }
 
+/*
+General buttons classes
+*/
 .visible {
   display: block; }
 
@@ -115,14 +118,14 @@ ICON FOR CHECKBOX
 .main-container {
   width: 1170px;
   display: block;
-  margin: auto; }
-  @media only screen and (max-width: 1200px) and (min-width: 980px) {
-    .main-container {
-      width: 975px; } }
-  @media only screen and (max-width: 979px) and (min-width: 768px) {
-    .main-container {
-      width: 765px; } }
-  @media only screen and (max-width: 767px) {
+  margin: auto;
+  	/*@media only screen and (max-width: 1200px) and (min-width: 980px){
+          width:975px;
+      }
+  	@media only screen and (max-width: 979px) and (min-width: 768px){
+          width:765px;
+      }*/ }
+  @media only screen and (max-width: 768px) {
     .main-container {
       width: 95%; } }
 
@@ -252,6 +255,9 @@ ICON-ARROW
   margin-top: -8.5px; }
 .link .icon-bigarrow-bottom-grey {
   margin-top: -5.5px; }
+@media only screen and (max-width: 768px) {
+  .link i, .link b {
+    right: 7px; } }
 
 /*
 COLOR
@@ -411,6 +417,167 @@ Security
   oveflow: ellipsis; }
 
 /*
+HOMEPAGE SCROLLABLE CONTENT
+*/
+.first-connect {
+  width: 1170px;
+  margin: auto;
+  text-align: center;
+  position: relative; }
+  @media only screen and (max-width: 768px) {
+    .first-connect {
+      width: 100%; } }
+  .first-connect .content {
+    text-align: left; }
+    .first-connect .content .scrollable {
+      width: 400%; }
+  .first-connect .img-1 {
+    margin-top: 70px;
+    width: 100%;
+    height: 256px; }
+    @media only screen and (max-width: 768px) {
+      .first-connect .img-1 {
+        height: 180px; } }
+  .first-connect .element {
+    width: 25%;
+    float: left; }
+    .first-connect .element p {
+      width: 73%;
+      text-align: center;
+      font-size: 29px;
+      margin: auto; }
+      @media only screen and (max-width: 768px) {
+        .first-connect .element p {
+          font-size: 20px; } }
+  .first-connect .element1 .img-2 {
+    width: 100%;
+    height: 357px; }
+    @media only screen and (max-width: 768px) {
+      .first-connect .element1 .img-2 {
+        height: 220px;
+        margin-bottom: 15px; } }
+  .first-connect .element2, .first-connect .element3, .first-connect .element4 {
+    text-align: center; }
+    .first-connect .element2 .box, .first-connect .element3 .box, .first-connect .element4 .box {
+      position: relative;
+      width: 19.5%;
+      height: 225px;
+      overflow: hidden; }
+    .first-connect .element2 .box2, .first-connect .element3 .box2, .first-connect .element4 .box2 {
+      height: 225px; }
+      @media only screen and (max-width: 768px) {
+        .first-connect .element2 .box2, .first-connect .element3 .box2, .first-connect .element4 .box2 {
+          width: 65%; } }
+    .first-connect .element2 .box, .first-connect .element2 .box2, .first-connect .element3 .box, .first-connect .element3 .box2, .first-connect .element4 .box, .first-connect .element4 .box2 {
+      background-color: white;
+      box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+      -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+      border: none;
+      background: white;
+      display: inline-block;
+      vertical-align: top;
+      margin: 50px 15px;
+      margin-top: 60px; }
+      @media only screen and (max-width: 768px) {
+        .first-connect .element2 .box, .first-connect .element2 .box2, .first-connect .element3 .box, .first-connect .element3 .box2, .first-connect .element4 .box, .first-connect .element4 .box2 {
+          margin: 20px;
+          height: auto; } }
+  @media only screen and (max-width: 768px) {
+    .first-connect .element2 .box {
+      display: none; } }
+  @media only screen and (max-width: 768px) {
+    .first-connect .element2 .icon-welcome {
+      margin-bottom: 10px; } }
+  .first-connect .element2 i {
+    margin: 30px 20px; }
+    @media only screen and (max-width: 768px) {
+      .first-connect .element2 i {
+        margin: 20px;
+        margin-left: 5%;
+        margin-right: 5%; } }
+  .first-connect .element2 .icon-arrow-right-big-grey {
+    margin-top: 80px;
+    margin-left: 35px;
+    margin-right: 0px; }
+    @media only screen and (max-width: 768px) {
+      .first-connect .element2 .icon-arrow-right-big-grey {
+        display: none; } }
+  @media only screen and (max-width: 768px) {
+    .first-connect .element3 .box, .first-connect .element4 .box {
+      min-width: 100px;
+      margin-left: 3%;
+      margin-right: 3%;
+      height: 120px; } }
+  .first-connect .element3 i, .first-connect .element4 i {
+    margin-top: 25px;
+    margin-left: 35px; }
+  .first-connect .element3 i.icon-locallygrown-saved, .first-connect .element4 i.icon-locallygrown-saved {
+    margin-left: 20px; }
+  @media only screen and (max-width: 768px) {
+    .first-connect .element3 i, .first-connect .element4 i {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-left: -35px;
+      margin-top: -38px; }
+    .first-connect .element3 i.icon-locallygrown-saved, .first-connect .element4 i.icon-locallygrown-saved {
+      margin-left: -39px; } }
+  .first-connect .icon-close {
+    position: absolute;
+    right: 20px;
+    top: -20px; }
+  .first-connect .icon-arrow-left-big-blue, .first-connect .icon-arrow-right-big-blue {
+    position: absolute;
+    top: 300px;
+    margin-top: -26px;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none; }
+  .first-connect .icon-arrow-left-big-blue {
+    left: 100px; }
+    @media only screen and (max-width: 768px) {
+      .first-connect .icon-arrow-left-big-blue {
+        left: 4%; } }
+  .first-connect .icon-arrow-right-big-blue {
+    right: 100px; }
+    @media only screen and (max-width: 768px) {
+      .first-connect .icon-arrow-right-big-blue {
+        right: 4%; } }
+  .first-connect i:hover {
+    cursor: pointer; }
+  .first-connect .pages {
+    text-align: center; }
+    .first-connect .pages .activated {
+      background-color: #09335b !important; }
+    .first-connect .pages .ball {
+      margin: 0px 5px;
+      display: inline-block;
+      vertical-align: top;
+      width: 15px;
+      height: 15px;
+      border-radius: 10px;
+      background-color: #ccd6de; }
+    .first-connect .pages .ball:hover {
+      cursor: pointer; }
+  .first-connect .button, .first-connect .input-button {
+    margin: 60px 5px;
+    padding-top: 15px;
+    padding-bottom: 9px;
+    margin-bottom: 45px;
+    width: 350px;
+    font-size: 1.9em;
+    font-family: HelveticaLightCondensed, sans-serif; }
+    @media only screen and (max-width: 768px) {
+      .first-connect .button, .first-connect .input-button {
+        font-size: 1.71em; } }
+    @media only screen and (max-width: 768px) {
+      .first-connect .button, .first-connect .input-button {
+        width: 85%;
+        margin: auto;
+        margin-top: 20px;
+        margin-bottom: 2px; } }
+
+/*
 Header css
 */
 .container-filter {
@@ -422,47 +589,45 @@ Header css
   padding: 0px;
   border: none;
   line-height: 1.1; }
-  @media (max-width: 767px) {
+  @media only screen and (max-width: 768px) {
     .page-header {
       width: 1170px;
       display: block;
-      margin: auto; } }
-    @media only screen and (max-width: 767px) and (max-width: 1200px) and (min-width: 980px) {
-      .page-header {
-        width: 975px; } }
-    @media only screen and (max-width: 767px) and (max-width: 979px) and (min-width: 768px) {
-      .page-header {
-        width: 765px; } }
-    @media only screen and (max-width: 767px) and (max-width: 767px) {
+      margin: auto;
+      	/*@media only screen and (max-width: 1200px) and (min-width: 980px){
+              width:975px;
+          }
+      	@media only screen and (max-width: 979px) and (min-width: 768px){
+              width:765px;
+          }*/
+      text-align: center; } }
+    @media only screen and (max-width: 768px) and (max-width: 768px) {
       .page-header {
         width: 95%; } }
   .page-header h1 {
     font-size: 50px;
     display: inline; }
-    .page-header h1 img {
+    .page-header h1 .background-image {
       vertical-align: middle; }
   .page-header .grey {
     color: #bbb; }
-    @media (max-width: 767px) {
-      .page-header .grey {
-        display: none; } }
   .page-header .orange {
     color: #ee7835; }
   .page-header .black {
     color: #232323; }
   .page-header span {
     display: inline-block; }
-    @media (max-width: 767px) {
+    @media only screen and (max-width: 768px) {
       .page-header span {
         font-size: 25px !important; } }
   .page-header .icon-bigarrow-bottom-orange {
     position: relative;
-    top: 15px;
+    top: 19px;
     right: 0px; }
-    @media (max-width: 767px) {
+    @media only screen and (max-width: 768px) {
       .page-header .icon-bigarrow-bottom-orange {
         right: 0px;
-        top: 14px; } }
+        top: 10px; } }
   .page-header .button-signout {
     margin-top: 32px;
     font-size: 16px !important;
@@ -475,17 +640,20 @@ Header css
     -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
     border: 2px solid white;
     margin-right: 15px; }
-    @media (max-width: 767px) {
+    @media only screen and (max-width: 768px) {
       .page-header #profil-pic {
         height: 70px;
         width: 70px; } }
-  @media (max-width: 479px) {
+  @media only screen and (max-width: 479px) {
     .page-header .block {
       width: 200px; } }
   .page-header .subMenu {
     max-height: none;
     overflow: auto; }
 
+/*
+NAVBAR
+*/
 .navbar.hidden-xs {
   background-color: #09335b; }
   .navbar.hidden-xs ul li {
@@ -506,7 +674,7 @@ Header css
       float: right; }
   .navbar.hidden-xs span#menu-button {
     top: 10px;
-    right: 85px;
+    right: 10px;
     padding: 10px; }
   .navbar.hidden-xs span#menu-button:hover {
     background-color: #022745; }
@@ -553,7 +721,9 @@ Header css
 .navbar {
   margin: 0px;
   z-index: 1000; }
-  @media only screen and (min-width: 769px) {
+  .navbar .container {
+    position: relative; }
+  @media only screen and (min-width: 768px) {
     .navbar {
       height: 60px; } }
   .navbar span#menu-button {
@@ -569,6 +739,74 @@ Header css
     text-decoration: none; }
   .navbar .br {
     background-color: #022745; }
+
+/*
+HEADER BUTTONS
+*/
+.dropdown {
+  margin: 0px;
+  padding: 0px;
+  position: absolute;
+  top: 42px;
+  -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2); }
+  .dropdown li {
+    position: relative;
+    list-style-type: none;
+    margin: 0px;
+    padding: 15px 15px;
+    padding-bottom: 8px;
+    padding-left: 15px;
+    width: 100%; }
+    .dropdown li b {
+      position: absolute;
+      top: 50% !important;
+      left: 10px;
+      margin-top: -11px; }
+  .dropdown a:hover {
+    text-decoration: none; }
+
+.dropdown > li li:nth-child(odd) {
+  background-color: #eee; }
+
+@media (min-width: 768px) {
+  .dubble.open {
+    width: 369px !important; } }
+@media (max-width: 767px) {
+  .dubble.open {
+    width: 300px !important; } }
+
+.dubble.open + div {
+  display: none; }
+
+.toggleMenu:not(.dubble) ul {
+  z-index: 100; }
+  .toggleMenu:not(.dubble) ul li:nth-child(odd) {
+    background-color: #eee; }
+  .toggleMenu:not(.dubble) ul a {
+    color: #888; }
+
+.dubble ul {
+  z-index: 101 !important; }
+  @media only screen and (min-width: 768px) {
+    .dubble ul {
+      text-align: center; } }
+  .dubble ul li {
+    position: relative;
+    width: 50%;
+    float: left; }
+    .dubble ul li .job-phase {
+      margin-top: -9px; }
+    .dubble ul li b, .dubble ul li i {
+      position: absolute;
+      margin-top: -5px;
+      right: 15px; }
+      @media only screen and (min-width: 768px) {
+        .dubble ul li b, .dubble ul li i {
+          margin-top: -4px; } }
+  .dubble ul li:nth-child(4n + 2) {
+    background-color: #eee; }
+  .dubble ul li:nth-child(4n + 1) {
+    background-color: #eee; }
 
 /*
 Home css
@@ -636,16 +874,13 @@ Width
       margin-left: 5px;
       margin-right: 5px; } }
 
-/*
-General buttons classes
-*/
 .green {
   background: green;
   color: white; }
 
 .button, .input-button, .btn {
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
   border: none;
   background: white;
   font-size: 18px;
@@ -653,15 +888,22 @@ General buttons classes
   vertical-align: top;
   position: relative;
   padding-top: 16px;
-  padding-bottom: 11px;
+  padding-bottom: 9px;
   padding-left: 15px;
   padding-right: 15px;
   text-align: left;
   color: gray; }
+  @media only screen and (max-width: 768px) {
+    .button, .input-button, .btn {
+      font-size: 16.2px; } }
   .button b, .input-button b, .button i, .input-button i, .btn b, .btn i {
     position: absolute;
     top: 50%;
     right: 15px; }
+  @media only screen and (max-width: 768px) {
+    .button, .input-button, .btn {
+      padding-top: 13px;
+      padding-bottom: 10px; } }
 
 .button:hover:not(.no-hover), .input-button:hover:not(.no-hover) {
   cursor: pointer;
@@ -670,8 +912,8 @@ General buttons classes
     opacity: 0.8; }
 
 .select {
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
   border: none;
   background: white;
   font-size: 18px;
@@ -679,21 +921,28 @@ General buttons classes
   vertical-align: top;
   position: relative;
   padding-top: 16px;
-  padding-bottom: 11px;
+  padding-bottom: 9px;
   padding-left: 15px;
   padding-right: 15px;
   text-align: left;
   color: gray;
   border-bottom: 2px solid #cfcfcf; }
+  @media only screen and (max-width: 768px) {
+    .select {
+      font-size: 16.2px; } }
   .select b, .select i {
     position: absolute;
     top: 50%;
     right: 15px; }
+  @media only screen and (max-width: 768px) {
+    .select {
+      padding-top: 13px;
+      padding-bottom: 10px; } }
   .select b, .select i {
     margin-top: -4.5px; }
   .select .subMenu {
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
     border: none;
     background: white;
     border-top: 1px solid #cfcfcf;
@@ -709,73 +958,89 @@ General buttons classes
 
 .input-button {
   margin: 0px;
-  border-top: 2px solid #cfcfcf;
+  border-top: px solid #cfcfcf;
   padding: 0px;
-  box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.2);
-  -webkit-box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.2); }
+  box-shadow: 0 -2px 2px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 -2px 2px rgba(0, 0, 0, 0.2); }
+  @media only screen and (max-width: 768px) {
+    .input-button {
+      box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.2);
+      -webkit-box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.2);
+      border: none; } }
   .input-button input {
-    padding-top: 13px;
+    padding-top: 16px;
     padding-bottom: 9px;
     padding-left: 15px;
     padding-right: 15px;
+    font-size: 18px;
     border: none;
     display: block;
     width: 100%;
     height: 100%; }
-    @media (max-width: 79px) {
+    @media only screen and (max-width: 768px) {
       .input-button input {
-        paddding: 0px; } }
+        font-size: 16.2px; } }
+    @media only screen and (max-width: 768px) {
+      .input-button input {
+        padding: 0px; } }
   .input-button .icon-search {
     margin-top: -8px;
     opacity: 0.8; }
-    @media (max-width: 767px) {
+    @media only screen and (max-width: 768px) {
       .input-button .icon-search {
         margin-top: -11px !important;
-        margin-right: -6px; } }
+        margin-right: -11px;
+        right: 50%; } }
 
 /*
 Menu with multiple button
 */
 .menu-buttons {
+  padding: 0px 15px;
+  width: 1200px;
+  margin: auto;
   padding-top: 40px;
-  padding-bottom: 40px;
-  width: 1170px;
-  display: block;
-  margin: auto; }
-  @media only screen and (max-width: 1200px) and (min-width: 980px) {
+  padding-bottom: 40px; }
+  @media only screen and (max-width: 768px) {
     .menu-buttons {
-      width: 975px; } }
-  @media only screen and (max-width: 979px) and (min-width: 768px) {
-    .menu-buttons {
-      width: 765px; } }
-  @media only screen and (max-width: 767px) {
-    .menu-buttons {
-      width: 95%; } }
+      width: 300px;
+      padding-left: 0px;
+      padding-right: 0px; }
+      .menu-buttons input {
+        padding: 0px; } }
+  .menu-buttons .categories li {
+    padding-left: 30px; }
+  .menu-buttons .job-phase li {
+    padding-left: 44px; }
+  .menu-buttons .job-phase .discovery {
+    padding-left: 60px; }
   .menu-buttons .search-button {
     float: right; }
+  .menu-buttons .subMenu {
+    top: 44px;
+    max-height: none; }
+    @media only screen and (max-width: 768px) {
+      .menu-buttons .subMenu {
+        top: 39px; } }
   .menu-buttons .home {
     margin-right: 2.2%;
     width: 14.54%; }
-    @media (max-width: 767px) {
+    @media only screen and (max-width: 768px) {
       .menu-buttons .home {
         height: 40px;
-        width: 250px; } }
+        width: 80%; } }
   .menu-buttons .search {
     width: 12%; }
-    @media (max-width: 767px) {
+    @media only screen and (max-width: 768px) {
       .menu-buttons .search {
         height: 40px;
-        width: 40px; } }
+        width: 15%; } }
   .menu-buttons .last {
     margin-right: 0px; }
   .menu-buttons .button, .menu-buttons .input-button {
     margin-bottom: 10px; }
     .menu-buttons .button b, .menu-buttons .input-button b {
       top: 20px; }
-    @media (max-width: 767px) {
-      .menu-buttons .button, .menu-buttons .input-button {
-        font-size: 15px;
-        padding-bottom: 8px !important; } }
   .menu-buttons .element, .menu-buttons .person {
     text-transform: capitalize;
     -moz-box-shadow: none;
@@ -788,16 +1053,10 @@ Menu with multiple button
       position: absolute;
       right: -25px;
       top: 0px; }
-    @media (max-width: 979px) {
-      .menu-buttons .element, .menu-buttons .person {
-        width: 167px; } }
-    @media (max-width: 767px) {
+    @media only screen and (max-width: 768px) {
       .menu-buttons .element, .menu-buttons .person {
         height: 40px;
         width: 150px; } }
-    @media (max-width: 479px) {
-      .menu-buttons .element, .menu-buttons .person {
-        width: 145px; } }
   .menu-buttons .person {
     width: 33.3%; }
     .menu-buttons .person .picture {
@@ -806,28 +1065,108 @@ Menu with multiple button
       top: 0.5px;
       width: 42px;
       height: 42px; }
-      @media (max-width: 767px) {
+      @media only screen and (max-width: 768px) {
         .menu-buttons .person .picture {
           height: 39px;
           width: 39px; } }
     .menu-buttons .person .name {
       margin-left: 35px; }
-    @media (max-width: 767px) {
+    @media only screen and (max-width: 768px) {
       .menu-buttons .person {
         height: 40px;
-        width: 410px; } }
-    @media (max-width: 479px) {
-      .menu-buttons .person {
-        width: 249px; } }
+        width: 310px; } }
 
-@media (max-width: 767px) {
-  .menu-buttons, .page-header {
-    width: 300px;
+@media only screen and (max-width: 768px) {
+  .page-header {
+    padding-top: 15px;
+    padding-bottom: 15px; } }
+
+@media only screen and (max-width: 768px) {
+  .menu-buttons {
     padding-top: 15px;
     padding-bottom: 5px; } }
-@media (max-width: 479px) {
-  .menu-buttons, .page-header {
-    width: 300px; } }
+
+/*
+PROFILE SUBMENU
+*/
+.page-header .background-zig {
+  position: absolute;
+  top: 100px;
+  left: -90px;
+  border: 1px solid black; }
+.page-header .icon-triangle-white {
+  position: absolute;
+  top: -15px;
+  left: 30px; }
+.page-header .subMenu {
+  overflow: visible;
+  z-index: 999;
+  width: 370px;
+  left: -143px;
+  top: 90px; }
+  @media (max-width: 768px) {
+    .page-header .subMenu {
+      width: 85% !important;
+      left: 7.5% !important;
+      top: 160px;
+      position: fixed; } }
+  .page-header .subMenu .profile-subMenu {
+    background: white;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.3);
+    padding: 12px 20px; }
+    .page-header .subMenu .profile-subMenu .button, .page-header .subMenu .profile-subMenu .input-button {
+      padding-top: 16px;
+      padding-bottom: 10px;
+      margin: 6px 0px; }
+    @media only screen and (max-width: 768px) {
+      .page-header .subMenu .profile-subMenu {
+        padding: 18px; } }
+    .page-header .subMenu .profile-subMenu h2 {
+      width: 100%;
+      text-align: center;
+      padding-top: 10px;
+      padding-bottom: 0px;
+      color: black;
+      font-size: 0.8em;
+      font-family: HelveticaCondensed, sans-serif; }
+      @media only screen and (max-width: 768px) {
+        .page-header .subMenu .profile-subMenu h2 {
+          padding: 12px 0px;
+          margin: 0px; } }
+    .page-header .subMenu .profile-subMenu p {
+      width: 100%;
+      text-align: center;
+      font-size: 0.46em;
+      color: #888;
+      margin-bottom: 30px;
+      font-family: HelveticaLightCondensed, sans-serif; }
+      @media only screen and (max-width: 768px) {
+        .page-header .subMenu .profile-subMenu p {
+          margin-bottom: 0px; } }
+    .page-header .subMenu .profile-subMenu .button, .page-header .subMenu .profile-subMenu .input-button {
+      width: 100%; }
+    .page-header .subMenu .profile-subMenu .back-grey {
+      color: black; }
+.page-header .offline {
+  width: 390px;
+  left: -135px; }
+  @media only screen and (max-width: 768px) {
+    .page-header .offline {
+      top: 180px; } }
+  .page-header .offline .profile-subMenu h2 {
+    padding-top: 25px;
+    padding-bottom: 20px;
+    font-size: 0.9em; }
+  .page-header .offline .profile-subMenu .border {
+    border-bottom: 1px solid #ccc;
+    margin: 48px -20px;
+    margin-bottom: 41px;
+    width: 390px; }
+    @media only screen and (max-width: 768px) {
+      .page-header .offline .profile-subMenu .border {
+        margin: 20px -20px;
+        width: auto; } }
 
 /*
 End buttons
@@ -835,17 +1174,14 @@ End buttons
 /*
 General box template
 */
-@media (max-width: 767px) {
+@media only screen and (max-width: 768px) {
   .menu-buttons.article {
-    height: 125px; } }
-@media (max-width: 479px) {
-  .menu-buttons.article {
-    height: 175px; } }
+    height: auto; } }
 
 .box-orange-1 {
   background-color: white;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
   border: none;
   background: white;
   overflow: hidden;
@@ -861,8 +1197,8 @@ General box template
 
 .box-orange-2 {
   background-color: white;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
   border: none;
   background: white;
   overflow: hidden;
@@ -878,8 +1214,8 @@ General box template
 
 .box-orange-3 {
   background-color: white;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
   border: none;
   background: white;
   overflow: hidden;
@@ -895,8 +1231,8 @@ General box template
 
 .box-orange-4 {
   background-color: white;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
   border: none;
   background: white;
   overflow: hidden;
@@ -912,8 +1248,8 @@ General box template
 
 .box-green-1 {
   background-color: white;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
   border: none;
   background: white;
   overflow: hidden;
@@ -929,8 +1265,8 @@ General box template
 
 .box-green-2 {
   background-color: white;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
   border: none;
   background: white;
   overflow: hidden;
@@ -946,8 +1282,8 @@ General box template
 
 .box-green-3 {
   background-color: white;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
   border: none;
   background: white;
   overflow: hidden;
@@ -963,8 +1299,8 @@ General box template
 
 .box-green-4 {
   background-color: white;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
   border: none;
   background: white;
   overflow: hidden;
@@ -980,8 +1316,8 @@ General box template
 
 .box-blue-1 {
   background-color: white;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
   border: none;
   background: white;
   overflow: hidden;
@@ -997,8 +1333,8 @@ General box template
 
 .box-blue-2 {
   background-color: white;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
   border: none;
   background: white;
   overflow: hidden;
@@ -1014,8 +1350,8 @@ General box template
 
 .box-blue-3 {
   background-color: white;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
   border: none;
   background: white;
   overflow: hidden;
@@ -1031,8 +1367,8 @@ General box template
 
 .box-blue-4 {
   background-color: white;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
   border: none;
   background: white;
   overflow: hidden;
@@ -1048,8 +1384,8 @@ General box template
 
 .box-blue-5 {
   background-color: white;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
   border: none;
   background: white;
   overflow: hidden;
@@ -1065,8 +1401,8 @@ General box template
 
 .box-blue-6 {
   background-color: white;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
   border: none;
   background: white;
   overflow: hidden;
@@ -1082,8 +1418,8 @@ General box template
 
 .box-red-1 {
   background-color: white;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
   border: none;
   background: white;
   overflow: hidden;
@@ -1099,8 +1435,8 @@ General box template
 
 .box-red-2 {
   background-color: white;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
   border: none;
   background: white;
   overflow: hidden;
@@ -1116,8 +1452,8 @@ General box template
 
 .box-red-3 {
   background-color: white;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
   border: none;
   background: white;
   overflow: hidden;
@@ -1133,8 +1469,8 @@ General box template
 
 .box-red-4 {
   background-color: white;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
   border: none;
   background: white;
   overflow: hidden;
@@ -1150,8 +1486,8 @@ General box template
 
 .box-pink-1 {
   background-color: white;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
   border: none;
   background: white;
   overflow: hidden;
@@ -1167,8 +1503,8 @@ General box template
 
 .box-pink-2 {
   background-color: white;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
   border: none;
   background: white;
   overflow: hidden;
@@ -1184,8 +1520,8 @@ General box template
 
 .box-pink-3 {
   background-color: white;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
   border: none;
   background: white;
   overflow: hidden;
@@ -2690,16 +3026,16 @@ Load More button
   width: 1170px;
   display: block;
   margin: auto;
+  	/*@media only screen and (max-width: 1200px) and (min-width: 980px){
+          width:975px;
+      }
+  	@media only screen and (max-width: 979px) and (min-width: 768px){
+          width:765px;
+      }*/
   margin-top: 30px;
   margin-bottom: 55px;
   text-align: center; }
-  @media only screen and (max-width: 1200px) and (min-width: 980px) {
-    .load-more {
-      width: 975px; } }
-  @media only screen and (max-width: 979px) and (min-width: 768px) {
-    .load-more {
-      width: 765px; } }
-  @media only screen and (max-width: 767px) {
+  @media only screen and (max-width: 768px) {
     .load-more {
       width: 95%; } }
   .load-more i.left {
@@ -2754,8 +3090,8 @@ General social CSS
   margin-right: 12px; }
 .social .icon-social:hover {
   cursor: pointer;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
   border: none; }
 .social .icon-save {
   margin-right: 3px; }
@@ -2772,17 +3108,17 @@ Related
   width: 1170px;
   display: block;
   margin: auto;
+  	/*@media only screen and (max-width: 1200px) and (min-width: 980px){
+          width:975px;
+      }
+  	@media only screen and (max-width: 979px) and (min-width: 768px){
+          width:765px;
+      }*/
   font-size: 22px;
   text-transform: uppercase;
   margin-top: 50px;
   margin-bottom: 50px; }
-  @media only screen and (max-width: 1200px) and (min-width: 980px) {
-    .related h2.related-title {
-      width: 975px; } }
-  @media only screen and (max-width: 979px) and (min-width: 768px) {
-    .related h2.related-title {
-      width: 765px; } }
-  @media only screen and (max-width: 767px) {
+  @media only screen and (max-width: 768px) {
     .related h2.related-title {
       width: 95%; } }
 .related .related-container {
@@ -2812,20 +3148,25 @@ Related
 /*
 POST CSS
 */
+.article-menu .button, .article-menu .input-button, .article-menu input {
+  padding-top: 13px; }
+.article-menu .input-button {
+  padding: 0px; }
+
 .post {
   width: 1170px;
   display: block;
   margin: auto;
+  	/*@media only screen and (max-width: 1200px) and (min-width: 980px){
+          width:975px;
+      }
+  	@media only screen and (max-width: 979px) and (min-width: 768px){
+          width:765px;
+      }*/
   /*
   Comment-section
   */ }
-  @media only screen and (max-width: 1200px) and (min-width: 980px) {
-    .post {
-      width: 975px; } }
-  @media only screen and (max-width: 979px) and (min-width: 768px) {
-    .post {
-      width: 765px; } }
-  @media only screen and (max-width: 767px) {
+  @media only screen and (max-width: 768px) {
     .post {
       width: 95%; } }
   .post .title {
@@ -2839,38 +3180,38 @@ POST CSS
     @media only screen and (max-width: 768px) {
       .post .title {
         width: 100%; } }
-    @media (max-width: 1200px) and (min-width: 980px) {
+    @media only screen and (max-width: 1200px) and (min-width: 980px) {
       .post .title {
         font-size: 80px;
         line-height: 80px;
         margin-top: 40px;
         margin-bottom: 30px; } }
-    @media (max-width: 979px) and (min-width: 768px) {
+    @media only screen and (max-width: 979px) and (min-width: 768px) {
       .post .title {
         font-size: 65px;
         line-height: 65px;
         margin-top: 25px;
         margin-bottom: 20px; } }
-    @media (max-width: 767px) {
+    @media only screen and (max-width: 768px) {
       .post .title {
         font-size: 30px;
         line-height: 30px;
         margin-top: 15px;
         margin-bottom: 15px; } }
   .post .complement {
-    width: 37%;
+    width: 32%;
     float: right; }
     @media only screen and (max-width: 768px) {
       .post .complement {
         width: 100%; } }
     .post .complement .social, .post .complement .rating, .post .complement .comments {
-      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-      -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+      -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
       border: none;
       background: white;
       display: block;
       width: 100%; }
-    @media (max-width: 767px) {
+    @media only screen and (max-width: 768px) {
       .post .complement .social, .post .complement .rating {
         width: 48%;
         float: left; } }
@@ -2882,24 +3223,24 @@ POST CSS
       padding-left: 5px;
       padding-right: 5px;
       text-align: center; }
-      @media (max-width: 1200px) and (min-width: 980px) {
+      @media only screen and (max-width: 1200px) and (min-width: 980px) {
         .post .complement .social {
           height: 70px;
           padding-top: 15px;
           padding-bottom: 15.5px; } }
-      @media (max-width: 979px) and (min-width: 768px) {
+      @media only screen and (max-width: 979px) and (min-width: 768px) {
         .post .complement .social {
           height: 50px;
           padding-top: 13.5px;
           padding-bottom: 12.5px; } }
-      @media (max-width: 767px) {
+      @media only screen and (max-width: 768px) {
         .post .complement .social {
           height: 75px;
           margin-bottom: 45px;
           padding-top: 23px;
           padding-bottom: 23px;
           margin-right: 4%; } }
-      @media (max-width: 480px) {
+      @media only screen and (max-width: 480px) {
         .post .complement .social {
           height: 37.5px;
           margin-bottom: 22.5px;
@@ -2909,22 +3250,22 @@ POST CSS
         display: inline-block;
         vertical-align: top;
         margin-right: 10px; }
-        @media (max-width: 1200px) {
+        @media only screen and (max-width: 1200px) {
           .post .complement .social .icon-social {
             margin-right: 5px; } }
-        @media (max-width: 979px) {
+        @media only screen and (max-width: 979px) {
           .post .complement .social .icon-social {
             margin-right: 5px; } }
-        @media (max-width: 767px) {
+        @media only screen and (max-width: 768px) {
           .post .complement .social .icon-social {
             margin-right: 10px; } }
-        @media (max-width: 479px) {
+        @media only screen and (max-width: 479px) {
           .post .complement .social .icon-social {
             margin-right: 2px; } }
       .post .complement .social .icon-social:hover {
         cursor: pointer;
-        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-        -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+        -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
         border: none; }
       .post .complement .social .icon-save {
         margin-right: 2px; }
@@ -2932,21 +3273,21 @@ POST CSS
         margin-top: 8px;
         margin-left: 5px;
         margin-right: 8px; }
-        @media (max-width: 1200px) {
+        @media only screen and (max-width: 1200px) {
           .post .complement .social .icon-bar-grey {
             margin-top: 7px;
             margin-right: 5px; } }
-        @media (max-width: 979px) {
+        @media only screen and (max-width: 979px) {
           .post .complement .social .icon-bar-grey {
             margin-top: 0px;
             margin-right: 5px; } }
-        @media (max-width: 767px) {
+        @media only screen and (max-width: 768px) {
           .post .complement .social .icon-bar-grey {
             margin-top: 7px;
             margin-right: 15px;
             margin-left: 6px;
             margin-right: 8px; } }
-        @media (max-width: 479px) {
+        @media only screen and (max-width: 479px) {
           .post .complement .social .icon-bar-grey {
             margin-top: 1px;
             margin-left: 2px;
@@ -2959,23 +3300,23 @@ POST CSS
       margin-bottom: 30px; }
       .post .complement .rating .icon {
         margin: 0px 5px; }
-      @media (max-width: 1200px) and (min-width: 980px) {
+      @media only screen and (max-width: 1200px) and (min-width: 980px) {
         .post .complement .rating {
           height: 70px;
           padding-top: 15px;
           padding-bottom: 15.5px; } }
-      @media (max-width: 979px) and (min-width: 768px) {
+      @media only screen and (max-width: 979px) and (min-width: 768px) {
         .post .complement .rating {
           height: 50px;
           padding-top: 13.5px;
           padding-bottom: 12.5px; } }
-      @media (max-width: 767px) {
+      @media only screen and (max-width: 768px) {
         .post .complement .rating {
           height: 75px;
           margin-bottom: 5px;
           padding-top: 20px;
           padding-bottom: 14px; } }
-      @media (max-width: 480px) {
+      @media only screen and (max-width: 480px) {
         .post .complement .rating {
           height: 37.5px;
           margin-bottom: 5px;
@@ -2993,24 +3334,24 @@ POST CSS
     .post .img-background .img {
       width: 100%;
       height: 100%; }
-    @media (max-width: 1200px) and (min-width: 980px) {
+    @media only screen and (max-width: 1200px) and (min-width: 980px) {
       .post .img-background {
         height: 450px;
         margin-bottom: 40px; } }
-    @media (max-width: 979px) and (min-width: 768px) {
+    @media only screen and (max-width: 979px) and (min-width: 768px) {
       .post .img-background {
         height: 400px;
         margin-bottom: 33px; } }
-    @media (max-width: 767px) {
+    @media only screen and (max-width: 768px) {
       .post .img-background {
         height: 300px;
         margin-bottom: 20px; } }
-    @media (max-width: 480px) {
+    @media only screen and (max-width: 480px) {
       .post .img-background {
         height: 200px;
         margin-bottom: 10px; } }
   .post .infographic, .post .i1, .post .i2, .post .v2, .post .i3, .post .v3, .post .content {
-    width: 62.6%; }
+    width: 66%; }
     @media only screen and (max-width: 768px) {
       .post .infographic, .post .i1, .post .i2, .post .v2, .post .i3, .post .v3, .post .content {
         width: 100%; } }
@@ -3022,19 +3363,19 @@ POST CSS
       line-height: 36px;
       text-transform: uppercase;
       padding-bottom: 3px; }
-      @media (max-width: 1200px) and (min-width: 980px) {
+      @media only screen and (max-width: 1200px) and (min-width: 980px) {
         .post .content .intro {
           font-size: 25px;
           line-height: 33px; } }
-      @media (max-width: 979px) and (min-width: 768px) {
+      @media only screen and (max-width: 979px) and (min-width: 768px) {
         .post .content .intro {
           font-size: 22px;
           line-height: 30px; } }
-      @media (max-width: 767px) {
+      @media only screen and (max-width: 768px) {
         .post .content .intro {
           font-size: 17px;
           line-height: 27px; } }
-      @media (max-width: 480px) {
+      @media only screen and (max-width: 480px) {
         .post .content .intro {
           font-size: 15px;
           line-height: 25px; } }
@@ -3053,22 +3394,22 @@ POST CSS
       margin-top: 30px;
       margin-bottom: 15px;
       font-size: 18px; }
-      @media (max-width: 1200px) and (min-width: 980px) {
+      @media only screen and (max-width: 1200px) and (min-width: 980px) {
         .post .content h3 {
           margin-top: 25px;
           margin-bottom: 13px;
           font-size: 17px; } }
-      @media (max-width: 979px) and (min-width: 768px) {
+      @media only screen and (max-width: 979px) and (min-width: 768px) {
         .post .content h3 {
           margin-top: 20px;
           margin-bottom: 10px;
           font-size: 16px; } }
-      @media (max-width: 767px) {
+      @media only screen and (max-width: 768px) {
         .post .content h3 {
           margin-top: 15px;
           margin-bottom: 8px;
           font-size: 15px; } }
-      @media (max-width: 480px) {
+      @media only screen and (max-width: 480px) {
         .post .content h3 {
           margin-top: 12px;
           margin-bottom: 6px;
@@ -3079,25 +3420,25 @@ POST CSS
       margin: 0px;
       padding-top: 11px;
       padding-bottom: 16px; }
-      @media (max-width: 1200px) and (min-width: 980px) {
+      @media only screen and (max-width: 1200px) and (min-width: 980px) {
         .post .content p {
           font-size: 17px;
           line-height: 23px;
           padding-top: 10px;
           padding-bottom: 15px; } }
-      @media (max-width: 979px) and (min-width: 768px) {
+      @media only screen and (max-width: 979px) and (min-width: 768px) {
         .post .content p {
           font-size: 16px;
           line-height: 21px;
           padding-top: 9px;
           padding-bottom: 13px; } }
-      @media (max-width: 767px) {
+      @media only screen and (max-width: 768px) {
         .post .content p {
           font-size: 14px;
           line-height: 19px;
           padding-top: 8px;
           padding-bottom: 12px; } }
-      @media (max-width: 480px) {
+      @media only screen and (max-width: 480px) {
         .post .content p {
           font-size: 13px;
           line-height: 17px;
@@ -3107,13 +3448,13 @@ POST CSS
     padding: 20px;
     position: relative;
     border-bottom: 1px solid #cfcfcf; }
-    @media (max-width: 1200px) and (min-width: 980px) {
+    @media only screen and (max-width: 1200px) and (min-width: 980px) {
       .post .comments .new-comment {
         font-size: 13px; } }
-    @media (max-width: 979px) and (min-width: 768px) {
+    @media only screen and (max-width: 979px) and (min-width: 768px) {
       .post .comments .new-comment {
         font-size: 12px; } }
-    @media (max-width: 479px) {
+    @media only screen and (max-width: 479px) {
       .post .comments .new-comment {
         font-size: 12px; } }
     .post .comments .new-comment .img-user {
@@ -3148,17 +3489,17 @@ POST CSS
         top: 0px;
         left: 0px;
         width: 100%; }
-      @media (max-width: 1200px) and (min-width: 980px) {
+      @media only screen and (max-width: 1200px) and (min-width: 980px) {
         .post .comments .new-comment .input {
           width: 220px; }
           .post .comments .new-comment .input input {
             padding: 3px; } }
-      @media (max-width: 979px) and (min-width: 768px) {
+      @media only screen and (max-width: 979px) and (min-width: 768px) {
         .post .comments .new-comment .input {
           width: 200px; }
           .post .comments .new-comment .input input {
             padding: 4px; } }
-      @media (max-width: 479px) {
+      @media only screen and (max-width: 479px) {
         .post .comments .new-comment .input {
           width: 80%; }
           .post .comments .new-comment .input input {
@@ -3178,7 +3519,7 @@ POST CSS
       width: 80%; }
       .post .comments .comments-list .level-1 .content .new-comment .input {
         width: 69%; }
-      @media (max-width: 768px) {
+      @media only screen and (max-width: 768px) {
         .post .comments .comments-list .level-1 .content {
           width: 84%; }
           .post .comments .comments-list .level-1 .content .new-comment .input {
@@ -3187,7 +3528,7 @@ POST CSS
       width: 73%; }
       .post .comments .comments-list .level-2 .content .new-comment .input {
         width: 69%; }
-      @media (max-width: 768px) {
+      @media only screen and (max-width: 768px) {
         .post .comments .comments-list .level-2 .content {
           width: 78%; }
           .post .comments .comments-list .level-2 .content .new-comment .input {
@@ -3196,7 +3537,7 @@ POST CSS
       width: 64%; }
       .post .comments .comments-list .level-3 .content .new-comment .input {
         width: 64%; }
-      @media (max-width: 768px) {
+      @media only screen and (max-width: 768px) {
         .post .comments .comments-list .level-3 .content {
           width: 70%; }
           .post .comments .comments-list .level-3 .content .new-comment .input {
@@ -3245,7 +3586,7 @@ POST CSS
             color: #9d9d9d; }
         .post .comments .comments-list .comment .content .closeReply {
           display: none; }
-        @media (max-width: 768px) {
+        @media only screen and (max-width: 768px) {
           .post .comments .comments-list .comment .content {
             padding-left: 16px;
             padding-bottom: 24px; } }
@@ -3308,6 +3649,9 @@ POST CSS
   left: 65%;
   width: 26.6% !important; }
 
+/*
+END POST 
+*/
 /*
 Tools dashboard & tool css
 */
@@ -3402,7 +3746,7 @@ DIALOG
     margin-top: 140px;
     background-color: #f3f5f5;
     margin-bottom: 140px; }
-    @media (max-width: 479px) {
+    @media only screen and (max-width: 479px) {
       .dialog .section {
         width: 300px; } }
     .dialog .section .header {
@@ -3414,7 +3758,7 @@ DIALOG
       padding-bottom: 20px;
       font-weight: bold;
       border-bottom: 1px solid #cfcfcf; }
-      @media (max-width: 479px) {
+      @media only screen and (max-width: 479px) {
         .dialog .section .header {
           font-size: 15px;
           padding: 10px;
@@ -3423,7 +3767,7 @@ DIALOG
         position: absolute;
         right: 20px;
         top: 20px; }
-        @media (max-width: 479px) {
+        @media only screen and (max-width: 479px) {
           .dialog .section .header .close {
             right: 10px;
             top: 10px; } }
@@ -3464,7 +3808,7 @@ DIALOG
         padding-right: 40px; }
         .dialog .section .footer-dialog .button-next i {
           right: 15px; }
-      @media (max-width: 479px) {
+      @media only screen and (max-width: 479px) {
         .dialog .section .footer-dialog {
           padding: 10px; }
           .dialog .section .footer-dialog .button-save, .dialog .section .footer-dialog .button-next, .dialog .section .footer-dialog .button-previous {
@@ -3484,16 +3828,16 @@ Tool CSS
   width: 1170px;
   display: block;
   margin: auto;
+  	/*@media only screen and (max-width: 1200px) and (min-width: 980px){
+          width:975px;
+      }
+  	@media only screen and (max-width: 979px) and (min-width: 768px){
+          width:765px;
+      }*/
   /*
   Button for tools
   */ }
-  @media only screen and (max-width: 1200px) and (min-width: 980px) {
-    .tool {
-      width: 975px; } }
-  @media only screen and (max-width: 979px) and (min-width: 768px) {
-    .tool {
-      width: 765px; } }
-  @media only screen and (max-width: 767px) {
+  @media only screen and (max-width: 768px) {
     .tool {
       width: 95%; } }
   .tool .header-tool {
@@ -3502,8 +3846,8 @@ Tool CSS
     margin-top: 60px;
     margin-bottom: 60px; }
     .tool .header-tool .title-social {
-      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-      -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+      -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
       border: none;
       background: white;
       position: relative;
@@ -3535,8 +3879,8 @@ Tool CSS
         height: 94px;
         left: 238px; }
     .tool .header-tool .help {
-      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-      -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+      -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
       border: none;
       background: white;
       float: right;
@@ -3547,7 +3891,7 @@ Tool CSS
         cursor: pointer; }
     .tool .header-tool .icon-bar-grey {
       margin: 9px; }
-    @media (max-width: 479px) {
+    @media only screen and (max-width: 479px) {
       .tool .header-tool {
         width: 300px;
         height: 300px;
@@ -3593,7 +3937,7 @@ Tool CSS
     width: 100%;
     margin: auto;
     margin-bottom: 30px; }
-    @media (max-width: 479px) {
+    @media only screen and (max-width: 479px) {
       .tool .selector {
         margin-bottom: 10px; } }
     .tool .selector .input-button {
@@ -3606,7 +3950,7 @@ Tool CSS
       font-size: 22px;
       border: none;
       background: none; }
-      @media (max-width: 479px) {
+      @media only screen and (max-width: 479px) {
         .tool .selector .input-button {
           width: 300px;
           padding-top: 12px;
@@ -3617,7 +3961,7 @@ Tool CSS
       padding-bottom: 17px;
       font-size: 22px;
       position: relative; }
-      @media (max-width: 479px) {
+      @media only screen and (max-width: 479px) {
         .tool .selector .industries, .tool .selector .occupations {
           margin-top: 10px;
           padding-top: 12px;
@@ -3630,7 +3974,7 @@ Tool CSS
         top: 32.5px;
         margin-top: -2px;
         position: absolute; }
-        @media (max-width: 479px) {
+        @media only screen and (max-width: 479px) {
           .tool .selector .industries b, .tool .selector .occupations b {
             top: 22.5px; } }
       .tool .selector .industries .subMenu, .tool .selector .occupations .subMenu {
@@ -3657,7 +4001,7 @@ Tool CSS
       width: 23%;
       margin-left: 30px;
       height: 100%; }
-      @media (max-width: 479px) {
+      @media only screen and (max-width: 479px) {
         .tool .selector .industries {
           width: 300px;
           margin-left: 0px; }
@@ -3669,7 +4013,7 @@ Tool CSS
       float: right;
       width: 48.7%;
       height: 100%; }
-      @media (max-width: 479px) {
+      @media only screen and (max-width: 479px) {
         .tool .selector .occupations {
           width: 300px;
           float: left; }
@@ -3689,7 +4033,7 @@ Tool CSS
     font-size: 20px;
     line-height: 65px;
     height: 60px; }
-    @media (max-width: 479px) {
+    @media only screen and (max-width: 479px) {
       .tool .messages-jobs {
         width: 300px;
         font-size: 13px; } }
@@ -3729,7 +4073,7 @@ Tool CSS
       float: right; }
   .tool .add-section .section {
     width: 1200px; }
-    @media (max-width: 479px) {
+    @media only screen and (max-width: 479px) {
       .tool .add-section .section {
         width: 300px; }
         .tool .add-section .section .header {
@@ -3739,7 +4083,7 @@ Tool CSS
     .tool .add-section .section .title-edit {
       border-bottom: 1px solid #cfcfcf;
       padding: 20px; }
-      @media (max-width: 479px) {
+      @media only screen and (max-width: 479px) {
         .tool .add-section .section .title-edit {
           padding: 10px; } }
       .tool .add-section .section .title-edit input {
@@ -3753,7 +4097,7 @@ Tool CSS
         display: block;
         padding: 10px;
         font-size: 30px; }
-        @media (max-width: 479px) {
+        @media only screen and (max-width: 479px) {
           .tool .add-section .section .title-edit input {
             padding: 5px;
             height: 30px;
@@ -3762,14 +4106,14 @@ Tool CSS
     .tool .add-section .section .content {
       border-bottom: 1px solid #cfcfcf;
       padding: 20px; }
-      @media (max-width: 479px) {
+      @media only screen and (max-width: 479px) {
         .tool .add-section .section .content {
           padding: 5px; } }
       .tool .add-section .section .content .wysihtml5-toolbar {
         width: 1170px;
         list-style-type: none;
         padding-left: 0px; }
-        @media (max-width: 479px) {
+        @media only screen and (max-width: 479px) {
           .tool .add-section .section .content .wysihtml5-toolbar {
             width: 270px; } }
         .tool .add-section .section .content .wysihtml5-toolbar .dropdown {
@@ -3782,7 +4126,7 @@ Tool CSS
             left: 21px;
             border-radius: 0px !important;
             width: 182px; }
-          @media (max-width: 479px) {
+          @media only screen and (max-width: 479px) {
             .tool .add-section .section .content .wysihtml5-toolbar .dropdown .btn {
               width: 130px !important; }
             .tool .add-section .section .content .wysihtml5-toolbar .dropdown .dropdown-menu {
@@ -3794,14 +4138,14 @@ Tool CSS
           height: 40px; }
           .tool .add-section .section .content .wysihtml5-toolbar .btn-group .btn {
             margin-left: 0px; }
-          @media (max-width: 479px) {
+          @media only screen and (max-width: 479px) {
             .tool .add-section .section .content .wysihtml5-toolbar .btn-group {
               width: 130px; } }
-        @media (max-width: 479px) {
+        @media only screen and (max-width: 479px) {
           .tool .add-section .section .content .wysihtml5-toolbar div.btn-group:nth-child(1) {
             margin-left: 23px;
             margin-right: -20px; } }
-        @media (max-width: 479px) {
+        @media only screen and (max-width: 479px) {
           .tool .add-section .section .content .wysihtml5-toolbar div.btn-group:nth-child(2) {
             margin-left: 0px;
             margin-right: -20px; } }
@@ -3824,7 +4168,7 @@ Tool CSS
             left: 11px; }
           .tool .add-section .section .content .wysihtml5-toolbar .btn .current-font {
             margin-left: 20px; }
-          @media (max-width: 479px) {
+          @media only screen and (max-width: 479px) {
             .tool .add-section .section .content .wysihtml5-toolbar .btn {
               width: 33%;
               height: 25px;
@@ -3843,8 +4187,8 @@ Tool CSS
         .tool .add-section .section .content .wysihtml5-toolbar #underline-button {
           text-decoration: underline; }
       .tool .add-section .section .content textarea {
-        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-        -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+        -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
         border: none;
         background: white;
         width: 100%;
@@ -3859,10 +4203,10 @@ Tool CSS
       color: white !important; }
   .tool .get-started-resume .section {
     width: 1204px !important; }
-    @media (max-width: 767px) {
+    @media only screen and (max-width: 768px) {
       .tool .get-started-resume .section {
         width: 470px !important; } }
-    @media (max-width: 480px) {
+    @media only screen and (max-width: 480px) {
       .tool .get-started-resume .section {
         width: 300px !important; } }
     .tool .get-started-resume .section .header .title {
@@ -3870,7 +4214,7 @@ Tool CSS
     .tool .get-started-resume .section .header .label {
       display: inline-block;
       font-size: 27px; }
-      @media (max-width: 479px) {
+      @media only screen and (max-width: 479px) {
         .tool .get-started-resume .section .header .label {
           font-size: 13px; } }
     .tool .get-started-resume .section .content {
@@ -3888,21 +4232,21 @@ Tool CSS
         padding: 10px;
         font-size: 30px;
         text-overflow: ellipsis; }
-        @media (max-width: 767px) and (min-width: 480px) {
+        @media only screen and (max-width: 768px) and (min-width: 480px) {
           .tool .get-started-resume .section .content input, .tool .get-started-resume .section .content .button, .tool .get-started-resume .section .content .input-button {
             margin-left: 10px;
             height: 50px;
             font-size: 20px;
             width: 210px !important; } }
-        @media (max-width: 479px) {
+        @media only screen and (max-width: 479px) {
           .tool .get-started-resume .section .content input, .tool .get-started-resume .section .content .button, .tool .get-started-resume .section .content .input-button {
             margin-left: 10px;
             height: 30px;
             font-size: 20px;
             width: 135px !important; } }
       .tool .get-started-resume .section .content .button, .tool .get-started-resume .section .content .input-button {
-        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-        -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+        -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
         border: none;
         background: white;
         margin-right: -6px;
@@ -3916,17 +4260,17 @@ Tool CSS
         @media (min-width: 480px) {
           .tool .get-started-resume .section .content .no-margin {
             margin-bottom: 20px; } }
-      @media (max-width: 479px) {
+      @media only screen and (max-width: 479px) {
         .tool .get-started-resume .section .content .no-margin-resp {
           margin-left: 0px;
           margin-bottom: 10px !important; } }
-      @media (max-width: 479px) {
+      @media only screen and (max-width: 479px) {
         .tool .get-started-resume .section .content input:not(.no-margin-resp) {
           margin-right: -5px; } }
-      @media (max-width: 479px) {
+      @media only screen and (max-width: 479px) {
         .tool .get-started-resume .section .content .link {
           padding-top: 4px; } }
-      @media (max-width: 479px) {
+      @media only screen and (max-width: 479px) {
         .tool .get-started-resume .section .content .link .subMenu {
           top: 31px; }
           .tool .get-started-resume .section .content .link .subMenu li {
@@ -3959,7 +4303,7 @@ Tool CSS
       .tool .get-started-resume .buttons-changes .button-change .carre {
         height: 30px;
         width: 30px; }
-        @media (max-width: 479px) {
+        @media only screen and (max-width: 479px) {
           .tool .get-started-resume .buttons-changes .button-change .carre {
             height: 15px;
             width: 15px; } }
@@ -3977,7 +4321,7 @@ Tool CSS
     padding-right: 35px; }
   .tool .get-started-resume .footer-dialog i {
     top: 14px; }
-  @media (max-width: 479px) {
+  @media only screen and (max-width: 479px) {
     .tool .get-started-resume .footer-dialog {
       padding: 10px; }
       .tool .get-started-resume .footer-dialog .button:first-child, .tool .get-started-resume .footer-dialog .input-button:first-child {
@@ -4021,7 +4365,7 @@ SOCIAL
 .dashboard-popup .content, .get-started-resume .content {
   padding: 20px;
   border-bottom: 1px solid #cfcfcf; }
-  @media (max-width: 768px) {
+  @media only screen and (max-width: 768px) {
     .dashboard-popup .content, .get-started-resume .content {
       padding: 10px; } }
   .dashboard-popup .content .icon-step-1, .dashboard-popup .content .icon-step-2, .dashboard-popup .content .icon-step-3, .dashboard-popup .content .icon-step-4, .dashboard-popup .content .icon-step-5, .dashboard-popup .content .icon-step-1-grey, .dashboard-popup .content .icon-step-2-grey, .dashboard-popup .content .icon-step-3-grey, .dashboard-popup .content .icon-step-4-grey, .dashboard-popup .content .icon-step-5-grey, .get-started-resume .content .icon-step-1, .get-started-resume .content .icon-step-2, .get-started-resume .content .icon-step-3, .get-started-resume .content .icon-step-4, .get-started-resume .content .icon-step-5, .get-started-resume .content .icon-step-1-grey, .get-started-resume .content .icon-step-2-grey, .get-started-resume .content .icon-step-3-grey, .get-started-resume .content .icon-step-4-grey, .get-started-resume .content .icon-step-5-grey {
@@ -4035,7 +4379,7 @@ SOCIAL
     @media only screen and (max-width: 768px) {
       .dashboard-popup .content .icon-step-1, .dashboard-popup .content .icon-step-2, .dashboard-popup .content .icon-step-3, .dashboard-popup .content .icon-step-4, .dashboard-popup .content .icon-step-5, .dashboard-popup .content .icon-step-1-grey, .dashboard-popup .content .icon-step-2-grey, .dashboard-popup .content .icon-step-3-grey, .dashboard-popup .content .icon-step-4-grey, .dashboard-popup .content .icon-step-5-grey, .get-started-resume .content .icon-step-1, .get-started-resume .content .icon-step-2, .get-started-resume .content .icon-step-3, .get-started-resume .content .icon-step-4, .get-started-resume .content .icon-step-5, .get-started-resume .content .icon-step-1-grey, .get-started-resume .content .icon-step-2-grey, .get-started-resume .content .icon-step-3-grey, .get-started-resume .content .icon-step-4-grey, .get-started-resume .content .icon-step-5-grey {
         font-size: 20.7px; } }
-    @media (max-width: 479px) {
+    @media only screen and (max-width: 479px) {
       .dashboard-popup .content .icon-step-1, .dashboard-popup .content .icon-step-2, .dashboard-popup .content .icon-step-3, .dashboard-popup .content .icon-step-4, .dashboard-popup .content .icon-step-5, .dashboard-popup .content .icon-step-1-grey, .dashboard-popup .content .icon-step-2-grey, .dashboard-popup .content .icon-step-3-grey, .dashboard-popup .content .icon-step-4-grey, .dashboard-popup .content .icon-step-5-grey, .get-started-resume .content .icon-step-1, .get-started-resume .content .icon-step-2, .get-started-resume .content .icon-step-3, .get-started-resume .content .icon-step-4, .get-started-resume .content .icon-step-5, .get-started-resume .content .icon-step-1-grey, .get-started-resume .content .icon-step-2-grey, .get-started-resume .content .icon-step-3-grey, .get-started-resume .content .icon-step-4-grey, .get-started-resume .content .icon-step-5-grey {
         padding-top: 13px; } }
     .dashboard-popup .content .icon-step-1 span, .dashboard-popup .content .icon-step-2 span, .dashboard-popup .content .icon-step-3 span, .dashboard-popup .content .icon-step-4 span, .dashboard-popup .content .icon-step-5 span, .dashboard-popup .content .icon-step-1-grey span, .dashboard-popup .content .icon-step-2-grey span, .dashboard-popup .content .icon-step-3-grey span, .dashboard-popup .content .icon-step-4-grey span, .dashboard-popup .content .icon-step-5-grey span, .get-started-resume .content .icon-step-1 span, .get-started-resume .content .icon-step-2 span, .get-started-resume .content .icon-step-3 span, .get-started-resume .content .icon-step-4 span, .get-started-resume .content .icon-step-5 span, .get-started-resume .content .icon-step-1-grey span, .get-started-resume .content .icon-step-2-grey span, .get-started-resume .content .icon-step-3-grey span, .get-started-resume .content .icon-step-4-grey span, .get-started-resume .content .icon-step-5-grey span {
@@ -4143,8 +4487,8 @@ SOCIAL
     .dashboard-popup .section .job-phase .phase {
       opacity: 0.6;
       background-color: white;
-      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-      -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+      -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
       border: none;
       background: white;
       width: 23.35%;
@@ -4365,24 +4709,24 @@ Locally Grown
   float: left;
   background-color: #09335b;
   color: white; }
-  @media (max-width: 479px) {
+  @media only screen and (max-width: 479px) {
     .locallyGrown .selector .input-zip {
       width: 300px; } }
 .locallyGrown .mapbox {
   width: 1170px;
   display: block;
   margin: auto;
+  	/*@media only screen and (max-width: 1200px) and (min-width: 980px){
+          width:975px;
+      }
+  	@media only screen and (max-width: 979px) and (min-width: 768px){
+          width:765px;
+      }*/
   height: 590px; }
-  @media only screen and (max-width: 1200px) and (min-width: 980px) {
-    .locallyGrown .mapbox {
-      width: 975px; } }
-  @media only screen and (max-width: 979px) and (min-width: 768px) {
-    .locallyGrown .mapbox {
-      width: 765px; } }
-  @media only screen and (max-width: 767px) {
+  @media only screen and (max-width: 768px) {
     .locallyGrown .mapbox {
       width: 95%; } }
-  @media (max-width: 479px) {
+  @media only screen and (max-width: 479px) {
     .locallyGrown .mapbox {
       width: 300px;
       margin: 0px; } }
@@ -4404,7 +4748,7 @@ Career Scape
     padding: 0px;
     display: block;
     z-index: 1; }
-    @media (max-width: 479px) {
+    @media only screen and (max-width: 479px) {
       .careerScape canvas {
         width: 300px;
         margin: 0px; } }
@@ -4412,7 +4756,7 @@ Career Scape
     margin: auto;
     text-align: center;
     position: relative; }
-    @media (max-width: 479px) {
+    @media only screen and (max-width: 479px) {
       .careerScape .canvas-container {
         width: 300px;
         margin: 0px; } }
@@ -4429,7 +4773,7 @@ Career Scape
       width: 49%; }
       .careerScape .buttons-changes .button-change .carre {
         margin-left: 15px; }
-    @media (max-width: 479px) {
+    @media only screen and (max-width: 479px) {
       .careerScape .buttons-changes {
         width: 300px;
         height: 40px; }
@@ -4477,7 +4821,7 @@ Career Scape
     -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
     -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3); }
-    @media (max-width: 479px) {
+    @media only screen and (max-width: 479px) {
       .careerScape .legend {
         width: 80px;
         height: 120px;
@@ -4491,7 +4835,7 @@ Career Scape
     /*border-bottom:1.5px solid rgba(200,200,200,0.7);
     border-right:1.5px solid rgba(200,200,200,0.7);
     border-left:1.5px solid rgba(200,200,200,0.7);*/ }
-    @media (max-width: 479px) {
+    @media only screen and (max-width: 479px) {
       .careerScape .legend > div {
         height: 60px; } }
   .careerScape .legend > div.growth {
@@ -4507,7 +4851,7 @@ Career Scape
     width: 68px;
     height: 68px;
     border-radius: 39px; }
-    @media (max-width: 479px) {
+    @media only screen and (max-width: 479px) {
       .careerScape .legend .big {
         top: 6px;
         right: 6.5px;
@@ -4520,7 +4864,7 @@ Career Scape
     width: 54px;
     height: 54px;
     border-radius: 32px; }
-    @media (max-width: 479px) {
+    @media only screen and (max-width: 479px) {
       .careerScape .legend .medium {
         top: 6px;
         right: 22px;
@@ -4533,7 +4877,7 @@ Career Scape
     width: 38px;
     height: 38px;
     border-radius: 24px; }
-    @media (max-width: 479px) {
+    @media only screen and (max-width: 479px) {
       .careerScape .legend .small {
         top: 6px;
         right: 33px;
@@ -4545,20 +4889,20 @@ Career Scape
     position: absolute;
     bottom: 18px;
     left: 22px; }
-    @media (max-width: 479px) {
+    @media only screen and (max-width: 479px) {
       .careerScape .legend .info {
         bottom: 5px;
         left: 7px; } }
   .careerScape .legend .info .title {
     font-weight: 200;
     font-size: 18px; }
-    @media (max-width: 479px) {
+    @media only screen and (max-width: 479px) {
       .careerScape .legend .info .title {
         font-size: 10px; } }
   .careerScape .legend .info .comment {
     font-style: italic;
     font-size: 12px; }
-    @media (max-width: 479px) {
+    @media only screen and (max-width: 479px) {
       .careerScape .legend .info .comment {
         font-size: 7px; } }
 
@@ -4587,24 +4931,24 @@ JOB RESULTS/RECOMMENDATIONS
   width: 1170px;
   display: block;
   margin: auto;
+  	/*@media only screen and (max-width: 1200px) and (min-width: 980px){
+          width:975px;
+      }
+  	@media only screen and (max-width: 979px) and (min-width: 768px){
+          width:765px;
+      }*/
   text-align: center;
   position: relative;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
   border: none;
   background: white;
   margin-bottom: 60px;
   background: white; }
-  @media only screen and (max-width: 1200px) and (min-width: 980px) {
-    .job-results, .saved-content, .delete-items {
-      width: 975px; } }
-  @media only screen and (max-width: 979px) and (min-width: 768px) {
-    .job-results, .saved-content, .delete-items {
-      width: 765px; } }
-  @media only screen and (max-width: 767px) {
+  @media only screen and (max-width: 768px) {
     .job-results, .saved-content, .delete-items {
       width: 95%; } }
-  @media (max-width: 479px) {
+  @media only screen and (max-width: 479px) {
     .job-results, .saved-content, .delete-items {
       margin: 0px;
       margin-bottom: 60px;
@@ -4616,7 +4960,7 @@ JOB RESULTS/RECOMMENDATIONS
     -moz-user-select: none;
     -webkit-user-select: none;
     -ms-user-select: none; }
-    @media (max-width: 479px) {
+    @media only screen and (max-width: 479px) {
       .job-results .icon-arrow-left-big-blue, .job-results .icon-arrow-right-big-blue, .saved-content .icon-arrow-left-big-blue, .saved-content .icon-arrow-right-big-blue, .delete-items .icon-arrow-left-big-blue, .delete-items .icon-arrow-right-big-blue {
         top: 96%; } }
   .job-results .icon-arrow-left-big-blue, .saved-content .icon-arrow-left-big-blue, .delete-items .icon-arrow-left-big-blue {
@@ -4631,7 +4975,7 @@ JOB RESULTS/RECOMMENDATIONS
     padding-top: 22px;
     padding-bottom: 20px;
     border-bottom: 1px solid #9d9d9d; }
-    @media (max-width: 479px) {
+    @media only screen and (max-width: 479px) {
       .job-results .title, .saved-content .title, .delete-items .title {
         font-size: 14px;
         padding: 0px 15px;
@@ -4642,7 +4986,7 @@ JOB RESULTS/RECOMMENDATIONS
     .job-results .content .scrollable-content, .saved-content .content .scrollable-content, .delete-items .content .scrollable-content {
       width: 80%;
       height: 82%; }
-      @media (max-width: 479px) {
+      @media only screen and (max-width: 479px) {
         .job-results .content .scrollable-content, .saved-content .content .scrollable-content, .delete-items .content .scrollable-content {
           width: 100%;
           height: 80%; } }
@@ -4655,12 +4999,12 @@ JOB RESULTS/RECOMMENDATIONS
       width: 187px;
       display: inline-block;
       vertical-align: top; }
-      @media (max-width: 479px) {
+      @media only screen and (max-width: 479px) {
         .job-results .content .job-recommandation, .job-results .content .save, .saved-content .content .job-recommandation, .saved-content .content .save, .delete-items .content .job-recommandation, .delete-items .content .save {
           width: 100px; } }
     .job-results .content .pages, .saved-content .content .pages, .delete-items .content .pages {
       text-align: center; }
-      @media (max-width: 479px) {
+      @media only screen and (max-width: 479px) {
         .job-results .content .pages, .saved-content .content .pages, .delete-items .content .pages {
           border-top: 1px #9d9d9d solid;
           padding-top: 13px; } }
@@ -4674,7 +5018,7 @@ JOB RESULTS/RECOMMENDATIONS
         height: 15px;
         border-radius: 10px;
         background-color: #ccd6de; }
-        @media (max-width: 479px) {
+        @media only screen and (max-width: 479px) {
           .job-results .content .pages .ball, .saved-content .content .pages .ball, .delete-items .content .pages .ball {
             width: 10px;
             height: 10px;
@@ -4682,7 +5026,7 @@ JOB RESULTS/RECOMMENDATIONS
       .job-results .content .pages .ball:hover, .saved-content .content .pages .ball:hover, .delete-items .content .pages .ball:hover {
         cursor: pointer; }
 
-@media (max-width: 479px) {
+@media only screen and (max-width: 479px) {
   .job-results .content .scrollable-content {
     height: 75%; } }
 
@@ -4693,12 +5037,12 @@ JOB RESULTS/RECOMMENDATIONS
   text-align: left; }
 .saved-content .content, .delete-items .content {
   height: 325px; }
-  @media (max-width: 479px) {
+  @media only screen and (max-width: 479px) {
     .saved-content .content, .delete-items .content {
       height: 200px; } }
   .saved-content .content .scrollable-content, .delete-items .content .scrollable-content {
     height: 85%; }
-    @media (max-width: 479px) {
+    @media only screen and (max-width: 479px) {
       .saved-content .content .scrollable-content, .delete-items .content .scrollable-content {
         height: 80%; } }
   .saved-content .content .save, .delete-items .content .save {
@@ -4706,7 +5050,7 @@ JOB RESULTS/RECOMMENDATIONS
     position: relative;
     height: 210px;
     font-size: 18px; }
-    @media (max-width: 479px) {
+    @media only screen and (max-width: 479px) {
       .saved-content .content .save, .delete-items .content .save {
         height: 160px;
         margin-top: 20px; } }
@@ -4714,20 +5058,20 @@ JOB RESULTS/RECOMMENDATIONS
       position: absolute;
       top: 145px;
       width: 100%; }
-      @media (max-width: 479px) {
+      @media only screen and (max-width: 479px) {
         .saved-content .content .save .content-save, .delete-items .content .save .content-save {
           top: 75px; } }
       .saved-content .content .save .content-save .name, .delete-items .content .save .content-save .name {
         color: black;
         margin-bottom: 3px; }
-        @media (max-width: 479px) {
+        @media only screen and (max-width: 479px) {
           .saved-content .content .save .content-save .name, .delete-items .content .save .content-save .name {
             font-size: 15px; } }
       .saved-content .content .save .content-save .type, .delete-items .content .save .content-save .type {
         font-size: 16px;
         line-height: 18px;
         color: #9d9d9d; }
-        @media (max-width: 479px) {
+        @media only screen and (max-width: 479px) {
           .saved-content .content .save .content-save .type, .delete-items .content .save .content-save .type {
             font-size: 11px;
             line-height: 13px; } }
@@ -4735,7 +5079,7 @@ JOB RESULTS/RECOMMENDATIONS
         font-size: 14px;
         line-height: 16px;
         color: #9d9d9d; }
-        @media (max-width: 479px) {
+        @media only screen and (max-width: 479px) {
           .saved-content .content .save .content-save .date, .saved-content .content .save .content-save .level, .delete-items .content .save .content-save .date, .delete-items .content .save .content-save .level {
             font-size: 9px;
             line-height: 11px; } }
@@ -4753,7 +5097,7 @@ JOB RESULTS/RECOMMENDATIONS
     .job-results .content .job-recommandation .info-job {
       line-height: 23px;
       color: #9d9d9d; }
-  @media (max-width: 479px) {
+  @media only screen and (max-width: 479px) {
     .job-results .content {
       height: 150px; }
       .job-results .content .job-recommandation .icon-suitcase-job {
@@ -4771,22 +5115,22 @@ Dashboard
 .dashboard {
   width: 1170px;
   display: block;
-  margin: auto; }
-  @media only screen and (max-width: 1200px) and (min-width: 980px) {
-    .dashboard {
-      width: 975px; } }
-  @media only screen and (max-width: 979px) and (min-width: 768px) {
-    .dashboard {
-      width: 765px; } }
-  @media only screen and (max-width: 767px) {
+  margin: auto;
+  	/*@media only screen and (max-width: 1200px) and (min-width: 980px){
+          width:975px;
+      }
+  	@media only screen and (max-width: 979px) and (min-width: 768px){
+          width:765px;
+      }*/ }
+  @media only screen and (max-width: 768px) {
     .dashboard {
       width: 95%; } }
   .dashboard .job-results {
     margin-bottom: 25px; }
   .dashboard .resume {
     background-color: white;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
     border: none;
     background: white;
     position: relative;
@@ -4878,8 +5222,8 @@ Dashboard
     margin-right: 25px; }
   .dashboard .content .education, .dashboard .content .work-experience, .dashboard .content .skills, .dashboard .content .technology, .dashboard .content .career-goals {
     background-color: white;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
     border: none;
     background: white;
     margin-bottom: 25px; }

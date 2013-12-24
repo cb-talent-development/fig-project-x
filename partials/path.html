@@ -1,7 +1,7 @@
 <div class="container">
 		<div class="page-header">
 			<h1>
-				<img id="profil-pic" class="img-circle img-responsive" ng-src="{{user=='none' && 'img/me.jpg'|| user.Media.Url}}" alt="photo de profile"/>
+				<div id="profil-pic" class="background-image img-circle img-responsive" style="background-image:url('{{user=='none' && 'img/me.jpg'|| user.Media.Url}}');" alt="photo de profile"/>
 				<span ng-switch on="user">
 					<span ng-switch-when="none">
 						<span class="grey link toggleMenu">Sign Up&nbsp;<i class="icon-bigarrow-bottom-grey"></i>&nbsp;/

@@ -12,7 +12,7 @@
 				<li ng-repeat="content in contentMenu" select data-value="content" data-elem="selectedContent"><a href="#">{{ content }}</a></li>
 			</ul>
 		</div>
-		<div class="button home toggleMenuLarge dubble"><span>All Categories <b class="icon-bigarrow-bottom-grey grey-icon"></b></span>
+		<div class="button home toggleMenuLarge dubble categories"><span>All Categories <b class="icon-bigarrow-bottom-grey grey-icon"></b></span>
 			<ul class="subMenu dropdown">
 				<li ng-repeat="cat in dropCategories">
 					<a href="#" class="{{ cat.Class }}" title="{{ cat.Title }}">{{ cat.Title | uppercase }} <b class="icon-arrow-right-{{ cat.Class }}"></b></a>
@@ -24,9 +24,9 @@
 				<li ng-repeat="industry in industryMenu" select data-value="industry" data-elem="selectedIndustry"> {{ industry }}</li>
 			</ul>
 		</div>
-		<div class="button home toggleMenu"><span>Job Phase<b class="icon-bigarrow-bottom-grey grey-icon"></b></span>
+		<div class="button home job-phase toggleMenu"><span>Job Phase<b class="icon-bigarrow-bottom-grey grey-icon"></b></span>
 			<ul class="subMenu dropdown">
-				<li><a href="#" title="Some text"><b class="icon-search-people"></b>Discovery</a></li>
+				<li class="discovery"><a href="#" title="Some text"><b class="icon-search-people"></b>Discovery</a></li>
 				<li><a href="#" title="Some text"><b class="icon-check-red"></b>Get the Job</a></li>
 				<li><a href="#" title="Some text"><b class="icon-twin-blue"></b>Find the Job</a></li>
 				<li><a href="#" title="Some text"><b class="icon-suitcase-green"></b>On the Job</a></li>
@@ -44,19 +44,19 @@
 		<div class="button home toggleMenuLarge dubble"><span>Filter Content<b class="icon-bigarrow-bottom-grey grey-icon"></b></span>
 			<ul class="subMenu dropdown">
 				<li><a href="#" title="Most Popular">Most Popular</a></li>
-				<li><a href="#" title="Some text"><b class="icon-search-people"></b>Discovery</a></li>
+				<li><a href="#" title="Some text"><b class="icon-search-people job-phase"></b>Discovery</a></li>
 				<li><a href="#" title="Articles">Articles</a></li>
-				<li><a href="#" title="Some text"><b class="icon-check-red"></b>Get the Job</a></li>
+				<li><a href="#" title="Some text"><b class="icon-check-red job-phase"></b>Get the Job</a></li>
 				<li><a href="#" title="Infographics">Infographics</a></li>
-				<li><a href="#" title="Some text"><b class="icon-twin-blue"></b>Find the Job</a></li>
+				<li><a href="#" title="Some text"><b class="icon-twin-blue job-phase"></b>Find the Job</a></li>
 				<li><a href="#" title="Videos">Videos</a></li>
-				<li><a href="#" title="Some text"><b class="icon-suitcase-green"></b>On the Job</a></li>
+				<li><a href="#" title="Some text"><b class="icon-suitcase-green job-phase"></b>On the Job</a></li>
 				<li ng-repeat="cat in dropCategories">
 					<a href="#" class="{{ cat.Class }}" title="{{ cat.Title }}">{{ cat.Title | uppercase }} <b class="icon-arrow-right-{{ cat.Class }}"></b></a>
 				</li>
 			</ul>
 		</div>
-		<div class="input-button search last">
+		<div class="input-button right search last">
 			<form onsubmit="search($('#search-input'))">
 				<input id="search-input" placeholder="">
 			</form>
