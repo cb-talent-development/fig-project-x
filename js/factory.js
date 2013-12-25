@@ -253,6 +253,141 @@ module.factory('register',['$http',function($http) {
     return register;
 }]);
 
+module.factory('getStarted',['$http',function($http) {
+    function getStarted(scope){
+        this.scope=scope;
+        this.init();
+    }
+    getStarted.prototype.init=function(){
+        //list to display (if too long, should be loaded on the server)
+        this.lists={
+            'states':["Australia","Belgium","Dutchland","France","United Kingdoms","USA"],
+			'docTypes':["Microsoft Word", "PDF", "PowerPoint"],
+			'diplomas':["Primaire", "Secondaire", "Universitaire"],
+			'months':["January", "February", "March", "April", "May", "Juny", "July", "August", "September", "November", "December"],
+			'years':["2013", "2012", "2011", "2010", "2009", "2008", "2007", "2006", "2005", "2004", "2003", "2002", "2001", "2000", "1999", "1998", "1997", "1996", "1995", "1994", "1993", "1992", "1991", "1990", "1989", "1988", "1987", "1986", "1985", "1984", "1983", "1982", "1981", "1980", "1979", "1978", "1977", "1976", "1975", "1974", "1973", "1972", "1971", "1970"],
+			'templates':["Reference", "Traditional", "Functional"]
+        }
+        //user info
+        
+        this.userInfo={
+			'phone':input(),
+			'mobile':input(),
+            'job':{
+                'title':{
+					'name':input(),
+					'corrected':"",
+					'isCorrected':true,
+					'phase':""
+				},
+                'company':{
+					'name':input(),
+					'corrected':"",
+					'isCorrected':true,
+					'phase':""
+				},
+                'location':input(),
+                'startDate':{
+					'month':input("Month"),
+					'year':input("Year")
+				},
+                'endDate':{
+					'month':input("Month"),
+					'year':input("Year")
+				},
+				'description':input()
+            },
+            'education':{
+                'type':{
+					'name':input("Diploma"),
+					'corrected':'',
+					'isCorrected':true,
+					'phase':''
+				},
+                'design':'',
+                'isCorrected':true,
+                'institution':input("Institution"),
+                'location':input(),
+                'dateGraduated':{
+					'month':input("Month"),
+					'year':input("Year")
+				}
+            },
+            'email':input(),
+            'firstName':input(),
+            'lastName':input(),
+            'address':{
+                'street':input(),
+                'zipcode':input(),
+                'state':input("State"),
+                'apt':input(),
+                'city':input()
+                
+            },
+            'skills':{
+                'selected':[],
+                'saved':[],
+                'list':config.skillsList,
+                'state':{
+                    'completed':false
+                }
+            },
+			'award':{
+				'title':input(),
+				'date':{
+					'month':input("Month"),
+					'year':input("Year")
+				}
+			},
+			'technicalSkills':input(),
+			'volunteer':input()            
+        }
+        this.user='none';
+        console.log(this);
+    }
+    /*
+    Save function that does everything
+    */
+    getStarted.prototype.save=function(){
+        //HUGE FUNCTION
+        //skills
+        //TODO: save skills
+        //we do that to avoid creating a new object
+        this.userInfo.skills.saved.replace(this.userInfo.skills.selected);
+
+        console.log(this.scope);
+
+        if(this.user!='none'){
+           disparition($('.get-started-resume')); 
+        }
+        else{
+            alert("Make sure that you have filled everything...");
+        }
+    }
+    //Input initialisation
+    getStarted.prototype.initInput=function(user){
+        console.log("INIT INPUT");
+        this.user=user;
+        if(user && user != 'none'){
+        //address
+            this.userInfo.address.state.value=this.user.State;
+            this.userInfo.address.zipcode.value=this.user.Zipcode;
+            //gender
+            this.userInfo.gender.value=this.user.Gender;
+            //job
+            this.userInfo.job.name.value=this.user.JobTitle;
+            //salary
+            this.userInfo.salary.value=this.user.Income;
+            //...
+            this.userInfo.firstName.value=this.user.FirstName;
+            this.userInfo.lastName.value=this.user.LastName;
+            this.userInfo.email.value=this.user.Mail;
+            //this.user.Mail="lol@lol.com";
+        }
+    }
+    return getStarted;
+}]);
+
 module.factory('formData',function(){
     function formData($scope){
         this.$scope=$scope;

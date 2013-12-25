@@ -463,17 +463,6 @@ RESUME HERO
 				max-width: 900px;
 				white-space: normal;
 			}
-			.divider{
-				.button.date{
-					width: 180px;
-					padding: 15px;
-					padding-top: 17px;
-					padding-bottom: 13px;
-				}
-				.button.date.first{
-					margin-right: 20px !important;
-				}
-			}
 			textarea#role, textarea#technical-skills, textarea#extra-skills{
 				@include invert-shadow;
 				width: 100%;
@@ -490,6 +479,12 @@ RESUME HERO
 	}
 }
 
+.get-started-resume{
+	display: block !important;
+	.section{
+		display: block !important;
+	}
+}
 /*
 COLORS
 */
@@ -715,7 +710,7 @@ RESUME HERO POP
 
 .get-started-resume{
 	.section{
-		width: 1280px !important;
+		width: 1204px !important;
 		@media(max-width: 767px){
 			width: 470px !important;
 		}
@@ -734,9 +729,12 @@ RESUME HERO POP
 				}
 			}
 		}
+		.button-container{
+			margin-left: -20px;
+		}
 		.content{
 			border-bottom: 1px solid $lightGrey;
-			padding: 20px;
+			margin-right: -20px;
 			@media (max-width: 480px){
 				padding:10px;
 			}
@@ -766,10 +764,10 @@ RESUME HERO POP
 			.icon-step-5{
 				padding-right: 0px;
 			}
-			input, .button{
+			input, .button, textarea{
 				@include invert-shadow;
-				margin-left: 20px;
-				width: 400px;
+				margin-left: 25px;
+				width: 370px;
 				height: 70px;
 				border: none;
 				display: inline-block;
@@ -800,22 +798,11 @@ RESUME HERO POP
 			.button:not(.open){
 				overflow: hidden;
 			}
-			.no-margin{
-				margin-left: 0px;
-				@media(min-width: 480px){
-					margin-bottom: 20px;
-				}
+			textarea{
+				margin-top: 20px;
 			}
-			.no-margin-resp{
-				@media(max-width: 479px){
-					margin-left: 0px;
-					margin-bottom: 10px !important;
-				}
-			}
-			input:not(.no-margin-resp){
-				@media(max-width: 479px){
-					margin-right: -5px;
-				}
+			.margin-top{
+				margin-top: 20px;
 			}
 			.link{
 				@media(max-width: 479px){
@@ -834,18 +821,25 @@ RESUME HERO POP
 			}
 		}
 		.divider{
-				width: 420px;
-				padding: 20px;
-				input, .button{
-					width:100%;
-					margin-left: 0px;
-				}
-				.label{
-					margin-bottom: 20px;
-				}
+			width: 390px;
+			padding: 20px;
+			padding-left: 0px;
+			padding-right: 25px;
+			input, .button{
+				width:100%;
 			}
-		.divider:first-child, .divider:nth-child(4){
-			margin-left: -20px;
+			input{	
+				margin-left: 0px;
+			}
+			.label{
+				margin-bottom: 20px;
+			}
+			.button.date{
+				width: 175px;
+			}
+			.button.first{
+				margin-left: 0px;
+			}
 		}
 	}
 	.buttons-changes{

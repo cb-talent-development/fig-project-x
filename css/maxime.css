@@ -309,13 +309,6 @@ RESUME HERO
   font-style: italic;
   max-width: 900px;
   white-space: normal; }
-.get-started-resume .section .content .divider .button.date {
-  width: 180px;
-  padding: 15px;
-  padding-top: 17px;
-  padding-bottom: 13px; }
-.get-started-resume .section .content .divider .button.date.first {
-  margin-right: 20px !important; }
 .get-started-resume .section .content textarea#role, .get-started-resume .section .content textarea#technical-skills, .get-started-resume .section .content textarea#extra-skills {
   box-shadow: 0px -1px 1px rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: 0px -1px 1px rgba(0, 0, 0, 0.2);
@@ -329,6 +322,11 @@ RESUME HERO
   padding: 15px; }
 .get-started-resume .section .content textarea#extra-skills {
   height: 400px; }
+
+.get-started-resume {
+  display: block !important; }
+  .get-started-resume .section {
+    display: block !important; }
 
 /*
 COLORS
@@ -547,7 +545,7 @@ RESUME HERO POP
         background: white; }
 
 .get-started-resume .section {
-  width: 1280px !important; }
+  width: 1204px !important; }
   @media (max-width: 767px) {
     .get-started-resume .section {
       width: 470px !important; } }
@@ -562,9 +560,11 @@ RESUME HERO POP
     @media (max-width: 479px) {
       .get-started-resume .section .header .label {
         font-size: 13px; } }
+  .get-started-resume .section .button-container {
+    margin-left: -20px; }
   .get-started-resume .section .content {
     border-bottom: 1px solid #cfcfcf;
-    padding: 20px; }
+    margin-right: -20px; }
     @media (max-width: 480px) {
       .get-started-resume .section .content {
         padding: 10px; } }
@@ -589,13 +589,13 @@ RESUME HERO POP
       margin-bottom: 0px !important; }
     .get-started-resume .section .content .icon-step-5 {
       padding-right: 0px; }
-    .get-started-resume .section .content input, .get-started-resume .section .content .button {
+    .get-started-resume .section .content input, .get-started-resume .section .content .button, .get-started-resume .section .content textarea {
       box-shadow: 0px -1px 1px rgba(0, 0, 0, 0.2);
       -webkit-box-shadow: 0px -1px 1px rgba(0, 0, 0, 0.2);
       border: none;
       background: white;
-      margin-left: 20px;
-      width: 400px;
+      margin-left: 25px;
+      width: 370px;
       height: 70px;
       border: none;
       display: inline-block;
@@ -603,13 +603,13 @@ RESUME HERO POP
       font-size: 30px;
       text-overflow: ellipsis; }
       @media (max-width: 767px) and (min-width: 480px) {
-        .get-started-resume .section .content input, .get-started-resume .section .content .button {
+        .get-started-resume .section .content input, .get-started-resume .section .content .button, .get-started-resume .section .content textarea {
           margin-left: 10px;
           height: 50px;
           font-size: 20px;
           width: 210px !important; } }
       @media (max-width: 479px) {
-        .get-started-resume .section .content input, .get-started-resume .section .content .button {
+        .get-started-resume .section .content input, .get-started-resume .section .content .button, .get-started-resume .section .content textarea {
           margin-left: 10px;
           height: 30px;
           font-size: 20px;
@@ -625,18 +625,10 @@ RESUME HERO POP
         top: 70px; }
     .get-started-resume .section .content .button:not(.open) {
       overflow: hidden; }
-    .get-started-resume .section .content .no-margin {
-      margin-left: 0px; }
-      @media (min-width: 480px) {
-        .get-started-resume .section .content .no-margin {
-          margin-bottom: 20px; } }
-    @media (max-width: 479px) {
-      .get-started-resume .section .content .no-margin-resp {
-        margin-left: 0px;
-        margin-bottom: 10px !important; } }
-    @media (max-width: 479px) {
-      .get-started-resume .section .content input:not(.no-margin-resp) {
-        margin-right: -5px; } }
+    .get-started-resume .section .content textarea {
+      margin-top: 20px; }
+    .get-started-resume .section .content .margin-top {
+      margin-top: 20px; }
     @media (max-width: 479px) {
       .get-started-resume .section .content .link {
         padding-top: 4px; } }
@@ -648,15 +640,20 @@ RESUME HERO POP
           padding: 5px 10px;
           font-size: 19px; } }
   .get-started-resume .section .divider {
-    width: 420px;
-    padding: 20px; }
+    width: 390px;
+    padding: 20px;
+    padding-left: 0px;
+    padding-right: 25px; }
     .get-started-resume .section .divider input, .get-started-resume .section .divider .button {
-      width: 100%;
+      width: 100%; }
+    .get-started-resume .section .divider input {
       margin-left: 0px; }
     .get-started-resume .section .divider .label {
       margin-bottom: 20px; }
-  .get-started-resume .section .divider:first-child, .get-started-resume .section .divider:nth-child(4) {
-    margin-left: -20px; }
+    .get-started-resume .section .divider .button.date {
+      width: 175px; }
+    .get-started-resume .section .divider .button.first {
+      margin-left: 0px; }
 .get-started-resume .buttons-changes {
   width: 100%;
   margin-top: 20px; }
