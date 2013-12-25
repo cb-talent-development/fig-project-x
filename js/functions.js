@@ -646,3 +646,17 @@ function init($scope,register){
     }
     //console.log($scope.register);
 }
+function initGetStarted($scope,getStarted){
+    if(!window.getStarted && !document.getStarted){
+        $scope.getStarted=new getStarted($scope);
+        window.getStarted=$scope.getStarted;
+        document.getStarted=window.getStarted
+    }
+    else if(window.getStarted){
+        $scope.getStarted=window.getStarted;
+    }
+    else if(document.getStarted){
+        $scope.getStarted=document.getStarted;
+    }
+    //console.log($scope.getStarted);
+}

@@ -232,7 +232,7 @@ function JobinalityCtr($scope, $http){
 /*
 Jobinality
 */
-function ResumeHeroCtr($scope, $http){
+function ResumeHeroCtr($scope, $http, getStarted){
     /*
     Constructor
     */
@@ -268,28 +268,6 @@ function ResumeHeroCtr($scope, $http){
 	   });
 	   disparition($('.add-section')); //close pop-up
 	}
-    $scope.previous = function() {
-		if($scope.actualPage > 1){
-			$scope.actualPage--;
-			if($scope.actualPage == '1'){
-				$('#previous-button').addClass('inactive');
-			}else if($scope.actualPage == '4'){
-				$('#next-button').removeClass('inactive');
-			}
-		}
-		return false;
-	}
-	$scope.next = function() {
-		if($scope.actualPage < 5){
-			$scope.actualPage++;
-			if($scope.actualPage == '5'){
-				$('#next-button').addClass('inactive');
-			}else if($scope.actualPage == '2'){
-				$('#previous-button').removeClass('inactive');
-			}
-		}
-		return false;
-	}
 	/*
 	*/
 	$scope.changeType = function(thisElem){
@@ -301,20 +279,16 @@ function ResumeHeroCtr($scope, $http){
 		}
 	}
 	
+	$scope.loadInfo=function(){
+        $http.get("data/json/user-full.json").success(function(data) {
+            $scope.user=data;
+            $scope.register.initInput(data);
+	   });
+    }
+	
 	
     $scope.init=function(){
-		$scope.countries=["Australia","Belgium","Dutchland","France","United Kingdoms","USA"];
-		$scope.selectedCountry = "State";
-		$scope.types=["Microsoft Word", "PDF", "PowerPoint"];
-		$scope.selectedType=$scope.types[0];
-		$scope.diplomas=["Primaire", "Secondaire", "Universitaire"];
-		$scope.selectedDiploma="Diploma";
-		$scope.months=["January", "February", "March", "April", "May", "Juny", "July", "August", "September", "November", "December"];
-		$scope.selectedMonth=$scope.months[0];
-		$scope.years=["2013", "2012", "2011", "2010", "2009", "2008", "2007", "2006", "2005", "2004", "2003", "2002", "2001", "2000", "1999", "1998", "1997", "1996", "1995", "1994", "1993", "1992", "1991", "1990", "1989", "1988", "1987", "1986", "1985", "1984", "1983", "1982", "1981", "1980", "1979", "1978", "1977", "1976", "1975", "1974", "1973", "1972", "1971", "1970"];
-		$scope.selectedYear=$scope.years[0];
-		$scope.templates=["Reference", "Traditional", "Functional"];
-		$scope.selectedTemplate=$scope.templates[0];
+        initGetStarted($scope,getStarted);
 		if($scope.resumeHero[0]){
 			$scope.currentResume = $scope.resumeHero[0];
 			$scope.currentResume.Class="selected";
@@ -322,10 +296,6 @@ function ResumeHeroCtr($scope, $http){
 		}else{
 			$scope.resumeHero[0] = null; //a finir
 		}
-		$scope.totalPages = 5;
-		$scope.actualPage = 1;
-		$('#previous-button').addClass('inactive');
-		apparition($('.get-started-resume'));
     }
     $scope.init();
 }

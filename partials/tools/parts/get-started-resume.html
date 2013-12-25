@@ -1,0 +1,301 @@
+<div class="dialog get-started-resume">
+    <div class="background" onclick="disparition($('.get-started-resume'))"></div>
+    <div class="scrollable-content">
+        <div class="scrollable">
+            <div class="section-wrapper">
+                <div class="section section1">
+					<div class="header">
+						<span class"title">Let's Get Started.&nbsp</span><i class="label">Did you know, Jean-jacques aime les moules</i><i class="icon-x-black close" onclick="disparition($('.get-started-resume'))"></i>
+					</div>
+					<div class="content">
+						<steps nbr-steps="1" first-connect="true"></steps>
+						<div class="button-container">
+							<input placeholder="First Name"/><input placeholder="Last Name"/><input class="no-margin-resp" placeholder="Email Adress"/>
+						</div>
+					</div>
+					<div class="content">
+						<div class="button-container">
+							<input placeholder="Street Adress"/>
+							<input placeholder="Additionnal Adress (Apt, Suite)"/>
+							</br>
+							<input class="margin-top" placeholder="City"/>
+							<div class="button link toggleMenu margin-top">{{ getStarted.userInfo.address.state.value }}<i class="icon-bigarrow-bottom-grey"></i>
+								<ul class="subMenu dropdown">
+									<li ng-repeat="state in getStarted.lists.states" select data-value="state" data-elem="getStarted.userInfo.address.state.value">{{ country }}</li>
+								</ul>
+							</div>
+							<input placeholder="ZipCode"/>
+						</div>
+					</div>
+					<div class="content">
+						<div class="button-container"><input placeholder="Phone Number"/><input placeholder="Mobile Number"/></div>
+					</div>
+					<div class="footer-dialog">
+                        <div class="button-previous back-white selected left" onclick="">
+                            Previous
+                            <i class="icon-bigarrow-left-black icon left"></i>
+                        </div>
+                        <div class="button-next back-white left" onclick="movePopup($('.get-started-resume'),2)">
+                            Next
+                            <i class="icon-bigarrow-right-black icon right"></i>
+                        </div>
+        
+                        <div class="button-save back-green right" ng-click="register.save()">Save & Close</div>
+                        <div class="clear"></div>
+                    </div>
+				</div>
+			</div>
+			 <div class="section-wrapper">
+                <div class="section section2">
+					<div class="header">
+						<span class"title">Let's Get Started.<i class="icon-x-black close" onclick="disparition($('.get-started-resume'))"></i>
+					</div>
+					<div class="content">
+						<steps nbr-steps="2" first-connect="true"></steps>
+					</div>
+					<div class="content">
+						<div class="divider left">
+							<div class="label">JOB TITLE</div>
+							<input placeholder="Career Builder"/>
+						</div>
+						<div class="divider left">
+							<div class="label">COMPANY</div>
+							<input placeholder="Career Builder"/>
+						</div>
+						<div class="divider left">
+							<div class="label">LOCATION</div>
+							<input placeholder="Chicago, IL"/>
+						</div>
+						<div class="divider left">
+							<div class="label">START DATE</div>
+							<div class="button date first left link toggleMenu">{{ getStarted.userInfo.job.startDate.month.value }}<i class="icon-bigarrow-bottom-grey"></i>
+								<ul class="subMenu dropdown">
+									<li ng-repeat="month in getStarted.lists.months" select data-value="month" data-elem="getStarted.userInfo.job.startDate.month.value">{{ month }}</li>
+								</ul>
+							</div>
+							<div class="button date left link toggleMenu">{{ getStarted.userInfo.job.startDate.year.value }}<i class="icon-bigarrow-bottom-grey"></i>
+								<ul class="subMenu dropdown">
+									<li ng-repeat="year in getStarted.lists.years" select data-value="year" data-elem="getStarted.userInfo.job.startDate.year.value">{{ year }}</li>
+								</ul>
+							</div>
+						</div>
+						<div class="divider left">
+							<div class="label">END DATE</div>
+							<div class="button date first left link toggleMenu">{{ getStarted.userInfo.job.endDate.month.value }}<i class="icon-bigarrow-bottom-grey"></i>
+								<ul class="subMenu dropdown">
+									<li ng-repeat="month in getStarted.lists.months" select data-value="month" data-elem="getStarted.userInfo.job.endDate.month.value">{{ month }}</li>
+								</ul>
+							</div>
+							<div class="button date left link toggleMenu">{{ getStarted.userInfo.job.endDate.year.value }}<i class="icon-bigarrow-bottom-grey"></i>
+								<ul class="subMenu dropdown">
+									<li ng-repeat="year in getStarted.lists.years" select data-value="year" data-elem="getStarted.userInfo.job.endDate.year.value">{{ year }}</li>
+								</ul>
+							</div>
+						</div>
+						<div class="clear"></div>
+						<div>
+							<div class="label">DESCRIBE YOUR ROLE, RESPONSABILITIES, AND ACHIEVEMENTS:</div>
+							<textarea id="role" placeholder="I am a looser because..."/>
+						</div>
+					</div>
+					<div class="footer-dialog">
+                        <div class="button-previous back-white left" onclick="movePopup($('.get-started-resume'),1)">
+                            Previous
+                            <i class="icon-bigarrow-left-black icon left"></i>
+                        </div>
+                        <div class="button-next back-white left" onclick="movePopup($('.get-started-resume'),3)">
+                            Next
+                            <i class="icon-bigarrow-right-black icon right"></i>
+                        </div>
+        
+                        <div class="button-save back-green right" ng-click="register.save()">Save & Close</div>
+                        <div class="clear"></div>
+                    </div>
+				</div>
+			</div>
+			 <div class="section-wrapper">
+                <div class="section section3">
+					<div class="header">
+						<span class"title">Add your Education and Skills.<i class="icon-x-black close" onclick="disparition($('.get-started-resume'))"></i>
+					</div>
+					<div class="content">
+						<steps nbr-steps="3" first-connect="true"></steps>
+					</div>
+					<div class="content">
+						<div class="divider left">
+							<div class="label">EDUCATION TYPE</div>
+							<div class="button first link toggleMenu">{{ getStarted.userInfo.education.type.name.value }}<i class="icon-bigarrow-bottom-grey"></i>
+								<ul class="subMenu dropdown">
+									<li ng-repeat="diploma in getStarted.lists.diplomas" select data-value="diploma" data-elem="getStarted.userInfo.education.type.name.value">{{ diploma }}</li>
+								</ul>
+							</div>
+						</div>
+						<div class="divider left">
+							<div class="label">SPECIALIZATION</div>
+							<input placeholder="Design"/>
+						</div>
+						<div class="divider left">
+							<div class="label">INSTITUTION</div>
+							<input placeholder="Kutztown University"/>
+						</div>
+						<div class="divider left">
+							<div class="label">LOCATION</div>
+							<input placeholder="Kutztown, PA"/>
+						</div>
+						<div class="divider left">
+							<div class="label">DATE GRADUATED</div>
+							<div class="button date first left link toggleMenu">{{ getStarted.userInfo.education.dateGraduated.month.value }}<i class="icon-bigarrow-bottom-grey"></i>
+								<ul class="subMenu dropdown">
+									<li ng-repeat="month in getStarted.lists.months" select data-value="month" data-elem="getStarted.userInfo.education.dateGraduated.month.value">{{ month }}</li>
+								</ul>
+							</div>
+							<div class="button date left link toggleMenu">{{ getStarted.userInfo.education.dateGraduated.year.value }}<i class="icon-bigarrow-bottom-grey"></i>
+								<ul class="subMenu dropdown">
+									<li ng-repeat="year in getStarted.lists.years" select data-value="year" data-elem="getStarted.userInfo.education.dateGraduated.year.value">{{ year }}</li>
+								</ul>
+							</div>
+						</div>
+						<div class="clear"></div>
+						<div class="label">SELECT SKILLS FROM ONE OR MORE OF THE SIX SKILLS GROUPS BELOW:</div>
+						<div class="buttons-changes">
+							<div id="monitoring" class="button-change selected" ng-click="changeType('monitoring')">
+								<div class="carre"></div>
+								<div class="title">Monitoring</div>
+								<div class="txt">
+									Monitoring/Assessing performance of yourself, others individuals, or organizations to make improvements or take corrective action.
+								</div>
+							</div>
+							<div id="speaking" class="button-change selected" ng-click="changeType('speaking')">
+								<div class="carre"></div>
+								<div class="title">Speaking</div>
+								<div class="txt">
+									Monitoring/Assessing performance of yourself, others individuals, or organizations to make improvements or take corrective action.
+								</div>
+							</div>
+							<div id="science" class="button-change selected" ng-click="changeType('science')">
+								<div class="carre"></div>
+								<div class="title">Science</div>
+								<div class="txt">
+									Using scientific rules and methods to solve problems.
+								</div>
+							</div>
+							<div id="reading" class="button-change" ng-click="changeType('reading')">
+								<div class="carre"></div>
+								<div class="title">Reading Comprehension</div>
+								<div class="txt">
+									Understanding written sentences and paragraphs in work related documents.
+								</div>
+							</div>
+							<div id="writing" class="button-change" ng-click="changeType('writing')">
+								<div class="carre"></div>
+								<div class="title">Writing</div>
+								<div class="txt">
+									Communicating effectively in writing as appropriate for the needs of the audience.
+								</div>
+							</div>
+							<div id="mathematics" class="button-change" ng-click="changeType('mathematics')">
+								<div class="carre"></div>
+								<div class="title">Mathematics</div>
+								<div class="txt">
+									Using mathematics to solve problems.
+								</div>
+							</div>
+						</div>
+						<div class="clear"></div>
+					</div>
+					<div class="footer-dialog">
+                        <div class="button-previous back-white left" onclick="movePopup($('.get-started-resume'),2)">
+                            Previous
+                            <i class="icon-bigarrow-left-black icon left"></i>
+                        </div>
+                        <div class="button-next back-white left" onclick="movePopup($('.get-started-resume'),4)">
+                            Next
+                            <i class="icon-bigarrow-right-black icon right"></i>
+                        </div>
+        
+                        <div class="button-save back-green right" ng-click="register.save()">Save & Close</div>
+                        <div class="clear"></div>
+                    </div>
+				</div>
+			</div>
+			 <div class="section-wrapper">
+                <div class="section section1">
+					<div class="header">
+						<span class"title">Let's Get Started.<i class="icon-x-black close" onclick="disparition($('.get-started-resume'))"></i>
+					</div>
+					<div class="content">
+						<steps nbr-steps="4" first-connect="true"></steps>
+					</div>
+					<div class="content">
+						<div class="divider left">
+							<div class="label">AWARD TITLE</div>
+							<input placeholder="Emmy"/>
+						</div>
+						<div class="divider left">
+							<div class="label">AWARD DATE</div>
+							<div class="button date first left link toggleMenu">{{ getStarted.userInfo.award.date.month.value }}<i class="icon-bigarrow-bottom-grey"></i>
+								<ul class="subMenu dropdown">
+									<li ng-repeat="month in getStarted.lists.months" select data-value="month" data-elem="getStarted.userInfo.award.date.month.value">{{ month }}</li>
+								</ul>
+							</div>
+							<div class="button date left link toggleMenu">{{ getStarted.userInfo.award.date.year.value }}<i class="icon-bigarrow-bottom-grey"></i>
+								<ul class="subMenu dropdown">
+									<li ng-repeat="year in getStarted.lists.years" select data-value="year" data-elem="getStarted.userInfo.award.date.year.value">{{ year }}</li>
+								</ul>
+							</div>
+						</div>
+						<div class="clear"></div>
+						<div>
+							<div class="label">
+								PLEASE LIST YOUR TECHNICAL SKILLS, STARTING WITH YOUR MOST REVELANT TECHNICAL SKILLS FIRST.</br>
+								THESE CAN INLUDE BUT ARE NOT LIMITED TO COMPUTER SKILLS (EX: C++, SQL, WINDOWS, HTML).</br>
+								YOU CAN ALSO ADD THE NUMBER OF YEARS USED OR YOUR SKILL LEVEL.
+							</div>
+							<textarea id="technical-skills" placeholder="Jessica has led development for ..."/>
+						</div>
+					</div>
+					<div class="footer-dialog">
+                        <div class="button-previous back-white left" onclick="movePopup($('.get-started-resume'),3)">
+                            Previous
+                            <i class="icon-bigarrow-left-black icon left"></i>
+                        </div>
+                        <div class="button-next back-white left" onclick="movePopup($('.get-started-resume'),5)">
+                            Next
+                            <i class="icon-bigarrow-right-black icon right"></i>
+                        </div>
+        
+                        <div class="button-save back-green right" ng-click="register.save()">Save & Close</div>
+                        <div class="clear"></div>
+                    </div>
+				</div>
+			</div>
+			 <div class="section-wrapper">
+                <div class="section section1">
+					<div class="header">
+						<span class"title">Let's Get Started.<i class="icon-x-black close" onclick="disparition($('.get-started-resume'))"></i>
+					</div>
+					<div class="content">
+						<steps nbr-steps="5" first-connect="true"></steps>
+					</div>
+					<div class="content">
+						<div class="label">ENTER VOLUNTEER WORK, PUBLICATION, AFFILIATIONS OR OTHER DETAILS TO EXTEND YOUR RESUME.</div>
+						<textarea id="extra-skills" placeholder="Jessica has volunteer for..."/>
+					</div>
+					<div class="footer-dialog">
+                        <div class="button-previous back-white left" onclick="movePopup($('.get-started-resume'),4)">
+                            Previous
+                            <i class="icon-bigarrow-left-black icon left"></i>
+                        </div>
+                        <div class="button-next back-white left selected" onclick="">
+                            Next
+                            <i class="icon-bigarrow-right-black icon right"></i>
+                        </div>
+        
+                        <div class="button-save back-green right" ng-click="register.save()">Save & Close</div>
+                        <div class="clear"></div>
+                    </div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
