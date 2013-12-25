@@ -1579,44 +1579,52 @@ JOB PHASES
       width: 16px; } }
 
 .icon-search-orange-big {
+  background-size: 1500px 1799px;
   background-position: -426px -370px;
   height: 40px;
   width: 40px; }
   @media only screen and (max-width: 768px) {
     .icon-search-orange-big {
-      background-position: -213px -185px;
-      height: 20px;
-      width: 20px; } }
+      background-size: 1050px 1259px;
+      background-position: -298px -259px;
+      height: 28px;
+      width: 28px; } }
 
 .icon-check-red-big {
+  background-size: 1500px 1799px;
   background-position: -473px -370px;
   height: 40px;
   width: 40px; }
   @media only screen and (max-width: 768px) {
     .icon-check-red-big {
-      background-position: -236.5px -185px;
-      height: 20px;
-      width: 20px; } }
+      background-size: 1050px 1259px;
+      background-position: -331px -259px;
+      height: 28px;
+      width: 28px; } }
 
 .icon-twin-blue-big {
+  background-size: 1500px 1799px;
   background-position: -520px -370px;
   height: 40px;
   width: 40px; }
   @media only screen and (max-width: 768px) {
     .icon-twin-blue-big {
-      background-position: -260px -185px;
-      height: 20px;
-      width: 20px; } }
+      background-size: 1050px 1259px;
+      background-position: -364px -259px;
+      height: 28px;
+      width: 28px; } }
 
 .icon-suitcase-green-big {
+  background-size: 1500px 1799px;
   background-position: -566px -370px;
   height: 40px;
   width: 40px; }
   @media only screen and (max-width: 768px) {
     .icon-suitcase-green-big {
-      background-position: -283px -185px;
-      height: 20px;
-      width: 20px; } }
+      background-size: 1050px 1259px;
+      background-position: -396px -259px;
+      height: 28px;
+      width: 28px; } }
 
 .icon-cursor-red {
   background-size: 1500px 1799px;
@@ -2020,14 +2028,16 @@ OTHER
       width: 14px; } }
 
 .icon-suitcase-red {
+  background-size: 1500px 1799px;
   background-position: -190px -415px;
   height: 43px;
   width: 43px; }
   @media only screen and (max-width: 768px) {
     .icon-suitcase-red {
-      background-position: -95px -207.5px;
-      height: 21x;
-      width: 22px; } }
+      background-size: 1050px 1259px;
+      background-position: -133px -290px;
+      height: 31px;
+      width: 31px; } }
 
 .icon-suitcase-red-medium {
   background-size: 1125px 1349px;
@@ -2036,40 +2046,46 @@ OTHER
   width: 33px; }
   @media only screen and (max-width: 768px) {
     .icon-suitcase-red-medium {
-      background-size: 750px 900px;
-      background-position: -95px -207px;
-      height: 22px;
-      width: 22px; } }
+      background-size: 900px 1080px;
+      background-position: -114px -249px;
+      height: 26px;
+      width: 26px; } }
 
 .icon-building {
+  background-size: 1500px 1799px;
   background-position: -236px -415px;
   height: 43px;
   width: 43px; }
   @media only screen and (max-width: 768px) {
     .icon-building {
-      background-position: -118px -207.5px;
-      height: 22x;
-      width: 22px; } }
+      background-size: 1050px 1259px;
+      background-position: -165px -290px;
+      height: 31px;
+      width: 31px; } }
 
 .icon-location {
+  background-size: 1500px 1799px;
   background-position: -283px -415px;
   height: 43px;
   width: 43px; }
   @media only screen and (max-width: 768px) {
     .icon-location {
-      background-position: -141.5px -207.5px;
-      height: 22x;
-      width: 22px; } }
+      background-size: 1050px 1259px;
+      background-position: -198px -290px;
+      height: 31px;
+      width: 31px; } }
 
 .icon-dollars {
+  background-size: 1500px 1799px;
   background-position: -330px -415px;
   height: 43px;
   width: 43px; }
   @media only screen and (max-width: 768px) {
     .icon-dollars {
-      background-position: -165px -207.5px;
-      height: 23x;
-      width: 22px; } }
+      background-size: 1050px 1259px;
+      background-position: -230px -290px;
+      height: 31px;
+      width: 31px; } }
 
 .icon-graduation {
   background-size: 1500px 1799px;
@@ -2199,14 +2215,16 @@ OTHER
   width: 30px; }
 
 .icon-bar-cursor {
+  background-size: 1500px 1799px;
   background-position: -156px -545px;
   height: 192px;
   width: 5px; }
   @media only screen and (max-width: 768px) {
     .icon-bar-cursor {
-      background-position: -77.5px -272.5px;
-      height: 96px;
-      width: 3px; } }
+      background-size: 1110px 1331px;
+      background-position: -115px -403px;
+      height: 143px;
+      width: 4px; } }
 
 .icon-new-resume-button {
   background-size: 1500px 1799px;
@@ -2506,7 +2524,7 @@ TOOLS
       width: 29px; } }
 
 /*
-ICON SAVED
+ICON FIRST CONNECT
 */
 .icon-welcome {
   background-size: 1200px 1439px;
@@ -2520,29 +2538,17 @@ ICON SAVED
       height: 82px;
       width: 94px; } }
 
-.icon-article-saved {
-  background-size: 1500px 1799px;
-  background-position: -1008px -583px;
-  height: 126px;
-  width: 102px; }
-  @media only screen and (max-width: 768px) {
-    .icon-article-saved {
-      background-size: 600px 720px;
-      background-position: -403px -233px;
-      height: 51px;
-      width: 41px; } }
-
-.icon-article-saved-big {
+.icon-welcome-video-saved-big {
   background-size: 1200px 1439px;
-  background-position: -806px -466px;
-  height: 101px;
-  width: 82px; }
+  background-position: -598px -1198px;
+  height: 163px;
+  width: 148px; }
   @media only screen and (max-width: 768px) {
-    .icon-article-saved-big {
+    .icon-welcome-video-saved-big {
       background-size: 600px 720px;
-      background-position: -403px -233px;
-      height: 51px;
-      width: 41px; } }
+      background-position: -299px -599px;
+      height: 82px;
+      width: 74px; } }
 
 .icon-welcome-article-saved-big {
   background-size: 1200px 1439px;
@@ -2556,54 +2562,6 @@ ICON SAVED
       height: 82px;
       width: 75px; } }
 
-.icon-video-saved {
-  background-size: 1500px 1799px;
-  background-position: -1240px -583px;
-  height: 126px;
-  width: 101px; }
-  @media only screen and (max-width: 768px) {
-    .icon-video-saved {
-      background-size: 600px 720px;
-      background-position: -496px -233px;
-      height: 51px;
-      width: 41px; } }
-
-.icon-video-saved-big {
-  background-size: 1200px 1439px;
-  background-position: -992px -466px;
-  height: 101px;
-  width: 81px; }
-  @media only screen and (max-width: 768px) {
-    .icon-video-saved-big {
-      background-size: 600px 720px;
-      background-position: -496px -233px;
-      height: 51px;
-      width: 41px; } }
-
-.icon-welcome-video-saved-big {
-  background-size: 1200px 1439px;
-  background-position: -598px -1198px;
-  height: 163px;
-  width: 148px; }
-  @media only screen and (max-width: 768px) {
-    .icon-welcome-video-saved-big {
-      background-size: 600px 720px;
-      background-position: -299px -599px;
-      height: 82px;
-      width: 74px; } }
-
-.icon-image-saved {
-  background-size: 1500px 1799px;
-  background-position: -1356px -583px;
-  height: 126px;
-  width: 101px; }
-  @media only screen and (max-width: 768px) {
-    .icon-image-saved {
-      background-size: 600px 720px;
-      background-position: -542px -233px;
-      height: 51px;
-      width: 41px; } }
-
 .icon-welcome-image-saved-big {
   background-size: 1200px 1439px;
   background-position: -428px -1198px;
@@ -2616,9 +2574,72 @@ ICON SAVED
       height: 82px;
       width: 74px; } }
 
-.icon-image-saved-big {
+/*
+ICON SAVED
+*/
+.icon-article-saved {
+  background-size: 1500px 1799px;
+  background-position: -1008px -583px;
+  height: 126px;
+  width: 102px; }
+  @media only screen and (max-width: 768px) {
+    .icon-article-saved {
+      background-size: 1050px 1259px;
+      background-position: -705px -408px;
+      height: 89px;
+      width: 72px; } }
+
+.icon-article-saved-big {
+  background-size: 2550px 3058px;
+  background-position: -1713px -991px;
+  height: 215px;
+  width: 174px; }
+  @media only screen and (max-width: 768px) {
+    .icon-article-saved-big {
+      background-size: 1500px 1799px;
+      background-position: -1008px -583px;
+      height: 126px;
+      width: 102px; } }
+
+.icon-video-saved {
+  background-size: 1500px 1799px;
+  background-position: -1240px -583px;
+  height: 126px;
+  width: 101px; }
+  @media only screen and (max-width: 768px) {
+    .icon-video-saved {
+      background-size: 1050px 1259px;
+      background-position: -868px -408px;
+      height: 89px;
+      width: 71px; } }
+
+.icon-video-saved-big {
   background-size: 2550px 3058px;
   background-position: -2108px -991px;
+  height: 215px;
+  width: 172px; }
+  @media only screen and (max-width: 768px) {
+    .icon-video-saved-big {
+      background-size: 1500px 1799px;
+      background-position: -1240px -583px;
+      height: 126px;
+      width: 101px; } }
+
+.icon-image-saved {
+  background-size: 1500px 1799px;
+  background-position: -1356px -583px;
+  height: 126px;
+  width: 101px; }
+  @media only screen and (max-width: 768px) {
+    .icon-image-saved {
+      background-size: 1050px 1259px;
+      background-position: -949px -408px;
+      height: 89px;
+      width: 71px; } }
+
+.icon-image-saved-big {
+  background-size: 2550px 3058px;
+  background-position: -2305px -991px;
   height: 215px;
   width: 172px; }
   @media only screen and (max-width: 768px) {
@@ -2630,66 +2651,78 @@ ICON SAVED
 
 .icon-resumeHero-saved {
   background-size: 1500px 1799px;
+  background-position: -1125px -589px;
+  height: 120px;
+  width: 105px; }
+  @media only screen and (max-width: 768px) {
+    .icon-resumeHero-saved {
+      background-size: 1050px 1259px;
+      background-position: -787px -412px;
+      height: 84px;
+      width: 74px; } }
+
+.icon-locallygrown-saved {
+  background-size: 1500px 1799px;
+  background-position: -893px -744px;
+  height: 115px;
+  width: 115px; }
+  @media only screen and (max-width: 768px) {
+    .icon-locallygrown-saved {
+      background-size: 1050px 1259px;
+      background-position: -625px -520px;
+      height: 81px;
+      width: 81px; } }
+
+.icon-careerscape-saved {
+  background-size: 1500px 1799px;
+  background-position: -1045px -740px;
+  height: 120px;
+  width: 115px; }
+  @media only screen and (max-width: 768px) {
+    .icon-careerscape-saved {
+      background-size: 1050px 1259px;
+      background-position: -731px -518px;
+      height: 84px;
+      width: 81px; } }
+
+/*
+ICON PRESENTATION (ONLY FOUR)
+*/
+.icon-resumeHero-presentation {
+  background-size: 1500px 1799px;
   background-position: -335px -1040px;
   height: 345px;
   width: 269px; }
   @media only screen and (max-width: 768px) {
-    .icon-resumeHero-saved {
+    .icon-resumeHero-presentation {
       background-size: 600px 720px;
       background-position: -134px -416px;
       height: 138px;
       width: 108px; } }
 
-.icon-locallygrown-saved {
+.icon-locallygrown-presentation {
   background-size: 1500px 1799px;
   background-position: -935px -1040px;
   height: 345px;
   width: 269px; }
   @media only screen and (max-width: 768px) {
-    .icon-locallygrown-saved {
+    .icon-locallygrown-presentation {
       background-size: 600px 720px;
       background-position: -374px -416px;
       height: 138px;
       width: 108px; } }
 
-.icon-careerscape-saved {
+.icon-careerscape-presentation {
   background-size: 1500px 1799px;
   background-position: -34px -1040px;
   height: 345px;
   width: 269px; }
   @media only screen and (max-width: 768px) {
-    .icon-careerscape-saved {
+    .icon-careerscape-presentation {
       background-size: 600px 720px;
       background-position: -13px -416px;
       height: 138px;
       width: 108px; } }
-
-/*
-ICON PRESENTATION (ONLY FOUR)
-*/
-.icon-locallyGrown-presentation {
-  background-size: 900px 1080px;
-  background-position: -535px -445px;
-  height: 71px;
-  width: 70px; }
-  @media only screen and (max-width: 768px) {
-    .icon-locallyGrown-presentation {
-      background-size: 600px 720px;
-      background-position: -357px -297px;
-      height: 47px;
-      width: 47px; } }
-
-.icon-careerScape-presentation {
-  background-size: 900px 1080px;
-  background-position: -627px -443px;
-  height: 75px;
-  width: 69px; }
-  @media only screen and (max-width: 768px) {
-    .icon-careerScape-presentation {
-      background-size: 600px 720px;
-      background-position: -418px -295px;
-      height: 50px;
-      width: 46px; } }
 
 .icon-article-presentation {
   background-size: 900px 1080px;
@@ -2702,15 +2735,3 @@ ICON PRESENTATION (ONLY FOUR)
       background-position: -403px -233px;
       height: 52px;
       width: 41px; } }
-
-.icon-resumePro-presentation {
-  background-size: 960px 1152px;
-  background-position: -720px -376px;
-  height: 77px;
-  width: 65px; }
-  @media only screen and (max-width: 768px) {
-    .icon-resumePro-presentation {
-      background-size: 660px 792px;
-      background-position: -495px -258px;
-      height: 53px;
-      width: 45px; } }

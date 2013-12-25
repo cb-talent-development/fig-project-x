@@ -90,7 +90,10 @@ $phone-retina-height-small: 450px;
 Responsive
 */
 $rapp-resp: 0.8;
+$rapp-resp-2: 0.9;
+
 $rapp-resp-text: 0.9;
+$rapp-resp-text-2: 0.95;
 /*
 GENERAL CSS
 */
@@ -170,7 +173,10 @@ $sprite-height: 3597px;
 }
 @mixin font-size($font-size){
     font-size:$font-size;
-    @media only screen and (max-width:768px) {
+    @media only screen and (min-width:481px) and (max-width: 768px) {
+        font-size:$font-size * $rapp-resp-text-2;
+    }
+    @media only screen and (max-width: 480px) {
         font-size:$font-size * $rapp-resp-text;
     }
 }
@@ -391,12 +397,12 @@ ICON-ARROW
     .icon-bigarrow-right-black,.icon-bigarrow-right-white{
         margin-top:-8.5px;
     }
-    .icon-bigarrow-bottom-grey{
+    .icon-bigarrow-bottom-grey,.icon-bigarrow-bottom-orange{
         margin-top:-5.5px;
     }
     @media only screen and (max-width: 768px){
         i,b{
-            right:7px;
+            right:10px;
         }
     }
 }
@@ -561,7 +567,7 @@ Font handler
 		-webkit-box-orient: vertical;
         font-size:55px;
         line-height:58px;
-        @media only screen and (max-width:768px) {
+        @media only screen and (max-width: 768px) {
 		      font-size:24px;
               line-height:26px;
         }
@@ -571,7 +577,7 @@ Font handler
 		display: -webkit-box;
 		-webkit-box-orient: vertical;
         font-size:22px;
-        @media only screen and (max-width:768px){
+        @media only screen and (max-width: 768px){
             font-size:13px;
             line-height:16px;
         }
@@ -581,7 +587,7 @@ Font handler
 		display: -webkit-box;
 		-webkit-box-orient: vertical;
         font-size:18px;
-        @media only screen and (max-width:768px){
+        @media only screen and (max-width: 768px){
             font-size: 10px;line-height:13px;
         }
 	}
@@ -591,14 +597,14 @@ Font handler
 		-webkit-box-orient: vertical;
         font-size:16px;
         line-height:23px;
-        @media only screen and (max-width:768px){  
+        @media only screen and (max-width: 768px){  
               font-size:13px;line-height:16px;
         }
 	}
     @include font-family;
 }
 @mixin media-font-size-2-3{
-    @media only screen and (max-width:768px) {
+    @media only screen and (max-width: 768px) {
             h2.title{
 				font-size: 17px;line-height:21px;
             }
@@ -667,7 +673,7 @@ Font handler
 }
 .home-container{
     width:1200px;margin:auto;margin-top:60px;
-	@media only screen and (max-width:768px){
+	@media only screen and (max-width: 768px){
         width: 310px;
 		margin-top: 25px;
 	}
@@ -862,7 +868,7 @@ HOMEPAGE SCROLLABLE CONTENT
         padding-bottom:9px;
 		margin-bottom: 45px;
 		width: 350px;
-		@include font-size(1.9em);
+		@include font-size(24px);
 		font-family: HelveticaLightCondensed, sans-serif;
         @media only screen and (max-width: 768px){
             width:85%;
@@ -881,6 +887,7 @@ Header css
     padding-bottom:40px;    
 }
 .page-header{
+    position:relative;
     margin:30px 0px;
     padding:0px;
 	border: none;
@@ -895,12 +902,12 @@ Header css
 		.background-image{
 			vertical-align:middle;
 		}
+        @media only screen and (max-width: 768px){
+			font-size:24px;
+		}
 	}
 	.grey{
 		color: #bbb;
-		@media only screen and (max-width: 768px){
-			//display: none;
-		}
 	}
 	.orange{
 		color: $orange;
@@ -910,23 +917,30 @@ Header css
 	}
 	span{
 		display: inline-block;
-		@media only screen and (max-width: 768px){
-			font-size: 25px !important;
-		}
 	}
 	.icon-bigarrow-bottom-orange{
-		position:relative;
+		/*position:relative;
 		top: 19px;
 		right: 0px;
 		@media only screen and (max-width: 768px){
 			right: 0px;
 			top: 10px;
-		}
+		}*/
 	}
 	.button-signout{
+        position:absolute;
+        right:0px;
+        top:0px;
 		margin-top:32px;
-		font-size:16px !important;
-		padding-left:10px;width:170px;
+		font-size: 16px !important;
+		padding-left:10px;
+        width:170px;
+        @media only screen and (max-width: 768px){
+			width:60%;
+            position:relative;
+            font-size: 14px !important;
+            margin:15px auto;
+		}
 	}
 	#profil-pic{
 		height: 100px;
@@ -935,14 +949,15 @@ Header css
 		@media only screen and (max-width: 768px){
 			height: 70px;
 			width: 70px;
+            margin-bottom:8px;
 		}
 		-webkit-box-shadow:0 1px 2px rgba(0,0,0,0.2);
 		border: 2px solid white;
 		margin-right: 15px;
 	}
 	.block{
-		@media only screen and (max-width:479px){
-			width: 200px;
+		@media only screen and (max-width: 768px){
+			//width: 200px;
 		}
 	}
     .subMenu{
@@ -1107,7 +1122,7 @@ HEADER BUTTONS
 	@media (min-width: 768px){
 		width: 369px !important;
 	}
-	@media (max-width: 767px){
+	@media (max-width: 768px){
 		width: 300px !important;
 	}
 }
@@ -1129,7 +1144,7 @@ HEADER BUTTONS
 
 .dubble{
 	ul{
-        @media only screen and (min-width:768px){
+        @media only screen and (max-width: 768px){
             text-align:center;
         }
 		z-index: 101 !important;
@@ -1168,7 +1183,7 @@ Height
 */
 @mixin phone-height{
     margin-bottom:30px;
-    @media only screen and (max-width:768px){
+    @media only screen and (max-width: 768px){
         margin-bottom:10px;
         height: $phone-height-small;
 	}
@@ -1184,7 +1199,7 @@ Height
 @mixin big-height{
 	height: $large-box-height;
     margin-bottom:30px;
-    @media only screen and (max-width:768px){
+    @media only screen and (max-width: 768px){
         height: $phone-height;
         margin-bottom:10px;
 	}
@@ -1194,7 +1209,7 @@ Width
 */
 @mixin big-width{
     float:left;width:$total-width;margin-left:15px;margin-right:15px;
-	@media only screen and (max-width:768px){
+	@media only screen and (max-width: 768px){
 	/*	width: 630px;margin-left:5px;margin-right:5px;
 	}
 	@media only screen and (max-width:650px){
@@ -1206,7 +1221,7 @@ Width
 }
 @mixin med-width{
     float:left;width:370px;margin-left:15px;margin-right:15px;
-    @media only screen and (max-width:768px){
+    @media only screen and (max-width: 768px){
 	/*	width: 203.3px;margin-left:5px;margin-right:5px;
 	}
 	@media only screen and (max-width:650px){
@@ -1218,7 +1233,7 @@ Width
 }
 @mixin phone-width{
     float:left;width:300px;margin-left:5px;margin-right:5px;
-	@media only screen and (max-width:768px){
+	@media only screen and (max-width: 768px){
 	/*	width: 310px;margin-left:5px;margin-right:5px;
 	}
 	@media only screen and (max-width:650px){
@@ -1429,6 +1444,10 @@ PROFILE SUBMENU
 		left: -90px;
 		border: 1px solid black;
 	}
+    .space{
+        display:inline-block;
+        width:25px;
+    }
 	.icon-triangle-white{
 		position: absolute;
 		top: -15px;
@@ -1531,7 +1550,7 @@ General box template
 	overflow: hidden;
 	position: relative;
 	border-left: solid 7px $color;
-	@media only screen and (max-width:768px) {
+	@media only screen and (max-width: 768px) {
 		border-left: solid 3px $color;
 	}
 	.subtitle{
@@ -1621,7 +1640,7 @@ Article type 1
         width: 800px;
 		float: right;
 		-webkit-line-clamp: 2;
-        @media only screen and (max-width:768px) {
+        @media only screen and (max-width: 768px) {
 			width: 100%;
             padding-top:15px;padding-left:15px;padding-right:15px;
             min-height:20%;
@@ -1631,14 +1650,14 @@ Article type 1
     .left{
         float:left;
         width:363px;
-        @media only screen and (max-width:768px) {
+        @media only screen and (max-width: 768px) {
 			width: 105px;
 		}
     }
     .right{
         float:left;
         width:800px;
-        @media only screen and (max-width:768px) {
+        @media only screen and (max-width: 768px) {
 			width: 190px;
 		}
     }
@@ -1647,7 +1666,7 @@ Article type 1
 		padding-top: 25px;
 		padding-left: 25px;
 		margin: 0px;
-		@media only screen and (max-width:768px) {
+		@media only screen and (max-width: 768px) {
             max-height:100px;
             -webkit-line-clamp: 2;
 		    padding-left: 15px;padding-top: 15px;
@@ -1656,7 +1675,7 @@ Article type 1
 	.img{
         width:363px;
 		height: 284px;		
-		@media only screen and (max-width:768px) {
+		@media only screen and (max-width: 768px) {
 		   height: 94px;
 		   width: 100%;
 		}
@@ -1675,7 +1694,7 @@ Article type 1
         .icon-star,.icon-star-disabled{
             margin-left:-5px;
         }
-        @media only screen and (max-width:768px){
+        @media only screen and (max-width: 768px){
           margin: 10px;margin-top:0px;margin-bottom:5px;
           .icon-star,.icon-star-disabled{
             margin-left:-2.5px;
@@ -1690,7 +1709,7 @@ Article type 1
 		margin: 0px 30px;
 		margin-bottom: 25px;
 		-webkit-line-clamp: 6;
-        @media only screen and (max-width:768px){
+        @media only screen and (max-width: 768px){
             margin: 10px;margin-top:0px;margin-bottom:0px;
             overflow:hidden;
 		    -webkit-line-clamp: 13;
@@ -1723,7 +1742,7 @@ Article type 1
 Small A2 or A3
 */
 @mixin a-small{
-     @media only screen and (max-width:768px){
+     @media only screen and (max-width: 768px){
         @include phone-height;
         //to be sure
         .pictured .left,.pictured .right,.not-pictured .left,.not-pictured .right{
@@ -1955,7 +1974,7 @@ Small article (A2/A3)
     .transp-black{
         position:relative;
         top:0px;left:0px;
-		@media only screen and (max-width:768px){
+		@media only screen and (max-width: 768px){
 			width: 100%;
 		}
 		@media only screen and (min-width:769px){
@@ -1967,7 +1986,7 @@ Small article (A2/A3)
 			padding-bottom: 0px;
 			margin: 0px;
 			//font-size: $large-title;
-			@media only screen and (max-width:768px) {
+			@media only screen and (max-width: 768px) {
 				//font-size: 25px;
                 padding:15px;padding-bottom: 0px;
 
@@ -1985,7 +2004,7 @@ Small article (A2/A3)
 			padding-top: 17px;
 			padding-bottom: 20px;
 			padding-left: 30px;
-            @media only screen and (max-width:768px) {
+            @media only screen and (max-width: 768px) {
                 padding-top:15px;
                 padding-bottom: 55px;padding-left: 15px;
 			}
@@ -2004,7 +2023,7 @@ Small article (A2/A3)
                 margin-top:2px;
                 margin-left:3px;
             }
-            @media only screen and (max-width:768px) {
+            @media only screen and (max-width: 768px) {
                 width:100%;
                 padding-left:15px;padding-right:15px;
                 padding-top:10px;padding-bottom:8px;
@@ -2019,21 +2038,21 @@ Small article (A2/A3)
 Inforgraphic
 */
 @mixin i-small{
-    @media only screen and (max-width:768px){
+    @media only screen and (max-width: 768px){
         padding:8px;
     }
 	.transp-black{
-        @media only screen and (max-width:768px) {
+        @media only screen and (max-width: 768px) {
 		    width: 100%;
             padding:10px;padding-bottom:0px;
         }
 		h2.title{
-			@media only screen and (max-width:768px) {
+			@media only screen and (max-width: 768px) {
                 -webkit-line-clamp: 5;
 			}
 		}
 		h3.subtitle{
-			@media only screen and (max-width:768px) {
+			@media only screen and (max-width: 768px) {
 				padding-top: 10px;
 				padding-bottom: 0px;
 			}
@@ -2128,7 +2147,7 @@ Video
 	}
 }
 @mixin video-promo-small{
-    @media only screen and (max-width:768px){
+    @media only screen and (max-width: 768px){
         .transp-black{
             h2.title{
                 color:black;
@@ -2147,7 +2166,7 @@ Video
 }
 @mixin video-small{
     @include video-promo-small;
-    @media only screen and (max-width:768px){
+    @media only screen and (max-width: 768px){
         .transp-black{
             h2.title{
                 -webkit-line-clamp: 3;
@@ -2172,7 +2191,7 @@ Video
 	.icon{
 		margin-top: -35px;
 		margin-left: -35px;
-        @media only screen and (max-width:768px){
+        @media only screen and (max-width: 768px){
           //  margin-top: -17.5px;
 		  //  margin-left: -17.5px;
         }
@@ -2251,7 +2270,7 @@ Promo
             i{
                 top:6px;right:10px;
             }
-            @media only screen and (max-width:768px) {
+            @media only screen and (max-width: 768px) {
                 font-size: 9px;
                 width:100px;
                 i{
@@ -2274,7 +2293,7 @@ Promo
             i{
                 top:9px;right:10px;
             }
-            @media only screen and (max-width:768px) {
+            @media only screen and (max-width: 768px) {
                 margin-left:15px;
                 font-size: 10px;
                 width:130px;
@@ -2344,7 +2363,7 @@ Load More button
         position:absolute;
         right:20px;
     }
-    @media only screen and (max-width:768px) {
+    @media only screen and (max-width: 768px) {
         width:300px;
     }
 
@@ -3785,7 +3804,7 @@ SOCIAL
             }
             span{
                position:relative;right:15px;
-               @media only screen and (max-width:768px){
+               @media only screen and (max-width: 768px){
                }
             }
         }
@@ -3811,7 +3830,7 @@ SOCIAL
         //width:90%;
         width:1204px;
         .header{
-            font-size:24px;
+            @include font-size(24px);
             .grey{
                 color:$grey;
             }
@@ -3848,11 +3867,11 @@ SOCIAL
             }  
         }
         .custom-radio{
-            font-size:23px;
+            @include font-size(23px);
             color:$darkGrey;
         }
         .message{
-            font-size:17px;
+            @include font-size(17px);
             text-transform:uppercase;
             color:rgb(178,178,178);
             margin-bottom:10px;
@@ -3860,7 +3879,7 @@ SOCIAL
         .optional{color:$lightGrey;text-transform:uppercase;font-size:17px;}
         .select,input,input[placeholder]{  
             padding-top:20px;padding-bottom:16px;
-            font-size:23px;
+            @include font-size(23px);
         }   
         .large{width:465px;margin-right:25px;}
         .medium{width:370px;margin-right:25px;}
@@ -3918,7 +3937,7 @@ SOCIAL
                 }
                 .description{
                     padding:0px 30px;
-                    font-size:15px;
+                    @include font-size(15px);
                     line-height:20px;
                     padding-top:25px;
                     @include webkit-box;
@@ -4614,14 +4633,27 @@ Dashboard
         position:relative;
         margin-top:60px;
         margin-bottom:25px;
+        @media only screen and (max-width: 768px){
+            margin-top:30px;
+            margin-bottom:15px;
+        }
         > .left,>.right{
             position:relative;
             height:350px;
             padding:45px 30px;
             width:33.31%;
+            @media only screen and (max-width: 768px){
+                padding:20px;
+                width:100%;
+                height:auto;
+                border-bottom:1px solid $lightGrey;
+            }
         }
         >.left{
             border-right:1px solid $lightGrey;
+            @media only screen and (max-width: 768px){
+                border-right:none;
+            }
         }
         .person{
             text-align:center;
@@ -4629,12 +4661,20 @@ Dashboard
                 position:absolute;
                 top:45px;
                 left:30px;
+                @media only screen and (max-width: 768px){
+                    top:20px;
+                    left:20px;
+                }
                 
             }
             .edit-name{
                 position:absolute;
                 top:247px;
                 left:30px;
+                @media only screen and (max-width: 768px){
+                    top:223px;
+                    left:20px;
+                }
             }
             .picture{
                 width:175px;height:175px;
@@ -4645,32 +4685,46 @@ Dashboard
                 
             }
             .name{
-                font-size:35px;
+                @include font-size(35px);
             }
             .mail{
                 color:$grey;
-                font-size:20px;                                                              
+                @include font-size(20px);
             }
         }
         .presentation{
             padding-top:30px;
             padding-bottom:0px;
-            font-size:20px;
+            @include font-size(20px);
             line-height:20px;
+            @media only screen and (max-width: 768px){
+                padding-top:20px;
+                padding-bottom:15px;
+            }
             table{
                 tr{
-                 height:74px;
+                    height:74px;
                     .logo{
                         margin:0px 15px;
+                    }
+                    @media only screen and (max-width: 768px){
+                        height:74px * $rapp-resp;
+                    }
+                }
+                
+                .icon-pencil{
+                    @media only screen and (max-width: 768px){
+                        margin-top:3px;
                     }
                 }
             }
         }
         .job-phase{
-            font-size:20px;
+            @include font-size(20px);
             .title{
                 margin-bottom:10px;
-                .txt{width:70%;
+                .txt{
+                    width:70%;
                     margin-left:20px;
                 }
             }
@@ -4688,9 +4742,17 @@ Dashboard
                 }
                 .phase{
                     margin-bottom:13px;
+                    @media only screen and (max-width: 768px){
+                        margin-bottom:0px;
+                    }
                     i{
                         position:relative;top:auto;right:auto;
-                        margin-right:15px;}
+                        margin-right:15px;
+                        @media only screen and (max-width: 768px){
+                            margin-right:8px;
+                            top:5px;
+                        }
+                    }
                     >span{
                         line-height:40px;
                         position:relative;
@@ -4708,24 +4770,40 @@ Dashboard
         .button-edit{
             margin-top:-8px;
             margin-right:-12px;
-            font-size:14px;
+            @include font-size(14px);
             position:relative;padding-left:10px;padding-right:40px;
+            @media only screen and (max-width: 768px){
+                padding-top:10px; padding-bottom:4px;
+            }
         }
     }
     .content{
         .col-left,.col-right{
             width:370px;
+            @media only screen and (max-width: 768px){
+                width:100%;
+            }
         }
         .col-left{
             margin-right:25px;
+            @media only screen and (max-width: 768px){
+                margin-right:0px;
+            }
         }
         .education,.work-experience,.skills,.technology,.career-goals{
             @include whitebox;
             margin-bottom:25px;
+            @media only screen and (max-width: 768px){
+                margin-bottom:15px;
+            }
             .title-section{
-                font-size:19px;
+                @include font-size(20px);
                 padding:22px;
                 padding-bottom:19px;
+                @media only screen and (max-width: 768px){
+                    padding:17px;
+                    padding-bottom:14px;
+                }
                 .title{
                     margin-left:5px;
                 }
@@ -4748,7 +4826,7 @@ Dashboard
             }
         }
         .website,.period,.place{
-            font-size:15px;
+            @include font-size(15px);
             line-height:27px;
         }
         .website,.place{
@@ -4758,11 +4836,16 @@ Dashboard
             color:rgb(128,128,128);
         }
         .job-title,.education-elem .name{
-            font-size:20px;line-height:30px;
+            @include font-size(20px);
+            line-height:30px;
         }
         .detail{
             margin-left:52px;//20+32
             width:75%;
+            @media only screen and (max-width: 768px){
+                margin-left:15%;
+                width:auto;
+            }
         }
         .timeline{
             position:absolute;
@@ -4772,12 +4855,19 @@ Dashboard
                 margin-left:17px;
                 height:90%;
                 border-left:1px dashed $lightGrey;
+                @media only screen and (max-width: 768px){
+                    margin-left:13px;
+                }
             }
         }
         .work-experience{
             .period{margin-bottom:3px;}
             .detail{
                 padding-bottom:40px;
+                @media only screen and (max-width: 768px){
+                    padding-bottom:25px;    
+                }
+                
             }
             .website{
                 text-transform:uppercase;
@@ -4785,6 +4875,10 @@ Dashboard
            .occupation,.income{
                 text-transform:uppercase;
                 padding-left:15px;padding-right:15px;
+                @media only screen and (max-width: 768px){
+                    padding-left:12px;padding-right:12px;
+                    margin-bottom:5px;
+                }
             }
             .occupation{
                 margin-right:10px;
@@ -4793,12 +4887,26 @@ Dashboard
                 background:rgb(107,212,138);color:white;
             }
         }
+        /*
+        EDUCATION
+        */
         .education{
-            .dashed-bar{margin-left:16px;}
+            .dashed-bar{
+                margin-left:16px;
+                @media only screen and (max-width: 768px){
+                    margin-left:13px;    
+                }
+            }
             .detail{
                 padding-bottom:30px;
+                @media only screen and (max-width: 768px){
+                    padding-bottom:25px;    
+                }
             }
         }
+        /*
+        TECHNOLOGY+SKILLS
+        */
         .add-elem,.technology-elem,.skill,.occupation,.income{
             @include font-size(16px);
             text-align:center;
@@ -4826,6 +4934,9 @@ Dashboard
         .skills{
             .left{
                 margin-right:26px;
+                @media only screen and (max-width: 768px){
+                    margin-right:8%;
+                }
             }
             .add-elem,.add-elem-input,.skill{
                 width:46%;
@@ -4851,9 +4962,15 @@ Dashboard
             }
         }
         .career-goals{
-            font-size:19px;
+            @include font-size(19px);
             .content{
-                .goal{margin-top:31px;width:80%;}
+                .goal{
+                    margin-top:31px;
+                    width:80%;
+                    @media only screen and (max-width: 768px){
+                        margin-top:20px; 
+                    }
+                }
                 .first{margin-top:0px;}
             }
         }

@@ -1,29 +1,30 @@
-<div class="container">
+<div class="main-container">
 		<div class="page-header">
 			<h1>
 				<div id="profil-pic" class="background-image img-circle img-responsive" style="background-image:url('{{user=='none' && 'img/me.jpg'|| user.Media.Url}}');" alt="photo de profile"/>
 				<span ng-switch on="user">
 					<span ng-switch-when="none">
-						<span class="grey link toggleMenu">Sign Up&nbsp;<i class="icon-bigarrow-bottom-grey"></i>&nbsp;/
+						<span class="grey link toggleMenu">Sign Up<span class="space"></span><i class="icon-bigarrow-bottom-grey"></i>/
 							<div class="subMenu offline" ng-include="'partials/home-submenu-offline.html'"></div>
 						</span>
 						<span ng-repeat="path in paths">
-							  <span class="{{path.color}}">{{path.txt}}</span>
+							  <span class="{{path.color}}">{{path.txt}}&nbsp;</span>
 						</span>
 					</span>
 					<span ng-switch-default class="block">
-						<span class="orange link toggleMenu">{{user.Name}}&nbsp;<i class="icon-bigarrow-bottom-orange"></i>
+						<span class="orange link toggleMenu">{{user.Name}}<span class="space"></span><i class="icon-bigarrow-bottom-orange"></i>/
 							<div class="subMenu" ng-include="'partials/home-submenu-online.html'"></div>
 						</span>
 						<span ng-repeat="path in paths">
-							  <span class="{{path.color}}">&nbsp;/{{path.txt}}</span>
+							  <span class="{{path.color}}">{{path.txt}}&nbsp;</span>
 						</span>
 					</span>
 				</span>
-				<div class="button-signout link right back-white" ng-class="{true:'visible',false:'invisible'}[page=='dashboard']">
+				<div class="button-signout link back-white" ng-class="{true:'visible',false:'invisible'}[page=='dashboard']">
 					<span>Signout</span>
 					<i class="icon-bigarrow-right-black"></i>
 				</div>
+                <div class="clear"></div>
             </h1>
 		</div>
 </div>

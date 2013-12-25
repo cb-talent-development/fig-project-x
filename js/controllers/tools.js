@@ -130,11 +130,11 @@ function ToolCtr($scope, $http,$routeParams,pagination,register) {
             $scope.logo="icon-resumeHero-small";
         }
         $scope.paths=[{
-            "txt":" Career Tools / ",
+            "txt":"Career Tools /",
             "color":"grey"
         },
         {
-            "txt":" "+$scope.txt,
+            "txt":$scope.txt,
             "color":"black"
         }];
         $scope.savedIndustry="Choose an Industry";

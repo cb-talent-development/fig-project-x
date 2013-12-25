@@ -253,11 +253,11 @@ ICON-ARROW
   right: 18px; }
 .link .icon-bigarrow-right-black, .link .icon-bigarrow-right-white {
   margin-top: -8.5px; }
-.link .icon-bigarrow-bottom-grey {
+.link .icon-bigarrow-bottom-grey, .link .icon-bigarrow-bottom-orange {
   margin-top: -5.5px; }
 @media only screen and (max-width: 768px) {
   .link i, .link b {
-    right: 7px; } }
+    right: 10px; } }
 
 /*
 COLOR
@@ -565,11 +565,14 @@ HOMEPAGE SCROLLABLE CONTENT
     padding-bottom: 9px;
     margin-bottom: 45px;
     width: 350px;
-    font-size: 1.9em;
+    font-size: 24px;
     font-family: HelveticaLightCondensed, sans-serif; }
-    @media only screen and (max-width: 768px) {
+    @media only screen and (min-width: 481px) and (max-width: 768px) {
       .first-connect .button, .first-connect .input-button {
-        font-size: 1.71em; } }
+        font-size: 22.8px; } }
+    @media only screen and (max-width: 480px) {
+      .first-connect .button, .first-connect .input-button {
+        font-size: 21.6px; } }
     @media only screen and (max-width: 768px) {
       .first-connect .button, .first-connect .input-button {
         width: 85%;
@@ -585,6 +588,7 @@ Header css
   padding-bottom: 40px; }
 
 .page-header {
+  position: relative;
   margin: 30px 0px;
   padding: 0px;
   border: none;
@@ -609,6 +613,9 @@ Header css
     display: inline; }
     .page-header h1 .background-image {
       vertical-align: middle; }
+    @media only screen and (max-width: 768px) {
+      .page-header h1 {
+        font-size: 24px; } }
   .page-header .grey {
     color: #bbb; }
   .page-header .orange {
@@ -617,22 +624,28 @@ Header css
     color: #232323; }
   .page-header span {
     display: inline-block; }
-    @media only screen and (max-width: 768px) {
-      .page-header span {
-        font-size: 25px !important; } }
   .page-header .icon-bigarrow-bottom-orange {
-    position: relative;
+    /*position:relative;
     top: 19px;
-    right: 0px; }
-    @media only screen and (max-width: 768px) {
-      .page-header .icon-bigarrow-bottom-orange {
-        right: 0px;
-        top: 10px; } }
+    right: 0px;
+    @media only screen and (max-width: 768px){
+    	right: 0px;
+    	top: 10px;
+    }*/ }
   .page-header .button-signout {
+    position: absolute;
+    right: 0px;
+    top: 0px;
     margin-top: 32px;
     font-size: 16px !important;
     padding-left: 10px;
     width: 170px; }
+    @media only screen and (max-width: 768px) {
+      .page-header .button-signout {
+        width: 60%;
+        position: relative;
+        font-size: 14px !important;
+        margin: 15px auto; } }
   .page-header #profil-pic {
     height: 100px;
     width: 100px;
@@ -643,10 +656,8 @@ Header css
     @media only screen and (max-width: 768px) {
       .page-header #profil-pic {
         height: 70px;
-        width: 70px; } }
-  @media only screen and (max-width: 479px) {
-    .page-header .block {
-      width: 200px; } }
+        width: 70px;
+        margin-bottom: 8px; } }
   .page-header .subMenu {
     max-height: none;
     overflow: auto; }
@@ -771,7 +782,7 @@ HEADER BUTTONS
 @media (min-width: 768px) {
   .dubble.open {
     width: 369px !important; } }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .dubble.open {
     width: 300px !important; } }
 
@@ -787,7 +798,7 @@ HEADER BUTTONS
 
 .dubble ul {
   z-index: 101 !important; }
-  @media only screen and (min-width: 768px) {
+  @media only screen and (max-width: 768px) {
     .dubble ul {
       text-align: center; } }
   .dubble ul li {
@@ -893,7 +904,10 @@ Width
   padding-right: 15px;
   text-align: left;
   color: gray; }
-  @media only screen and (max-width: 768px) {
+  @media only screen and (min-width: 481px) and (max-width: 768px) {
+    .button, .input-button, .btn {
+      font-size: 17.1px; } }
+  @media only screen and (max-width: 480px) {
     .button, .input-button, .btn {
       font-size: 16.2px; } }
   .button b, .input-button b, .button i, .input-button i, .btn b, .btn i {
@@ -927,7 +941,10 @@ Width
   text-align: left;
   color: gray;
   border-bottom: 2px solid #cfcfcf; }
-  @media only screen and (max-width: 768px) {
+  @media only screen and (min-width: 481px) and (max-width: 768px) {
+    .select {
+      font-size: 17.1px; } }
+  @media only screen and (max-width: 480px) {
     .select {
       font-size: 16.2px; } }
   .select b, .select i {
@@ -977,7 +994,10 @@ Width
     display: block;
     width: 100%;
     height: 100%; }
-    @media only screen and (max-width: 768px) {
+    @media only screen and (min-width: 481px) and (max-width: 768px) {
+      .input-button input {
+        font-size: 17.1px; } }
+    @media only screen and (max-width: 480px) {
       .input-button input {
         font-size: 16.2px; } }
     @media only screen and (max-width: 768px) {
@@ -1094,6 +1114,9 @@ PROFILE SUBMENU
   top: 100px;
   left: -90px;
   border: 1px solid black; }
+.page-header .space {
+  display: inline-block;
+  width: 25px; }
 .page-header .icon-triangle-white {
   position: absolute;
   top: -15px;
@@ -4346,7 +4369,10 @@ SOCIAL
   padding-bottom: 12px;
   padding-left: 20px;
   padding-right: 20px; }
-  @media only screen and (max-width: 768px) {
+  @media only screen and (min-width: 481px) and (max-width: 768px) {
+    .button-social, .dashboard-popup .section-photo .change-picture .buttons .button, .dashboard-popup .section-photo .change-picture .buttons .input-button {
+      font-size: 25.65px; } }
+  @media only screen and (max-width: 480px) {
     .button-social, .dashboard-popup .section-photo .change-picture .buttons .button, .dashboard-popup .section-photo .change-picture .buttons .input-button {
       font-size: 24.3px; } }
 
@@ -4376,7 +4402,10 @@ SOCIAL
     padding-top: 26px;
     color: white;
     font-size: 23px; }
-    @media only screen and (max-width: 768px) {
+    @media only screen and (min-width: 481px) and (max-width: 768px) {
+      .dashboard-popup .content .icon-step-1, .dashboard-popup .content .icon-step-2, .dashboard-popup .content .icon-step-3, .dashboard-popup .content .icon-step-4, .dashboard-popup .content .icon-step-5, .dashboard-popup .content .icon-step-1-grey, .dashboard-popup .content .icon-step-2-grey, .dashboard-popup .content .icon-step-3-grey, .dashboard-popup .content .icon-step-4-grey, .dashboard-popup .content .icon-step-5-grey, .get-started-resume .content .icon-step-1, .get-started-resume .content .icon-step-2, .get-started-resume .content .icon-step-3, .get-started-resume .content .icon-step-4, .get-started-resume .content .icon-step-5, .get-started-resume .content .icon-step-1-grey, .get-started-resume .content .icon-step-2-grey, .get-started-resume .content .icon-step-3-grey, .get-started-resume .content .icon-step-4-grey, .get-started-resume .content .icon-step-5-grey {
+        font-size: 21.85px; } }
+    @media only screen and (max-width: 480px) {
       .dashboard-popup .content .icon-step-1, .dashboard-popup .content .icon-step-2, .dashboard-popup .content .icon-step-3, .dashboard-popup .content .icon-step-4, .dashboard-popup .content .icon-step-5, .dashboard-popup .content .icon-step-1-grey, .dashboard-popup .content .icon-step-2-grey, .dashboard-popup .content .icon-step-3-grey, .dashboard-popup .content .icon-step-4-grey, .dashboard-popup .content .icon-step-5-grey, .get-started-resume .content .icon-step-1, .get-started-resume .content .icon-step-2, .get-started-resume .content .icon-step-3, .get-started-resume .content .icon-step-4, .get-started-resume .content .icon-step-5, .get-started-resume .content .icon-step-1-grey, .get-started-resume .content .icon-step-2-grey, .get-started-resume .content .icon-step-3-grey, .get-started-resume .content .icon-step-4-grey, .get-started-resume .content .icon-step-5-grey {
         font-size: 20.7px; } }
     @media only screen and (max-width: 479px) {
@@ -4399,6 +4428,12 @@ SOCIAL
   width: 1204px; }
   .dashboard-popup .section .header {
     font-size: 24px; }
+    @media only screen and (min-width: 481px) and (max-width: 768px) {
+      .dashboard-popup .section .header {
+        font-size: 22.8px; } }
+    @media only screen and (max-width: 480px) {
+      .dashboard-popup .section .header {
+        font-size: 21.6px; } }
     .dashboard-popup .section .header .grey {
       color: #9d9d9d; }
   .dashboard-popup .section .step {
@@ -4432,11 +4467,23 @@ SOCIAL
   .dashboard-popup .section .custom-radio {
     font-size: 23px;
     color: gray; }
+    @media only screen and (min-width: 481px) and (max-width: 768px) {
+      .dashboard-popup .section .custom-radio {
+        font-size: 21.85px; } }
+    @media only screen and (max-width: 480px) {
+      .dashboard-popup .section .custom-radio {
+        font-size: 20.7px; } }
   .dashboard-popup .section .message {
     font-size: 17px;
     text-transform: uppercase;
     color: #b2b2b2;
     margin-bottom: 10px; }
+    @media only screen and (min-width: 481px) and (max-width: 768px) {
+      .dashboard-popup .section .message {
+        font-size: 16.15px; } }
+    @media only screen and (max-width: 480px) {
+      .dashboard-popup .section .message {
+        font-size: 15.3px; } }
   .dashboard-popup .section .optional {
     color: #cfcfcf;
     text-transform: uppercase;
@@ -4445,6 +4492,12 @@ SOCIAL
     padding-top: 20px;
     padding-bottom: 16px;
     font-size: 23px; }
+    @media only screen and (min-width: 481px) and (max-width: 768px) {
+      .dashboard-popup .section .select, .dashboard-popup .section input, .dashboard-popup .section input[placeholder] {
+        font-size: 21.85px; } }
+    @media only screen and (max-width: 480px) {
+      .dashboard-popup .section .select, .dashboard-popup .section input, .dashboard-popup .section input[placeholder] {
+        font-size: 20.7px; } }
   .dashboard-popup .section .large {
     width: 465px;
     margin-right: 25px; }
@@ -4511,6 +4564,12 @@ SOCIAL
         -webkit-box-orient: vertical;
         overflow: hidden;
         -webkit-line-clamp: 6; }
+        @media only screen and (min-width: 481px) and (max-width: 768px) {
+          .dashboard-popup .section .job-phase .phase .description {
+            font-size: 14.25px; } }
+        @media only screen and (max-width: 480px) {
+          .dashboard-popup .section .job-phase .phase .description {
+            font-size: 13.5px; } }
     .dashboard-popup .section .job-phase .left {
       margin-right: 2.2%; }
     .dashboard-popup .section .job-phase .before-last {
@@ -4558,7 +4617,10 @@ SOCIAL
         -webkit-box-orient: vertical;
         overflow: hidden;
         -webkit-line-clamp: 4; }
-        @media only screen and (max-width: 768px) {
+        @media only screen and (min-width: 481px) and (max-width: 768px) {
+          .dashboard-popup .section .job-occupation .element-correction .correction .mess, .dashboard-popup .section .school-name .element-correction .correction .mess {
+            font-size: 16.15px; } }
+        @media only screen and (max-width: 480px) {
           .dashboard-popup .section .job-occupation .element-correction .correction .mess, .dashboard-popup .section .school-name .element-correction .correction .mess {
             font-size: 15.3px; } }
       .dashboard-popup .section .job-occupation .element-correction .correction .wrong, .dashboard-popup .section .school-name .element-correction .correction .wrong {
@@ -4571,7 +4633,10 @@ SOCIAL
     padding-top: 35px;
     font-size: 47px;
     border-bottom: 8px solid #e8e8e8; }
-    @media only screen and (max-width: 768px) {
+    @media only screen and (min-width: 481px) and (max-width: 768px) {
+      .dashboard-popup .section .selectable-title {
+        font-size: 44.65px; } }
+    @media only screen and (max-width: 480px) {
       .dashboard-popup .section .selectable-title {
         font-size: 42.3px; } }
     .dashboard-popup .section .selectable-title .selectable-button {
@@ -4603,7 +4668,10 @@ SOCIAL
       padding-right: 3.5%;
       width: 33.3%;
       font-size: 19px; }
-      @media only screen and (max-width: 768px) {
+      @media only screen and (min-width: 481px) and (max-width: 768px) {
+        .dashboard-popup .section .selectable-content .check-box-1 {
+          font-size: 18.05px; } }
+      @media only screen and (max-width: 480px) {
         .dashboard-popup .section .selectable-content .check-box-1 {
           font-size: 17.1px; } }
   .dashboard-popup .section .goals .medium {
@@ -4621,7 +4689,10 @@ SOCIAL
   .dashboard-popup .section .user-info .explanation {
     width: 59%;
     font-size: 27px; }
-    @media only screen and (max-width: 768px) {
+    @media only screen and (min-width: 481px) and (max-width: 768px) {
+      .dashboard-popup .section .user-info .explanation {
+        font-size: 25.65px; } }
+    @media only screen and (max-width: 480px) {
       .dashboard-popup .section .user-info .explanation {
         font-size: 24.3px; } }
     .dashboard-popup .section .user-info .explanation .presentation {
@@ -4633,7 +4704,10 @@ SOCIAL
     box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.2);
     -webkit-box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.2);
     padding: 25px 30px; }
-    @media only screen and (max-width: 768px) {
+    @media only screen and (min-width: 481px) and (max-width: 768px) {
+      .dashboard-popup .section .user-info .info {
+        font-size: 20.9px; } }
+    @media only screen and (max-width: 480px) {
       .dashboard-popup .section .user-info .info {
         font-size: 19.8px; } }
     .dashboard-popup .section .user-info .info .strength {
@@ -5136,23 +5210,44 @@ Dashboard
     position: relative;
     margin-top: 60px;
     margin-bottom: 25px; }
+    @media only screen and (max-width: 768px) {
+      .dashboard .resume {
+        margin-top: 30px;
+        margin-bottom: 15px; } }
     .dashboard .resume > .left, .dashboard .resume > .right {
       position: relative;
       height: 350px;
       padding: 45px 30px;
       width: 33.31%; }
+      @media only screen and (max-width: 768px) {
+        .dashboard .resume > .left, .dashboard .resume > .right {
+          padding: 20px;
+          width: 100%;
+          height: auto;
+          border-bottom: 1px solid #cfcfcf; } }
     .dashboard .resume > .left {
       border-right: 1px solid #cfcfcf; }
+      @media only screen and (max-width: 768px) {
+        .dashboard .resume > .left {
+          border-right: none; } }
     .dashboard .resume .person {
       text-align: center; }
       .dashboard .resume .person .icon-pencil {
         position: absolute;
         top: 45px;
         left: 30px; }
+        @media only screen and (max-width: 768px) {
+          .dashboard .resume .person .icon-pencil {
+            top: 20px;
+            left: 20px; } }
       .dashboard .resume .person .edit-name {
         position: absolute;
         top: 247px;
         left: 30px; }
+        @media only screen and (max-width: 768px) {
+          .dashboard .resume .person .edit-name {
+            top: 223px;
+            left: 20px; } }
       .dashboard .resume .person .picture {
         width: 175px;
         height: 175px;
@@ -5164,20 +5259,54 @@ Dashboard
         margin-bottom: 20px; }
       .dashboard .resume .person .name {
         font-size: 35px; }
+        @media only screen and (min-width: 481px) and (max-width: 768px) {
+          .dashboard .resume .person .name {
+            font-size: 33.25px; } }
+        @media only screen and (max-width: 480px) {
+          .dashboard .resume .person .name {
+            font-size: 31.5px; } }
       .dashboard .resume .person .mail {
         color: #9d9d9d;
         font-size: 20px; }
+        @media only screen and (min-width: 481px) and (max-width: 768px) {
+          .dashboard .resume .person .mail {
+            font-size: 19px; } }
+        @media only screen and (max-width: 480px) {
+          .dashboard .resume .person .mail {
+            font-size: 18px; } }
     .dashboard .resume .presentation {
       padding-top: 30px;
       padding-bottom: 0px;
       font-size: 20px;
       line-height: 20px; }
+      @media only screen and (min-width: 481px) and (max-width: 768px) {
+        .dashboard .resume .presentation {
+          font-size: 19px; } }
+      @media only screen and (max-width: 480px) {
+        .dashboard .resume .presentation {
+          font-size: 18px; } }
+      @media only screen and (max-width: 768px) {
+        .dashboard .resume .presentation {
+          padding-top: 20px;
+          padding-bottom: 15px; } }
       .dashboard .resume .presentation table tr {
         height: 74px; }
         .dashboard .resume .presentation table tr .logo {
           margin: 0px 15px; }
+        @media only screen and (max-width: 768px) {
+          .dashboard .resume .presentation table tr {
+            height: 59.2px; } }
+      @media only screen and (max-width: 768px) {
+        .dashboard .resume .presentation table .icon-pencil {
+          margin-top: 3px; } }
     .dashboard .resume .job-phase {
       font-size: 20px; }
+      @media only screen and (min-width: 481px) and (max-width: 768px) {
+        .dashboard .resume .job-phase {
+          font-size: 19px; } }
+      @media only screen and (max-width: 480px) {
+        .dashboard .resume .job-phase {
+          font-size: 18px; } }
       .dashboard .resume .job-phase .title {
         margin-bottom: 10px; }
         .dashboard .resume .job-phase .title .txt {
@@ -5196,11 +5325,18 @@ Dashboard
           top: 0px; }
       .dashboard .resume .job-phase .phase-content .phase {
         margin-bottom: 13px; }
+        @media only screen and (max-width: 768px) {
+          .dashboard .resume .job-phase .phase-content .phase {
+            margin-bottom: 0px; } }
         .dashboard .resume .job-phase .phase-content .phase i {
           position: relative;
           top: auto;
           right: auto;
           margin-right: 15px; }
+          @media only screen and (max-width: 768px) {
+            .dashboard .resume .job-phase .phase-content .phase i {
+              margin-right: 8px;
+              top: 5px; } }
         .dashboard .resume .job-phase .phase-content .phase > span {
           line-height: 40px;
           position: relative;
@@ -5216,123 +5352,210 @@ Dashboard
     position: relative;
     padding-left: 10px;
     padding-right: 40px; }
-  .dashboard .content .col-left, .dashboard .content .col-right {
-    width: 370px; }
-  .dashboard .content .col-left {
-    margin-right: 25px; }
-  .dashboard .content .education, .dashboard .content .work-experience, .dashboard .content .skills, .dashboard .content .technology, .dashboard .content .career-goals {
-    background-color: white;
-    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
-    -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
-    border: none;
-    background: white;
-    margin-bottom: 25px; }
-    .dashboard .content .education .title-section, .dashboard .content .work-experience .title-section, .dashboard .content .skills .title-section, .dashboard .content .technology .title-section, .dashboard .content .career-goals .title-section {
-      font-size: 19px;
-      padding: 22px;
-      padding-bottom: 19px;
-      border-bottom: 1px solid #cfcfcf; }
-      .dashboard .content .education .title-section .title, .dashboard .content .work-experience .title-section .title, .dashboard .content .skills .title-section .title, .dashboard .content .technology .title-section .title, .dashboard .content .career-goals .title-section .title {
-        margin-left: 5px; }
-  .dashboard .content .work-experience-elem, .dashboard .content .education-elem {
-    position: relative;
-    overflow: hidden; }
-  .dashboard .content .skills .content, .dashboard .content .technology .content, .dashboard .content .career-goals .content {
-    padding: 20px; }
-  .dashboard .content .education .content, .dashboard .content .work-experience .content {
-    padding: 20px;
-    padding-bottom: 0px; }
-  .dashboard .content .website, .dashboard .content .period, .dashboard .content .place {
-    font-size: 15px;
-    line-height: 27px; }
-  .dashboard .content .website, .dashboard .content .place {
-    color: #ee7835; }
-  .dashboard .content .period {
-    color: gray; }
-  .dashboard .content .job-title, .dashboard .content .education-elem .name {
-    font-size: 20px;
-    line-height: 30px; }
-  .dashboard .content .detail {
-    margin-left: 52px;
-    width: 75%; }
-  .dashboard .content .timeline {
-    position: absolute;
-    height: 100%; }
-    .dashboard .content .timeline .dashed-bar {
-      width: 0px;
-      margin-left: 17px;
-      height: 90%;
-      border-left: 1px dashed #cfcfcf; }
-  .dashboard .content .work-experience .period {
-    margin-bottom: 3px; }
-  .dashboard .content .work-experience .detail {
-    padding-bottom: 40px; }
-  .dashboard .content .work-experience .website {
-    text-transform: uppercase; }
-  .dashboard .content .work-experience .occupation, .dashboard .content .work-experience .income {
-    text-transform: uppercase;
-    padding-left: 15px;
-    padding-right: 15px; }
-  .dashboard .content .work-experience .occupation {
-    margin-right: 10px; }
-  .dashboard .content .work-experience .income {
-    background: #6bd48a;
-    color: white; }
-  .dashboard .content .education .dashed-bar {
-    margin-left: 16px; }
-  .dashboard .content .education .detail {
-    padding-bottom: 30px; }
-  .dashboard .content .add-elem, .dashboard .content .technology-elem, .dashboard .content .skill, .dashboard .content .occupation, .dashboard .content .income {
-    font-size: 16px;
-    text-align: center;
-    padding-top: 12px;
-    padding-bottom: 8px; }
+    @media only screen and (min-width: 481px) and (max-width: 768px) {
+      .dashboard .job-results .button-edit, .dashboard .saved-content .button-edit {
+        font-size: 13.3px; } }
+    @media only screen and (max-width: 480px) {
+      .dashboard .job-results .button-edit, .dashboard .saved-content .button-edit {
+        font-size: 12.6px; } }
     @media only screen and (max-width: 768px) {
-      .dashboard .content .add-elem, .dashboard .content .technology-elem, .dashboard .content .skill, .dashboard .content .occupation, .dashboard .content .income {
-        font-size: 14.4px; } }
-  .dashboard .content .occupation, .dashboard .content .technology-elem {
-    background-color: #09335b;
-    color: white; }
-  .dashboard .content .add-elem-input {
-    font-size: 16px; }
-    @media only screen and (max-width: 768px) {
-      .dashboard .content .add-elem-input {
-        font-size: 14.4px; } }
-    .dashboard .content .add-elem-input input {
-      padding: 12px;
-      margin: 0px;
+      .dashboard .job-results .button-edit, .dashboard .saved-content .button-edit {
+        padding-top: 10px;
+        padding-bottom: 4px; } }
+  .dashboard .content {
+    /*
+    EDUCATION
+    */
+    /*
+    TECHNOLOGY+SKILLS
+    */ }
+    .dashboard .content .col-left, .dashboard .content .col-right {
+      width: 370px; }
+      @media only screen and (max-width: 768px) {
+        .dashboard .content .col-left, .dashboard .content .col-right {
+          width: 100%; } }
+    .dashboard .content .col-left {
+      margin-right: 25px; }
+      @media only screen and (max-width: 768px) {
+        .dashboard .content .col-left {
+          margin-right: 0px; } }
+    .dashboard .content .education, .dashboard .content .work-experience, .dashboard .content .skills, .dashboard .content .technology, .dashboard .content .career-goals {
+      background-color: white;
+      box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+      -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+      border: none;
+      background: white;
+      margin-bottom: 25px; }
+      @media only screen and (max-width: 768px) {
+        .dashboard .content .education, .dashboard .content .work-experience, .dashboard .content .skills, .dashboard .content .technology, .dashboard .content .career-goals {
+          margin-bottom: 15px; } }
+      .dashboard .content .education .title-section, .dashboard .content .work-experience .title-section, .dashboard .content .skills .title-section, .dashboard .content .technology .title-section, .dashboard .content .career-goals .title-section {
+        font-size: 20px;
+        padding: 22px;
+        padding-bottom: 19px;
+        border-bottom: 1px solid #cfcfcf; }
+        @media only screen and (min-width: 481px) and (max-width: 768px) {
+          .dashboard .content .education .title-section, .dashboard .content .work-experience .title-section, .dashboard .content .skills .title-section, .dashboard .content .technology .title-section, .dashboard .content .career-goals .title-section {
+            font-size: 19px; } }
+        @media only screen and (max-width: 480px) {
+          .dashboard .content .education .title-section, .dashboard .content .work-experience .title-section, .dashboard .content .skills .title-section, .dashboard .content .technology .title-section, .dashboard .content .career-goals .title-section {
+            font-size: 18px; } }
+        @media only screen and (max-width: 768px) {
+          .dashboard .content .education .title-section, .dashboard .content .work-experience .title-section, .dashboard .content .skills .title-section, .dashboard .content .technology .title-section, .dashboard .content .career-goals .title-section {
+            padding: 17px;
+            padding-bottom: 14px; } }
+        .dashboard .content .education .title-section .title, .dashboard .content .work-experience .title-section .title, .dashboard .content .skills .title-section .title, .dashboard .content .technology .title-section .title, .dashboard .content .career-goals .title-section .title {
+          margin-left: 5px; }
+    .dashboard .content .work-experience-elem, .dashboard .content .education-elem {
+      position: relative;
+      overflow: hidden; }
+    .dashboard .content .skills .content, .dashboard .content .technology .content, .dashboard .content .career-goals .content {
+      padding: 20px; }
+    .dashboard .content .education .content, .dashboard .content .work-experience .content {
+      padding: 20px;
+      padding-bottom: 0px; }
+    .dashboard .content .website, .dashboard .content .period, .dashboard .content .place {
+      font-size: 15px;
+      line-height: 27px; }
+      @media only screen and (min-width: 481px) and (max-width: 768px) {
+        .dashboard .content .website, .dashboard .content .period, .dashboard .content .place {
+          font-size: 14.25px; } }
+      @media only screen and (max-width: 480px) {
+        .dashboard .content .website, .dashboard .content .period, .dashboard .content .place {
+          font-size: 13.5px; } }
+    .dashboard .content .website, .dashboard .content .place {
+      color: #ee7835; }
+    .dashboard .content .period {
+      color: gray; }
+    .dashboard .content .job-title, .dashboard .content .education-elem .name {
+      font-size: 20px;
+      line-height: 30px; }
+      @media only screen and (min-width: 481px) and (max-width: 768px) {
+        .dashboard .content .job-title, .dashboard .content .education-elem .name {
+          font-size: 19px; } }
+      @media only screen and (max-width: 480px) {
+        .dashboard .content .job-title, .dashboard .content .education-elem .name {
+          font-size: 18px; } }
+    .dashboard .content .detail {
+      margin-left: 52px;
+      width: 75%; }
+      @media only screen and (max-width: 768px) {
+        .dashboard .content .detail {
+          margin-left: 15%;
+          width: auto; } }
+    .dashboard .content .timeline {
+      position: absolute;
+      height: 100%; }
+      .dashboard .content .timeline .dashed-bar {
+        width: 0px;
+        margin-left: 17px;
+        height: 90%;
+        border-left: 1px dashed #cfcfcf; }
+        @media only screen and (max-width: 768px) {
+          .dashboard .content .timeline .dashed-bar {
+            margin-left: 13px; } }
+    .dashboard .content .work-experience .period {
+      margin-bottom: 3px; }
+    .dashboard .content .work-experience .detail {
+      padding-bottom: 40px; }
+      @media only screen and (max-width: 768px) {
+        .dashboard .content .work-experience .detail {
+          padding-bottom: 25px; } }
+    .dashboard .content .work-experience .website {
+      text-transform: uppercase; }
+    .dashboard .content .work-experience .occupation, .dashboard .content .work-experience .income {
+      text-transform: uppercase;
+      padding-left: 15px;
+      padding-right: 15px; }
+      @media only screen and (max-width: 768px) {
+        .dashboard .content .work-experience .occupation, .dashboard .content .work-experience .income {
+          padding-left: 12px;
+          padding-right: 12px;
+          margin-bottom: 5px; } }
+    .dashboard .content .work-experience .occupation {
+      margin-right: 10px; }
+    .dashboard .content .work-experience .income {
+      background: #6bd48a;
+      color: white; }
+    .dashboard .content .education .dashed-bar {
+      margin-left: 16px; }
+      @media only screen and (max-width: 768px) {
+        .dashboard .content .education .dashed-bar {
+          margin-left: 13px; } }
+    .dashboard .content .education .detail {
+      padding-bottom: 30px; }
+      @media only screen and (max-width: 768px) {
+        .dashboard .content .education .detail {
+          padding-bottom: 25px; } }
+    .dashboard .content .add-elem, .dashboard .content .technology-elem, .dashboard .content .skill, .dashboard .content .occupation, .dashboard .content .income {
+      font-size: 16px;
+      text-align: center;
       padding-top: 12px;
-      padding-bottom: 8px;
+      padding-bottom: 8px; }
+      @media only screen and (min-width: 481px) and (max-width: 768px) {
+        .dashboard .content .add-elem, .dashboard .content .technology-elem, .dashboard .content .skill, .dashboard .content .occupation, .dashboard .content .income {
+          font-size: 15.2px; } }
+      @media only screen and (max-width: 480px) {
+        .dashboard .content .add-elem, .dashboard .content .technology-elem, .dashboard .content .skill, .dashboard .content .occupation, .dashboard .content .income {
+          font-size: 14.4px; } }
+    .dashboard .content .occupation, .dashboard .content .technology-elem {
+      background-color: #09335b;
+      color: white; }
+    .dashboard .content .add-elem-input {
+      font-size: 16px; }
+      @media only screen and (min-width: 481px) and (max-width: 768px) {
+        .dashboard .content .add-elem-input {
+          font-size: 15.2px; } }
+      @media only screen and (max-width: 480px) {
+        .dashboard .content .add-elem-input {
+          font-size: 14.4px; } }
+      .dashboard .content .add-elem-input input {
+        padding: 12px;
+        margin: 0px;
+        padding-top: 12px;
+        padding-bottom: 8px;
+        background: #ededed;
+        border: 1px dashed #bebebe; }
+    .dashboard .content .add-elem {
       background: #ededed;
       border: 1px dashed #bebebe; }
-  .dashboard .content .add-elem {
-    background: #ededed;
-    border: 1px dashed #bebebe; }
-  .dashboard .content .skills .left {
-    margin-right: 26px; }
-  .dashboard .content .skills .add-elem, .dashboard .content .skills .add-elem-input, .dashboard .content .skills .skill {
-    width: 46%; }
-  .dashboard .content .skills .add-elem-input {
-    float: left; }
-  .dashboard .content .skills .add-elem {
-    margin: 0; }
-  .dashboard .content .skills .skill {
-    color: white;
-    margin-bottom: 20px;
-    background: #5c1a47; }
-  .dashboard .content .technology .add-elem, .dashboard .content .technology .add-elem-input input, .dashboard .content .technology .technology-elem {
-    width: 100%; }
-  .dashboard .content .technology .technology-elem {
-    padding-top: 12px;
-    padding-bottom: 8px;
-    margin-bottom: 20px; }
-  .dashboard .content .career-goals {
-    font-size: 19px; }
-    .dashboard .content .career-goals .content .goal {
-      margin-top: 31px;
-      width: 80%; }
-    .dashboard .content .career-goals .content .first {
-      margin-top: 0px; }
+    .dashboard .content .skills .left {
+      margin-right: 26px; }
+      @media only screen and (max-width: 768px) {
+        .dashboard .content .skills .left {
+          margin-right: 8%; } }
+    .dashboard .content .skills .add-elem, .dashboard .content .skills .add-elem-input, .dashboard .content .skills .skill {
+      width: 46%; }
+    .dashboard .content .skills .add-elem-input {
+      float: left; }
+    .dashboard .content .skills .add-elem {
+      margin: 0; }
+    .dashboard .content .skills .skill {
+      color: white;
+      margin-bottom: 20px;
+      background: #5c1a47; }
+    .dashboard .content .technology .add-elem, .dashboard .content .technology .add-elem-input input, .dashboard .content .technology .technology-elem {
+      width: 100%; }
+    .dashboard .content .technology .technology-elem {
+      padding-top: 12px;
+      padding-bottom: 8px;
+      margin-bottom: 20px; }
+    .dashboard .content .career-goals {
+      font-size: 19px; }
+      @media only screen and (min-width: 481px) and (max-width: 768px) {
+        .dashboard .content .career-goals {
+          font-size: 18.05px; } }
+      @media only screen and (max-width: 480px) {
+        .dashboard .content .career-goals {
+          font-size: 17.1px; } }
+      .dashboard .content .career-goals .content .goal {
+        margin-top: 31px;
+        width: 80%; }
+        @media only screen and (max-width: 768px) {
+          .dashboard .content .career-goals .content .goal {
+            margin-top: 20px; } }
+      .dashboard .content .career-goals .content .first {
+        margin-top: 0px; }
 
 .saved-content-page .saved-content {
   margin-top: 65px; }

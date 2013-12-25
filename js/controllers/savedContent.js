@@ -1,4 +1,4 @@
-function SavedContentCtr($scope, $http,register) {
+function SavedContentCtr($scope, $http,register,pagination) {
     /*
     Saved Content
     */
@@ -24,11 +24,11 @@ function SavedContentCtr($scope, $http,register) {
         $scope.loadSaved();
         $scope.page="dashboard";
         $scope.paths=[{
-                "txt":" Dashboard",
+                "txt":"Dashboard /",
                 "color":"black"
             },
             {
-                "txt":" Saved Content",
+                "txt":"Saved Content",
                 "color":"black"
             }]
         //Init eventual effects

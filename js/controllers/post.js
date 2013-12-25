@@ -8,11 +8,11 @@ function PostCtr($scope,$http,$routeParams,register){
             postPretreatment(data,"big-");
             $scope.post=data;
             $scope.paths=[{
-                "txt":" Advice & Resource / ",
+                "txt":"Advice & Resource /",
                 "color":"black"
             },
             {
-                "txt":" "+$scope.post.Categories[0].Name,
+                "txt":$scope.post.Categories[0].Name,
                 "color":"grey"
             }]
 	   });	

@@ -197,7 +197,7 @@ function HomePageCtr($scope, $http,register) {
         $scope.weeks=[]; 
         checkUserInfo($scope,$http);
         $scope.paths=[{
-            "txt":" Advice & Resources",
+            "txt":"Advice & Resources",
             "color":"black"
         }]
         $scope.load('data/json/posts.json');

@@ -917,43 +917,27 @@ JOB PHASES
 	}
 }
 .icon-search-orange-big{
-    background-position:-426px -370px;
-    height:40px;
-    width:40px;
+    @include dimensionPosition(-426px, -370px, 40px, 40px, 1.0);
     @media only screen and (max-width: 768px){
-	   background-position: -213px -185px;
-       height:20px;
-       width:20px;
+	   @include dimensionPosition(-426px, -370px, 40px, 40px, 0.7);
 	}
 }
 .icon-check-red-big{
-    background-position:-473px -370px;
-    height:40px;
-    width:40px;
+    @include dimensionPosition(-473px, -370px, 40px, 40px, 1.0);
     @media only screen and (max-width: 768px){
-	   background-position: -236.5px -185px;
-       height:20px;
-       width:20px;
+        @include dimensionPosition(-473px, -370px, 40px, 40px, 0.7);
 	}
 }
 .icon-twin-blue-big{
-    background-position:-520px -370px;
-    height:40px;
-    width:40px;
+    @include dimensionPosition(-520px, -370px, 40px, 40px, 1.0);
     @media only screen and (max-width: 768px){
-	   background-position: -260px -185px;
-       height:20px;
-       width:20px;
+        @include dimensionPosition(-520px, -370px, 40px, 40px, 0.7);
 	}
 }
 .icon-suitcase-green-big{
-    background-position:-566px -370px;
-    height:40px;
-    width:40px;
+    @include dimensionPosition(-566px, -370px, 40px, 40px, 1.0);
     @media only screen and (max-width: 768px){
-	   background-position: -283px -185px;
-       height:20px;
-       width:20px;
+        @include dimensionPosition(-566px, -370px, 40px, 40px, 0.7);
 	}
 }
 .icon-cursor-red{
@@ -1173,50 +1157,34 @@ OTHER
 	}
 }
 .icon-suitcase-red{
-    background-position:-190px -415px;
-    height:43px;
-    width:43px;
+    @include dimensionPosition(-190px, -415px, 43px, 43px, 1.0);
     @media only screen and (max-width: 768px){
-	   background-position: -95px -207.5px;
-       height:21x;
-       width:22px;
+	   @include dimensionPosition(-190px, -415px, 43px, 43px, 0.7);
 	}
 }
 $rapp:0.75;
 .icon-suitcase-red-medium{
     @include dimensionPosition(-190px, -415px, 43px, 43px, 0.75);
     @media only screen and (max-width: 768px){
-	   @include dimensionPosition(-190px, -415px, 43px, 43px, 0.5);
+	   @include dimensionPosition(-190px, -415px, 43px, 43px, 0.6);
 	}
 }
 .icon-building{
-    background-position:-236px -415px;
-    height:43px;
-    width:43px;
+    @include dimensionPosition(-236px, -415px, 43px, 43px,1.0);
     @media only screen and (max-width: 768px){
-	   background-position: -118px -207.5px;
-       height:22x;
-       width:22px;
+        @include dimensionPosition(-236px, -415px, 43px, 43px,0.7);
 	}
 }
 .icon-location{
-    background-position:-283px -415px;
-    height:43px;
-    width:43px;
+    @include dimensionPosition(-283px, -415px, 43px, 43px,1.0);
     @media only screen and (max-width: 768px){
-	   background-position: -141.5px -207.5px;
-       height:22x;
-       width:22px;
+	   @include dimensionPosition(-283px, -415px, 43px, 43px,0.7);
 	}
 }
 .icon-dollars{
-    background-position:-330px -415px;
-    height:43px;
-    width:43px;
+    @include dimensionPosition(-330px, -415px, 43px, 43px,1.0);
     @media only screen and (max-width: 768px){
-	   background-position: -165px -207.5px;
-       height:23x;
-       width:22px;
+	   @include dimensionPosition(-330px, -415px, 43px, 43px,0.7);
 	}
 }
 .icon-graduation{
@@ -1314,13 +1282,9 @@ $rapp:0.75;
 	}
 }
 .icon-bar-cursor{
-    background-position:-156px -545px;
-    height:192px;
-    width:5px;
+    @include dimensionPosition(-156px,-545px,192px,5px,1);
     @media only screen and (max-width: 768px){
-	   background-position: -77.5px -272.5px;
-       height:96px;
-       width:3px;
+        @include dimensionPosition(-156px,-545px,192px,5px,0.74);
 	}
 }
 .icon-new-resume-button{
@@ -1474,43 +1438,12 @@ TOOLS
 	}
 }
 /*
-ICON SAVED
+ICON FIRST CONNECT
 */
-
 .icon-welcome{
     @include dimensionPosition(-53px,-1465px,203px,235px,0.8);
     @media only screen and (max-width: 768px){
         @include dimensionPosition(-53px,-1498px,203px,235px,0.4);
-	}
-}
-.icon-article-saved{
-    @include dimensionPosition(-1008px,-583px,126px,102px,1);
-    @media only screen and (max-width: 768px){
-        @include dimensionPosition(-1008px,-583px,126px,102px,0.4);
-	}
-}
-.icon-article-saved-big{
-    @include dimensionPosition(-1008px,-583px,126px,102px,0.8);
-    @media only screen and (max-width: 768px){
-        @include dimensionPosition(-1008px,-583px,126px,102px,0.4);
-	}
-}
-.icon-welcome-article-saved-big{
-    @include dimensionPosition(-324px,-1498px,203px,186px,0.8);
-    @media only screen and (max-width: 768px){
-        @include dimensionPosition(-324px,-1498px,203px,186px,0.4);
-	}
-}
-.icon-video-saved{
-    @include dimensionPosition(-1240px,-583px,126px,101px,1);
-    @media only screen and (max-width: 768px){
-        @include dimensionPosition(-1240px,-583px,126px,101px,0.4);
-	}
-}
-.icon-video-saved-big{
-    @include dimensionPosition(-1240px,-583px,126px,101px,0.8);
-    @media only screen and (max-width: 768px){
-        @include dimensionPosition(-1240px,-583px,126px,101px,0.4);
 	}
 }
 .icon-welcome-video-saved-big{
@@ -1519,10 +1452,10 @@ ICON SAVED
         @include dimensionPosition(-748px,-1498px,203px,185px,0.4);
 	}
 }
-.icon-image-saved{
-    @include dimensionPosition(-1356px,-583px,126px,101px,1);
+.icon-welcome-article-saved-big{
+    @include dimensionPosition(-324px,-1498px,203px,186px,0.8);
     @media only screen and (max-width: 768px){
-        @include dimensionPosition(-1356px,-583px,126px,101px,0.4);
+        @include dimensionPosition(-324px,-1498px,203px,186px,0.4);
 	}
 }
 .icon-welcome-image-saved-big{
@@ -1531,55 +1464,88 @@ ICON SAVED
         @include dimensionPosition(-536px,-1498px,203px,185px,0.4);
 	}
 }
-.icon-image-saved-big{
+/*
+ICON SAVED
+*/
+//for saved content,...
+.icon-article-saved{
+    @include dimensionPosition(-1008px,-583px,126px,102px,1);
+    @media only screen and (max-width: 768px){
+        @include dimensionPosition(-1008px,-583px,126px,102px,0.7);
+	}
+}
+.icon-article-saved-big{
+    @include dimensionPosition(-1008px,-583px,126px,102px,1.7);
+    @media only screen and (max-width: 768px){
+        @include dimensionPosition(-1008px,-583px,126px,102px,1);
+	}
+}
+.icon-video-saved{
+    @include dimensionPosition(-1240px,-583px,126px,101px,1);
+    @media only screen and (max-width: 768px){
+        @include dimensionPosition(-1240px,-583px,126px,101px,0.7);
+	}
+}
+.icon-video-saved-big{
     @include dimensionPosition(-1240px,-583px,126px,101px,1.7);
+    @media only screen and (max-width: 768px){
+        @include dimensionPosition(-1240px,-583px,126px,101px,1);
+	}
+}
+.icon-image-saved{
+    @include dimensionPosition(-1356px,-583px,126px,101px,1);
+    @media only screen and (max-width: 768px){
+        @include dimensionPosition(-1356px,-583px,126px,101px,0.7);
+	}
+}
+.icon-image-saved-big{
+    @include dimensionPosition(-1356px,-583px,126px,101px,1.7);
     @media only screen and (max-width: 768px){
         @include dimensionPosition(-1356px,-583px,126px,101px,1);
 	}
 }
 .icon-resumeHero-saved{
-	@include dimensionPosition(-335px,-1040px,345px,269px,1);
+	@include dimensionPosition(-1125px,-589px,120px,105px,1);
     @media only screen and (max-width: 768px){
-	   @include dimensionPosition(-335px,-1040px,345px,269px,0.4);
+	   @include dimensionPosition(-1125px,-589px,120px,105px,0.7);
 	}
 }
 .icon-locallygrown-saved{
-	@include dimensionPosition(-935px,-1040px,345px,269px,1);
+	@include dimensionPosition(-893px,-744px,115px,115px,1);
     @media only screen and (max-width: 768px){
-	   @include dimensionPosition(-935px,-1040px,345px,269px,0.4);
+	   @include dimensionPosition(-893px,-744px,115px,115px,0.7);
 	}
 }
 .icon-careerscape-saved{
-    @include dimensionPosition(-34px,-1040px,345px,269px,1);
+    @include dimensionPosition(-1045px,-740px,120px,115px,1);
     @media only screen and (max-width: 768px){
-        @include dimensionPosition(-34px,-1040px,345px,269px,0.4);
+        @include dimensionPosition(-1045px,-740px,120px,115px,0.7);
 	}
 }
 /*
 ICON PRESENTATION (ONLY FOUR)
 */
-
-.icon-locallyGrown-presentation{
-    @include dimensionPosition(-893px,-743px,117px,116px,0.6);
+.icon-resumeHero-presentation{
+	@include dimensionPosition(-335px,-1040px,345px,269px,1);
     @media only screen and (max-width: 768px){
-        @include dimensionPosition(-893px,-743px,117px,116px,0.4);
+	   @include dimensionPosition(-335px,-1040px,345px,269px,0.4);
 	}
 }
-.icon-careerScape-presentation{
-    @include dimensionPosition(-1045px,-739px,125px,114px,0.6);
+.icon-locallygrown-presentation{
+	@include dimensionPosition(-935px,-1040px,345px,269px,1);
     @media only screen and (max-width: 768px){
-        @include dimensionPosition(-1045px,-739px,125px,114px,0.4);
+	   @include dimensionPosition(-935px,-1040px,345px,269px,0.4);
+	}
+}
+.icon-careerscape-presentation{
+    @include dimensionPosition(-34px,-1040px,345px,269px,1);
+    @media only screen and (max-width: 768px){
+        @include dimensionPosition(-34px,-1040px,345px,269px,0.4);
 	}
 }
 .icon-article-presentation{
     @include dimensionPosition(-1008px,-583px,128px,102px,0.6);
     @media only screen and (max-width: 768px){
         @include dimensionPosition(-1008px,-583px,128px,102px,0.4);
-	}
-}
-.icon-resumePro-presentation{
-    @include dimensionPosition(-1125px,-588px,119px,101px,0.64);
-    @media only screen and (max-width: 768px){
-        @include dimensionPosition(-1125px,-588px,119px,101px,0.44);
 	}
 }

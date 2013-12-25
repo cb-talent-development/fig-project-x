@@ -6,7 +6,7 @@ function ToolDashBoardCtr($scope, $http,register) {
         init($scope,register);
         checkUserInfo($scope,$http);
         $scope.paths=[{
-            "txt":" Career Tools",
+            "txt":"Career Tools",
             "color":"black"
         }]
         //Init eventual effects

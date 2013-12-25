@@ -5,19 +5,19 @@
     "Date":"June 12th"
 },
  {
-    "Type":"careerScape",
+    "Type":"careerscape",
     "AssetName":"Asset Name",
     "AssetType":"Asset Type",
     "Date":"June 12th"
 },
  {
-    "Type":"locallyGrown",
+    "Type":"locallygrown",
     "AssetName":"Asset Name",
     "AssetType":"Asset Type",
     "Date":"June 12th"
 },
  {
-    "Type":"jobinality",
+    "Type":"resumeHero",
     "AssetName":"Asset Name",
     "AssetType":"Asset Type",
     "Date":"June 12th"
@@ -48,6 +48,12 @@
 },
  {
     "Type":"article",
+    "AssetName":"Asset Name",
+    "AssetType":"Asset Type",
+    "Date":"June 12th"
+},
+  {
+    "Type":"image",
     "AssetName":"Asset Name",
     "AssetType":"Asset Type",
     "Date":"June 12th"
