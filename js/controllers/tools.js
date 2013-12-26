@@ -42,7 +42,7 @@ function ToolCtr($scope, $http,$routeParams,pagination,register) {
            // Job recommandation
             $scope.jobs=data;
             $scope.pageJobs=new pagination();
-            $scope.pageJobs.limit=3;
+            $scope.pageJobs.limit=5;
             $scope.pageJobs.totalElem=data.length;
             $scope.pageJobs.computePages();
 	   });
@@ -165,7 +165,6 @@ function CareerScapeCtr($scope, $http){
         window.context = canvas.getContext('2d');
         //launch the construction
         initCanvas();
-        window.canvasPos=canvas.getBoundingClientRect();
         window.canvasDessinator=new CanvasDessinator(canvas,context);
         window.onresize=resizeCanvas;
         //global variables
@@ -189,7 +188,7 @@ function CareerScapeCtr($scope, $http){
         //load data and launch animation when loaded
         loadData("data/careerscape.json"); 
         //$scope.$parent.loadJob($scope);
-        checkLoaded();    
+        checkLoaded(); 
     }
     $scope.init();
 }
@@ -206,7 +205,7 @@ function LocallyGrownCtr($scope, $http){
                         style: style,
                         onEachFeature: onFeature
         }).addTo(map);
-        
+        map.scrollWheelZoom.removeHooks();
         /*if mode counties
         loadData("data/counties2.json");//*/
 

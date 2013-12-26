@@ -226,9 +226,9 @@ Custom input
 .custom-input-file:hover {
   cursor: pointer; }
 
-.toggleMenu, .toggleMenuSimple, .toggleMenuLarge {
+.toggleMenu, .toggleMenuSimple, .toggleMenuLarge, .occupations {
   position: relative; }
-  .toggleMenu .subMenu, .toggleMenuSimple .subMenu, .toggleMenuLarge .subMenu {
+  .toggleMenu .subMenu, .toggleMenuSimple .subMenu, .toggleMenuLarge .subMenu, .occupations .subMenu {
     position: absolute;
     left: 0px;
     width: 100%;
@@ -253,8 +253,14 @@ ICON-ARROW
   right: 18px; }
 .link .icon-bigarrow-right-black, .link .icon-bigarrow-right-white {
   margin-top: -8.5px; }
+  @media only screen and (max-width: 768px) {
+    .link .icon-bigarrow-right-black, .link .icon-bigarrow-right-white {
+      margin-top: -6px; } }
 .link .icon-bigarrow-bottom-grey, .link .icon-bigarrow-bottom-orange {
   margin-top: -5.5px; }
+  @media only screen and (max-width: 768px) {
+    .link .icon-bigarrow-bottom-grey, .link .icon-bigarrow-bottom-orange {
+      margin-top: -4px; } }
 @media only screen and (max-width: 768px) {
   .link i, .link b {
     right: 10px; } }
@@ -400,14 +406,34 @@ Font handler
 .home-container, .related .related-container, .navbar, .page-header h1, .page-header h2 {
   font-family: HelveticaLightCondensed, sans-serif; }
 
+.home-main-container {
+  width: 1170px;
+  display: block;
+  margin: auto;
+  	/*@media only screen and (max-width: 1200px) and (min-width: 980px){
+          width:975px;
+      }
+  	@media only screen and (max-width: 979px) and (min-width: 768px){
+          width:765px;
+      }*/ }
+  @media only screen and (max-width: 768px) {
+    .home-main-container {
+      width: 95%; } }
+  @media only screen and (max-width: 768px) {
+    .home-main-container {
+      width: 100%; } }
+
 .home-container, .related .related-container {
   width: 1200px;
   margin: auto;
-  margin-top: 60px; }
+  margin-top: 60px;
+  position: relative;
+  left: -15px; }
   @media only screen and (max-width: 768px) {
     .home-container, .related .related-container {
       width: 310px;
-      margin-top: 25px; } }
+      margin-top: 15px;
+      left: 0px; } }
 
 /*
 Security
@@ -421,9 +447,20 @@ HOMEPAGE SCROLLABLE CONTENT
 */
 .first-connect {
   width: 1170px;
+  display: block;
+  margin: auto;
+  	/*@media only screen and (max-width: 1200px) and (min-width: 980px){
+          width:975px;
+      }
+  	@media only screen and (max-width: 979px) and (min-width: 768px){
+          width:765px;
+      }*/
   margin: auto;
   text-align: center;
   position: relative; }
+  @media only screen and (max-width: 768px) {
+    .first-connect {
+      width: 95%; } }
   @media only screen and (max-width: 768px) {
     .first-connect {
       width: 100%; } }
@@ -480,7 +517,7 @@ HOMEPAGE SCROLLABLE CONTENT
       margin-top: 60px; }
       @media only screen and (max-width: 768px) {
         .first-connect .element2 .box, .first-connect .element2 .box2, .first-connect .element3 .box, .first-connect .element3 .box2, .first-connect .element4 .box, .first-connect .element4 .box2 {
-          margin: 20px;
+          margin: 15px;
           height: auto; } }
   @media only screen and (max-width: 768px) {
     .first-connect .element2 .box {
@@ -504,24 +541,24 @@ HOMEPAGE SCROLLABLE CONTENT
         display: none; } }
   @media only screen and (max-width: 768px) {
     .first-connect .element3 .box, .first-connect .element4 .box {
-      min-width: 100px;
-      margin-left: 3%;
-      margin-right: 3%;
+      min-width: 110px;
+      margin-left: 2%;
+      margin-right: 2%;
       height: 120px; } }
   .first-connect .element3 i, .first-connect .element4 i {
     margin-top: 25px;
     margin-left: 35px; }
-  .first-connect .element3 i.icon-locallygrown-saved, .first-connect .element4 i.icon-locallygrown-saved {
+  .first-connect .element3 i.icon-locallygrown-presentation, .first-connect .element4 i.icon-locallygrown-presentation {
     margin-left: 20px; }
   @media only screen and (max-width: 768px) {
     .first-connect .element3 i, .first-connect .element4 i {
       position: absolute;
       left: 50%;
       top: 50%;
-      margin-left: -35px;
-      margin-top: -38px; }
-    .first-connect .element3 i.icon-locallygrown-saved, .first-connect .element4 i.icon-locallygrown-saved {
-      margin-left: -39px; } }
+      margin-left: -33px;
+      margin-top: -36px; }
+    .first-connect .element3 i.icon-locallygrown-presentation, .first-connect .element4 i.icon-locallygrown-presentation {
+      margin-left: -40px; } }
   .first-connect .icon-close {
     position: absolute;
     right: 20px;
@@ -643,9 +680,11 @@ Header css
     @media only screen and (max-width: 768px) {
       .page-header .button-signout {
         width: 60%;
+        text-align: left;
         position: relative;
         font-size: 14px !important;
-        margin: 15px auto; } }
+        margin: 15px auto;
+        margin-bottom: 0px; } }
   .page-header #profil-pic {
     height: 100px;
     width: 100px;
@@ -665,6 +704,13 @@ Header css
 /*
 NAVBAR
 */
+.navbar {
+  min-width: 1170px; }
+  @media only screen and (max-width: 768px) {
+    .navbar {
+      min-width: 0px;
+      width: auto; } }
+
 .navbar.hidden-xs {
   background-color: #09335b; }
   .navbar.hidden-xs ul li {
@@ -685,7 +731,7 @@ NAVBAR
       float: right; }
   .navbar.hidden-xs span#menu-button {
     top: 10px;
-    right: 10px;
+    right: 0px;
     padding: 10px; }
   .navbar.hidden-xs span#menu-button:hover {
     background-color: #022745; }
@@ -706,6 +752,9 @@ NAVBAR
       position: absolute;
       top: 15px;
       left: 15px; }
+      @media only screen and (max-width: 768px) {
+        .navbar.visible-xs .br span {
+          left: 2px; } }
   .navbar.visible-xs span#menu-button {
     top: 11px;
     right: 15px;
@@ -732,14 +781,18 @@ NAVBAR
 .navbar {
   margin: 0px;
   z-index: 1000; }
-  .navbar .container {
+  .navbar .main-container {
     position: relative; }
   @media only screen and (min-width: 768px) {
     .navbar {
       height: 60px; } }
+  .navbar .movable:hover {
+    cursor: pointer; }
   .navbar span#menu-button {
     position: absolute;
     border-radius: 5px; }
+  .navbar span#menu-button:hover {
+    cursor: pointer; }
   .navbar ul {
     margin: 0px;
     padding: 0px; }
@@ -1016,11 +1069,21 @@ Width
 Menu with multiple button
 */
 .menu-buttons {
-  padding: 0px 15px;
-  width: 1200px;
+  width: 1170px;
+  display: block;
+  margin: auto;
+  	/*@media only screen and (max-width: 1200px) and (min-width: 980px){
+          width:975px;
+      }
+  	@media only screen and (max-width: 979px) and (min-width: 768px){
+          width:765px;
+      }*/
   margin: auto;
   padding-top: 40px;
   padding-bottom: 40px; }
+  @media only screen and (max-width: 768px) {
+    .menu-buttons {
+      width: 95%; } }
   @media only screen and (max-width: 768px) {
     .menu-buttons {
       width: 300px;
@@ -1099,7 +1162,7 @@ Menu with multiple button
 @media only screen and (max-width: 768px) {
   .page-header {
     padding-top: 15px;
-    padding-bottom: 15px; } }
+    padding-bottom: 9px; } }
 
 @media only screen and (max-width: 768px) {
   .menu-buttons {
@@ -1127,12 +1190,18 @@ PROFILE SUBMENU
   width: 370px;
   left: -143px;
   top: 90px; }
-  @media (max-width: 768px) {
+  @media only screen and (max-width: 768px) {
     .page-header .subMenu {
-      width: 85% !important;
-      left: 7.5% !important;
       top: 160px;
       position: fixed; } }
+  @media only screen and (max-width: 768px) and (min-width: 481px) {
+    .page-header .subMenu {
+      width: 60% !important;
+      left: 20% !important; } }
+  @media only screen and (max-width: 480px) {
+    .page-header .subMenu {
+      width: 85% !important;
+      left: 7.5% !important; } }
   .page-header .subMenu .profile-subMenu {
     background: white;
     box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.3);
@@ -1144,7 +1213,8 @@ PROFILE SUBMENU
       margin: 6px 0px; }
     @media only screen and (max-width: 768px) {
       .page-header .subMenu .profile-subMenu {
-        padding: 18px; } }
+        padding: 15px;
+        padding-bottom: 10px; } }
     .page-header .subMenu .profile-subMenu h2 {
       width: 100%;
       text-align: center;
@@ -1160,13 +1230,19 @@ PROFILE SUBMENU
     .page-header .subMenu .profile-subMenu p {
       width: 100%;
       text-align: center;
-      font-size: 0.46em;
+      font-size: 15px;
       color: #888;
       margin-bottom: 30px;
       font-family: HelveticaLightCondensed, sans-serif; }
+      @media only screen and (min-width: 481px) and (max-width: 768px) {
+        .page-header .subMenu .profile-subMenu p {
+          font-size: 14.25px; } }
+      @media only screen and (max-width: 480px) {
+        .page-header .subMenu .profile-subMenu p {
+          font-size: 13.5px; } }
       @media only screen and (max-width: 768px) {
         .page-header .subMenu .profile-subMenu p {
-          margin-bottom: 0px; } }
+          margin-bottom: 5px; } }
     .page-header .subMenu .profile-subMenu .button, .page-header .subMenu .profile-subMenu .input-button {
       width: 100%; }
     .page-header .subMenu .profile-subMenu .back-grey {
@@ -1188,7 +1264,7 @@ PROFILE SUBMENU
     width: 390px; }
     @media only screen and (max-width: 768px) {
       .page-header .offline .profile-subMenu .border {
-        margin: 20px -20px;
+        margin: 20px -15px;
         width: auto; } }
 
 /*
@@ -3071,28 +3147,53 @@ Load More button
     right: 20px; }
   @media only screen and (max-width: 768px) {
     .load-more {
-      width: 300px; } }
+      width: 300px;
+      margin-top: 15px;
+      margin-bottom: 30px; } }
 
 /*
 Footer css
 */
 .footer {
   background-color: #cccccc; }
-  .footer .container {
+  .footer .main-container {
     margin: auto;
-    padding-top: 80px;
+    padding-top: 70px;
     padding-bottom: 50px; }
-  .footer div.section h4 {
-    margin-bottom: 50px; }
-    .footer div.section h4 mark {
-      background-color: #ffff00; }
-  .footer div.section div.column {
-    width: 50%;
+  .footer div.section {
+    width: 33%;
+    margin-top: 10px;
     float: left; }
-    .footer div.section div.column a {
-      color: #444444;
-      text-decoration: underline;
-      display: block; }
+    @media only screen and (max-width: 768px) {
+      .footer div.section {
+        padding: 0px 8px; } }
+    @media only screen and (max-width: 480px) {
+      .footer div.section {
+        width: 50%; } }
+    .footer div.section h4 {
+      font-size: 17px;
+      margin-bottom: 50px;
+      height: 50px;
+      margin-bottom: 30px; }
+      @media only screen and (max-width: 768px) {
+        .footer div.section h4 {
+          margin-bottom: 20px;
+          font-size: 14px; } }
+      .footer div.section h4 > div {
+        background-color: rgba(255, 248, 51, 0.7);
+        padding: 7px;
+        border-radius: 1px;
+        display: inline-block; }
+    .footer div.section div.column {
+      width: 50%;
+      float: left; }
+      @media only screen and (max-width: 768px) {
+        .footer div.section div.column {
+          width: 100%; } }
+      .footer div.section div.column a {
+        color: #444444;
+        text-decoration: underline;
+        display: block; }
 
 a.transp-link {
   position: absolute;
@@ -3111,6 +3212,9 @@ General social CSS
   vertical-align: top;
   border-radius: 30px;
   margin-right: 12px; }
+  @media only screen and (max-width: 768px) {
+    .social .icon-social {
+      margin: 0px 4px !important; } }
 .social .icon-social:hover {
   cursor: pointer;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
@@ -3178,8 +3282,14 @@ Tools dashboard & tool css
 
 .tools-dashboard .first {
   margin-top: 60px; }
+  @media only screen and (max-width: 768px) {
+    .tools-dashboard .first {
+      margin-top: 30px; } }
 .tools-dashboard .last {
   margin-bottom: 75px !important; }
+  @media only screen and (max-width: 768px) {
+    .tools-dashboard .last {
+      margin-bottom: 30px !important; } }
 .tools-dashboard .tool {
   height: 355px;
   margin-bottom: 30px; }
@@ -3204,34 +3314,68 @@ Tools dashboard & tool css
     width: 30.77%;
     float: left;
     text-align: center; }
+    @media only screen and (max-width: 768px) {
+      .tools-dashboard .tool .left {
+        width: 100%; } }
     .tools-dashboard .tool .left .logo {
       position: absolute;
       top: 25px;
       left: 50%; }
     .tools-dashboard .tool .left .icon-careerscape-small {
       margin-left: -70px; }
+      @media only screen and (max-width: 768px) {
+        .tools-dashboard .tool .left .icon-careerscape-small {
+          margin-left: -66.5px; } }
     .tools-dashboard .tool .left .icon-resumeHero-small {
       margin-left: -73.5px; }
+      @media only screen and (max-width: 768px) {
+        .tools-dashboard .tool .left .icon-resumeHero-small {
+          margin-left: -69.825px; } }
     .tools-dashboard .tool .left .icon-jobinality-small {
       margin-left: -60px; }
+      @media only screen and (max-width: 768px) {
+        .tools-dashboard .tool .left .icon-jobinality-small {
+          margin-left: -57px; } }
     .tools-dashboard .tool .left .icon-localygrown-small {
       margin-left: -79px; }
+      @media only screen and (max-width: 768px) {
+        .tools-dashboard .tool .left .icon-localygrown-small {
+          margin-left: -75.05px; } }
     .tools-dashboard .tool .left .info {
       width: 65%;
       margin: auto;
       margin-top: 200px; }
       .tools-dashboard .tool .left .info .title {
         font-size: 36px; }
+        @media only screen and (min-width: 481px) and (max-width: 768px) {
+          .tools-dashboard .tool .left .info .title {
+            font-size: 34.2px; } }
+        @media only screen and (max-width: 480px) {
+          .tools-dashboard .tool .left .info .title {
+            font-size: 32.4px; } }
       .tools-dashboard .tool .left .info .summary {
-        margin-top: 20px;
-        font-size: 23px; }
+        font-size: 23px;
+        margin-top: 20px; }
+        @media only screen and (min-width: 481px) and (max-width: 768px) {
+          .tools-dashboard .tool .left .info .summary {
+            font-size: 21.85px; } }
+        @media only screen and (max-width: 480px) {
+          .tools-dashboard .tool .left .info .summary {
+            font-size: 20.7px; } }
       .tools-dashboard .tool .left .info .icon-arow-right-light {
         margin-left: 3px;
         margin-top: 2px; }
+      @media only screen and (max-width: 768px) {
+        .tools-dashboard .tool .left .info {
+          margin-top: 175px;
+          width: 68%; } }
   .tools-dashboard .tool .right {
     height: 100%;
     background-color: #9d9d9d;
     width: 69.2%; }
+    @media only screen and (max-width: 768px) {
+      .tools-dashboard .tool .right {
+        display: none; } }
 
 /*
 DIALOG
@@ -3394,6 +3538,12 @@ Tool CSS
         line-height: 108px;
         height: 94px;
         left: 238px; }
+        @media only screen and (min-width: 481px) and (max-width: 768px) {
+          .tool .header-tool .title-social .title {
+            font-size: 35.15px; } }
+        @media only screen and (max-width: 480px) {
+          .tool .header-tool .title-social .title {
+            font-size: 33.3px; } }
     .tool .header-tool .help {
       box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
       -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
@@ -3407,27 +3557,34 @@ Tool CSS
         cursor: pointer; }
     .tool .header-tool .icon-bar-grey {
       margin: 9px; }
-    @media only screen and (max-width: 479px) {
+    @media only screen and (max-width: 768px) {
       .tool .header-tool {
-        width: 300px;
-        height: 300px;
+        width: 100%;
+        height: 280px;
         margin: 0px;
         margin-bottom: 10px;
-        margin-top: 10px; }
+        margin-top: 15px; }
         .tool .header-tool .title-social {
           width: 100%;
           height: 100%; }
+          .tool .header-tool .title-social .icon-arrow-right-big-grey {
+            display: none; }
+          .tool .header-tool .title-social .icon-careerscape-small {
+            margin-left: -70px; }
+          .tool .header-tool .title-social .icon-resumeHero-small {
+            margin-left: -73.5px; }
+          .tool .header-tool .title-social .icon-jobinality-small {
+            margin-left: -60px; }
+          .tool .header-tool .title-social .icon-localygrown-small {
+            margin-left: -79px; }
           .tool .header-tool .title-social .icon-jobinality-small, .tool .header-tool .title-social .icon-resumeHero-small, .tool .header-tool .title-social .icon-localygrown-small, .tool .header-tool .title-social .icon-careerscape-small {
             position: absolute;
             top: 30px;
-            left: 50%;
-            margin-left: -80px; }
+            left: 50%; }
           .tool .header-tool .title-social .title {
-            top: 160px;
-            width: 300px;
+            top: 140px;
+            width: 100%;
             text-align: center;
-            text-transform: capitalize;
-            font-size: 27px;
             line-height: 108px;
             height: 60px;
             left: 0px; }
@@ -3437,11 +3594,23 @@ Tool CSS
             text-align: center;
             clear: both;
             position: absolute;
-            bottom: 0px; }
+            bottom: 20px; }
         .tool .header-tool .icon-bar-grey {
           padding-top: 3px; }
-        .tool .header-tool .icon-question {
+        .tool .header-tool .icon-question-big {
           display: inline-block !important; } }
+          @media only screen and (max-width: 768px) and (max-width: 768px) {
+            .tool .header-tool .title-social .icon-careerscape-small {
+              margin-left: -66.5px; } }
+          @media only screen and (max-width: 768px) and (max-width: 768px) {
+            .tool .header-tool .title-social .icon-resumeHero-small {
+              margin-left: -69.825px; } }
+          @media only screen and (max-width: 768px) and (max-width: 768px) {
+            .tool .header-tool .title-social .icon-jobinality-small {
+              margin-left: -57px; } }
+          @media only screen and (max-width: 768px) and (max-width: 768px) {
+            .tool .header-tool .title-social .icon-localygrown-small {
+              margin-left: -75.05px; } }
   .tool .buttons_zoom {
     position: absolute;
     z-index: 100;
@@ -3453,10 +3622,11 @@ Tool CSS
     width: 100%;
     margin: auto;
     margin-bottom: 30px; }
-    @media only screen and (max-width: 479px) {
+    @media only screen and (max-width: 768px) {
       .tool .selector {
         margin-bottom: 10px; } }
     .tool .selector .input-button {
+      cursor: default;
       padding-top: 21px;
       padding-bottom: 17px;
       padding-left: 15px;
@@ -3466,18 +3636,30 @@ Tool CSS
       font-size: 22px;
       border: none;
       background: none; }
-      @media only screen and (max-width: 479px) {
+      @media only screen and (min-width: 481px) and (max-width: 768px) {
         .tool .selector .input-button {
-          width: 300px;
-          padding-top: 12px;
-          padding-bottom: 10px;
+          font-size: 20.9px; } }
+      @media only screen and (max-width: 480px) {
+        .tool .selector .input-button {
+          font-size: 19.8px; } }
+      @media only screen and (max-width: 768px) {
+        .tool .selector .input-button {
+          width: 100%;
+          padding-top: 13px;
+          padding-bottom: 9px;
           font-size: 18px; } }
     .tool .selector .industries, .tool .selector .occupations {
       padding-top: 21px;
       padding-bottom: 17px;
       font-size: 22px;
       position: relative; }
-      @media only screen and (max-width: 479px) {
+      @media only screen and (min-width: 481px) and (max-width: 768px) {
+        .tool .selector .industries, .tool .selector .occupations {
+          font-size: 20.9px; } }
+      @media only screen and (max-width: 480px) {
+        .tool .selector .industries, .tool .selector .occupations {
+          font-size: 19.8px; } }
+      @media only screen and (max-width: 768px) {
         .tool .selector .industries, .tool .selector .occupations {
           margin-top: 10px;
           padding-top: 12px;
@@ -3490,19 +3672,30 @@ Tool CSS
         top: 32.5px;
         margin-top: -2px;
         position: absolute; }
-        @media only screen and (max-width: 479px) {
+        @media only screen and (max-width: 768px) {
           .tool .selector .industries b, .tool .selector .occupations b {
             top: 22.5px; } }
       .tool .selector .industries .subMenu, .tool .selector .occupations .subMenu {
         left: 0px;
+        max-height: 500px;
         top: 64px;
         font-size: 17px;
-        line-height: 40px;
         color: white !important; }
+        @media only screen and (min-width: 481px) and (max-width: 768px) {
+          .tool .selector .industries .subMenu, .tool .selector .occupations .subMenu {
+            font-size: 16.15px; } }
+        @media only screen and (max-width: 480px) {
+          .tool .selector .industries .subMenu, .tool .selector .occupations .subMenu {
+            font-size: 15.3px; } }
         .tool .selector .industries .subMenu .elem, .tool .selector .occupations .subMenu .elem {
+          padding-top: 14px;
+          padding-bottom: 10px;
           padding-left: 20px; }
         .tool .selector .industries .subMenu .elem:hover, .tool .selector .occupations .subMenu .elem:hover {
           color: rgba(255, 255, 255, 0.8) !important; }
+        @media only screen and (max-width: 768px) {
+          .tool .selector .industries .subMenu, .tool .selector .occupations .subMenu {
+            top: 44px; } }
       .tool .selector .industries .mode-0, .tool .selector .occupations .mode-0 {
         background-color: #082e52; }
       .tool .selector .industries input[type=checkbox], .tool .selector .occupations input[type=checkbox] {
@@ -3517,9 +3710,9 @@ Tool CSS
       width: 23%;
       margin-left: 30px;
       height: 100%; }
-      @media only screen and (max-width: 479px) {
+      @media only screen and (max-width: 768px) {
         .tool .selector .industries {
-          width: 300px;
+          width: 100%;
           margin-left: 0px; }
           .tool .selector .industries .subMenu {
             z-index: 1002; } }
@@ -3529,17 +3722,37 @@ Tool CSS
       float: right;
       width: 48.7%;
       height: 100%; }
-      @media only screen and (max-width: 479px) {
+      .tool .selector .occupations .elem {
+        float: left;
+        width: 50%;
+        padding-left: 0px; }
+        @media only screen and (max-width: 600px) {
+          .tool .selector .occupations .elem {
+            width: 100%; } }
+      .tool .selector .occupations .mode-1 {
+        background-color: #082e52; }
+        @media only screen and (max-width: 550px) {
+          .tool .selector .occupations .mode-1 {
+            background-color: inherit; } }
+      @media only screen and (max-width: 550px) {
+        .tool .selector .occupations .mode-2 {
+          background-color: #082e52; } }
+      .tool .selector .occupations .check-box-1 label:before {
+        top: 50%;
+        left: 17px;
+        margin-top: -8px; }
+        @media only screen and (max-width: 768px) {
+          .tool .selector .occupations .check-box-1 label:before {
+            margin-top: -6.4px; } }
+      .tool .selector .occupations .check-box-1 label {
+        margin-bottom: 0px;
+        font-family: "HelveticaThinCondensed"; }
+      @media only screen and (max-width: 768px) {
         .tool .selector .occupations {
-          width: 300px;
+          width: 100%;
           float: left; }
           .tool .selector .occupations .subMenu {
             z-index: 1001; } }
-      .tool .selector .occupations .elem {
-        float: left;
-        width: 50%; }
-      .tool .selector .occupations .mode-1 {
-        background-color: #082e52; }
   .tool .messages-jobs {
     position: relative;
     width: 100%;
@@ -3549,20 +3762,34 @@ Tool CSS
     font-size: 20px;
     line-height: 65px;
     height: 60px; }
-    @media only screen and (max-width: 479px) {
+    @media only screen and (min-width: 481px) and (max-width: 768px) {
       .tool .messages-jobs {
-        width: 300px;
-        font-size: 13px; } }
+        font-size: 19px; } }
+    @media only screen and (max-width: 480px) {
+      .tool .messages-jobs {
+        font-size: 18px; } }
+    @media only screen and (max-width: 768px) {
+      .tool .messages-jobs {
+        line-height: 52px;
+        height: 48px; } }
   .tool .arrow {
     margin-top: 7px;
     margin-bottom: 3px;
     text-align: center;
     width: 100%; }
+    @media only screen and (max-width: 768px) {
+      .tool .arrow {
+        margin-top: 3px; } }
   .tool .arrow-down {
     border-left-width: 20px;
     border-right-width: 20px;
     border-top-width: 20px;
     border-top-color: #09335b; }
+    @media only screen and (max-width: 768px) {
+      .tool .arrow-down {
+        border-left-width: 15px;
+        border-right-width: 15px;
+        border-top-width: 15px; } }
   .tool .dialog .section .content {
     padding: 15px; }
   .tool .dialog .section .label {
@@ -4143,9 +4370,9 @@ Locally Grown
   float: left;
   background-color: #09335b;
   color: white; }
-  @media only screen and (max-width: 479px) {
+  @media only screen and (max-width: 768px) {
     .locallyGrown .selector .input-zip {
-      width: 300px; } }
+      width: 100%; } }
 .locallyGrown .mapbox {
   width: 1170px;
   display: block;
@@ -4160,10 +4387,11 @@ Locally Grown
   @media only screen and (max-width: 768px) {
     .locallyGrown .mapbox {
       width: 95%; } }
-  @media only screen and (max-width: 479px) {
+  @media only screen and (max-width: 768px) {
     .locallyGrown .mapbox {
-      width: 300px;
-      margin: 0px; } }
+      width: 100%;
+      margin: 0px;
+      height: 377.6px; } }
 
 /*
 Career Scape
@@ -4182,17 +4410,17 @@ Career Scape
     padding: 0px;
     display: block;
     z-index: 1; }
-    @media only screen and (max-width: 479px) {
+    @media only screen and (max-width: 768px) {
       .careerScape canvas {
-        width: 300px;
+        width: 100%;
         margin: 0px; } }
   .careerScape .canvas-container {
     margin: auto;
     text-align: center;
     position: relative; }
-    @media only screen and (max-width: 479px) {
+    @media only screen and (max-width: 768px) {
       .careerScape .canvas-container {
-        width: 300px;
+        width: 100%;
         margin: 0px; } }
   .careerScape .buttons-changes {
     width: 23%;
@@ -4207,12 +4435,14 @@ Career Scape
       width: 49%; }
       .careerScape .buttons-changes .button-change .carre {
         margin-left: 15px; }
-    @media only screen and (max-width: 479px) {
+    @media only screen and (max-width: 768px) {
       .careerScape .buttons-changes {
-        width: 300px;
-        height: 40px; }
+        width: 100%;
+        height: 51.2px;
+        min-width: 0px; }
         .careerScape .buttons-changes .button-change {
-          padding-top: 11px; }
+          padding-top: 18.4px;
+          padding-bottom: 8px; }
           .careerScape .buttons-changes .button-change .carre {
             margin-left: 11px;
             width: 17px;
@@ -4255,12 +4485,13 @@ Career Scape
     -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
     -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3); }
-    @media only screen and (max-width: 479px) {
+    @media only screen and (max-width: 768px) {
       .careerScape .legend {
-        width: 80px;
-        height: 120px;
-        top: 5px;
-        right: 25px; } }
+        width: 230px;
+        height: 117px;
+        top: auto;
+        bottom: 80px;
+        right: 13.2px; } }
   .careerScape .legend > div {
     position: relative;
     width: 100%;
@@ -4269,11 +4500,16 @@ Career Scape
     /*border-bottom:1.5px solid rgba(200,200,200,0.7);
     border-right:1.5px solid rgba(200,200,200,0.7);
     border-left:1.5px solid rgba(200,200,200,0.7);*/ }
-    @media only screen and (max-width: 479px) {
+    @media only screen and (max-width: 768px) {
       .careerScape .legend > div {
-        height: 60px; } }
+        float: left;
+        width: 50%;
+        height: 117px; } }
   .careerScape .legend > div.growth {
     border-bottom: 1.5px solid rgba(200, 200, 200, 0.7); }
+    @media only screen and (max-width: 768px) {
+      .careerScape .legend > div.growth {
+        border-bottom: none; } }
   .careerScape .legend .ball {
     display: inline-block;
     position: absolute;
@@ -4285,60 +4521,66 @@ Career Scape
     width: 68px;
     height: 68px;
     border-radius: 39px; }
-    @media only screen and (max-width: 479px) {
+    @media only screen and (max-width: 768px) {
       .careerScape .legend .big {
-        top: 6px;
-        right: 6.5px;
-        width: 17px;
-        height: 17px;
-        border-radius: 10px; } }
+        top: 14.4px;
+        left: 55px;
+        width: 40.8px;
+        height: 40.8px;
+        border-radius: 23.4px; } }
   .careerScape .legend .medium {
     top: 24px;
     right: 85px;
     width: 54px;
     height: 54px;
     border-radius: 32px; }
-    @media only screen and (max-width: 479px) {
+    @media only screen and (max-width: 768px) {
       .careerScape .legend .medium {
-        top: 6px;
-        right: 22px;
-        width: 13.5px;
-        height: 13.5px;
-        border-radius: 8px; } }
+        top: 14.4px;
+        left: 35px;
+        width: 32.4px;
+        height: 32.4px;
+        border-radius: 19.2px; } }
   .careerScape .legend .small {
     top: 24px;
     right: 133px;
     width: 38px;
     height: 38px;
     border-radius: 24px; }
-    @media only screen and (max-width: 479px) {
+    @media only screen and (max-width: 768px) {
       .careerScape .legend .small {
-        top: 6px;
-        right: 33px;
-        width: 9.5px;
-        height: 9.5px;
-        border-radius: 6px; } }
+        top: 14.4px;
+        left: 20px;
+        width: 22.8px;
+        height: 22.8px;
+        border-radius: 14.4px; } }
   .careerScape .legend .info {
     text-align: left;
     position: absolute;
     bottom: 18px;
     left: 22px; }
-    @media only screen and (max-width: 479px) {
+    @media only screen and (max-width: 768px) {
       .careerScape .legend .info {
-        bottom: 5px;
-        left: 7px; } }
+        bottom: 10.8px;
+        left: 13.2px; } }
   .careerScape .legend .info .title {
     font-weight: 200;
     font-size: 18px; }
-    @media only screen and (max-width: 479px) {
+    @media only screen and (min-width: 481px) and (max-width: 768px) {
       .careerScape .legend .info .title {
-        font-size: 10px; } }
+        font-size: 17.1px; } }
+    @media only screen and (max-width: 480px) {
+      .careerScape .legend .info .title {
+        font-size: 16.2px; } }
   .careerScape .legend .info .comment {
     font-style: italic;
     font-size: 12px; }
-    @media only screen and (max-width: 479px) {
+    @media only screen and (min-width: 481px) and (max-width: 768px) {
       .careerScape .legend .info .comment {
-        font-size: 7px; } }
+        font-size: 11.4px; } }
+    @media only screen and (max-width: 480px) {
+      .careerScape .legend .info .comment {
+        font-size: 10.8px; } }
 
 /*
 JOB RESULTS/RECOMMENDATIONS
@@ -4362,15 +4604,7 @@ JOB RESULTS/RECOMMENDATIONS
   border-top: 1px solid #cfcfcf; }
 
 .job-results, .saved-content, .delete-items {
-  width: 1170px;
-  display: block;
-  margin: auto;
-  	/*@media only screen and (max-width: 1200px) and (min-width: 980px){
-          width:975px;
-      }
-  	@media only screen and (max-width: 979px) and (min-width: 768px){
-          width:765px;
-      }*/
+  width: 100%;
   text-align: center;
   position: relative;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
@@ -4381,12 +4615,7 @@ JOB RESULTS/RECOMMENDATIONS
   background: white; }
   @media only screen and (max-width: 768px) {
     .job-results, .saved-content, .delete-items {
-      width: 95%; } }
-  @media only screen and (max-width: 479px) {
-    .job-results, .saved-content, .delete-items {
-      margin: 0px;
-      margin-bottom: 60px;
-      width: 300px; } }
+      margin-bottom: 30px; } }
   .job-results .icon-arrow-left-big-blue, .job-results .icon-arrow-right-big-blue, .saved-content .icon-arrow-left-big-blue, .saved-content .icon-arrow-right-big-blue, .delete-items .icon-arrow-left-big-blue, .delete-items .icon-arrow-right-big-blue {
     position: absolute;
     top: 50%;
@@ -4394,13 +4623,20 @@ JOB RESULTS/RECOMMENDATIONS
     -moz-user-select: none;
     -webkit-user-select: none;
     -ms-user-select: none; }
-    @media only screen and (max-width: 479px) {
+    @media only screen and (max-width: 768px) {
       .job-results .icon-arrow-left-big-blue, .job-results .icon-arrow-right-big-blue, .saved-content .icon-arrow-left-big-blue, .saved-content .icon-arrow-right-big-blue, .delete-items .icon-arrow-left-big-blue, .delete-items .icon-arrow-right-big-blue {
-        top: 96%; } }
+        top: auto;
+        bottom: 10px; } }
   .job-results .icon-arrow-left-big-blue, .saved-content .icon-arrow-left-big-blue, .delete-items .icon-arrow-left-big-blue {
     left: 40px; }
+    @media only screen and (max-width: 768px) {
+      .job-results .icon-arrow-left-big-blue, .saved-content .icon-arrow-left-big-blue, .delete-items .icon-arrow-left-big-blue {
+        left: 30px; } }
   .job-results .icon-arrow-right-big-blue, .saved-content .icon-arrow-right-big-blue, .delete-items .icon-arrow-right-big-blue {
     right: 40px; }
+    @media only screen and (max-width: 768px) {
+      .job-results .icon-arrow-right-big-blue, .saved-content .icon-arrow-right-big-blue, .delete-items .icon-arrow-right-big-blue {
+        right: 30px; } }
   .job-results i:hover, .saved-content i:hover, .delete-items i:hover {
     cursor: pointer; }
   .job-results .title, .saved-content .title, .delete-items .title {
@@ -4409,21 +4645,35 @@ JOB RESULTS/RECOMMENDATIONS
     padding-top: 22px;
     padding-bottom: 20px;
     border-bottom: 1px solid #9d9d9d; }
-    @media only screen and (max-width: 479px) {
+    @media only screen and (min-width: 481px) and (max-width: 768px) {
+      .job-results .title, .saved-content .title, .delete-items .title {
+        font-size: 19px; } }
+    @media only screen and (max-width: 480px) {
+      .job-results .title, .saved-content .title, .delete-items .title {
+        font-size: 18px; } }
+    @media only screen and (max-width: 768px) {
       .job-results .title, .saved-content .title, .delete-items .title {
         font-size: 14px;
         padding: 0px 15px;
-        padding-top: 12px;
-        padding-bottom: 10px; } }
+        padding-top: 17px;
+        padding-bottom: 14px; } }
   .job-results .content, .saved-content .content, .delete-items .content {
     position: relative; }
     .job-results .content .scrollable-content, .saved-content .content .scrollable-content, .delete-items .content .scrollable-content {
       width: 80%;
       height: 82%; }
-      @media only screen and (max-width: 479px) {
+      @media only screen and (max-width: 768px) {
         .job-results .content .scrollable-content, .saved-content .content .scrollable-content, .delete-items .content .scrollable-content {
-          width: 100%;
-          height: 80%; } }
+          height: 84%; } }
+      @media only screen and (max-width: 768px) and (min-width: 601px) {
+        .job-results .content .scrollable-content, .saved-content .content .scrollable-content, .delete-items .content .scrollable-content {
+          width: 560px; } }
+      @media only screen and (max-width: 600px) and (min-width: 481px) {
+        .job-results .content .scrollable-content, .saved-content .content .scrollable-content, .delete-items .content .scrollable-content {
+          width: 440px; } }
+      @media only screen and (max-width: 480px) {
+        .job-results .content .scrollable-content, .saved-content .content .scrollable-content, .delete-items .content .scrollable-content {
+          width: 300px; } }
     .job-results .content .scrollable, .saved-content .content .scrollable, .delete-items .content .scrollable {
       height: 100%; }
     .job-results .content .job-recommandation, .job-results .content .save, .saved-content .content .job-recommandation, .saved-content .content .save, .delete-items .content .job-recommandation, .delete-items .content .save {
@@ -4433,15 +4683,21 @@ JOB RESULTS/RECOMMENDATIONS
       width: 187px;
       display: inline-block;
       vertical-align: top; }
-      @media only screen and (max-width: 479px) {
+      @media only screen and (max-width: 768px) and (min-width: 601px) {
+        .job-results .content .job-recommandation, .job-results .content .save, .saved-content .content .job-recommandation, .saved-content .content .save, .delete-items .content .job-recommandation, .delete-items .content .save {
+          width: 112px; } }
+      @media only screen and (max-width: 600px) and (min-width: 481px) {
+        .job-results .content .job-recommandation, .job-results .content .save, .saved-content .content .job-recommandation, .saved-content .content .save, .delete-items .content .job-recommandation, .delete-items .content .save {
+          width: 110px; } }
+      @media only screen and (max-width: 480px) {
         .job-results .content .job-recommandation, .job-results .content .save, .saved-content .content .job-recommandation, .saved-content .content .save, .delete-items .content .job-recommandation, .delete-items .content .save {
           width: 100px; } }
     .job-results .content .pages, .saved-content .content .pages, .delete-items .content .pages {
       text-align: center; }
-      @media only screen and (max-width: 479px) {
+      @media only screen and (max-width: 768px) {
         .job-results .content .pages, .saved-content .content .pages, .delete-items .content .pages {
           border-top: 1px #9d9d9d solid;
-          padding-top: 13px; } }
+          padding-top: 15px; } }
       .job-results .content .pages .activated, .saved-content .content .pages .activated, .delete-items .content .pages .activated {
         background-color: #09335b !important; }
       .job-results .content .pages .ball, .saved-content .content .pages .ball, .delete-items .content .pages .ball {
@@ -4452,17 +4708,13 @@ JOB RESULTS/RECOMMENDATIONS
         height: 15px;
         border-radius: 10px;
         background-color: #ccd6de; }
-        @media only screen and (max-width: 479px) {
+        @media only screen and (max-width: 768px) {
           .job-results .content .pages .ball, .saved-content .content .pages .ball, .delete-items .content .pages .ball {
             width: 10px;
             height: 10px;
             border-radius: 7px; } }
       .job-results .content .pages .ball:hover, .saved-content .content .pages .ball:hover, .delete-items .content .pages .ball:hover {
         cursor: pointer; }
-
-@media only screen and (max-width: 479px) {
-  .job-results .content .scrollable-content {
-    height: 75%; } }
 
 .resume-hero .saved-content .save:not(.selected) {
   opacity: 0.7; }
@@ -4471,52 +4723,54 @@ JOB RESULTS/RECOMMENDATIONS
   text-align: left; }
 .saved-content .content, .delete-items .content {
   height: 325px; }
-  @media only screen and (max-width: 479px) {
+  @media only screen and (max-width: 768px) {
     .saved-content .content, .delete-items .content {
-      height: 200px; } }
-  .saved-content .content .scrollable-content, .delete-items .content .scrollable-content {
-    height: 85%; }
-    @media only screen and (max-width: 479px) {
-      .saved-content .content .scrollable-content, .delete-items .content .scrollable-content {
-        height: 80%; } }
+      height: 260px; } }
   .saved-content .content .save, .delete-items .content .save {
     margin-top: 45px;
     position: relative;
     height: 210px;
     font-size: 18px; }
-    @media only screen and (max-width: 479px) {
+    @media only screen and (min-width: 481px) and (max-width: 768px) {
       .saved-content .content .save, .delete-items .content .save {
-        height: 160px;
+        font-size: 17.1px; } }
+    @media only screen and (max-width: 480px) {
+      .saved-content .content .save, .delete-items .content .save {
+        font-size: 16.2px; } }
+    @media only screen and (max-width: 768px) {
+      .saved-content .content .save, .delete-items .content .save {
+        height: auto;
         margin-top: 20px; } }
     .saved-content .content .save .content-save, .delete-items .content .save .content-save {
       position: absolute;
       top: 145px;
       width: 100%; }
-      @media only screen and (max-width: 479px) {
+      @media only screen and (max-width: 768px) {
         .saved-content .content .save .content-save, .delete-items .content .save .content-save {
-          top: 75px; } }
+          top: 110px; } }
       .saved-content .content .save .content-save .name, .delete-items .content .save .content-save .name {
         color: black;
         margin-bottom: 3px; }
-        @media only screen and (max-width: 479px) {
-          .saved-content .content .save .content-save .name, .delete-items .content .save .content-save .name {
-            font-size: 15px; } }
       .saved-content .content .save .content-save .type, .delete-items .content .save .content-save .type {
         font-size: 16px;
         line-height: 18px;
         color: #9d9d9d; }
-        @media only screen and (max-width: 479px) {
+        @media only screen and (min-width: 481px) and (max-width: 768px) {
           .saved-content .content .save .content-save .type, .delete-items .content .save .content-save .type {
-            font-size: 11px;
-            line-height: 13px; } }
+            font-size: 15.2px; } }
+        @media only screen and (max-width: 480px) {
+          .saved-content .content .save .content-save .type, .delete-items .content .save .content-save .type {
+            font-size: 14.4px; } }
       .saved-content .content .save .content-save .date, .saved-content .content .save .content-save .level, .delete-items .content .save .content-save .date, .delete-items .content .save .content-save .level {
         font-size: 14px;
         line-height: 16px;
         color: #9d9d9d; }
-        @media only screen and (max-width: 479px) {
+        @media only screen and (min-width: 481px) and (max-width: 768px) {
           .saved-content .content .save .content-save .date, .saved-content .content .save .content-save .level, .delete-items .content .save .content-save .date, .delete-items .content .save .content-save .level {
-            font-size: 9px;
-            line-height: 11px; } }
+            font-size: 13.3px; } }
+        @media only screen and (max-width: 480px) {
+          .saved-content .content .save .content-save .date, .saved-content .content .save .content-save .level, .delete-items .content .save .content-save .date, .delete-items .content .save .content-save .level {
+            font-size: 12.6px; } }
 
 .job-results .content {
   height: 275px; }
@@ -4525,23 +4779,33 @@ JOB RESULTS/RECOMMENDATIONS
     .job-results .content .job-recommandation .icon-suitcase-job {
       margin-top: 40px;
       margin-bottom: 20px; }
+    @media only screen and (min-width: 481px) and (max-width: 768px) {
+      .job-results .content .job-recommandation {
+        font-size: 16.15px; } }
+    @media only screen and (max-width: 480px) {
+      .job-results .content .job-recommandation {
+        font-size: 15.3px; } }
     .job-results .content .job-recommandation .title-job {
       color: black;
       line-height: 26px; }
     .job-results .content .job-recommandation .info-job {
+      font-size: 15px;
       line-height: 23px;
       color: #9d9d9d; }
-  @media only screen and (max-width: 479px) {
+      @media only screen and (min-width: 481px) and (max-width: 768px) {
+        .job-results .content .job-recommandation .info-job {
+          font-size: 14.25px; } }
+      @media only screen and (max-width: 480px) {
+        .job-results .content .job-recommandation .info-job {
+          font-size: 13.5px; } }
+  @media only screen and (max-width: 768px) {
     .job-results .content {
-      height: 150px; }
+      height: 210px; }
+      .job-results .content .scrollable-content {
+        height: 81%; }
       .job-results .content .job-recommandation .icon-suitcase-job {
-        margin-top: 15px;
-        margin-bottom: 5px; }
-      .job-results .content .job-recommandation .title-job {
-        font-size: 13px; }
-      .job-results .content .job-recommandation .info-job {
-        font-size: 10px;
-        line-height: 12px; } }
+        margin-top: 20px;
+        margin-bottom: 10px; } }
 
 /*
 Dashboard
@@ -4559,8 +4823,11 @@ Dashboard
   @media only screen and (max-width: 768px) {
     .dashboard {
       width: 95%; } }
-  .dashboard .job-results {
+  .dashboard .job-results, .dashboard .saved-content {
     margin-bottom: 25px; }
+    @media only screen and (max-width: 768px) {
+      .dashboard .job-results, .dashboard .saved-content {
+        margin-bottom: 15px; } }
   .dashboard .resume {
     background-color: white;
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
@@ -4572,7 +4839,7 @@ Dashboard
     margin-bottom: 25px; }
     @media only screen and (max-width: 768px) {
       .dashboard .resume {
-        margin-top: 30px;
+        margin-top: 15px;
         margin-bottom: 15px; } }
     .dashboard .resume > .left, .dashboard .resume > .right {
       position: relative;
@@ -4592,6 +4859,10 @@ Dashboard
           border-right: none; } }
     .dashboard .resume .person {
       text-align: center; }
+      @media only screen and (max-width: 768px) and (min-width: 481px) {
+        .dashboard .resume .person {
+          width: 50%;
+          height: 300px; } }
       .dashboard .resume .person .icon-pencil {
         position: absolute;
         top: 45px;
@@ -4661,6 +4932,10 @@ Dashboard
           margin-top: 3px; } }
     .dashboard .resume .job-phase {
       font-size: 20px; }
+      @media only screen and (max-width: 768px) and (min-width: 481px) {
+        .dashboard .resume .job-phase {
+          width: 50%;
+          height: 300px; } }
       @media only screen and (min-width: 481px) and (max-width: 768px) {
         .dashboard .resume .job-phase {
           font-size: 19px; } }
@@ -4669,6 +4944,10 @@ Dashboard
           font-size: 18px; } }
       .dashboard .resume .job-phase .title {
         margin-bottom: 10px; }
+        @media only screen and (max-width: 768px) and (min-width: 481px) {
+          .dashboard .resume .job-phase .title {
+            margin-bottom: 30px;
+            height: 70px; } }
         .dashboard .resume .job-phase .title .txt {
           width: 70%;
           margin-left: 20px; }
@@ -4701,8 +4980,6 @@ Dashboard
           line-height: 40px;
           position: relative;
           top: 1px; }
-  .dashboard .saved-content {
-    margin-bottom: 25px; }
   .dashboard .job-results .title, .dashboard .saved-content .title {
     text-align: left; }
   .dashboard .job-results .button-edit, .dashboard .saved-content .button-edit {
@@ -4721,7 +4998,9 @@ Dashboard
     @media only screen and (max-width: 768px) {
       .dashboard .job-results .button-edit, .dashboard .saved-content .button-edit {
         padding-top: 10px;
-        padding-bottom: 4px; } }
+        padding-bottom: 4px;
+        margin-right: -7px;
+        margin-top: -9px; } }
   .dashboard .content {
     /*
     EDUCATION
@@ -4870,6 +5149,7 @@ Dashboard
         .dashboard .content .add-elem-input {
           font-size: 14.4px; } }
       .dashboard .content .add-elem-input input {
+        width: 100%;
         padding: 12px;
         margin: 0px;
         padding-top: 12px;
@@ -4900,6 +5180,9 @@ Dashboard
       padding-top: 12px;
       padding-bottom: 8px;
       margin-bottom: 20px; }
+    @media only screen and (max-width: 768px) {
+      .dashboard .content .technology {
+        margin-bottom: 30px; } }
     .dashboard .content .career-goals {
       font-size: 19px; }
       @media only screen and (min-width: 481px) and (max-width: 768px) {

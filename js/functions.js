@@ -367,18 +367,22 @@ function toggleEffect(event){
     }
 }
 function simpleSlideEffect(button,elem){
-    if(!button.hasClass("selected")){
-        button.addClass("selected");
-    }
-    else{
-        button.removeClass("selected");
-    }
-    if (!elem.is(':visible')) {
-        elem.slideDown(config.timeAnim);
-    }
-    // If closed, close the others and open it
-    else {
-        elem.slideUp(config.timeAnim);
+    if(!lock){
+        lock=true;
+        console.log("simple");
+        if(!button.hasClass("selected")){
+            button.addClass("selected");
+        }
+        else{
+            button.removeClass("selected");
+        }
+        if (!elem.is(':visible')) {
+            elem.slideDown(config.timeAnim,unlock);
+        }
+        // If closed, close the others and open it
+        else {
+            elem.slideUp(config.timeAnim,unlock);
+        }
     }
 }
 function slideEffect(button,elem,height,textOpen,textClose){
@@ -409,14 +413,16 @@ function slideEffect(button,elem,height,textOpen,textClose){
 Cancel effects
 */
 function cancelToggle(){
-    var subMenu=$(".subMenu:visible");
+    var subMenu=$("toggleMenu .subMenu:visible,toggleMenuSimple .subMenu:visible");
     subMenu.slideUp(config.timeAnim, function () { 
         $(this).parent().removeClass("open") }
     );
     return false;
 }
 function cancelEffects(){
-    cancelToggle();
+    if(!lock){
+        cancelToggle();
+    }
 }
 var lock=false;
 function unlock(){

@@ -9,14 +9,14 @@
                 </div>
 			</div>
 </div>
-<div class="occupations toggleMenuSimple">
-            <div ng-click="$parent.loadOccupations()">
+<div class="occupations">
+            <div ng-click="$parent.loadOccupations()" onclick="simpleSlideEffect($(this),$('.occupations .subMenu'))">
                 <span class="title">Choose Occupations</span>
                 <b class="icon-bigarrow-bottom-grey grey-icon"></b>
             </div>
             <div class="subMenu">
 				<div ng-repeat="occupation in $parent.occupations">
-                    <div class="elem mode-{{$index % 4}}"><input type="checkbox" name="option{{$index}}" value="{{occupation.Name}}"> {{occupation.Name}}</div>
+                    <div class="elem mode-{{$index % 4}} check-box-1"><input id="checkbox-{{$index}}" type="checkbox" name="option{{$index}}" value="{{occupation.Name}}"><label for="checkbox-{{$index}}">{{occupation.Name}}</label></div>
                 </div>
 			</div>
 </div>

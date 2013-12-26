@@ -207,16 +207,6 @@ module.factory('register',['$http',function($http) {
             }
         }
     }
-    register.prototype.addskillTech=function(type,elem){
-        if(type=="skill"){
-            this.userInfo.skills.saved.push(elem);
-            this.userInfo.skills.selected.push(elem);
-        }
-        else{
-            this.userInfo.technologies.saved.push(elem);
-            this.userInfo.technologies.selected.push(elem);
-        }
-    }
     
     //add remove element into selected skills/technologies
     //we need three lists: 1) to show, 2)the saved one 3)the choosen one

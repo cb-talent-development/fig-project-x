@@ -98,6 +98,38 @@ function DashboardCtr($scope, $http,pagination,register) {
 	   });
     }
     /*
+    ADD SKILL/TECH
+    */
+    $scope.addskillTech=function(type,elem){
+        if(type=="skill"){
+            $scope.skills.push(elem);
+            $scope.register.setSkills($scope.skills);
+        }
+        else{
+            $scope.technologies.push(elem);
+            $scope.register.setTechnologies($scope.technologies);
+        }
+    }
+    $scope.addSkill=function(){
+        if($scope.inputSkill.show){
+            $scope.inputSkill.show=false;
+            $scope.addskillTech("skill",{"Name":$scope.inputSkill.value});
+        }
+        else{
+            $scope.inputSkill.show=true;
+        }
+    }
+    $scope.addTech=function(){
+        if($scope.inputTechnology.show){
+            $scope.inputTechnology.show=false;
+            $scope.addskillTech("technology",{"Name":$scope.inputTechnology.value});
+
+        }
+        else{
+            $scope.inputTechnology.show=true;
+        }
+    }
+    /*
         Constructor
     */
     $scope.init=function(){

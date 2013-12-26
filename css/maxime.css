@@ -4,22 +4,23 @@ REDONDANCE
 /*
 Responsive
 */
-@media only screen and (min-width: 768px) {
-  .visible-xs {
-    display: none !important; } }
+.visible-xs {
+  display: none !important; }
+  @media only screen and (max-width: 768px) {
+    .visible-xs {
+      display: block !important; } }
 
-@media only screen and (max-width: 768px) {
-  .hidden-xs {
-    display: none !important; } }
+.hidden-xs {
+  display: block !important; }
+  @media only screen and (max-width: 768px) {
+    .hidden-xs {
+      display: none !important; } }
 
 /*
 END-REDONDANCE
 */
 .subMenu a:hover {
   text-decoration: none; }
-
-footer .section {
-  min-width: 180px; }
 
 /*
 POST CSS
@@ -89,7 +90,7 @@ POST CSS
       width: 100%; }
     @media only screen and (max-width: 768px) {
       .post .complement .social, .post .complement .rating {
-        width: 48%;
+        width: 100%;
         float: left; } }
     .post .complement .social {
       height: 90px;
@@ -99,29 +100,22 @@ POST CSS
       padding-left: 5px;
       padding-right: 5px;
       text-align: center; }
-      @media only screen and (max-width: 1200px) and (min-width: 980px) {
+      @media only screen and (max-width: 768px) and (min-width: 481px) {
         .post .complement .social {
-          height: 70px;
-          padding-top: 15px;
-          padding-bottom: 15.5px; } }
-      @media only screen and (max-width: 979px) and (min-width: 768px) {
-        .post .complement .social {
-          height: 50px;
-          padding-top: 13.5px;
-          padding-bottom: 12.5px; } }
-      @media only screen and (max-width: 768px) {
-        .post .complement .social {
-          height: 75px;
-          margin-bottom: 45px;
-          padding-top: 23px;
-          padding-bottom: 23px;
+          height: 55px;
+          margin-bottom: 10px;
+          margin-top: 5px;
+          padding-top: 10px;
+          padding-bottom: 10px;
           margin-right: 4%; } }
       @media only screen and (max-width: 480px) {
         .post .complement .social {
-          height: 37.5px;
-          margin-bottom: 22.5px;
-          padding-top: 12px;
-          padding-bottom: 12px; } }
+          height: 45px;
+          margin-bottom: 10px;
+          margin-top: 5px;
+          padding-top: 8px;
+          padding-bottom: 8px;
+          margin-right: 4%; } }
       .post .complement .social .icon-social {
         display: inline-block;
         vertical-align: top;
@@ -176,27 +170,17 @@ POST CSS
       margin-bottom: 30px; }
       .post .complement .rating .icon {
         margin: 0px 5px; }
-      @media only screen and (max-width: 1200px) and (min-width: 980px) {
+      @media only screen and (max-width: 768px) and (min-width: 481px) {
         .post .complement .rating {
-          height: 70px;
-          padding-top: 15px;
-          padding-bottom: 15.5px; } }
-      @media only screen and (max-width: 979px) and (min-width: 768px) {
-        .post .complement .rating {
-          height: 50px;
-          padding-top: 13.5px;
-          padding-bottom: 12.5px; } }
-      @media only screen and (max-width: 768px) {
-        .post .complement .rating {
-          height: 75px;
-          margin-bottom: 5px;
-          padding-top: 20px;
-          padding-bottom: 14px; } }
+          height: 55px;
+          margin-bottom: 10px;
+          padding-top: 12px;
+          padding-bottom: 10px; } }
       @media only screen and (max-width: 480px) {
         .post .complement .rating {
-          height: 37.5px;
-          margin-bottom: 5px;
-          padding-top: 9px;
+          height: 45px;
+          margin-bottom: 10px;
+          padding-top: 8px;
           padding-bottom: 9px; } }
     .post .complement .comments {
       min-height: 40px;

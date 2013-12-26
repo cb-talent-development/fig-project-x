@@ -74,6 +74,7 @@ function drawAnimation(){
     if(numToDraw==0){
         canvas.style.cursor="move";
         window.animationFinish=true;
+        window.canvasPos=getCanvasPos();
         clearInterval(window.intervalAnimation);
         return true;
     }
@@ -516,7 +517,7 @@ function initData(){
     window.careers=careersInfo.main_node;
     window.cumulatedPosition={"x":0,"y":0}
     //global variables used by mouse events
-    window.position=undefined;
+    window.position=window.cumulatedPosition;
     window.nodeOn=undefined;
 }
 /*
@@ -608,18 +609,28 @@ function initCanvas(){
     smallD.css("background",config.color.decline.fill[0]);
     smallD.css("borderColor",config.color.decline.border[0]);
 }
-function resizeElement(){
-    var container=$(".canvas-container");
-    container.css("width",canvas.width);
-    //var selector=$(".selector");
+/*
+Get position of the canvas
+*/
+function getCanvasPos(){
+    return {
+        "left":canvas.offsetParent.offsetLeft,
+        "top":canvas.offsetParent.offsetTop
+    }
 }
 /*
-Resoze Canvas
+Resize Canvas
 */
 function resizeCanvas(){
-    canvas.width=Math.min(window.innerWidth,config.width) ;
-    canvas.height=config.height;
-    resizeElement();
+    if(window.innerWidth<=768){
+        canvas.width=Math.min(window.innerWidth * 0.95,config.width) ;
+        canvas.height=config.height*0.8;
+    }
+    else{
+        canvas.width=config.width;
+        canvas.height=config.height;
+    }
+    window.canvasPos=getCanvasPos();
     if(window.careerTree!=undefined){
         draw();
         var mainNode=careerTree.getMainNode();

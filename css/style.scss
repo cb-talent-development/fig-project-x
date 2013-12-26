@@ -142,7 +142,7 @@ $sprite-height: 3597px;
 }
 
 @mixin main-block{
-    width:$total-width;
+    width:$total-width; //default padding
     display:block;
     margin:auto;
 	/*@media only screen and (max-width: 1200px) and (min-width: 980px){
@@ -371,7 +371,7 @@ Custom input
 .custom-input-file:hover{
     cursor:pointer;
 }
-.toggleMenu,.toggleMenuSimple,.toggleMenuLarge{
+.toggleMenu,.toggleMenuSimple,.toggleMenuLarge,.occupations{
     position:relative;
     .subMenu{
         position:absolute;
@@ -398,9 +398,15 @@ ICON-ARROW
     i,b{position:absolute;top:50%;right:18px;}
     .icon-bigarrow-right-black,.icon-bigarrow-right-white{
         margin-top:-8.5px;
+        @media only screen and (max-width: 768px){
+            margin-top:-6px;
+        }
     }
     .icon-bigarrow-bottom-grey,.icon-bigarrow-bottom-orange{
         margin-top:-5.5px;
+        @media only screen and (max-width: 768px){
+            margin-top:-4px;
+        }
     }
     @media only screen and (max-width: 768px){
         i,b{
@@ -523,7 +529,7 @@ Rest css
 body{
 	background-color: $backgroundGrey;
     z-index:1;
-	width: 100%;
+    width:100%;
     font-size:auto;
     line-height:normal;
     font-family: HelveticaThinCondensed, sans-serif;
@@ -673,12 +679,23 @@ Font handler
 .home-container,.navbar,.page-header h1,.page-header h2{
     font-family: HelveticaLightCondensed, sans-serif;
 }
+.home-main-container{
+    @include main-block;
+    @media only screen and (max-width: 768px){
+        width:100%;
+    }
+}
 .home-container{
-    width:1200px;margin:auto;margin-top:60px;
-	@media only screen and (max-width: 768px){
+    $width-home:1200px;
+    width:$width-home;
+    margin:auto;margin-top:60px;
+    position:relative;
+    left:- ($width-home - $total-width) / 2;
+    @media only screen and (max-width: 768px){
         width: 310px;
-		margin-top: 25px;
-	}
+        margin-top: 15px;
+        left:0px; //should be -5px; if width not fixed
+    }
 }
 /*
 Security
@@ -694,7 +711,7 @@ HOMEPAGE SCROLLABLE CONTENT
 */
 
 .first-connect{
-	width:1170px;
+	@include main-block;
     margin:auto;
 	text-align: center;
 	position: relative;
@@ -758,7 +775,7 @@ HOMEPAGE SCROLLABLE CONTENT
 			margin: 50px 15px;
 			margin-top: 60px;
             @media only screen and (max-width: 768px){
-                margin:20px;
+                margin:15px;
                 height:auto;
             }
 		}
@@ -797,8 +814,8 @@ HOMEPAGE SCROLLABLE CONTENT
     .element3,.element4{
         .box{
             @media only screen and (max-width: 768px){
-               min-width:100px;
-               margin-left:3%;margin-right:3%;
+               min-width:110px;
+               margin-left:2%;margin-right:2%;
                height:120px;
 
             }
@@ -809,7 +826,7 @@ HOMEPAGE SCROLLABLE CONTENT
 			margin-top: 25px;
             margin-left: 35px;
 		}
-		i.icon-locallygrown-saved{
+		i.icon-locallygrown-presentation{
 			margin-left: 20px;
 		}
         @media only screen and (max-width: 768px){
@@ -817,11 +834,11 @@ HOMEPAGE SCROLLABLE CONTENT
                 position:absolute;
                 left:50%;
                 top:50%;
-                margin-left:-35px;
-                margin-top:-38px;
+                margin-left:-33px;
+                margin-top:-36px;
             }
-            i.icon-locallygrown-saved{
-                margin-left:-39px;
+            i.icon-locallygrown-presentation{
+                margin-left:-40px;
             }
         }
 	}
@@ -939,9 +956,11 @@ Header css
         width:170px;
         @media only screen and (max-width: 768px){
 			width:60%;
+            text-align:left;
             position:relative;
             font-size: 14px !important;
             margin:15px auto;
+            margin-bottom:0px;
 		}
 	}
 	#profil-pic{
@@ -958,9 +977,6 @@ Header css
 		margin-right: 15px;
 	}
 	.block{
-		@media only screen and (max-width: 768px){
-			//width: 200px;
-		}
 	}
     .subMenu{
         max-height:none;
@@ -971,6 +987,13 @@ Header css
 /*
 NAVBAR
 */
+.navbar{
+    min-width:1170px;
+    @media only screen and (max-width: 768px){
+        min-width:0px;
+        width:auto;
+    }
+}
 .navbar.hidden-xs{
 	background-color: $navcolor;
 	ul{
@@ -999,7 +1022,7 @@ NAVBAR
 	}
 	span#menu-button{
 		top: 10px;
-		right: 10px;
+		right: 0px;
 		padding: 10px;
 	}
 	span#menu-button:hover{
@@ -1025,6 +1048,9 @@ NAVBAR
 			position: absolute;
 			top: 15px;
 			left: 15px;
+            @media only screen and (max-width: 768px){
+                left:2px;
+            }
 		}
 	}
 	span#menu-button{
@@ -1057,7 +1083,7 @@ NAVBAR
 }
 
 .navbar{
-    .container{
+    .main-container{
         position:relative;
     }
     margin:0px;
@@ -1065,9 +1091,15 @@ NAVBAR
 	@media only screen and (min-width:768px){
 		height: 60px;
 	}
+    .movable:hover{
+        cursor:pointer;
+    }
 	span#menu-button{
 		position:absolute;
 		border-radius: 5px;
+	}
+    span#menu-button:hover{
+		cursor:pointer;
 	}
 	ul{
 		margin: 0px;
@@ -1326,8 +1358,7 @@ Width
 Menu with multiple button
 */
 .menu-buttons{
-    padding:0px 15px;
-    width:1200px;
+    @include main-block;
     margin:auto;
     padding-top:40px;padding-bottom:40px;
     @media only screen and (max-width: 768px){
@@ -1428,7 +1459,7 @@ Menu with multiple button
 }
 .page-header{
     @media only screen and (max-width: 768px){
-		padding-top: 15px;padding-bottom:15px;
+		padding-top: 15px;padding-bottom:9px;
 	}
 }
 .menu-buttons{
@@ -1462,12 +1493,18 @@ PROFILE SUBMENU
 		width: 370px;
 		left: -143px;
 		top: 90px;
-        @media(max-width: 768px){
-            width: 85% !important;
-			left: 7.5% !important;
+        @media only screen and (max-width: 768px){
             top: 160px;
 			position:fixed;
 		}
+        @media only screen and (max-width: 768px) and (min-width:481px){
+            width: 60% !important;
+			left: 20% !important;
+        }
+        @media only screen and (max-width: 480px){
+            width: 85% !important;
+			left: 7.5% !important;
+        }
 		.profile-subMenu{
             .button{
                 padding-top:16px;
@@ -1478,7 +1515,8 @@ PROFILE SUBMENU
             @include box-shadow(0px,1px,2px,0px,0.3);
 			padding: 12px 20px;
             @media only screen and (max-width: 768px){
-                padding:18px;
+                padding:15px;
+                padding-bottom:10px;
             }
 			h2{
 				width: 100%;
@@ -1496,12 +1534,12 @@ PROFILE SUBMENU
 			p{
 				width: 100%;
 				text-align: center;
-				font-size: 0.46em;
+				@include font-size(15px);
 				color: #888;
 				margin-bottom: 30px;
 				font-family: HelveticaLightCondensed, sans-serif;
                 @media only screen and (max-width: 768px){
-                    margin-bottom:0px;
+                    margin-bottom:5px;
                 }
 			}
 			.button{
@@ -1530,7 +1568,7 @@ PROFILE SUBMENU
 				margin-bottom: 41px;
 				width: 390px;
                 @media only screen and (max-width: 768px){
-                    margin:20px -20px;
+                    margin:20px -15px;
                     width:auto;
                 }
 			}
@@ -2367,6 +2405,8 @@ Load More button
     }
     @media only screen and (max-width: 768px) {
         width:300px;
+        margin-top:15px;
+        margin-bottom:30px;
     }
 
 }
@@ -2375,20 +2415,42 @@ Footer css
 */
 .footer{
 	background-color: #cccccc;
-    .container{
+    .main-container{
         margin:auto;
-        padding-top:80px;
+        padding-top:70px;
         padding-bottom:50px;
     }
 	div.section{
+        width:33%;
+        margin-top:10px;
+        float:left;
+        @media only screen and (max-width: 768px) {
+            padding:0px 8px;
+        }
+        @media only screen and (max-width: 480px) {
+            width:50%;
+        }
 		h4{
+            font-size: 17px;
 			margin-bottom: 50px;
-			mark{ 
-				background-color: #ffff00; 
+            height:50px;
+            margin-bottom:30px;
+            @media only screen and (max-width: 768px) {
+                margin-bottom:20px;
+                font-size: 14px;
+            }
+			>div{ 
+				background-color: rgba(255,248,51,0.7); 
+                padding:7px;
+                border-radius:1px;
+                display:inline-block;
 			}
 		}
 		div.column{
 			width: 50%;
+            @media only screen and (max-width: 768px) {
+                width:100%;
+            }
 			float: left;
 			a{
 				color: #444444;
@@ -2418,6 +2480,9 @@ General social CSS
         @include inline-top;
         border-radius:30px;
         margin-right:12px;
+        @media only screen and (max-width: 768px) {
+            margin:0px 4px !important;
+        }
     }
     .icon-social:hover{
         cursor:pointer;
@@ -2443,7 +2508,8 @@ Related
         font-size:22px;text-transform:uppercase;margin-top:50px;margin-bottom:50px;
     }
     .related-container{
-        @extend .home-container;margin-top:5px;
+        @extend .home-container;
+        margin-top:5px;
         .a-small,.a3,.i3,.v3,.p3{
             @include med-width;
         }
@@ -2469,9 +2535,15 @@ Tools dashboard & tool css
 .tools-dashboard{
     .first{
         margin-top:60px;
+        @media only screen and (max-width: 768px) {
+            margin-top:30px;
+        }
     }
     .last{
         margin-bottom:75px !important;
+        @media only screen and (max-width: 768px) {
+            margin-bottom:30px !important;
+        }
     }
     .tool{
         @include big-height;
@@ -2486,34 +2558,56 @@ Tools dashboard & tool css
         }
         .left{
             position:relative;
-            height:100%;width:30.77%;
+            height:100%;
+            width:30.77%;
             float:left;
             text-align:center;
+            @media only screen and (max-width: 768px) {
+                width:100%;
+            }
             .logo{
                 position:absolute;top:25px;left:50%;
             }
+            $rapp-logo:0.95;
             .icon-careerscape-small{
                 margin-left:-70px;
+                @media only screen and (max-width: 768px) {
+                    margin-left:-70px * $rapp-logo;
+                }
             }
             .icon-resumeHero-small{
                 margin-left:-73.5px;
+                @media only screen and (max-width: 768px) {
+                    margin-left:-73.5px * $rapp-logo;
+                }
             }
             .icon-jobinality-small{
                 margin-left:-60px;
+                @media only screen and (max-width: 768px) {
+                    margin-left:-60px * $rapp-logo;
+                }
             }
             .icon-localygrown-small{
                 margin-left:-79px;
+                @media only screen and (max-width: 768px) {
+                    margin-left:-79px * $rapp-logo;
+                }
             }
             .info{
                 width:65%;margin:auto;margin-top:200px;
                 .title{
-                    font-size:36px;
+                    @include font-size(36px);
                 }
                 .summary{
-                    margin-top:20px;font-size:23px;
+                    @include font-size(23px);
+                    margin-top:20px;
                 }
                 .icon-arow-right-light{
                     margin-left:3px;margin-top:2px;
+                }
+                @media only screen and (max-width: 768px) {
+                    margin-top:175px;
+                    width:68%;
                 }
             }
         }
@@ -2521,6 +2615,9 @@ Tools dashboard & tool css
             height:100%;
             background-color:$grey;
             width:69.2%;
+            @media only screen and (max-width: 768px) {
+                display:none;
+            }
         }
     }
 }
@@ -2663,7 +2760,7 @@ Tool CSS
             .title{
                 top:0px;
                 text-transform:capitalize;
-                font-size:37px;
+                @include font-size(37px);
                 position:absolute;
                 line-height:108px;
                 height:94px;
@@ -2683,25 +2780,51 @@ Tool CSS
         .icon-bar-grey{
             margin:9px;
         }
-		@media only screen and (max-width: 479px){
-			width: 300px;
-			height: 300px;
+		@media only screen and (max-width: 768px){
+			width: 100%;
+			height: 280px;
 			margin: 0px;
 			margin-bottom: 10px;
-			margin-top: 10px;
+			margin-top: 15px;
 			.title-social{
 				width: 100%;
 				height: 100%;
+                $rapp-logo:0.95;
+                .icon-arrow-right-big-grey{
+                    display:none;
+                }
+                .icon-careerscape-small{
+                    margin-left:-70px;
+                    @media only screen and (max-width: 768px) {
+                        margin-left:-70px * $rapp-logo;
+                    }
+                }
+                .icon-resumeHero-small{
+                    margin-left:-73.5px;
+                    @media only screen and (max-width: 768px) {
+                        margin-left:-73.5px * $rapp-logo;
+                    }
+                }
+                .icon-jobinality-small{
+                    margin-left:-60px;
+                    @media only screen and (max-width: 768px) {
+                        margin-left:-60px * $rapp-logo;
+                    }
+                }
+                .icon-localygrown-small{
+                    margin-left:-79px;
+                    @media only screen and (max-width: 768px) {
+                        margin-left:-79px * $rapp-logo;
+                    }
+                }
 				.icon-jobinality-small,.icon-resumeHero-small,.icon-localygrown-small,.icon-careerscape-small{
 					position:absolute;
-					top:30px;left:50%;margin-left: -80px;
+					top:30px;left:50%;
 				}
 				.title{
-					top:160px;
-					width: 300px;
+					top:140px;
+                    width:100%;
 					text-align: center;
-					text-transform:capitalize;
-					font-size:27px;
 					line-height:108px;
 					height:60px;
 					left:0px;
@@ -2712,13 +2835,13 @@ Tool CSS
 					text-align: center;
 					clear: both;
 					position: absolute;
-					bottom: 0px;
+					bottom: 20px;
 				}
 							}
 			.icon-bar-grey{
 				padding-top: 3px;
 			}
-			.icon-question{
+			.icon-question-big{
 				display: inline-block !important;
 			}
 		}
@@ -2736,27 +2859,28 @@ Tool CSS
         width:100%;
         margin:auto;
         margin-bottom:30px;
-		@media only screen and (max-width: 479px){
+		@media only screen and (max-width: 768px){
 			margin-bottom: 10px;
 		}
         .input-button{
+            cursor:default;
             padding-top:21px;padding-bottom:17px;
             padding-left:15px;
             width:100%;height:100%;color:white;
-            font-size:22px;
+            @include font-size(22px);
             border:none;background:none;
-			@media only screen and (max-width: 479px){
-				width: 300px;
-				padding-top: 12px;
-				padding-bottom: 10px;
+			@media only screen and (max-width: 768px){
+				width:100%;
+				padding-top: 13px;
+				padding-bottom: 9px;
 				font-size:18px;
 			}
         }
         .industries,.occupations{
             padding-top:21px;padding-bottom:17px;
-            font-size:22px;
+            @include font-size(22px);
             position:relative;
-			@media only screen and (max-width: 479px){
+			@media only screen and (max-width: 768px){
 				margin-top: 10px;
 				padding-top: 12px;
 				padding-bottom: 10px;
@@ -2770,23 +2894,29 @@ Tool CSS
                 top:32.5px;
                 margin-top:-2px;
                 position:absolute;
-				@media only screen and (max-width: 479px){
+				@media only screen and (max-width: 768px){
 					top: 22.5px;
 				}
 				
             }
             .subMenu{
                 left:0px;
+                max-height:500px;
                 top:64px;
-                font-size:17px;
-                line-height:40px;
+                @include font-size(17px);
                 color:white !important;
                 .elem{
+                    padding-top:14px;
+                    padding-bottom:10px;
                     padding-left:20px;
                 }
                 .elem:hover{
                     color:rgba(255,255,255,0.8) !important;
                 }
+                @media only screen and (max-width: 768px){
+					top: 44px;
+				}
+                
             }
             .mode-0{
                 background-color:$darkBlue;
@@ -2805,8 +2935,8 @@ Tool CSS
             width:23%;
             margin-left:30px;
             height:100%;	
-			@media only screen and (max-width: 479px){
-				width: 300px;
+			@media only screen and (max-width: 768px){
+				width: 100%;
 				margin-left: 0px;
 				.subMenu{
 					z-index: 1002;
@@ -2818,20 +2948,47 @@ Tool CSS
             float:right;
             width:48.7%;
             height:100%;
-			@media only screen and (max-width: 479px){
-				width: 300px;
-				float:left;
+            .elem{
+                float:left;
+                width:50%;
+                padding-left:0px;
+                //Special here
+                @media only screen and (max-width: 600px){
+                    width:100%;
+                }
+            }
+            .mode-1{
+                background-color:$darkBlue;
+                @media only screen and (max-width: 550px){
+                    background-color:inherit;
+                }
+            }
+            .mode-2{
+                @media only screen and (max-width: 550px){
+                    background-color:$darkBlue;
+                }         
+            }
+            .check-box-1{
+                label:before{
+                    top:50%;
+                    left:17px;
+                    margin-top:-8px;
+                    @media only screen and (max-width: 768px){
+                        margin-top:-8px * $rapp-resp;
+                    }
+                }
+                label{
+                    margin-bottom:0px;
+                    font-family:"HelveticaThinCondensed";
+                }
+            }
+            @media only screen and (max-width: 768px){
+				width: 100%;
+                float:left;
 				.subMenu{
 					z-index: 1001;
 				}
 			}
-            .elem{
-                float:left;
-                width:50%;
-            }
-            .mode-1{
-                background-color:$darkBlue;
-            }
         }
     }
     .messages-jobs{
@@ -2839,23 +2996,31 @@ Tool CSS
         width:100%;
         @include blue-element;
         text-align:center;
-        font-size:20px;
+        @include font-size(20px);
         line-height:65px;
         height:60px;
-		@media only screen and (max-width: 479px){
-			width: 300px;
-			font-size: 13px;
-		}
+        @media only screen and (max-width: 768px){
+            line-height:65px * $rapp-resp;
+            height:60px * $rapp-resp;
+        }
     }
     .arrow{
         margin-top:7px;margin-bottom:3px;
         text-align:center;width:100%;
+        @media only screen and (max-width: 768px){
+            margin-top:3px;
+        }
     }
     .arrow-down {
        border-left-width:20px;
        border-right-width:20px;
        border-top-width:20px;
        border-top-color:$navcolor;
+       @media only screen and (max-width: 768px){
+            border-left-width:15px;
+            border-right-width:15px;
+            border-top-width:15px;
+       }
     }
     .dialog{
         .section{
@@ -3467,17 +3632,18 @@ Locally Grown
             min-width:267px;
             float:left;
             @include blue-element;
-			@media only screen and (max-width: 479px){
-				width: 300px;
+			@media only screen and (max-width: 768px){
+				width: 100%;
 			}
         }
     }
     .mapbox{
         @include main-block;
         height:590px;
-		@media only screen and (max-width: 479px){
-			width: 300px;
+		@media only screen and (max-width: 768px){
+			width: 100%;
 			margin: 0px;
+            height:590px * $rapp-resp * $rapp-resp;
 		}
     }
 }
@@ -3489,8 +3655,8 @@ Career Scape
     canvas{
         background-color:white;
         margin:auto;cursor:move;padding:0px;display:block;z-index:1;
-		@media only screen and (max-width:479px){
-			width: 300px;
+		@media only screen and (max-width:768px){
+			width: 100%;
 			margin: 0px;
 		}
     }
@@ -3498,8 +3664,8 @@ Career Scape
         margin:auto;
         text-align:center;
         position:relative;
-		@media only screen and (max-width:479px){
-			width: 300px;
+		@media only screen and (max-width:768px){
+			width: 100%;
 			margin: 0px;
 		}
     }
@@ -3517,11 +3683,13 @@ Career Scape
 					margin-left:15px;
 				}
 			}
-			@media only screen and (max-width: 479px){
-				width: 300px;
-				height: 40px;
+			@media only screen and (max-width: 768px){
+				width: 100%;
+				height: 64px * $rapp-resp;
+                min-width:0px;
 				.button-change{
-					padding-top: 11px;
+					padding-top:23px * $rapp-resp;
+                    padding-bottom:10px * $rapp-resp;
 					.carre{
 						margin-left: 11px;
 						width: 17px;
@@ -3568,6 +3736,8 @@ Career Scape
     /*
     Legend part
     */
+    $rapp-legend: 0.6;
+    
     .legend{
         z-index:10;
         position:absolute;
@@ -3578,11 +3748,12 @@ Career Scape
         -moz-box-shadow: 0px 2px 2px rgba(0,0,0,0.3);
         -webkit-box-shadow: 0px 2px 2px rgba(0,0,0,0.3);
         box-shadow: 0px 2px 2px rgba(0,0,0,0.3);
-		@media only screen and (max-width:479px){
-			width: 80px;
-			height: 120px;
-			top: 5px;
-			right: 25px;
+		@media only screen and (max-width:768px){
+			width:230px;
+            height:300px * $rapp-legend * 1.3 / 2;
+            top:auto;
+            bottom:80px;
+            right:22px * $rapp-legend;  
 		}
     }
     .legend > div{
@@ -3593,12 +3764,17 @@ Career Scape
         /*border-bottom:1.5px solid rgba(200,200,200,0.7);
         border-right:1.5px solid rgba(200,200,200,0.7);
         border-left:1.5px solid rgba(200,200,200,0.7);*/
-		@media only screen and (max-width: 479px){
-			height: 60px;
+		@media only screen and (max-width: 768px){
+            float:left;
+            width:50%;
+			height:150px * $rapp-legend * 1.3;
 		}
     }
     .legend >div.growth{
         border-bottom:1.5px solid rgba(200,200,200,0.7);
+        @media only screen and (max-width: 768px){
+            border-bottom:none;
+        }
 
     }
     .legend .ball{
@@ -3613,12 +3789,12 @@ Career Scape
         width:68px;
         height:68px;
         border-radius:39px;
-		@media only screen and (max-width: 479px){
-			top:6px;
-			right:6.5px;
-			width:17px;
-			height:17px;
-			border-radius:10px;
+		@media only screen and (max-width: 768px){
+			top:24px * $rapp-legend;
+            left:55px;
+            width:68px * $rapp-legend;
+            height:68px * $rapp-legend;
+            border-radius:39px * $rapp-legend;
 		}
     }
     .legend .medium{
@@ -3627,12 +3803,12 @@ Career Scape
         width:54px;
         height:54px;
         border-radius:32px;
-        @media only screen and (max-width: 479px){
-			top:6px;
-			right:22px;
-			width:13.5px;
-			height:13.5px;
-			border-radius:8px;
+        @media only screen and (max-width: 768px){
+			top:24px * $rapp-legend;
+            left:35px;
+            width:54px * $rapp-legend;
+            height:54px * $rapp-legend;
+            border-radius:32px * $rapp-legend;
 		}
     }
     .legend .small{
@@ -3641,12 +3817,12 @@ Career Scape
         width:38px;
         height:38px;
         border-radius:24px;
-		@media only screen and (max-width: 479px){
-			top:6px;
-			right:33px;
-			width:9.5px;
-			height:9.5px;
-			border-radius:6px;
+		@media only screen and (max-width: 768px){
+			top:24px * $rapp-legend;
+            left:20px;
+            width:38px * $rapp-legend;
+            height:38px * $rapp-legend;
+            border-radius:24px * $rapp-legend;
 		}		
     }
     .legend .info{
@@ -3654,24 +3830,18 @@ Career Scape
         position:absolute;
         bottom:18px;
         left:22px;
-		@media only screen and (max-width:479px){
-			bottom: 5px;
-			left: 7px;
+		@media only screen and (max-width:768px){
+			bottom:18px * $rapp-legend;
+            left:22px * $rapp-legend;
 		}
     }
     .legend .info .title{
         font-weight:200;
-        font-size:18px;
-		@media only screen and (max-width:479px){
-			font-size: 10px;
-		}
+        @include font-size(18px);
     }
     .legend .info .comment{
         font-style:italic;
-        font-size:12px;
-		@media only screen and (max-width:479px){
-			font-size: 7px;
-		}
+        @include font-size(12px);
     }
     /*
     /END Legend part
@@ -3707,44 +3877,49 @@ JOB RESULTS/RECOMMENDATIONS
 }
 
 .job-results,.saved-content, .delete-items{
-	@include main-block;
+	width:100%;
 	text-align:center;
 	position:relative;
 	@include shadow;
 	margin-bottom:60px;
 	background:white;
-	@media only screen and (max-width:479px){
-		margin: 0px;
-		margin-bottom:60px;
-		width: 300px;
+	@media only screen and (max-width:768px){
+		margin-bottom:30px;
 	}
 	.icon-arrow-left-big-blue,.icon-arrow-right-big-blue{
 		position:absolute;top:50%;margin-top:-26px;
 		@include no_select;
-		@media only screen and (max-width: 479px){
-			top: 96%;
+		@media only screen and (max-width: 768px){
+            top:auto;
+			bottom:10px;
 		}
 	}
 	.icon-arrow-left-big-blue{
 		left:40px;
+        @media only screen and (max-width: 768px){
+            left:30px;
+		}
 	}
 	.icon-arrow-right-big-blue{
 		right:40px;
+        @media only screen and (max-width: 768px){
+            right:30px;
+		}
 	}
 	i:hover{
 		cursor:pointer;
 	}
 	.title{
-		font-size:20px;
+		@include font-size(20px);
 		padding:0px 25px;
 		padding-top:22px;
 		padding-bottom:20px;
 		border-bottom:1px solid $grey;
-		@media only screen and (max-width: 479px){
+		@media only screen and (max-width: 768px){
 			font-size:14px;
 			padding:0px 15px;
-			padding-top:12px;
-			padding-bottom:10px;
+			padding-top:17px;
+			padding-bottom:14px;
 		}
 	}
 	.content{
@@ -3752,9 +3927,17 @@ JOB RESULTS/RECOMMENDATIONS
 		.scrollable-content{
 			width:80%;
 			height:82%;
-			@media only screen and (max-width: 479px){
-				width: 100%;
-				height: 80%;
+            @media only screen and (max-width: 768px){
+				height: 84%;
+			}
+            @media only screen and (max-width: 768px) and (min-width:601px){
+				width: 560px;
+			}
+			@media only screen and (max-width: 600px) and (min-width:481px){
+				width: 440px;
+			}
+            @media only screen and (max-width: 480px){
+				width: 300px;
 			}
 		}
 		.scrollable{
@@ -3765,16 +3948,23 @@ JOB RESULTS/RECOMMENDATIONS
 			text-transform:uppercase;
 			height:100%;
 			width:187px;
-			@media only screen and (max-width: 479px){
+            //oblicated to do more decomposition because here the size can be given in percentage
+            @media only screen and (max-width: 768px) and (min-width:601px){
+				width: 112px;
+			}
+			@media only screen and (max-width: 600px) and (min-width:481px){
+				width: 110px;
+			}
+            @media only screen and (max-width: 480px){
 				width: 100px;
 			}
 			@include inline-top;
 		}
 		.pages{
 			text-align:center;
-			@media only screen and (max-width: 479px){
+			@media only screen and (max-width: 768px){
 				border-top: 1px $grey solid;
-				padding-top: 13px;
+				padding-top: 15px;
 			}
 			.activated{
 				background-color:$navcolor !important;
@@ -3782,9 +3972,11 @@ JOB RESULTS/RECOMMENDATIONS
 			.ball{
 				margin:0px 5px;
 				@include inline-top;
-				width:15px;height:15px;border-radius:10px;
+				width:15px;
+                height:15px;
+                border-radius:10px;
 				background-color:$lightBlue;
-				@media only screen and (max-width: 479px){
+				@media only screen and (max-width: 768px){
 					width:10px;height:10px;border-radius:7px;
 				}
 			}
@@ -3795,15 +3987,7 @@ JOB RESULTS/RECOMMENDATIONS
 	}
 }
 
-.job-results{
-	.content{
-		.scrollable-content{
-			@media only screen and (max-width: 479px){
-				height: 75%;
-			}
-		}
-	}
-}
+
 .resume-hero{
     .saved-content{
         .save:not(.selected){
@@ -3815,56 +3999,39 @@ JOB RESULTS/RECOMMENDATIONS
     .title{text-align:left;}
     .content{
         height:325px;
-		@media only screen and (max-width: 479px){
-			height: 200px;
+		@media only screen and (max-width: 768px){
+			height: 260px;
 		}
-        .scrollable-content{
-            height:85%;
-			@media only screen and (max-width: 479px){
-				height: 80%;
-			}
-        }
-		
         .save{
             margin-top:45px;
             position:relative;
             height:210px;
-            font-size:18px;
-			@media only screen and (max-width: 479px){
-				height: 160px;
+            @include font-size(18px);
+			@media only screen and (max-width: 768px){
+				height: auto;
 				margin-top:20px;
 			}
             .content-save{
                 position:absolute;
                 top:145px;
                 width:100%;
-				@media only screen and (max-width: 479px){
-					top: 75px;
+				@media only screen and (max-width: 768px){
+					top: 110px;
 				}
                 .name{
                     color:black;
                     margin-bottom:3px;
-					@media only screen and (max-width: 479px){
-						font-size: 15px;
-					}
+
                 }
                 .type{
-                    font-size:16px;
+                    @include font-size(16px);
                     line-height:18px;
                     color:$grey;
-					@media only screen and (max-width: 479px){
-						font-size:11px;
-						line-height:13px;
-					}
                 }
                 .date, .level{
-                    font-size:14px;
+                    @include font-size(14px);
                     line-height:16px;
                     color:$grey;
-					@media only screen and (max-width: 479px){
-						font-size:9px;
-						line-height:11px;
-					}
                 }
             }
         }
@@ -3878,30 +4045,27 @@ JOB RESULTS/RECOMMENDATIONS
                 margin-top:40px;
                 margin-bottom:20px;
             }
-            font-size:17px;
+            @include font-size(17px);
             .title-job{
                 color:black;
                 line-height:26px;
             }
             .info-job{
+                @include font-size(15px);
                 line-height:23px;
                 color:$grey;
             }
         }
-		@media only screen and (max-width:479px){
-			height: 150px;
+		@media only screen and (max-width:768px){
+            height: 210px;
+            .scrollable-content{
+                height:81%;
+            }
 			.job-recommandation{
 				 .icon-suitcase-job{
-					margin-top:15px;
-					margin-bottom:5px;
-				}
-				.title-job{
-					font-size: 13px;
-				}
-				.info-job{
-					font-size: 10px;
-					line-height: 12px;
-				}
+					margin-top:20px;
+					margin-bottom:10px;
+                }
 			}
 		}
     }
@@ -3911,8 +4075,11 @@ Dashboard
 */
 .dashboard{
     @include main-block;
-    .job-results{
+    .job-results,.saved-content{
         margin-bottom:25px;
+        @media only screen and (max-width: 768px){
+            margin-bottom:15px;
+        }
     }
     .resume{
         @include whitebox;
@@ -3920,7 +4087,7 @@ Dashboard
         margin-top:60px;
         margin-bottom:25px;
         @media only screen and (max-width: 768px){
-            margin-top:30px;
+            margin-top:15px;
             margin-bottom:15px;
         }
         > .left,>.right{
@@ -3942,6 +4109,10 @@ Dashboard
             }
         }
         .person{
+            @media only screen and (max-width: 768px) and (min-width: 481px){
+                width:50%;
+                height:300px;
+            }
             text-align:center;
             .icon-pencil{
                 position:absolute;
@@ -4006,9 +4177,17 @@ Dashboard
             }
         }
         .job-phase{
+            @media only screen and (max-width: 768px) and (min-width: 481px){
+                width:50%;
+                height:300px;
+            }
             @include font-size(20px);
             .title{
                 margin-bottom:10px;
+                @media only screen and (max-width: 768px) and (min-width: 481px){
+                    margin-bottom:30px;
+                    height:70px;
+                }
                 .txt{
                     width:70%;
                     margin-left:20px;
@@ -4048,9 +4227,6 @@ Dashboard
             }
         }
     }
-    .saved-content{
-        margin-bottom:25px;
-    }
     .job-results,.saved-content{
         .title{text-align:left;}
         .button-edit{
@@ -4060,6 +4236,8 @@ Dashboard
             position:relative;padding-left:10px;padding-right:40px;
             @media only screen and (max-width: 768px){
                 padding-top:10px; padding-bottom:4px;
+                margin-right:-7px;
+                margin-top:-9px;
             }
         }
     }
@@ -4205,6 +4383,7 @@ Dashboard
         .add-elem-input{
             @include font-size(16px);
             input{
+                width:100%;
                 padding:12px;
                 margin:0px;
                 padding-top:12px;
@@ -4245,6 +4424,9 @@ Dashboard
                 padding-top:12px;
                 padding-bottom:8px;
                 margin-bottom:20px;
+            }
+            @media only screen and (max-width: 768px){
+                margin-bottom:30px;
             }
         }
         .career-goals{

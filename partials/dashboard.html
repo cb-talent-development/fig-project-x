@@ -9,30 +9,6 @@
             <div class="mail">{{user.Mail}}</div>
 
         </div>
-        <div class="left presentation">
-            <table>
-                <tr>
-                    <td><div class="icon-pencil link" onclick="apparition($('.dashboard-popup'));movePopup($('.dashboard-popup'),4,true)"></div></td>
-                    <td><div class="icon-suitcase-red logo"></div></td>
-                    <td><div>{{user.JobTitle}}</div></td>
-                </tr>
-                <tr>
-                    <td><div class="icon-pencil link" onclick="apparition($('.dashboard-popup'));movePopup($('.dashboard-popup'),2,true)"></div></td>
-                    <td><div class="icon-building logo"></div></td>
-                    <td><div>{{user.Website}}</div></td>
-                </tr>
-                <tr>
-                    <td><div class="icon-pencil link" onclick="apparition($('.dashboard-popup'));movePopup($('.dashboard-popup'),2,true)"></div></td>
-                    <td><div class="icon-location logo"></div></td>
-                    <td><div>{{user.State}},&nbsp;{{user.Zipcode}}</div></td>
-                </tr>
-                <tr>
-                    <td><div class="icon-pencil link" onclick="apparition($('.dashboard-popup'));movePopup($('.dashboard-popup'),4,true)"></div></td>
-                    <td><div class="icon-dollars logo"></div></td>
-                    <td><div>{{user.Income}}</div></td>
-                </tr>
-            </table>
-        </div>
         <div class="right job-phase">
             <div class="title">
                 <div class="icon-pencil inline link" onclick="apparition($('.dashboard-popup'));movePopup($('.dashboard-popup'),3,true);            checkCursorPosition('.section2','.icon-cursor-orange-down','horizontal',true);"></div>
@@ -62,6 +38,30 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="left presentation">
+            <table>
+                <tr>
+                    <td><div class="icon-pencil link" onclick="apparition($('.dashboard-popup'));movePopup($('.dashboard-popup'),4,true)"></div></td>
+                    <td><div class="icon-suitcase-red logo"></div></td>
+                    <td><div>{{user.JobTitle}}</div></td>
+                </tr>
+                <tr>
+                    <td><div class="icon-pencil link" onclick="apparition($('.dashboard-popup'));movePopup($('.dashboard-popup'),2,true)"></div></td>
+                    <td><div class="icon-building logo"></div></td>
+                    <td><div>{{user.Website}}</div></td>
+                </tr>
+                <tr>
+                    <td><div class="icon-pencil link" onclick="apparition($('.dashboard-popup'));movePopup($('.dashboard-popup'),2,true)"></div></td>
+                    <td><div class="icon-location logo"></div></td>
+                    <td><div>{{user.State}},&nbsp;{{user.Zipcode}}</div></td>
+                </tr>
+                <tr>
+                    <td><div class="icon-pencil link" onclick="apparition($('.dashboard-popup'));movePopup($('.dashboard-popup'),4,true)"></div></td>
+                    <td><div class="icon-dollars logo"></div></td>
+                    <td><div>{{user.Income}}</div></td>
+                </tr>
+            </table>
         </div>
         <div class="clear"></div>
     </div>
