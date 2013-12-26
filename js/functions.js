@@ -494,20 +494,22 @@ function moveCursor(elem,cursor,first){
 Horizontal
 */
 function moveCursorHorizontal(elem,cursor,fast){
-    if(!lock){
-        if(!elem.hasClass("selected") || fast){
-            lock=true;
-            $(elem.parent()).find(".selected").removeClass("selected");
-            elem.addClass("selected");
-            var dist=elem.offset().left+(elem.width()/2)-cursor.offset().left-cursor.width()/2;
-            if(fast){
-                var pos=cursor.position().left+dist+"px";
-                cursor.css('left',pos);
-                unlock();
-            }else{
-                cursor.animate({'left':"+="+dist},config.time_anim,unlock)
+    if(window.innerWidth>768){
+        if(!lock){
+            if(!elem.hasClass("selected") || fast){
+                lock=true;
+                $(elem.parent()).find(".selected").removeClass("selected");
+                elem.addClass("selected");
+                var dist=elem.offset().left+(elem.width()/2)-cursor.offset().left-cursor.width()/2;
+                if(fast){
+                    var pos=cursor.position().left+dist+"px";
+                    cursor.css('left',pos);
+                    unlock();
+                }else{
+                    cursor.animate({'left':"+="+dist},config.time_anim,unlock)
+                }
             }
-        }
+         }
      }
 }
 /*

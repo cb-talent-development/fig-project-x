@@ -220,10 +220,14 @@ General buttons classes
         position:absolute;
         top:50%;
         right:15px;
+        @media only screen and (max-width: 768px){
+            right:6px;
+        }
     }
     @media only screen and (max-width: 768px){
-        padding-top:13px;
+        padding-top:14px;
         padding-bottom:10px;
+        padding-left:10px;padding-right:10px;
     }
 }
 
@@ -1306,7 +1310,7 @@ Width
 .select{
     @include shadow;
     @include button-style;
-    border-bottom:2px solid $lightGrey;
+    //border-bottom:2px solid $lightGrey;
     b,i{margin-top:-4.5px;}
     .subMenu{
         @include shadow;
@@ -1341,7 +1345,7 @@ Width
         width:100%;
         height:100%;
         @media only screen and (max-width: 768px){
-            padding:0px;
+           padding-top:14px;padding-bottom:10px;padding-left:10px;padding-right:10px;  
         }
     }
     .icon-search{
@@ -2640,31 +2644,27 @@ DIALOG
         position:relative;display:none;
         width:60%;margin:auto;margin-top:140px;background-color:rgb(243,245,245);
         margin-bottom:140px;//security
-		@media only screen and (max-width:479px){
-			width: 300px;
-		}
         .header{
             position:relative;
-            font-size:27px;padding-left:30px;
+            @include font-size(27px);
+            padding-left:30px;
             padding-right:15px;
             padding-top:20px;
 			padding-bottom: 20px;
             font-weight:bold;
             border-bottom:1px solid $lightGrey;
-			@media only screen and (max-width: 479px){
-				font-size: 15px;
-				padding: 10px;
-				height: 60px;
-			}
             .close{
                 position:absolute;
 				right: 20px;
+                padding-right:15px;
 				top:20px;
-				@media only screen and (max-width: 479px){
-					right:10px;
-					top:10px;
-				}
             }
+            @media only screen and (max-width: 768px){
+				padding-left:20px;
+                padding-right:30px;
+                padding-top:20px;
+			    padding-bottom: 12px;
+			}
         }
         .intro{
             width:100%;
@@ -2679,17 +2679,29 @@ DIALOG
         .content{width:100%;}
         .footer-dialog{
             padding:20px;
+            @media only screen and (max-width:768px){
+                padding:10px;
+            }
 			.button-save,.button-next,.button-previous{
 				position:relative;
 				padding:0px 14px;
 				padding-top:12px;
 				padding-bottom:7px;
+                @media only screen and (max-width:768px){
+                    paddinh:0px 10px;
+                    padding-top:10px;
+                    padding-bottom:5px;
+                    
+                }
 			}
 			.button-next,.button-previous{
 				i{
 					position:absolute;
 					top:50%;
 					margin-top:-8.5px;
+                    @media only screen and (max-width:768px){
+                        margin-top:-6px;
+                    }
 				}
 			}
 			.button-previous[class~=selected],.button-next[class~=selected]{
@@ -2699,27 +2711,19 @@ DIALOG
 				padding-left:40px;
 				margin-right:15px;
 				i{left:15px;}
+                @media only screen and (max-width:768px){
+                    padding-left:24px;
+                    margin-right:5px;
+                    i{left:8px;}
+                }
 			}
 			.button-next{
 				padding-right:40px;
 				i{right:15px;}
-			}
-			@media only screen and (max-width:479px){
-				padding: 10px;
-				.button-save,.button-next,.button-previous{
-					font-size: 15px;
-					padding:5px
-				}
-				.button-next,.button-previous{
-					i{
-						position:absolute;
-						top:10px;
-						right: 10px;
-					}
-				}
-				.button:first-child{
-					margin-right: 10px;
-				}
+                @media only screen and (max-width:768px){
+                    padding-right:24px;
+                    i{right:8px;}
+                }
 			}
         }
     }
@@ -3268,10 +3272,19 @@ SOCIAL
     }
 }
 .dashboard-popup, .get-started-resume{
+    .scrollable-content{
+        width:1250px;
+        @media only screen and (max-width: 768px){
+            width:100%;
+        }
+    }
     .scrollable{
         //option 1
         width:800%;
         min-width:8 * 1250px;
+        @media only screen and (max-width: 768px){
+            min-width:0px;
+        }
     }
     .section-wrapper{
         width:12.5%;
@@ -3280,6 +3293,9 @@ SOCIAL
     .section{
         //width:90%;
         width:1204px;
+        @media only screen and (max-width: 768px){
+            width:90%;
+        }
         .header{
             @include font-size(24px);
             .grey{
@@ -3288,6 +3304,9 @@ SOCIAL
         }
         .step{
             width:1204px;
+            @media only screen and (max-width: 768px){
+                width:100%;
+            }
         }
         .step1{
             display:none;
@@ -3320,6 +3339,9 @@ SOCIAL
         .custom-radio{
             @include font-size(23px);
             color:$darkGrey;
+            @media only screen and (max-width: 768px){
+                font-size:17px;
+            }
         }
         .message{
             @include font-size(17px);
@@ -3327,13 +3349,37 @@ SOCIAL
             color:rgb(178,178,178);
             margin-bottom:10px;
         }
-        .optional{color:$lightGrey;text-transform:uppercase;font-size:17px;}
+        .optional{
+            color:$lightGrey;
+            text-transform:uppercase;
+            @include font-size(17px);
+            @media only screen and (max-width: 768px){
+                display:none;
+            }
+        }
         .select,input,input[placeholder]{  
             padding-top:20px;padding-bottom:16px;
-            @include font-size(23px);
+            font-size:23px;
+            @media only screen and (max-width: 768px){
+                padding-top:15px;
+                padding-bottom:10px;
+                font-size:16px
+            }
         }   
-        .large{width:465px;margin-right:25px;}
-        .medium{width:370px;margin-right:25px;}
+        .large{width:465px;margin-right:25px;
+            @media only screen and (max-width: 768px){
+                width:48%;
+                margin-right:4%;
+                margin-bottom:15px;
+            }
+        }
+        .medium{width:370px;margin-right:25px;
+            @media only screen and (max-width: 768px){
+                width:48%;
+                margin-right:4%;
+                margin-bottom:15px;
+            }   
+        }
         .last{
             margin-right:0px;
         }
@@ -3342,13 +3388,51 @@ SOCIAL
                 margin-right:0px;
             }
         }
+        .email-address,.street,.industry-goal{
+            @media only screen and (max-width: 768px){
+                width:100% !important;
+                margin-right:0% !important;   
+            }
+        }
         .address{
             .street{margin-bottom:20px;}
-            .large{width:365px;margin-right:25px;}
-            .medium{width:170px;margin-right:25px;}
+            .large{
+               width:365px;margin-right:25px;
+               @media only screen and (max-width: 768px){
+                    width:48%;
+                    margin-right:4%;
+                    margin-bottom:15px;
+                }  
+            }
+            .medium{width:170px;margin-right:25px;
+                @media only screen and (max-width: 768px){
+                    width:48%;
+                    margin-right:4%;
+                    margin-bottom:15px;
+                } 
+            }
         }
         .general{
-            .gender{margin-right:149px;
+            .age,.gender{
+                @media only screen and (max-width: 768px){
+                        width:50%;
+                    }
+            }
+            .age{
+              .large,.medium,.message{
+                    @media only screen and (max-width: 768px){
+                        width:100%;
+                        margin-right:0%;
+                        margin-left:0%;
+                        margin-bottom:15px;
+                    } 
+                }  
+            }
+            .gender{
+                margin-right:149px;
+                @media only screen and (max-width: 768px){
+                    margin-right:0px;
+                }
                 .custom-checkbox{margin-top:15px;}
             }
             
@@ -3359,6 +3443,10 @@ SOCIAL
                 margin-top:20px;
                 margin-bottom:45px;
                 position:relative;
+                @media only screen and (max-width: 768px){
+                    margin-bottom:20px;
+                    display:none;
+                }
                 .bar{
                     border-radius:8px;
                     height:15px;
@@ -3380,7 +3468,16 @@ SOCIAL
                 height:295px;
                 text-align:center;
                 margin-bottom:15px;
-                .title{font-size:20px;padding-top:20px;padding-bottom:25px;
+                @media only screen and (max-width: 768px){
+                    width:48%;
+                    height:275px;
+                }
+                .title{
+                    @include font-size(20px);
+                    padding-top:20px;padding-bottom:25px;
+                    @media only screen and (max-width: 768px){
+                        padding-top:15px;padding-bottom:15px;
+                    }
                     .logo{
                         margin-bottom:15px;
                     }
@@ -3393,11 +3490,23 @@ SOCIAL
                     padding-top:25px;
                     @include webkit-box;
                     -webkit-line-clamp: 6;
+                    @media only screen and (max-width: 768px){
+                        padding:10px;
+                        padding-bottom:0px;
+                        -webkit-line-clamp: 8;
+                    }
                 }
             }
-            .left{margin-right:2.2%;}
+            .left{margin-right:2.2%;
+                @media only screen and (max-width: 768px){
+                    margin-right:4%;
+                }
+            }
             .before-last{
                 margin-right:0px;
+                @media only screen and (max-width: 768px){
+                    margin-right:4%;
+                }
             }
              .phase[class~="selected"]{
                 opacity:1;
@@ -3455,11 +3564,22 @@ SOCIAL
         .selectable-title{
             padding:20px;
             padding-bottom:5px;
+            position:relative;
             padding-top:35px;
-            @include font-size(47px);
+            font-size: 47px;
+            @media only screen and (max-width: 768px){
+                font-size:25px;
+                padding:10px;
+                padding-top:20px;
+                padding-bottom:5px;
+                
+            }
             .selectable-button{
                 display:inline-block;
                 width:33px;
+                @media only screen and (max-width: 768px){
+                    width:18px;
+                }
                 .icon-plus{
                     position:relative;
                     top:1px;
@@ -3469,6 +3589,9 @@ SOCIAL
                     position:relative;
                     top:-14px;
                     display:none;
+                    @media only screen and (max-width: 768px){
+                        top:-7px;
+                    }
                 }
             }
             .selectable-button[class~=selected]{
@@ -3481,7 +3604,14 @@ SOCIAL
             }
             .icon-completed{
                 i{
-                    top:6px;
+                    position:absolute;
+                    right:30px;
+                    top:30px;
+                    @media only screen and (max-width: 768px){
+                        top:auto;
+                        bottom:9px;
+                        right:10px;
+                    }
                     margin-right:0px;
                 }
             }
@@ -3492,22 +3622,44 @@ SOCIAL
             display:none;
             padding:50px 20px;
             padding-bottom:0px;
+            @media only screen and (max-width: 768px){
+                padding:10px 10px;
+                padding-top:20px;
+                padding-bottom:0px;
+            }
             .check-box-1{
                 float:left;
                 padding-bottom:30px;
                 padding-right:3.5%;
                 width:33.3%;
                 @include font-size(19px);
+                @media only screen and (max-width: 768px){
+                    width:100%;
+                    padding-right:0%;
+                    padding-bottom:10px;
+                }
             }
         }
         .goals{
             .medium{
                 width:363px;
+                @media only screen and (max-width: 768px){
+                   width:100%;
+                }
+            }
+            .left,.right{
+                @media only screen and (max-width: 768px){
+                   width:100%;
+                }
             }
             .selectable-content{
                 padding:20px;
                 padding-top:30px;
                 border-bottom:1px solid rgb(201,202,203);
+                @media only screen and (max-width: 768px){
+                    padding:10px 10px;
+                    padding-top:20px;
+                }
             }
         }
         .footer-dialog{
@@ -3519,6 +3671,9 @@ SOCIAL
         .user-info{
             .name-info{
                 margin-bottom:20px;
+                @media only screen and (max-width: 768px){
+                    margin-bottom:0px;
+                }
             }
             .explanation{
                 width:59%;
@@ -3538,6 +3693,15 @@ SOCIAL
                     margin:0px 3px;
                 }
             }   
+        }
+        .right-resp{
+            @media only screen and (max-width: 768px){
+                float:right;
+                margin-left:0px !important;
+                margin-right:0px !important;
+                margin-top:0px;
+                margin-bottom:15px;
+            }  
         }
     }
     .section-photo{
@@ -4096,7 +4260,8 @@ Dashboard
             padding:45px 30px;
             width:33.31%;
             @media only screen and (max-width: 768px){
-                padding:20px;
+                padding:10px;
+                padding-top:20px;
                 width:100%;
                 height:auto;
                 border-bottom:1px solid $lightGrey;
@@ -4120,7 +4285,7 @@ Dashboard
                 left:30px;
                 @media only screen and (max-width: 768px){
                     top:20px;
-                    left:20px;
+                    left:10px;
                 }
                 
             }
@@ -4130,7 +4295,7 @@ Dashboard
                 left:30px;
                 @media only screen and (max-width: 768px){
                     top:223px;
-                    left:20px;
+                    left:10px;
                 }
             }
             .picture{

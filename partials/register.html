@@ -42,7 +42,7 @@
                                 <span>Sign Up With Facebook</span>
                                 <i class="icon-bigarrow-right-white"></i>
                             </div>
-                            <div class="button-google button-social left medium link" ng-click="register.googleConnect()">
+                            <div class="button-google button-social left medium right-resp link" ng-click="register.googleConnect()">
                                 <span>Sign Up With Google+</span>
                                 <i class="icon-bigarrow-right-white"></i>
                             </div>
@@ -54,10 +54,10 @@
                                <div class="input-button medium left">
                                     <input ng-model="register.userInfo.firstName.value" placeholder="First Name"/>
                                 </div>
-                                <div class="input-button medium left">
+                                <div class="input-button medium right-resp left">
                                     <input ng-model="register.userInfo.lastName.value" placeholder="Last Name"/>
                                 </div>
-                                <div class="input-button medium last right">
+                                <div class="input-button medium last right email-address">
                                     <input ng-model="register.userInfo.email.value" placeholder="Email Address"/>
                                 </div>
                                    
@@ -66,7 +66,7 @@
                             <div class="input-button medium left">
                                 <input ng-model="register.userInfo.password.value" placeholder="Password"/>
                             </div>
-                            <div class="input-button medium left">
+                            <div class="input-button medium left right-resp">
                                 <input ng-model="register.userInfo.confirmPassword.value" placeholder="Confirm Password"/>
                             </div>
                            <div class="clear"></div>
@@ -77,10 +77,10 @@
                                <div class="input-button medium left">
                                     <input ng-model="register.userInfo.firstName.value" placeholder="First Name"/>
                                 </div>
-                                <div class="input-button medium left">
+                                <div class="input-button medium left right-resp">
                                     <input ng-model="register.userInfo.lastName.value" placeholder="Last Name"/>
                                 </div>
-                                <div class="input-button medium last right">
+                                <div class="input-button medium last right email-address">
                                     <input ng-model="register.userInfo.email.value" placeholder="Email Address"/>
                                 </div>
                                    
@@ -89,7 +89,7 @@
                             <div class="input-button medium left">
                                 <input ng-model="register.userInfo.password.value" placeholder="New Password"/>
                             </div>
-                            <div class="input-button medium left">
+                            <div class="input-button medium left right-resp">
                                 <input ng-model="register.userInfo.confirmPassword.value" placeholder="Confirm New Password"/>
                             </div>
                            <div class="clear"></div>
@@ -130,7 +130,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="left">
+                            <div class="left age">
                                 <div class="message large"><span>enter your age range:</span><span class="right optional">optional</span></div>
                                 <div class="large select toggleMenu">
                                     <span class="title">{{register.userInfo.age.value}}</span><b class="icon-bigarrow-bottom-grey grey-icon"></b>
@@ -151,7 +151,7 @@
                                 <div class="input-button medium left">
                                     <input ng-model="register.userInfo.address.apt.value" placeholder="Apt/Suite"/>
                                 </div>
-                                <div class="input-button large left">
+                                <div class="input-button large left right-resp">
                                     <input ng-model="register.userInfo.address.city.value" placeholder="City"/>
                                 </div>
                             </div>
@@ -163,7 +163,7 @@
                                     <div ng-repeat="state in register.lists.states" select data-value="state" data-elem="register.userInfo.address.state.value">{{state}}</div>
                                 </div>
                             </div>
-                            <div class="input-button medium left">
+                            <div class="input-button medium left right-resp">
                                 <input ng-model="register.userInfo.address.zipcode.value" placeholder="Zipcode"/>
                             </div>
                             <div class="clear"></div>
@@ -207,7 +207,7 @@
                                     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec felis sed leo placerat imperdiet. Curabitur eu amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor."
                                 </div>
                             </div>
-                            <div class="phase left link" ng-class="{true:'selected',false:''}[register.userInfo.job.phase=='Find the Job']"  onclick="moveCursorHorizontal($(this),$('.icon-cursor-orange-down'));" ng-click="register.setJobPhase('Find the Job')">
+                            <div class="phase left link right-resp" ng-class="{true:'selected',false:''}[register.userInfo.job.phase=='Find the Job']"  onclick="moveCursorHorizontal($(this),$('.icon-cursor-orange-down'));" ng-click="register.setJobPhase('Find the Job')">
                                 <div class="title">
                                     <div class="icon-twin-blue-big logo"></div>
                                     <div>Find the Job</div>
