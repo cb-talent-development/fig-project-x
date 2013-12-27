@@ -1505,6 +1505,27 @@ ICON SAVED
 	}
 }
 /*
+Icon tool saved
+*/
+.icon-resumeHero-saved-big{
+	@include dimensionPosition(-1125px,-589px,120px,105px,1.4);
+    @media only screen and (max-width: 768px){
+	   @include dimensionPosition(-1125px,-589px,120px,105px,1);
+	}
+}
+.icon-locallygrown-saved-big{
+	@include dimensionPosition(-893px,-744px,115px,115px,1.4);
+    @media only screen and (max-width: 768px){
+	   @include dimensionPosition(-893px,-744px,115px,115px,1);
+	}
+}
+.icon-careerscape-saved-big{
+    @include dimensionPosition(-1045px,-740px,120px,115px,1.4);
+    @media only screen and (max-width: 768px){
+        @include dimensionPosition(-1045px,-740px,120px,115px,1);
+	}
+}
+/*
 ICON PRESENTATION (ONLY FOUR)
 */
 .icon-resumeHero-presentation{

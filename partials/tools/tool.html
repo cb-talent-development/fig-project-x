@@ -22,23 +22,6 @@
         <div class="clear"></div>
     </div>
     <div ng-include="template"></div>
-    <div class="save-section dialog">
-        <div class="background" onclick="disparition($('.save-section'))"></div>
-        <div class="section">
-            <div class="header">
-                <span class="title">Save&nbsp;{{title.part1}}{{title.part2}}&nbsp;Search</span><i class="icon-x-black close" onclick="disparition($('.save-section'))"></i>
-            </div>
-            <div class="content">
-                <div class="icon-locallygrown-save logo"></div>
-                <div class="search-button">
-                    <input placeholder="Search"/>
-                </div>
-            </div>
-            <div class="footer-dialog">
-                <div class="button back-green" onclick="">Save & Close</div>
-                <div class="clear"></div>
-            </div>
-        </div>
-    </div>
+    <div ng-include="'partials/tools/parts/saved.html'"></div>
 </div>
 <div ng-include="'partials/register.html'"></div>

@@ -1,0 +1,18 @@
+<div class="save-section dialog">
+    <div class="background" onclick="disparition($('.save-section'))"></div>
+    <div class="section">
+        <div class="header">
+            <span class="title">Save {{title.part1}}{{title.part2}} Search</span><i class="icon-x-black close" onclick="disparition($('.save-section'))"></i>
+        </div>
+        <div class="content">
+            <div class="{{logo_saved}} logo"></div>
+            <div class="input-button">
+                <input ng-model="$parent.input_saved_search" placeholder="Search Name"/>
+            </div>
+        </div>
+        <div class="footer-dialog">
+            <div class="button-save back-green right" ng-click="save_search()" onclick="disparition($('.save-section'))">Save & Close</div>
+            <div class="clear"></div>
+        </div>
+    </div>
+</div>

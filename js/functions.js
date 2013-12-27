@@ -369,7 +369,6 @@ function toggleEffect(event){
 function simpleSlideEffect(button,elem){
     if(!lock){
         lock=true;
-        console.log("simple");
         if(!button.hasClass("selected")){
             button.addClass("selected");
         }

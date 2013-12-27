@@ -52,6 +52,7 @@ function ToolCtr($scope, $http,$routeParams,pagination,register) {
             $http.get("data/json/occupations.json").success(function(data) {
                 // Job recommandation
                 $scope.occupations=data.occupations;
+                $scope.occupation_checkbox=[];
 	       });
         }
     }
@@ -95,6 +96,16 @@ function ToolCtr($scope, $http,$routeParams,pagination,register) {
 	       });
         }
     }
+    /*
+    Saved search
+    */
+    $scope.save_search=function(){
+        console.log("Search Name : "+$scope.input_saved_search+", Have to save : "+$scope.savedIndustry);
+        console.log($scope.occupation_checkbox);
+    }
+    /*
+    Constructor
+    */
     $scope.init=function(){
         init($scope,register);
         var name=$routeParams.toolName;
@@ -103,31 +114,36 @@ function ToolCtr($scope, $http,$routeParams,pagination,register) {
         $scope.occupations=[];
 		$scope.resumeHero=[];
         $scope.industries=[];
+        $scope.input_saved_search="";
         if(name=="career-scape"){
             $scope.txt="Career Scape";
             $scope.template="partials/tools/careerScape.html";
             $scope.title={"part1":"Career","part2":"Scape"};
             $scope.logo="icon-careerscape-small";
+            $scope.logo_saved="icon-careerscape-saved-big";
         }
         else if(name=="locally-grown"){
             $scope.txt="Locally Grown";
             $scope.template="partials/tools/locallyGrown.html";
             $scope.title={"part1":"Locally","part2":"Grown"};
             $scope.logo="icon-localygrown-small";
+            $scope.logo_saved="icon-locallygrown-saved-big";
 
         }
-        else if(name=="jobinality"){
+        /*else if(name=="jobinality"){
             $scope.txt="Jobinality";
             $scope.template="partials/tools/jobinality.html";
             $scope.title={"part1":"Job","part2":"inality"};
             $scope.logo="icon-jobinality-small";
+            $scope.logo_saved="icon-jobinality-saved";
 
-        }
+        }*/
         else if(name=="resume-hero"){
             $scope.txt="Resume Hero";
             $scope.template="partials/tools/resumeHero.html";
             $scope.title={"part1":"Resume","part2":"Hero"};
             $scope.logo="icon-resumeHero-small";
+            $scope.logo_saved="icon-resumeHero-saved-big";
         }
         $scope.paths=[{
             "txt":"Career Tools /",

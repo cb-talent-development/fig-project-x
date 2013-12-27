@@ -212,7 +212,7 @@ General buttons classes
     @include font-size(18px);
     @include inline-top; 
     position:relative;
-    padding-top:16px;padding-bottom:9px;
+    padding-top:15px;padding-bottom:9px;
     padding-left:15px;padding-right:15px;
     text-align:left;
     color:$darkGrey;
@@ -225,8 +225,8 @@ General buttons classes
         }
     }
     @media only screen and (max-width: 768px){
-        padding-top:14px;
-        padding-bottom:10px;
+        padding-top:15px;
+        padding-bottom:9px;
         padding-left:10px;padding-right:10px;
     }
 }
@@ -2499,7 +2499,7 @@ General social CSS
         border-radius:30px;
         margin-right:12px;
         @media only screen and (max-width: 768px) {
-            margin:0px 4px !important;
+            margin:0% 0.7% !important;
         }
     }
     .icon-social:hover{
@@ -2647,7 +2647,7 @@ Tools dashboard & tool css
 DIALOG
 */
 .dialog{
-    z-index:300;
+    z-index:3000;
     display:none;
     position:absolute;top:0px;left:0px;right:0px;width:100%;height:100%;
     .background{
@@ -2686,8 +2686,11 @@ DIALOG
             border-bottom:1px solid $lightGrey;
             td{
                 vertical-align:middle;
+            }
+            .descr{
+                padding:15px;
                 @media only screen and (max-width: 768px){
-                    padding:10px;
+                    padding:10px 8px;
                 }
             }
             $rapp-helper:0.6;
@@ -2723,7 +2726,8 @@ DIALOG
 				padding-top:12px;
 				padding-bottom:7px;
                 @media only screen and (max-width:768px){
-                    paddinh:0px 10px;
+                    padding:0px 12px;
+                    font-size:14px;
                     padding-top:10px;
                     padding-bottom:5px;
                     
@@ -2879,6 +2883,7 @@ Tool CSS
 							}
 			.icon-bar-grey{
 				padding-top: 3px;
+                margin:9px 1%;
 			}
 			.icon-question-big{
 				display: inline-block !important;
@@ -3085,7 +3090,7 @@ Tool CSS
         .section{
             width:1050px;
             @media only screen and (max-width: 768px){
-                width:80%;
+                width:90%;
             }
             .content{
                 @include font-size(17px);
@@ -3110,10 +3115,34 @@ Tool CSS
     }
     .save-section{
         .section{
-            width:60%;
-            .content{  border-bottom:1px solid $lightGrey;text-align:center;
-                .logo{ display:block;margin:auto; }
+            width: 610px;
+            @media only screen and (max-width: 768px){
+				width: 90%;
+			}
+            .content{  
+                border-bottom:1px solid $lightGrey;text-align:center;
+                .logo{ 
+                    display:block;
+                    margin:auto;
+                    margin-bottom:45px;
+                    margin-top:25px;
+                    @media only screen and (max-width: 768px){
+                        margin-top:10px;
+                        margin-bottom:25px;
+                    }
+                }
                 input{ margin:auto; }
+                .input-button{
+                   width:370px;
+                   margin-bottom:25px;
+                   @media only screen and (max-width: 768px){
+				        width: 60%;
+                        margin-bottom:10px;
+			       } 
+                   @media only screen and (max-width: 480px){
+				        width: 100%;
+			       } 
+                }
             }
             .footer-dialog{
                 
@@ -3126,8 +3155,8 @@ Tool CSS
 	.add-section{
 		.section{
 			width: 1200px;
-			@media only screen and (max-width: 479px){
-				width: 300px;
+			@media only screen and (max-width: 768px){
+				width: 90%;
 				.header{
 					padding: 5px;
 				}
@@ -3318,8 +3347,10 @@ SOCIAL
     background-color:rgb(54,83,139);
 }
 .dashboard-popup,.get-started-resume{
-    .steps{
-        text-align:center;
+    .steps-content{
+       @media only screen and (max-width: 768px){
+           display:none;
+        }
     }
     .content{
         padding: 20px;
@@ -3440,7 +3471,7 @@ SOCIAL
             }
         }
         .select,input,input[placeholder]{  
-            padding-top:20px;padding-bottom:16px;
+            padding-top:20px;padding-bottom:14px;
             font-size:23px;
             @media only screen and (max-width: 768px){
                 padding-top:15px;
@@ -3800,7 +3831,6 @@ SOCIAL
                 }
             }
             .medium{
-                width:363px;
                 @media only screen and (max-width: 768px){
                    width:100%;
                 }
@@ -4329,8 +4359,11 @@ JOB RESULTS/RECOMMENDATIONS
 			@media only screen and (max-width: 600px) and (min-width:481px){
 				width: 440px;
 			}
-            @media only screen and (max-width: 480px){
-				width: 300px;
+            @media only screen and (max-width: 480px) and (min-width:401px){
+				width: 330px;
+			}
+            @media only screen and (max-width: 400px){
+				width: 276px;
 			}
 		}
 		.scrollable{
@@ -4342,14 +4375,20 @@ JOB RESULTS/RECOMMENDATIONS
 			height:100%;
 			width:187px;
             //oblicated to do more decomposition because here the size can be given in percentage
+            //5 elements
             @media only screen and (max-width: 768px) and (min-width:601px){
 				width: 112px;
 			}
+            //4 elements
 			@media only screen and (max-width: 600px) and (min-width:481px){
 				width: 110px;
 			}
-            @media only screen and (max-width: 480px){
-				width: 100px;
+            //3 elements
+            @media only screen and (max-width: 480px) and (min-width:401px){
+				width: 110px;
+			}
+            @media only screen and (max-width: 400px){
+				width: 92px;
 			}
 			@include inline-top;
 		}

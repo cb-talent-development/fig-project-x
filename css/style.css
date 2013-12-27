@@ -963,7 +963,7 @@ Width
   display: inline-block;
   vertical-align: top;
   position: relative;
-  padding-top: 16px;
+  padding-top: 15px;
   padding-bottom: 9px;
   padding-left: 15px;
   padding-right: 15px;
@@ -984,8 +984,8 @@ Width
         right: 8px; } }
   @media only screen and (max-width: 768px) {
     .button, .input-button, .btn {
-      padding-top: 14px;
-      padding-bottom: 10px;
+      padding-top: 15px;
+      padding-bottom: 9px;
       padding-left: 10px;
       padding-right: 10px; } }
 
@@ -1004,7 +1004,7 @@ Width
   display: inline-block;
   vertical-align: top;
   position: relative;
-  padding-top: 16px;
+  padding-top: 15px;
   padding-bottom: 9px;
   padding-left: 15px;
   padding-right: 15px;
@@ -1025,8 +1025,8 @@ Width
         right: 8px; } }
   @media only screen and (max-width: 768px) {
     .select {
-      padding-top: 14px;
-      padding-bottom: 10px;
+      padding-top: 15px;
+      padding-bottom: 9px;
       padding-left: 10px;
       padding-right: 10px; } }
   .select b, .select i {
@@ -3238,7 +3238,7 @@ General social CSS
   margin-right: 12px; }
   @media only screen and (max-width: 768px) {
     .social .icon-social {
-      margin: 0px 4px !important; } }
+      margin: 0% 0.7% !important; } }
 .social .icon-social:hover {
   cursor: pointer;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
@@ -3405,7 +3405,7 @@ Tools dashboard & tool css
 DIALOG
 */
 .dialog {
-  z-index: 300;
+  z-index: 3000;
   display: none;
   position: absolute;
   top: 0px;
@@ -3463,9 +3463,11 @@ DIALOG
       border-bottom: 1px solid #cfcfcf; }
       .dialog .section .intro td {
         vertical-align: middle; }
+      .dialog .section .intro .descr {
+        padding: 15px; }
         @media only screen and (max-width: 768px) {
-          .dialog .section .intro td {
-            padding: 10px; } }
+          .dialog .section .intro .descr {
+            padding: 10px 8px; } }
       .dialog .section .intro .logo {
         position: relative;
         top: 26px;
@@ -3498,7 +3500,8 @@ DIALOG
         padding-bottom: 7px; }
         @media only screen and (max-width: 768px) {
           .dialog .section .footer-dialog .button-save, .dialog .section .footer-dialog .button-next, .dialog .section .footer-dialog .button-previous {
-            paddinh: 0px 10px;
+            padding: 0px 12px;
+            font-size: 14px;
             padding-top: 10px;
             padding-bottom: 5px; } }
       .dialog .section .footer-dialog .button-next i, .dialog .section .footer-dialog .button-previous i {
@@ -3646,7 +3649,8 @@ Tool CSS
             position: absolute;
             bottom: 20px; }
         .tool .header-tool .icon-bar-grey {
-          padding-top: 3px; }
+          padding-top: 3px;
+          margin: 9px 1%; }
         .tool .header-tool .icon-question-big {
           display: inline-block !important; } }
           @media only screen and (max-width: 768px) and (max-width: 768px) {
@@ -3859,7 +3863,7 @@ Tool CSS
       width: 1050px; }
       @media only screen and (max-width: 768px) {
         .tool .help-section .section {
-          width: 80%; } }
+          width: 90%; } }
       .tool .help-section .section .content {
         font-size: 17px; }
         @media only screen and (min-width: 481px) and (max-width: 768px) {
@@ -3883,22 +3887,41 @@ Tool CSS
             .tool .help-section .section .content .image {
               margin-bottom: 10px; } }
   .tool .save-section .section {
-    width: 60%; }
+    width: 610px; }
+    @media only screen and (max-width: 768px) {
+      .tool .save-section .section {
+        width: 90%; } }
     .tool .save-section .section .content {
       border-bottom: 1px solid #cfcfcf;
       text-align: center; }
       .tool .save-section .section .content .logo {
         display: block;
-        margin: auto; }
+        margin: auto;
+        margin-bottom: 45px;
+        margin-top: 25px; }
+        @media only screen and (max-width: 768px) {
+          .tool .save-section .section .content .logo {
+            margin-top: 10px;
+            margin-bottom: 25px; } }
       .tool .save-section .section .content input {
         margin: auto; }
+      .tool .save-section .section .content .input-button {
+        width: 370px;
+        margin-bottom: 25px; }
+        @media only screen and (max-width: 768px) {
+          .tool .save-section .section .content .input-button {
+            width: 60%;
+            margin-bottom: 10px; } }
+        @media only screen and (max-width: 480px) {
+          .tool .save-section .section .content .input-button {
+            width: 100%; } }
     .tool .save-section .section .footer-dialog .button, .tool .save-section .section .footer-dialog .input-button {
       float: right; }
   .tool .add-section .section {
     width: 1200px; }
-    @media only screen and (max-width: 479px) {
+    @media only screen and (max-width: 768px) {
       .tool .add-section .section {
-        width: 300px; }
+        width: 90%; }
         .tool .add-section .section .header {
           padding: 5px; } }
     .tool .add-section .section .header {
@@ -4063,8 +4086,9 @@ SOCIAL
 .button-facebook:hover {
   background-color: #36538b; }
 
-.dashboard-popup .steps, .get-started-resume .steps {
-  text-align: center; }
+@media only screen and (max-width: 768px) {
+  .dashboard-popup .steps-content, .get-started-resume .steps-content {
+    display: none; } }
 .dashboard-popup .content, .get-started-resume .content {
   padding: 20px;
   border-bottom: 1px solid #cfcfcf; }
@@ -4188,7 +4212,7 @@ SOCIAL
         display: none; } }
   .dashboard-popup .section .select, .dashboard-popup .section input, .dashboard-popup .section input[placeholder], .get-started-resume .section .select, .get-started-resume .section input, .get-started-resume .section input[placeholder] {
     padding-top: 20px;
-    padding-bottom: 16px;
+    padding-bottom: 14px;
     font-size: 23px; }
     @media only screen and (max-width: 768px) {
       .dashboard-popup .section .select, .dashboard-popup .section input, .dashboard-popup .section input[placeholder], .get-started-resume .section .select, .get-started-resume .section input, .get-started-resume .section input[placeholder] {
@@ -4525,11 +4549,9 @@ SOCIAL
   @media only screen and (max-width: 768px) {
     .dashboard-popup .section .goals .message, .get-started-resume .section .goals .message {
       margin-top: 5px; } }
-  .dashboard-popup .section .goals .medium, .get-started-resume .section .goals .medium {
-    width: 363px; }
-    @media only screen and (max-width: 768px) {
-      .dashboard-popup .section .goals .medium, .get-started-resume .section .goals .medium {
-        width: 100%; } }
+  @media only screen and (max-width: 768px) {
+    .dashboard-popup .section .goals .medium, .get-started-resume .section .goals .medium {
+      width: 100%; } }
   @media only screen and (max-width: 768px) {
     .dashboard-popup .section .goals .left, .dashboard-popup .section .goals .right, .get-started-resume .section .goals .left, .get-started-resume .section .goals .right {
       width: 100%; } }
@@ -5007,9 +5029,12 @@ JOB RESULTS/RECOMMENDATIONS
       @media only screen and (max-width: 600px) and (min-width: 481px) {
         .job-results .content .scrollable-content, .saved-content .content .scrollable-content, .delete-items .content .scrollable-content {
           width: 440px; } }
-      @media only screen and (max-width: 480px) {
+      @media only screen and (max-width: 480px) and (min-width: 401px) {
         .job-results .content .scrollable-content, .saved-content .content .scrollable-content, .delete-items .content .scrollable-content {
-          width: 300px; } }
+          width: 330px; } }
+      @media only screen and (max-width: 400px) {
+        .job-results .content .scrollable-content, .saved-content .content .scrollable-content, .delete-items .content .scrollable-content {
+          width: 276px; } }
     .job-results .content .scrollable, .saved-content .content .scrollable, .delete-items .content .scrollable {
       height: 100%; }
     .job-results .content .job-recommandation, .job-results .content .save, .saved-content .content .job-recommandation, .saved-content .content .save, .delete-items .content .job-recommandation, .delete-items .content .save {
@@ -5025,9 +5050,12 @@ JOB RESULTS/RECOMMENDATIONS
       @media only screen and (max-width: 600px) and (min-width: 481px) {
         .job-results .content .job-recommandation, .job-results .content .save, .saved-content .content .job-recommandation, .saved-content .content .save, .delete-items .content .job-recommandation, .delete-items .content .save {
           width: 110px; } }
-      @media only screen and (max-width: 480px) {
+      @media only screen and (max-width: 480px) and (min-width: 401px) {
         .job-results .content .job-recommandation, .job-results .content .save, .saved-content .content .job-recommandation, .saved-content .content .save, .delete-items .content .job-recommandation, .delete-items .content .save {
-          width: 100px; } }
+          width: 110px; } }
+      @media only screen and (max-width: 400px) {
+        .job-results .content .job-recommandation, .job-results .content .save, .saved-content .content .job-recommandation, .saved-content .content .save, .delete-items .content .job-recommandation, .delete-items .content .save {
+          width: 92px; } }
     .job-results .content .pages, .saved-content .content .pages, .delete-items .content .pages {
       text-align: center; }
       @media only screen and (max-width: 768px) {

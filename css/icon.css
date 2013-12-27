@@ -2604,6 +2604,45 @@ ICON SAVED
       width: 81px; } }
 
 /*
+Icon tool saved
+*/
+.icon-resumeHero-saved-big {
+  background-size: 2100px 2518px;
+  background-position: -1575px -824px;
+  height: 168px;
+  width: 147px; }
+  @media only screen and (max-width: 768px) {
+    .icon-resumeHero-saved-big {
+      background-size: 1500px 1799px;
+      background-position: -1125px -589px;
+      height: 120px;
+      width: 105px; } }
+
+.icon-locallygrown-saved-big {
+  background-size: 2100px 2518px;
+  background-position: -1250px -1041px;
+  height: 161px;
+  width: 161px; }
+  @media only screen and (max-width: 768px) {
+    .icon-locallygrown-saved-big {
+      background-size: 1500px 1799px;
+      background-position: -893px -744px;
+      height: 115px;
+      width: 115px; } }
+
+.icon-careerscape-saved-big {
+  background-size: 2100px 2518px;
+  background-position: -1463px -1036px;
+  height: 168px;
+  width: 161px; }
+  @media only screen and (max-width: 768px) {
+    .icon-careerscape-saved-big {
+      background-size: 1500px 1799px;
+      background-position: -1045px -740px;
+      height: 120px;
+      width: 115px; } }
+
+/*
 ICON PRESENTATION (ONLY FOUR)
 */
 .icon-resumeHero-presentation {
