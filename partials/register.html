@@ -28,16 +28,16 @@
                                     <span>Targeted Job Suggestions</span>
                                 </div>
                                 <div>
-                                    <span class="icon-locallyGrown-presentation icon"></span>
-                                    <span class="icon-careerScape-presentation icon"></span>
-                                    <span class="icon-article-presentation icon"></span>
-                                    <span class="icon-resumePro-presentation icon"></span>
+                                    <span class="icon-locallyGrown-popup icon"></span>
+                                    <span class="icon-careerScape-popup icon"></span>
+                                    <span class="icon-article-popup icon"></span>
+                                    <span class="icon-resumeHero-popup icon"></span>
                                 </div>
                            </div>
                            <div class="clear"></div>
                        </div>
                        <div class="content social" ng-show="register.user=='none'"> 
-                            <div class="message medium"><span>Sign up with your social network of choice:</span></div>
+                            <div class="message large"><span>Sign up with your social network of choice:</span></div>
                            <div class="button-facebook button-social medium left link" ng-click="register.facebookConnect()">
                                 <span>Sign Up With Facebook</span>
                                 <i class="icon-bigarrow-right-white"></i>
@@ -334,7 +334,7 @@
                         <div class="content" ng-show="(register.user=='none')">
                             <steps nbr-steps="4" first-connect="true" message="register.lists.messageStep"></steps>
                         </div>
-                        <div class="content">
+                        <div class="content school-info">
                             <div class="left">
                                 <div class="message large"><span>Educational experience</span><span class="right optional">optional</span></div>
                                 <div class="large select toggleMenu">
@@ -540,6 +540,7 @@
                                 <span>Delete</span>
                                 <i class="icon-bigarrow-right-white"></i>
                             </div>
+                            <div class="clear"></div>
                         </div>
                     </div>
                     <div class="footer-dialog">

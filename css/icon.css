@@ -2255,6 +2255,42 @@ OTHER
 /*
 TOOLS
 */
+.icon-careerscape-small-helper {
+  background-size: 1500px 1799px;
+  background-position: -236px -785px;
+  height: 175px;
+  width: 171px; }
+  @media only screen and (max-width: 768px) {
+    .icon-careerscape-small-helper {
+      background-size: 900px 1080px;
+      background-position: -141px -471px;
+      height: 105px;
+      width: 103px; } }
+
+.icon-resumeHero-small-helper {
+  background-size: 1500px 1799px;
+  background-position: -450px -785px;
+  height: 177px;
+  width: 172px; }
+  @media only screen and (max-width: 768px) {
+    .icon-resumeHero-small-helper {
+      background-size: 900px 1080px;
+      background-position: -270px -471px;
+      height: 107px;
+      width: 104px; } }
+
+.icon-localygrown-small-helper {
+  background-size: 1500px 1799px;
+  background-position: -22px -785px;
+  height: 177px;
+  width: 186px; }
+  @media only screen and (max-width: 768px) {
+    .icon-localygrown-small-helper {
+      background-size: 900px 1080px;
+      background-position: -13px -471px;
+      height: 107px;
+      width: 112px; } }
+
 .icon-careerscape-small {
   background-size: 1500px 1799px;
   background-position: -236px -785px;
@@ -2606,14 +2642,53 @@ ICON PRESENTATION (ONLY FOUR)
       height: 138px;
       width: 108px; } }
 
-.icon-article-presentation {
-  background-size: 900px 1080px;
-  background-position: -604px -349px;
-  height: 77px;
-  width: 62px; }
+/*
+ICON POPUP (ONLY 4)
+*/
+.icon-resumeHero-popup {
+  background-size: 930px 1116px;
+  background-position: -697px -365px;
+  height: 75px;
+  width: 66px; }
   @media only screen and (max-width: 768px) {
-    .icon-article-presentation {
-      background-size: 600px 720px;
-      background-position: -403px -233px;
+    .icon-resumeHero-popup {
+      background-size: 705px 846px;
+      background-position: -528px -276px;
+      height: 57px;
+      width: 50px; } }
+
+.icon-locallyGrown-popup {
+  background-size: 900px 1080px;
+  background-position: -535px -446px;
+  height: 69px;
+  width: 69px; }
+  @media only screen and (max-width: 768px) {
+    .icon-locallyGrown-popup {
+      background-size: 675px 810px;
+      background-position: -401px -334px;
       height: 52px;
-      width: 41px; } }
+      width: 52px; } }
+
+.icon-careerScape-popup {
+  background-size: 900px 1080px;
+  background-position: -627px -444px;
+  height: 72px;
+  width: 69px; }
+  @media only screen and (max-width: 768px) {
+    .icon-careerScape-popup {
+      background-size: 675px 810px;
+      background-position: -470px -333px;
+      height: 54px;
+      width: 52px; } }
+
+.icon-article-popup {
+  background-size: 855px 1026px;
+  background-position: -574px -332px;
+  height: 73px;
+  width: 59px; }
+  @media only screen and (max-width: 768px) {
+    .icon-article-popup {
+      background-size: 630px 756px;
+      background-position: -423px -244px;
+      height: 54px;
+      width: 43px; } }

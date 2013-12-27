@@ -221,7 +221,7 @@ General buttons classes
         top:50%;
         right:15px;
         @media only screen and (max-width: 768px){
-            right:6px;
+            right:8px;
         }
     }
     @media only screen and (max-width: 768px){
@@ -262,6 +262,10 @@ General buttons classes
 }
 .link:hover{
     cursor:pointer;
+}
+.center{
+    margin:auto;
+    text-align:center;
 }
 table{
     border-collapse:collapse;
@@ -894,10 +898,20 @@ HOMEPAGE SCROLLABLE CONTENT
 		@include font-size(24px);
 		font-family: HelveticaLightCondensed, sans-serif;
         @media only screen and (max-width: 768px){
-            width:85%;
-            margin:auto;
+            width:45%;
             margin-top:20px;
             margin-bottom:2px;
+            padding-top:12px;
+            padding-bottom:7px;
+            i,b{
+                right:11px;
+            }
+        }
+        @media only screen and (max-width: 480px){
+            width:85%;
+            margin-left:auto;margin-right:auto;
+            
+
         }
 	}
 }
@@ -964,7 +978,7 @@ Header css
             position:relative;
             font-size: 14px !important;
             margin:15px auto;
-            margin-bottom:0px;
+            margin-bottom:5px;
 		}
 	}
 	#profil-pic{
@@ -2661,7 +2675,7 @@ DIALOG
             }
             @media only screen and (max-width: 768px){
 				padding-left:20px;
-                padding-right:30px;
+                padding-right:37px;
                 padding-top:20px;
 			    padding-bottom: 12px;
 			}
@@ -2670,11 +2684,32 @@ DIALOG
             width:100%;
             font-weight:18px;padding:22px;
             border-bottom:1px solid $lightGrey;
-            td{vertical-align:middle;}
-            .logo{position:relative;top:26px;left:17px;}
+            td{
+                vertical-align:middle;
+                @media only screen and (max-width: 768px){
+                    padding:10px;
+                }
+            }
+            $rapp-helper:0.6;
+            .logo{position:relative;top:26px;left:17px;
+                @media only screen and (max-width: 768px){
+                    top:26px * $rapp-helper;
+                    left:17px * $rapp-helper;
+                }
+            }
             strong{
                 font-weight:bold;
             }
+        }
+        .third{
+            width:32%;
+            margin-right:2%;
+            @media only screen and (max-width:768px){
+                width:100%;
+            }
+        }
+        .right{
+            margin-right:0px;
         }
         .content{width:100%;}
         .footer-dialog{
@@ -3028,7 +3063,11 @@ Tool CSS
     }
     .dialog{
         .section{
-            .content{padding:15px;}
+            .content{padding:15px;
+                @media only screen and (max-width: 768px){
+                    padding:10px;
+                }
+            }
 			.label{
 				margin: 0px;
 				padding: 0px;
@@ -3041,8 +3080,32 @@ Tool CSS
         }
     }
     .help-section{
+        //for the cursor + - of map
+        z-index:100000;
         .section{
-            width:85%;
+            width:1050px;
+            @media only screen and (max-width: 768px){
+                width:80%;
+            }
+            .content{
+                @include font-size(17px);
+                .explanation{
+                    height:80px;
+                    margin-bottom:30px;
+                    @media only screen and (max-width: 768px){
+                        height:auto;
+                        margin-bottom:15px;
+                        margin-top:5px;
+                    }
+                }
+                .image{
+                    width:100%;
+                    height:220px;
+                    @media only screen and (max-width: 768px){
+                        margin-bottom:10px;
+                    }
+                }
+            }
         }
     }
     .save-section{
@@ -3223,23 +3286,41 @@ SOCIAL
 .button-social{
     color:white;
     width:130px;
-    @include font-size(27px);
+    font-size:27px;
     padding-top:18px;padding-bottom:12px;
     padding-left:20px;padding-right:20px;
+    @media only screen and (max-width: 768px){
+        width:44%;
+        font-size:19px;
+        padding:0px 15px;
+        padding-top:14px;
+        padding-bottom:8px;
+        margin-bottom:10px;
+        
+    }
 }
 .button-google{
     background-color:rgb(194,83,57);
+    @media only screen and (max-width: 480px){
+        width:100% !important;
+    }
 }
 .button-google:hover{
     background-color:rgb(184,73,47);
 }
 .button-facebook{
     background-color:rgb(64,93,149);
+    @media only screen and (max-width: 480px){
+        width:100% !important;
+    }
 }
 .button-facebook:hover{
     background-color:rgb(54,83,139);
 }
 .dashboard-popup,.get-started-resume{
+    .steps{
+        text-align:center;
+    }
     .content{
         padding: 20px;
         border-bottom:1px solid $lightGrey;
@@ -3253,9 +3334,10 @@ SOCIAL
             text-align:center;
             padding-top:26px;
             color: white;
-            @include font-size(23px);
-            @media only screen and (max-width: 479px){
+            font-size:23px;
+            @media only screen and (max-width: 768px){
                 padding-top:13px;
+                font-size:18px;
             }
             span{
                position:relative;right:15px;
@@ -3368,16 +3450,16 @@ SOCIAL
         }   
         .large{width:465px;margin-right:25px;
             @media only screen and (max-width: 768px){
-                width:48%;
-                margin-right:4%;
-                margin-bottom:15px;
+                width:49%;
+                margin-right:2%;
+                margin-bottom:10px;
             }
         }
         .medium{width:370px;margin-right:25px;
             @media only screen and (max-width: 768px){
-                width:48%;
-                margin-right:4%;
-                margin-bottom:15px;
+                width:49%;
+                margin-right:2%;
+                margin-bottom:10px;
             }   
         }
         .last{
@@ -3399,16 +3481,16 @@ SOCIAL
             .large{
                width:365px;margin-right:25px;
                @media only screen and (max-width: 768px){
-                    width:48%;
-                    margin-right:4%;
-                    margin-bottom:15px;
+                    width:49%;
+                    margin-right:2%;
+                    margin-bottom:10px;
                 }  
             }
             .medium{width:170px;margin-right:25px;
                 @media only screen and (max-width: 768px){
-                    width:48%;
-                    margin-right:4%;
-                    margin-bottom:15px;
+                    width:49%;
+                    margin-right:2%;
+                    margin-bottom:10px;
                 } 
             }
         }
@@ -3424,7 +3506,7 @@ SOCIAL
                         width:100%;
                         margin-right:0%;
                         margin-left:0%;
-                        margin-bottom:15px;
+                        margin-bottom:10px;
                     } 
                 }  
             }
@@ -3469,7 +3551,7 @@ SOCIAL
                 text-align:center;
                 margin-bottom:15px;
                 @media only screen and (max-width: 768px){
-                    width:48%;
+                    width:49%;
                     height:275px;
                 }
                 .title{
@@ -3499,13 +3581,13 @@ SOCIAL
             }
             .left{margin-right:2.2%;
                 @media only screen and (max-width: 768px){
-                    margin-right:4%;
+                    margin-right:2%;
                 }
             }
             .before-last{
                 margin-right:0px;
                 @media only screen and (max-width: 768px){
-                    margin-right:4%;
+                    margin-right:2%;
                 }
             }
              .phase[class~="selected"]{
@@ -3514,16 +3596,35 @@ SOCIAL
         }
         .job-occupation{
             height:200px;
+            @media only screen and (max-width: 768px){/* and (min-width: 481px){
+                height:190px;
+            }
+            @media only screen and (max-width: 480px){*/
+                height:auto;
+            }
         }
         .school-name{
             height:210px;
+            @media only screen and (max-width: 768px){/* and (min-width: 481px){
+                height:190px;
+            }
+            @media only screen and (max-width: 480px){*/
+                height:auto;
+            }
         }
         .job-occupation,.school-name{
             .large{
                 width:465px;margin:0px;
+                @media only screen and (max-width: 768px){
+                    width:100%;
+                    margin-bottom:10px;
+                }
             }
             .message-large{
                 width:87%;margin:0px;
+                @media only screen and (max-width: 768px){
+                    width:100%;
+                }
             }
             .element{
                 height:100%;
@@ -3532,15 +3633,37 @@ SOCIAL
                 .entry{position:absolute;bottom:10px;
                     .message{margin-bottom:10px;}
                 }
+                @media only screen and (max-width: 768px){
+                   // width:48%;
+                    .entry{
+                        width:100%;
+                        bottom:0px;
+                    }
+                //}
+                //@media only screen and (max-width: 480px){
+                     width:100%;
+                    .entry{
+                        position:relative;
+                    }
+                }
                 
             }
             .element-correction{
                 height:100%;
                 width:50.7%;
                 position:relative;
+                @media only screen and (max-width: 768px) {/*and (min-width: 481px){
+                    width:48%;
+                }
+                @media only screen and (max-width: 480px){*/
+                    width:100%;
+                }
                 .logo{
                     position:absolute;
                     bottom:10px;
+                    @media only screen and (max-width: 768px){
+                        display:none;
+                    }
                 }
                 .correction{
                     width:465px;
@@ -3558,6 +3681,36 @@ SOCIAL
                     }
                     .wrong{color:black;}
                     .select{border:1px solid $orange;}
+                    @media only screen and (max-width: 768px){
+                        width:100%;
+                        bottom:0px;
+                        .mess{
+                            -webkit-line-clamp:5;
+                            line-height:20px;
+                        }
+                   /* }
+                    @media only screen and (max-width: 480px){*/
+                        position:relative;
+                    }
+                }
+            }
+        }
+        .job-occupation,.school-name,.job-info,.school-info{
+            
+            @media only screen and (max-width: 768px){
+                .message{
+                    margin-top:5px;
+                }
+                .large{
+                    width:100%;
+                }
+               /* >.left ,>.right{
+                    width:49%;
+                }
+            }
+            @media only screen and (max-width: 480px){*/
+                >.left ,>.right{
+                    width:100%;
                 }
             }
         }
@@ -3641,6 +3794,11 @@ SOCIAL
             }
         }
         .goals{
+            @media only screen and (max-width: 768px){
+                .message{
+                    margin-top:5px;
+                }
+            }
             .medium{
                 width:363px;
                 @media only screen and (max-width: 768px){
@@ -3658,7 +3816,7 @@ SOCIAL
                 border-bottom:1px solid rgb(201,202,203);
                 @media only screen and (max-width: 768px){
                     padding:10px 10px;
-                    padding-top:20px;
+                    padding-top:15px;
                 }
             }
         }
@@ -3669,6 +3827,18 @@ SOCIAL
             }
         }
         .user-info{
+            .message{
+                @media only screen and (max-width: 768px){
+                    margin-right:0px;
+                    width:100%;
+                }
+            }
+            .presentation{
+                //special effect here
+                @media only screen and (max-width: 600px){
+                    text-align:center;
+                }
+            }
             .name-info{
                 margin-bottom:20px;
                 @media only screen and (max-width: 768px){
@@ -3677,14 +3847,28 @@ SOCIAL
             }
             .explanation{
                 width:59%;
-                @include font-size(27px);
+                font-size:27px;
                 .presentation{
                     margin-bottom:40px;
                 }
+                @media only screen and (max-width: 768px){
+                    font-size:18px;
+                    width:57%;
+                    padding-right:7px;
+                    .presentation{
+                        margin-bottom:15px;
+                    }
+                }
+                @media only screen and (max-width: 700px){
+                    width:51%;
+                }
+                //special responsive here (no choice)
+                @media only screen and (max-width: 600px){
+                    width:100%;
+                }
             }
             .info{
-                @include font-size(22px);
-                width:370px;
+                font-size:22px;
                 @include white-box;
                 .strength {
                     margin:15px 0px;
@@ -3692,7 +3876,17 @@ SOCIAL
                 .icon{
                     margin:0px 3px;
                 }
-            }   
+                @media only screen and (max-width: 768px){
+                    font-size:16px;
+                    padding:10px;
+                }
+                @media only screen and (max-width: 600px){
+                    width:auto;
+                    display:inline-block;clear:both;
+                    float:none;
+                    margin:15px auto;
+                }
+            } 
         }
         .right-resp{
             @media only screen and (max-width: 768px){
@@ -3700,16 +3894,22 @@ SOCIAL
                 margin-left:0px !important;
                 margin-right:0px !important;
                 margin-top:0px;
-                margin-bottom:15px;
+                margin-bottom:10px;
             }  
         }
     }
     .section-photo{
-         width:1000px;
+        width:1000px;
+        @media only screen and (max-width: 768px){
+            width:90%;
+        }
         .change-picture{
             padding:40px;
             text-align:center;
             border-bottom:1px solid rgb(201,202,203);
+            @media only screen and (max-width: 768px){
+                padding:20px;
+            }
             .photo{
                 margin:auto;
                 width:320px;
@@ -3718,6 +3918,13 @@ SOCIAL
                 -webkit-box-shadow:0 1px 2px rgba(0,0,0,0.2);
                 border: 7px solid white;
                 margin-bottom:50px; 
+                @media only screen and (max-width: 768px){
+                    width:200px;
+                    height:200px;
+                    border-radius:140px;
+                    border: 5px solid white;
+                    margin-bottom:40px; 
+                }
             }
             .buttons{
                 .button-upload-wrapper{
@@ -3729,6 +3936,14 @@ SOCIAL
                         top:-30px;
                         left:0px;
                     }
+                    @media only screen and (max-width: 768px){
+                        width:90%;
+                        margin-bottom:10px;
+                        .message{
+                            top:-25px;
+                            left:5%;
+                        }
+                    }
                 }
                 .button{
                     @extend .button-social
@@ -3739,6 +3954,11 @@ SOCIAL
                     .message{
                         position:absolute;top:-30px;left:0px;
                     }
+                    @media only screen and (max-width: 768px){
+                        width:100%;
+                        margin-right:0px;
+                        margin:auto;
+                    }
                 }
                 .button-upload:hover{
                    background-color:rgb(53,83,139);
@@ -3746,12 +3966,21 @@ SOCIAL
                 .button-edit{
                     margin-right:25px;
                     background-color:rgb(238,124,51); 
+                    @media only screen and (max-width: 768px){
+                        margin-right:0px;
+                        margin-left:5%;
+                        float:left;
+                    }
                 }
                 .button-edit:hover{
                    background-color:rgb(228,114,41);  
                 }
                 .button-delete{
                     background-color:rgb(233,63,51); 
+                    @media only screen and (max-width: 768px){
+                        float:right;
+                        margin-right:5%;
+                    }
                 }
                 .button-delete:hover{
                     background-color:rgb(223,53,41);  
@@ -4351,7 +4580,7 @@ Dashboard
                 margin-bottom:10px;
                 @media only screen and (max-width: 768px) and (min-width: 481px){
                     margin-bottom:30px;
-                    height:70px;
+                    height:60px;
                 }
                 .txt{
                     width:70%;
@@ -4610,8 +4839,12 @@ Dashboard
     }
 }
 .saved-content-page{
+    @include main-block;
     .saved-content{
         margin-top:65px;
+        @media only screen and (max-width: 768px){
+            margin-top:15px;
+        }
         .content{
             height:auto;
             padding:0px 100px;
@@ -4630,6 +4863,20 @@ Dashboard
                     color:$red-delete;
                     margin-top:25px;
                     margin-bottom:10px;
+                }
+            }
+            @media only screen and (max-width: 768px){
+                padding:20px;
+                .save{
+                    height:240px;
+                    margin-left:0px;
+                    margin-right:0px;
+                    margin-top:0px;margin-bottom:0px;
+                    display:inline-block;
+                    vertical-align:top;float:none;
+                }
+                .save:not(.right){
+                    margin-right:0px;
                 }
             }
         }

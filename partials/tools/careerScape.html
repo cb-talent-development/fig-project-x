@@ -57,3 +57,24 @@
     </div>
     <div ng-include="'partials/jobsRecommandations.html'"></div>
 </div>
+<div class="help-section dialog">
+    <div class="background" onclick="disparition($('.help-section'))"></div>
+    <div class="section">
+        <div class="header">
+            <span class"title">{{help.Title}}</span><i class="icon-x-black close" onclick="disparition($('.help-section'))"></i>
+        </div>
+        <table class="intro">
+        <tr>
+            <td>
+            <div class="{{logo}}-helper logo"></div>
+            </td>
+            <td>
+                <strong>{{help.Intro.Title}}</strong>&nbsp;<span>{{help.Intro.Content}}</span>
+            </td>
+        </tr>
+        </table>
+        <div class="content">
+        <!-- TODO -->
+        </div>
+    </div>
+</div>

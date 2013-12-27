@@ -22,30 +22,11 @@
         <div class="clear"></div>
     </div>
     <div ng-include="template"></div>
-    <div class="help-section dialog">
-        <div class="background" onclick="disparition($('.help-section'))"></div>
-        <div class="section">
-            <div class="header">
-                <span class"title">{{help.Title}}</span><i class="icon-x-black close" onclick="disparition($('.help-section'))"></i>
-            </div>
-            <table class="intro">
-            <tr>
-                <td>
-                <div class="{{logo}} logo"></div>
-                </td>
-                <td>
-                    <strong>{{help.Intro.Title}}</strong>&nbsp;<span>{{help.Intro.Content}}</span>
-                </td>
-            </tr>
-            </table>
-            <div class="content" ng-bind-html-unsafe="help.Content"></div>
-        </div>
-    </div>
     <div class="save-section dialog">
         <div class="background" onclick="disparition($('.save-section'))"></div>
         <div class="section">
             <div class="header">
-                <span class"title">Save&nbsp;{{title.part1}}{{title.part2}}&nbsp;Search</span><i class="icon-x-black close" onclick="disparition($('.save-section'))"></i>
+                <span class="title">Save&nbsp;{{title.part1}}{{title.part2}}&nbsp;Search</span><i class="icon-x-black close" onclick="disparition($('.save-section'))"></i>
             </div>
             <div class="content">
                 <div class="icon-locallygrown-save logo"></div>
@@ -54,7 +35,7 @@
                 </div>
             </div>
             <div class="footer-dialog">
-                <div class="button green" onclick="">Save & Close</div>
+                <div class="button back-green" onclick="">Save & Close</div>
                 <div class="clear"></div>
             </div>
         </div>

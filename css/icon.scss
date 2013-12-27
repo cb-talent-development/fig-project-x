@@ -1322,6 +1322,27 @@ $rapp:0.75;
 /*
 TOOLS
 */
+//for the helper section
+$rapp-helper:0.6;
+.icon-careerscape-small-helper{
+	@include dimensionPosition(-236px,-785px,175px,171px,1);
+    @media only screen and (max-width: 768px){
+	   @include dimensionPosition(-236px,-785px,175px,171px,$rapp-helper);
+	}
+}
+.icon-resumeHero-small-helper{
+	@include dimensionPosition(-450px,-785px,177px,172px,1);
+    @media only screen and (max-width: 768px){
+	   @include dimensionPosition(-450px,-785px,177px,172px,$rapp-helper);
+	}
+}
+.icon-localygrown-small-helper{
+	@include dimensionPosition(-22px,-785px,177px,186px,1);
+    @media only screen and (max-width: 768px){
+	   @include dimensionPosition(-22px,-785px,177px,186px,$rapp-helper);
+	}
+}
+
 $rapp-logo-small:0.95;
 .icon-careerscape-small{
 	@include dimensionPosition(-236px,-785px,175px,171px,1);
@@ -1504,9 +1525,31 @@ ICON PRESENTATION (ONLY FOUR)
         @include dimensionPosition(-34px,-1040px,345px,269px,0.4);
 	}
 }
-.icon-article-presentation{
-    @include dimensionPosition(-1008px,-583px,128px,102px,0.6);
+/*
+ICON POPUP (ONLY 4)
+*/
+
+.icon-resumeHero-popup{
+	@include dimensionPosition(-1125px,-589px,120px,105px,0.62);
     @media only screen and (max-width: 768px){
-        @include dimensionPosition(-1008px,-583px,128px,102px,0.4);
+	   @include dimensionPosition(-1125px,-589px,120px,105px,0.47);
+	}
+}
+.icon-locallyGrown-popup{
+	@include dimensionPosition(-893px,-744px,115px,115px,0.6);
+    @media only screen and (max-width: 768px){
+	   @include dimensionPosition(-893px,-744px,115px,115px,0.45);
+	}
+}
+.icon-careerScape-popup{
+    @include dimensionPosition(-1045px,-740px,120px,115px,0.6);
+    @media only screen and (max-width: 768px){
+        @include dimensionPosition(-1045px,-740px,120px,115px,0.45);
+	}
+}
+.icon-article-popup{
+    @include dimensionPosition(-1008px,-583px,128px,102px,0.57);
+    @media only screen and (max-width: 768px){
+        @include dimensionPosition(-1008px,-583px,128px,102px,0.42);
 	}
 }
