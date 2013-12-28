@@ -469,8 +469,6 @@ function disparition(elem){
        section.css("display","none");
        elem.fadeOut(200);             
     });
-    $("html, body").css('overflow','scroll');
-
 }
 /*
 Functions move cursor
