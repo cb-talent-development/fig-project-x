@@ -1,5 +1,5 @@
 3.2.10 (Media Mark)
-2b5e9a3dd2d0674c9f63f4a2603da56a2da06730
+b14e7a3e1b4d87a50ef4b52e6d926553917eab27
 o:Sass::Tree::RootNode
 :@template"Óª/*
 ICON css
@@ -1086,9 +1086,9 @@ STEPS
 	}
 }
 .icon-step-4-grey{
-	@include dimensionPosition(-829px, -1716px, 75px, 287px, 0.94);
+	@include dimensionPosition(-829px, -1716px, 75px, 289px, 0.94);
 	@media only screen and (max-width: 768px){
-		@include dimensionPosition(-829px, -1716px, 75px, 287px, 0.5);
+		@include dimensionPosition(-829px, -1716px, 75px, 289px, 0.5);
 	}
 }
 .icon-step-5-grey{
@@ -2406,10 +2406,10 @@ o;;["px;iþçý;@;"-537px;i:;[ o;;["px;iþLù;@;"-1716px;i:
  and "(o;	;	;;"max-width;@;i9": o;;["px;i ;@;"
 768px;i9;[ ");@;/[".icon-step-3-grey;i7;0o;1;2" ;i7;3[o;4;3[o;5
 ;60;2@,;7o;8;9{ ;i7;3[o;>;["icon-step-3-grey;2@,;i7;-To;;i ;[o;A;"dimensionPosition;[ ;@;{ ;i>; 0;![
-o;;["px;iþÃü;@;"-829px;i>;[ o;;["px;iþLù;@;"-1716px;i>;[ o;;["px;iP;@;"	75px;i>;[ o;;["px;i;@;"
-287px;i>;[ o;;[ ;f0.93999999999999995 ®;@;"	0.94;i>;@Co;,;i ;[o;A;"dimensionPosition;[ ;@;{ ;i@; 0;![
-o;;["px;iþÃü;@;"-829px;i@;[ o;;["px;iþLù;@;"-1716px;i@;[ o;;["px;iP;@;"	75px;i@;[ o;;["px;i;@;"
-287px;i@;[ o;;[ ;f0.5;@;"0.5;i@;@C;" ;@;i?;-T;.["	only" "screen"
+o;;["px;iþÃü;@;"-829px;i>;[ o;;["px;iþLù;@;"-1716px;i>;[ o;;["px;iP;@;"	75px;i>;[ o;;["px;i!;@;"
+289px;i>;[ o;;[ ;f0.93999999999999995 ®;@;"	0.94;i>;@Co;,;i ;[o;A;"dimensionPosition;[ ;@;{ ;i@; 0;![
+o;;["px;iþÃü;@;"-829px;i@;[ o;;["px;iþLù;@;"-1716px;i@;[ o;;["px;iP;@;"	75px;i@;[ o;;["px;i!;@;"
+289px;i@;[ o;;[ ;f0.5;@;"0.5;i@;@C;" ;@;i?;-T;.["	only" "screen"
  and "(o;	;	;;"max-width;@;i?": o;;["px;i ;@;"
 768px;i?;[ ");@;/[".icon-step-4-grey;i=;0o;1;2" ;i=;3[o;4;3[o;5
 ;60;2@`,;7o;8;9{ ;i=;3[o;>;["icon-step-4-grey;2@`,;i=;-To;;i ;[o;A;"dimensionPosition;[ ;@;{ ;iD; 0;![
