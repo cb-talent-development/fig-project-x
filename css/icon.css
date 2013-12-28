@@ -154,7 +154,7 @@ Arrow big
       width: 17px; } }
 
 .icon-pause {
-  background-position: -443 -58px;
+  background-position: -443px -58px;
   width: 14px;
   height: 17px;
   margin-top: -8.5px;
@@ -447,10 +447,10 @@ STARS
   	}*/ }
   @media only screen and (max-width: 768px) and (min-width: 481px) {
     .icon-star-big-green-1 {
-      background-size: 1950px 2339px;
-      background-position: -16px -247px;
-      height: 28px;
-      width: 28px; } }
+      background-size: 1800px 2159px;
+      background-position: -15px -228px;
+      height: 26px;
+      width: 26px; } }
   @media only screen and (max-width: 480px) {
     .icon-star-big-green-1 {
       background-size: 1651px 1979px;
@@ -460,7 +460,7 @@ STARS
 
 .icon-star-big-green-2 {
   background-size: 3000px 3597px;
-  background-position: -120spx -380px;
+  background-position: -120px -380px;
   height: 43px;
   width: 42px;
   	/*@media only screen and (max-width: 979px){
@@ -468,14 +468,14 @@ STARS
   	}*/ }
   @media only screen and (max-width: 768px) and (min-width: 481px) {
     .icon-star-big-green-2 {
-      background-size: 1950px 2339px;
-      background-position: -78spx -247px;
-      height: 28px;
-      width: 28px; } }
+      background-size: 1800px 2159px;
+      background-position: -72px -228px;
+      height: 26px;
+      width: 26px; } }
   @media only screen and (max-width: 480px) {
     .icon-star-big-green-2 {
       background-size: 1651px 1979px;
-      background-position: -66spx -209px;
+      background-position: -66px -209px;
       height: 24px;
       width: 24px; } }
 
@@ -489,10 +489,10 @@ STARS
   	}*/ }
   @media only screen and (max-width: 768px) and (min-width: 481px) {
     .icon-star-big-green-3 {
-      background-size: 1950px 2339px;
-      background-position: -139px -247px;
-      height: 28px;
-      width: 28px; } }
+      background-size: 1800px 2159px;
+      background-position: -128px -228px;
+      height: 26px;
+      width: 26px; } }
   @media only screen and (max-width: 480px) {
     .icon-star-big-green-3 {
       background-size: 1651px 1979px;
@@ -510,10 +510,10 @@ STARS
   	}*/ }
   @media only screen and (max-width: 768px) and (min-width: 481px) {
     .icon-star-big-green-4 {
-      background-size: 1950px 2339px;
-      background-position: -200px -247px;
-      height: 28px;
-      width: 28px; } }
+      background-size: 1800px 2159px;
+      background-position: -184px -228px;
+      height: 26px;
+      width: 26px; } }
   @media only screen and (max-width: 480px) {
     .icon-star-big-green-4 {
       background-size: 1651px 1979px;
@@ -531,10 +531,10 @@ STARS
   	}*/ }
   @media only screen and (max-width: 768px) and (min-width: 481px) {
     .icon-star-big-orange-1 {
-      background-size: 1950px 2339px;
-      background-position: -260px -247px;
-      height: 28px;
-      width: 28px; } }
+      background-size: 1800px 2159px;
+      background-position: -240px -228px;
+      height: 26px;
+      width: 26px; } }
   @media only screen and (max-width: 480px) {
     .icon-star-big-orange-1 {
       background-size: 1651px 1979px;
@@ -552,10 +552,10 @@ STARS
   	}*/ }
   @media only screen and (max-width: 768px) and (min-width: 481px) {
     .icon-star-big-orange-2 {
-      background-size: 1950px 2339px;
-      background-position: -321px -247px;
-      height: 28px;
-      width: 28px; } }
+      background-size: 1800px 2159px;
+      background-position: -296px -228px;
+      height: 26px;
+      width: 26px; } }
   @media only screen and (max-width: 480px) {
     .icon-star-big-orange-2 {
       background-size: 1651px 1979px;
@@ -573,10 +573,10 @@ STARS
   	}*/ }
   @media only screen and (max-width: 768px) and (min-width: 481px) {
     .icon-star-big-orange-3 {
-      background-size: 1950px 2339px;
-      background-position: -382px -247px;
-      height: 28px;
-      width: 28px; } }
+      background-size: 1800px 2159px;
+      background-position: -352px -228px;
+      height: 26px;
+      width: 26px; } }
   @media only screen and (max-width: 480px) {
     .icon-star-big-orange-3 {
       background-size: 1651px 1979px;
@@ -594,10 +594,10 @@ STARS
   	}*/ }
   @media only screen and (max-width: 768px) and (min-width: 481px) {
     .icon-star-big-orange-4 {
-      background-size: 1950px 2339px;
-      background-position: -443px -247px;
-      height: 28px;
-      width: 28px; } }
+      background-size: 1800px 2159px;
+      background-position: -409px -228px;
+      height: 26px;
+      width: 26px; } }
   @media only screen and (max-width: 480px) {
     .icon-star-big-orange-4 {
       background-size: 1651px 1979px;
@@ -615,10 +615,10 @@ STARS
   	}*/ }
   @media only screen and (max-width: 768px) and (min-width: 481px) {
     .icon-star-big-orange-5 {
-      background-size: 1950px 2339px;
-      background-position: -504px -247px;
-      height: 28px;
-      width: 28px; } }
+      background-size: 1800px 2159px;
+      background-position: -465px -228px;
+      height: 26px;
+      width: 26px; } }
   @media only screen and (max-width: 480px) {
     .icon-star-big-orange-5 {
       background-size: 1651px 1979px;
@@ -636,10 +636,10 @@ STARS
   	}*/ }
   @media only screen and (max-width: 768px) and (min-width: 481px) {
     .icon-star-big-blue-1 {
-      background-size: 1950px 2339px;
-      background-position: -565px -247px;
-      height: 28px;
-      width: 28px; } }
+      background-size: 1800px 2159px;
+      background-position: -522px -228px;
+      height: 26px;
+      width: 26px; } }
   @media only screen and (max-width: 480px) {
     .icon-star-big-blue-1 {
       background-size: 1651px 1979px;
@@ -657,10 +657,10 @@ STARS
   	}*/ }
   @media only screen and (max-width: 768px) and (min-width: 481px) {
     .icon-star-big-blue-2 {
-      background-size: 1950px 2339px;
-      background-position: -626px -247px;
-      height: 28px;
-      width: 28px; } }
+      background-size: 1800px 2159px;
+      background-position: -578px -228px;
+      height: 26px;
+      width: 26px; } }
   @media only screen and (max-width: 480px) {
     .icon-star-big-blue-2 {
       background-size: 1651px 1979px;
@@ -678,10 +678,10 @@ STARS
   	}*/ }
   @media only screen and (max-width: 768px) and (min-width: 481px) {
     .icon-star-big-blue-3 {
-      background-size: 1950px 2339px;
-      background-position: -687px -247px;
-      height: 28px;
-      width: 28px; } }
+      background-size: 1800px 2159px;
+      background-position: -634px -228px;
+      height: 26px;
+      width: 26px; } }
   @media only screen and (max-width: 480px) {
     .icon-star-big-blue-3 {
       background-size: 1651px 1979px;
@@ -699,10 +699,10 @@ STARS
   	}*/ }
   @media only screen and (max-width: 768px) and (min-width: 481px) {
     .icon-star-big-blue-4 {
-      background-size: 1950px 2339px;
-      background-position: -748px -247px;
-      height: 28px;
-      width: 28px; } }
+      background-size: 1800px 2159px;
+      background-position: -691px -228px;
+      height: 26px;
+      width: 26px; } }
   @media only screen and (max-width: 480px) {
     .icon-star-big-blue-4 {
       background-size: 1651px 1979px;
@@ -720,10 +720,10 @@ STARS
   	}*/ }
   @media only screen and (max-width: 768px) and (min-width: 481px) {
     .icon-star-big-blue-5 {
-      background-size: 1950px 2339px;
-      background-position: -809px -247px;
-      height: 28px;
-      width: 28px; } }
+      background-size: 1800px 2159px;
+      background-position: -747px -228px;
+      height: 26px;
+      width: 26px; } }
   @media only screen and (max-width: 480px) {
     .icon-star-big-blue-5 {
       background-size: 1651px 1979px;
@@ -741,10 +741,10 @@ STARS
   	}*/ }
   @media only screen and (max-width: 768px) and (min-width: 481px) {
     .icon-star-blue-big-6 {
-      background-size: 1950px 2339px;
-      background-position: -871px -247px;
-      height: 28px;
-      width: 28px; } }
+      background-size: 1800px 2159px;
+      background-position: -804px -228px;
+      height: 26px;
+      width: 26px; } }
   @media only screen and (max-width: 480px) {
     .icon-star-blue-big-6 {
       background-size: 1651px 1979px;
@@ -762,10 +762,10 @@ STARS
   	}*/ }
   @media only screen and (max-width: 768px) and (min-width: 481px) {
     .icon-star-big-red-1 {
-      background-size: 1950px 2339px;
-      background-position: -16px -308px;
-      height: 28px;
-      width: 28px; } }
+      background-size: 1800px 2159px;
+      background-position: -15px -285px;
+      height: 26px;
+      width: 26px; } }
   @media only screen and (max-width: 480px) {
     .icon-star-big-red-1 {
       background-size: 1651px 1979px;
@@ -783,10 +783,10 @@ STARS
   	}*/ }
   @media only screen and (max-width: 768px) and (min-width: 481px) {
     .icon-star-big-red-2 {
-      background-size: 1950px 2339px;
-      background-position: -78px -308px;
-      height: 28px;
-      width: 28px; } }
+      background-size: 1800px 2159px;
+      background-position: -72px -285px;
+      height: 26px;
+      width: 26px; } }
   @media only screen and (max-width: 480px) {
     .icon-star-big-red-2 {
       background-size: 1651px 1979px;
@@ -804,10 +804,10 @@ STARS
   	}*/ }
   @media only screen and (max-width: 768px) and (min-width: 481px) {
     .icon-star-big-red-3 {
-      background-size: 1950px 2339px;
-      background-position: -139px -308px;
-      height: 28px;
-      width: 28px; } }
+      background-size: 1800px 2159px;
+      background-position: -129px -285px;
+      height: 26px;
+      width: 26px; } }
   @media only screen and (max-width: 480px) {
     .icon-star-big-red-3 {
       background-size: 1651px 1979px;
@@ -825,10 +825,10 @@ STARS
   	}*/ }
   @media only screen and (max-width: 768px) and (min-width: 481px) {
     .icon-star-big-red-4 {
-      background-size: 1950px 2339px;
-      background-position: -382px -308px;
-      height: 28px;
-      width: 28px; } }
+      background-size: 1800px 2159px;
+      background-position: -352px -285px;
+      height: 26px;
+      width: 26px; } }
   @media only screen and (max-width: 480px) {
     .icon-star-big-red-4 {
       background-size: 1651px 1979px;
@@ -846,10 +846,10 @@ STARS
   	}*/ }
   @media only screen and (max-width: 768px) and (min-width: 481px) {
     .icon-star-big-pink-1 {
-      background-size: 1950px 2339px;
-      background-position: -200px -308px;
-      height: 28px;
-      width: 28px; } }
+      background-size: 1800px 2159px;
+      background-position: -184px -285px;
+      height: 26px;
+      width: 26px; } }
   @media only screen and (max-width: 480px) {
     .icon-star-big-pink-1 {
       background-size: 1651px 1979px;
@@ -867,10 +867,10 @@ STARS
   	}*/ }
   @media only screen and (max-width: 768px) and (min-width: 481px) {
     .icon-star-big-pink-2 {
-      background-size: 1950px 2339px;
-      background-position: -260px -308px;
-      height: 28px;
-      width: 28px; } }
+      background-size: 1800px 2159px;
+      background-position: -240px -284px;
+      height: 26px;
+      width: 26px; } }
   @media only screen and (max-width: 480px) {
     .icon-star-big-pink-2 {
       background-size: 1651px 1979px;
@@ -888,10 +888,10 @@ STARS
   	}*/ }
   @media only screen and (max-width: 768px) and (min-width: 481px) {
     .icon-star-big-pink-3 {
-      background-size: 1950px 2339px;
-      background-position: -321px -308px;
-      height: 28px;
-      width: 28px; } }
+      background-size: 1800px 2159px;
+      background-position: -296px -284px;
+      height: 26px;
+      width: 26px; } }
   @media only screen and (max-width: 480px) {
     .icon-star-big-pink-3 {
       background-size: 1651px 1979px;
@@ -1588,10 +1588,10 @@ SOCIAL
   width: 40px; }
   @media only screen and (max-width: 768px) and (min-width: 481px) {
     .icon-save {
-      background-size: 1275px 1529px;
-      background-position: -560px -313px;
-      height: 34px;
-      width: 34px; } }
+      background-size: 1155px 1385px;
+      background-position: -507px -284px;
+      height: 31px;
+      width: 31px; } }
   @media only screen and (max-width: 480px) {
     .icon-save {
       background-size: 1050px 1259px;
@@ -1606,10 +1606,10 @@ SOCIAL
   width: 40px; }
   @media only screen and (max-width: 768px) and (min-width: 481px) {
     .icon-mail {
-      background-size: 1275px 1529px;
-      background-position: -600px -313px;
-      height: 34px;
-      width: 34px; } }
+      background-size: 1155px 1385px;
+      background-position: -544px -284px;
+      height: 31px;
+      width: 31px; } }
   @media only screen and (max-width: 480px) {
     .icon-mail {
       background-size: 1050px 1259px;
@@ -1624,10 +1624,10 @@ SOCIAL
   width: 40px; }
   @media only screen and (max-width: 768px) and (min-width: 481px) {
     .icon-twitter {
-      background-size: 1275px 1529px;
-      background-position: -640px -313px;
-      height: 34px;
-      width: 34px; } }
+      background-size: 1155px 1385px;
+      background-position: -580px -284px;
+      height: 31px;
+      width: 31px; } }
   @media only screen and (max-width: 480px) {
     .icon-twitter {
       background-size: 1050px 1259px;
@@ -1642,10 +1642,10 @@ SOCIAL
   width: 40px; }
   @media only screen and (max-width: 768px) and (min-width: 481px) {
     .icon-google {
-      background-size: 1275px 1529px;
-      background-position: -680px -313px;
-      height: 34px;
-      width: 34px; } }
+      background-size: 1155px 1385px;
+      background-position: -616px -284px;
+      height: 31px;
+      width: 31px; } }
   @media only screen and (max-width: 480px) {
     .icon-google {
       background-size: 1050px 1259px;
@@ -1660,10 +1660,10 @@ SOCIAL
   width: 40px; }
   @media only screen and (max-width: 768px) and (min-width: 481px) {
     .icon-face {
-      background-size: 1275px 1529px;
-      background-position: -720px -313px;
-      height: 34px;
-      width: 34px; } }
+      background-size: 1155px 1385px;
+      background-position: -652px -284px;
+      height: 31px;
+      width: 31px; } }
   @media only screen and (max-width: 480px) {
     .icon-face {
       background-size: 1050px 1259px;
@@ -1678,10 +1678,10 @@ SOCIAL
   width: 40px; }
   @media only screen and (max-width: 768px) and (min-width: 481px) {
     .icon-link {
-      background-size: 1275px 1529px;
-      background-position: -760px -313px;
-      height: 34px;
-      width: 34px; } }
+      background-size: 1155px 1385px;
+      background-position: -689px -284px;
+      height: 31px;
+      width: 31px; } }
   @media only screen and (max-width: 480px) {
     .icon-link {
       background-size: 1050px 1259px;
@@ -1696,10 +1696,10 @@ SOCIAL
   width: 40px; }
   @media only screen and (max-width: 768px) and (min-width: 481px) {
     .icon-question-big {
-      background-size: 1275px 1529px;
-      background-position: -800px -313px;
-      height: 34px;
-      width: 34px; } }
+      background-size: 1155px 1385px;
+      background-position: -725px -284px;
+      height: 31px;
+      width: 31px; } }
   @media only screen and (max-width: 480px) {
     .icon-question-big {
       background-size: 1050px 1259px;
@@ -2392,28 +2392,16 @@ TOOLS
   background-position: -464px -541px;
   height: 43px;
   width: 179px; }
-  @media only screen and (max-width: 1200px) {
-    .icon-button-post {
-      background-size: 1500px 1799px;
-      background-position: -495px -541px;
-      height: 43px;
-      width: 387px; } }
-  @media only screen and (max-width: 1200px) {
-    .icon-button-post {
-      background-size: 1500px 1799px;
-      background-position: -493px -542px;
-      height: 43px;
-      width: 387px; } }
   @media only screen and (max-width: 768px) {
     .icon-button-post {
       background-size: 1500px 1799px;
-      background-position: -493px -542px;
+      background-position: -490px -542px;
       height: 43px;
       width: 160px; } }
-  @media only screen and (max-width: 479px) {
+  @media only screen and (max-width: 480px) {
     .icon-button-post {
       background-size: 1500px 1799px;
-      background-position: -498px -542px;
+      background-position: -500px -542px;
       height: 43px;
       width: 160px; } }
 
@@ -2422,10 +2410,16 @@ TOOLS
   background-position: -464px -592px;
   height: 43px;
   width: 387px; }
-  @media only screen and (max-width: 728px) {
+  @media only screen and (max-width: 768px) {
     .icon-button-post-large {
       background-size: 1500px 1799px;
-      background-position: -544px -592px;
+      background-position: -530px -592px;
+      height: 43px;
+      width: 307px; } }
+  @media only screen and (max-width: 480px) {
+    .icon-button-post-large {
+      background-size: 1500px 1799px;
+      background-position: -555px -592px;
       height: 43px;
       width: 307px; } }
 

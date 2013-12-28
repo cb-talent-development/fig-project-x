@@ -11,10 +11,10 @@
 	<div class="icon-button-post button element"><span>{{post.CareerPhase}}</span>
 	</div>
 	<div class="input-button search home">
-		<form class="hidden-xs" onsubmit="search($('#search-input'))">
-			<input id="search-input" placeholder="Search" class="hidden-xs"><input id="search-input" class="visible-xs">
+		<form onsubmit="search($('#search-input'))">
+			<input id="search-input" placeholder="Search">
 		</form>
-		<i onclick="search($('#search-input'))" class="icon-search hidden-xs"></i><i onclick="" class="icon-search visible-xs"></i>
+		<i onclick="search($('#search-input'))" class="icon-search"></i>
 	</div>
     <div class="clear"></div>
 </div>
@@ -25,30 +25,28 @@
     <h1 class="title">{{post.Headline}}</h1>
 	<!--Disabled if type is video or image -->
     <div class="img-background article-media">
-        <div class="{{post.visibilityPicture}} img" style="background: url('{{post.Media.Url}}') center no-repeat;background-size:90%;" alt=""></div>
+        <div class="background-image img" style="background-image: url('{{post.Media.Url}}');" alt=""></div>
     </div>
 	<!--Disabled if type is article or image -->
 	 <div class="img-background video-media">
-        <div class="{{post.visibilityPicture}} img" style="background: url('{{post.Media.Url}}') center no-repeat;background-size:100%;" alt="">
-			<i class="icon-play-button-large"></i>
-			<!-- Video bar with play/pause button and progress bar -->
-			<div class="video-bar transp-black">
-				<!-- play/pause button -->
-				<i class="icon-play"></i>
-				<!-- progress bar -->
-				<span class="play-bar"><span class="played-bar"></span></span>
-			</div>
-			<i class="icon-image"></i>
-		</div>
+         <video height="100%" width="100%" preload="auto" controls="controls">
+          <source src="{{post.Media.Video.mp4}}" type="video/mp4">
+          <!--<source src="{{post.Media.Video.ogg}}" type="video/ogg">
+          <object data="{{post.Media.Video.mp4}}">
+            <embed src="{{post.Media.Video.swf}}">
+          </object> -->
+         Your browser does not support videos.
+        </video>
 	</div>
 	<!--Disabled if type is article or video -->
-	<div class="img-background image-media infographic">
-        <div class="{{post.visibilityPicture}} img" style="background: url('{{post.Media.Url}}') center no-repeat;background-size:90%;" alt="">
+	<div class="img-background image-media">
+        <div class="img">
+            <img src="{{post.Media.Infographic}}" alt=""/>
 			<i class="icon-image"></i>
 		</div>
     </div>
 	<!-- Social and rating (only on mobile) -->
-	<aside class="visible-xs complement">
+	<aside class="complement">
 		 <div class="social">
                 <span class='icon-social icon-save'></span>
                 <span class='icon-bar-grey'></span>
@@ -57,70 +55,21 @@
                 <span class='icon-social icon-google'></span>
                 <span class='icon-social icon-face'></span>
                 <span class='icon-social icon-link'></span>
-                <div class="clear"></div>
+                <!--<div class="clear"></div>-->
        </div> 
        <div class="rating">
             <span ng-repeat="star in post.stars">
                         <span class='{{star.class}} icon'></span>
             </span>
        </div>
+       <div class="visible-infographic" ng-include="'partials/comments-section.html'"></div>
 	</aside>
-	
-	<!--Text content -->
+    	<!--Text content -->
 	<div class="content">
         <div class="intro">{{post.ShortDescription}}</div>
         <div class="body" ng-bind-html="post.BodyHtml"></div>
    </div>
-   <aside class="complement">
-       <!-- social link + comments-->
-       <div class="social hidden-xs">
-                <span class='icon-social icon-save'></span>
-                <span class='icon-bar-grey'></span>
-                <span class='icon-social icon-mail'></span>
-                <span class='icon-social icon-twitter'></span>
-                <span class='icon-social icon-google'></span>
-                <span class='icon-social icon-face'></span>
-                <span class='icon-social icon-link'></span>
-       </div>
-       <div class="rating hidden-xs">
-            <span ng-repeat="star in post.stars">
-                        <span class='{{star.class}} icon'></span>
-            </span>
-       </div>
-       <div class="comments">
-            <div class="new-comment">
-                <div class="img-user" style="background: url('{{user.Media.Url}}') center no-repeat;background-size:200%;" alt=""></div>
-                <form class="input" ng-submit="newComment()">
-                    <input onkeyup="fakePlaceholder($(this))" ng-model="inputComment"/>
-                    <div class="placeholder"><strong>Get involved,</strong>&nbsp;<span>write a comment...</span></div>
-                </form>
-                <div class="clear"></div>
-            </div>
-            <div class="comments-list">
-                <div ng-repeat="comment in comments">
-                    <div class="level-1 {{comment.class}}">
-                        <comment comment="comment" user="user"></comment>
-                    </div>
-                    <div ng-repeat="subComment in comment.Replies">
-                        <div class="level-2 {{subComment.padding}}">
-                            <comment comment="subComment" user="user"></comment>
-                        </div>
-                        <div class="{{subComment.firstBorder}}">
-                            <div class="separator"></div>
-                        </div>
-                        <div ng-repeat="subSubComment in subComment.Replies">
-                                <div class="level-3 {{subSubComment.padding}}">
-                                    <comment comment="subSubComment" user="user"></comment>
-                                </div>
-                        </div>
-                        <div class="{{subComment.secondBorder}}">
-                            <div class="separator"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-       </div>
-    </aside>
+   <aside class="complement not-visible-infographic" ng-include="'partials/comments-section.html'"></aside>
     <div class="clear"></div>
 </div>
 <div class="bottom-post background-zig"></div>
