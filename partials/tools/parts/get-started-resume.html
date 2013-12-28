@@ -10,25 +10,30 @@
 					<div class="content">
 						<steps nbr-steps="1" first-connect="true"></steps>
 						<div class="button-container">
-							<input placeholder="First Name"/><input placeholder="Last Name"/><input class="no-margin-resp" placeholder="Email Adress"/>
+							<input ng-model="getStarted.userInfo.firstName.value" placeholder="First Name"/>
+							<input ng-model="getStarted.userInfo.lastName.value" placeholder="Last Name"/>
+							<input ng-model="getStarted.userInfo.email.value" class="no-margin-resp" placeholder="Email Adress"/>
 						</div>
 					</div>
 					<div class="content">
 						<div class="button-container">
-							<input placeholder="Street Adress"/>
-							<input placeholder="Additionnal Adress (Apt, Suite)"/>
+							<input ng-model="getStarted.userInfo.address.street.value" placeholder="Street Adress"/>
+							<input ng-model="getStarted.userInfo.address.apt.value" placeholder="Additionnal Adress (Apt, Suite)"/>
 							</br>
-							<input class="margin-top" placeholder="City"/>
+							<input ng-model="getStarted.userInfo.address.city.value" class="margin-top" placeholder="City"/>
 							<div class="button link toggleMenu margin-top">{{ getStarted.userInfo.address.state.value }}<i class="icon-bigarrow-bottom-grey"></i>
 								<ul class="subMenu dropdown">
 									<li ng-repeat="state in getStarted.lists.states" select data-value="state" data-elem="getStarted.userInfo.address.state.value">{{ country }}</li>
 								</ul>
 							</div>
-							<input placeholder="ZipCode"/>
+							<input ng-model="getStarted.userInfo.address.zipCode.value" placeholder="ZipCode"/>
 						</div>
 					</div>
 					<div class="content">
-						<div class="button-container"><input placeholder="Phone Number"/><input placeholder="Mobile Number"/></div>
+						<div class="button-container">
+							<input ng-model="getStarted.userInfo.phone.value" placeholder="Phone Number"/>
+							<input ng-model="getStarted.userInfo.moblie.value" placeholder="Mobile Number"/>
+						</div>
 					</div>
 					<div class="footer-dialog">
                         <div class="button-previous back-white selected left" onclick="">
@@ -40,7 +45,7 @@
                             <i class="icon-bigarrow-right-black icon right"></i>
                         </div>
         
-                        <div class="button-save back-green right" ng-click="register.save()">Save & Close</div>
+                        <div class="button-save back-green right" ng-click="getStarted.save()">Save & Close</div>
                         <div class="clear"></div>
                     </div>
 				</div>
@@ -56,15 +61,15 @@
 					<div class="content">
 						<div class="divider left">
 							<div class="label">JOB TITLE</div>
-							<input placeholder="Career Builder"/>
+							<input ng-model="getStarted.userInfo.job.title.name.value" placeholder="Career Builder"/>
 						</div>
 						<div class="divider left">
 							<div class="label">COMPANY</div>
-							<input placeholder="Career Builder"/>
+							<input ng-model="getStarted.userInfo.job.company.name.value" placeholder="Career Builder"/>
 						</div>
 						<div class="divider left">
 							<div class="label">LOCATION</div>
-							<input placeholder="Chicago, IL"/>
+							<input ng-model="getStarted.userInfo.job.location.value" placeholder="Chicago, IL"/>
 						</div>
 						<div class="divider left">
 							<div class="label">START DATE</div>
@@ -95,7 +100,7 @@
 						<div class="clear"></div>
 						<div>
 							<div class="label">DESCRIBE YOUR ROLE, RESPONSABILITIES, AND ACHIEVEMENTS:</div>
-							<textarea id="role" placeholder="I am a looser because..."/>
+							<textarea ng-model="getStarted.userInfo.job.description.value"  id="role" placeholder="I am a looser because..."/>
 						</div>
 					</div>
 					<div class="footer-dialog">
@@ -108,7 +113,7 @@
                             <i class="icon-bigarrow-right-black icon right"></i>
                         </div>
         
-                        <div class="button-save back-green right" ng-click="register.save()">Save & Close</div>
+                        <div class="button-save back-green right" ng-click="getStarted.save()">Save & Close</div>
                         <div class="clear"></div>
                     </div>
 				</div>
@@ -213,7 +218,7 @@
                             <i class="icon-bigarrow-right-black icon right"></i>
                         </div>
         
-                        <div class="button-save back-green right" ng-click="register.save()">Save & Close</div>
+                        <div class="button-save back-green right" ng-click="getStarted.save()">Save & Close</div>
                         <div class="clear"></div>
                     </div>
 				</div>
@@ -264,7 +269,7 @@
                             <i class="icon-bigarrow-right-black icon right"></i>
                         </div>
         
-                        <div class="button-save back-green right" ng-click="register.save()">Save & Close</div>
+                        <div class="button-save back-green right" ng-click="getStarted.save()">Save & Close</div>
                         <div class="clear"></div>
                     </div>
 				</div>
@@ -291,7 +296,7 @@
                             <i class="icon-bigarrow-right-black icon right"></i>
                         </div>
         
-                        <div class="button-save back-green right" ng-click="register.save()">Save & Close</div>
+                        <div class="button-save back-green right" ng-click="getStarted.save()">Save & Close</div>
                         <div class="clear"></div>
                     </div>
 				</div>
