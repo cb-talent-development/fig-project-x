@@ -4553,9 +4553,11 @@ SOCIAL
   @media only screen and (max-width: 768px) {
     .dashboard-popup .section .goals .message, .get-started-resume .section .goals .message {
       margin-top: 5px; } }
-  @media only screen and (max-width: 768px) {
-    .dashboard-popup .section .goals .medium, .get-started-resume .section .goals .medium {
-      width: 100%; } }
+  .dashboard-popup .section .goals .medium, .get-started-resume .section .goals .medium {
+    width: 371px; }
+    @media only screen and (max-width: 768px) {
+      .dashboard-popup .section .goals .medium, .get-started-resume .section .goals .medium {
+        width: 100%; } }
   @media only screen and (max-width: 768px) {
     .dashboard-popup .section .goals .left, .dashboard-popup .section .goals .right, .get-started-resume .section .goals .left, .get-started-resume .section .goals .right {
       width: 100%; } }
