@@ -402,7 +402,7 @@ Custom input
         display:none;
         background-color:inherit;
         max-height:230px;
-        overflow-y:auto;
+        overflow-y:scroll;
     }
 }
 .background-image{
@@ -700,7 +700,6 @@ Font handler
 }
 .home-main-container{
     @include main-block;
-    overflow:hidden;
     @media only screen and (max-width: 768px){
         width:100%;
     }
@@ -1525,7 +1524,6 @@ PROFILE SUBMENU
         //TODO...
 	}
 	.subMenu{
-        //just for the page-header subMenu (for the shadows)
         overflow:visible;
 		z-index: 999;
 		width: 370px;
@@ -2453,8 +2451,6 @@ Footer css
 */
 .footer{
     width:1170px;
-    margin:auto;
-    min-width:100%;
     @media only screen and (max-width: 768px) {
         width:100%;
     }
@@ -3231,10 +3227,6 @@ DIALOG
         }
     }
 }
-
-
-
-
 /*
 Tool CSS
 */
@@ -3413,9 +3405,9 @@ Tool CSS
             }
             .subMenu{
                 left:0px;
+                max-height:500px;
                 top:64px;
                 @include font-size(17px);
-                max-height:none;
                 color:white !important;
                 .elem{
                     padding-top:14px;
@@ -3427,7 +3419,6 @@ Tool CSS
                 }
                 @media only screen and (max-width: 768px){
 					top: 44px;
-                    max-height:300px;
 				}
                 
             }

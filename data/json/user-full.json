@@ -16,6 +16,20 @@
             "Title": "string",
             "MetaTags": "string"
     },
+	"Job":{
+		"Title":"Engineer",
+		"Company":"Make-It",
+		"Location":"Brussel",
+		"StartDate":{
+			"Month":"July",
+			"Year":"2013"
+		},
+		"EndDate":{
+			"Month":"",
+			"Year":""
+		},
+		"Description":"Diverse funny projects"
+	},
     "Mail":"berniernico@hotmail.com",
 	"Phone":"555-123-4789",
     "JobPhase":"Find the Job",

@@ -461,7 +461,7 @@ function apparition(elem){
     section.css('top','-1000px')
     section.css("display","block");
     section.animate({top: '0px'},400);
-    scrollTo($(".dialog"))
+    scrollTo(section);
 }
 function disparition(elem){
     section=elem.find(".section");
@@ -469,6 +469,8 @@ function disparition(elem){
        section.css("display","none");
        elem.fadeOut(200);             
     });
+    $("html, body").css('overflow','scroll');
+
 }
 /*
 Functions move cursor

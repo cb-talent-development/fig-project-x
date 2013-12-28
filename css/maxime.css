@@ -23,6 +23,496 @@ END-REDONDANCE
   text-decoration: none; }
 
 /*
+POST CSS
+*/
+.article-menu .button, .article-menu input {
+  padding-top: 13px; }
+.article-menu .input-button {
+  padding: 0px; }
+
+.post {
+  width: 1170px;
+  display: block;
+  margin: auto;
+  /*	@media only screen and (max-width: 1200px) and (min-width: 980px){
+          width:975px;
+      }
+  	@media only screen and (max-width: 979px) and (min-width: 769px){
+          width:765px;
+      }*/
+  /*
+  Comment-section
+  */ }
+  @media only screen and (max-width: 768px) {
+    .post {
+      width: 95%; } }
+  .post .title {
+    font-size: 90px;
+    margin-top: 57px;
+    margin-bottom: 37px;
+    line-height: 90px;
+    width: 80%;
+    min-width: 240px;
+    margin-left: 0px; }
+    @media only screen and (max-width: 768px) {
+      .post .title {
+        width: 100%; } }
+    @media only screen and (max-width: 1200px) and (min-width: 980px) {
+      .post .title {
+        font-size: 80px;
+        line-height: 80px;
+        margin-top: 40px;
+        margin-bottom: 30px; } }
+    @media only screen and (max-width: 979px) and (min-width: 768px) {
+      .post .title {
+        font-size: 65px;
+        line-height: 65px;
+        margin-top: 25px;
+        margin-bottom: 20px; } }
+    @media only screen and (max-width: 768px) {
+      .post .title {
+        font-size: 30px;
+        line-height: 30px;
+        margin-top: 15px;
+        margin-bottom: 15px; } }
+  .post .complement {
+    width: 32%;
+    float: right; }
+    @media only screen and (max-width: 768px) {
+      .post .complement {
+        width: 100%; } }
+    .post .complement .social, .post .complement .rating, .post .complement .comments {
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+      -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+      border: none;
+      background: white;
+      display: block;
+      width: 100%; }
+    @media only screen and (max-width: 768px) {
+      .post .complement .social, .post .complement .rating {
+        width: 100%;
+        float: left; } }
+    .post .complement .social {
+      height: 90px;
+      margin-bottom: 30px;
+      padding-top: 23px;
+      padding-bottom: 23px;
+      padding-left: 5px;
+      padding-right: 5px;
+      text-align: center; }
+      @media only screen and (max-width: 768px) and (min-width: 481px) {
+        .post .complement .social {
+          height: 55px;
+          margin-bottom: 10px;
+          margin-top: 5px;
+          padding-top: 10px;
+          padding-bottom: 10px;
+          margin-right: 4%; } }
+      @media only screen and (max-width: 480px) {
+        .post .complement .social {
+          height: 45px;
+          margin-bottom: 10px;
+          margin-top: 5px;
+          padding-top: 8px;
+          padding-bottom: 8px;
+          margin-right: 4%; } }
+      .post .complement .social .icon-social {
+        display: inline-block;
+        vertical-align: top;
+        margin-right: 10px; }
+        @media only screen and (max-width: 1200px) {
+          .post .complement .social .icon-social {
+            margin-right: 5px; } }
+        @media only screen and (max-width: 979px) {
+          .post .complement .social .icon-social {
+            margin-right: 5px; } }
+        @media only screen and (max-width: 768px) {
+          .post .complement .social .icon-social {
+            margin-right: 10px; } }
+        @media only screen and (max-width: 479px) {
+          .post .complement .social .icon-social {
+            margin-right: 2px; } }
+      .post .complement .social .icon-social:hover {
+        cursor: pointer;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+        -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+        border: none; }
+      .post .complement .social .icon-save {
+        margin-right: 2px; }
+      .post .complement .social .icon-bar-grey {
+        margin-top: 8px;
+        margin-left: 5px;
+        margin-right: 8px; }
+        @media only screen and (max-width: 1200px) {
+          .post .complement .social .icon-bar-grey {
+            margin-top: 7px;
+            margin-right: 5px; } }
+        @media only screen and (max-width: 979px) {
+          .post .complement .social .icon-bar-grey {
+            margin-top: 0px;
+            margin-right: 5px; } }
+        @media only screen and (max-width: 768px) {
+          .post .complement .social .icon-bar-grey {
+            margin-top: 7px;
+            margin-right: 15px;
+            margin-left: 6px;
+            margin-right: 8px; } }
+        @media only screen and (max-width: 479px) {
+          .post .complement .social .icon-bar-grey {
+            margin-top: 1px;
+            margin-left: 2px;
+            margin-right: 4px; } }
+    .post .complement .rating {
+      padding: 0px;
+      padding-top: 23px;
+      padding-bottom: 23px;
+      text-align: center;
+      margin-bottom: 30px; }
+      .post .complement .rating .icon {
+        margin: 0px 5px; }
+      @media only screen and (max-width: 768px) and (min-width: 481px) {
+        .post .complement .rating {
+          height: 55px;
+          margin-bottom: 10px;
+          padding-top: 12px;
+          padding-bottom: 10px; } }
+      @media only screen and (max-width: 480px) {
+        .post .complement .rating {
+          height: 45px;
+          margin-bottom: 10px;
+          padding-top: 8px;
+          padding-bottom: 9px; } }
+    .post .complement .comments {
+      min-height: 40px;
+      margin-bottom: 0px; }
+  .post .img-background {
+    float: left;
+    background: black;
+    margin-bottom: 47px;
+    width: 100%;
+    height: 500px; }
+    .post .img-background .img {
+      width: 100%;
+      height: 100%; }
+    @media only screen and (max-width: 1200px) and (min-width: 980px) {
+      .post .img-background {
+        height: 450px;
+        margin-bottom: 40px; } }
+    @media only screen and (max-width: 979px) and (min-width: 768px) {
+      .post .img-background {
+        height: 400px;
+        margin-bottom: 33px; } }
+    @media only screen and (max-width: 768px) {
+      .post .img-background {
+        height: 300px;
+        margin-bottom: 20px; } }
+    @media only screen and (max-width: 480px) {
+      .post .img-background {
+        height: 200px;
+        margin-bottom: 10px; } }
+  .post .infographic, .post .content {
+    width: 66%; }
+    @media only screen and (max-width: 768px) {
+      .post .infographic, .post .content {
+        width: 100%; } }
+  .post .content {
+    float: left;
+    padding: 0 10px; }
+    .post .content .intro {
+      font-size: 27px;
+      line-height: 36px;
+      text-transform: uppercase;
+      padding-bottom: 3px; }
+      @media only screen and (max-width: 1200px) and (min-width: 980px) {
+        .post .content .intro {
+          font-size: 25px;
+          line-height: 33px; } }
+      @media only screen and (max-width: 979px) and (min-width: 768px) {
+        .post .content .intro {
+          font-size: 22px;
+          line-height: 30px; } }
+      @media only screen and (max-width: 768px) {
+        .post .content .intro {
+          font-size: 17px;
+          line-height: 27px; } }
+      @media only screen and (max-width: 480px) {
+        .post .content .intro {
+          font-size: 15px;
+          line-height: 25px; } }
+    .post .content .hightlight {
+      background-color: yellow;
+      text-decoration: underline;
+      padding-top: 5px;
+      padding-bottom: 2px;
+      padding-left: 2px;
+      padding-right: 2px; }
+    .post .content img, .post .content .img {
+      margin-top: 20px;
+      margin-bottom: 10px;
+      width: 100%; }
+    .post .content h3 {
+      margin-top: 30px;
+      margin-bottom: 15px;
+      font-size: 18px; }
+      @media only screen and (max-width: 1200px) and (min-width: 980px) {
+        .post .content h3 {
+          margin-top: 25px;
+          margin-bottom: 13px;
+          font-size: 17px; } }
+      @media only screen and (max-width: 979px) and (min-width: 768px) {
+        .post .content h3 {
+          margin-top: 20px;
+          margin-bottom: 10px;
+          font-size: 16px; } }
+      @media only screen and (max-width: 768px) {
+        .post .content h3 {
+          margin-top: 15px;
+          margin-bottom: 8px;
+          font-size: 15px; } }
+      @media only screen and (max-width: 480px) {
+        .post .content h3 {
+          margin-top: 12px;
+          margin-bottom: 6px;
+          font-size: 14px; } }
+    .post .content p {
+      font-size: 18px;
+      line-height: 24px;
+      margin: 0px;
+      padding-top: 11px;
+      padding-bottom: 16px; }
+      @media only screen and (max-width: 1200px) and (min-width: 980px) {
+        .post .content p {
+          font-size: 17px;
+          line-height: 23px;
+          padding-top: 10px;
+          padding-bottom: 15px; } }
+      @media only screen and (max-width: 979px) and (min-width: 768px) {
+        .post .content p {
+          font-size: 16px;
+          line-height: 21px;
+          padding-top: 9px;
+          padding-bottom: 13px; } }
+      @media only screen and (max-width: 768px) {
+        .post .content p {
+          font-size: 14px;
+          line-height: 19px;
+          padding-top: 8px;
+          padding-bottom: 12px; } }
+      @media only screen and (max-width: 480px) {
+        .post .content p {
+          font-size: 13px;
+          line-height: 17px;
+          padding-top: 7px;
+          padding-bottom: 10px; } }
+  .post .comments .new-comment {
+    padding: 20px;
+    position: relative;
+    border-bottom: 1px solid #cfcfcf; }
+    @media only screen and (max-width: 1200px) and (min-width: 980px) {
+      .post .comments .new-comment {
+        font-size: 13px; } }
+    @media only screen and (max-width: 979px) and (min-width: 768px) {
+      .post .comments .new-comment {
+        font-size: 12px; } }
+    @media only screen and (max-width: 479px) {
+      .post .comments .new-comment {
+        font-size: 12px; } }
+    .post .comments .new-comment .img-user {
+      float: left;
+      width: 40px;
+      height: 40px; }
+    .post .comments .new-comment .input {
+      float: left;
+      position: relative;
+      height: 40px;
+      width: 287px;
+      background-color: #e7e7e7;
+      color: black; }
+      .post .comments .new-comment .input input {
+        z-index: 4;
+        padding: 10px;
+        position: absolute;
+        padding: 10px;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0);
+        height: 40px;
+        border: none; }
+      .post .comments .new-comment .input .placeholder {
+        z-index: 1;
+        text-transform: capitalize;
+        position: absolute;
+        line-height: 40px;
+        height: 40px;
+        padding-left: 10px;
+        top: 0px;
+        left: 0px;
+        width: 100%; }
+      @media only screen and (max-width: 1200px) and (min-width: 980px) {
+        .post .comments .new-comment .input {
+          width: 220px; }
+          .post .comments .new-comment .input input {
+            padding: 3px; } }
+      @media only screen and (max-width: 979px) and (min-width: 768px) {
+        .post .comments .new-comment .input {
+          width: 200px; }
+          .post .comments .new-comment .input input {
+            padding: 4px; } }
+      @media only screen and (max-width: 479px) {
+        .post .comments .new-comment .input {
+          width: 80%; }
+          .post .comments .new-comment .input input {
+            padding: 4px; } }
+  .post .comments .comments-list {
+    padding: 20px;
+    padding-bottom: 0px;
+    padding-right: 0px;
+    background-color: white; }
+    .post .comments .comments-list .level-2 .content, .post .comments .comments-list .level-3 .content {
+      border-left: 1px solid #e7e7e7; }
+    .post .comments .comments-list .level-2 .img {
+      margin-right: 20px; }
+    .post .comments .comments-list .level-3 .img {
+      margin-right: 40px; }
+    .post .comments .comments-list .level-1 .content {
+      width: 80%; }
+      .post .comments .comments-list .level-1 .content .new-comment .input {
+        width: 69%; }
+      @media only screen and (max-width: 768px) {
+        .post .comments .comments-list .level-1 .content {
+          width: 84%; }
+          .post .comments .comments-list .level-1 .content .new-comment .input {
+            width: 80%; } }
+    .post .comments .comments-list .level-2 .content {
+      width: 73%; }
+      .post .comments .comments-list .level-2 .content .new-comment .input {
+        width: 69%; }
+      @media only screen and (max-width: 768px) {
+        .post .comments .comments-list .level-2 .content {
+          width: 78%; }
+          .post .comments .comments-list .level-2 .content .new-comment .input {
+            width: 78%; } }
+    .post .comments .comments-list .level-3 .content {
+      width: 64%; }
+      .post .comments .comments-list .level-3 .content .new-comment .input {
+        width: 64%; }
+      @media only screen and (max-width: 768px) {
+        .post .comments .comments-list .level-3 .content {
+          width: 70%; }
+          .post .comments .comments-list .level-3 .content .new-comment .input {
+            width: 76%; } }
+    .post .comments .comments-list .separator {
+      height: 1px;
+      border-bottom: 1px solid #e7e7e7;
+      margin-bottom: 15px;
+      margin-top: 15px;
+      margin-left: -20px; }
+    .post .comments .comments-list .comment {
+      font-size: 13px; }
+      .post .comments .comments-list .comment .img {
+        height: 40px;
+        width: 40px;
+        float: left; }
+      .post .comments .comments-list .comment .name {
+        font-weight: bold;
+        margin-right: 12px; }
+      .post .comments .comments-list .comment .time {
+        color: #cfcfcf; }
+      .post .comments .comments-list .comment .statement {
+        margin: 10px 0px; }
+      .post .comments .comments-list .comment .reply, .post .comments .comments-list .comment .closeReply {
+        position: relative;
+        margin-right: 5px;
+        text-transform: capitalize;
+        font-weight: bold;
+        color: #ee7835; }
+      .post .comments .comments-list .comment .reply:hover, .post .comments .comments-list .comment .closeReply:hover {
+        cursor: pointer;
+        text-decoration: underline; }
+      .post .comments .comments-list .comment .closeReply {
+        color: #d46268; }
+      .post .comments .comments-list .comment .content {
+        padding-left: 20px;
+        float: left;
+        transition: padding-bottom, 0.5s;
+        padding-bottom: 30px; }
+        .post .comments .comments-list .comment .content .new-comment {
+          width: 100%;
+          border: none;
+          padding: 15px 0px;
+          display: none; }
+          .post .comments .comments-list .comment .content .new-comment .placeholder {
+            color: #9d9d9d; }
+        .post .comments .comments-list .comment .content .closeReply {
+          display: none; }
+        @media only screen and (max-width: 768px) {
+          .post .comments .comments-list .comment .content {
+            padding-left: 16px;
+            padding-bottom: 24px; } }
+    .post .comments .comments-list .no-first-bar .separator, .post .comments .comments-list .no-second-bar .separator {
+      display: none; }
+    .post .comments .comments-list .no-padding-bottom .comment .content {
+      padding-bottom: 0px; }
+
+.post-article .video-media, .post-article .image-media {
+  display: none; }
+
+.post-video .article-media, .post-video .image-media {
+  display: none; }
+.post-video .video-media {
+  position: relative; }
+  .post-video .video-media .icon-play-button-large {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 10;
+    margin-left: -35px;
+    margin-top: -35px; }
+  .post-video .video-media .video-bar {
+    bottom: 10px;
+    left: 10px;
+    z-index: 10;
+    height: 40px;
+    width: 1100px; }
+    .post-video .video-media .video-bar .icon-play {
+      position: absolute;
+      left: 25px;
+      top: 20px; }
+    .post-video .video-media .video-bar .play-bar {
+      height: 10px;
+      width: 1030px;
+      position: absolute;
+      left: 50px;
+      top: 15px;
+      background-color: #0a0a0a; }
+      .post-video .video-media .video-bar .play-bar .played-bar {
+        position: absolute;
+        width: 40%;
+        height: 10px;
+        background-color: white; }
+  .post-video .video-media .icon-image {
+    position: absolute;
+    right: 10px;
+    bottom: 10px; }
+
+.post-image .article-media, .post-image .video-media {
+  display: none; }
+.post-image .img-background {
+  width: 65.6%; }
+  .post-image .img-background .icon-image {
+    position: absolute;
+    top: 10px;
+    right: 10px; }
+.post-image .complement {
+  position: absolute;
+  left: 65%;
+  width: 26.6% !important; }
+
+/*
+END POST 
+*/
+/*
 NAVBAR (extension menu)
 */
 .nav-menu {

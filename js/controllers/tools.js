@@ -163,7 +163,6 @@ function ToolCtr($scope, $http,$routeParams,pagination,register) {
 		$scope.loadTemplates();
         $scope.loadResumeHero();
     }
-	alert('coucou');
     $scope.init();
     $scope.$on('$includeContentLoaded', function(){
         initEffect();
@@ -298,13 +297,19 @@ function ResumeHeroCtr($scope, $http, getStarted){
 	$scope.loadInfo=function(){
         $http.get("data/json/user-full.json").success(function(data) {
             $scope.user=data;
-            $scope.register.initInput(data);
+			$scope.getStarted.initInput(data);
 	   });
     }
+	
+	$scope.getStartedPage = function(n){
+		movePopup($('.get-started-resume'),n);
+		apparition($('.get-started-resume'));
+	}
 	
 	
     $scope.init=function(){
         initGetStarted($scope,getStarted);
+		$scope.loadInfo();
 		if($scope.resumeHero[0]){
 			$scope.currentResume = $scope.resumeHero[0];
 			$scope.currentResume.Class="selected";

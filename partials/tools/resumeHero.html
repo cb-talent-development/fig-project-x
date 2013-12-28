@@ -11,15 +11,15 @@
 	</div>
 	<div class="content">
 		<div class="button-list left">
-			<div class="button back-white"><i class="icon-completed-check"></i>Contact Information<i class="icon-right-black"></i></div>
-			<div class="button back-white"><i class="icon-completed-check"></i>Work Experience<i class="icon-right-black"></i></div>
-			<div class="button back-white"><i class="icon-completed-check"></i>Education & Career Training<i class="icon-right-black"></i></div>
-			<div class="button back-white"><i class="icon-completed-check"></i>Skills<i class="icon-right-black"></i></div>
-			<div class="button back-white"><i class="icon-not-completed"></i>Awards & Honors<i class="icon-right-black"></i></div>
-			<div class="button back-white"><i class="icon-not-completed"></i>Tools & Technology<i class="icon-right-black"></i></div>
-			<div class="button back-white"><i class="icon-not-completed"></i>Publications<i class="icon-right-black"></i></div>
-			<div class="button back-white"><i class="icon-not-completed"></i>Affiliations<i class="icon-right-black"></i></div>
-			<div class="button back-white"><i class="icon-not-completed"></i>Volunteer Work<i class="icon-right-black"></i></div>
+			<div class="button back-white" ng-click="getStartedPage(1)"><i class="icon-completed-check"></i>Contact Information<i class="icon-right-black"></i></div>
+			<div class="button back-white" ng-click="getStartedPage(2)"><i class="icon-completed-check"></i>Work Experience<i class="icon-right-black"></i></div>
+			<div class="button back-white" ng-click="getStartedPage(3)"><i class="icon-completed-check"></i>Education & Career Training<i class="icon-right-black"></i></div>
+			<div class="button back-white" ng-click="getStartedPage(3)"><i class="icon-completed-check"></i>Skills<i class="icon-right-black"></i></div>
+			<div class="button back-white" ng-click="getStartedPage(4)"><i class="icon-not-completed"></i>Awards & Honors<i class="icon-right-black"></i></div>
+			<div class="button back-white" ng-click="getStartedPage(4)"><i class="icon-not-completed"></i>Tools & Technology<i class="icon-right-black"></i></div>
+			<div class="button back-white" ng-click="getStartedPage(5)"><i class="icon-not-completed"></i>Publications<i class="icon-right-black"></i></div>
+			<div class="button back-white" ng-click="getStartedPage(5)"><i class="icon-not-completed"></i>Affiliations<i class="icon-right-black"></i></div>
+			<div class="button back-white" ng-click="getStartedPage(5)"><i class="icon-not-completed"></i>Volunteer Work<i class="icon-right-black"></i></div>
 			<div class="button back-white" onclick="apparition($('.add-section'))"><i class="icon-add-section"></i>Add Section<i class="icon-right-black"></i></div>
 		</div>
 		<div class="resume-content left">
@@ -27,7 +27,7 @@
 			<div class="presentation">
 				<div class="name">{{user.Name}}</div>
 				<ul>
-					<li class="info left">{{user.Adress}}</li>
+					<li class="info left">{{user.Address}}</li>
 					<li class="info left">{{user.City}}, {{user.State}}, {{user.Zipcode}}</li>
 					<li class="info left">{{user.Phone}}</li>
 					<li class="info left">{{user.Mail}}</li>
@@ -150,7 +150,7 @@
 				<div class="content">
 					<div class="save link">
 						<a href="/"></a>
-						<div class="icon-resumePro-saved"></div>
+						<div class="icon-resumeHero-saved"></div>
 						<div class="content-save">
 							<div class="name">{{currentResume.Title}}</div>
 							<div class="type">{{currentResume.Type}}</div>

@@ -308,11 +308,10 @@ module.factory('getStarted',['$http',function($http) {
             'lastName':input(),
             'address':{
                 'street':input(),
-                'zipcode':input(),
+                'zipCode':input(),
                 'state':input("State"),
                 'apt':input(),
                 'city':input()
-                
             },
             'skills':{
                 'selected':[],
@@ -361,13 +360,45 @@ module.factory('getStarted',['$http',function($http) {
         if(user && user != 'none'){
         //address
             this.userInfo.address.state.value=this.user.State;
-            this.userInfo.address.zipcode.value=this.user.Zipcode;
+            this.userInfo.address.zipCode.value=this.user.Zipcode;
+			this.userInfo.address.city.value=this.user.City;
+			this.userInfo.address.apt.value=this.user.Apt;
+			this.userInfo.address.street.value=this.user.Address;
             //job
-            this.userInfo.job.name.value=this.user.JobTitle;
+            this.userInfo.job.title.name.value=this.user.Job.Title;
+            this.userInfo.job.company.name.value=this.user.Job.Company;
+            this.userInfo.job.location.value=this.user.Job.Location;
+            this.userInfo.job.startDate.month.value=this.user.Job.StartDate.Month;
+            this.userInfo.job.startDate.year.value=this.user.Job.StartDate.Year;
+            this.userInfo.job.endDate.month.value=this.user.Job.EndDate.Month;
+            this.userInfo.job.endDate.year.value=this.user.Job.EndDate.Year;
+            this.userInfo.job.description.value=this.user.Job.Description;
+			//education
+			this.userInfo.education.diploma.value=this.user.Education.Diploma;
+			this.userInfo.education.specialization.value=this.user.Education.Specialization;
+			this.userInfo.education.institution.value=this.user.Education.Institution;
+			this.userInfo.education.location.value=this.user.Education.Location;
+			this.userInfo.education.dateGraduate.month.value=this.user.Education.DateGraduate.Month;
+			this.userInfo.education.dateGraduate.year.value=this.user.Education.DateGraduate.Year;
+			//skills
+			this.userInfo.skills.monitoring.value=this.user.Skills.Monitoring;
+			this.userInfo.skills.speaking.value=this.user.Skills.Speaking;
+			this.userInfo.skills.science.value=this.user.Skills.Science;
+			this.userInfo.skills.readingComprehension.value=this.user.Skills.ReadingComprehension;
+			this.userInfo.skills.writing.value=this.user.Skills.Writing;
+			this.userInfo.skills.mathematics.value=this.user.Skills.Mathematics;
+			//awards
+			//technical skills & Volunteer, publication, affiliation
+			this.userInfo.technicalSkills.value=this.user.TechnicalSkills;
+			this.userInfo.volunteer.value=this.user.Volunteer;
+			
+			
             //...
             this.userInfo.firstName.value=this.user.FirstName;
             this.userInfo.lastName.value=this.user.LastName;
             this.userInfo.email.value=this.user.Mail;
+			this.userInfo.phone.value=this.user.Phone;
+			this.userInfo.moblie.value=this.user.Mobile;
             //this.user.Mail="lol@lol.com";
         }
     }

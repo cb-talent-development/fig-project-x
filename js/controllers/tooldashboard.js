@@ -3,10 +3,10 @@ function ToolDashBoardCtr($scope, $http,register) {
         if($scope.user=='none'){
             //no user -> no resumeHero
             alert("no user");
-            apparition($('.get-started-resume'));
+            apparition($('.dashboard-popup'));
         }
         else{
-            window.location.href="#/Career Tools/Resume Hero";
+            window.location.href="#/tools/resume-hero";
         }
     }
 	/*

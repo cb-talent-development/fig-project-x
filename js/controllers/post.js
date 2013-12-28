@@ -185,7 +185,7 @@ function PostCtr($scope,$http,$routeParams,register){
         $scope.loadRelated();
         $scope.loadComments();
         //Init eventual effects
-        $scope.$on('$viewContentLoaded', function(){
+        $scope.$on('$includeContentLoaded', function(){
             initEffect();
         });
         
