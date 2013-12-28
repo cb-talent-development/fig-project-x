@@ -1,5 +1,15 @@
 function ToolDashBoardCtr($scope, $http,register) {
-    /*
+    $scope.openResumeHero=function(){
+        if($scope.user=='none'){
+            //no user -> no resumeHero
+            alert("no user");
+            apparition($('.get-started-resume'));
+        }
+        else{
+            window.location.href="#/Career Tools/Resume Hero";
+        }
+    }
+	/*
     Constructor
     */
     $scope.init=function(){

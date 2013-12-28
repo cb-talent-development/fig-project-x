@@ -362,12 +362,8 @@ module.factory('getStarted',['$http',function($http) {
         //address
             this.userInfo.address.state.value=this.user.State;
             this.userInfo.address.zipcode.value=this.user.Zipcode;
-            //gender
-            this.userInfo.gender.value=this.user.Gender;
             //job
             this.userInfo.job.name.value=this.user.JobTitle;
-            //salary
-            this.userInfo.salary.value=this.user.Income;
             //...
             this.userInfo.firstName.value=this.user.FirstName;
             this.userInfo.lastName.value=this.user.LastName;

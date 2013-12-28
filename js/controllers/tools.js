@@ -163,6 +163,7 @@ function ToolCtr($scope, $http,$routeParams,pagination,register) {
 		$scope.loadTemplates();
         $scope.loadResumeHero();
     }
+	alert('coucou');
     $scope.init();
     $scope.$on('$includeContentLoaded', function(){
         initEffect();
