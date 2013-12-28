@@ -241,7 +241,7 @@ Custom input
     display: none;
     background-color: inherit;
     max-height: 230px;
-    overflow-y: scroll; }
+    overflow-y: auto; }
 
 .background-image {
   background-position: center;
@@ -4228,9 +4228,9 @@ Tool CSS
             top: 22.5px; } }
       .tool .selector .industries .subMenu, .tool .selector .occupations .subMenu {
         left: 0px;
-        max-height: 500px;
         top: 64px;
         font-size: 17px;
+        max-height: none;
         color: white !important; }
         @media only screen and (min-width: 481px) and (max-width: 768px) {
           .tool .selector .industries .subMenu, .tool .selector .occupations .subMenu {
@@ -4246,7 +4246,8 @@ Tool CSS
           color: rgba(255, 255, 255, 0.8) !important; }
         @media only screen and (max-width: 768px) {
           .tool .selector .industries .subMenu, .tool .selector .occupations .subMenu {
-            top: 44px; } }
+            top: 44px;
+            max-height: 300px; } }
       .tool .selector .industries .mode-0, .tool .selector .occupations .mode-0 {
         background-color: #082e52; }
       .tool .selector .industries input[type=checkbox], .tool .selector .occupations input[type=checkbox] {
