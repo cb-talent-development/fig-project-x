@@ -1,4 +1,4 @@
-angular.module('CareerBuilder', ['ngSanitize','CareerDirectives','factory']). 
+angular.module('CareerBuilder', ['ngSanitize','ngRoute','CareerDirectives','factory']). 
 	config(['$routeProvider', function($routeProvider) { 
 	$routeProvider.
 		when('/advice-resources', {templateUrl: 'partials/main.html',controller:HomePageCtr}).
