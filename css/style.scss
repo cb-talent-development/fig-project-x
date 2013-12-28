@@ -3350,40 +3350,42 @@ SOCIAL
 .button-facebook:hover{
     background-color:rgb(54,83,139);
 }
-.dashboard-popup,.get-started-resume{
-    .steps-content{
-       @media only screen and (max-width: 768px){
-           display:none;
+.dashboard-popup,.tool .get-started-resume{
+    .section{
+        .steps-content{
+           @media only screen and (max-width: 768px){
+               display:none;
+            }
         }
-    }
-    .content{
-        padding: 20px;
-        border-bottom:1px solid $lightGrey;
-        @media only screen and (max-width: 768px){
-            padding:10px;
-        }
-        .icon-step-1, .icon-step-2, .icon-step-3, .icon-step-4, .icon-step-5,.icon-step-1-grey, .icon-step-2-grey, .icon-step-3-grey, .icon-step-4-grey, .icon-step-5-grey{
-            margin-right: -28px;
-            display:inline-block;
-            vertical-align:top;
-            text-align:center;
-            padding-top:26px;
-            color: white;
-            font-size:23px;
+        .content{
+            padding: 20px;
+            border-bottom:1px solid $lightGrey;
             @media only screen and (max-width: 768px){
-                padding-top:13px;
-                font-size:18px;
+                padding:10px;
             }
-            span{
-               position:relative;right:15px;
-               @media only screen and (max-width: 768px){
-               }
+            .icon-step-1, .icon-step-2, .icon-step-3, .icon-step-4, .icon-step-5,.icon-step-1-grey, .icon-step-2-grey, .icon-step-3-grey, .icon-step-4-grey, .icon-step-5-grey{
+                margin-right: -28px;
+                display:inline-block;
+                vertical-align:top;
+                text-align:center;
+                padding-top:26px;
+                color: white;
+                font-size:23px;
+                @media only screen and (max-width: 768px){
+                    padding-top:13px;
+                    font-size:18px;
+                }
+                span{
+                   position:relative;right:15px;
+                   @media only screen and (max-width: 768px){
+                   }
+                }
             }
-        }
-        .icon-step-5,.icon-step-5-grey{
-            span{
-                left:15px;  
-                right:0px;
+            .icon-step-5,.icon-step-5-grey{
+                span{
+                    left:15px;  
+                    right:0px;
+                }
             }
         }
     }
