@@ -3646,8 +3646,7 @@ POST CSS
 .post-image .article-media, .post-image .video-media, .post-infographic .article-media, .post-infographic .video-media, .post-Infographic .article-media, .post-Infographic .video-media, .post-Info .article-media, .post-Info .video-media {
   display: none; }
 .post-image .img-background, .post-infographic .img-background, .post-Infographic .img-background, .post-Info .img-background {
-  height: auto;
-  width: 65.6%; }
+  height: auto; }
   @media only screen and (max-width: 768px) {
     .post-image .img-background, .post-infographic .img-background, .post-Infographic .img-background, .post-Info .img-background {
       width: 100%; } }
