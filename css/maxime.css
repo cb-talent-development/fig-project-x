@@ -811,11 +811,33 @@ RESUME HERO
   width: 100%;
   height: 150px;
   margin-left: 0px;
-  margin-top: 20px;
   font-size: 25px;
   padding: 15px; }
+  @media only screen and (max-width: 767px) {
+    .get-started-resume .section .content textarea#role, .get-started-resume .section .content textarea#technical-skills, .get-started-resume .section .content textarea#extra-skills {
+      font-size: 17px; } }
 .get-started-resume .section .content textarea#extra-skills {
   height: 400px; }
+@media only screen and (min-width: 768px) {
+  .get-started-resume .section .margin-bottom {
+    margin-bottom: 25px !important; } }
+@media only screen and (min-width: 768px) {
+  .get-started-resume .section .margin-top {
+    margin-top: 25px !important; } }
+.get-started-resume .section .little {
+  width: 173px;
+  margin-right: 25px; }
+  @media only screen and (max-width: 767px) {
+    .get-started-resume .section .little {
+      width: 49%;
+      margin-right: 2%; } }
+.get-started-resume .section .little.last {
+  margin-right: 0px; }
+.get-started-resume .section .medium .input-button, .get-started-resume .section .medium .select {
+  width: 100%; }
+@media only screen and (max-width: 767px) {
+  .get-started-resume .section .large-resp {
+    width: 100%; } }
 
 /*
 COLORS
@@ -1032,164 +1054,6 @@ RESUME HERO POP
         -webkit-box-shadow: 0px -1px 1px rgba(0, 0, 0, 0.2);
         border: none;
         background: white; }
-
-.get-started-resume .section {
-  width: 1204px !important; }
-  @media (max-width: 767px) {
-    .get-started-resume .section {
-      width: 470px !important; } }
-  @media (max-width: 480px) {
-    .get-started-resume .section {
-      width: 300px !important; } }
-  .get-started-resume .section .header .title {
-    font-weight: normal; }
-  .get-started-resume .section .header .label {
-    display: inline-block;
-    font-size: 27px; }
-    @media (max-width: 479px) {
-      .get-started-resume .section .header .label {
-        font-size: 13px; } }
-  .get-started-resume .section .button-container {
-    margin-left: -20px; }
-  .get-started-resume .section .content {
-    border-bottom: 1px solid #cfcfcf;
-    margin-right: -20px; }
-    @media (max-width: 480px) {
-      .get-started-resume .section .content {
-        padding: 10px; } }
-    .get-started-resume .section .content .clear {
-      margin-bottom: 20px; }
-    .get-started-resume .section .content .icon-step-1, .get-started-resume .section .content .icon-step-2, .get-started-resume .section .content .icon-step-3, .get-started-resume .section .content .icon-step-4, .get-started-resume .section .content .icon-step-5 {
-      margin-right: -28px;
-      padding: 21px 95px;
-      color: white;
-      font-size: 28px; }
-      @media (max-width: 479px) {
-        .get-started-resume .section .content .icon-step-1, .get-started-resume .section .content .icon-step-2, .get-started-resume .section .content .icon-step-3, .get-started-resume .section .content .icon-step-4, .get-started-resume .section .content .icon-step-5 {
-          font-size: 20px;
-          padding: 8px 45px; } }
-    .get-started-resume .section .content .icon-step-1 {
-      padding: 21px 70px;
-      margin-bottom: 20px; }
-      @media (max-width: 479px) {
-        .get-started-resume .section .content .icon-step-1 {
-          padding: 8px 32px; } }
-    .get-started-resume .section .content .icon-step-1 > div:not(.content) {
-      margin-bottom: 0px !important; }
-    .get-started-resume .section .content .icon-step-5 {
-      padding-right: 0px; }
-    .get-started-resume .section .content input, .get-started-resume .section .content .button, .get-started-resume .section .content textarea {
-      box-shadow: 0px -1px 1px rgba(0, 0, 0, 0.2);
-      -webkit-box-shadow: 0px -1px 1px rgba(0, 0, 0, 0.2);
-      border: none;
-      background: white;
-      margin-left: 25px;
-      width: 370px;
-      height: 70px;
-      border: none;
-      display: inline-block;
-      padding: 10px;
-      font-size: 30px;
-      text-overflow: ellipsis; }
-      @media (max-width: 767px) and (min-width: 480px) {
-        .get-started-resume .section .content input, .get-started-resume .section .content .button, .get-started-resume .section .content textarea {
-          margin-left: 10px;
-          height: 50px;
-          font-size: 20px;
-          width: 210px !important; } }
-      @media (max-width: 479px) {
-        .get-started-resume .section .content input, .get-started-resume .section .content .button, .get-started-resume .section .content textarea {
-          margin-left: 10px;
-          height: 30px;
-          font-size: 20px;
-          width: 135px !important; } }
-    .get-started-resume .section .content .button {
-      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-      -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-      border: none;
-      background: white;
-      margin-right: -6px;
-      padding-top: 17px; }
-      .get-started-resume .section .content .button ul {
-        top: 70px; }
-    .get-started-resume .section .content .button:not(.open) {
-      overflow: hidden; }
-    .get-started-resume .section .content textarea {
-      margin-top: 20px; }
-    .get-started-resume .section .content .margin-top {
-      margin-top: 20px; }
-    @media (max-width: 479px) {
-      .get-started-resume .section .content .link {
-        padding-top: 4px; } }
-    @media (max-width: 479px) {
-      .get-started-resume .section .content .link .subMenu {
-        top: 31px; }
-        .get-started-resume .section .content .link .subMenu li {
-          height: 30px;
-          padding: 5px 10px;
-          font-size: 19px; } }
-  .get-started-resume .section .divider {
-    width: 390px;
-    padding: 20px;
-    padding-left: 0px;
-    padding-right: 25px; }
-    .get-started-resume .section .divider input, .get-started-resume .section .divider .button {
-      width: 100%; }
-    .get-started-resume .section .divider input {
-      margin-left: 0px; }
-    .get-started-resume .section .divider .label {
-      margin-bottom: 20px; }
-    .get-started-resume .section .divider .button.date {
-      width: 175px; }
-    .get-started-resume .section .divider .button.first {
-      margin-left: 0px; }
-.get-started-resume .buttons-changes {
-  width: 100%;
-  margin-top: 20px; }
-  .get-started-resume .buttons-changes .button-change {
-    width: 33%;
-    color: #828282; }
-    .get-started-resume .buttons-changes .button-change .title {
-      font-size: 27px; }
-    .get-started-resume .buttons-changes .button-change .txt {
-      padding: 10px 42px;
-      padding-right: 35px;
-      font-family: HelveticaRoman, sans-serif;
-      font-size: 16px; }
-    .get-started-resume .buttons-changes .button-change .carre {
-      height: 30px;
-      width: 30px; }
-      @media (max-width: 479px) {
-        .get-started-resume .buttons-changes .button-change .carre {
-          height: 15px;
-          width: 15px; } }
-  .get-started-resume .buttons-changes .button-change.selected .title {
-    color: black; }
-  .get-started-resume .buttons-changes .button-change:not(.selected) .carre {
-    border-top: 1px outset #c8c8c8; }
-  .get-started-resume .buttons-changes .button-change.txt, .get-started-resume .buttons-changes .button-change.title {
-    color: #828282; }
-.get-started-resume .footer-dialog .button:first-child {
-  margin-right: 20px; }
-.get-started-resume .footer-dialog .inactive {
-  opacity: 0.5; }
-.get-started-resume .footer-dialog #next-button {
-  padding-right: 35px; }
-.get-started-resume .footer-dialog i {
-  top: 14px; }
-@media (max-width: 479px) {
-  .get-started-resume .footer-dialog {
-    padding: 10px; }
-    .get-started-resume .footer-dialog .button:first-child {
-      margin-right: 10px; }
-    .get-started-resume .footer-dialog .button {
-      font-size: 15px;
-      padding: 5px; }
-    .get-started-resume .footer-dialog #next-button {
-      padding-right: 20px; }
-    .get-started-resume .footer-dialog i {
-      top: 7px;
-      right: 7px; } }
 
 /*
 COLORS
