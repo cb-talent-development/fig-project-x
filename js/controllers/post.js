@@ -15,10 +15,20 @@ function PostCtr($scope,$http,$routeParams,register){
                 "txt":$scope.post.Categories[0].Name,
                 "color":"grey"
             }]
+            if($scope.postId<=2){
+                $scope.post.Type="article";
+            }
+            else if($scope.postId<=4){
+                $scope.post.Type="infographic";
+            }
+            else{
+                $scope.post.Type="video";
+            }
 	   });	
     };
     $scope.loadRelated=function(url){
         //USE ID !!!
+        $scope.postId=$routeParams.postId;
         $http.get("data/json/post-related.json").success(function(data) {
             $scope.related=data.Posts;
             for(var i=0;i<$scope.related.length;i++){
@@ -175,7 +185,7 @@ function PostCtr($scope,$http,$routeParams,register){
         $scope.loadRelated();
         $scope.loadComments();
         //Init eventual effects
-        $scope.$on('$viewContentLoaded', function(){
+        $scope.$on('$includeContentLoaded', function(){
             initEffect();
         });
         
