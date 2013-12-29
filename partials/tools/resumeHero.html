@@ -37,10 +37,10 @@
 			<ul class="sortable" id="sortable">
 				<li class="element ui-state-default" ng-repeat="section in sections">
 					<div class="icons">
-						<div class="button back-green"><i class="icon-add-button"></i></div>
+						<div class="button back-green" onclick="apparition($('.add-section'))"><i class="icon-add-button"></i></div>
 						<div class="separation"></div>
 						<div class="button back-grey"><i class="icon-drag-button"></i></div>
-						<div class="button back-grey"><i class="icon-edit-button"></i></div>
+						<div class="button back-grey" ng-click="editSection()"><i class="icon-edit-button"></i></div>
 					</div>
 					<h4>{{section.Title}}</h4>
 					<div class="section-content" ng-bind-html="section.Content"></div>

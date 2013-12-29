@@ -309,6 +309,10 @@ function ResumeHeroCtr($scope, $http, getStarted){
 		apparition($('.get-started-resume'));
 	}
 	
+	$scope.editSection = function(){
+		alert('edit');
+	}
+	
 	
     $scope.init=function(){
         initGetStarted($scope,getStarted);
