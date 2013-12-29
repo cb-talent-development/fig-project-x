@@ -629,6 +629,8 @@ RESUME HERO
       margin: 0px;
       margin-left: 27px;
       padding-left: 40px; }
+    .resume-hero .resume-buttons .right {
+      margin-left: 0px; }
     .resume-hero .resume-buttons i {
       left: 8px;
       top: 11px; }
@@ -1072,8 +1074,10 @@ HEADER TOOL
     width: 100%;
     float: none;
     margin: auto; }
-    .tool .header-tool.resume-hero .title-social .social .icon-save, .tool .header-tool.resume-hero .title-social .social .icon-bar-grey {
-      display: none; }
+    .tool .header-tool.resume-hero .title-social .social .icon-save, .tool .header-tool.resume-hero .title-social .social .icon-bar-grey, .tool .header-tool.resume-hero .title-social .social .icon-question-big {
+      display: none !important; }
+    .tool .header-tool.resume-hero .title-social .icon-arrow-right-big-grey {
+      left: 531px; }
   .tool .header-tool.resume-hero .help {
     display: none !important; }
 

@@ -796,6 +796,9 @@ RESUME HERO
 			margin-left: 27px;
 			padding-left: 40px;
 		}
+        .right{
+            margin-left:0px;
+        }
 		i{
 			left: 8px;
 			top: 11px;
@@ -1322,10 +1325,13 @@ HEADER TOOL
 			float: none;
 			margin: auto;
 			.social{
-				.icon-save, .icon-bar-grey{
-					display: none;
+				.icon-save, .icon-bar-grey,.icon-question-big {
+					display: none !important;
 				}
 			}
+            .icon-arrow-right-big-grey{
+                left:531px;
+            }
 		}
 		.help{
 			display: none !important;
