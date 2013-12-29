@@ -115,7 +115,7 @@ $phone-retina-height-small: 450px;
    vertical-align:top;
 }
 @mixin colorCommon{
-    padding-top:12px;padding-bottom:8px;
+    //padding-top:12px;padding-bottom:8px;
     @include box-shadow(0px,1px,1px,0px,0.3);
 }
 @mixin box-shadow($left,$bottom,$spread,$thickness,$opacity){
@@ -778,11 +778,14 @@ RESUME HERO
 .resume-hero{
 	padding-bottom: 100px;
 	@include main-block;
-	.saved-content{
-		@media(max-width: 767px){
-			width: 300px;
-		}
-	}
+    @media (max-width: 768px){
+        width:100%;
+        padding-bottom: 50px;
+        .saved-content{
+            margin-bottom:10px;
+        }
+    }
+    
 	.resume-buttons{
 		margin-bottom: 30px;
 		margin-top: -30px !important;
@@ -793,28 +796,31 @@ RESUME HERO
 			margin-left: 27px;
 			padding-left: 40px;
 		}
+        .right{
+            margin-left:0px;
+        }
 		i{
 			left: 8px;
 			top: 11px;
 		}
-		@media (max-width: 767px){
-			width: 300px;
+		@media (max-width: 768px){
+			width: 100%;
 			margin-left: auto;
 			margin-right: auto;
 			margin-bottom: 0px;
-			margin-top: -50px !important;
+			margin-top:0px !important;
 			.button{
 				font-size: 15px;
 				padding-top: 12px;
 				padding-bottom: 8px;
 				padding-left: 30px !important;
 				padding-right: 10px;
-				width: 145px;
+				width: 49%;
 				margin-left: 0px;
 				margin-bottom: 10px;
 			}
 			.button:nth-child(2n){
-				margin-left: 6.9px;
+				float:right;
 			}
 		}
 		width: 1170px;
@@ -825,8 +831,8 @@ RESUME HERO
 	.content{
 		.button-list{
 			width: 370px;
-			@media(max-width: 767px){
-				width: 300px;
+			@media(max-width: 768px){
+				width: 100%;
 			}
 			.button{
 				width: 100%;
@@ -844,7 +850,7 @@ RESUME HERO
 					right: 0px;
 					top: 18px;
 				}
-				@media(max-width: 767px){
+				@media(max-width: 768px){
 					height: 40px;
 					padding-top: 11px;
 					font-size: 17px;
@@ -872,7 +878,7 @@ RESUME HERO
 			margin-left: 30px;
 			display: inline-block;
 			font-family:"Times New Roman",Georgia,Serif;
-			@media(max-width: 767px){
+			@media(max-width: 768px){
 				width: 100%;
 				margin: 0px;
 				margin-top: 10px;
@@ -889,7 +895,7 @@ RESUME HERO
 				.name{
 					font-size: 20px;
 					font-weight: 500;
-					@media(max-width: 767px){
+					@media(max-width: 768px){
 						font-size: 15px;
 					}
 				}
@@ -899,8 +905,8 @@ RESUME HERO
 					li{
 						padding: 0px 25px;
 						padding-left:0px;
-						@media(max-width: 767px){
-							font-size: 6px;
+						@media(max-width: 768px){
+							font-size: 12px;
 							padding-right: 18px;
 						}
 					}
@@ -912,7 +918,7 @@ RESUME HERO
 				font-weight: 900;
 				font-size: 15px;
 				font-family:"Times New Roman",Georgia,Serif;
-				@media(max-width: 767px){
+				@media(max-width: 768px){
 					font-size: 12px;
 				}
 			}
@@ -927,7 +933,7 @@ RESUME HERO
 					position:relative;
 					background-color: white;
 					@media(max-width: 479px){
-						font-size: 8px;
+						font-size: 12px;
 					}
 					h4{
 						text-align: center;
@@ -935,15 +941,19 @@ RESUME HERO
 						font-weight: 800;
 						font-size: 16px;
 						font-family:"Times New Roman",Georgia,Serif;
-						@media (max-width: 767px){
-							font-size: 11px;
+						@media (max-width: 768px){
+							font-size: 14px;
+						}
+                        @media (max-width: 480px){
+							width:65%;
+                            margin-left:35%;
 						}
 					}
 					.icons{
 						position: absolute;
 						top: 0px;
 						left: 30px;
-						@media (max-width: 767px){
+						@media (max-width: 768px){
 							left: 20px;
 						}
 						.button{
@@ -954,7 +964,7 @@ RESUME HERO
 								top: 5px;
 								left: 4px;
 							}
-							@media (max-width: 767px){
+							@media (max-width: 768px){
 								width: 19px !important;
 								height: 19px;
 								padding: 0px;
@@ -968,7 +978,7 @@ RESUME HERO
 						.button:first-child{
 							margin-right: 10px;
 							margin-left: 0px;
-							@media (max-width: 767px){
+							@media (max-width: 768px){
 								margin-right: 7px;
 							}
 						}
@@ -977,14 +987,14 @@ RESUME HERO
 							height: 30px;
 							border: 1px dotted $grey;
 							display: inline-block;
-							@media (max-width: 767px){
+							@media (max-width: 768px){
 								height: 18px;
 							}
 						}
 					}
 					.section-content{
 						margin: 30px;
-						@media(max-width: 767px){
+						@media(max-width: 768px){
 							margin:20px;
 						}
 					}
@@ -1013,15 +1023,18 @@ RESUME HERO
 				margin-left: 0px;
 				font-size: 25px;
 				padding: 15px;
-				@media only screen and (max-width: 767px){font-size: 17px;}
+				@media only screen and (max-width: 768px){font-size: 17px;}
 			}
 			textarea#extra-skills{
 				height: 400px;
+                @media only screen and (max-width: 768px){
+                    height:250px;
+                }
 			}	
 			.little{
 				width: 173px;
 				margin-right:25px;
-				@media only screen and (max-width: 767px){
+				@media only screen and (max-width: 768px){
 					width: 49%;
 					margin-right:2%;
 				}
@@ -1032,17 +1045,29 @@ RESUME HERO
 					width: 100%;
 				}
 			}
+            .message{
+                @media only screen and (max-width: 768px){
+                    margin-top:5px;
+                }
+            }
 			.large-resp{
-				@media only screen and (max-width: 767px){width: 100%;}
+				@media only screen and (max-width: 768px){width: 100%;}
 			}
 			.buttons-changes{
+                margin-top:15px;
 				.button-change{
-					margin-top: 20px;
+					margin-bottom: 20px;
 					.title{
 						color: $grey;
 					}
-					.txt{margin-top: 10px;color:$grey;}
+					.txt{margin-top: 10px;color:$grey;margin-left:30px;font-size:14px;}
 				}
+                @media only screen and (max-width: 768px){
+                    margin-top:10px;
+                    .button-change{
+					   margin-bottom: 10px;
+                    }
+                }
 				.button-change.selected{
 					.title{
 						color: black;
@@ -1050,7 +1075,7 @@ RESUME HERO
 					.txt{color:black;}
 				}
 				.button-change.medium{
-					@media only screen and (max-width: 767px){
+					@media only screen and (max-width: 768px){
 						width: 100%;
 						margin-right: 0px;
 					}
@@ -1301,15 +1326,19 @@ HEADER TOOL
 */
 .tool{
 	.header-tool.resume-hero{
+        padding-bottom:0px;
 		.title-social{
-			width: 80%;
+			width: 100%;
 			float: none;
 			margin: auto;
 			.social{
-				.icon-save, .icon-bar-grey{
-					display: none;
+				.icon-save, .icon-bar-grey,.icon-question-big {
+					display: none !important;
 				}
 			}
+            .icon-arrow-right-big-grey{
+                left:531px;
+            }
 		}
 		.help{
 			display: none !important;
