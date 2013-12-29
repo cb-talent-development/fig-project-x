@@ -847,25 +847,32 @@ RESUME HERO
 @media only screen and (max-width: 768px) {
   .get-started-resume .section .content .large-resp {
     width: 100%; } }
-.get-started-resume .section .content .buttons-changes .button-change {
-  margin-top: 20px; }
-  .get-started-resume .section .content .buttons-changes .button-change .title {
-    color: #9d9d9d; }
-  .get-started-resume .section .content .buttons-changes .button-change .txt {
-    margin-top: 10px;
-    color: #9d9d9d;
-    margin-left: 30px;
-    font-size: 14px; }
-.get-started-resume .section .content .buttons-changes .button-change.selected .title {
-  color: black; }
-.get-started-resume .section .content .buttons-changes .button-change.selected .txt {
-  color: black; }
-@media only screen and (max-width: 768px) {
-  .get-started-resume .section .content .buttons-changes .button-change.medium {
-    width: 100%;
-    margin-right: 0px; } }
-.get-started-resume .section .content .buttons-changes .first {
-  margin-top: 0px; }
+.get-started-resume .section .content .buttons-changes {
+  margin-top: 15px; }
+  .get-started-resume .section .content .buttons-changes .button-change {
+    margin-bottom: 20px; }
+    .get-started-resume .section .content .buttons-changes .button-change .title {
+      color: #9d9d9d; }
+    .get-started-resume .section .content .buttons-changes .button-change .txt {
+      margin-top: 10px;
+      color: #9d9d9d;
+      margin-left: 30px;
+      font-size: 14px; }
+  @media only screen and (max-width: 768px) {
+    .get-started-resume .section .content .buttons-changes {
+      margin-top: 10px; }
+      .get-started-resume .section .content .buttons-changes .button-change {
+        margin-bottom: 10px; } }
+  .get-started-resume .section .content .buttons-changes .button-change.selected .title {
+    color: black; }
+  .get-started-resume .section .content .buttons-changes .button-change.selected .txt {
+    color: black; }
+  @media only screen and (max-width: 768px) {
+    .get-started-resume .section .content .buttons-changes .button-change.medium {
+      width: 100%;
+      margin-right: 0px; } }
+  .get-started-resume .section .content .buttons-changes .first {
+    margin-top: 0px; }
 @media only screen and (min-width: 768px) {
   .get-started-resume .section .margin-bottom {
     margin-bottom: 25px !important; } }

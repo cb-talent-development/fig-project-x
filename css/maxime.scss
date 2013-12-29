@@ -1054,13 +1054,20 @@ RESUME HERO
 				@media only screen and (max-width: 768px){width: 100%;}
 			}
 			.buttons-changes{
+                margin-top:15px;
 				.button-change{
-					margin-top: 20px;
+					margin-bottom: 20px;
 					.title{
 						color: $grey;
 					}
 					.txt{margin-top: 10px;color:$grey;margin-left:30px;font-size:14px;}
 				}
+                @media only screen and (max-width: 768px){
+                    margin-top:10px;
+                    .button-change{
+					   margin-bottom: 10px;
+                    }
+                }
 				.button-change.selected{
 					.title{
 						color: black;
