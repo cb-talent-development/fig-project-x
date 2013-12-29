@@ -3585,7 +3585,8 @@ POST CSS
       .post .comments .comments-list .comment .time {
         color: #cfcfcf; }
       .post .comments .comments-list .comment .statement {
-        margin: 10px 0px; }
+        margin: 10px 0px;
+        overflow: hidden; }
       .post .comments .comments-list .comment .reply, .post .comments .comments-list .comment .closeReply {
         position: relative;
         margin-right: 5px;
@@ -4722,7 +4723,8 @@ SOCIAL
       width: 23.35%;
       height: 295px;
       text-align: center;
-      margin-bottom: 15px; }
+      margin-bottom: 15px;
+      overflow: hidden; }
       @media only screen and (max-width: 768px) {
         .dashboard-popup .section .job-phase .phase, .get-started-resume .section .job-phase .phase {
           width: 49%;
@@ -4751,12 +4753,10 @@ SOCIAL
         padding-top: 25px;
         display: -webkit-box;
         display: -moz-box;
-        display: -ms-flexbox;
-        display: -webkit-flex;
-        display: flex;
         -webkit-box-orient: vertical;
         overflow: hidden;
-        -webkit-line-clamp: 6; }
+        -webkit-line-clamp: 6;
+        max-height: 142px; }
         @media only screen and (min-width: 481px) and (max-width: 768px) {
           .dashboard-popup .section .job-phase .phase .description, .get-started-resume .section .job-phase .phase .description {
             font-size: 14.25px; } }
@@ -4766,6 +4766,7 @@ SOCIAL
         @media only screen and (max-width: 768px) {
           .dashboard-popup .section .job-phase .phase .description, .get-started-resume .section .job-phase .phase .description {
             padding: 10px;
+            max-height: 166px;
             padding-bottom: 0px;
             -webkit-line-clamp: 8; } }
     .dashboard-popup .section .job-phase .left, .get-started-resume .section .job-phase .left {
@@ -4858,9 +4859,6 @@ SOCIAL
         color: #ee7835;
         display: -webkit-box;
         display: -moz-box;
-        display: -ms-flexbox;
-        display: -webkit-flex;
-        display: flex;
         -webkit-box-orient: vertical;
         overflow: hidden;
         -webkit-line-clamp: 4; }

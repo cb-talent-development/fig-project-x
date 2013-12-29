@@ -1,0 +1,24 @@
+<div class="job-results">
+<div class="title">Job for You:</div>
+<div class="jobs">
+<i class="icon-arrow-left-big-blue" onclick="scrollVertical(-900,$('.jobs-recommandations'),$('.jobs-pages'))"></i>
+    <div class="jobs-recommandations">
+        <div class="content-job">
+        <div class="job-recommandation" ng-repeat="job in $parent.$parent.$parent.jobs">
+            <div class="icon-suitcase-job"></div>
+            <div class="title-job">{{job.Title}}</div>
+            <div class="info-job">
+                <div>{{job.Company}}</div>
+                <div>{{job.City}},&nbsp;{{job.State}}</div>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div class="jobs-pages">
+        <div class="ball activated"></div>
+        <div class="ball"></div>
+        <div class="ball"></div>
+    </div>
+    <i class="icon-arrow-right-big-blue" onclick="scrollVertical(900,$('.jobs-recommandations'),$('.jobs-pages'))"></i>
+    </div>
+</div>

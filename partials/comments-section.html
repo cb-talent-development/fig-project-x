@@ -2,7 +2,7 @@
     <div class="new-comment">
         <div class="img-user" style="background: url('{{user.Media.Url}}') center no-repeat;background-size:200%;" alt=""></div>
         <form class="input" ng-submit="newComment()">
-            <input onkeyup="fakePlaceholder($(this))" ng-model="inputComment"/>
+            <input onkeyup="fakePlaceholder($(this))" ng-model="$parent.inputComment"/>
             <div class="placeholder"><strong>Get involved,</strong>&nbsp;<span>write a comment...</span></div>
         </form>
         <div class="clear"></div>

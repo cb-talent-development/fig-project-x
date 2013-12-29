@@ -165,9 +165,6 @@ $sprite-height: 3597px;
 @mixin webkit-box{
     display: -webkit-box;
     display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
     -webkit-box-orient: vertical;
     overflow:hidden;
 
@@ -2865,6 +2862,7 @@ POST CSS
                 }
                 .statement{
                     margin:10px 0px;
+                    overflow:hidden;
                 }
                 .reply{
                     position:relative;
@@ -4044,6 +4042,7 @@ SOCIAL
                 height:295px;
                 text-align:center;
                 margin-bottom:15px;
+                overflow:hidden;
                 @media only screen and (max-width: 768px){
                     width:49%;
                     height:275px;
@@ -4066,8 +4065,10 @@ SOCIAL
                     padding-top:25px;
                     @include webkit-box;
                     -webkit-line-clamp: 6;
+                    max-height:142px;
                     @media only screen and (max-width: 768px){
                         padding:10px;
+                        max-height:166px;
                         padding-bottom:0px;
                         -webkit-line-clamp: 8;
                     }
