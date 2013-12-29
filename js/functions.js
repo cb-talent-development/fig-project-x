@@ -220,7 +220,7 @@ function checkUserInfo($scope,$http){
             }else{
                 window.user="none";
             }
-            window.user="none";
+            //window.user="none";
             $scope.user=window.user;
         }).error(function(data, status, headers, config) {
             window.user="none";
