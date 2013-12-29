@@ -169,6 +169,7 @@ function ToolCtr($scope, $http,$routeParams,pagination,register) {
     $scope.init();
     $scope.$on('$includeContentLoaded', function(){
         initEffect();
+        
     });
 };
 /*
@@ -305,8 +306,8 @@ function ResumeHeroCtr($scope, $http, getStarted){
     }
 	
 	$scope.getStartedPage = function(n){
-		movePopup($('.get-started-resume'),n);
 		apparition($('.get-started-resume'));
+        movePopup($('.get-started-resume'),n,true);
 	}
 	
 	$scope.editSection = function(){

@@ -220,7 +220,7 @@ function checkUserInfo($scope,$http){
             }else{
                 window.user="none";
             }
-            //window.user="none";
+            window.user="none";
             $scope.user=window.user;
         }).error(function(data, status, headers, config) {
             window.user="none";
@@ -666,4 +666,76 @@ function initGetStarted($scope,getStarted){
         $scope.getStarted=document.getStarted;
     }
     //console.log($scope.getStarted);
+}
+function initResumeHero(){
+    $(function() {
+		$( "#sortable" ).sortable({
+			revert: true
+		});
+		$( "#draggable" ).draggable({
+			connectToSortable: "#sortable",
+			helper: "clone",
+			revert: "invalid"
+		});
+		$( "ul, li" ).disableSelection();
+	});
+	
+	(function() {
+		var element = $('.textarea');
+
+		element.wysihtml5({
+		toolbar: {
+		   "spellchecker":
+			  "<li>" +
+				  "<a class='btn' data-wysihtml5-command='spellcheck'>" + 
+				  "<i class='icon-spellchecker spellchecker-button-icon'></i></a>" +
+			  "</li>"
+		},
+		stylesheets: [
+		  "./css/jquery.spellchecker.css"
+		],     
+		});
+
+		var wysihtml5 = element.data('wysihtml5');
+		var body = $(wysihtml5.editor.composer.iframe).contents().find('body');
+
+		var toggle = (function() {
+
+		var spellchecker = null;
+
+		function create() {
+
+		  spellchecker = new $.SpellChecker(body, {
+			lang: 'en',
+			parser: 'html',
+			webservice: {
+			  path: "../webservices/php/SpellChecker.php",
+			  driver: 'pspell'
+			},
+			suggestBox: {
+			  position: 'below'
+			}
+		  });
+
+		  spellchecker.on('check.success', function() {
+			alert('There are no incorrectly spelt words.');
+		  });
+
+		  spellchecker.check();
+		}
+
+		function destroy() {
+		  spellchecker.destroy();
+		  spellchecker = null;
+		}
+
+		function toggle() {
+		  (!spellchecker) ? create() : destroy();
+		}
+
+		return toggle;
+		})();
+
+		wysihtml5.toolbar.find('[data-wysihtml5-command="spellcheck"]').click(toggle);
+	})();
 }
