@@ -3187,6 +3187,7 @@ Footer css
 */
 .footer {
   width: 1170px;
+  min-width: 100%;
   background-color: #cccccc; }
   @media only screen and (max-width: 768px) {
     .footer {
@@ -5789,6 +5790,11 @@ Dashboard
         padding-bottom: 4px;
         margin-right: -7px;
         margin-top: -9px; } }
+    .dashboard .job-results .button-edit .icon-bigarrow-bottom-grey, .dashboard .saved-content .button-edit .icon-bigarrow-bottom-grey {
+      margin-top: -3.5px; }
+      @media only screen and (max-width: 768px) {
+        .dashboard .job-results .button-edit .icon-bigarrow-bottom-grey, .dashboard .saved-content .button-edit .icon-bigarrow-bottom-grey {
+          margin-top: -2px; } }
   .dashboard .content {
     /*
     EDUCATION

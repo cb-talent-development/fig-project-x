@@ -2451,6 +2451,7 @@ Footer css
 */
 .footer{
     width:1170px;
+    min-width:100%;
     @media only screen and (max-width: 768px) {
         width:100%;
     }
@@ -5134,6 +5135,12 @@ Dashboard
                 padding-top:10px; padding-bottom:4px;
                 margin-right:-7px;
                 margin-top:-9px;
+            }
+            .icon-bigarrow-bottom-grey{
+                margin-top:-3.5px;
+                @media only screen and (max-width: 768px){
+                    margin-top:-2px;
+                }
             }
         }
     }
