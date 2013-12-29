@@ -15,11 +15,13 @@ function PostCtr($scope,$http,$routeParams,register){
                 "txt":$scope.post.Categories[0].Name,
                 "color":"grey"
             }]
+            $scope.infographic=false;
             if($scope.postId<=2){
                 $scope.post.Type="article";
             }
             else if($scope.postId<=4){
                 $scope.post.Type="infographic";
+                $scope.infographic=true;
             }
             else{
                 $scope.post.Type="video";
@@ -100,6 +102,7 @@ function PostCtr($scope,$http,$routeParams,register){
             data.id=newId;
             data.isNew=true;
             data.display="none";
+            console.log(data);
             if(id){
                 var find=false;
                 for(var i=0;i<$scope.comments.length;i++){

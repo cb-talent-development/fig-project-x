@@ -60,14 +60,18 @@
                         <span class='{{star.class}} icon'></span>
             </span>
        </div>
-       <div class="visible-infographic" ng-include="'partials/comments-section.html'"></div>
+       <div ng-if="infographic">
+            <div class="visible-infographic" ng-include="'partials/comments-section.html'"></div>
+       </div>
 	</aside>
-    	<!--Text content -->
-	<div class="content">
+    <!--Text content -->
+    <div class="content">
         <div class="intro">{{post.ShortDescription}}</div>
         <div class="body" ng-bind-html="post.BodyHtml"></div>
-   </div>
-   <aside class="complement not-visible-infographic" ng-include="'partials/comments-section.html'"></aside>
+    </div>
+    <aside class="complement not-visible-infographic" ng-if="!infographic">
+        <div ng-include="'partials/comments-section.html'"></div>
+    </aside>
     <div class="clear"></div>
 </div>
 <div class="bottom-post background-zig"></div>
