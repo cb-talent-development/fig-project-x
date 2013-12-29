@@ -261,8 +261,6 @@ module.factory('getStarted',['$http',function($http) {
         //user info
         
         this.userInfo={
-			'phone':input(),
-			'mobile':input(),
             'job':{
                 'title':{
 					'name':input(),
@@ -285,7 +283,10 @@ module.factory('getStarted',['$http',function($http) {
 					'month':input("Month"),
 					'year':input("Year")
 				},
-				'description':input()
+				'description':input(),
+				'state':{
+					'completed':false
+				}
             },
             'education':{
                 'type':{
@@ -294,25 +295,33 @@ module.factory('getStarted',['$http',function($http) {
 					'isCorrected':true,
 					'phase':''
 				},
-                'design':'',
-                'isCorrected':true,
                 'institution':input("Institution"),
                 'location':input(),
                 'dateGraduated':{
 					'month':input("Month"),
 					'year':input("Year")
+				},
+				'state':{
+					'completed':false
 				}
             },
-            'email':input(),
-            'firstName':input(),
-            'lastName':input(),
-            'address':{
-                'street':input(),
-                'zipCode':input(),
-                'state':input("State"),
-                'apt':input(),
-                'city':input()
-            },
+			'contactInfo':{
+				'email':input(),
+				'firstName':input(),
+				'lastName':input(),
+				'address':{
+					'street':input(),
+					'zipCode':input(),
+					'state':input('State'),
+					'apt':input(),
+					'city':input()
+				},
+				'phone':input(''),
+				'mobile':input(''),
+				'state':{
+					'completed':false
+				}
+			},
             'skills':{
                 'selected':[],
                 'saved':[],
@@ -326,10 +335,23 @@ module.factory('getStarted',['$http',function($http) {
 				'date':{
 					'month':input("Month"),
 					'year':input("Year")
+				},
+				'state':{
+					'completed':false
 				}
 			},
-			'technicalSkills':input(),
-			'volunteer':input()            
+			'technicalSkills':{
+				'description':input(),
+				'state':{
+					'completed':false
+				}
+			},
+			'volunteer':{
+				'description':input(),
+				'state':{
+					'completed':false
+				}
+			}
         }
         this.user='none';
         console.log(this);
@@ -358,12 +380,17 @@ module.factory('getStarted',['$http',function($http) {
         console.log("INIT INPUT");
         this.user=user;
         if(user && user != 'none'){
-        //address
-            this.userInfo.address.state.value=this.user.State;
-            this.userInfo.address.zipCode.value=this.user.Zipcode;
-			this.userInfo.address.city.value=this.user.City;
-			this.userInfo.address.apt.value=this.user.Apt;
-			this.userInfo.address.street.value=this.user.Address;
+			this.userInfo.contactInfo.firstName.value=this.user.FirstName;
+            this.userInfo.contactInfo.lastName.value=this.user.LastName;
+            this.userInfo.contactInfo.email.value=this.user.Mail;
+			this.userInfo.contactInfo.phone.value=this.user.Phone;
+			this.userInfo.contactInfo.mobile.value=this.user.Mobile;
+			//address
+            this.userInfo.contactInfo.address.state.value=this.user.State;
+            this.userInfo.contactInfo.address.zipCode.value=this.user.Zipcode;
+			this.userInfo.contactInfo.address.city.value=this.user.City;
+			this.userInfo.contactInfo.address.apt.value=this.user.Apt;
+			this.userInfo.contactInfo.address.street.value=this.user.Address;
             //job
             this.userInfo.job.title.name.value=this.user.Job.Title;
             this.userInfo.job.company.name.value=this.user.Job.Company;
@@ -389,18 +416,34 @@ module.factory('getStarted',['$http',function($http) {
 			this.userInfo.skills.mathematics.value=this.user.Skills.Mathematics;
 			//awards
 			//technical skills & Volunteer, publication, affiliation
-			this.userInfo.technicalSkills.value=this.user.TechnicalSkills;
-			this.userInfo.volunteer.value=this.user.Volunteer;
-			
-			
-            //...
-            this.userInfo.firstName.value=this.user.FirstName;
-            this.userInfo.lastName.value=this.user.LastName;
-            this.userInfo.email.value=this.user.Mail;
-			this.userInfo.phone.value=this.user.Phone;
-			this.userInfo.moblie.value=this.user.Mobile;
-            //this.user.Mail="lol@lol.com";
+			this.userInfo.technicalSkills.description.value=this.user.TechnicalSkills;
+			this.userInfo.volunteer.description.value=this.user.Volunteer;
         }
+    }
+	getStarted.prototype.checkContactInfo=function(){
+        if(this.userInfo.contactInfo.firstName.value==''){this.userInfo.contactInfo.state.completed=false;}
+		else if(this.userInfo.contactInfo.lastName.value==''){this.userInfo.contactInfo.state.completed=false;}
+		else if(this.userInfo.contactInfo.email.value==''){this.userInfo.contactInfo.state.completed=false;}
+		else if(this.userInfo.contactInfo.address.street.value==''){this.userInfo.contactInfo.state.completed=false;}
+		else if(this.userInfo.contactInfo.address.apt.value==''){this.userInfo.contactInfo.state.completed=false;}
+		else if(this.userInfo.contactInfo.address.city.value==''){this.userInfo.contactInfo.state.completed=false;}
+		else if(this.userInfo.contactInfo.address.state.value=='State'){this.userInfo.contactInfo.state.completed=false;}
+		else if(this.userInfo.contactInfo.address.zipCode.value==''){this.userInfo.contactInfo.state.completed=false;}
+		else if(this.userInfo.contactInfo.phone.value==''){this.userInfo.contactInfo.state.completed=false;}
+		else if(this.userInfo.contactInfo.mobile.value==''){this.userInfo.contactInfo.state.completed=false;}
+		else{this.userInfo.contactInfo.state.completed=true;}
+    }
+	
+	getStarted.prototype.checkWork=function(){
+        if(this.userInfo.job.title.name.value==''){this.userInfo.job.state.completed=false;}
+		else if(this.userInfo.job.company.name.value==''){this.userInfo.job.state.completed=false;}
+		else if(this.userInfo.job.location.value==''){this.userInfo.job.state.completed=false;}
+		else if(this.userInfo.job.startDate.month.value=='Month'){this.userInfo.job.state.completed=false;}
+		else if(this.userInfo.job.startDate.year.value=='Year'){this.userInfo.job.state.completed=false;}
+		else if(this.userInfo.job.endDate.month.value=='Month'){this.userInfo.job.state.completed=false;}
+		else if(this.userInfo.job.endDate.year.value=='Year'){this.userInfo.job.state.completed=false;}
+		else if(this.userInfo.job.description.value==''){this.userInfo.job.state.completed=false;}
+		else{this.userInfo.job.state.completed.value=true;}
     }
     return getStarted;
 }]);

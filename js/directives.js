@@ -111,6 +111,18 @@ dir.directive('comment', ['$compile', '$http', '$templateCache', function($compi
 	};
 }]);
 
+dir.directive('ng-blur', function() {
+	return {
+		restrict: 'A',
+		link: function postLink(scope, element, attrs) {
+			element.bind('blur', function () {
+				alert('cool');
+				scope.$apply(attrs.ngBlur);
+			});
+		}
+	};
+});
+
 dir.directive('steps', function(){
     var template='<div class="steps"><span class="etape"></span></div>';
 	return{

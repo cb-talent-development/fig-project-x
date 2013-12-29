@@ -13,45 +13,45 @@
 					<div class="content">
 						<div class="name-info">
 							<div class="input-button medium left">
-								<input ng-model="getStarted.userInfo.firstName.value" placeholder="First Name"/>
+								<input ng-model="getStarted.userInfo.contactInfo.firstName.value" placeholder="First Name"  ng-blur="getStarted.checkContactInfo()"/>
 							</div>
 							<div class="input-button medium left right-resp">
-								<input ng-model="getStarted.userInfo.lastName.value" placeholder="Last Name"/>
+								<input ng-model="getStarted.userInfo.contactInfo.lastName.value" placeholder="Last Name"  ng-blur="getStarted.checkContactInfo()"/>
 							</div>
 							<div class="input-button medium last right email-address">
-								<input ng-model="getStarted.userInfo.email.value" class="no-margin-resp" placeholder="Email Adress"/>
+								<input ng-model="getStarted.userInfo.contactInfo.email.value" class="no-margin-resp" placeholder="Email Adress"  ng-blur="getStarted.checkContactInfo()"/>
 							</div>  
 							<div class="clear"></div>
 						</div>
 					</div>
 					<div class="content">
 						<div class="input-button medium left">
-							<input ng-model="getStarted.userInfo.address.street.value" placeholder="Street Adress"/>
+							<input ng-model="getStarted.userInfo.contactInfo.address.street.value" placeholder="Street Adress"  ng-blur="getStarted.checkContactInfo()"/>
 						</div>
 						<div class="input-button medium left right-resp">
-							<input ng-model="getStarted.userInfo.address.apt.value" placeholder="Additionnal Adress (Apt, Suite)"/>
+							<input ng-model="getStarted.userInfo.contactInfo.address.apt.value" placeholder="Additionnal Adress (Apt, Suite)"  ng-blur="getStarted.checkContactInfo()"/>
 						</div>
 						<div class="clear"></div>
 						<div class="input-button medium left margin-top">
-							<input ng-model="getStarted.userInfo.address.city.value" placeholder="City"/>
+							<input ng-model="getStarted.userInfo.contactInfo.address.city.value" placeholder="City"  ng-blur="getStarted.checkContactInfo()"/>
 						</div>
 						<div class="medium select toggleMenu left right-resp margin-top">
-							<span class='title'>{{ getStarted.userInfo.address.state.value }}</span><b class="icon-bigarrow-bottom-grey"></b>
+							<span class='title'>{{ getStarted.userInfo.contactInfo.address.state.value }}</span><b class="icon-bigarrow-bottom-grey"></b>
 							<div class="subMenu">
-								<div ng-repeat="state in getStarted.lists.states" select data-value="state" data-elem="getStarted.userInfo.address.state.value">{{ country }}</div>
+								<div ng-repeat="state in getStarted.lists.states" select data-value="state" data-elem="getStarted.userInfo.contactInfo.address.state.value" ng-click="getStarted.checkContactInfo()">{{ country }}</div>
 							</div>
 						</div>
 						<div class="input-button medium last right margin-top email-address">
-							<input ng-model="getStarted.userInfo.address.zipCode.value" placeholder="ZipCode"/>
+							<input ng-model="getStarted.userInfo.contactInfo.address.zipCode.value" placeholder="ZipCode"  ng-blur="getStarted.checkContactInfo()"/>
 						</div>
 						<div class="clear"></div>
 					</div>
 					<div class="content">
 						<div class="input-button medium left">
-							<input ng-model="getStarted.userInfo.phone.value" placeholder="Phone Number"/>
+							<input ng-model="getStarted.userInfo.contactInfo.phone.value" placeholder="Phone Number"  ng-blur="getStarted.checkContactInfo()"/>
 						</div>
 						<div class="input-button medium left right-resp">
-							<input ng-model="getStarted.userInfo.moblie.value" placeholder="Mobile Number"/>
+							<input ng-model="getStarted.userInfo.contactInfo.mobile.value" placeholder="Mobile Number"  ng-blur="getStarted.checkContactInfo()"/>
 						</div>
 						<div class="clear"></div>
 					</div>
@@ -83,19 +83,19 @@
 							<div class="medium left">
 								<div class="message">JOB TITLE</div>
 								<div class="input-button left">
-									<input ng-model="getStarted.userInfo.job.title.name.value" placeholder="Career Builder"/>
+									<input ng-model="getStarted.userInfo.job.title.name.value" placeholder="Career Builder" ng-blur="getStarted.checkWork()"/>
 								</div>
 							</div>
 							<div class="medium left right-resp">
 								<div class="message">COMPANY</div>
 								<div class="input-button">
-									<input ng-model="getStarted.userInfo.job.company.name.value" placeholder="Career Builder"/>
+									<input ng-model="getStarted.userInfo.job.company.name.value" placeholder="Career Builder" ng-blur="getStarted.checkWork()"/>
 								</div>
 							</div>
 							<div class="medium large-resp last right">
 								<div class="message">LOCATION</div>
 								<div class="input-button">
-									<input ng-model="getStarted.userInfo.job.location.value" placeholder="Chicago, IL"/>
+									<input ng-model="getStarted.userInfo.job.location.value" placeholder="Chicago, IL" ng-blur="getStarted.checkWork()"/>
 								</div>
 							</div>
 							<div class="clear"></div>
@@ -106,13 +106,13 @@
 								<div class="little select left toggleMenu">
 									<span class="title"> {{ getStarted.userInfo.job.startDate.month.value }}</span><b class="icon-bigarrow-bottom-grey"></b>
 									<div class="subMenu">
-										<div ng-repeat="month in getStarted.lists.months" select data-value="month" data-elem="getStarted.userInfo.job.startDate.month.value">{{ month }}</div>
+										<div ng-repeat="month in getStarted.lists.months" select data-value="month" data-elem="getStarted.userInfo.job.startDate.month.value" ng-click="getStarted.checkWork()">{{ month }}</div>
 									</div>
 								</div>
 								<div class="little select left right-resp toggleMenu">
 									<span class="title">{{ getStarted.userInfo.job.startDate.year.value }}</span><b class="icon-bigarrow-bottom-grey"></b>
 									<div class="subMenu">
-										<div ng-repeat="year in getStarted.lists.years" select data-value="year" data-elem="getStarted.userInfo.job.startDate.year.value">{{ year }}</div>
+										<div ng-repeat="year in getStarted.lists.years" select data-value="year" data-elem="getStarted.userInfo.job.startDate.year.value" ng-click="getStarted.checkWork()">{{ year }}</div>
 									</div>
 								</div>
 								<div class="clear"></div>
@@ -121,12 +121,12 @@
 								<div class="message">END DATE</div>
 								<div class="little select left toggleMenu">{{ getStarted.userInfo.job.endDate.month.value }}<i class="icon-bigarrow-bottom-grey"></i>
 									<div class="subMenu">
-										<div ng-repeat="month in getStarted.lists.months" select data-value="month" data-elem="getStarted.userInfo.job.endDate.month.value">{{ month }}</div>
+										<div ng-repeat="month in getStarted.lists.months" select data-value="month" data-elem="getStarted.userInfo.job.endDate.month.value" ng-click="getStarted.checkWork()">{{ month }}</div>
 									</div>
 								</div>
 								<div class="little select left right-resp toggleMenu">{{ getStarted.userInfo.job.endDate.year.value }}<i class="icon-bigarrow-bottom-grey"></i>
 									<div class="subMenu">
-										<div ng-repeat="year in getStarted.lists.years" select data-value="year" data-elem="getStarted.userInfo.job.endDate.year.value">{{ year }}</div>
+										<div ng-repeat="year in getStarted.lists.years" select data-value="year" data-elem="getStarted.userInfo.job.endDate.year.value" ng-click="getStarted.checkWork()">{{ year }}</div>
 									</div>
 								</div>
 							</div>
@@ -135,7 +135,7 @@
 						<div class="clear"></div>
 						<div>
 							<div class="message">DESCRIBE YOUR ROLE, RESPONSABILITIES, AND ACHIEVEMENTS:</div>
-							<textarea ng-model="getStarted.userInfo.job.description.value"  id="role" placeholder="I am a looser because..."/>
+							<textarea ng-model="getStarted.userInfo.job.description.value"  id="role" placeholder="I am a looser because..." ng-blur="getStarted.checkWork()"/>
 						</div>
 					</div>
 					<div class="footer-dialog">

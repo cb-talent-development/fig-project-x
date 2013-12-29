@@ -11,8 +11,18 @@
 	</div>
 	<div class="content">
 		<div class="button-list left">
-			<div class="button back-white" ng-click="getStartedPage(1)"><i class="icon-completed-check"></i>Contact Information<i class="icon-right-black"></i></div>
-			<div class="button back-white" ng-click="getStartedPage(2)"><i class="icon-completed-check"></i>Work Experience<i class="icon-right-black"></i></div>
+			<div class="button back-white" ng-click="getStartedPage(1)">
+				<i class="icon-completed-check" ng-show="getStarted.userInfo.contactInfo.state.completed"></i>
+				<i class="icon-not-completed" ng-show="!getStarted.userInfo.contactInfo.state.completed"></i>
+					Contact Information
+				<i class="icon-right-black"></i>
+			</div>
+			<div class="button back-white" ng-click="getStartedPage(2)">
+				<i class="icon-completed-check" ng-show="getStarted.userInfo.job.state.completed"></i>
+				<i class="icon-not-completed" ng-show="!getStarted.userInfo.job.state.completed"></i>
+					Work Experience
+				<i class="icon-right-black"></i>
+			</div>
 			<div class="button back-white" ng-click="getStartedPage(3)"><i class="icon-completed-check"></i>Education & Career Training<i class="icon-right-black"></i></div>
 			<div class="button back-white" ng-click="getStartedPage(3)"><i class="icon-completed-check"></i>Skills<i class="icon-right-black"></i></div>
 			<div class="button back-white" ng-click="getStartedPage(4)"><i class="icon-not-completed"></i>Awards & Honors<i class="icon-right-black"></i></div>
