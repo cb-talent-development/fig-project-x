@@ -1296,6 +1296,27 @@ RESUME HERO POP
 	}
 }
 
+/*
+HEADER TOOL
+*/
+.tool{
+	.header-tool.resume-hero{
+		.title-social{
+			width: 80%;
+			float: none;
+			margin: auto;
+			.social{
+				.icon-save, .icon-bar-grey{
+					display: none;
+				}
+			}
+		}
+		.help{
+			display: none !important;
+		}
+	}
+}
+
 
 
 /*

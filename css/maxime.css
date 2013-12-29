@@ -1073,6 +1073,18 @@ RESUME HERO POP
         background: white; }
 
 /*
+HEADER TOOL
+*/
+.tool .header-tool.resume-hero .title-social {
+  width: 80%;
+  float: none;
+  margin: auto; }
+  .tool .header-tool.resume-hero .title-social .social .icon-save, .tool .header-tool.resume-hero .title-social .social .icon-bar-grey {
+    display: none; }
+.tool .header-tool.resume-hero .help {
+  display: none !important; }
+
+/*
 COLORS
 */
 a.green-1 {

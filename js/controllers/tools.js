@@ -121,6 +121,7 @@ function ToolCtr($scope, $http,$routeParams,pagination,register) {
             $scope.title={"part1":"Career","part2":"Scape"};
             $scope.logo="icon-careerscape-small";
             $scope.logo_saved="icon-careerscape-saved-big";
+			$scope.specialClass="career-scape";
         }
         else if(name=="locally-grown"){
             $scope.txt="Locally Grown";
@@ -128,6 +129,7 @@ function ToolCtr($scope, $http,$routeParams,pagination,register) {
             $scope.title={"part1":"Locally","part2":"Grown"};
             $scope.logo="icon-localygrown-small";
             $scope.logo_saved="icon-locallygrown-saved-big";
+			$scope.specialClass="locally-grown";
 
         }
         /*else if(name=="jobinality"){
@@ -144,6 +146,7 @@ function ToolCtr($scope, $http,$routeParams,pagination,register) {
             $scope.title={"part1":"Resume","part2":"Hero"};
             $scope.logo="icon-resumeHero-small";
             $scope.logo_saved="icon-resumeHero-saved-big";
+			$scope.specialClass="resume-hero";
         }
         $scope.paths=[{
             "txt":"Career Tools /",
