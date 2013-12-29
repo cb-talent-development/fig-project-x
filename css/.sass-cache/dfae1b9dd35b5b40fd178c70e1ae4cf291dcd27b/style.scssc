@@ -1,7 +1,7 @@
 3.2.10 (Media Mark)
-752e175f799e7a7d79caa47c145c4b4402175d9f
+cadc0369c6cdd6cb82528dc6df918d839e421453
 o:Sass::Tree::RootNode
-:@template"¥ò//Variables
+:@template"¡ò//Variables
 
 //colors
 $navcolor: rgb(9,51,91);
@@ -2998,7 +2998,7 @@ Related
     }
 }
 .bottom-post{
-        margin-top:25px;
+    margin-top:25px;
 }
 /*
 Tools dashboard & tool css
