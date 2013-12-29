@@ -60,12 +60,6 @@
         "id": "string",
         "Type": "photo",
         "Url": "img/personnes.jpg",
-        "Infographic":"img/infographic.png",
-        "Video":{
-            "mp4":"videos/video.mp4",
-            "ogg":"videos/",
-            "swf":"video/"
-        },
         "Width": "363",
         "Height": "258",
         "Posx": "0",
@@ -78,5 +72,5 @@
     "CommentCount": 13,
     "OnetIndustryName": "Career company",
     "OnetOccupationName": "Sales Manager",
-    "Type": "infographic"
+    "Type": "article"
 }
