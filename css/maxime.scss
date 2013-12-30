@@ -1248,8 +1248,9 @@ RESUME HERO POP
 				text-transform:uppercase;
 				height:100%;
 				width:303.5px;
+				margin-bottom: 15px;
 				@media(max-width: 767px){
-					width: 140px;
+					width: 4.2%;
 				}
 				@include inline-top;
 			}
@@ -1296,7 +1297,7 @@ RESUME HERO POP
 	.section{
 		width: 1204px !important;
 		@media only screen and (max-width: 767px){
-			width: 300px !important;
+			width: 95% !important;
 		}
 		.header{
 			padding-bottom: 20px;
@@ -1308,10 +1309,18 @@ RESUME HERO POP
 }
 
 .export-resume, .template-resume, .delete-resume{
-	
-	.button{
-		padding-top: 14px;
-		padding-bottom: 12px;
+	.section{
+		.header{
+			@media only screen and(max-width: 767px){font-size: 19px;padding:10px;}
+			i{
+				@media only screen and(max-width: 767px){top: 14px !important;right:14px !important;}
+			}
+		}
+		.button{
+			padding-top: 14px;
+			padding-bottom: 12px;
+			@media only screen and(max-width: 767px){font-size: 17px;padding-top:10px;padding-bottom: 8px;}
+		}
 	}
 }
 

@@ -1007,11 +1007,12 @@ RESUME HERO POP
   text-transform: uppercase;
   height: 100%;
   width: 303.5px;
+  margin-bottom: 15px;
   display: inline-block;
   vertical-align: top; }
   @media (max-width: 767px) {
     .template-resume .section .content .save {
-      width: 140px; } }
+      width: 4.2%; } }
 .template-resume .section .content .pages {
   text-align: center; }
   @media (max-width: 767px) {
@@ -1058,15 +1059,28 @@ RESUME HERO POP
   width: 1204px !important; }
   @media only screen and (max-width: 767px) {
     .export-resume .section, .template-resume .section {
-      width: 300px !important; } }
+      width: 95% !important; } }
   .export-resume .section .header, .template-resume .section .header {
     padding-bottom: 20px; }
   .export-resume .section .content, .template-resume .section .content {
     border-bottom: 1px solid #9d9d9d; }
 
-.export-resume .button, .template-resume .button, .delete-resume .button {
+@media only screen and (max-width: 767px) {
+  .export-resume .section .header, .template-resume .section .header, .delete-resume .section .header {
+    font-size: 19px;
+    padding: 10px; } }
+@media only screen and (max-width: 767px) {
+  .export-resume .section .header i, .template-resume .section .header i, .delete-resume .section .header i {
+    top: 14px !important;
+    right: 14px !important; } }
+.export-resume .section .button, .template-resume .section .button, .delete-resume .section .button {
   padding-top: 14px;
   padding-bottom: 12px; }
+  @media only screen and (max-width: 767px) {
+    .export-resume .section .button, .template-resume .section .button, .delete-resume .section .button {
+      font-size: 17px;
+      padding-top: 10px;
+      padding-bottom: 8px; } }
 
 /*
 HEADER TOOL
