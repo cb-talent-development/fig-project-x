@@ -138,9 +138,9 @@
 					<span class"title">Select Your Template</span><i class="icon-x-black close" onclick="disparition($('.template-resume'))"></i>
 				</div>
 				<div class="content">
-					<div class="left large-resp">
+					<div class="left large large-resp">
 						<div class="message">DOCUMENT TYPE</div>
-						<div class="select large-resp toggleMenu">{{ changeType }}<i class="icon-bigarrow-bottom-grey"></i>
+						<div class="select large large-resp toggleMenu">{{ changeType }}<i class="icon-bigarrow-bottom-grey"></i>
 							<div class="subMenu">
 								<div ng-repeat="template in getStarted.lists.docTypes" select data-value="template" data-elem="changeType">{{ template }}</div>
 							</div>
@@ -148,7 +148,7 @@
 					</div>
 					<div class="left large large-resp">
 						<div class="message">DOCUMENT NAME</div>
-						<div class="input-button large-resp">
+						<div class="input-button large large-resp">
 							<input placeholder="Freshstart, New"/>
 						</div>
 					</div>
@@ -186,9 +186,9 @@
 					<span class"title">Export Resume</span><i class="icon-x-black close" onclick="disparition($('.export-resume'))"></i>
 				</div>
 				<div class="content">
-					<div class="left large-resp">
+					<div class="left large large-resp">
 						<div class="message">DOCUMENT TYPE</div>
-						<div class="select large-resp toggleMenu">{{ exportType }}<i class="icon-bigarrow-bottom-grey"></i>
+						<div class="select large large-resp toggleMenu">{{ exportType }}<i class="icon-bigarrow-bottom-grey"></i>
 							<div class="subMenu">
 								<div ng-repeat="type in getStarted.lists.docTypes" select data-value="type" data-elem="exportType">{{ type }}</div>
 							</div>
@@ -196,7 +196,7 @@
 					</div>
 					<div class="left large large-resp">
 						<div class="message">SAVE AS</div>
-						<div class="input-button large-resp">
+						<div class="input-button large large-resp">
 							<input placeholder="Freshstart, New"></input>
 						</div>
 					</div>
