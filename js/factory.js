@@ -443,7 +443,7 @@ module.factory('getStarted',['$http',function($http) {
 			this.resumeInfo.contactInfo.phone.value=this.resume.ContactInfo.Phone;
 			this.resumeInfo.contactInfo.mobile.value=this.resume.ContactInfo.Mobile;
 			//address
-            this.resumeInfo.contactInfo.address.state.value=this.resume.ContactInfo.Address.State;
+            if(this.resume.ContactInfo.Address.State!='')this.resumeInfo.contactInfo.address.state.value=this.resume.ContactInfo.Address.State;
             this.resumeInfo.contactInfo.address.zipCode.value=this.resume.ContactInfo.Address.Zipcode;
 			this.resumeInfo.contactInfo.address.city.value=this.resume.ContactInfo.Address.City;
 			this.resumeInfo.contactInfo.address.apt.value=this.resume.ContactInfo.Address.Apt;
@@ -454,19 +454,19 @@ module.factory('getStarted',['$http',function($http) {
             this.resumeInfo.job.title.name.value=this.resume.Job.Title;
             this.resumeInfo.job.company.name.value=this.resume.Job.Company;
             this.resumeInfo.job.location.value=this.resume.Job.Location;
-            this.resumeInfo.job.startDate.month.value=this.resume.Job.StartDate.Month;
-            this.resumeInfo.job.startDate.year.value=this.resume.Job.StartDate.Year;
-            this.resumeInfo.job.endDate.month.value=this.resume.Job.EndDate.Month;
-            this.resumeInfo.job.endDate.year.value=this.resume.Job.EndDate.Year;
+            if(this.resume.Job.StartDate.Month!='')this.resumeInfo.job.startDate.month.value=this.resume.Job.StartDate.Month;
+            if(this.resume.Job.StartDate.Year!='')this.resumeInfo.job.startDate.year.value=this.resume.Job.StartDate.Year;
+            if(this.resume.Job.EndDate.Month!='')this.resumeInfo.job.endDate.month.value=this.resume.Job.EndDate.Month;
+            if(this.resume.Job.EndDate.Year!='')this.resumeInfo.job.endDate.year.value=this.resume.Job.EndDate.Year;
             this.resumeInfo.job.description.value=this.resume.Job.Description;
 			this.resumeInfo.job.state.completed=this.resume.Job.State.Completed;
 			//education
-			this.resumeInfo.education.type.name.value=this.resume.Education.Type.Name;
+			if(this.resume.Education.Type.Name!='')this.resumeInfo.education.type.name.value=this.resume.Education.Type.Name;
 			this.resumeInfo.education.specialization.value=this.resume.Education.Specialization;
 			this.resumeInfo.education.institution.value=this.resume.Education.Institution;
 			this.resumeInfo.education.location.value=this.resume.Education.Location;
-			this.resumeInfo.education.dateGraduated.month.value=this.resume.Education.DateGraduated.Month;
-			this.resumeInfo.education.dateGraduated.year.value=this.resume.Education.DateGraduated.Year;
+			if(this.resume.Education.DateGraduated.Month!='')this.resumeInfo.education.dateGraduated.month.value=this.resume.Education.DateGraduated.Month;
+			if(this.resume.Education.DateGraduated.Year!='')this.resumeInfo.education.dateGraduated.year.value=this.resume.Education.DateGraduated.Year;
 			this.resumeInfo.education.state.completed=this.resume.Education.State.Completed;
 			//skills
 			this.resumeInfo.skills.selected=this.resume.Skills.Skills;
@@ -475,8 +475,8 @@ module.factory('getStarted',['$http',function($http) {
 			this.setSkills(this.resumeInfo.skills.selected);
 			//award
 			this.resumeInfo.award.title.value=this.resume.Award.Title;
-			this.resumeInfo.award.awardDate.month.value=this.resume.Award.AwardDate.Month;
-			this.resumeInfo.award.awardDate.year.value=this.resume.Award.AwardDate.Year;
+			if(this.resume.Award.AwardDate.Month!='')this.resumeInfo.award.awardDate.month.value=this.resume.Award.AwardDate.Month;
+			if(this.resume.Award.AwardDate.Year!='')this.resumeInfo.award.awardDate.year.value=this.resume.Award.AwardDate.Year;
 			this.resumeInfo.award.state.completed=this.resume.Award.State.Completed;
 			//technological skills
 			this.resumeInfo.technologicalSkills.description.value=this.resume.TechnologicalSkills.Description;
