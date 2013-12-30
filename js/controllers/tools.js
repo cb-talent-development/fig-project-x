@@ -251,7 +251,7 @@ function JobinalityCtr($scope, $http){
 /*
 Jobinality
 */
-function ResumeHeroCtr($scope, $http, getStarted){
+function ResumeHeroCtr($scope, $http, pagination, getStarted){
     /*
     Constructor
     */
@@ -416,24 +416,35 @@ function ResumeHeroCtr($scope, $http, getStarted){
 	$scope.saveGetStarted=function(){
 		$scope.getStarted.save();
 		$scope.currentResume.ResumeInfo = $scope.getStarted.resume;
-		console.log($scope.currentResume);
 	}
 	
 	
     $scope.init=function(){
-        initGetStarted($scope,getStarted);
-		$scope.loadInfo();
-		$scope.exportType="PDF";
-		$scope.changeType="PDF";
+		if(!$scope.resumeHero[0]){
+			$http.get("data/json/resume-hero.json").success(function(data) {
+                // Job recommandation
+                $scope.resumeHero=data;
+				$scope.pageResume=new pagination();
+				$scope.pageResume.limit=5;
+				$scope.pageResume.totalElem=data.length;
+				$scope.pageResume.computePages();
+				initGetStarted($scope,getStarted);
+				$scope.currentResume=$scope.resumeHero[0];
+				$scope.currentResume.Class="selected";
+				$scope.sections = $scope.currentResume.Data;
+				$scope.getStarted.initInput($scope.currentResume.ResumeInfo);
+	       });
+		}
 		if($scope.resumeHero[0]){
+			initGetStarted($scope,getStarted);
 			$scope.currentResume = $scope.resumeHero[0];
 			$scope.currentResume.Class="selected";
 			$scope.sections = $scope.currentResume.Data;
 			$scope.getStarted.initInput($scope.currentResume.ResumeInfo);
-		}else{
-			$scope.resumeHero[0] = null; //a finir
-			$scope.createResume();
 		}
+		$scope.exportType="PDF";
+		$scope.changeType="PDF";
+		$scope.loadInfo();
     }
     $scope.init();
 }
