@@ -262,6 +262,7 @@ function ResumeHeroCtr($scope, $http, getStarted){
 		$scope.currentResume = resume;
 		$scope.currentResume.Class="selected";
 		$scope.sections = $scope.currentResume.Data;
+		$scope.getStarted.initInput(resume.ResumeInfo);
 		return false;
 	}	
 	
@@ -275,6 +276,8 @@ function ResumeHeroCtr($scope, $http, getStarted){
 		$scope.currentResume = $scope.resumeHero[i]; //Select automatically the next resume
 		$scope.currentResume.Class="selected";
 		$scope.sections = $scope.currentResume.Data;
+		$scope.pageResume.totalElem=$scope.resumeHero.length;
+		$scope.pageResume.computePages();
 		disparition($('.delete-resume')); //Close pop-up
 	}
 	
@@ -296,7 +299,6 @@ function ResumeHeroCtr($scope, $http, getStarted){
 	$scope.loadInfo=function(){
         $http.get("data/json/user-full.json").success(function(data) {
             $scope.user=data;
-			$scope.getStarted.initInput(data);
 	   });
     }
 	
@@ -309,6 +311,103 @@ function ResumeHeroCtr($scope, $http, getStarted){
 		alert('edit');
 	}
 	
+	$scope.createResume=function(){
+		var newResume = {
+			"Id":"5",
+			"Title":"Title",
+			"Type":"Type",
+			"Level":"Level",
+			"ResumeInfo":{
+				"Job":{
+					"Title":"",
+					"Company":"",
+					"Location":"",
+					"StartDate":{
+						"Month":"",
+						"Year":""
+					},
+					"EndDate":{
+						"Month":"",
+						"Year":""
+					},
+					"Description":"",
+					"State":{
+						"Completed":"false"
+					}
+				},
+				"Education":{
+					"Type":{
+						"Name":"",
+						"Corrected":"false"
+					},
+					"Specialization":"",
+					"Institution":"",
+					"Location":"",
+					"DateGraduated":{
+						"Month":"",
+						"Year":""
+					},
+					"State":{
+						"Completed":"false"
+					}
+				},
+				"Skills":{
+					"Skills":["false", "false", "false", "false", "false", "false"],
+					"State":{
+						"Completed":"false"
+					}
+				},
+				"Award":{
+					"Title":"",
+					"AwardDate":{
+						"Month":"",
+						"Year":""
+					},
+					"State":{
+						"Completed":"false"
+					}
+				},
+				"TechnologicalSkills":{
+					"Description":"",
+					"State":{
+						"Completed":"false"
+					}
+				},
+				"Volunteer":{
+					"Description":"",
+					"State":{
+						"Completed":"false"
+					}
+				},
+				"ContactInfo":{
+					"Name":"",
+					"LastName":"",
+					"FirstName":"",
+					"Mail":"",
+					"Phone":"",
+					"Mobile":"",
+					"Address":{
+						"State":"",
+						"City":"",
+						"Zipcode":"",
+						"Street":""
+					},
+					"State":{
+						"Completed":"false"
+					}
+				}
+			},
+			"Data":[]
+		}
+		var id = $scope.resumeHero.length;
+		newResume.Id = id;
+		$scope.resumeHero.push(newResume);
+		$scope.selectResume(newResume);
+		$scope.currentResume=newResume;
+		$scope.pageResume.totalElem=$scope.resumeHero.length;
+		$scope.pageResume.computePages();
+	}
+	
 	
     $scope.init=function(){
         initGetStarted($scope,getStarted);
@@ -317,8 +416,11 @@ function ResumeHeroCtr($scope, $http, getStarted){
 			$scope.currentResume = $scope.resumeHero[0];
 			$scope.currentResume.Class="selected";
 			$scope.sections = $scope.currentResume.Data;
+			$scope.getStarted.initInput($scope.currentResume.ResumeInfo);
 		}else{
 			$scope.resumeHero[0] = null; //a finir
+			$scope.createResume();
+			apparition($('.get-started-resume'));
 		}
     }
     $scope.init();

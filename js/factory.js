@@ -260,7 +260,7 @@ module.factory('getStarted',['$http',function($http) {
         }
         //user info
         
-        this.userInfo={
+        this.resumeInfo={
             'job':{
                 'title':{
 					'name':input(),
@@ -307,6 +307,7 @@ module.factory('getStarted',['$http',function($http) {
 				}
             },
 			'contactInfo':{
+				'name':input(),
 				'email':input(),
 				'firstName':input(),
 				'lastName':input(),
@@ -354,7 +355,7 @@ module.factory('getStarted',['$http',function($http) {
 				}
 			}
         }
-        this.user='none';
+        this.resume='none';
         console.log(this);
     }
     /*
@@ -365,11 +366,11 @@ module.factory('getStarted',['$http',function($http) {
         //skills
         //TODO: save skills
         //we do that to avoid creating a new object
-        this.userInfo.skills.saved.replace(this.userInfo.skills.selected);
+        this.resumeInfo.skills.saved.replace(this.resumeInfo.skills.selected);
 
         console.log(this.scope);
 
-        if(this.user!='none'){
+        if(this.resume!='none'){
            disparition($('.get-started-resume')); 
         }
         else{
@@ -385,104 +386,108 @@ module.factory('getStarted',['$http',function($http) {
 		}
 	}
     //Input initialisation
-    getStarted.prototype.initInput=function(user){
+    getStarted.prototype.initInput=function(resume){
         console.log("INIT INPUT");
-        this.user=user;
-        if(user && user != 'none'){
-			this.userInfo.contactInfo.firstName.value=this.user.ContactInfo.FirstName;
-            this.userInfo.contactInfo.lastName.value=this.user.ContactInfo.LastName;
-            this.userInfo.contactInfo.email.value=this.user.ContactInfo.Mail;
-			this.userInfo.contactInfo.phone.value=this.user.ContactInfo.Phone;
-			this.userInfo.contactInfo.mobile.value=this.user.ContactInfo.Mobile;
+        this.resume=resume;
+        if(resume && resume != 'none'){
+			this.resumeInfo.contactInfo.name.value=this.resume.ContactInfo.Name;
+			this.resumeInfo.contactInfo.firstName.value=this.resume.ContactInfo.FirstName;
+            this.resumeInfo.contactInfo.lastName.value=this.resume.ContactInfo.LastName;
+            this.resumeInfo.contactInfo.email.value=this.resume.ContactInfo.Mail;
+			this.resumeInfo.contactInfo.phone.value=this.resume.ContactInfo.Phone;
+			this.resumeInfo.contactInfo.mobile.value=this.resume.ContactInfo.Mobile;
 			//address
-            this.userInfo.contactInfo.address.state.value=this.user.ContactInfo.Address.State;
-            this.userInfo.contactInfo.address.zipCode.value=this.user.ContactInfo.Address.Zipcode;
-			this.userInfo.contactInfo.address.city.value=this.user.ContactInfo.Address.City;
-			this.userInfo.contactInfo.address.apt.value=this.user.ContactInfo.Address.Apt;
-			this.userInfo.contactInfo.address.street.value=this.user.ContactInfo.Address.Street;
-			this.userInfo.contactInfo.state.completed=this.user.ContactInfo.State.Completed;
+            this.resumeInfo.contactInfo.address.state.value=this.resume.ContactInfo.Address.State;
+            this.resumeInfo.contactInfo.address.zipCode.value=this.resume.ContactInfo.Address.Zipcode;
+			this.resumeInfo.contactInfo.address.city.value=this.resume.ContactInfo.Address.City;
+			this.resumeInfo.contactInfo.address.apt.value=this.resume.ContactInfo.Address.Apt;
+			this.resumeInfo.contactInfo.address.street.value=this.resume.ContactInfo.Address.Street;
+			this.resumeInfo.contactInfo.state.completed=this.resume.ContactInfo.State.Completed;
+			console.log(this.resume.ContactInfo.State.Completed);
             //job
-            this.userInfo.job.title.name.value=this.user.Job.Title;
-            this.userInfo.job.company.name.value=this.user.Job.Company;
-            this.userInfo.job.location.value=this.user.Job.Location;
-            this.userInfo.job.startDate.month.value=this.user.Job.StartDate.Month;
-            this.userInfo.job.startDate.year.value=this.user.Job.StartDate.Year;
-            this.userInfo.job.endDate.month.value=this.user.Job.EndDate.Month;
-            this.userInfo.job.endDate.year.value=this.user.Job.EndDate.Year;
-            this.userInfo.job.description.value=this.user.Job.Description;
-			this.userInfo.job.state.completed=this.user.Job.State.Completed;
+            this.resumeInfo.job.title.name.value=this.resume.Job.Title;
+            this.resumeInfo.job.company.name.value=this.resume.Job.Company;
+            this.resumeInfo.job.location.value=this.resume.Job.Location;
+            this.resumeInfo.job.startDate.month.value=this.resume.Job.StartDate.Month;
+            this.resumeInfo.job.startDate.year.value=this.resume.Job.StartDate.Year;
+            this.resumeInfo.job.endDate.month.value=this.resume.Job.EndDate.Month;
+            this.resumeInfo.job.endDate.year.value=this.resume.Job.EndDate.Year;
+            this.resumeInfo.job.description.value=this.resume.Job.Description;
+			this.resumeInfo.job.state.completed=this.resume.Job.State.Completed;
 			//education
-			this.userInfo.education.type.name.value=this.user.Education.Type.Name;
-			this.userInfo.education.specialization.value=this.user.Education.Specialization;
-			this.userInfo.education.institution.value=this.user.Education.Institution;
-			this.userInfo.education.location.value=this.user.Education.Location;
-			this.userInfo.education.dateGraduated.month.value=this.user.Education.DateGraduated.Month;
-			this.userInfo.education.dateGraduated.year.value=this.user.Education.DateGraduated.Year;
-			this.userInfo.education.state.completed=this.user.Education.State.Completed;
+			this.resumeInfo.education.type.name.value=this.resume.Education.Type.Name;
+			this.resumeInfo.education.specialization.value=this.resume.Education.Specialization;
+			this.resumeInfo.education.institution.value=this.resume.Education.Institution;
+			this.resumeInfo.education.location.value=this.resume.Education.Location;
+			this.resumeInfo.education.dateGraduated.month.value=this.resume.Education.DateGraduated.Month;
+			this.resumeInfo.education.dateGraduated.year.value=this.resume.Education.DateGraduated.Year;
+			this.resumeInfo.education.state.completed=this.resume.Education.State.Completed;
 			//skills
-			this.userInfo.skills.selected=this.user.Skills.Skills;
-			this.userInfo.skills.saved=this.user.Skills.Skills;
-			this.setSkills(this.userInfo.skills.selected);
+			this.resumeInfo.skills.selected=this.resume.Skills.Skills;
+			this.resumeInfo.skills.saved=this.resume.Skills.Skills;
+			this.resumeInfo.skills.state.completed=this.resume.Skills.State.Completed;
+			this.setSkills(this.resumeInfo.skills.selected);
 			//award
-			this.userInfo.award.title.value=this.user.Award.Title;
-			this.userInfo.award.awardDate.month.value=this.user.Award.AwardDate.Month;
-			this.userInfo.award.awardDate.year.value=this.user.Award.AwardDate.Year;
-			this.userInfo.award.state.completed=this.user.Award.State.Completed;
+			this.resumeInfo.award.title.value=this.resume.Award.Title;
+			this.resumeInfo.award.awardDate.month.value=this.resume.Award.AwardDate.Month;
+			this.resumeInfo.award.awardDate.year.value=this.resume.Award.AwardDate.Year;
+			this.resumeInfo.award.state.completed=this.resume.Award.State.Completed;
 			//technological skills
-			this.userInfo.technologicalSkills.description.value=this.user.TechnologicalSkills.Description;
-			this.userInfo.technologicalSkills.state.completed=this.user.TechnologicalSkills.State.Completed;
+			this.resumeInfo.technologicalSkills.description.value=this.resume.TechnologicalSkills.Description;
+			this.resumeInfo.technologicalSkills.state.completed=this.resume.TechnologicalSkills.State.Completed;
 			//Volunteer, publication & affiliation
-			this.userInfo.volunteer.description.value=this.user.Volunteer.Description;
-			this.userInfo.volunteer.state.completed=this.user.Volunteer.State.Completed;
+			this.resumeInfo.volunteer.description.value=this.resume.Volunteer.Description;
+			this.resumeInfo.volunteer.state.completed=this.resume.Volunteer.State.Completed;
         }
     }
 	getStarted.prototype.checkContactInfo=function(){
-        if(this.userInfo.contactInfo.firstName.value==''){this.userInfo.contactInfo.state.completed=false;}
-		else if(this.userInfo.contactInfo.lastName.value==''){this.userInfo.contactInfo.state.completed=false;}
-		else if(this.userInfo.contactInfo.email.value==''){this.userInfo.contactInfo.state.completed=false;}
-		else if(this.userInfo.contactInfo.address.street.value==''){this.userInfo.contactInfo.state.completed=false;}
+        if(this.resumeInfo.contactInfo.firstName.value==''){this.resumeInfo.contactInfo.state.completed=false;}
+		else if(this.resumeInfo.contactInfo.lastName.value==''){this.resumeInfo.contactInfo.state.completed=false;}
+		else if(this.resumeInfo.contactInfo.email.value==''){this.resumeInfo.contactInfo.state.completed=false;}
+		else if(this.resumeInfo.contactInfo.address.street.value==''){this.resumeInfo.contactInfo.state.completed=false;}
 		//Optional input
-		//else if(this.userInfo.contactInfo.address.apt.value==''){this.userInfo.contactInfo.state.completed=false;}
-		else if(this.userInfo.contactInfo.address.city.value==''){this.userInfo.contactInfo.state.completed=false;}
-		else if(this.userInfo.contactInfo.address.state.value=='State'){this.userInfo.contactInfo.state.completed=false;}
-		else if(this.userInfo.contactInfo.address.zipCode.value==''){this.userInfo.contactInfo.state.completed=false;}
-		else if(this.userInfo.contactInfo.phone.value==''){this.userInfo.contactInfo.state.completed=false;}
-		else if(this.userInfo.contactInfo.mobile.value==''){this.userInfo.contactInfo.state.completed=false;}
-		else{this.userInfo.contactInfo.state.completed=true;}
+		//else if(this.resumeInfo.contactInfo.address.apt.value==''){this.resumeInfo.contactInfo.state.completed=false;}
+		else if(this.resumeInfo.contactInfo.address.city.value==''){this.resumeInfo.contactInfo.state.completed=false;}
+		else if(this.resumeInfo.contactInfo.address.state.value=='State'){this.resumeInfo.contactInfo.state.completed=false;}
+		else if(this.resumeInfo.contactInfo.address.zipCode.value==''){this.resumeInfo.contactInfo.state.completed=false;}
+		else if(this.resumeInfo.contactInfo.phone.value==''){this.resumeInfo.contactInfo.state.completed=false;}
+		else if(this.resumeInfo.contactInfo.mobile.value==''){this.resumeInfo.contactInfo.state.completed=false;}
+		else{this.resumeInfo.contactInfo.state.completed=true;}
+		this.resumeInfo.contactInfo.name.value = this.resumeInfo.contactInfo.firstName.value + ' ' + this.resumeInfo.contactInfo.lastName.value;
     }
 	getStarted.prototype.checkWork=function(){
-        if(this.userInfo.job.title.name.value==''){this.userInfo.job.state.completed=false;}
-		else if(this.userInfo.job.company.name.value==''){this.userInfo.job.state.completed=false;}
-		else if(this.userInfo.job.location.value==''){this.userInfo.job.state.completed=false;}
-		else if(this.userInfo.job.startDate.month.value=='Month'){this.userInfo.job.state.completed=false;}
-		else if(this.userInfo.job.startDate.year.value=='Year'){this.userInfo.job.state.completed=false;}
-		else if(this.userInfo.job.endDate.month.value=='Month'){this.userInfo.job.state.completed=false;}
-		else if(this.userInfo.job.endDate.year.value=='Year'){this.userInfo.job.state.completed=false;}
-		else if(this.userInfo.job.description.value==''){this.userInfo.job.state.completed=false;}
-		else{this.userInfo.job.state.completed=true;}
+        if(this.resumeInfo.job.title.name.value==''){this.resumeInfo.job.state.completed=false;}
+		else if(this.resumeInfo.job.company.name.value==''){this.resumeInfo.job.state.completed=false;}
+		else if(this.resumeInfo.job.location.value==''){this.resumeInfo.job.state.completed=false;}
+		else if(this.resumeInfo.job.startDate.month.value=='Month'){this.resumeInfo.job.state.completed=false;}
+		else if(this.resumeInfo.job.startDate.year.value=='Year'){this.resumeInfo.job.state.completed=false;}
+		else if(this.resumeInfo.job.endDate.month.value=='Month'){this.resumeInfo.job.state.completed=false;}
+		else if(this.resumeInfo.job.endDate.year.value=='Year'){this.resumeInfo.job.state.completed=false;}
+		else if(this.resumeInfo.job.description.value==''){this.resumeInfo.job.state.completed=false;}
+		else{this.resumeInfo.job.state.completed=true;}
     }
 	getStarted.prototype.checkEducation=function(){
-		if(this.userInfo.education.type.name.value=='Diploma'){this.userInfo.education.state.completed=false;}
-		else if(this.userInfo.education.specialization.value==''){this.userInfo.education.state.completed=false;}
-		else if(this.userInfo.education.institution.value==''){this.userInfo.education.state.completed=false;}
-		else if(this.userInfo.education.location.value==''){this.userInfo.education.state.completed=false; alert(4);}
-		else if(this.userInfo.education.dateGraduated.month.value=='Month'){this.userInfo.education.state.completed=false;}
-		else if(this.userInfo.education.dateGraduated.year.value=='Year'){this.userInfo.education.state.completed=false;}
-		else{this.userInfo.education.state.completed=true;}
+		if(this.resumeInfo.education.type.name.value=='Diploma'){this.resumeInfo.education.state.completed=false;}
+		else if(this.resumeInfo.education.specialization.value==''){this.resumeInfo.education.state.completed=false;}
+		else if(this.resumeInfo.education.institution.value==''){this.resumeInfo.education.state.completed=false;}
+		else if(this.resumeInfo.education.location.value==''){this.resumeInfo.education.state.completed=false; alert(4);}
+		else if(this.resumeInfo.education.dateGraduated.month.value=='Month'){this.resumeInfo.education.state.completed=false;}
+		else if(this.resumeInfo.education.dateGraduated.year.value=='Year'){this.resumeInfo.education.state.completed=false;}
+		else{this.resumeInfo.education.state.completed=true;}
 	}
 	getStarted.prototype.checkAward=function(){
-		if(this.userInfo.award.title.value==''){this.userInfo.award.state.completed=false;}
-		else if(this.userInfo.award.awardDate.month.value=='Month'){this.userInfo.award.state.completed=false;}
-		else if(this.userInfo.award.awardDate.year.value=='Year'){this.userInfo.award.state.completed=false;}
-		else{this.userInfo.award.state.completed=true;}
+		if(this.resumeInfo.award.title.value==''){this.resumeInfo.award.state.completed=false;}
+		else if(this.resumeInfo.award.awardDate.month.value=='Month'){this.resumeInfo.award.state.completed=false;}
+		else if(this.resumeInfo.award.awardDate.year.value=='Year'){this.resumeInfo.award.state.completed=false;}
+		else{this.resumeInfo.award.state.completed=true;}
 	}
 	getStarted.prototype.checkTechnologicalSkills=function(){
-		if(this.userInfo.technologicalSkills.description.value==''){this.userInfo.technologicalSkills.state.completed=false;}
-		else{this.userInfo.technologicalSkills.state.completed=true;}
+		if(this.resumeInfo.technologicalSkills.description.value==''){this.resumeInfo.technologicalSkills.state.completed=false;}
+		else{this.resumeInfo.technologicalSkills.state.completed=true;}
 	}
 	getStarted.prototype.checkVolunteer=function(){
-		if(this.userInfo.volunteer.description.value==''){this.userInfo.volunteer.state.completed=false;}
-		else{this.userInfo.volunteer.state.completed=true;}
+		if(this.resumeInfo.volunteer.description.value==''){this.resumeInfo.volunteer.state.completed=false;}
+		else{this.resumeInfo.volunteer.state.completed=true;}
 	}
 	getStarted.prototype.changeSkill=function(id){
 		var elem = $('#hero-skills-'+id);
@@ -491,9 +496,9 @@ module.factory('getStarted',['$http',function($http) {
 		}else{
 			elem.addClass("selected");
 		}
-		if(this.userInfo.skills.selected[id]){this.userInfo.skills.selected[id]=false;}
-		else{this.userInfo.skills.selected[id]=true;}
-		this.userInfo.skills.state.completed=true;
+		if(this.resumeInfo.skills.selected[id]){this.resumeInfo.skills.selected[id]=false;}
+		else{this.resumeInfo.skills.selected[id]=true;}
+		this.resumeInfo.skills.state.completed=true;
 	}
     return getStarted;
 }]);
