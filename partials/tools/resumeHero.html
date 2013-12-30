@@ -10,7 +10,8 @@
 		<div class="button right back-darkgrey" onclick="apparition($('.help-section'))"><i class="icon-question"></i>Help</div>
 	</div>
 	<div class="content">
-		<div class="button-list left">
+		
+	<div class="button-list left">
 			<div class="button back-white" ng-click="getStartedPage(1)">
 				<i class="icon-completed-check" ng-show="getStarted.userInfo.contactInfo.state.completed"></i>
 				<i class="icon-not-completed" ng-show="!getStarted.userInfo.contactInfo.state.completed"></i>
@@ -23,13 +24,48 @@
 					Work Experience
 				<i class="icon-right-black"></i>
 			</div>
-			<div class="button back-white" ng-click="getStartedPage(3)"><i class="icon-completed-check"></i>Education & Career Training<i class="icon-right-black"></i></div>
-			<div class="button back-white" ng-click="getStartedPage(3)"><i class="icon-completed-check"></i>Skills<i class="icon-right-black"></i></div>
-			<div class="button back-white" ng-click="getStartedPage(4)"><i class="icon-not-completed"></i>Awards & Honors<i class="icon-right-black"></i></div>
-			<div class="button back-white" ng-click="getStartedPage(4)"><i class="icon-not-completed"></i>Tools & Technology<i class="icon-right-black"></i></div>
-			<div class="button back-white" ng-click="getStartedPage(5)"><i class="icon-not-completed"></i>Publications<i class="icon-right-black"></i></div>
-			<div class="button back-white" ng-click="getStartedPage(5)"><i class="icon-not-completed"></i>Affiliations<i class="icon-right-black"></i></div>
-			<div class="button back-white" ng-click="getStartedPage(5)"><i class="icon-not-completed"></i>Volunteer Work<i class="icon-right-black"></i></div>
+			<div class="button back-white" ng-click="getStartedPage(3)">
+				<i class="icon-completed-check" ng-show="getStarted.userInfo.education.state.completed"></i>
+				<i class="icon-not-completed" ng-show="!getStarted.userInfo.education.state.completed"></i>
+					Education & Career Training
+				<i class="icon-right-black"></i>
+			</div>
+			<div class="button back-white" ng-click="getStartedPage(3)">
+				<i class="icon-completed-check" ng-show="getStarted.userInfo.skills.state.completed"></i>
+				<i class="icon-not-completed" ng-show="!getStarted.userInfo.skills.state.completed"></i>
+					Skills
+				<i class="icon-right-black"></i>
+			</div>
+			<div class="button back-white" ng-click="getStartedPage(4)">
+				<i class="icon-completed-check" ng-show="getStarted.userInfo.award.state.completed"></i>
+				<i class="icon-not-completed" ng-show="!getStarted.userInfo.award.state.completed"></i>
+					Awards & Honors
+				<i class="icon-right-black"></i>
+			</div>
+			<div class="button back-white" ng-click="getStartedPage(4)">
+				<i class="icon-completed-check" ng-show="getStarted.userInfo.technologicalSkills.state.completed"></i>
+				<i class="icon-not-completed" ng-show="!getStarted.userInfo.technologicalSkills.state.completed"></i>
+					Tools & Technology
+				<i class="icon-right-black"></i>
+			</div>
+			<div class="button back-white" ng-click="getStartedPage(5)">
+				<i class="icon-completed-check" ng-show="getStarted.userInfo.volunteer.state.completed"></i>
+				<i class="icon-not-completed" ng-show="!getStarted.userInfo.volunteer.state.completed"></i>
+					Publications
+				<i class="icon-right-black"></i>
+			</div>
+			<div class="button back-white" ng-click="getStartedPage(5)">
+				<i class="icon-completed-check" ng-show="getStarted.userInfo.volunteer.state.completed"></i>
+				<i class="icon-not-completed" ng-show="!getStarted.userInfo.volunteer.state.completed"></i>
+					Affiliations
+				<i class="icon-right-black"></i>
+			</div>
+			<div class="button back-white" ng-click="getStartedPage(5)">
+				<i class="icon-completed-check" ng-show="getStarted.userInfo.volunteer.state.completed"></i>
+				<i class="icon-not-completed" ng-show="!getStarted.userInfo.volunteer.state.completed"></i>
+					Volunteer Work
+				<i class="icon-right-black"></i>
+			</div>
 			<div class="button back-white" onclick="apparition($('.add-section'))"><i class="icon-add-section"></i>Add Section<i class="icon-right-black"></i></div>
 		</div>
 		<div class="resume-content left">

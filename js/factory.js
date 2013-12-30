@@ -295,7 +295,8 @@ module.factory('getStarted',['$http',function($http) {
 					'isCorrected':true,
 					'phase':''
 				},
-                'institution':input("Institution"),
+				'specialization':input(),
+                'institution':input(),
                 'location':input(),
                 'dateGraduated':{
 					'month':input("Month"),
@@ -325,14 +326,14 @@ module.factory('getStarted',['$http',function($http) {
             'skills':{
                 'selected':[],
                 'saved':[],
-                'list':config.skillsList,
+				'list':config.heroSkillsList,
                 'state':{
                     'completed':false
                 }
             },
 			'award':{
 				'title':input(),
-				'date':{
+				'awardDate':{
 					'month':input("Month"),
 					'year':input("Year")
 				},
@@ -340,7 +341,7 @@ module.factory('getStarted',['$http',function($http) {
 					'completed':false
 				}
 			},
-			'technicalSkills':{
+			'technologicalSkills':{
 				'description':input(),
 				'state':{
 					'completed':false
@@ -375,22 +376,31 @@ module.factory('getStarted',['$http',function($http) {
             alert("Make sure that you have filled everything...");
         }
     }
+	getStarted.prototype.setSkills=function(list){
+		for(var i=0; i<6; i++){
+			if(list[i] == 'true'){
+				var elem = $('#hero-skills-'+i+'');
+				elem.addClass("selected");
+			}
+		}
+	}
     //Input initialisation
     getStarted.prototype.initInput=function(user){
         console.log("INIT INPUT");
         this.user=user;
         if(user && user != 'none'){
-			this.userInfo.contactInfo.firstName.value=this.user.FirstName;
-            this.userInfo.contactInfo.lastName.value=this.user.LastName;
-            this.userInfo.contactInfo.email.value=this.user.Mail;
-			this.userInfo.contactInfo.phone.value=this.user.Phone;
-			this.userInfo.contactInfo.mobile.value=this.user.Mobile;
+			this.userInfo.contactInfo.firstName.value=this.user.ContactInfo.FirstName;
+            this.userInfo.contactInfo.lastName.value=this.user.ContactInfo.LastName;
+            this.userInfo.contactInfo.email.value=this.user.ContactInfo.Mail;
+			this.userInfo.contactInfo.phone.value=this.user.ContactInfo.Phone;
+			this.userInfo.contactInfo.mobile.value=this.user.ContactInfo.Mobile;
 			//address
-            this.userInfo.contactInfo.address.state.value=this.user.State;
-            this.userInfo.contactInfo.address.zipCode.value=this.user.Zipcode;
-			this.userInfo.contactInfo.address.city.value=this.user.City;
-			this.userInfo.contactInfo.address.apt.value=this.user.Apt;
-			this.userInfo.contactInfo.address.street.value=this.user.Address;
+            this.userInfo.contactInfo.address.state.value=this.user.ContactInfo.Address.State;
+            this.userInfo.contactInfo.address.zipCode.value=this.user.ContactInfo.Address.Zipcode;
+			this.userInfo.contactInfo.address.city.value=this.user.ContactInfo.Address.City;
+			this.userInfo.contactInfo.address.apt.value=this.user.ContactInfo.Address.Apt;
+			this.userInfo.contactInfo.address.street.value=this.user.ContactInfo.Address.Street;
+			this.userInfo.contactInfo.state.completed=this.user.ContactInfo.State.Completed;
             //job
             this.userInfo.job.title.name.value=this.user.Job.Title;
             this.userInfo.job.company.name.value=this.user.Job.Company;
@@ -400,24 +410,30 @@ module.factory('getStarted',['$http',function($http) {
             this.userInfo.job.endDate.month.value=this.user.Job.EndDate.Month;
             this.userInfo.job.endDate.year.value=this.user.Job.EndDate.Year;
             this.userInfo.job.description.value=this.user.Job.Description;
+			this.userInfo.job.state.completed=this.user.Job.State.Completed;
 			//education
-			this.userInfo.education.diploma.value=this.user.Education.Diploma;
+			this.userInfo.education.type.name.value=this.user.Education.Type.Name;
 			this.userInfo.education.specialization.value=this.user.Education.Specialization;
 			this.userInfo.education.institution.value=this.user.Education.Institution;
 			this.userInfo.education.location.value=this.user.Education.Location;
-			this.userInfo.education.dateGraduate.month.value=this.user.Education.DateGraduate.Month;
-			this.userInfo.education.dateGraduate.year.value=this.user.Education.DateGraduate.Year;
+			this.userInfo.education.dateGraduated.month.value=this.user.Education.DateGraduated.Month;
+			this.userInfo.education.dateGraduated.year.value=this.user.Education.DateGraduated.Year;
+			this.userInfo.education.state.completed=this.user.Education.State.Completed;
 			//skills
-			this.userInfo.skills.monitoring.value=this.user.Skills.Monitoring;
-			this.userInfo.skills.speaking.value=this.user.Skills.Speaking;
-			this.userInfo.skills.science.value=this.user.Skills.Science;
-			this.userInfo.skills.readingComprehension.value=this.user.Skills.ReadingComprehension;
-			this.userInfo.skills.writing.value=this.user.Skills.Writing;
-			this.userInfo.skills.mathematics.value=this.user.Skills.Mathematics;
-			//awards
-			//technical skills & Volunteer, publication, affiliation
-			this.userInfo.technicalSkills.description.value=this.user.TechnicalSkills;
-			this.userInfo.volunteer.description.value=this.user.Volunteer;
+			this.userInfo.skills.selected=this.user.Skills.Skills;
+			this.userInfo.skills.saved=this.user.Skills.Skills;
+			this.setSkills(this.userInfo.skills.selected);
+			//award
+			this.userInfo.award.title.value=this.user.Award.Title;
+			this.userInfo.award.awardDate.month.value=this.user.Award.AwardDate.Month;
+			this.userInfo.award.awardDate.year.value=this.user.Award.AwardDate.Year;
+			this.userInfo.award.state.completed=this.user.Award.State.Completed;
+			//technological skills
+			this.userInfo.technologicalSkills.description.value=this.user.TechnologicalSkills.Description;
+			this.userInfo.technologicalSkills.state.completed=this.user.TechnologicalSkills.State.Completed;
+			//Volunteer, publication & affiliation
+			this.userInfo.volunteer.description.value=this.user.Volunteer.Description;
+			this.userInfo.volunteer.state.completed=this.user.Volunteer.State.Completed;
         }
     }
 	getStarted.prototype.checkContactInfo=function(){
@@ -425,7 +441,8 @@ module.factory('getStarted',['$http',function($http) {
 		else if(this.userInfo.contactInfo.lastName.value==''){this.userInfo.contactInfo.state.completed=false;}
 		else if(this.userInfo.contactInfo.email.value==''){this.userInfo.contactInfo.state.completed=false;}
 		else if(this.userInfo.contactInfo.address.street.value==''){this.userInfo.contactInfo.state.completed=false;}
-		else if(this.userInfo.contactInfo.address.apt.value==''){this.userInfo.contactInfo.state.completed=false;}
+		//Optional input
+		//else if(this.userInfo.contactInfo.address.apt.value==''){this.userInfo.contactInfo.state.completed=false;}
 		else if(this.userInfo.contactInfo.address.city.value==''){this.userInfo.contactInfo.state.completed=false;}
 		else if(this.userInfo.contactInfo.address.state.value=='State'){this.userInfo.contactInfo.state.completed=false;}
 		else if(this.userInfo.contactInfo.address.zipCode.value==''){this.userInfo.contactInfo.state.completed=false;}
@@ -433,7 +450,6 @@ module.factory('getStarted',['$http',function($http) {
 		else if(this.userInfo.contactInfo.mobile.value==''){this.userInfo.contactInfo.state.completed=false;}
 		else{this.userInfo.contactInfo.state.completed=true;}
     }
-	
 	getStarted.prototype.checkWork=function(){
         if(this.userInfo.job.title.name.value==''){this.userInfo.job.state.completed=false;}
 		else if(this.userInfo.job.company.name.value==''){this.userInfo.job.state.completed=false;}
@@ -443,8 +459,42 @@ module.factory('getStarted',['$http',function($http) {
 		else if(this.userInfo.job.endDate.month.value=='Month'){this.userInfo.job.state.completed=false;}
 		else if(this.userInfo.job.endDate.year.value=='Year'){this.userInfo.job.state.completed=false;}
 		else if(this.userInfo.job.description.value==''){this.userInfo.job.state.completed=false;}
-		else{this.userInfo.job.state.completed.value=true;}
+		else{this.userInfo.job.state.completed=true;}
     }
+	getStarted.prototype.checkEducation=function(){
+		if(this.userInfo.education.type.name.value=='Diploma'){this.userInfo.education.state.completed=false;}
+		else if(this.userInfo.education.specialization.value==''){this.userInfo.education.state.completed=false;}
+		else if(this.userInfo.education.institution.value==''){this.userInfo.education.state.completed=false;}
+		else if(this.userInfo.education.location.value==''){this.userInfo.education.state.completed=false; alert(4);}
+		else if(this.userInfo.education.dateGraduated.month.value=='Month'){this.userInfo.education.state.completed=false;}
+		else if(this.userInfo.education.dateGraduated.year.value=='Year'){this.userInfo.education.state.completed=false;}
+		else{this.userInfo.education.state.completed=true;}
+	}
+	getStarted.prototype.checkAward=function(){
+		if(this.userInfo.award.title.value==''){this.userInfo.award.state.completed=false;}
+		else if(this.userInfo.award.awardDate.month.value=='Month'){this.userInfo.award.state.completed=false;}
+		else if(this.userInfo.award.awardDate.year.value=='Year'){this.userInfo.award.state.completed=false;}
+		else{this.userInfo.award.state.completed=true;}
+	}
+	getStarted.prototype.checkTechnologicalSkills=function(){
+		if(this.userInfo.technologicalSkills.description.value==''){this.userInfo.technologicalSkills.state.completed=false;}
+		else{this.userInfo.technologicalSkills.state.completed=true;}
+	}
+	getStarted.prototype.checkVolunteer=function(){
+		if(this.userInfo.volunteer.description.value==''){this.userInfo.volunteer.state.completed=false;}
+		else{this.userInfo.volunteer.state.completed=true;}
+	}
+	getStarted.prototype.changeSkill=function(id){
+		var elem = $('#hero-skills-'+id);
+		if(elem.hasClass("selected")){
+			elem.removeClass("selected");
+		}else{
+			elem.addClass("selected");
+		}
+		if(this.userInfo.skills.selected[id]){this.userInfo.skills.selected[id]=false;}
+		else{this.userInfo.skills.selected[id]=true;}
+		this.userInfo.skills.state.completed=true;
+	}
     return getStarted;
 }]);
 

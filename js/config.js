@@ -59,6 +59,38 @@ var config={
         "Description":"The ability to generate or use different sets of rules for combining or grouping things in different ways"
     }
     ],
+	"heroSkillsList":[
+    {
+        "id":1,
+        "Name":"Monitoring",
+        "Description":"Monitoring/Assessing performance of yourself, others individuals, or organizations to make improvements or take corrective action."
+    },
+    {
+        "id":2,
+        "Name":"Speaking",
+        "Description":"Monitoring/Assessing performance of yourself, others individuals, or organizations to make improvements or take corrective action."
+    },
+    {
+        "id":3,
+        "Name":"Science",
+        "Description":"Using scientific rules and methods to solve problems."
+    }, 
+    {
+        "id":4,
+        "Name":"Reading Comprehension",
+        "Description":"Understanding written sentences and paragraphs in work related documents."
+    },
+    {
+        "id":5,
+        "Name":"Writing",
+        "Description":"Communicating effectively in writing as appropriate for the needs of the audience."
+    },
+    {
+        "id":6,
+        "Name":"Mathematics",
+        "Description":"Using mathematics to solve problems."
+    }
+    ],
     /*CAREERSCAPE PART*/
     //zoom speed is depending on zoom_step (to allow exact zoom controll) (time is possible but not the zoom strength)
     "canvas-font":"HelveticaLightCondensed",

@@ -30,8 +30,63 @@
 		},
 		"Description":"Diverse funny projects"
 	},
+	"Education":{
+		"Type":{
+			"Name":"High School",
+			"Corrected":"true"
+		},
+		"Specialization":"Elecronics",
+		"Institution":"ULB",
+		"Location":"Brussel",
+		"DateGraduated":{
+			"Month":"January",
+			"Year":"2014"
+		},
+		"State":{
+			"Completed":"true"
+		}
+	},
+	"Award":{
+		"Title":"Best Comic",
+		"AwardDate":{
+			"Month":"December",
+			"Year":"2013"
+		},
+		"State":{
+			"Completed":"true"
+		}
+	},
+	"TechnicalSkills":{
+		"Description":"C/C++, Python, Java, Javascript, HTML/CSS,...",
+		"State":{
+			"Completed":"true"
+		}
+	},
+	"Volunteer":{
+		"Description":"Scouts, Staff @ CouleurCafé",
+		"State":{
+			"Completed":"true"
+		}
+	},
+	"ContactInfo":{
+		"LastName":"Bernier",
+		"FirstName":"Nicolas",
+		"Mail":"berniernico@hotmail.com",
+		"Phone":"555-123-4789",
+		"Mobile":"0474/39.16.49",
+		"Address":{
+			"State":"IL",
+			"City":"Ridgefield",
+			"Zipcode":"61261",
+			"Street":"123 Maple Lane"
+		},
+		"State":{
+			"Completed":"true"
+		}
+	},
 	"Mail":"berniernico@hotmail.com",
 	"Phone":"555-123-4789",
+	"Mobile":"0474/39.16.49",
     "JobPhase":"Find the Job",
     "JobTitle":"Senior Manager, Consumer Strategy & Insights",
     "Website":"www.careerbuilder.com",

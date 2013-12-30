@@ -168,38 +168,38 @@
 								<div class="select first toggleMenu">
 									<span class="title">{{ getStarted.userInfo.education.type.name.value }}</span><b class="icon-bigarrow-bottom-grey"></b>
 									<div class="subMenu">
-										<div ng-repeat="diploma in getStarted.lists.diplomas" select data-value="diploma" data-elem="getStarted.userInfo.education.type.name.value">{{ diploma }}</div>
+										<div ng-repeat="diploma in getStarted.lists.diplomas" select data-value="diploma" data-elem="getStarted.userInfo.education.type.name.value" ng-click="getStarted.checkEducation()">{{ diploma }}</div>
 									</div>
 								</div>
 							</div>
 							<div class="medium left right-resp">
 								<div class="message">SPECIALIZATION</div>
 								<div class="input-button">
-									<input placeholder="Design"/>
+									<input placeholder="Design" ng-model="getStarted.userInfo.education.specialization.value" ng-blur="getStarted.checkEducation()"/>
 								</div>
 							</div>
 							<div class="medium last right">
 								<div class="message">INSTITUTION</div>
 								<div class="input-button">
-									<input placeholder="Kutztown University"/>
+									<input placeholder="Kutztown University" ng-model="getStarted.userInfo.education.institution.value" ng-blur="getStarted.checkEducation()"/>
 								</div>
 							</div>
 							<div class="medium left margin-top">
 								<div class="message">LOCATION</div>
 								<div class="input-button">
-									<input placeholder="Kutztown, PA"/>
+									<input placeholder="Kutztown, PA" ng-model="getStarted.userInfo.education.location.value" ng-blur="getStarted.checkEducation()"/>
 								</div>
 							</div>
 							<div class="left large-resp right-resp margin-top">
 								<div class="message">DATE GRADUATED</div>
 								<div class="little select left toggleMenu">{{ getStarted.userInfo.education.dateGraduated.month.value }}<i class="icon-bigarrow-bottom-grey"></i>
 									<div class="subMenu dropdown">
-										<div ng-repeat="month in getStarted.lists.months" select data-value="month" data-elem="getStarted.userInfo.education.dateGraduated.month.value">{{ month }}</div>
+										<div ng-repeat="month in getStarted.lists.months" select data-value="month" data-elem="getStarted.userInfo.education.dateGraduated.month.value" ng-click="getStarted.checkEducation()">{{ month }}</div>
 									</div>
 								</div>
 								<div class="little select last left toggleMenu">{{ getStarted.userInfo.education.dateGraduated.year.value }}<i class="icon-bigarrow-bottom-grey"></i>
 									<div class="subMenu dropdown">
-										<div ng-repeat="year in getStarted.lists.years" select data-value="year" data-elem="getStarted.userInfo.education.dateGraduated.year.value">{{ year }}</div>
+										<div ng-repeat="year in getStarted.lists.years" select data-value="year" data-elem="getStarted.userInfo.education.dateGraduated.year.value" ng-click="getStarted.checkEducation()">{{ year }}</div>
 									</div>
 								</div>
 							</div>
@@ -208,47 +208,47 @@
 						<div class="clear"></div>
 						<div class="message margin-top">SELECT SKILLS FROM ONE OR MORE OF THE SIX SKILLS GROUPS BELOW:</div>
 						<div class="buttons-changes">
-							<div id="monitoring" class="button-change medium left first" ng-click="changeType('monitoring')">
+							<div id="hero-skills-0" class="button-change medium left first" ng-click="getStarted.changeSkill(0)">
 								<div class="carre"></div>
-								<div class="title">Monitoring</div>
+								<div class="title">{{ getStarted.userInfo.skills.list[0].Name }}</div>
 								<div class="txt">
-									Monitoring/Assessing performance of yourself, others individuals, or organizations to make improvements or take corrective action.
+									{{ getStarted.userInfo.skills.list[0].Description }}
 								</div>
 							</div>
-							<div id="speaking" class="button-change medium left right-resp" ng-click="changeType('speaking')">
+							<div id="hero-skills-1" class="button-change medium left right-resp" ng-click="getStarted.changeSkill(1)">
 								<div class="carre"></div>
-								<div class="title">Speaking</div>
+								<div class="title">{{ getStarted.userInfo.skills.list[1].Name }}</div>
 								<div class="txt">
-									Monitoring/Assessing performance of yourself, others individuals, or organizations to make improvements or take corrective action.
+									{{ getStarted.userInfo.skills.list[1].Description }}
 								</div>
 							</div>
-							<div id="science" class="button-change medium last right" ng-click="changeType('science')">
+							<div id="hero-skills-2" class="button-change medium last right" ng-click="getStarted.changeSkill(2)">
 								<div class="carre"></div>
-								<div class="title">Science</div>
+								<div class="title">{{ getStarted.userInfo.skills.list[2].Name }}</div>
 								<div class="txt">
-									Using scientific rules and methods to solve problems.
+									{{ getStarted.userInfo.skills.list[2].Description }}
 								</div>
 							</div>
 							<div class="clear"></div>
-							<div id="reading" class="button-change medium left" ng-click="changeType('reading')">
+							<div id="hero-skills-3" class="button-change medium left" ng-click="getStarted.changeSkill(3)">
 								<div class="carre"></div>
-								<div class="title">Reading Comprehension</div>
+								<div class="title">{{ getStarted.userInfo.skills.list[3].Name }}</div>
 								<div class="txt">
-									Understanding written sentences and paragraphs in work related documents.
+									{{ getStarted.userInfo.skills.list[3].Description }}
 								</div>
 							</div>
-							<div id="writing" class="button-change medium left right-resp" ng-click="changeType('writing')">
+							<div id="hero-skills-4" class="button-change medium left right-resp" ng-click="getStarted.changeSkill(4)">
 								<div class="carre"></div>
-								<div class="title">Writing</div>
+								<div class="title">{{ getStarted.userInfo.skills.list[4].Name }}</div>
 								<div class="txt">
-									Communicating effectively in writing as appropriate for the needs of the audience.
+									{{ getStarted.userInfo.skills.list[4].Description }}
 								</div>
 							</div>
-							<div id="mathematics" class="button-change medium last" ng-click="changeType('mathematics')">
+							<div id="hero-skills-5" class="button-change medium last" ng-click="getStarted.changeSkill(5)">
 								<div class="carre"></div>
-								<div class="title">Mathematics</div>
+								<div class="title">{{ getStarted.userInfo.skills.list[5].Name }}</div>
 								<div class="txt">
-									Using mathematics to solve problems.
+									{{ getStarted.userInfo.skills.list[5].Description }}
 								</div>
 							</div>
 						</div>
@@ -281,20 +281,20 @@
 						<div class="medium large-resp left margin-bottom">
 							<div class="message">AWARD TITLE</div>
 							<div class="input-button">
-								<input placeholder="Emmy"/>
+								<input placeholder="Emmy" ng-model="getStarted.userInfo.award.title.value" ng-blur="getStarted.checkAward()"/>
 							</div>
 						</div>
 						<div class="left large-resp right-resp">
 							<div class="message">AWARD DATE</div>
-							<div class="select little left toggleMenu">{{ getStarted.userInfo.award.date.month.value }}<i class="icon-bigarrow-bottom-grey"></i>
-								<ul class="subMenu">
-									<li ng-repeat="month in getStarted.lists.months" select data-value="month" data-elem="getStarted.userInfo.award.date.month.value">{{ month }}</li>
-								</ul>
+							<div class="select little left toggleMenu">{{ getStarted.userInfo.award.awardDate.month.value }}<i class="icon-bigarrow-bottom-grey"></i>
+								<div class="subMenu">
+									<div ng-repeat="month in getStarted.lists.months" select data-value="month" data-elem="getStarted.userInfo.award.awardDate.month.value" ng-click="getStarted.checkAward()">{{ month }}</div>
+								</div>
 							</div>
-							<div class="select little left right-resp toggleMenu">{{ getStarted.userInfo.award.date.year.value }}<i class="icon-bigarrow-bottom-grey"></i>
-								<ul class="subMenu">
-									<li ng-repeat="year in getStarted.lists.years" select data-value="year" data-elem="getStarted.userInfo.award.date.year.value">{{ year }}</li>
-								</ul>
+							<div class="select little left right-resp toggleMenu">{{ getStarted.userInfo.award.awardDate.year.value }}<i class="icon-bigarrow-bottom-grey"></i>
+								<div class="subMenu">
+									<div ng-repeat="year in getStarted.lists.years" select data-value="year" data-elem="getStarted.userInfo.award.awardDate.year.value" ng-click="getStarted.checkAward()">{{ year }}</div>
+								</div>
 							</div>
 						</div>
 						<div class="clear"></div>
@@ -304,7 +304,7 @@
 								THESE CAN INLUDE BUT ARE NOT LIMITED TO COMPUTER SKILLS (EX: C++, SQL, WINDOWS, HTML).</br>
 								YOU CAN ALSO ADD THE NUMBER OF YEARS USED OR YOUR SKILL LEVEL.
 							</div>
-							<textarea id="technical-skills" placeholder="Jessica has led development for ..."/>
+							<textarea id="technical-skills" ng-model="getStarted.userInfo.technologicalSkills.description.value" placeholder="Jessica has led development for ..." ng-blur="getStarted.checkTechnologicalSkills()"/>
 						</div>
 					</div>
 					<div class="footer-dialog">
@@ -332,7 +332,7 @@
 					</div>
 					<div class="content">
 						<div class="message">ENTER VOLUNTEER WORK, PUBLICATION, AFFILIATIONS OR OTHER DETAILS TO EXTEND YOUR RESUME.</div>
-						<textarea id="extra-skills" placeholder="Jessica has volunteer for..."/>
+						<textarea id="extra-skills" ng-model="getStarted.userInfo.volunteer.description.value" placeholder="Jessica has volunteer for..." ng-blur="getStarted.checkVolunteer()"/>
 					</div>
 					<div class="footer-dialog">
                         <div class="button-previous back-white left" onclick="movePopup($('.get-started-resume'),4)">

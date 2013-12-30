@@ -290,12 +290,7 @@ function ResumeHeroCtr($scope, $http, getStarted){
 	/*
 	*/
 	$scope.changeType = function(thisElem){
-		var elem = $('#'+thisElem);
-		if(elem.hasClass("selected")){
-			elem.removeClass("selected");
-		}else{
-			elem.addClass("selected");
-		}
+		
 	}
 	
 	$scope.loadInfo=function(){
