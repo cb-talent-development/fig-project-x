@@ -269,16 +269,22 @@ function ResumeHeroCtr($scope, $http, getStarted){
 	//Delete the current selected Resume
 	$scope.removeItem = function(){
 		var i = $scope.currentResume.Id;
-		for(var j = i; j < $scope.resumeHero.length; j++){
-			$scope.resumeHero[j].Id = $scope.resumeHero[j].Id - 1;
+		if(i==0){
+			alert('Cannot delete the last resume left');
 		}
-		$scope.resumeHero.splice(i, 1);
-		$scope.currentResume = $scope.resumeHero[i]; //Select automatically the next resume
-		$scope.currentResume.Class="selected";
-		$scope.sections = $scope.currentResume.Data;
-		$scope.pageResume.totalElem=$scope.resumeHero.length;
-		$scope.pageResume.computePages();
-		disparition($('.delete-resume')); //Close pop-up
+		else {
+			for(var j = i; j < $scope.resumeHero.length; j++){
+				$scope.resumeHero[j].Id = $scope.resumeHero[j].Id - 1;
+			}
+			$scope.resumeHero.splice(i, 1);
+			if(i==$scope.resumeHero.length){i--;}
+			$scope.currentResume = $scope.resumeHero[i]; //Select automatically the next resume
+			$scope.currentResume.Class="selected";
+			$scope.sections = $scope.currentResume.Data;
+			$scope.pageResume.totalElem=$scope.resumeHero.length;
+			$scope.pageResume.computePages();
+			disparition($('.delete-resume')); //Close pop-up
+		}
 	}
 	
 	//Add a new edited section in the current selected resume
@@ -292,9 +298,6 @@ function ResumeHeroCtr($scope, $http, getStarted){
 	}
 	/*
 	*/
-	$scope.changeType = function(thisElem){
-		
-	}
 	
 	$scope.loadInfo=function(){
         $http.get("data/json/user-full.json").success(function(data) {
@@ -317,6 +320,7 @@ function ResumeHeroCtr($scope, $http, getStarted){
 			"Title":"Title",
 			"Type":"Type",
 			"Level":"Level",
+			"Class":"",
 			"ResumeInfo":{
 				"Job":{
 					"Title":"",
@@ -406,12 +410,21 @@ function ResumeHeroCtr($scope, $http, getStarted){
 		$scope.currentResume=newResume;
 		$scope.pageResume.totalElem=$scope.resumeHero.length;
 		$scope.pageResume.computePages();
+		apparition($('.get-started-resume'));
+	}
+	
+	$scope.saveGetStarted=function(){
+		$scope.getStarted.save();
+		$scope.currentResume.ResumeInfo = $scope.getStarted.resume;
+		console.log($scope.currentResume);
 	}
 	
 	
     $scope.init=function(){
         initGetStarted($scope,getStarted);
 		$scope.loadInfo();
+		$scope.exportType="PDF";
+		$scope.changeType="PDF";
 		if($scope.resumeHero[0]){
 			$scope.currentResume = $scope.resumeHero[0];
 			$scope.currentResume.Class="selected";
@@ -420,7 +433,6 @@ function ResumeHeroCtr($scope, $http, getStarted){
 		}else{
 			$scope.resumeHero[0] = null; //a finir
 			$scope.createResume();
-			apparition($('.get-started-resume'));
 		}
     }
     $scope.init();

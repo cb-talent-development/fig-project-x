@@ -971,7 +971,7 @@ Width
   color: gray; }
   @media only screen and (min-width: 481px) and (max-width: 768px) {
     .button, .input-button, .btn {
-      font-size: 17.1px; } }
+      font-size: 17.099999999999998px; } }
   @media only screen and (max-width: 480px) {
     .button, .input-button, .btn {
       font-size: 16.2px; } }
@@ -1012,7 +1012,7 @@ Width
   color: gray; }
   @media only screen and (min-width: 481px) and (max-width: 768px) {
     .select {
-      font-size: 17.1px; } }
+      font-size: 17.099999999999998px; } }
   @media only screen and (max-width: 480px) {
     .select {
       font-size: 16.2px; } }
@@ -1070,7 +1070,7 @@ Width
     height: 100%; }
     @media only screen and (min-width: 481px) and (max-width: 768px) {
       .input-button input {
-        font-size: 17.1px; } }
+        font-size: 17.099999999999998px; } }
     @media only screen and (max-width: 480px) {
       .input-button input {
         font-size: 16.2px; } }
@@ -1267,7 +1267,7 @@ PROFILE SUBMENU
       font-family: HelveticaLightCondensed, sans-serif; }
       @media only screen and (min-width: 481px) and (max-width: 768px) {
         .page-header .subMenu .profile-subMenu p {
-          font-size: 14.25px; } }
+          font-size: 14.249999999999998px; } }
       @media only screen and (max-width: 480px) {
         .page-header .subMenu .profile-subMenu p {
           font-size: 13.5px; } }
@@ -3788,7 +3788,7 @@ Tools dashboard & tool css
         font-size: 36px; }
         @media only screen and (min-width: 481px) and (max-width: 768px) {
           .tools-dashboard .tool .left .info .title {
-            font-size: 34.2px; } }
+            font-size: 34.199999999999996px; } }
         @media only screen and (max-width: 480px) {
           .tools-dashboard .tool .left .info .title {
             font-size: 32.4px; } }
@@ -3797,7 +3797,7 @@ Tools dashboard & tool css
         margin-top: 20px; }
         @media only screen and (min-width: 481px) and (max-width: 768px) {
           .tools-dashboard .tool .left .info .summary {
-            font-size: 21.85px; } }
+            font-size: 21.849999999999998px; } }
         @media only screen and (max-width: 480px) {
           .tools-dashboard .tool .left .info .summary {
             font-size: 20.7px; } }
@@ -3856,7 +3856,7 @@ DIALOG
       border-bottom: 1px solid #cfcfcf; }
       @media only screen and (min-width: 481px) and (max-width: 768px) {
         .dialog .section .header {
-          font-size: 25.65px; } }
+          font-size: 25.650000000000002px; } }
       @media only screen and (max-width: 480px) {
         .dialog .section .header {
           font-size: 24.3px; } }
@@ -4011,7 +4011,7 @@ Tool CSS
             font-size: 35.15px; } }
         @media only screen and (max-width: 480px) {
           .tool .header-tool .title-social .title {
-            font-size: 33.3px; } }
+            font-size: 33.300000000000004px; } }
     .tool .header-tool .help {
       box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
       -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
@@ -4466,7 +4466,7 @@ Tool CSS
 /*
 SOCIAL
 */
-.button-social, .dashboard-popup .section-photo .change-picture .buttons .button, .dashboard-popup .section-photo .change-picture .buttons .input-button, .get-started-resume .section-photo .change-picture .buttons .button, .get-started-resume .section-photo .change-picture .buttons .input-button {
+.button-social, .dashboard-popup .section-photo .change-picture .buttons .button, .dashboard-popup .section-photo .change-picture .buttons .input-button, .get-started-resume .section-photo .change-picture .buttons .button, .get-started-resume .section-photo .change-picture .buttons .input-button, .template-resume .section-photo .change-picture .buttons .button, .template-resume .section-photo .change-picture .buttons .input-button, .export-resume .section-photo .change-picture .buttons .button, .export-resume .section-photo .change-picture .buttons .input-button, .delete-resume .section-photo .change-picture .buttons .button, .delete-resume .section-photo .change-picture .buttons .input-button {
   color: white;
   width: 130px;
   font-size: 27px;
@@ -4475,7 +4475,7 @@ SOCIAL
   padding-left: 20px;
   padding-right: 20px; }
   @media only screen and (max-width: 768px) {
-    .button-social, .dashboard-popup .section-photo .change-picture .buttons .button, .dashboard-popup .section-photo .change-picture .buttons .input-button, .get-started-resume .section-photo .change-picture .buttons .button, .get-started-resume .section-photo .change-picture .buttons .input-button {
+    .button-social, .dashboard-popup .section-photo .change-picture .buttons .button, .dashboard-popup .section-photo .change-picture .buttons .input-button, .get-started-resume .section-photo .change-picture .buttons .button, .get-started-resume .section-photo .change-picture .buttons .input-button, .template-resume .section-photo .change-picture .buttons .button, .template-resume .section-photo .change-picture .buttons .input-button, .export-resume .section-photo .change-picture .buttons .button, .export-resume .section-photo .change-picture .buttons .input-button, .delete-resume .section-photo .change-picture .buttons .button, .delete-resume .section-photo .change-picture .buttons .input-button {
       width: 44%;
       font-size: 19px;
       padding: 0px 15px;
@@ -4529,52 +4529,52 @@ SOCIAL
     left: 15px;
     right: 0px; }
 
-.dashboard-popup .scrollable-content, .get-started-resume .scrollable-content {
+.dashboard-popup .scrollable-content, .get-started-resume .scrollable-content, .template-resume .scrollable-content, .export-resume .scrollable-content, .delete-resume .scrollable-content {
   width: 1250px; }
   @media only screen and (max-width: 768px) {
-    .dashboard-popup .scrollable-content, .get-started-resume .scrollable-content {
+    .dashboard-popup .scrollable-content, .get-started-resume .scrollable-content, .template-resume .scrollable-content, .export-resume .scrollable-content, .delete-resume .scrollable-content {
       width: 100%; } }
-.dashboard-popup .scrollable, .get-started-resume .scrollable {
+.dashboard-popup .scrollable, .get-started-resume .scrollable, .template-resume .scrollable, .export-resume .scrollable, .delete-resume .scrollable {
   width: 800%;
   min-width: 10000px; }
   @media only screen and (max-width: 768px) {
-    .dashboard-popup .scrollable, .get-started-resume .scrollable {
+    .dashboard-popup .scrollable, .get-started-resume .scrollable, .template-resume .scrollable, .export-resume .scrollable, .delete-resume .scrollable {
       min-width: 0px; } }
-.dashboard-popup .section-wrapper, .get-started-resume .section-wrapper {
+.dashboard-popup .section-wrapper, .get-started-resume .section-wrapper, .template-resume .section-wrapper, .export-resume .section-wrapper, .delete-resume .section-wrapper {
   width: 12.5%;
   float: left; }
-.dashboard-popup .section, .get-started-resume .section {
+.dashboard-popup .section, .get-started-resume .section, .template-resume .section, .export-resume .section, .delete-resume .section {
   width: 1204px; }
   @media only screen and (max-width: 768px) {
-    .dashboard-popup .section, .get-started-resume .section {
+    .dashboard-popup .section, .get-started-resume .section, .template-resume .section, .export-resume .section, .delete-resume .section {
       width: 90%; } }
-  .dashboard-popup .section .header, .get-started-resume .section .header {
+  .dashboard-popup .section .header, .get-started-resume .section .header, .template-resume .section .header, .export-resume .section .header, .delete-resume .section .header {
     font-size: 24px; }
     @media only screen and (min-width: 481px) and (max-width: 768px) {
-      .dashboard-popup .section .header, .get-started-resume .section .header {
+      .dashboard-popup .section .header, .get-started-resume .section .header, .template-resume .section .header, .export-resume .section .header, .delete-resume .section .header {
         font-size: 22.8px; } }
     @media only screen and (max-width: 480px) {
-      .dashboard-popup .section .header, .get-started-resume .section .header {
+      .dashboard-popup .section .header, .get-started-resume .section .header, .template-resume .section .header, .export-resume .section .header, .delete-resume .section .header {
         font-size: 21.6px; } }
-    .dashboard-popup .section .header .grey, .get-started-resume .section .header .grey {
+    .dashboard-popup .section .header .grey, .get-started-resume .section .header .grey, .template-resume .section .header .grey, .export-resume .section .header .grey, .delete-resume .section .header .grey {
       color: #9d9d9d; }
-  .dashboard-popup .section .step, .get-started-resume .section .step {
+  .dashboard-popup .section .step, .get-started-resume .section .step, .template-resume .section .step, .export-resume .section .step, .delete-resume .section .step {
     width: 1204px; }
     @media only screen and (max-width: 768px) {
-      .dashboard-popup .section .step, .get-started-resume .section .step {
+      .dashboard-popup .section .step, .get-started-resume .section .step, .template-resume .section .step, .export-resume .section .step, .delete-resume .section .step {
         width: 100%; } }
-  .dashboard-popup .section .step1, .get-started-resume .section .step1 {
+  .dashboard-popup .section .step1, .get-started-resume .section .step1, .template-resume .section .step1, .export-resume .section .step1, .delete-resume .section .step1 {
     display: none; }
-  .dashboard-popup .section .custom-radio, .get-started-resume .section .custom-radio {
+  .dashboard-popup .section .custom-radio, .get-started-resume .section .custom-radio, .template-resume .section .custom-radio, .export-resume .section .custom-radio, .delete-resume .section .custom-radio {
     margin-right: 25px;
     position: relative; }
-    .dashboard-popup .section .custom-radio input[type=checkbox], .get-started-resume .section .custom-radio input[type=checkbox] {
+    .dashboard-popup .section .custom-radio input[type=checkbox], .get-started-resume .section .custom-radio input[type=checkbox], .template-resume .section .custom-radio input[type=checkbox], .export-resume .section .custom-radio input[type=checkbox], .delete-resume .section .custom-radio input[type=checkbox] {
       display: none; }
-    .dashboard-popup .section .custom-radio label, .get-started-resume .section .custom-radio label {
+    .dashboard-popup .section .custom-radio label, .get-started-resume .section .custom-radio label, .template-resume .section .custom-radio label, .export-resume .section .custom-radio label, .delete-resume .section .custom-radio label {
       margin-left: 40px; }
-    .dashboard-popup .section .custom-radio label:hover, .get-started-resume .section .custom-radio label:hover {
+    .dashboard-popup .section .custom-radio label:hover, .get-started-resume .section .custom-radio label:hover, .template-resume .section .custom-radio label:hover, .export-resume .section .custom-radio label:hover, .delete-resume .section .custom-radio label:hover {
       cursor: pointer; }
-    .dashboard-popup .section .custom-radio label:before, .get-started-resume .section .custom-radio label:before {
+    .dashboard-popup .section .custom-radio label:before, .get-started-resume .section .custom-radio label:before, .template-resume .section .custom-radio label:before, .export-resume .section .custom-radio label:before, .delete-resume .section .custom-radio label:before {
       height: 20px;
       width: 20px;
       content: "";
@@ -4587,133 +4587,133 @@ SOCIAL
       -webkit-box-shadow: 0.5px -1px 2px 0px rgba(0, 0, 0, 0.3);
       border-right: 1px solid #cfcfcf;
       background: white; }
-    .dashboard-popup .section .custom-radio input[type=radio]:checked + label:before, .get-started-resume .section .custom-radio input[type=radio]:checked + label:before {
+    .dashboard-popup .section .custom-radio input[type=radio]:checked + label:before, .get-started-resume .section .custom-radio input[type=radio]:checked + label:before, .template-resume .section .custom-radio input[type=radio]:checked + label:before, .export-resume .section .custom-radio input[type=radio]:checked + label:before, .delete-resume .section .custom-radio input[type=radio]:checked + label:before {
       background: #ee7835; }
-  .dashboard-popup .section .custom-radio, .get-started-resume .section .custom-radio {
+  .dashboard-popup .section .custom-radio, .get-started-resume .section .custom-radio, .template-resume .section .custom-radio, .export-resume .section .custom-radio, .delete-resume .section .custom-radio {
     font-size: 23px;
     color: gray; }
     @media only screen and (min-width: 481px) and (max-width: 768px) {
-      .dashboard-popup .section .custom-radio, .get-started-resume .section .custom-radio {
-        font-size: 21.85px; } }
+      .dashboard-popup .section .custom-radio, .get-started-resume .section .custom-radio, .template-resume .section .custom-radio, .export-resume .section .custom-radio, .delete-resume .section .custom-radio {
+        font-size: 21.849999999999998px; } }
     @media only screen and (max-width: 480px) {
-      .dashboard-popup .section .custom-radio, .get-started-resume .section .custom-radio {
+      .dashboard-popup .section .custom-radio, .get-started-resume .section .custom-radio, .template-resume .section .custom-radio, .export-resume .section .custom-radio, .delete-resume .section .custom-radio {
         font-size: 20.7px; } }
     @media only screen and (max-width: 768px) {
-      .dashboard-popup .section .custom-radio, .get-started-resume .section .custom-radio {
+      .dashboard-popup .section .custom-radio, .get-started-resume .section .custom-radio, .template-resume .section .custom-radio, .export-resume .section .custom-radio, .delete-resume .section .custom-radio {
         font-size: 17px; } }
-  .dashboard-popup .section .message, .get-started-resume .section .message {
+  .dashboard-popup .section .message, .get-started-resume .section .message, .template-resume .section .message, .export-resume .section .message, .delete-resume .section .message {
     font-size: 17px;
     text-transform: uppercase;
     color: #b2b2b2;
     margin-bottom: 10px; }
     @media only screen and (min-width: 481px) and (max-width: 768px) {
-      .dashboard-popup .section .message, .get-started-resume .section .message {
+      .dashboard-popup .section .message, .get-started-resume .section .message, .template-resume .section .message, .export-resume .section .message, .delete-resume .section .message {
         font-size: 16.15px; } }
     @media only screen and (max-width: 480px) {
-      .dashboard-popup .section .message, .get-started-resume .section .message {
+      .dashboard-popup .section .message, .get-started-resume .section .message, .template-resume .section .message, .export-resume .section .message, .delete-resume .section .message {
         font-size: 15.3px; } }
-  .dashboard-popup .section .optional, .get-started-resume .section .optional {
+  .dashboard-popup .section .optional, .get-started-resume .section .optional, .template-resume .section .optional, .export-resume .section .optional, .delete-resume .section .optional {
     color: #cfcfcf;
     text-transform: uppercase;
     font-size: 17px; }
     @media only screen and (min-width: 481px) and (max-width: 768px) {
-      .dashboard-popup .section .optional, .get-started-resume .section .optional {
+      .dashboard-popup .section .optional, .get-started-resume .section .optional, .template-resume .section .optional, .export-resume .section .optional, .delete-resume .section .optional {
         font-size: 16.15px; } }
     @media only screen and (max-width: 480px) {
-      .dashboard-popup .section .optional, .get-started-resume .section .optional {
+      .dashboard-popup .section .optional, .get-started-resume .section .optional, .template-resume .section .optional, .export-resume .section .optional, .delete-resume .section .optional {
         font-size: 15.3px; } }
     @media only screen and (max-width: 768px) {
-      .dashboard-popup .section .optional, .get-started-resume .section .optional {
+      .dashboard-popup .section .optional, .get-started-resume .section .optional, .template-resume .section .optional, .export-resume .section .optional, .delete-resume .section .optional {
         display: none; } }
-  .dashboard-popup .section .select, .dashboard-popup .section input, .dashboard-popup .section input[placeholder], .get-started-resume .section .select, .get-started-resume .section input, .get-started-resume .section input[placeholder] {
+  .dashboard-popup .section .select, .dashboard-popup .section input, .dashboard-popup .section input[placeholder], .get-started-resume .section .select, .get-started-resume .section input, .get-started-resume .section input[placeholder], .template-resume .section .select, .template-resume .section input, .template-resume .section input[placeholder], .export-resume .section .select, .export-resume .section input, .export-resume .section input[placeholder], .delete-resume .section .select, .delete-resume .section input, .delete-resume .section input[placeholder] {
     padding-top: 20px;
     padding-bottom: 14px;
     font-size: 23px; }
     @media only screen and (max-width: 768px) {
-      .dashboard-popup .section .select, .dashboard-popup .section input, .dashboard-popup .section input[placeholder], .get-started-resume .section .select, .get-started-resume .section input, .get-started-resume .section input[placeholder] {
+      .dashboard-popup .section .select, .dashboard-popup .section input, .dashboard-popup .section input[placeholder], .get-started-resume .section .select, .get-started-resume .section input, .get-started-resume .section input[placeholder], .template-resume .section .select, .template-resume .section input, .template-resume .section input[placeholder], .export-resume .section .select, .export-resume .section input, .export-resume .section input[placeholder], .delete-resume .section .select, .delete-resume .section input, .delete-resume .section input[placeholder] {
         padding-top: 15px;
         padding-bottom: 10px;
         font-size: 16px; } }
-  .dashboard-popup .section .large, .get-started-resume .section .large {
+  .dashboard-popup .section .large, .get-started-resume .section .large, .template-resume .section .large, .export-resume .section .large, .delete-resume .section .large {
     width: 465px;
     margin-right: 25px; }
     @media only screen and (max-width: 768px) {
-      .dashboard-popup .section .large, .get-started-resume .section .large {
+      .dashboard-popup .section .large, .get-started-resume .section .large, .template-resume .section .large, .export-resume .section .large, .delete-resume .section .large {
         width: 49%;
         margin-right: 2%;
         margin-bottom: 10px; } }
-  .dashboard-popup .section .medium, .get-started-resume .section .medium {
+  .dashboard-popup .section .medium, .get-started-resume .section .medium, .template-resume .section .medium, .export-resume .section .medium, .delete-resume .section .medium {
     width: 370px;
     margin-right: 25px; }
     @media only screen and (max-width: 768px) {
-      .dashboard-popup .section .medium, .get-started-resume .section .medium {
+      .dashboard-popup .section .medium, .get-started-resume .section .medium, .template-resume .section .medium, .export-resume .section .medium, .delete-resume .section .medium {
         width: 49%;
         margin-right: 2%;
         margin-bottom: 10px; } }
-  .dashboard-popup .section .last, .get-started-resume .section .last {
+  .dashboard-popup .section .last, .get-started-resume .section .last, .template-resume .section .last, .export-resume .section .last, .delete-resume .section .last {
     margin-right: 0px; }
-  .dashboard-popup .section .right .large, .dashboard-popup .section .right .medium, .get-started-resume .section .right .large, .get-started-resume .section .right .medium {
+  .dashboard-popup .section .right .large, .dashboard-popup .section .right .medium, .get-started-resume .section .right .large, .get-started-resume .section .right .medium, .template-resume .section .right .large, .template-resume .section .right .medium, .export-resume .section .right .large, .export-resume .section .right .medium, .delete-resume .section .right .large, .delete-resume .section .right .medium {
     margin-right: 0px; }
   @media only screen and (max-width: 768px) {
-    .dashboard-popup .section .email-address, .dashboard-popup .section .street, .dashboard-popup .section .industry-goal, .get-started-resume .section .email-address, .get-started-resume .section .street, .get-started-resume .section .industry-goal {
+    .dashboard-popup .section .email-address, .dashboard-popup .section .street, .dashboard-popup .section .industry-goal, .get-started-resume .section .email-address, .get-started-resume .section .street, .get-started-resume .section .industry-goal, .template-resume .section .email-address, .template-resume .section .street, .template-resume .section .industry-goal, .export-resume .section .email-address, .export-resume .section .street, .export-resume .section .industry-goal, .delete-resume .section .email-address, .delete-resume .section .street, .delete-resume .section .industry-goal {
       width: 100% !important;
       margin-right: 0% !important; } }
-  .dashboard-popup .section .address .street, .get-started-resume .section .address .street {
+  .dashboard-popup .section .address .street, .get-started-resume .section .address .street, .template-resume .section .address .street, .export-resume .section .address .street, .delete-resume .section .address .street {
     margin-bottom: 20px; }
-  .dashboard-popup .section .address .large, .get-started-resume .section .address .large {
+  .dashboard-popup .section .address .large, .get-started-resume .section .address .large, .template-resume .section .address .large, .export-resume .section .address .large, .delete-resume .section .address .large {
     width: 365px;
     margin-right: 25px; }
     @media only screen and (max-width: 768px) {
-      .dashboard-popup .section .address .large, .get-started-resume .section .address .large {
+      .dashboard-popup .section .address .large, .get-started-resume .section .address .large, .template-resume .section .address .large, .export-resume .section .address .large, .delete-resume .section .address .large {
         width: 49%;
         margin-right: 2%;
         margin-bottom: 10px; } }
-  .dashboard-popup .section .address .medium, .get-started-resume .section .address .medium {
+  .dashboard-popup .section .address .medium, .get-started-resume .section .address .medium, .template-resume .section .address .medium, .export-resume .section .address .medium, .delete-resume .section .address .medium {
     width: 170px;
     margin-right: 25px; }
     @media only screen and (max-width: 768px) {
-      .dashboard-popup .section .address .medium, .get-started-resume .section .address .medium {
+      .dashboard-popup .section .address .medium, .get-started-resume .section .address .medium, .template-resume .section .address .medium, .export-resume .section .address .medium, .delete-resume .section .address .medium {
         width: 49%;
         margin-right: 2%;
         margin-bottom: 10px; } }
   @media only screen and (max-width: 768px) {
-    .dashboard-popup .section .general .age, .dashboard-popup .section .general .gender, .get-started-resume .section .general .age, .get-started-resume .section .general .gender {
+    .dashboard-popup .section .general .age, .dashboard-popup .section .general .gender, .get-started-resume .section .general .age, .get-started-resume .section .general .gender, .template-resume .section .general .age, .template-resume .section .general .gender, .export-resume .section .general .age, .export-resume .section .general .gender, .delete-resume .section .general .age, .delete-resume .section .general .gender {
       width: 50%; } }
   @media only screen and (max-width: 768px) {
-    .dashboard-popup .section .general .age .large, .dashboard-popup .section .general .age .medium, .dashboard-popup .section .general .age .message, .get-started-resume .section .general .age .large, .get-started-resume .section .general .age .medium, .get-started-resume .section .general .age .message {
+    .dashboard-popup .section .general .age .large, .dashboard-popup .section .general .age .medium, .dashboard-popup .section .general .age .message, .get-started-resume .section .general .age .large, .get-started-resume .section .general .age .medium, .get-started-resume .section .general .age .message, .template-resume .section .general .age .large, .template-resume .section .general .age .medium, .template-resume .section .general .age .message, .export-resume .section .general .age .large, .export-resume .section .general .age .medium, .export-resume .section .general .age .message, .delete-resume .section .general .age .large, .delete-resume .section .general .age .medium, .delete-resume .section .general .age .message {
       width: 100%;
       margin-right: 0%;
       margin-left: 0%;
       margin-bottom: 10px; } }
-  .dashboard-popup .section .general .gender, .get-started-resume .section .general .gender {
+  .dashboard-popup .section .general .gender, .get-started-resume .section .general .gender, .template-resume .section .general .gender, .export-resume .section .general .gender, .delete-resume .section .general .gender {
     margin-right: 149px; }
     @media only screen and (max-width: 768px) {
-      .dashboard-popup .section .general .gender, .get-started-resume .section .general .gender {
+      .dashboard-popup .section .general .gender, .get-started-resume .section .general .gender, .template-resume .section .general .gender, .export-resume .section .general .gender, .delete-resume .section .general .gender {
         margin-right: 0px; } }
-    .dashboard-popup .section .general .gender .custom-checkbox, .dashboard-popup .section .general .gender .check-box-1, .dashboard-popup .section .general .gender .check-box-2, .get-started-resume .section .general .gender .custom-checkbox, .get-started-resume .section .general .gender .check-box-1, .get-started-resume .section .general .gender .check-box-2 {
+    .dashboard-popup .section .general .gender .custom-checkbox, .dashboard-popup .section .general .gender .check-box-1, .dashboard-popup .section .general .gender .check-box-2, .get-started-resume .section .general .gender .custom-checkbox, .get-started-resume .section .general .gender .check-box-1, .get-started-resume .section .general .gender .check-box-2, .template-resume .section .general .gender .custom-checkbox, .template-resume .section .general .gender .check-box-1, .template-resume .section .general .gender .check-box-2, .export-resume .section .general .gender .custom-checkbox, .export-resume .section .general .gender .check-box-1, .export-resume .section .general .gender .check-box-2, .delete-resume .section .general .gender .custom-checkbox, .delete-resume .section .general .gender .check-box-1, .delete-resume .section .general .gender .check-box-2 {
       margin-top: 15px; }
-  .dashboard-popup .section .job-phase, .get-started-resume .section .job-phase {
+  .dashboard-popup .section .job-phase, .get-started-resume .section .job-phase, .template-resume .section .job-phase, .export-resume .section .job-phase, .delete-resume .section .job-phase {
     padding-top: 25px; }
-    .dashboard-popup .section .job-phase .cursor, .get-started-resume .section .job-phase .cursor {
+    .dashboard-popup .section .job-phase .cursor, .get-started-resume .section .job-phase .cursor, .template-resume .section .job-phase .cursor, .export-resume .section .job-phase .cursor, .delete-resume .section .job-phase .cursor {
       margin-top: 20px;
       margin-bottom: 45px;
       position: relative; }
       @media only screen and (max-width: 768px) {
-        .dashboard-popup .section .job-phase .cursor, .get-started-resume .section .job-phase .cursor {
+        .dashboard-popup .section .job-phase .cursor, .get-started-resume .section .job-phase .cursor, .template-resume .section .job-phase .cursor, .export-resume .section .job-phase .cursor, .delete-resume .section .job-phase .cursor {
           margin-bottom: 20px;
           display: none; } }
-      .dashboard-popup .section .job-phase .cursor .bar, .get-started-resume .section .job-phase .cursor .bar {
+      .dashboard-popup .section .job-phase .cursor .bar, .get-started-resume .section .job-phase .cursor .bar, .template-resume .section .job-phase .cursor .bar, .export-resume .section .job-phase .cursor .bar, .delete-resume .section .job-phase .cursor .bar {
         border-radius: 8px;
         height: 15px;
         background: #e7ebeb; }
-      .dashboard-popup .section .job-phase .cursor .icon-cursor-orange-down, .get-started-resume .section .job-phase .cursor .icon-cursor-orange-down {
+      .dashboard-popup .section .job-phase .cursor .icon-cursor-orange-down, .get-started-resume .section .job-phase .cursor .icon-cursor-orange-down, .template-resume .section .job-phase .cursor .icon-cursor-orange-down, .export-resume .section .job-phase .cursor .icon-cursor-orange-down, .delete-resume .section .job-phase .cursor .icon-cursor-orange-down {
         position: absolute;
         top: -5px;
         left: 10px;
         background: orange;
         height: 30px;
         width: 20px; }
-    .dashboard-popup .section .job-phase .phase, .get-started-resume .section .job-phase .phase {
+    .dashboard-popup .section .job-phase .phase, .get-started-resume .section .job-phase .phase, .template-resume .section .job-phase .phase, .export-resume .section .job-phase .phase, .delete-resume .section .job-phase .phase {
       opacity: 0.6;
       background-color: white;
       box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
@@ -4726,27 +4726,27 @@ SOCIAL
       margin-bottom: 15px;
       overflow: hidden; }
       @media only screen and (max-width: 768px) {
-        .dashboard-popup .section .job-phase .phase, .get-started-resume .section .job-phase .phase {
+        .dashboard-popup .section .job-phase .phase, .get-started-resume .section .job-phase .phase, .template-resume .section .job-phase .phase, .export-resume .section .job-phase .phase, .delete-resume .section .job-phase .phase {
           width: 49%;
           height: 275px; } }
-      .dashboard-popup .section .job-phase .phase .title, .get-started-resume .section .job-phase .phase .title {
+      .dashboard-popup .section .job-phase .phase .title, .get-started-resume .section .job-phase .phase .title, .template-resume .section .job-phase .phase .title, .export-resume .section .job-phase .phase .title, .delete-resume .section .job-phase .phase .title {
         font-size: 20px;
         padding-top: 20px;
         padding-bottom: 25px;
         border-bottom: 1px solid #cfcfcf; }
         @media only screen and (min-width: 481px) and (max-width: 768px) {
-          .dashboard-popup .section .job-phase .phase .title, .get-started-resume .section .job-phase .phase .title {
+          .dashboard-popup .section .job-phase .phase .title, .get-started-resume .section .job-phase .phase .title, .template-resume .section .job-phase .phase .title, .export-resume .section .job-phase .phase .title, .delete-resume .section .job-phase .phase .title {
             font-size: 19px; } }
         @media only screen and (max-width: 480px) {
-          .dashboard-popup .section .job-phase .phase .title, .get-started-resume .section .job-phase .phase .title {
+          .dashboard-popup .section .job-phase .phase .title, .get-started-resume .section .job-phase .phase .title, .template-resume .section .job-phase .phase .title, .export-resume .section .job-phase .phase .title, .delete-resume .section .job-phase .phase .title {
             font-size: 18px; } }
         @media only screen and (max-width: 768px) {
-          .dashboard-popup .section .job-phase .phase .title, .get-started-resume .section .job-phase .phase .title {
+          .dashboard-popup .section .job-phase .phase .title, .get-started-resume .section .job-phase .phase .title, .template-resume .section .job-phase .phase .title, .export-resume .section .job-phase .phase .title, .delete-resume .section .job-phase .phase .title {
             padding-top: 15px;
             padding-bottom: 15px; } }
-        .dashboard-popup .section .job-phase .phase .title .logo, .get-started-resume .section .job-phase .phase .title .logo {
+        .dashboard-popup .section .job-phase .phase .title .logo, .get-started-resume .section .job-phase .phase .title .logo, .template-resume .section .job-phase .phase .title .logo, .export-resume .section .job-phase .phase .title .logo, .delete-resume .section .job-phase .phase .title .logo {
           margin-bottom: 15px; }
-      .dashboard-popup .section .job-phase .phase .description, .get-started-resume .section .job-phase .phase .description {
+      .dashboard-popup .section .job-phase .phase .description, .get-started-resume .section .job-phase .phase .description, .template-resume .section .job-phase .phase .description, .export-resume .section .job-phase .phase .description, .delete-resume .section .job-phase .phase .description {
         padding: 0px 30px;
         font-size: 15px;
         line-height: 20px;
@@ -4758,100 +4758,100 @@ SOCIAL
         -webkit-line-clamp: 6;
         max-height: 142px; }
         @media only screen and (min-width: 481px) and (max-width: 768px) {
-          .dashboard-popup .section .job-phase .phase .description, .get-started-resume .section .job-phase .phase .description {
-            font-size: 14.25px; } }
+          .dashboard-popup .section .job-phase .phase .description, .get-started-resume .section .job-phase .phase .description, .template-resume .section .job-phase .phase .description, .export-resume .section .job-phase .phase .description, .delete-resume .section .job-phase .phase .description {
+            font-size: 14.249999999999998px; } }
         @media only screen and (max-width: 480px) {
-          .dashboard-popup .section .job-phase .phase .description, .get-started-resume .section .job-phase .phase .description {
+          .dashboard-popup .section .job-phase .phase .description, .get-started-resume .section .job-phase .phase .description, .template-resume .section .job-phase .phase .description, .export-resume .section .job-phase .phase .description, .delete-resume .section .job-phase .phase .description {
             font-size: 13.5px; } }
         @media only screen and (max-width: 768px) {
-          .dashboard-popup .section .job-phase .phase .description, .get-started-resume .section .job-phase .phase .description {
+          .dashboard-popup .section .job-phase .phase .description, .get-started-resume .section .job-phase .phase .description, .template-resume .section .job-phase .phase .description, .export-resume .section .job-phase .phase .description, .delete-resume .section .job-phase .phase .description {
             padding: 10px;
             max-height: 166px;
             padding-bottom: 0px;
             -webkit-line-clamp: 8; } }
-    .dashboard-popup .section .job-phase .left, .get-started-resume .section .job-phase .left {
+    .dashboard-popup .section .job-phase .left, .get-started-resume .section .job-phase .left, .template-resume .section .job-phase .left, .export-resume .section .job-phase .left, .delete-resume .section .job-phase .left {
       margin-right: 2.2%; }
       @media only screen and (max-width: 768px) {
-        .dashboard-popup .section .job-phase .left, .get-started-resume .section .job-phase .left {
+        .dashboard-popup .section .job-phase .left, .get-started-resume .section .job-phase .left, .template-resume .section .job-phase .left, .export-resume .section .job-phase .left, .delete-resume .section .job-phase .left {
           margin-right: 2%; } }
-    .dashboard-popup .section .job-phase .before-last, .get-started-resume .section .job-phase .before-last {
+    .dashboard-popup .section .job-phase .before-last, .get-started-resume .section .job-phase .before-last, .template-resume .section .job-phase .before-last, .export-resume .section .job-phase .before-last, .delete-resume .section .job-phase .before-last {
       margin-right: 0px; }
       @media only screen and (max-width: 768px) {
-        .dashboard-popup .section .job-phase .before-last, .get-started-resume .section .job-phase .before-last {
+        .dashboard-popup .section .job-phase .before-last, .get-started-resume .section .job-phase .before-last, .template-resume .section .job-phase .before-last, .export-resume .section .job-phase .before-last, .delete-resume .section .job-phase .before-last {
           margin-right: 2%; } }
-    .dashboard-popup .section .job-phase .phase[class~="selected"], .get-started-resume .section .job-phase .phase[class~="selected"] {
+    .dashboard-popup .section .job-phase .phase[class~="selected"], .get-started-resume .section .job-phase .phase[class~="selected"], .template-resume .section .job-phase .phase[class~="selected"], .export-resume .section .job-phase .phase[class~="selected"], .delete-resume .section .job-phase .phase[class~="selected"] {
       opacity: 1; }
-  .dashboard-popup .section .job-occupation, .get-started-resume .section .job-occupation {
+  .dashboard-popup .section .job-occupation, .get-started-resume .section .job-occupation, .template-resume .section .job-occupation, .export-resume .section .job-occupation, .delete-resume .section .job-occupation {
     height: 200px; }
     @media only screen and (max-width: 768px) {
-      .dashboard-popup .section .job-occupation, .get-started-resume .section .job-occupation {
+      .dashboard-popup .section .job-occupation, .get-started-resume .section .job-occupation, .template-resume .section .job-occupation, .export-resume .section .job-occupation, .delete-resume .section .job-occupation {
                                           /* and (min-width: 481px){
     height:190px;
 }
 @media only screen and (max-width: 480px){*/
         height: auto; } }
-  .dashboard-popup .section .school-name, .get-started-resume .section .school-name {
+  .dashboard-popup .section .school-name, .get-started-resume .section .school-name, .template-resume .section .school-name, .export-resume .section .school-name, .delete-resume .section .school-name {
     height: 210px; }
     @media only screen and (max-width: 768px) {
-      .dashboard-popup .section .school-name, .get-started-resume .section .school-name {
+      .dashboard-popup .section .school-name, .get-started-resume .section .school-name, .template-resume .section .school-name, .export-resume .section .school-name, .delete-resume .section .school-name {
                                           /* and (min-width: 481px){
     height:190px;
 }
 @media only screen and (max-width: 480px){*/
         height: auto; } }
-  .dashboard-popup .section .job-occupation .large, .dashboard-popup .section .school-name .large, .get-started-resume .section .job-occupation .large, .get-started-resume .section .school-name .large {
+  .dashboard-popup .section .job-occupation .large, .dashboard-popup .section .school-name .large, .get-started-resume .section .job-occupation .large, .get-started-resume .section .school-name .large, .template-resume .section .job-occupation .large, .template-resume .section .school-name .large, .export-resume .section .job-occupation .large, .export-resume .section .school-name .large, .delete-resume .section .job-occupation .large, .delete-resume .section .school-name .large {
     width: 465px;
     margin: 0px; }
     @media only screen and (max-width: 768px) {
-      .dashboard-popup .section .job-occupation .large, .dashboard-popup .section .school-name .large, .get-started-resume .section .job-occupation .large, .get-started-resume .section .school-name .large {
+      .dashboard-popup .section .job-occupation .large, .dashboard-popup .section .school-name .large, .get-started-resume .section .job-occupation .large, .get-started-resume .section .school-name .large, .template-resume .section .job-occupation .large, .template-resume .section .school-name .large, .export-resume .section .job-occupation .large, .export-resume .section .school-name .large, .delete-resume .section .job-occupation .large, .delete-resume .section .school-name .large {
         width: 100%;
         margin-bottom: 10px; } }
-  .dashboard-popup .section .job-occupation .message-large, .dashboard-popup .section .school-name .message-large, .get-started-resume .section .job-occupation .message-large, .get-started-resume .section .school-name .message-large {
+  .dashboard-popup .section .job-occupation .message-large, .dashboard-popup .section .school-name .message-large, .get-started-resume .section .job-occupation .message-large, .get-started-resume .section .school-name .message-large, .template-resume .section .job-occupation .message-large, .template-resume .section .school-name .message-large, .export-resume .section .job-occupation .message-large, .export-resume .section .school-name .message-large, .delete-resume .section .job-occupation .message-large, .delete-resume .section .school-name .message-large {
     width: 87%;
     margin: 0px; }
     @media only screen and (max-width: 768px) {
-      .dashboard-popup .section .job-occupation .message-large, .dashboard-popup .section .school-name .message-large, .get-started-resume .section .job-occupation .message-large, .get-started-resume .section .school-name .message-large {
+      .dashboard-popup .section .job-occupation .message-large, .dashboard-popup .section .school-name .message-large, .get-started-resume .section .job-occupation .message-large, .get-started-resume .section .school-name .message-large, .template-resume .section .job-occupation .message-large, .template-resume .section .school-name .message-large, .export-resume .section .job-occupation .message-large, .export-resume .section .school-name .message-large, .delete-resume .section .job-occupation .message-large, .delete-resume .section .school-name .message-large {
         width: 100%; } }
-  .dashboard-popup .section .job-occupation .element, .dashboard-popup .section .school-name .element, .get-started-resume .section .job-occupation .element, .get-started-resume .section .school-name .element {
+  .dashboard-popup .section .job-occupation .element, .dashboard-popup .section .school-name .element, .get-started-resume .section .job-occupation .element, .get-started-resume .section .school-name .element, .template-resume .section .job-occupation .element, .template-resume .section .school-name .element, .export-resume .section .job-occupation .element, .export-resume .section .school-name .element, .delete-resume .section .job-occupation .element, .delete-resume .section .school-name .element {
     height: 100%;
     width: 42%;
     position: relative; }
-    .dashboard-popup .section .job-occupation .element .entry, .dashboard-popup .section .school-name .element .entry, .get-started-resume .section .job-occupation .element .entry, .get-started-resume .section .school-name .element .entry {
+    .dashboard-popup .section .job-occupation .element .entry, .dashboard-popup .section .school-name .element .entry, .get-started-resume .section .job-occupation .element .entry, .get-started-resume .section .school-name .element .entry, .template-resume .section .job-occupation .element .entry, .template-resume .section .school-name .element .entry, .export-resume .section .job-occupation .element .entry, .export-resume .section .school-name .element .entry, .delete-resume .section .job-occupation .element .entry, .delete-resume .section .school-name .element .entry {
       position: absolute;
       bottom: 10px; }
-      .dashboard-popup .section .job-occupation .element .entry .message, .dashboard-popup .section .school-name .element .entry .message, .get-started-resume .section .job-occupation .element .entry .message, .get-started-resume .section .school-name .element .entry .message {
+      .dashboard-popup .section .job-occupation .element .entry .message, .dashboard-popup .section .school-name .element .entry .message, .get-started-resume .section .job-occupation .element .entry .message, .get-started-resume .section .school-name .element .entry .message, .template-resume .section .job-occupation .element .entry .message, .template-resume .section .school-name .element .entry .message, .export-resume .section .job-occupation .element .entry .message, .export-resume .section .school-name .element .entry .message, .delete-resume .section .job-occupation .element .entry .message, .delete-resume .section .school-name .element .entry .message {
         margin-bottom: 10px; }
     @media only screen and (max-width: 768px) {
-      .dashboard-popup .section .job-occupation .element, .dashboard-popup .section .school-name .element, .get-started-resume .section .job-occupation .element, .get-started-resume .section .school-name .element {
+      .dashboard-popup .section .job-occupation .element, .dashboard-popup .section .school-name .element, .get-started-resume .section .job-occupation .element, .get-started-resume .section .school-name .element, .template-resume .section .job-occupation .element, .template-resume .section .school-name .element, .export-resume .section .job-occupation .element, .export-resume .section .school-name .element, .delete-resume .section .job-occupation .element, .delete-resume .section .school-name .element {
         width: 100%; }
-        .dashboard-popup .section .job-occupation .element .entry, .dashboard-popup .section .school-name .element .entry, .get-started-resume .section .job-occupation .element .entry, .get-started-resume .section .school-name .element .entry {
+        .dashboard-popup .section .job-occupation .element .entry, .dashboard-popup .section .school-name .element .entry, .get-started-resume .section .job-occupation .element .entry, .get-started-resume .section .school-name .element .entry, .template-resume .section .job-occupation .element .entry, .template-resume .section .school-name .element .entry, .export-resume .section .job-occupation .element .entry, .export-resume .section .school-name .element .entry, .delete-resume .section .job-occupation .element .entry, .delete-resume .section .school-name .element .entry {
           width: 100%;
           bottom: 0px; }
-        .dashboard-popup .section .job-occupation .element .entry, .dashboard-popup .section .school-name .element .entry, .get-started-resume .section .job-occupation .element .entry, .get-started-resume .section .school-name .element .entry {
+        .dashboard-popup .section .job-occupation .element .entry, .dashboard-popup .section .school-name .element .entry, .get-started-resume .section .job-occupation .element .entry, .get-started-resume .section .school-name .element .entry, .template-resume .section .job-occupation .element .entry, .template-resume .section .school-name .element .entry, .export-resume .section .job-occupation .element .entry, .export-resume .section .school-name .element .entry, .delete-resume .section .job-occupation .element .entry, .delete-resume .section .school-name .element .entry {
           position: relative; } }
-  .dashboard-popup .section .job-occupation .element-correction, .dashboard-popup .section .school-name .element-correction, .get-started-resume .section .job-occupation .element-correction, .get-started-resume .section .school-name .element-correction {
+  .dashboard-popup .section .job-occupation .element-correction, .dashboard-popup .section .school-name .element-correction, .get-started-resume .section .job-occupation .element-correction, .get-started-resume .section .school-name .element-correction, .template-resume .section .job-occupation .element-correction, .template-resume .section .school-name .element-correction, .export-resume .section .job-occupation .element-correction, .export-resume .section .school-name .element-correction, .delete-resume .section .job-occupation .element-correction, .delete-resume .section .school-name .element-correction {
     height: 100%;
     width: 50.7%;
     position: relative; }
     @media only screen and (max-width: 768px) {
-      .dashboard-popup .section .job-occupation .element-correction, .dashboard-popup .section .school-name .element-correction, .get-started-resume .section .job-occupation .element-correction, .get-started-resume .section .school-name .element-correction {
+      .dashboard-popup .section .job-occupation .element-correction, .dashboard-popup .section .school-name .element-correction, .get-started-resume .section .job-occupation .element-correction, .get-started-resume .section .school-name .element-correction, .template-resume .section .job-occupation .element-correction, .template-resume .section .school-name .element-correction, .export-resume .section .job-occupation .element-correction, .export-resume .section .school-name .element-correction, .delete-resume .section .job-occupation .element-correction, .delete-resume .section .school-name .element-correction {
                                            /*and (min-width: 481px){
     width:48%;
 }
 @media only screen and (max-width: 480px){*/
         width: 100%; } }
-    .dashboard-popup .section .job-occupation .element-correction .logo, .dashboard-popup .section .school-name .element-correction .logo, .get-started-resume .section .job-occupation .element-correction .logo, .get-started-resume .section .school-name .element-correction .logo {
+    .dashboard-popup .section .job-occupation .element-correction .logo, .dashboard-popup .section .school-name .element-correction .logo, .get-started-resume .section .job-occupation .element-correction .logo, .get-started-resume .section .school-name .element-correction .logo, .template-resume .section .job-occupation .element-correction .logo, .template-resume .section .school-name .element-correction .logo, .export-resume .section .job-occupation .element-correction .logo, .export-resume .section .school-name .element-correction .logo, .delete-resume .section .job-occupation .element-correction .logo, .delete-resume .section .school-name .element-correction .logo {
       position: absolute;
       bottom: 10px; }
       @media only screen and (max-width: 768px) {
-        .dashboard-popup .section .job-occupation .element-correction .logo, .dashboard-popup .section .school-name .element-correction .logo, .get-started-resume .section .job-occupation .element-correction .logo, .get-started-resume .section .school-name .element-correction .logo {
+        .dashboard-popup .section .job-occupation .element-correction .logo, .dashboard-popup .section .school-name .element-correction .logo, .get-started-resume .section .job-occupation .element-correction .logo, .get-started-resume .section .school-name .element-correction .logo, .template-resume .section .job-occupation .element-correction .logo, .template-resume .section .school-name .element-correction .logo, .export-resume .section .job-occupation .element-correction .logo, .export-resume .section .school-name .element-correction .logo, .delete-resume .section .job-occupation .element-correction .logo, .delete-resume .section .school-name .element-correction .logo {
           display: none; } }
-    .dashboard-popup .section .job-occupation .element-correction .correction, .dashboard-popup .section .school-name .element-correction .correction, .get-started-resume .section .job-occupation .element-correction .correction, .get-started-resume .section .school-name .element-correction .correction {
+    .dashboard-popup .section .job-occupation .element-correction .correction, .dashboard-popup .section .school-name .element-correction .correction, .get-started-resume .section .job-occupation .element-correction .correction, .get-started-resume .section .school-name .element-correction .correction, .template-resume .section .job-occupation .element-correction .correction, .template-resume .section .school-name .element-correction .correction, .export-resume .section .job-occupation .element-correction .correction, .export-resume .section .school-name .element-correction .correction, .delete-resume .section .job-occupation .element-correction .correction, .delete-resume .section .school-name .element-correction .correction {
       width: 465px;
       position: absolute;
       bottom: 10px;
       right: 0px; }
-      .dashboard-popup .section .job-occupation .element-correction .correction .mess, .dashboard-popup .section .school-name .element-correction .correction .mess, .get-started-resume .section .job-occupation .element-correction .correction .mess, .get-started-resume .section .school-name .element-correction .correction .mess {
+      .dashboard-popup .section .job-occupation .element-correction .correction .mess, .dashboard-popup .section .school-name .element-correction .correction .mess, .get-started-resume .section .job-occupation .element-correction .correction .mess, .get-started-resume .section .school-name .element-correction .correction .mess, .template-resume .section .job-occupation .element-correction .correction .mess, .template-resume .section .school-name .element-correction .correction .mess, .export-resume .section .job-occupation .element-correction .correction .mess, .export-resume .section .school-name .element-correction .correction .mess, .delete-resume .section .job-occupation .element-correction .correction .mess, .delete-resume .section .school-name .element-correction .correction .mess {
         font-size: 17px;
         line-height: 23px;
         margin-bottom: 10px;
@@ -4863,39 +4863,39 @@ SOCIAL
         overflow: hidden;
         -webkit-line-clamp: 4; }
         @media only screen and (min-width: 481px) and (max-width: 768px) {
-          .dashboard-popup .section .job-occupation .element-correction .correction .mess, .dashboard-popup .section .school-name .element-correction .correction .mess, .get-started-resume .section .job-occupation .element-correction .correction .mess, .get-started-resume .section .school-name .element-correction .correction .mess {
+          .dashboard-popup .section .job-occupation .element-correction .correction .mess, .dashboard-popup .section .school-name .element-correction .correction .mess, .get-started-resume .section .job-occupation .element-correction .correction .mess, .get-started-resume .section .school-name .element-correction .correction .mess, .template-resume .section .job-occupation .element-correction .correction .mess, .template-resume .section .school-name .element-correction .correction .mess, .export-resume .section .job-occupation .element-correction .correction .mess, .export-resume .section .school-name .element-correction .correction .mess, .delete-resume .section .job-occupation .element-correction .correction .mess, .delete-resume .section .school-name .element-correction .correction .mess {
             font-size: 16.15px; } }
         @media only screen and (max-width: 480px) {
-          .dashboard-popup .section .job-occupation .element-correction .correction .mess, .dashboard-popup .section .school-name .element-correction .correction .mess, .get-started-resume .section .job-occupation .element-correction .correction .mess, .get-started-resume .section .school-name .element-correction .correction .mess {
+          .dashboard-popup .section .job-occupation .element-correction .correction .mess, .dashboard-popup .section .school-name .element-correction .correction .mess, .get-started-resume .section .job-occupation .element-correction .correction .mess, .get-started-resume .section .school-name .element-correction .correction .mess, .template-resume .section .job-occupation .element-correction .correction .mess, .template-resume .section .school-name .element-correction .correction .mess, .export-resume .section .job-occupation .element-correction .correction .mess, .export-resume .section .school-name .element-correction .correction .mess, .delete-resume .section .job-occupation .element-correction .correction .mess, .delete-resume .section .school-name .element-correction .correction .mess {
             font-size: 15.3px; } }
-      .dashboard-popup .section .job-occupation .element-correction .correction .wrong, .dashboard-popup .section .school-name .element-correction .correction .wrong, .get-started-resume .section .job-occupation .element-correction .correction .wrong, .get-started-resume .section .school-name .element-correction .correction .wrong {
+      .dashboard-popup .section .job-occupation .element-correction .correction .wrong, .dashboard-popup .section .school-name .element-correction .correction .wrong, .get-started-resume .section .job-occupation .element-correction .correction .wrong, .get-started-resume .section .school-name .element-correction .correction .wrong, .template-resume .section .job-occupation .element-correction .correction .wrong, .template-resume .section .school-name .element-correction .correction .wrong, .export-resume .section .job-occupation .element-correction .correction .wrong, .export-resume .section .school-name .element-correction .correction .wrong, .delete-resume .section .job-occupation .element-correction .correction .wrong, .delete-resume .section .school-name .element-correction .correction .wrong {
         color: black; }
-      .dashboard-popup .section .job-occupation .element-correction .correction .select, .dashboard-popup .section .school-name .element-correction .correction .select, .get-started-resume .section .job-occupation .element-correction .correction .select, .get-started-resume .section .school-name .element-correction .correction .select {
+      .dashboard-popup .section .job-occupation .element-correction .correction .select, .dashboard-popup .section .school-name .element-correction .correction .select, .get-started-resume .section .job-occupation .element-correction .correction .select, .get-started-resume .section .school-name .element-correction .correction .select, .template-resume .section .job-occupation .element-correction .correction .select, .template-resume .section .school-name .element-correction .correction .select, .export-resume .section .job-occupation .element-correction .correction .select, .export-resume .section .school-name .element-correction .correction .select, .delete-resume .section .job-occupation .element-correction .correction .select, .delete-resume .section .school-name .element-correction .correction .select {
         border: 1px solid #ee7835; }
       @media only screen and (max-width: 768px) {
-        .dashboard-popup .section .job-occupation .element-correction .correction, .dashboard-popup .section .school-name .element-correction .correction, .get-started-resume .section .job-occupation .element-correction .correction, .get-started-resume .section .school-name .element-correction .correction {
+        .dashboard-popup .section .job-occupation .element-correction .correction, .dashboard-popup .section .school-name .element-correction .correction, .get-started-resume .section .job-occupation .element-correction .correction, .get-started-resume .section .school-name .element-correction .correction, .template-resume .section .job-occupation .element-correction .correction, .template-resume .section .school-name .element-correction .correction, .export-resume .section .job-occupation .element-correction .correction, .export-resume .section .school-name .element-correction .correction, .delete-resume .section .job-occupation .element-correction .correction, .delete-resume .section .school-name .element-correction .correction {
           width: 100%;
           bottom: 0px;
           /* }
            @media only screen and (max-width: 480px){*/
           position: relative; }
-          .dashboard-popup .section .job-occupation .element-correction .correction .mess, .dashboard-popup .section .school-name .element-correction .correction .mess, .get-started-resume .section .job-occupation .element-correction .correction .mess, .get-started-resume .section .school-name .element-correction .correction .mess {
+          .dashboard-popup .section .job-occupation .element-correction .correction .mess, .dashboard-popup .section .school-name .element-correction .correction .mess, .get-started-resume .section .job-occupation .element-correction .correction .mess, .get-started-resume .section .school-name .element-correction .correction .mess, .template-resume .section .job-occupation .element-correction .correction .mess, .template-resume .section .school-name .element-correction .correction .mess, .export-resume .section .job-occupation .element-correction .correction .mess, .export-resume .section .school-name .element-correction .correction .mess, .delete-resume .section .job-occupation .element-correction .correction .mess, .delete-resume .section .school-name .element-correction .correction .mess {
             -webkit-line-clamp: 5;
             line-height: 20px; } }
   @media only screen and (max-width: 768px) {
-    .dashboard-popup .section .job-occupation, .dashboard-popup .section .school-name, .dashboard-popup .section .job-info, .dashboard-popup .section .school-info, .get-started-resume .section .job-occupation, .get-started-resume .section .school-name, .get-started-resume .section .job-info, .get-started-resume .section .school-info {
+    .dashboard-popup .section .job-occupation, .dashboard-popup .section .school-name, .dashboard-popup .section .job-info, .dashboard-popup .section .school-info, .get-started-resume .section .job-occupation, .get-started-resume .section .school-name, .get-started-resume .section .job-info, .get-started-resume .section .school-info, .template-resume .section .job-occupation, .template-resume .section .school-name, .template-resume .section .job-info, .template-resume .section .school-info, .export-resume .section .job-occupation, .export-resume .section .school-name, .export-resume .section .job-info, .export-resume .section .school-info, .delete-resume .section .job-occupation, .delete-resume .section .school-name, .delete-resume .section .job-info, .delete-resume .section .school-info {
    /* >.left ,>.right{
         width:49%;
     }
 }
 @media only screen and (max-width: 480px){*/ }
-      .dashboard-popup .section .job-occupation .message, .dashboard-popup .section .school-name .message, .dashboard-popup .section .job-info .message, .dashboard-popup .section .school-info .message, .get-started-resume .section .job-occupation .message, .get-started-resume .section .school-name .message, .get-started-resume .section .job-info .message, .get-started-resume .section .school-info .message {
+      .dashboard-popup .section .job-occupation .message, .dashboard-popup .section .school-name .message, .dashboard-popup .section .job-info .message, .dashboard-popup .section .school-info .message, .get-started-resume .section .job-occupation .message, .get-started-resume .section .school-name .message, .get-started-resume .section .job-info .message, .get-started-resume .section .school-info .message, .template-resume .section .job-occupation .message, .template-resume .section .school-name .message, .template-resume .section .job-info .message, .template-resume .section .school-info .message, .export-resume .section .job-occupation .message, .export-resume .section .school-name .message, .export-resume .section .job-info .message, .export-resume .section .school-info .message, .delete-resume .section .job-occupation .message, .delete-resume .section .school-name .message, .delete-resume .section .job-info .message, .delete-resume .section .school-info .message {
         margin-top: 5px; }
-      .dashboard-popup .section .job-occupation .large, .dashboard-popup .section .school-name .large, .dashboard-popup .section .job-info .large, .dashboard-popup .section .school-info .large, .get-started-resume .section .job-occupation .large, .get-started-resume .section .school-name .large, .get-started-resume .section .job-info .large, .get-started-resume .section .school-info .large {
+      .dashboard-popup .section .job-occupation .large, .dashboard-popup .section .school-name .large, .dashboard-popup .section .job-info .large, .dashboard-popup .section .school-info .large, .get-started-resume .section .job-occupation .large, .get-started-resume .section .school-name .large, .get-started-resume .section .job-info .large, .get-started-resume .section .school-info .large, .template-resume .section .job-occupation .large, .template-resume .section .school-name .large, .template-resume .section .job-info .large, .template-resume .section .school-info .large, .export-resume .section .job-occupation .large, .export-resume .section .school-name .large, .export-resume .section .job-info .large, .export-resume .section .school-info .large, .delete-resume .section .job-occupation .large, .delete-resume .section .school-name .large, .delete-resume .section .job-info .large, .delete-resume .section .school-info .large {
         width: 100%; }
-      .dashboard-popup .section .job-occupation > .left, .dashboard-popup .section .job-occupation > .right, .dashboard-popup .section .school-name > .left, .dashboard-popup .section .school-name > .right, .dashboard-popup .section .job-info > .left, .dashboard-popup .section .job-info > .right, .dashboard-popup .section .school-info > .left, .dashboard-popup .section .school-info > .right, .get-started-resume .section .job-occupation > .left, .get-started-resume .section .job-occupation > .right, .get-started-resume .section .school-name > .left, .get-started-resume .section .school-name > .right, .get-started-resume .section .job-info > .left, .get-started-resume .section .job-info > .right, .get-started-resume .section .school-info > .left, .get-started-resume .section .school-info > .right {
+      .dashboard-popup .section .job-occupation > .left, .dashboard-popup .section .job-occupation > .right, .dashboard-popup .section .school-name > .left, .dashboard-popup .section .school-name > .right, .dashboard-popup .section .job-info > .left, .dashboard-popup .section .job-info > .right, .dashboard-popup .section .school-info > .left, .dashboard-popup .section .school-info > .right, .get-started-resume .section .job-occupation > .left, .get-started-resume .section .job-occupation > .right, .get-started-resume .section .school-name > .left, .get-started-resume .section .school-name > .right, .get-started-resume .section .job-info > .left, .get-started-resume .section .job-info > .right, .get-started-resume .section .school-info > .left, .get-started-resume .section .school-info > .right, .template-resume .section .job-occupation > .left, .template-resume .section .job-occupation > .right, .template-resume .section .school-name > .left, .template-resume .section .school-name > .right, .template-resume .section .job-info > .left, .template-resume .section .job-info > .right, .template-resume .section .school-info > .left, .template-resume .section .school-info > .right, .export-resume .section .job-occupation > .left, .export-resume .section .job-occupation > .right, .export-resume .section .school-name > .left, .export-resume .section .school-name > .right, .export-resume .section .job-info > .left, .export-resume .section .job-info > .right, .export-resume .section .school-info > .left, .export-resume .section .school-info > .right, .delete-resume .section .job-occupation > .left, .delete-resume .section .job-occupation > .right, .delete-resume .section .school-name > .left, .delete-resume .section .school-name > .right, .delete-resume .section .job-info > .left, .delete-resume .section .job-info > .right, .delete-resume .section .school-info > .left, .delete-resume .section .school-info > .right {
         width: 100%; } }
-  .dashboard-popup .section .selectable-title, .get-started-resume .section .selectable-title {
+  .dashboard-popup .section .selectable-title, .get-started-resume .section .selectable-title, .template-resume .section .selectable-title, .export-resume .section .selectable-title, .delete-resume .section .selectable-title {
     padding: 20px;
     padding-bottom: 5px;
     position: relative;
@@ -4903,163 +4903,163 @@ SOCIAL
     font-size: 47px;
     border-bottom: 8px solid #e8e8e8; }
     @media only screen and (max-width: 768px) {
-      .dashboard-popup .section .selectable-title, .get-started-resume .section .selectable-title {
+      .dashboard-popup .section .selectable-title, .get-started-resume .section .selectable-title, .template-resume .section .selectable-title, .export-resume .section .selectable-title, .delete-resume .section .selectable-title {
         font-size: 25px;
         padding: 10px;
         padding-top: 20px;
         padding-bottom: 5px; } }
-    .dashboard-popup .section .selectable-title .selectable-button, .get-started-resume .section .selectable-title .selectable-button {
+    .dashboard-popup .section .selectable-title .selectable-button, .get-started-resume .section .selectable-title .selectable-button, .template-resume .section .selectable-title .selectable-button, .export-resume .section .selectable-title .selectable-button, .delete-resume .section .selectable-title .selectable-button {
       display: inline-block;
       width: 33px; }
       @media only screen and (max-width: 768px) {
-        .dashboard-popup .section .selectable-title .selectable-button, .get-started-resume .section .selectable-title .selectable-button {
+        .dashboard-popup .section .selectable-title .selectable-button, .get-started-resume .section .selectable-title .selectable-button, .template-resume .section .selectable-title .selectable-button, .export-resume .section .selectable-title .selectable-button, .delete-resume .section .selectable-title .selectable-button {
           width: 18px; } }
-      .dashboard-popup .section .selectable-title .selectable-button .icon-plus, .get-started-resume .section .selectable-title .selectable-button .icon-plus {
+      .dashboard-popup .section .selectable-title .selectable-button .icon-plus, .get-started-resume .section .selectable-title .selectable-button .icon-plus, .template-resume .section .selectable-title .selectable-button .icon-plus, .export-resume .section .selectable-title .selectable-button .icon-plus, .delete-resume .section .selectable-title .selectable-button .icon-plus {
         position: relative;
         top: 1px;
         display: block; }
-      .dashboard-popup .section .selectable-title .selectable-button .icon-minus, .get-started-resume .section .selectable-title .selectable-button .icon-minus {
+      .dashboard-popup .section .selectable-title .selectable-button .icon-minus, .get-started-resume .section .selectable-title .selectable-button .icon-minus, .template-resume .section .selectable-title .selectable-button .icon-minus, .export-resume .section .selectable-title .selectable-button .icon-minus, .delete-resume .section .selectable-title .selectable-button .icon-minus {
         position: relative;
         top: -14px;
         display: none; }
         @media only screen and (max-width: 768px) {
-          .dashboard-popup .section .selectable-title .selectable-button .icon-minus, .get-started-resume .section .selectable-title .selectable-button .icon-minus {
+          .dashboard-popup .section .selectable-title .selectable-button .icon-minus, .get-started-resume .section .selectable-title .selectable-button .icon-minus, .template-resume .section .selectable-title .selectable-button .icon-minus, .export-resume .section .selectable-title .selectable-button .icon-minus, .delete-resume .section .selectable-title .selectable-button .icon-minus {
             top: -7px; } }
-    .dashboard-popup .section .selectable-title .selectable-button[class~=selected] .icon-plus, .get-started-resume .section .selectable-title .selectable-button[class~=selected] .icon-plus {
+    .dashboard-popup .section .selectable-title .selectable-button[class~=selected] .icon-plus, .get-started-resume .section .selectable-title .selectable-button[class~=selected] .icon-plus, .template-resume .section .selectable-title .selectable-button[class~=selected] .icon-plus, .export-resume .section .selectable-title .selectable-button[class~=selected] .icon-plus, .delete-resume .section .selectable-title .selectable-button[class~=selected] .icon-plus {
       display: none; }
-    .dashboard-popup .section .selectable-title .selectable-button[class~=selected] .icon-minus, .get-started-resume .section .selectable-title .selectable-button[class~=selected] .icon-minus {
+    .dashboard-popup .section .selectable-title .selectable-button[class~=selected] .icon-minus, .get-started-resume .section .selectable-title .selectable-button[class~=selected] .icon-minus, .template-resume .section .selectable-title .selectable-button[class~=selected] .icon-minus, .export-resume .section .selectable-title .selectable-button[class~=selected] .icon-minus, .delete-resume .section .selectable-title .selectable-button[class~=selected] .icon-minus {
       display: block; }
-    .dashboard-popup .section .selectable-title .icon-completed i, .get-started-resume .section .selectable-title .icon-completed i {
+    .dashboard-popup .section .selectable-title .icon-completed i, .get-started-resume .section .selectable-title .icon-completed i, .template-resume .section .selectable-title .icon-completed i, .export-resume .section .selectable-title .icon-completed i, .delete-resume .section .selectable-title .icon-completed i {
       position: absolute;
       right: 30px;
       top: 30px;
       margin-right: 0px; }
       @media only screen and (max-width: 768px) {
-        .dashboard-popup .section .selectable-title .icon-completed i, .get-started-resume .section .selectable-title .icon-completed i {
+        .dashboard-popup .section .selectable-title .icon-completed i, .get-started-resume .section .selectable-title .icon-completed i, .template-resume .section .selectable-title .icon-completed i, .export-resume .section .selectable-title .icon-completed i, .delete-resume .section .selectable-title .icon-completed i {
           top: auto;
           bottom: 9px;
           right: 10px; } }
-  .dashboard-popup .section .selectable-content, .get-started-resume .section .selectable-content {
+  .dashboard-popup .section .selectable-content, .get-started-resume .section .selectable-content, .template-resume .section .selectable-content, .export-resume .section .selectable-content, .delete-resume .section .selectable-content {
     border-top: 1px solid #c9cacb;
     display: none;
     padding: 50px 20px;
     padding-bottom: 0px; }
     @media only screen and (max-width: 768px) {
-      .dashboard-popup .section .selectable-content, .get-started-resume .section .selectable-content {
+      .dashboard-popup .section .selectable-content, .get-started-resume .section .selectable-content, .template-resume .section .selectable-content, .export-resume .section .selectable-content, .delete-resume .section .selectable-content {
         padding: 10px 10px;
         padding-top: 20px;
         padding-bottom: 0px; } }
-    .dashboard-popup .section .selectable-content .check-box-1, .get-started-resume .section .selectable-content .check-box-1 {
+    .dashboard-popup .section .selectable-content .check-box-1, .get-started-resume .section .selectable-content .check-box-1, .template-resume .section .selectable-content .check-box-1, .export-resume .section .selectable-content .check-box-1, .delete-resume .section .selectable-content .check-box-1 {
       float: left;
       padding-bottom: 30px;
       padding-right: 3.5%;
       width: 33.3%;
       font-size: 19px; }
       @media only screen and (min-width: 481px) and (max-width: 768px) {
-        .dashboard-popup .section .selectable-content .check-box-1, .get-started-resume .section .selectable-content .check-box-1 {
+        .dashboard-popup .section .selectable-content .check-box-1, .get-started-resume .section .selectable-content .check-box-1, .template-resume .section .selectable-content .check-box-1, .export-resume .section .selectable-content .check-box-1, .delete-resume .section .selectable-content .check-box-1 {
           font-size: 18.05px; } }
       @media only screen and (max-width: 480px) {
-        .dashboard-popup .section .selectable-content .check-box-1, .get-started-resume .section .selectable-content .check-box-1 {
+        .dashboard-popup .section .selectable-content .check-box-1, .get-started-resume .section .selectable-content .check-box-1, .template-resume .section .selectable-content .check-box-1, .export-resume .section .selectable-content .check-box-1, .delete-resume .section .selectable-content .check-box-1 {
           font-size: 17.1px; } }
       @media only screen and (max-width: 768px) {
-        .dashboard-popup .section .selectable-content .check-box-1, .get-started-resume .section .selectable-content .check-box-1 {
+        .dashboard-popup .section .selectable-content .check-box-1, .get-started-resume .section .selectable-content .check-box-1, .template-resume .section .selectable-content .check-box-1, .export-resume .section .selectable-content .check-box-1, .delete-resume .section .selectable-content .check-box-1 {
           width: 100%;
           padding-right: 0%;
           padding-bottom: 10px; } }
   @media only screen and (max-width: 768px) {
-    .dashboard-popup .section .goals .message, .get-started-resume .section .goals .message {
+    .dashboard-popup .section .goals .message, .get-started-resume .section .goals .message, .template-resume .section .goals .message, .export-resume .section .goals .message, .delete-resume .section .goals .message {
       margin-top: 5px; } }
-  .dashboard-popup .section .goals .medium, .get-started-resume .section .goals .medium {
+  .dashboard-popup .section .goals .medium, .get-started-resume .section .goals .medium, .template-resume .section .goals .medium, .export-resume .section .goals .medium, .delete-resume .section .goals .medium {
     width: 371px; }
     @media only screen and (max-width: 768px) {
-      .dashboard-popup .section .goals .medium, .get-started-resume .section .goals .medium {
+      .dashboard-popup .section .goals .medium, .get-started-resume .section .goals .medium, .template-resume .section .goals .medium, .export-resume .section .goals .medium, .delete-resume .section .goals .medium {
         width: 100%; } }
   @media only screen and (max-width: 768px) {
-    .dashboard-popup .section .goals .left, .dashboard-popup .section .goals .right, .get-started-resume .section .goals .left, .get-started-resume .section .goals .right {
+    .dashboard-popup .section .goals .left, .dashboard-popup .section .goals .right, .get-started-resume .section .goals .left, .get-started-resume .section .goals .right, .template-resume .section .goals .left, .template-resume .section .goals .right, .export-resume .section .goals .left, .export-resume .section .goals .right, .delete-resume .section .goals .left, .delete-resume .section .goals .right {
       width: 100%; } }
-  .dashboard-popup .section .goals .selectable-content, .get-started-resume .section .goals .selectable-content {
+  .dashboard-popup .section .goals .selectable-content, .get-started-resume .section .goals .selectable-content, .template-resume .section .goals .selectable-content, .export-resume .section .goals .selectable-content, .delete-resume .section .goals .selectable-content {
     padding: 20px;
     padding-top: 30px;
     border-bottom: 1px solid #c9cacb; }
     @media only screen and (max-width: 768px) {
-      .dashboard-popup .section .goals .selectable-content, .get-started-resume .section .goals .selectable-content {
+      .dashboard-popup .section .goals .selectable-content, .get-started-resume .section .goals .selectable-content, .template-resume .section .goals .selectable-content, .export-resume .section .goals .selectable-content, .delete-resume .section .goals .selectable-content {
         padding: 10px 10px;
         padding-top: 15px; } }
   @media (min-width: 480px) {
-    .dashboard-popup .section .footer-dialog, .get-started-resume .section .footer-dialog {
+    .dashboard-popup .section .footer-dialog, .get-started-resume .section .footer-dialog, .template-resume .section .footer-dialog, .export-resume .section .footer-dialog, .delete-resume .section .footer-dialog {
       padding-top: 12px;
       padding-bottom: 15px; } }
   @media only screen and (max-width: 768px) {
-    .dashboard-popup .section .user-info .message, .get-started-resume .section .user-info .message {
+    .dashboard-popup .section .user-info .message, .get-started-resume .section .user-info .message, .template-resume .section .user-info .message, .export-resume .section .user-info .message, .delete-resume .section .user-info .message {
       margin-right: 0px;
       width: 100%; } }
   @media only screen and (max-width: 600px) {
-    .dashboard-popup .section .user-info .presentation, .get-started-resume .section .user-info .presentation {
+    .dashboard-popup .section .user-info .presentation, .get-started-resume .section .user-info .presentation, .template-resume .section .user-info .presentation, .export-resume .section .user-info .presentation, .delete-resume .section .user-info .presentation {
       text-align: center; } }
-  .dashboard-popup .section .user-info .name-info, .get-started-resume .section .user-info .name-info {
+  .dashboard-popup .section .user-info .name-info, .get-started-resume .section .user-info .name-info, .template-resume .section .user-info .name-info, .export-resume .section .user-info .name-info, .delete-resume .section .user-info .name-info {
     margin-bottom: 20px; }
     @media only screen and (max-width: 768px) {
-      .dashboard-popup .section .user-info .name-info, .get-started-resume .section .user-info .name-info {
+      .dashboard-popup .section .user-info .name-info, .get-started-resume .section .user-info .name-info, .template-resume .section .user-info .name-info, .export-resume .section .user-info .name-info, .delete-resume .section .user-info .name-info {
         margin-bottom: 0px; } }
-  .dashboard-popup .section .user-info .explanation, .get-started-resume .section .user-info .explanation {
+  .dashboard-popup .section .user-info .explanation, .get-started-resume .section .user-info .explanation, .template-resume .section .user-info .explanation, .export-resume .section .user-info .explanation, .delete-resume .section .user-info .explanation {
     width: 59%;
     font-size: 27px; }
-    .dashboard-popup .section .user-info .explanation .presentation, .get-started-resume .section .user-info .explanation .presentation {
+    .dashboard-popup .section .user-info .explanation .presentation, .get-started-resume .section .user-info .explanation .presentation, .template-resume .section .user-info .explanation .presentation, .export-resume .section .user-info .explanation .presentation, .delete-resume .section .user-info .explanation .presentation {
       margin-bottom: 40px; }
     @media only screen and (max-width: 768px) {
-      .dashboard-popup .section .user-info .explanation, .get-started-resume .section .user-info .explanation {
+      .dashboard-popup .section .user-info .explanation, .get-started-resume .section .user-info .explanation, .template-resume .section .user-info .explanation, .export-resume .section .user-info .explanation, .delete-resume .section .user-info .explanation {
         font-size: 18px;
         width: 57%;
         padding-right: 7px; }
-        .dashboard-popup .section .user-info .explanation .presentation, .get-started-resume .section .user-info .explanation .presentation {
+        .dashboard-popup .section .user-info .explanation .presentation, .get-started-resume .section .user-info .explanation .presentation, .template-resume .section .user-info .explanation .presentation, .export-resume .section .user-info .explanation .presentation, .delete-resume .section .user-info .explanation .presentation {
           margin-bottom: 15px; } }
     @media only screen and (max-width: 700px) {
-      .dashboard-popup .section .user-info .explanation, .get-started-resume .section .user-info .explanation {
+      .dashboard-popup .section .user-info .explanation, .get-started-resume .section .user-info .explanation, .template-resume .section .user-info .explanation, .export-resume .section .user-info .explanation, .delete-resume .section .user-info .explanation {
         width: 51%; } }
     @media only screen and (max-width: 600px) {
-      .dashboard-popup .section .user-info .explanation, .get-started-resume .section .user-info .explanation {
+      .dashboard-popup .section .user-info .explanation, .get-started-resume .section .user-info .explanation, .template-resume .section .user-info .explanation, .export-resume .section .user-info .explanation, .delete-resume .section .user-info .explanation {
         width: 100%; } }
-  .dashboard-popup .section .user-info .info, .get-started-resume .section .user-info .info {
+  .dashboard-popup .section .user-info .info, .get-started-resume .section .user-info .info, .template-resume .section .user-info .info, .export-resume .section .user-info .info, .delete-resume .section .user-info .info {
     font-size: 22px;
     background-color: white;
     box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.2);
     -webkit-box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.2);
     padding: 25px 30px; }
-    .dashboard-popup .section .user-info .info .strength, .get-started-resume .section .user-info .info .strength {
+    .dashboard-popup .section .user-info .info .strength, .get-started-resume .section .user-info .info .strength, .template-resume .section .user-info .info .strength, .export-resume .section .user-info .info .strength, .delete-resume .section .user-info .info .strength {
       margin: 15px 0px; }
-    .dashboard-popup .section .user-info .info .icon, .get-started-resume .section .user-info .info .icon {
+    .dashboard-popup .section .user-info .info .icon, .get-started-resume .section .user-info .info .icon, .template-resume .section .user-info .info .icon, .export-resume .section .user-info .info .icon, .delete-resume .section .user-info .info .icon {
       margin: 0px 3px; }
     @media only screen and (max-width: 768px) {
-      .dashboard-popup .section .user-info .info, .get-started-resume .section .user-info .info {
+      .dashboard-popup .section .user-info .info, .get-started-resume .section .user-info .info, .template-resume .section .user-info .info, .export-resume .section .user-info .info, .delete-resume .section .user-info .info {
         font-size: 16px;
         padding: 10px; } }
     @media only screen and (max-width: 600px) {
-      .dashboard-popup .section .user-info .info, .get-started-resume .section .user-info .info {
+      .dashboard-popup .section .user-info .info, .get-started-resume .section .user-info .info, .template-resume .section .user-info .info, .export-resume .section .user-info .info, .delete-resume .section .user-info .info {
         width: auto;
         display: inline-block;
         clear: both;
         float: none;
         margin: 15px auto; } }
   @media only screen and (max-width: 768px) {
-    .dashboard-popup .section .right-resp, .get-started-resume .section .right-resp {
+    .dashboard-popup .section .right-resp, .get-started-resume .section .right-resp, .template-resume .section .right-resp, .export-resume .section .right-resp, .delete-resume .section .right-resp {
       float: right;
       margin-left: 0px !important;
       margin-right: 0px !important;
       margin-top: 0px;
       margin-bottom: 10px; } }
-.dashboard-popup .section-photo, .get-started-resume .section-photo {
+.dashboard-popup .section-photo, .get-started-resume .section-photo, .template-resume .section-photo, .export-resume .section-photo, .delete-resume .section-photo {
   width: 1000px; }
   @media only screen and (max-width: 768px) {
-    .dashboard-popup .section-photo, .get-started-resume .section-photo {
+    .dashboard-popup .section-photo, .get-started-resume .section-photo, .template-resume .section-photo, .export-resume .section-photo, .delete-resume .section-photo {
       width: 90%; } }
-  .dashboard-popup .section-photo .change-picture, .get-started-resume .section-photo .change-picture {
+  .dashboard-popup .section-photo .change-picture, .get-started-resume .section-photo .change-picture, .template-resume .section-photo .change-picture, .export-resume .section-photo .change-picture, .delete-resume .section-photo .change-picture {
     padding: 40px;
     text-align: center;
     border-bottom: 1px solid #c9cacb; }
     @media only screen and (max-width: 768px) {
-      .dashboard-popup .section-photo .change-picture, .get-started-resume .section-photo .change-picture {
+      .dashboard-popup .section-photo .change-picture, .get-started-resume .section-photo .change-picture, .template-resume .section-photo .change-picture, .export-resume .section-photo .change-picture, .delete-resume .section-photo .change-picture {
         padding: 20px; } }
-    .dashboard-popup .section-photo .change-picture .photo, .get-started-resume .section-photo .change-picture .photo {
+    .dashboard-popup .section-photo .change-picture .photo, .get-started-resume .section-photo .change-picture .photo, .template-resume .section-photo .change-picture .photo, .export-resume .section-photo .change-picture .photo, .delete-resume .section-photo .change-picture .photo {
       margin: auto;
       width: 320px;
       height: 320px;
@@ -5068,59 +5068,59 @@ SOCIAL
       border: 7px solid white;
       margin-bottom: 50px; }
       @media only screen and (max-width: 768px) {
-        .dashboard-popup .section-photo .change-picture .photo, .get-started-resume .section-photo .change-picture .photo {
+        .dashboard-popup .section-photo .change-picture .photo, .get-started-resume .section-photo .change-picture .photo, .template-resume .section-photo .change-picture .photo, .export-resume .section-photo .change-picture .photo, .delete-resume .section-photo .change-picture .photo {
           width: 200px;
           height: 200px;
           border-radius: 140px;
           border: 5px solid white;
           margin-bottom: 40px; } }
-    .dashboard-popup .section-photo .change-picture .buttons .button-upload-wrapper, .get-started-resume .section-photo .change-picture .buttons .button-upload-wrapper {
+    .dashboard-popup .section-photo .change-picture .buttons .button-upload-wrapper, .get-started-resume .section-photo .change-picture .buttons .button-upload-wrapper, .template-resume .section-photo .change-picture .buttons .button-upload-wrapper, .export-resume .section-photo .change-picture .buttons .button-upload-wrapper, .delete-resume .section-photo .change-picture .buttons .button-upload-wrapper {
       display: inline-block;
       vertical-align: top;
       position: relative; }
-      .dashboard-popup .section-photo .change-picture .buttons .button-upload-wrapper .message, .get-started-resume .section-photo .change-picture .buttons .button-upload-wrapper .message {
+      .dashboard-popup .section-photo .change-picture .buttons .button-upload-wrapper .message, .get-started-resume .section-photo .change-picture .buttons .button-upload-wrapper .message, .template-resume .section-photo .change-picture .buttons .button-upload-wrapper .message, .export-resume .section-photo .change-picture .buttons .button-upload-wrapper .message, .delete-resume .section-photo .change-picture .buttons .button-upload-wrapper .message {
         position: absolute;
         top: -30px;
         left: 0px; }
       @media only screen and (max-width: 768px) {
-        .dashboard-popup .section-photo .change-picture .buttons .button-upload-wrapper, .get-started-resume .section-photo .change-picture .buttons .button-upload-wrapper {
+        .dashboard-popup .section-photo .change-picture .buttons .button-upload-wrapper, .get-started-resume .section-photo .change-picture .buttons .button-upload-wrapper, .template-resume .section-photo .change-picture .buttons .button-upload-wrapper, .export-resume .section-photo .change-picture .buttons .button-upload-wrapper, .delete-resume .section-photo .change-picture .buttons .button-upload-wrapper {
           width: 90%;
           margin-bottom: 10px; }
-          .dashboard-popup .section-photo .change-picture .buttons .button-upload-wrapper .message, .get-started-resume .section-photo .change-picture .buttons .button-upload-wrapper .message {
+          .dashboard-popup .section-photo .change-picture .buttons .button-upload-wrapper .message, .get-started-resume .section-photo .change-picture .buttons .button-upload-wrapper .message, .template-resume .section-photo .change-picture .buttons .button-upload-wrapper .message, .export-resume .section-photo .change-picture .buttons .button-upload-wrapper .message, .delete-resume .section-photo .change-picture .buttons .button-upload-wrapper .message {
             top: -25px;
             left: 5%; } }
-    .dashboard-popup .section-photo .change-picture .buttons .button-upload, .get-started-resume .section-photo .change-picture .buttons .button-upload {
+    .dashboard-popup .section-photo .change-picture .buttons .button-upload, .get-started-resume .section-photo .change-picture .buttons .button-upload, .template-resume .section-photo .change-picture .buttons .button-upload, .export-resume .section-photo .change-picture .buttons .button-upload, .delete-resume .section-photo .change-picture .buttons .button-upload {
       width: 330px;
       margin-right: 25px;
       background-color: #3f5d95; }
-      .dashboard-popup .section-photo .change-picture .buttons .button-upload .message, .get-started-resume .section-photo .change-picture .buttons .button-upload .message {
+      .dashboard-popup .section-photo .change-picture .buttons .button-upload .message, .get-started-resume .section-photo .change-picture .buttons .button-upload .message, .template-resume .section-photo .change-picture .buttons .button-upload .message, .export-resume .section-photo .change-picture .buttons .button-upload .message, .delete-resume .section-photo .change-picture .buttons .button-upload .message {
         position: absolute;
         top: -30px;
         left: 0px; }
       @media only screen and (max-width: 768px) {
-        .dashboard-popup .section-photo .change-picture .buttons .button-upload, .get-started-resume .section-photo .change-picture .buttons .button-upload {
+        .dashboard-popup .section-photo .change-picture .buttons .button-upload, .get-started-resume .section-photo .change-picture .buttons .button-upload, .template-resume .section-photo .change-picture .buttons .button-upload, .export-resume .section-photo .change-picture .buttons .button-upload, .delete-resume .section-photo .change-picture .buttons .button-upload {
           width: 100%;
           margin-right: 0px;
           margin: auto; } }
-    .dashboard-popup .section-photo .change-picture .buttons .button-upload:hover, .get-started-resume .section-photo .change-picture .buttons .button-upload:hover {
+    .dashboard-popup .section-photo .change-picture .buttons .button-upload:hover, .get-started-resume .section-photo .change-picture .buttons .button-upload:hover, .template-resume .section-photo .change-picture .buttons .button-upload:hover, .export-resume .section-photo .change-picture .buttons .button-upload:hover, .delete-resume .section-photo .change-picture .buttons .button-upload:hover {
       background-color: #35538b; }
-    .dashboard-popup .section-photo .change-picture .buttons .button-edit, .get-started-resume .section-photo .change-picture .buttons .button-edit {
+    .dashboard-popup .section-photo .change-picture .buttons .button-edit, .get-started-resume .section-photo .change-picture .buttons .button-edit, .template-resume .section-photo .change-picture .buttons .button-edit, .export-resume .section-photo .change-picture .buttons .button-edit, .delete-resume .section-photo .change-picture .buttons .button-edit {
       margin-right: 25px;
       background-color: #ee7c33; }
       @media only screen and (max-width: 768px) {
-        .dashboard-popup .section-photo .change-picture .buttons .button-edit, .get-started-resume .section-photo .change-picture .buttons .button-edit {
+        .dashboard-popup .section-photo .change-picture .buttons .button-edit, .get-started-resume .section-photo .change-picture .buttons .button-edit, .template-resume .section-photo .change-picture .buttons .button-edit, .export-resume .section-photo .change-picture .buttons .button-edit, .delete-resume .section-photo .change-picture .buttons .button-edit {
           margin-right: 0px;
           margin-left: 5%;
           float: left; } }
-    .dashboard-popup .section-photo .change-picture .buttons .button-edit:hover, .get-started-resume .section-photo .change-picture .buttons .button-edit:hover {
+    .dashboard-popup .section-photo .change-picture .buttons .button-edit:hover, .get-started-resume .section-photo .change-picture .buttons .button-edit:hover, .template-resume .section-photo .change-picture .buttons .button-edit:hover, .export-resume .section-photo .change-picture .buttons .button-edit:hover, .delete-resume .section-photo .change-picture .buttons .button-edit:hover {
       background-color: #e47229; }
-    .dashboard-popup .section-photo .change-picture .buttons .button-delete, .get-started-resume .section-photo .change-picture .buttons .button-delete {
+    .dashboard-popup .section-photo .change-picture .buttons .button-delete, .get-started-resume .section-photo .change-picture .buttons .button-delete, .template-resume .section-photo .change-picture .buttons .button-delete, .export-resume .section-photo .change-picture .buttons .button-delete, .delete-resume .section-photo .change-picture .buttons .button-delete {
       background-color: #e93f33; }
       @media only screen and (max-width: 768px) {
-        .dashboard-popup .section-photo .change-picture .buttons .button-delete, .get-started-resume .section-photo .change-picture .buttons .button-delete {
+        .dashboard-popup .section-photo .change-picture .buttons .button-delete, .get-started-resume .section-photo .change-picture .buttons .button-delete, .template-resume .section-photo .change-picture .buttons .button-delete, .export-resume .section-photo .change-picture .buttons .button-delete, .delete-resume .section-photo .change-picture .buttons .button-delete {
           float: right;
           margin-right: 5%; } }
-    .dashboard-popup .section-photo .change-picture .buttons .button-delete:hover, .get-started-resume .section-photo .change-picture .buttons .button-delete:hover {
+    .dashboard-popup .section-photo .change-picture .buttons .button-delete:hover, .get-started-resume .section-photo .change-picture .buttons .button-delete:hover, .template-resume .section-photo .change-picture .buttons .button-delete:hover, .export-resume .section-photo .change-picture .buttons .button-delete:hover, .delete-resume .section-photo .change-picture .buttons .button-delete:hover {
       background-color: #df3529; }
 
 .careerScape .button-change, .resume-hero .button-change {
@@ -5221,7 +5221,7 @@ Career Scape
         height: 51.2px;
         min-width: 0px; }
         .careerScape .buttons-changes .button-change {
-          padding-top: 18.4px;
+          padding-top: 18.400000000000002px;
           padding-bottom: 8px; }
           .careerScape .buttons-changes .button-change .carre {
             margin-left: 11px;
@@ -5341,14 +5341,14 @@ Career Scape
     left: 22px; }
     @media only screen and (max-width: 768px) {
       .careerScape .legend .info {
-        bottom: 10.8px;
+        bottom: 10.799999999999999px;
         left: 13.2px; } }
   .careerScape .legend .info .title {
     font-weight: 200;
     font-size: 18px; }
     @media only screen and (min-width: 481px) and (max-width: 768px) {
       .careerScape .legend .info .title {
-        font-size: 17.1px; } }
+        font-size: 17.099999999999998px; } }
     @media only screen and (max-width: 480px) {
       .careerScape .legend .info .title {
         font-size: 16.2px; } }
@@ -5519,7 +5519,7 @@ JOB RESULTS/RECOMMENDATIONS
     font-size: 18px; }
     @media only screen and (min-width: 481px) and (max-width: 768px) {
       .saved-content .content .save, .delete-items .content .save {
-        font-size: 17.1px; } }
+        font-size: 17.099999999999998px; } }
     @media only screen and (max-width: 480px) {
       .saved-content .content .save, .delete-items .content .save {
         font-size: 16.2px; } }
@@ -5553,7 +5553,7 @@ JOB RESULTS/RECOMMENDATIONS
         color: #9d9d9d; }
         @media only screen and (min-width: 481px) and (max-width: 768px) {
           .saved-content .content .save .content-save .date, .saved-content .content .save .content-save .level, .delete-items .content .save .content-save .date, .delete-items .content .save .content-save .level {
-            font-size: 13.3px; } }
+            font-size: 13.299999999999999px; } }
         @media only screen and (max-width: 480px) {
           .saved-content .content .save .content-save .date, .saved-content .content .save .content-save .level, .delete-items .content .save .content-save .date, .delete-items .content .save .content-save .level {
             font-size: 12.6px; } }
@@ -5580,7 +5580,7 @@ JOB RESULTS/RECOMMENDATIONS
       color: #9d9d9d; }
       @media only screen and (min-width: 481px) and (max-width: 768px) {
         .job-results .content .job-recommandation .info-job {
-          font-size: 14.25px; } }
+          font-size: 14.249999999999998px; } }
       @media only screen and (max-width: 480px) {
         .job-results .content .job-recommandation .info-job {
           font-size: 13.5px; } }
@@ -5682,7 +5682,7 @@ Dashboard
             font-size: 33.25px; } }
         @media only screen and (max-width: 480px) {
           .dashboard .resume .person .name {
-            font-size: 31.5px; } }
+            font-size: 31.500000000000004px; } }
       .dashboard .resume .person .mail {
         color: #9d9d9d;
         font-size: 20px; }
@@ -5778,7 +5778,7 @@ Dashboard
     padding-right: 40px; }
     @media only screen and (min-width: 481px) and (max-width: 768px) {
       .dashboard .job-results .button-edit, .dashboard .saved-content .button-edit {
-        font-size: 13.3px; } }
+        font-size: 13.299999999999999px; } }
     @media only screen and (max-width: 480px) {
       .dashboard .job-results .button-edit, .dashboard .saved-content .button-edit {
         font-size: 12.6px; } }
@@ -5850,7 +5850,7 @@ Dashboard
       line-height: 27px; }
       @media only screen and (min-width: 481px) and (max-width: 768px) {
         .dashboard .content .website, .dashboard .content .period, .dashboard .content .place {
-          font-size: 14.25px; } }
+          font-size: 14.249999999999998px; } }
       @media only screen and (max-width: 480px) {
         .dashboard .content .website, .dashboard .content .period, .dashboard .content .place {
           font-size: 13.5px; } }

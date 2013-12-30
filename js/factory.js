@@ -366,7 +366,53 @@ module.factory('getStarted',['$http',function($http) {
         //skills
         //TODO: save skills
         //we do that to avoid creating a new object
+		
+		this.resume.ContactInfo.Name = this.resumeInfo.contactInfo.name.value;
+		this.resume.ContactInfo.FirstName=this.resumeInfo.contactInfo.firstName.value;
+		this.resume.ContactInfo.LastName=this.resumeInfo.contactInfo.lastName.value;
+		this.resume.ContactInfo.Mail=this.resumeInfo.contactInfo.email.value;
+		this.resume.ContactInfo.Phone=this.resumeInfo.contactInfo.phone.value;
+		this.resume.ContactInfo.Mobile=this.resumeInfo.contactInfo.mobile.value;
+		//address
+		this.resume.ContactInfo.Address.State=this.resumeInfo.contactInfo.address.state.value;
+		this.resume.ContactInfo.Address.Zipcode=this.resumeInfo.contactInfo.address.zipCode.value;
+		this.resume.ContactInfo.Address.City=this.resumeInfo.contactInfo.address.city.value;
+		this.resume.ContactInfo.Address.Apt=this.resumeInfo.contactInfo.address.apt.value;
+		this.resume.ContactInfo.Address.Street=this.resumeInfo.contactInfo.address.street.value;
+		this.resume.ContactInfo.State.Completed=this.resumeInfo.contactInfo.state.completed;
+		//job
+		this.resume.Job.Title=this.resumeInfo.job.title.name.value;
+		this.resume.Job.Company=this.resumeInfo.job.company.name.value;
+		this.resume.Job.Location=this.resumeInfo.job.location.value;
+		this.resume.Job.StartDate.Month=this.resumeInfo.job.startDate.month.value;
+		this.resume.Job.StartDate.Year=this.resumeInfo.job.startDate.year.value;
+		this.resume.Job.EndDate.Month=this.resumeInfo.job.endDate.month.value;
+		this.resume.Job.EndDate.Year=this.resumeInfo.job.endDate.year.value;
+		this.resume.Job.Description=this.resumeInfo.job.description.value;
+		this.resume.Job.State.Completed=this.resumeInfo.job.state.completed;
+		//education
+		this.resume.Education.Type.Name=this.resumeInfo.education.type.name.value;
+		this.resume.Education.Specialization=this.resumeInfo.education.specialization.value;
+		this.resume.Education.Institution=this.resumeInfo.education.institution.value;
+		this.resume.Education.Location=this.resumeInfo.education.location.value;
+		this.resume.Education.DateGraduated.Month=this.resumeInfo.education.dateGraduated.month.value;
+		this.resume.Education.DateGraduated.Year=this.resumeInfo.education.dateGraduated.year.value;
+		this.resume.Education.State.Completed=this.resumeInfo.education.state.completed;
+		//skills
+		this.resume.Skills.State.Completed=this.resumeInfo.skills.state.completed;
         this.resumeInfo.skills.saved.replace(this.resumeInfo.skills.selected);
+		this.resume.Skills.Skills=this.resumeInfo.skills.saved;
+		//award
+		this.resume.Award.Title=this.resumeInfo.award.title.value;
+		this.resume.Award.AwardDate.Month=this.resumeInfo.award.awardDate.month.value;
+		this.resume.Award.AwardDate.Year=this.resumeInfo.award.awardDate.year.value;
+		this.resume.Award.State.Completed=this.resumeInfo.award.state.completed;
+		//technological skills
+		this.resume.TechnologicalSkills.Description=this.resumeInfo.technologicalSkills.description.value;
+		this.resume.TechnologicalSkills.State.Completed=this.resumeInfo.technologicalSkills.state.completed;
+		//Volunteer, publication & affiliation
+		this.resume.Volunteer.Description=this.resumeInfo.volunteer.description.value;
+		this.resume.Volunteer.State.Completed=this.resumeInfo.volunteer.state.completed;
 
         console.log(this.scope);
 

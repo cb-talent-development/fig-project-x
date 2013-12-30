@@ -13,56 +13,74 @@
 		
 	<div class="button-list left">
 			<div class="button back-white" ng-click="getStartedPage(1)">
-				<i class="icon-completed-check" ng-show="getStarted.resumeInfo.contactInfo.state.completed"></i>
-				<i class="icon-not-completed" ng-show="!getStarted.resumeInfo.contactInfo.state.completed"></i>
+				<div ng-switch="currentResume.ResumeInfo.ContactInfo.State.Completed">
+					<i class="icon-completed-check" ng-switch-when="true"></i>
+					<i class="icon-not-completed" ng-switch-default></i>
+				</div>
 					Contact Information
 				<i class="icon-right-black"></i>
 			</div>
 			<div class="button back-white" ng-click="getStartedPage(2)">
-				<i class="icon-completed-check" ng-show="getStarted.resumeInfo.job.state.completed"></i>
-				<i class="icon-not-completed" ng-show="!getStarted.resumeInfo.job.state.completed"></i>
+				<div ng-switch="currentResume.ResumeInfo.Job.State.Completed">
+					<i class="icon-completed-check" ng-switch-when="true"></i>
+					<i class="icon-not-completed" ng-switch-default></i>
+				</div>
 					Work Experience
 				<i class="icon-right-black"></i>
 			</div>
 			<div class="button back-white" ng-click="getStartedPage(3)">
-				<i class="icon-completed-check" ng-show="getStarted.resumeInfo.education.state.completed"></i>
-				<i class="icon-not-completed" ng-show="!getStarted.resumeInfo.education.state.completed"></i>
+				<div ng-switch="currentResume.ResumeInfo.Education.State.Completed">
+					<i class="icon-completed-check" ng-switch-when="true"></i>
+					<i class="icon-not-completed" ng-switch-default></i>
+				</div>
 					Education & Career Training
 				<i class="icon-right-black"></i>
 			</div>
 			<div class="button back-white" ng-click="getStartedPage(3)">
-				<i class="icon-completed-check" ng-show="getStarted.resumeInfo.skills.state.completed"></i>
-				<i class="icon-not-completed" ng-show="!getStarted.resumeInfo.skills.state.completed"></i>
+				<div ng-switch="currentResume.ResumeInfo.Skills.State.Completed">
+					<i class="icon-completed-check" ng-switch-when="true"></i>
+					<i class="icon-not-completed" ng-switch-default></i>
+				</div>
 					Skills
 				<i class="icon-right-black"></i>
 			</div>
 			<div class="button back-white" ng-click="getStartedPage(4)">
-				<i class="icon-completed-check" ng-show="getStarted.resumeInfo.award.state.completed"></i>
-				<i class="icon-not-completed" ng-show="!getStarted.resumeInfo.award.state.completed"></i>
+				<div ng-switch="currentResume.ResumeInfo.Award.State.Completed">
+					<i class="icon-completed-check" ng-switch-when="true"></i>
+					<i class="icon-not-completed" ng-switch-default></i>
+				</div>
 					Awards & Honors
 				<i class="icon-right-black"></i>
 			</div>
 			<div class="button back-white" ng-click="getStartedPage(4)">
-				<i class="icon-completed-check" ng-show="getStarted.resumeInfo.technologicalSkills.state.completed"></i>
-				<i class="icon-not-completed" ng-show="!getStarted.resumeInfo.technologicalSkills.state.completed"></i>
+				<div ng-switch="currentResume.ResumeInfo.TechnologicalSkills.State.Completed">
+					<i class="icon-completed-check" ng-switch-when="true"></i>
+					<i class="icon-not-completed" ng-switch-default></i>
+				</div>
 					Tools & Technology
 				<i class="icon-right-black"></i>
 			</div>
 			<div class="button back-white" ng-click="getStartedPage(5)">
-				<i class="icon-completed-check" ng-show="getStarted.resumeInfo.volunteer.state.completed"></i>
-				<i class="icon-not-completed" ng-show="!getStarted.resumeInfo.volunteer.state.completed"></i>
+				<div ng-switch="currentResume.ResumeInfo.Volunteer.State.Completed">
+					<i class="icon-completed-check" ng-switch-when="true"></i>
+					<i class="icon-not-completed" ng-switch-default></i>
+				</div>
 					Publications
 				<i class="icon-right-black"></i>
 			</div>
 			<div class="button back-white" ng-click="getStartedPage(5)">
-				<i class="icon-completed-check" ng-show="getStarted.resumeInfo.volunteer.state.completed"></i>
-				<i class="icon-not-completed" ng-show="!getStarted.resumeInfo.volunteer.state.completed"></i>
+				<div ng-switch="currentResume.ResumeInfo.Volunteer.State.Completed">
+					<i class="icon-completed-check" ng-switch-when="true"></i>
+					<i class="icon-not-completed" ng-switch-default></i>
+				</div>
 					Affiliations
 				<i class="icon-right-black"></i>
 			</div>
 			<div class="button back-white" ng-click="getStartedPage(5)">
-				<i class="icon-completed-check" ng-show="getStarted.resumeInfo.volunteer.state.completed"></i>
-				<i class="icon-not-completed" ng-show="!getStarted.resumeInfo.volunteer.state.completed"></i>
+				<div ng-switch="currentResume.ResumeInfo.Volunteer.State.Completed">
+					<i class="icon-completed-check" ng-switch-when="true"></i>
+					<i class="icon-not-completed" ng-switch-default></i>
+				</div>
 					Volunteer Work
 				<i class="icon-right-black"></i>
 			</div>
@@ -120,17 +138,19 @@
 					<span class"title">Select Your Template</span><i class="icon-x-black close" onclick="disparition($('.template-resume'))"></i>
 				</div>
 				<div class="content">
-					<div class="left divider">
-						<div class="label">DOCUMENT TYPE</div>
-						<div class="button link toggleMenu">{{ selectedTemplate }}<i class="icon-bigarrow-bottom-grey"></i>
-							<ul class="subMenu dropdown">
-								<li ng-repeat="template in templates" select data-value="template" data-elem="selectedTemplate">{{ template }}</li>
-							</ul>
+					<div class="left large-resp">
+						<div class="message">DOCUMENT TYPE</div>
+						<div class="select large-resp toggleMenu">{{ changeType }}<i class="icon-bigarrow-bottom-grey"></i>
+							<div class="subMenu">
+								<div ng-repeat="template in getStarted.lists.docTypes" select data-value="template" data-elem="changeType">{{ template }}</div>
+							</div>
 						</div>
 					</div>
-					<div class="left divider">
-						<div class="label">DOCUMENT NAME</div>
-						<input placeholder="Freshstart, New"/>
+					<div class="left large large-resp">
+						<div class="message">DOCUMENT NAME</div>
+						<div class="input-button large-resp">
+							<input placeholder="Freshstart, New"/>
+						</div>
 					</div>
 					<div class="clear"></div>
 				</div>
@@ -166,17 +186,19 @@
 					<span class"title">Export Resume</span><i class="icon-x-black close" onclick="disparition($('.export-resume'))"></i>
 				</div>
 				<div class="content">
-					<div class="divider left">
-						<div class="label">DOCUMENT TYPE</div>
-						<div class="button link toggleMenu">{{ selectedType }}<i class="icon-bigarrow-bottom-grey"></i>
-							<ul class="subMenu dropdown">
-								<li ng-repeat="type in types" select data-value="type" data-elem="selectedType">{{ type }}</li>
-							</ul>
+					<div class="left large-resp">
+						<div class="message">DOCUMENT TYPE</div>
+						<div class="select large-resp toggleMenu">{{ exportType }}<i class="icon-bigarrow-bottom-grey"></i>
+							<div class="subMenu">
+								<div ng-repeat="type in getStarted.lists.docTypes" select data-value="type" data-elem="exportType">{{ type }}</div>
+							</div>
 						</div>
 					</div>
-					<div class="divider left">
-						<div class="label">SAVE AS</div>
-						<input placeholder="Freshstart, New"></input>
+					<div class="left large large-resp">
+						<div class="message">SAVE AS</div>
+						<div class="input-button large-resp">
+							<input placeholder="Freshstart, New"></input>
+						</div>
 					</div>
 					<div class="clear"></div>
 				</div>

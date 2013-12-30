@@ -1008,7 +1008,7 @@ RESUME HERO
 	}
 }
 
-.get-started-resume{
+.get-started-resume, .template-resume, .export-resume, .delete-resume{
 	.section{
 		.content{
 			.label{
@@ -1235,7 +1235,7 @@ RESUME HERO POP
 			.scrollable-content{
 				width:80%;
 				height:82%;
-				@media(max-width: 479px){
+				@media(max-width: 767px){
 					width: 100%;
 					height: 80%;
 				}
@@ -1248,15 +1248,14 @@ RESUME HERO POP
 				text-transform:uppercase;
 				height:100%;
 				width:303.5px;
-				@media(max-width: 479px){
-					width: 100px;
+				@media(max-width: 767px){
+					width: 140px;
 				}
 				@include inline-top;
 			}
 			.pages{
 				text-align:center;
-				@media(max-width: 479px){
-					border-top: 1px $grey solid;
+				@media(max-width: 767px){
 					padding-top: 13px;
 				}
 				.activated{
@@ -1280,15 +1279,12 @@ RESUME HERO POP
 			.icon-arrow-left-big-blue,.icon-arrow-right-big-blue{
 				position:absolute;top:64%;margin-top:-26px;
 				@include no_select;
-				@media(max-width: 479px){
-					top: 96%;
-				}
 			}
-			.icon-arrow-left-big-blue{
-				left:40px;
+			.icon-arrow-left-big-blue{left:40px;
+				@media only screen and (max-width: 767px){left: 20px;}
 			}
-			.icon-arrow-right-big-blue{
-				right:40px;
+			.icon-arrow-right-big-blue{right:40px;
+				@media only screen and (max-width: 767px){right: 20px;}
 			}
 			i:hover{
 				cursor:pointer;
@@ -1298,26 +1294,24 @@ RESUME HERO POP
 }
 .export-resume, .template-resume{
 	.section{
-		width: 1170px !important;
+		width: 1204px !important;
+		@media only screen and (max-width: 767px){
+			width: 300px !important;
+		}
 		.header{
 			padding-bottom: 20px;
 		}
 		.content{
 			border-bottom: 1px solid $grey;
-			.divider{
-				width: 50%;
-				margin-bottom: 20px;
-				.button, input{
-					height: 60px;
-					width: 500px;
-					font-size: 30px;
-					padding:15px;
-				}		
-				input{
-					@include invert-shadow;
-				}
-			}
 		}
+	}
+}
+
+.export-resume, .template-resume, .delete-resume{
+	
+	.button{
+		padding-top: 14px;
+		padding-bottom: 12px;
 	}
 }
 

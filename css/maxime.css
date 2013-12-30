@@ -808,11 +808,11 @@ RESUME HERO
         border: solid 2px #e6e6e6;
         cursor: pointer; }
 
-.get-started-resume .section .content .label {
+.get-started-resume .section .content .label, .template-resume .section .content .label, .export-resume .section .content .label, .delete-resume .section .content .label {
   font-style: italic;
   max-width: 900px;
   white-space: normal; }
-.get-started-resume .section .content textarea#role, .get-started-resume .section .content textarea#technical-skills, .get-started-resume .section .content textarea#extra-skills {
+.get-started-resume .section .content textarea#role, .get-started-resume .section .content textarea#technical-skills, .get-started-resume .section .content textarea#extra-skills, .template-resume .section .content textarea#role, .template-resume .section .content textarea#technical-skills, .template-resume .section .content textarea#extra-skills, .export-resume .section .content textarea#role, .export-resume .section .content textarea#technical-skills, .export-resume .section .content textarea#extra-skills, .delete-resume .section .content textarea#role, .delete-resume .section .content textarea#technical-skills, .delete-resume .section .content textarea#extra-skills {
   box-shadow: 0px -1px 1px rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: 0px -1px 1px rgba(0, 0, 0, 0.2);
   border: none;
@@ -823,61 +823,61 @@ RESUME HERO
   font-size: 25px;
   padding: 15px; }
   @media only screen and (max-width: 768px) {
-    .get-started-resume .section .content textarea#role, .get-started-resume .section .content textarea#technical-skills, .get-started-resume .section .content textarea#extra-skills {
+    .get-started-resume .section .content textarea#role, .get-started-resume .section .content textarea#technical-skills, .get-started-resume .section .content textarea#extra-skills, .template-resume .section .content textarea#role, .template-resume .section .content textarea#technical-skills, .template-resume .section .content textarea#extra-skills, .export-resume .section .content textarea#role, .export-resume .section .content textarea#technical-skills, .export-resume .section .content textarea#extra-skills, .delete-resume .section .content textarea#role, .delete-resume .section .content textarea#technical-skills, .delete-resume .section .content textarea#extra-skills {
       font-size: 17px; } }
-.get-started-resume .section .content textarea#extra-skills {
+.get-started-resume .section .content textarea#extra-skills, .template-resume .section .content textarea#extra-skills, .export-resume .section .content textarea#extra-skills, .delete-resume .section .content textarea#extra-skills {
   height: 400px; }
   @media only screen and (max-width: 768px) {
-    .get-started-resume .section .content textarea#extra-skills {
+    .get-started-resume .section .content textarea#extra-skills, .template-resume .section .content textarea#extra-skills, .export-resume .section .content textarea#extra-skills, .delete-resume .section .content textarea#extra-skills {
       height: 250px; } }
-.get-started-resume .section .content .little {
+.get-started-resume .section .content .little, .template-resume .section .content .little, .export-resume .section .content .little, .delete-resume .section .content .little {
   width: 173px;
   margin-right: 25px; }
   @media only screen and (max-width: 768px) {
-    .get-started-resume .section .content .little {
+    .get-started-resume .section .content .little, .template-resume .section .content .little, .export-resume .section .content .little, .delete-resume .section .content .little {
       width: 49%;
       margin-right: 2%; } }
-.get-started-resume .section .content .little.last {
+.get-started-resume .section .content .little.last, .template-resume .section .content .little.last, .export-resume .section .content .little.last, .delete-resume .section .content .little.last {
   margin-right: 0px; }
-.get-started-resume .section .content .medium .input-button, .get-started-resume .section .content .medium .select {
+.get-started-resume .section .content .medium .input-button, .get-started-resume .section .content .medium .select, .template-resume .section .content .medium .input-button, .template-resume .section .content .medium .select, .export-resume .section .content .medium .input-button, .export-resume .section .content .medium .select, .delete-resume .section .content .medium .input-button, .delete-resume .section .content .medium .select {
   width: 100%; }
 @media only screen and (max-width: 768px) {
-  .get-started-resume .section .content .message {
+  .get-started-resume .section .content .message, .template-resume .section .content .message, .export-resume .section .content .message, .delete-resume .section .content .message {
     margin-top: 5px; } }
 @media only screen and (max-width: 768px) {
-  .get-started-resume .section .content .large-resp {
+  .get-started-resume .section .content .large-resp, .template-resume .section .content .large-resp, .export-resume .section .content .large-resp, .delete-resume .section .content .large-resp {
     width: 100%; } }
-.get-started-resume .section .content .buttons-changes {
+.get-started-resume .section .content .buttons-changes, .template-resume .section .content .buttons-changes, .export-resume .section .content .buttons-changes, .delete-resume .section .content .buttons-changes {
   margin-top: 15px; }
-  .get-started-resume .section .content .buttons-changes .button-change {
+  .get-started-resume .section .content .buttons-changes .button-change, .template-resume .section .content .buttons-changes .button-change, .export-resume .section .content .buttons-changes .button-change, .delete-resume .section .content .buttons-changes .button-change {
     margin-bottom: 20px; }
-    .get-started-resume .section .content .buttons-changes .button-change .title {
+    .get-started-resume .section .content .buttons-changes .button-change .title, .template-resume .section .content .buttons-changes .button-change .title, .export-resume .section .content .buttons-changes .button-change .title, .delete-resume .section .content .buttons-changes .button-change .title {
       color: #9d9d9d; }
-    .get-started-resume .section .content .buttons-changes .button-change .txt {
+    .get-started-resume .section .content .buttons-changes .button-change .txt, .template-resume .section .content .buttons-changes .button-change .txt, .export-resume .section .content .buttons-changes .button-change .txt, .delete-resume .section .content .buttons-changes .button-change .txt {
       margin-top: 10px;
       color: #9d9d9d;
       margin-left: 30px;
       font-size: 14px; }
   @media only screen and (max-width: 768px) {
-    .get-started-resume .section .content .buttons-changes {
+    .get-started-resume .section .content .buttons-changes, .template-resume .section .content .buttons-changes, .export-resume .section .content .buttons-changes, .delete-resume .section .content .buttons-changes {
       margin-top: 10px; }
-      .get-started-resume .section .content .buttons-changes .button-change {
+      .get-started-resume .section .content .buttons-changes .button-change, .template-resume .section .content .buttons-changes .button-change, .export-resume .section .content .buttons-changes .button-change, .delete-resume .section .content .buttons-changes .button-change {
         margin-bottom: 10px; } }
-  .get-started-resume .section .content .buttons-changes .button-change.selected .title {
+  .get-started-resume .section .content .buttons-changes .button-change.selected .title, .template-resume .section .content .buttons-changes .button-change.selected .title, .export-resume .section .content .buttons-changes .button-change.selected .title, .delete-resume .section .content .buttons-changes .button-change.selected .title {
     color: black; }
-  .get-started-resume .section .content .buttons-changes .button-change.selected .txt {
+  .get-started-resume .section .content .buttons-changes .button-change.selected .txt, .template-resume .section .content .buttons-changes .button-change.selected .txt, .export-resume .section .content .buttons-changes .button-change.selected .txt, .delete-resume .section .content .buttons-changes .button-change.selected .txt {
     color: black; }
   @media only screen and (max-width: 768px) {
-    .get-started-resume .section .content .buttons-changes .button-change.medium {
+    .get-started-resume .section .content .buttons-changes .button-change.medium, .template-resume .section .content .buttons-changes .button-change.medium, .export-resume .section .content .buttons-changes .button-change.medium, .delete-resume .section .content .buttons-changes .button-change.medium {
       width: 100%;
       margin-right: 0px; } }
-  .get-started-resume .section .content .buttons-changes .first {
+  .get-started-resume .section .content .buttons-changes .first, .template-resume .section .content .buttons-changes .first, .export-resume .section .content .buttons-changes .first, .delete-resume .section .content .buttons-changes .first {
     margin-top: 0px; }
 @media only screen and (min-width: 768px) {
-  .get-started-resume .section .margin-bottom {
+  .get-started-resume .section .margin-bottom, .template-resume .section .margin-bottom, .export-resume .section .margin-bottom, .delete-resume .section .margin-bottom {
     margin-bottom: 25px !important; } }
 @media only screen and (min-width: 768px) {
-  .get-started-resume .section .margin-top {
+  .get-started-resume .section .margin-top, .template-resume .section .margin-top, .export-resume .section .margin-top, .delete-resume .section .margin-top {
     margin-top: 25px !important; } }
 
 /*
@@ -996,7 +996,7 @@ RESUME HERO POP
 .template-resume .section .content .scrollable-content {
   width: 80%;
   height: 82%; }
-  @media (max-width: 479px) {
+  @media (max-width: 767px) {
     .template-resume .section .content .scrollable-content {
       width: 100%;
       height: 80%; } }
@@ -1009,14 +1009,13 @@ RESUME HERO POP
   width: 303.5px;
   display: inline-block;
   vertical-align: top; }
-  @media (max-width: 479px) {
+  @media (max-width: 767px) {
     .template-resume .section .content .save {
-      width: 100px; } }
+      width: 140px; } }
 .template-resume .section .content .pages {
   text-align: center; }
-  @media (max-width: 479px) {
+  @media (max-width: 767px) {
     .template-resume .section .content .pages {
-      border-top: 1px #9d9d9d solid;
       padding-top: 13px; } }
   .template-resume .section .content .pages .activated {
     background-color: #09335b !important; }
@@ -1042,35 +1041,32 @@ RESUME HERO POP
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none; }
-  @media (max-width: 479px) {
-    .template-resume .section .template-content .icon-arrow-left-big-blue, .template-resume .section .template-content .icon-arrow-right-big-blue {
-      top: 96%; } }
 .template-resume .section .template-content .icon-arrow-left-big-blue {
   left: 40px; }
+  @media only screen and (max-width: 767px) {
+    .template-resume .section .template-content .icon-arrow-left-big-blue {
+      left: 20px; } }
 .template-resume .section .template-content .icon-arrow-right-big-blue {
   right: 40px; }
+  @media only screen and (max-width: 767px) {
+    .template-resume .section .template-content .icon-arrow-right-big-blue {
+      right: 20px; } }
 .template-resume .section .template-content i:hover {
   cursor: pointer; }
 
 .export-resume .section, .template-resume .section {
-  width: 1170px !important; }
+  width: 1204px !important; }
+  @media only screen and (max-width: 767px) {
+    .export-resume .section, .template-resume .section {
+      width: 300px !important; } }
   .export-resume .section .header, .template-resume .section .header {
     padding-bottom: 20px; }
   .export-resume .section .content, .template-resume .section .content {
     border-bottom: 1px solid #9d9d9d; }
-    .export-resume .section .content .divider, .template-resume .section .content .divider {
-      width: 50%;
-      margin-bottom: 20px; }
-      .export-resume .section .content .divider .button, .export-resume .section .content .divider input, .template-resume .section .content .divider .button, .template-resume .section .content .divider input {
-        height: 60px;
-        width: 500px;
-        font-size: 30px;
-        padding: 15px; }
-      .export-resume .section .content .divider input, .template-resume .section .content .divider input {
-        box-shadow: 0px -1px 1px rgba(0, 0, 0, 0.2);
-        -webkit-box-shadow: 0px -1px 1px rgba(0, 0, 0, 0.2);
-        border: none;
-        background: white; }
+
+.export-resume .button, .template-resume .button, .delete-resume .button {
+  padding-top: 14px;
+  padding-bottom: 12px; }
 
 /*
 HEADER TOOL
