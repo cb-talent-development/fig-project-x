@@ -145,12 +145,12 @@ $sprite-height: 3597px;
     width:$total-width; //default padding
     display:block;
     margin:auto;
-	/*@media only screen and (max-width: 1200px) and (min-width: 980px){
+	@media only screen and (max-width: 1200px) and (min-width: 980px){
         width:975px;
     }
 	@media only screen and (max-width: 979px) and (min-width: 768px){
         width:765px;
-    }*/
+    }
     @media only screen and (max-width: 768px){
         width:95%;
     }
@@ -665,6 +665,31 @@ Font handler
     @include media-font-size-2-3;
 
 
+}@mixin font-size-2-3{
+    h2.title{
+        overflow:hidden;
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+        font-size:28px;
+        line-height:30px;
+	}
+	h3.subtitle{
+		overflow:hidden;
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+        font-size:18px;line-height:20px;
+	}
+	div.text{
+		overflow:hidden;
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+        font-size:15px;
+        line-height:20px;
+	}
+    @include font-family;
+    @include media-font-size-2-3;
+
+
 }
 @mixin font-size-3{
     h2.title{
@@ -727,13 +752,10 @@ HOMEPAGE SCROLLABLE CONTENT
 */
 
 .first-connect{
-	@include main-block;
     margin:auto;
 	text-align: center;
 	position: relative;
-    @media only screen and (max-width: 768px){
-        width:100%;
-    }
+    width:100%;
     .content{
         text-align:left;
         .scrollable{
@@ -1166,6 +1188,9 @@ HEADER BUTTONS
         padding-bottom:8px;
         padding-left:15px;
 		width: 100%;
+		@media only screen and (max-width: 1024px){
+			padding-right: 5px;
+		}
 	}
 	a:hover{
 		text-decoration:none;
@@ -1179,8 +1204,11 @@ HEADER BUTTONS
 }
 
 .dubble.open{
-	@media (min-width: 768px){
+	@media (min-width: 1025px){
 		width: 369px !important;
+	}
+	@media (min-width: 769px) and (max-width: 1024px){
+		width: 308px !important;
 	}
 	@media (max-width: 768px){
 		width: 300px !important;
@@ -1269,6 +1297,9 @@ Width
 */
 @mixin big-width{
     float:left;width:$total-width;margin-left:15px;margin-right:15px;
+	@media only screen and (max-width: 1024px) and (min-width: 769px){
+		width: 975px;
+	}
 	@media only screen and (max-width: 768px){
 	/*	width: 630px;margin-left:5px;margin-right:5px;
 	}
@@ -1281,6 +1312,9 @@ Width
 }
 @mixin med-width{
     float:left;width:370px;margin-left:15px;margin-right:15px;
+	@media only screen and (max-width: 1024px){
+		width: 305px;
+	}
     @media only screen and (max-width: 768px){
 	/*	width: 203.3px;margin-left:5px;margin-right:5px;
 	}
@@ -1709,10 +1743,17 @@ Article type 1
     h2.title{
         line-height:60px;
 		padding: 30px;padding-bottom: 0px;
-        margin:0px;margin-bottom:5px;
+        margin: 0px;margin-bottom:5px;
         width: 800px;
 		float: right;
 		-webkit-line-clamp: 2;
+        @media only screen and (max-width: 1024px) and (min-width: 769px){
+			width: 80%;
+            padding-top:15px;padding-left:15px;padding-right:15px;
+            min-height:20%;
+            margin-bottom:12px;
+			float: left;
+		}
         @media only screen and (max-width: 768px) {
 			width: 100%;
             padding-top:15px;padding-left:15px;padding-right:15px;
@@ -1723,6 +1764,9 @@ Article type 1
     .left{
         float:left;
         width:363px;
+        @media only screen and (max-width: 1024px) {
+			width: 400px;
+		}
         @media only screen and (max-width: 768px) {
 			width: 105px;
 		}
@@ -1730,7 +1774,9 @@ Article type 1
     .right{
         float:left;
         width:800px;
-        @media only screen and (max-width: 768px) {
+        @media only screen and (max-width: 1024px) {
+			width: 568px;
+		}@media only screen and (max-width: 768px) {
 			width: 190px;
 		}
     }
@@ -1815,7 +1861,30 @@ Article type 1
 Small A2 or A3
 */
 @mixin a-small{
-     @media only screen and (max-width: 768px){
+     @media only screen and (max-width: 1024px) and (min-width: 769px){
+        @include phone-height;
+        //to be sure
+        .not-pictured .left,.not-pictured .right{
+            width: 100%;
+        }
+		.pictured .left{
+			width: 105px;
+		}
+		.pictured .right{
+			width: 193px;
+		}
+		.pictured{
+			.title{
+				width: 100%;
+				padding: 15px;
+			}
+		}
+		.pictured, .not-pictured{	
+			@include font-size-2-3;
+		}
+        @include font-size-2;
+    }
+	@media only screen and (max-width: 768px){
         @include phone-height;
         //to be sure
         .pictured .left,.pictured .right,.not-pictured .left,.not-pictured .right{
@@ -3282,8 +3351,10 @@ Tool CSS
         .icon-bar-grey{
             margin:9px;
         }
-		@media only screen and (max-width: 768px){
+		@media only screen and (max-width: 1024px){
 			width: 100%;
+		}
+		@media only screen and (max-width: 768px){
 			height: 280px;
 			margin: 0px;
 			margin-bottom: 10px;
@@ -3485,6 +3556,9 @@ Tool CSS
                     font-family:"HelveticaThinCondensed";
                 }
             }
+			@media only screen and (max-width: 1024px){
+				width: 43.7%;
+			}
             @media only screen and (max-width: 768px){
 				width: 100%;
                 float:left;
@@ -3614,6 +3688,9 @@ Tool CSS
 	.add-section{
 		.section{
 			width: 1200px;
+			@media only screen and (max-width: 1024px){
+				width: 1000px;
+			}
 			@media only screen and (max-width: 768px){
 				width: 90%;
 				.header{
@@ -3848,7 +3925,7 @@ SOCIAL
 .dashboard-popup, .get-started-resume, .template-resume, .export-resume, .delete-resume{
     .scrollable-content{
         width:1250px;
-        @media only screen and (max-width: 768px){
+		@media only screen and (max-width: 1024px){
             width:100%;
         }
     }
@@ -3856,6 +3933,9 @@ SOCIAL
         //option 1
         width:800%;
         min-width:8 * 1250px;
+        @media only screen and (max-width: 1024px){
+            min-width:8 * 1000px;
+        }
         @media only screen and (max-width: 768px){
             min-width:0px;
         }
@@ -3867,6 +3947,9 @@ SOCIAL
     .section{
         //width:90%;
         width:1204px;
+		@media only screen and (max-width: 1024px){
+            width:1000px;
+        }
         @media only screen and (max-width: 768px){
             width:90%;
         }
@@ -3948,6 +4031,9 @@ SOCIAL
             }
         }
         .medium{width:370px;margin-right:25px;
+            @media only screen and (max-width: 1024px){
+                width:303px;
+            }   
             @media only screen and (max-width: 768px){
                 width:49%;
                 margin-right:2%;
@@ -3972,6 +4058,11 @@ SOCIAL
             .street{margin-bottom:20px;}
             .large{
                width:365px;margin-right:25px;
+			   @media only screen and (max-width: 1024px){
+                    width:363px;
+                    margin-right:2%;
+                    margin-bottom:10px;
+                }
                @media only screen and (max-width: 768px){
                     width:49%;
                     margin-right:2%;
@@ -4543,8 +4634,10 @@ Career Scape
     canvas{
         background-color:white;
         margin:auto;cursor:move;padding:0px;display:block;z-index:1;
-		@media only screen and (max-width:768px){
+		@media only screen and (max-width:1024px){
 			width: 100%;
+		}
+		@media only screen and (max-width:768px){
 			margin: 0px;
 		}
     }
@@ -5148,6 +5241,9 @@ Dashboard
     .content{
         .col-left,.col-right{
             width:370px;
+			@media only screen and (max-width: 1024px){
+                width:308px;
+            }
             @media only screen and (max-width: 768px){
                 width:100%;
             }
@@ -5232,7 +5328,7 @@ Dashboard
             .period{margin-bottom:3px;}
             .detail{
                 padding-bottom:40px;
-                @media only screen and (max-width: 768px){
+                @media only screen and (max-width: 1024px){
                     padding-bottom:25px;    
                 }
                 
@@ -5243,8 +5339,13 @@ Dashboard
            .occupation,.income{
                 text-transform:uppercase;
                 padding-left:15px;padding-right:15px;
+				@media only screen and (max-width: 1024px){
+                    padding-left:12px;
+					width: 100%;
+                    margin-bottom:10px;
+                }
                 @media only screen and (max-width: 768px){
-                    padding-left:12px;padding-right:12px;
+                    padding-left:12px;
                     margin-bottom:5px;
                 }
             }
@@ -5319,6 +5420,7 @@ Dashboard
                 margin-bottom:20px;
                 background:rgb(92,26,71);
             }
+			@media only screen and (max-width: 1024px){.skill,.add-elem{width: 45%;}}
         }
         .technology{
             .add-elem,.add-elem-input input,.technology-elem{

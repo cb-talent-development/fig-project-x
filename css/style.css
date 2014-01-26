@@ -118,13 +118,13 @@ General buttons classes
 .main-container {
   width: 1170px;
   display: block;
-  margin: auto;
-  	/*@media only screen and (max-width: 1200px) and (min-width: 980px){
-          width:975px;
-      }
-  	@media only screen and (max-width: 979px) and (min-width: 768px){
-          width:765px;
-      }*/ }
+  margin: auto; }
+  @media only screen and (max-width: 1200px) and (min-width: 980px) {
+    .main-container {
+      width: 975px; } }
+  @media only screen and (max-width: 979px) and (min-width: 768px) {
+    .main-container {
+      width: 765px; } }
   @media only screen and (max-width: 768px) {
     .main-container {
       width: 95%; } }
@@ -413,13 +413,13 @@ Font handler
 .home-main-container {
   width: 1170px;
   display: block;
-  margin: auto;
-  	/*@media only screen and (max-width: 1200px) and (min-width: 980px){
-          width:975px;
-      }
-  	@media only screen and (max-width: 979px) and (min-width: 768px){
-          width:765px;
-      }*/ }
+  margin: auto; }
+  @media only screen and (max-width: 1200px) and (min-width: 980px) {
+    .home-main-container {
+      width: 975px; } }
+  @media only screen and (max-width: 979px) and (min-width: 768px) {
+    .home-main-container {
+      width: 765px; } }
   @media only screen and (max-width: 768px) {
     .home-main-container {
       width: 95%; } }
@@ -450,24 +450,10 @@ Security
 HOMEPAGE SCROLLABLE CONTENT
 */
 .first-connect {
-  width: 1170px;
-  display: block;
-  margin: auto;
-  	/*@media only screen and (max-width: 1200px) and (min-width: 980px){
-          width:975px;
-      }
-  	@media only screen and (max-width: 979px) and (min-width: 768px){
-          width:765px;
-      }*/
   margin: auto;
   text-align: center;
-  position: relative; }
-  @media only screen and (max-width: 768px) {
-    .first-connect {
-      width: 95%; } }
-  @media only screen and (max-width: 768px) {
-    .first-connect {
-      width: 100%; } }
+  position: relative;
+  width: 100%; }
   .first-connect .content {
     text-align: left; }
     .first-connect .content .scrollable {
@@ -647,13 +633,13 @@ Header css
       width: 1170px;
       display: block;
       margin: auto;
-      	/*@media only screen and (max-width: 1200px) and (min-width: 980px){
-              width:975px;
-          }
-      	@media only screen and (max-width: 979px) and (min-width: 768px){
-              width:765px;
-          }*/
       text-align: center; } }
+    @media only screen and (max-width: 768px) and (max-width: 1200px) and (min-width: 980px) {
+      .page-header {
+        width: 975px; } }
+    @media only screen and (max-width: 768px) and (max-width: 979px) and (min-width: 768px) {
+      .page-header {
+        width: 765px; } }
     @media only screen and (max-width: 768px) and (max-width: 768px) {
       .page-header {
         width: 95%; } }
@@ -838,15 +824,21 @@ HEADER BUTTONS
       top: 50% !important;
       left: 10px;
       margin-top: -11px; }
+    @media only screen and (max-width: 1024px) {
+      .dropdown li {
+        padding-right: 5px; } }
   .dropdown a:hover {
     text-decoration: none; }
 
 .dropdown > li li:nth-child(odd) {
   background-color: #eee; }
 
-@media (min-width: 768px) {
+@media (min-width: 1025px) {
   .dubble.open {
     width: 369px !important; } }
+@media (min-width: 769px) and (max-width: 1024px) {
+  .dubble.open {
+    width: 308px !important; } }
 @media (max-width: 768px) {
   .dubble.open {
     width: 300px !important; } }
@@ -901,6 +893,9 @@ Width
   width: 1170px;
   margin-left: 15px;
   margin-right: 15px; }
+  @media only screen and (max-width: 1024px) and (min-width: 769px) {
+    .col-type-1 {
+      width: 975px; } }
   @media only screen and (max-width: 768px) {
     .col-type-1 {
       	/*	width: 630px;margin-left:5px;margin-right:5px;
@@ -919,6 +914,9 @@ Width
   width: 370px;
   margin-left: 15px;
   margin-right: 15px; }
+  @media only screen and (max-width: 1024px) {
+    .col-type-2 {
+      width: 305px; } }
   @media only screen and (max-width: 768px) {
     .col-type-2 {
       	/*	width: 203.3px;margin-left:5px;margin-right:5px;
@@ -1096,15 +1094,15 @@ Menu with multiple button
   width: 1170px;
   display: block;
   margin: auto;
-  	/*@media only screen and (max-width: 1200px) and (min-width: 980px){
-          width:975px;
-      }
-  	@media only screen and (max-width: 979px) and (min-width: 768px){
-          width:765px;
-      }*/
   margin: auto;
   padding-top: 40px;
   padding-bottom: 40px; }
+  @media only screen and (max-width: 1200px) and (min-width: 980px) {
+    .menu-buttons {
+      width: 975px; } }
+  @media only screen and (max-width: 979px) and (min-width: 768px) {
+    .menu-buttons {
+      width: 765px; } }
   @media only screen and (max-width: 768px) {
     .menu-buttons {
       width: 95%; } }
@@ -1715,6 +1713,15 @@ Article type 1
     width: 800px;
     float: right;
     -webkit-line-clamp: 2; }
+    @media only screen and (max-width: 1024px) and (min-width: 769px) {
+      .a1 h2.title {
+        width: 80%;
+        padding-top: 15px;
+        padding-left: 15px;
+        padding-right: 15px;
+        min-height: 20%;
+        margin-bottom: 12px;
+        float: left; } }
     @media only screen and (max-width: 768px) {
       .a1 h2.title {
         width: 100%;
@@ -1726,12 +1733,18 @@ Article type 1
   .a1 .left {
     float: left;
     width: 363px; }
+    @media only screen and (max-width: 1024px) {
+      .a1 .left {
+        width: 400px; } }
     @media only screen and (max-width: 768px) {
       .a1 .left {
         width: 105px; } }
   .a1 .right {
     float: left;
     width: 800px; }
+    @media only screen and (max-width: 1024px) {
+      .a1 .right {
+        width: 568px; } }
     @media only screen and (max-width: 768px) {
       .a1 .right {
         width: 190px; } }
@@ -1923,6 +1936,94 @@ Article type 2
   .a2 .pictured .left {
     float: left;
     clear: left; }
+  @media only screen and (max-width: 1024px) and (min-width: 769px) {
+    .a2 {
+      margin-bottom: 30px; }
+      .a2 .not-pictured .left, .a2 .not-pictured .right {
+        width: 100%; }
+      .a2 .pictured .left {
+        width: 105px; }
+      .a2 .pictured .right {
+        width: 193px; }
+      .a2 .pictured .title {
+        width: 100%;
+        padding: 15px; }
+      .a2 .pictured h2.title, .a2 .not-pictured h2.title {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        font-size: 28px;
+        line-height: 30px; }
+      .a2 .pictured h3.subtitle, .a2 .not-pictured h3.subtitle {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        font-size: 18px;
+        line-height: 20px; }
+      .a2 .pictured div.text, .a2 .not-pictured div.text {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        font-size: 15px;
+        line-height: 20px; }
+      .a2 .pictured h2.title, .a2 .not-pictured h2.title {
+        font-family: HelveticaLightCondensed, sans-serif; }
+      .a2 .pictured h3.subtitle, .a2 .not-pictured h3.subtitle {
+        font-family: HelveticaThinCondensed , sans-serif; }
+      .a2 .pictured div.comment, .a2 .not-pictured div.comment {
+        font-family: HelveticaThinCondensed, sans-serif; }
+      .a2 .pictured div.text, .a2 .not-pictured div.text {
+        font-family: HelveticaRoman  , sans-serif; }
+      .a2 h2.title {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        font-size: 35px;
+        line-height: 38px; }
+      .a2 h3.subtitle {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        font-size: 18px;
+        line-height: 20px; }
+      .a2 div.text {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        font-size: 15px;
+        line-height: 20px; }
+      .a2 h2.title {
+        font-family: HelveticaLightCondensed, sans-serif; }
+      .a2 h3.subtitle {
+        font-family: HelveticaThinCondensed , sans-serif; }
+      .a2 div.comment {
+        font-family: HelveticaThinCondensed, sans-serif; }
+      .a2 div.text {
+        font-family: HelveticaRoman  , sans-serif; } }
+    @media only screen and (max-width: 1024px) and (min-width: 769px) and (max-width: 768px) {
+      .a2 {
+        margin-bottom: 10px;
+        height: 225px; } }
+    @media only screen and (max-width: 1024px) and (min-width: 769px) and (max-width: 768px) {
+      .a2 .pictured h2.title, .a2 .not-pictured h2.title {
+        font-size: 17px;
+        line-height: 21px; }
+      .a2 .pictured h3.subtitle, .a2 .not-pictured h3.subtitle {
+        font-size: 12px;
+        line-height: 16px; }
+      .a2 .pictured div.text, .a2 .not-pictured div.text {
+        font-size: 12px;
+        line-height: 16px; } }
+    @media only screen and (max-width: 1024px) and (min-width: 769px) and (max-width: 768px) {
+      .a2 h2.title {
+        font-size: 17px;
+        line-height: 21px; }
+      .a2 h3.subtitle {
+        font-size: 12px;
+        line-height: 16px; }
+      .a2 div.text {
+        font-size: 12px;
+        line-height: 16px; } }
   @media only screen and (max-width: 768px) {
     .a2 {
       margin-bottom: 30px; }
@@ -2083,6 +2184,94 @@ Article type 3
   .a3 .pictured .left {
     float: left;
     clear: left; }
+  @media only screen and (max-width: 1024px) and (min-width: 769px) {
+    .a3 {
+      margin-bottom: 30px; }
+      .a3 .not-pictured .left, .a3 .not-pictured .right {
+        width: 100%; }
+      .a3 .pictured .left {
+        width: 105px; }
+      .a3 .pictured .right {
+        width: 193px; }
+      .a3 .pictured .title {
+        width: 100%;
+        padding: 15px; }
+      .a3 .pictured h2.title, .a3 .not-pictured h2.title {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        font-size: 28px;
+        line-height: 30px; }
+      .a3 .pictured h3.subtitle, .a3 .not-pictured h3.subtitle {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        font-size: 18px;
+        line-height: 20px; }
+      .a3 .pictured div.text, .a3 .not-pictured div.text {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        font-size: 15px;
+        line-height: 20px; }
+      .a3 .pictured h2.title, .a3 .not-pictured h2.title {
+        font-family: HelveticaLightCondensed, sans-serif; }
+      .a3 .pictured h3.subtitle, .a3 .not-pictured h3.subtitle {
+        font-family: HelveticaThinCondensed , sans-serif; }
+      .a3 .pictured div.comment, .a3 .not-pictured div.comment {
+        font-family: HelveticaThinCondensed, sans-serif; }
+      .a3 .pictured div.text, .a3 .not-pictured div.text {
+        font-family: HelveticaRoman  , sans-serif; }
+      .a3 h2.title {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        font-size: 35px;
+        line-height: 38px; }
+      .a3 h3.subtitle {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        font-size: 18px;
+        line-height: 20px; }
+      .a3 div.text {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        font-size: 15px;
+        line-height: 20px; }
+      .a3 h2.title {
+        font-family: HelveticaLightCondensed, sans-serif; }
+      .a3 h3.subtitle {
+        font-family: HelveticaThinCondensed , sans-serif; }
+      .a3 div.comment {
+        font-family: HelveticaThinCondensed, sans-serif; }
+      .a3 div.text {
+        font-family: HelveticaRoman  , sans-serif; } }
+    @media only screen and (max-width: 1024px) and (min-width: 769px) and (max-width: 768px) {
+      .a3 {
+        margin-bottom: 10px;
+        height: 225px; } }
+    @media only screen and (max-width: 1024px) and (min-width: 769px) and (max-width: 768px) {
+      .a3 .pictured h2.title, .a3 .not-pictured h2.title {
+        font-size: 17px;
+        line-height: 21px; }
+      .a3 .pictured h3.subtitle, .a3 .not-pictured h3.subtitle {
+        font-size: 12px;
+        line-height: 16px; }
+      .a3 .pictured div.text, .a3 .not-pictured div.text {
+        font-size: 12px;
+        line-height: 16px; } }
+    @media only screen and (max-width: 1024px) and (min-width: 769px) and (max-width: 768px) {
+      .a3 h2.title {
+        font-size: 17px;
+        line-height: 21px; }
+      .a3 h3.subtitle {
+        font-size: 12px;
+        line-height: 16px; }
+      .a3 div.text {
+        font-size: 12px;
+        line-height: 16px; } }
   @media only screen and (max-width: 768px) {
     .a3 {
       margin-bottom: 30px; }
@@ -3156,15 +3345,15 @@ Load More button
   width: 1170px;
   display: block;
   margin: auto;
-  	/*@media only screen and (max-width: 1200px) and (min-width: 980px){
-          width:975px;
-      }
-  	@media only screen and (max-width: 979px) and (min-width: 768px){
-          width:765px;
-      }*/
   margin-top: 30px;
   margin-bottom: 55px;
   text-align: center; }
+  @media only screen and (max-width: 1200px) and (min-width: 980px) {
+    .load-more {
+      width: 975px; } }
+  @media only screen and (max-width: 979px) and (min-width: 768px) {
+    .load-more {
+      width: 765px; } }
   @media only screen and (max-width: 768px) {
     .load-more {
       width: 95%; } }
@@ -3290,15 +3479,15 @@ POST CSS
   width: 1170px;
   display: block;
   margin: auto;
-  	/*@media only screen and (max-width: 1200px) and (min-width: 980px){
-          width:975px;
-      }
-  	@media only screen and (max-width: 979px) and (min-width: 768px){
-          width:765px;
-      }*/
   /*
   Comment-section
   */ }
+  @media only screen and (max-width: 1200px) and (min-width: 980px) {
+    .post {
+      width: 975px; } }
+  @media only screen and (max-width: 979px) and (min-width: 768px) {
+    .post {
+      width: 765px; } }
   @media only screen and (max-width: 768px) {
     .post {
       width: 95%; } }
@@ -3674,16 +3863,16 @@ Related
   width: 1170px;
   display: block;
   margin: auto;
-  	/*@media only screen and (max-width: 1200px) and (min-width: 980px){
-          width:975px;
-      }
-  	@media only screen and (max-width: 979px) and (min-width: 768px){
-          width:765px;
-      }*/
   font-size: 22px;
   text-transform: uppercase;
   margin-top: 50px;
   margin-bottom: 50px; }
+  @media only screen and (max-width: 1200px) and (min-width: 980px) {
+    .related h2.related-title {
+      width: 975px; } }
+  @media only screen and (max-width: 979px) and (min-width: 768px) {
+    .related h2.related-title {
+      width: 765px; } }
   @media only screen and (max-width: 768px) {
     .related h2.related-title {
       width: 95%; } }
@@ -3695,6 +3884,9 @@ Related
     width: 370px;
     margin-left: 15px;
     margin-right: 15px; }
+    @media only screen and (max-width: 1024px) {
+      .related .related-container .a-small, .related .related-container .a3, .related .related-container .i3, .related .related-container .v3, .related .related-container .v3, .related .related-container .p3 {
+        width: 305px; } }
     @media only screen and (max-width: 768px) {
       .related .related-container .a-small, .related .related-container .a3, .related .related-container .i3, .related .related-container .v3, .related .related-container .v3, .related .related-container .p3 {
         	/*	width: 203.3px;margin-left:5px;margin-right:5px;
@@ -3956,15 +4148,15 @@ Tool CSS
   width: 1170px;
   display: block;
   margin: auto;
-  	/*@media only screen and (max-width: 1200px) and (min-width: 980px){
-          width:975px;
-      }
-  	@media only screen and (max-width: 979px) and (min-width: 768px){
-          width:765px;
-      }*/
   /*
   Button for tools
   */ }
+  @media only screen and (max-width: 1200px) and (min-width: 980px) {
+    .tool {
+      width: 975px; } }
+  @media only screen and (max-width: 979px) and (min-width: 768px) {
+    .tool {
+      width: 765px; } }
   @media only screen and (max-width: 768px) {
     .tool {
       width: 95%; } }
@@ -4025,9 +4217,11 @@ Tool CSS
         cursor: pointer; }
     .tool .header-tool .icon-bar-grey {
       margin: 9px; }
+    @media only screen and (max-width: 1024px) {
+      .tool .header-tool {
+        width: 100%; } }
     @media only screen and (max-width: 768px) {
       .tool .header-tool {
-        width: 100%;
         height: 280px;
         margin: 0px;
         margin-bottom: 10px;
@@ -4216,6 +4410,9 @@ Tool CSS
       .tool .selector .occupations .check-box-1 label {
         margin-bottom: 0px;
         font-family: "HelveticaThinCondensed"; }
+      @media only screen and (max-width: 1024px) {
+        .tool .selector .occupations {
+          width: 43.7%; } }
       @media only screen and (max-width: 768px) {
         .tool .selector .occupations {
           width: 100%;
@@ -4334,6 +4531,9 @@ Tool CSS
       float: right; }
   .tool .add-section .section {
     width: 1200px; }
+    @media only screen and (max-width: 1024px) {
+      .tool .add-section .section {
+        width: 1000px; } }
     @media only screen and (max-width: 768px) {
       .tool .add-section .section {
         width: 90%; }
@@ -4531,12 +4731,15 @@ SOCIAL
 
 .dashboard-popup .scrollable-content, .get-started-resume .scrollable-content, .template-resume .scrollable-content, .export-resume .scrollable-content, .delete-resume .scrollable-content {
   width: 1250px; }
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 1024px) {
     .dashboard-popup .scrollable-content, .get-started-resume .scrollable-content, .template-resume .scrollable-content, .export-resume .scrollable-content, .delete-resume .scrollable-content {
       width: 100%; } }
 .dashboard-popup .scrollable, .get-started-resume .scrollable, .template-resume .scrollable, .export-resume .scrollable, .delete-resume .scrollable {
   width: 800%;
   min-width: 10000px; }
+  @media only screen and (max-width: 1024px) {
+    .dashboard-popup .scrollable, .get-started-resume .scrollable, .template-resume .scrollable, .export-resume .scrollable, .delete-resume .scrollable {
+      min-width: 8000px; } }
   @media only screen and (max-width: 768px) {
     .dashboard-popup .scrollable, .get-started-resume .scrollable, .template-resume .scrollable, .export-resume .scrollable, .delete-resume .scrollable {
       min-width: 0px; } }
@@ -4545,6 +4748,9 @@ SOCIAL
   float: left; }
 .dashboard-popup .section, .get-started-resume .section, .template-resume .section, .export-resume .section, .delete-resume .section {
   width: 1204px; }
+  @media only screen and (max-width: 1024px) {
+    .dashboard-popup .section, .get-started-resume .section, .template-resume .section, .export-resume .section, .delete-resume .section {
+      width: 1000px; } }
   @media only screen and (max-width: 768px) {
     .dashboard-popup .section, .get-started-resume .section, .template-resume .section, .export-resume .section, .delete-resume .section {
       width: 90%; } }
@@ -4645,6 +4851,9 @@ SOCIAL
   .dashboard-popup .section .medium, .get-started-resume .section .medium, .template-resume .section .medium, .export-resume .section .medium, .delete-resume .section .medium {
     width: 370px;
     margin-right: 25px; }
+    @media only screen and (max-width: 1024px) {
+      .dashboard-popup .section .medium, .get-started-resume .section .medium, .template-resume .section .medium, .export-resume .section .medium, .delete-resume .section .medium {
+        width: 303px; } }
     @media only screen and (max-width: 768px) {
       .dashboard-popup .section .medium, .get-started-resume .section .medium, .template-resume .section .medium, .export-resume .section .medium, .delete-resume .section .medium {
         width: 49%;
@@ -4663,6 +4872,11 @@ SOCIAL
   .dashboard-popup .section .address .large, .get-started-resume .section .address .large, .template-resume .section .address .large, .export-resume .section .address .large, .delete-resume .section .address .large {
     width: 365px;
     margin-right: 25px; }
+    @media only screen and (max-width: 1024px) {
+      .dashboard-popup .section .address .large, .get-started-resume .section .address .large, .template-resume .section .address .large, .export-resume .section .address .large, .delete-resume .section .address .large {
+        width: 363px;
+        margin-right: 2%;
+        margin-bottom: 10px; } }
     @media only screen and (max-width: 768px) {
       .dashboard-popup .section .address .large, .get-started-resume .section .address .large, .template-resume .section .address .large, .export-resume .section .address .large, .delete-resume .section .address .large {
         width: 49%;
@@ -5157,13 +5371,13 @@ Locally Grown
   width: 1170px;
   display: block;
   margin: auto;
-  	/*@media only screen and (max-width: 1200px) and (min-width: 980px){
-          width:975px;
-      }
-  	@media only screen and (max-width: 979px) and (min-width: 768px){
-          width:765px;
-      }*/
   height: 590px; }
+  @media only screen and (max-width: 1200px) and (min-width: 980px) {
+    .locallyGrown .mapbox {
+      width: 975px; } }
+  @media only screen and (max-width: 979px) and (min-width: 768px) {
+    .locallyGrown .mapbox {
+      width: 765px; } }
   @media only screen and (max-width: 768px) {
     .locallyGrown .mapbox {
       width: 95%; } }
@@ -5190,9 +5404,11 @@ Career Scape
     padding: 0px;
     display: block;
     z-index: 1; }
+    @media only screen and (max-width: 1024px) {
+      .careerScape canvas {
+        width: 100%; } }
     @media only screen and (max-width: 768px) {
       .careerScape canvas {
-        width: 100%;
         margin: 0px; } }
   .careerScape .canvas-container {
     margin: auto;
@@ -5599,13 +5815,13 @@ Dashboard
 .dashboard {
   width: 1170px;
   display: block;
-  margin: auto;
-  	/*@media only screen and (max-width: 1200px) and (min-width: 980px){
-          width:975px;
-      }
-  	@media only screen and (max-width: 979px) and (min-width: 768px){
-          width:765px;
-      }*/ }
+  margin: auto; }
+  @media only screen and (max-width: 1200px) and (min-width: 980px) {
+    .dashboard {
+      width: 975px; } }
+  @media only screen and (max-width: 979px) and (min-width: 768px) {
+    .dashboard {
+      width: 765px; } }
   @media only screen and (max-width: 768px) {
     .dashboard {
       width: 95%; } }
@@ -5802,6 +6018,9 @@ Dashboard
     */ }
     .dashboard .content .col-left, .dashboard .content .col-right {
       width: 370px; }
+      @media only screen and (max-width: 1024px) {
+        .dashboard .content .col-left, .dashboard .content .col-right {
+          width: 308px; } }
       @media only screen and (max-width: 768px) {
         .dashboard .content .col-left, .dashboard .content .col-right {
           width: 100%; } }
@@ -5889,7 +6108,7 @@ Dashboard
       margin-bottom: 3px; }
     .dashboard .content .work-experience .detail {
       padding-bottom: 40px; }
-      @media only screen and (max-width: 768px) {
+      @media only screen and (max-width: 1024px) {
         .dashboard .content .work-experience .detail {
           padding-bottom: 25px; } }
     .dashboard .content .work-experience .website {
@@ -5898,10 +6117,14 @@ Dashboard
       text-transform: uppercase;
       padding-left: 15px;
       padding-right: 15px; }
+      @media only screen and (max-width: 1024px) {
+        .dashboard .content .work-experience .occupation, .dashboard .content .work-experience .income {
+          padding-left: 12px;
+          width: 100%;
+          margin-bottom: 10px; } }
       @media only screen and (max-width: 768px) {
         .dashboard .content .work-experience .occupation, .dashboard .content .work-experience .income {
           padding-left: 12px;
-          padding-right: 12px;
           margin-bottom: 5px; } }
     .dashboard .content .work-experience .occupation {
       margin-right: 10px; }
@@ -5966,6 +6189,9 @@ Dashboard
       color: white;
       margin-bottom: 20px;
       background: #5c1a47; }
+    @media only screen and (max-width: 1024px) {
+      .dashboard .content .skills .skill, .dashboard .content .skills .add-elem {
+        width: 45%; } }
     .dashboard .content .technology .add-elem, .dashboard .content .technology .add-elem-input input, .dashboard .content .technology .technology-elem {
       width: 100%; }
     .dashboard .content .technology .technology-elem {
@@ -5995,13 +6221,13 @@ Dashboard
 .saved-content-page {
   width: 1170px;
   display: block;
-  margin: auto;
-  	/*@media only screen and (max-width: 1200px) and (min-width: 980px){
-          width:975px;
-      }
-  	@media only screen and (max-width: 979px) and (min-width: 768px){
-          width:765px;
-      }*/ }
+  margin: auto; }
+  @media only screen and (max-width: 1200px) and (min-width: 980px) {
+    .saved-content-page {
+      width: 975px; } }
+  @media only screen and (max-width: 979px) and (min-width: 768px) {
+    .saved-content-page {
+      width: 765px; } }
   @media only screen and (max-width: 768px) {
     .saved-content-page {
       width: 95%; } }

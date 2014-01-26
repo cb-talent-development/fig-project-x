@@ -778,7 +778,7 @@ RESUME HERO
 .resume-hero{
 	padding-bottom: 100px;
 	@include main-block;
-    @media (max-width: 768px){
+    @media (max-width: 1024px){
         width:100%;
         padding-bottom: 50px;
         .saved-content{
@@ -803,8 +803,20 @@ RESUME HERO
 			left: 8px;
 			top: 11px;
 		}
-		@media (max-width: 768px){
+		@media only screen and (max-width: 1024px){
 			width: 100%;
+			margin-top: 30px !important;
+			.button{
+				width: 305px;
+			}
+			.button:nth-child(n+4){
+				margin-top: 27px;
+			}
+			.button:nth-child(4){
+				margin-left: 0px;
+			}
+		}
+		@media (max-width: 768px){
 			margin-left: auto;
 			margin-right: auto;
 			margin-bottom: 0px;
@@ -831,9 +843,8 @@ RESUME HERO
 	.content{
 		.button-list{
 			width: 370px;
-			@media(max-width: 768px){
-				width: 100%;
-			}
+			@media only screen and (max-width: 1024px){width: 305px;}
+			@media only screen and(max-width: 768px){width: 100%;}
 			.button{
 				width: 100%;
 				height: 60px;
@@ -875,6 +886,7 @@ RESUME HERO
 		.resume-content{
 			@include whitebox;
 			width: 770px;
+			@media only screen and (max-width: 1024px){width: 640px;}
 			margin-left: 30px;
 			display: inline-block;
 			font-family:"Times New Roman",Georgia,Serif;
@@ -1034,6 +1046,9 @@ RESUME HERO
 			.little{
 				width: 173px;
 				margin-right:25px;
+				@media only screen and (max-width: 1024px){
+					width: 140px;
+				}
 				@media only screen and (max-width: 768px){
 					width: 49%;
 					margin-right:2%;
@@ -1296,7 +1311,9 @@ RESUME HERO POP
 .export-resume, .template-resume{
 	.section{
 		width: 1204px !important;
-		@media only screen and (max-width: 767px){
+		@media only screen and (max-width: 1024px){
+			width: 1000px!important;
+		}@media only screen and (max-width: 767px){
 			width: 95% !important;
 		}
 		.header{
@@ -1304,6 +1321,12 @@ RESUME HERO POP
 		}
 		.content{
 			border-bottom: 1px solid $grey;
+			.large:nth-child(2){
+				margin-right: 0px;
+			}
+			.large{
+				width: 470px;
+			}
 		}
 	}
 }
