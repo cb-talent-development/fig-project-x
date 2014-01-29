@@ -145,7 +145,7 @@ $sprite-height: 3597px;
     width:$total-width; //default padding
     display:block;
     margin:auto;
-	@media only screen and (max-width: 1200px) and (min-width: 980px){
+	@media only screen and (max-width: 1024px) and (min-width: 980px){
         width:975px;
     }
 	@media only screen and (max-width: 979px) and (min-width: 768px){
@@ -411,7 +411,7 @@ Custom input
 ICON-ARROW
 */
 .link{
-    i,b{position:absolute;top:50%;right:18px;}
+    i,b{position:absolute;top:50%;right:23px;}
     .icon-bigarrow-right-black,.icon-bigarrow-right-white{
         margin-top:-8.5px;
         @media only screen and (max-width: 768px){
@@ -419,7 +419,7 @@ ICON-ARROW
         }
     }
     .icon-bigarrow-bottom-grey,.icon-bigarrow-bottom-orange{
-        margin-top:-5.5px;
+        margin-top:-1.5px;
         @media only screen and (max-width: 768px){
             margin-top:-4px;
         }
@@ -732,6 +732,8 @@ Font handler
     margin:auto;margin-top:60px;
     position:relative;
     left:- ($width-home - $total-width) / 2;
+	@media only screen and (max-width: 1200px){width: 1170px;}
+	@media only screen and (max-width: 1024px){width: 1005px;}
     @media only screen and (max-width: 768px){
         width: 310px;
         margin-top: 15px;
@@ -766,6 +768,7 @@ HOMEPAGE SCROLLABLE CONTENT
 		margin-top: 70px;
 		width: 100%;
 		height: 256px;
+		background-size:100%;
         @media only screen and (max-width: 768px){
             height:180px;
         }
@@ -786,6 +789,7 @@ HOMEPAGE SCROLLABLE CONTENT
 	.element1{
 		.img-2{
 			width: 100%;
+			background-size:100% !important;
 			height: 357px;
             @media only screen and (max-width: 768px){
                 height:220px;
@@ -891,12 +895,24 @@ HOMEPAGE SCROLLABLE CONTENT
 	}
 	.icon-arrow-left-big-blue{
             left:100px;
+        @media only screen and (max-width: 1200px){
+            left:70px;
+        }
+        @media only screen and (max-width: 1024px){
+            left:60px;
+        }
         @media only screen and (max-width: 768px){
             left:4%;
         }
 	}
 	.icon-arrow-right-big-blue{
 		right:100px;
+        @media only screen and (max-width: 1200px){
+            right:70px;
+        }
+        @media only screen and (max-width: 1024px){
+            right:60px;
+        }
         @media only screen and (max-width: 768px){
             right:4%;
         }
@@ -1037,6 +1053,10 @@ NAVBAR
 */
 .navbar{
     min-width:1170px;
+	@media only screen and (max-width: 1024px){
+        width: auto;
+        min-width:0px;
+    }
     @media only screen and (max-width: 768px){
         min-width:0px;
         width:auto;
@@ -1546,7 +1566,7 @@ PROFILE SUBMENU
 	}
     .space{
         display:inline-block;
-        width:25px;
+        width:35px;
     }
 	.icon-triangle-white{
 		position: absolute;
@@ -1558,8 +1578,8 @@ PROFILE SUBMENU
         overflow:visible;
 		z-index: 999;
 		width: 370px;
-		left: -143px;
-		top: 90px;
+		left: -127px;
+        top: 110px;
         @media only screen and (max-width: 768px){
             top: 160px;
 			position:fixed;
@@ -2516,11 +2536,7 @@ Load More button
 Footer css
 */
 .footer{
-    width:1170px;
-    min-width:100%;
-    @media only screen and (max-width: 768px) {
-        width:100%;
-    }
+    width:100%;
 	background-color: #cccccc;
     .main-container{
         margin:auto;
@@ -4877,12 +4893,17 @@ JOB RESULTS/RECOMMENDATIONS
 	}
 	.icon-arrow-left-big-blue{
 		left:40px;
-        @media only screen and (max-width: 768px){
+        @media only screen and (max-width: 1024px){
+            left:60px;
+		}@media only screen and (max-width: 768px){
             left:30px;
 		}
 	}
 	.icon-arrow-right-big-blue{
 		right:40px;
+        @media only screen and (max-width: 1024px){
+            right:60px;
+		}
         @media only screen and (max-width: 768px){
             right:30px;
 		}

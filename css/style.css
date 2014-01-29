@@ -119,7 +119,7 @@ General buttons classes
   width: 1170px;
   display: block;
   margin: auto; }
-  @media only screen and (max-width: 1200px) and (min-width: 980px) {
+  @media only screen and (max-width: 1024px) and (min-width: 980px) {
     .main-container {
       width: 975px; } }
   @media only screen and (max-width: 979px) and (min-width: 768px) {
@@ -254,14 +254,14 @@ ICON-ARROW
 .link i, .link b {
   position: absolute;
   top: 50%;
-  right: 18px; }
+  right: 23px; }
 .link .icon-bigarrow-right-black, .link .icon-bigarrow-right-white {
   margin-top: -8.5px; }
   @media only screen and (max-width: 768px) {
     .link .icon-bigarrow-right-black, .link .icon-bigarrow-right-white {
       margin-top: -6px; } }
 .link .icon-bigarrow-bottom-grey, .link .icon-bigarrow-bottom-orange {
-  margin-top: -5.5px; }
+  margin-top: -1.5px; }
   @media only screen and (max-width: 768px) {
     .link .icon-bigarrow-bottom-grey, .link .icon-bigarrow-bottom-orange {
       margin-top: -4px; } }
@@ -414,7 +414,7 @@ Font handler
   width: 1170px;
   display: block;
   margin: auto; }
-  @media only screen and (max-width: 1200px) and (min-width: 980px) {
+  @media only screen and (max-width: 1024px) and (min-width: 980px) {
     .home-main-container {
       width: 975px; } }
   @media only screen and (max-width: 979px) and (min-width: 768px) {
@@ -433,6 +433,12 @@ Font handler
   margin-top: 60px;
   position: relative;
   left: -15px; }
+  @media only screen and (max-width: 1200px) {
+    .home-container, .related .related-container {
+      width: 1170px; } }
+  @media only screen and (max-width: 1024px) {
+    .home-container, .related .related-container {
+      width: 1005px; } }
   @media only screen and (max-width: 768px) {
     .home-container, .related .related-container {
       width: 310px;
@@ -461,7 +467,8 @@ HOMEPAGE SCROLLABLE CONTENT
   .first-connect .img-1 {
     margin-top: 70px;
     width: 100%;
-    height: 256px; }
+    height: 256px;
+    background-size: 100%; }
     @media only screen and (max-width: 768px) {
       .first-connect .img-1 {
         height: 180px; } }
@@ -478,6 +485,7 @@ HOMEPAGE SCROLLABLE CONTENT
           font-size: 20px; } }
   .first-connect .element1 .img-2 {
     width: 100%;
+    background-size: 100% !important;
     height: 357px; }
     @media only screen and (max-width: 768px) {
       .first-connect .element1 .img-2 {
@@ -562,11 +570,23 @@ HOMEPAGE SCROLLABLE CONTENT
     -ms-user-select: none; }
   .first-connect .icon-arrow-left-big-blue {
     left: 100px; }
+    @media only screen and (max-width: 1200px) {
+      .first-connect .icon-arrow-left-big-blue {
+        left: 70px; } }
+    @media only screen and (max-width: 1024px) {
+      .first-connect .icon-arrow-left-big-blue {
+        left: 60px; } }
     @media only screen and (max-width: 768px) {
       .first-connect .icon-arrow-left-big-blue {
         left: 4%; } }
   .first-connect .icon-arrow-right-big-blue {
     right: 100px; }
+    @media only screen and (max-width: 1200px) {
+      .first-connect .icon-arrow-right-big-blue {
+        right: 70px; } }
+    @media only screen and (max-width: 1024px) {
+      .first-connect .icon-arrow-right-big-blue {
+        right: 60px; } }
     @media only screen and (max-width: 768px) {
       .first-connect .icon-arrow-right-big-blue {
         right: 4%; } }
@@ -634,7 +654,7 @@ Header css
       display: block;
       margin: auto;
       text-align: center; } }
-    @media only screen and (max-width: 768px) and (max-width: 1200px) and (min-width: 980px) {
+    @media only screen and (max-width: 768px) and (max-width: 1024px) and (min-width: 980px) {
       .page-header {
         width: 975px; } }
     @media only screen and (max-width: 768px) and (max-width: 979px) and (min-width: 768px) {
@@ -704,6 +724,10 @@ NAVBAR
 */
 .navbar {
   min-width: 1170px; }
+  @media only screen and (max-width: 1024px) {
+    .navbar {
+      width: auto;
+      min-width: 0px; } }
   @media only screen and (max-width: 768px) {
     .navbar {
       min-width: 0px;
@@ -1097,7 +1121,7 @@ Menu with multiple button
   margin: auto;
   padding-top: 40px;
   padding-bottom: 40px; }
-  @media only screen and (max-width: 1200px) and (min-width: 980px) {
+  @media only screen and (max-width: 1024px) and (min-width: 980px) {
     .menu-buttons {
       width: 975px; } }
   @media only screen and (max-width: 979px) and (min-width: 768px) {
@@ -1208,7 +1232,7 @@ PROFILE SUBMENU
   border: 1px solid black; }
 .page-header .space {
   display: inline-block;
-  width: 25px; }
+  width: 35px; }
 .page-header .icon-triangle-white {
   position: absolute;
   top: -15px;
@@ -1217,8 +1241,8 @@ PROFILE SUBMENU
   overflow: visible;
   z-index: 999;
   width: 370px;
-  left: -143px;
-  top: 90px; }
+  left: -127px;
+  top: 110px; }
   @media only screen and (max-width: 768px) {
     .page-header .subMenu {
       top: 160px;
@@ -3348,7 +3372,7 @@ Load More button
   margin-top: 30px;
   margin-bottom: 55px;
   text-align: center; }
-  @media only screen and (max-width: 1200px) and (min-width: 980px) {
+  @media only screen and (max-width: 1024px) and (min-width: 980px) {
     .load-more {
       width: 975px; } }
   @media only screen and (max-width: 979px) and (min-width: 768px) {
@@ -3375,12 +3399,8 @@ Load More button
 Footer css
 */
 .footer {
-  width: 1170px;
-  min-width: 100%;
+  width: 100%;
   background-color: #cccccc; }
-  @media only screen and (max-width: 768px) {
-    .footer {
-      width: 100%; } }
   .footer .main-container {
     margin: auto;
     padding-top: 70px;
@@ -3482,7 +3502,7 @@ POST CSS
   /*
   Comment-section
   */ }
-  @media only screen and (max-width: 1200px) and (min-width: 980px) {
+  @media only screen and (max-width: 1024px) and (min-width: 980px) {
     .post {
       width: 975px; } }
   @media only screen and (max-width: 979px) and (min-width: 768px) {
@@ -3867,7 +3887,7 @@ Related
   text-transform: uppercase;
   margin-top: 50px;
   margin-bottom: 50px; }
-  @media only screen and (max-width: 1200px) and (min-width: 980px) {
+  @media only screen and (max-width: 1024px) and (min-width: 980px) {
     .related h2.related-title {
       width: 975px; } }
   @media only screen and (max-width: 979px) and (min-width: 768px) {
@@ -4151,7 +4171,7 @@ Tool CSS
   /*
   Button for tools
   */ }
-  @media only screen and (max-width: 1200px) and (min-width: 980px) {
+  @media only screen and (max-width: 1024px) and (min-width: 980px) {
     .tool {
       width: 975px; } }
   @media only screen and (max-width: 979px) and (min-width: 768px) {
@@ -5372,7 +5392,7 @@ Locally Grown
   display: block;
   margin: auto;
   height: 590px; }
-  @media only screen and (max-width: 1200px) and (min-width: 980px) {
+  @media only screen and (max-width: 1024px) and (min-width: 980px) {
     .locallyGrown .mapbox {
       width: 975px; } }
   @media only screen and (max-width: 979px) and (min-width: 768px) {
@@ -5625,11 +5645,17 @@ JOB RESULTS/RECOMMENDATIONS
         bottom: 10px; } }
   .job-results .icon-arrow-left-big-blue, .saved-content .icon-arrow-left-big-blue, .delete-items .icon-arrow-left-big-blue {
     left: 40px; }
+    @media only screen and (max-width: 1024px) {
+      .job-results .icon-arrow-left-big-blue, .saved-content .icon-arrow-left-big-blue, .delete-items .icon-arrow-left-big-blue {
+        left: 60px; } }
     @media only screen and (max-width: 768px) {
       .job-results .icon-arrow-left-big-blue, .saved-content .icon-arrow-left-big-blue, .delete-items .icon-arrow-left-big-blue {
         left: 30px; } }
   .job-results .icon-arrow-right-big-blue, .saved-content .icon-arrow-right-big-blue, .delete-items .icon-arrow-right-big-blue {
     right: 40px; }
+    @media only screen and (max-width: 1024px) {
+      .job-results .icon-arrow-right-big-blue, .saved-content .icon-arrow-right-big-blue, .delete-items .icon-arrow-right-big-blue {
+        right: 60px; } }
     @media only screen and (max-width: 768px) {
       .job-results .icon-arrow-right-big-blue, .saved-content .icon-arrow-right-big-blue, .delete-items .icon-arrow-right-big-blue {
         right: 30px; } }
@@ -5816,7 +5842,7 @@ Dashboard
   width: 1170px;
   display: block;
   margin: auto; }
-  @media only screen and (max-width: 1200px) and (min-width: 980px) {
+  @media only screen and (max-width: 1024px) and (min-width: 980px) {
     .dashboard {
       width: 975px; } }
   @media only screen and (max-width: 979px) and (min-width: 768px) {
@@ -6222,7 +6248,7 @@ Dashboard
   width: 1170px;
   display: block;
   margin: auto; }
-  @media only screen and (max-width: 1200px) and (min-width: 980px) {
+  @media only screen and (max-width: 1024px) and (min-width: 980px) {
     .saved-content-page {
       width: 975px; } }
   @media only screen and (max-width: 979px) and (min-width: 768px) {
