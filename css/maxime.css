@@ -634,7 +634,7 @@ RESUME HERO
     .resume-hero .resume-buttons i {
       left: 8px;
       top: 11px; }
-    @media only screen and (max-width: 1024px) {
+    @media only screen and (max-width: 1024px) and (min-width: 769px) {
       .resume-hero .resume-buttons {
         width: 100%;
         margin-top: 30px !important; }
@@ -646,6 +646,7 @@ RESUME HERO
           margin-left: 0px; } }
     @media (max-width: 768px) {
       .resume-hero .resume-buttons {
+        width: 100%;
         margin-left: auto;
         margin-right: auto;
         margin-bottom: 0px;

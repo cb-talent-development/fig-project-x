@@ -803,7 +803,7 @@ RESUME HERO
 			left: 8px;
 			top: 11px;
 		}
-		@media only screen and (max-width: 1024px){
+		@media only screen and (max-width: 1024px) and (min-width: 769px){
 			width: 100%;
 			margin-top: 30px !important;
 			.button{
@@ -817,6 +817,7 @@ RESUME HERO
 			}
 		}
 		@media (max-width: 768px){
+			width: 100%;
 			margin-left: auto;
 			margin-right: auto;
 			margin-bottom: 0px;

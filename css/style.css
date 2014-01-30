@@ -230,9 +230,9 @@ Custom input
 .custom-input-file:hover {
   cursor: pointer; }
 
-.toggleMenu, .toggleMenuSimple, .toggleMenuLarge, .occupations {
+.toggleMenu, .toggleMenuSimple, .toggleMenuLarge, .occupations, .simpleMenu {
   position: relative; }
-  .toggleMenu .subMenu, .toggleMenuSimple .subMenu, .toggleMenuLarge .subMenu, .occupations .subMenu {
+  .toggleMenu .subMenu, .toggleMenuSimple .subMenu, .toggleMenuLarge .subMenu, .occupations .subMenu, .simpleMenu .subMenu {
     position: absolute;
     left: 0px;
     width: 100%;

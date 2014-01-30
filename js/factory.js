@@ -432,22 +432,23 @@ module.factory('getStarted',['$http',function($http) {
 		}
 	}
     //Input initialisation
-    getStarted.prototype.initInput=function(resume){
+    getStarted.prototype.initInput=function(resume, user){
         console.log("INIT INPUT");
         this.resume=resume;
+		this.user = user;
         if(resume && resume != 'none'){
-			this.resumeInfo.contactInfo.name.value=this.resume.ContactInfo.Name;
-			this.resumeInfo.contactInfo.firstName.value=this.resume.ContactInfo.FirstName;
-            this.resumeInfo.contactInfo.lastName.value=this.resume.ContactInfo.LastName;
-            this.resumeInfo.contactInfo.email.value=this.resume.ContactInfo.Mail;
-			this.resumeInfo.contactInfo.phone.value=this.resume.ContactInfo.Phone;
-			this.resumeInfo.contactInfo.mobile.value=this.resume.ContactInfo.Mobile;
+			this.resumeInfo.contactInfo.name.value=this.user.Name;
+			this.resumeInfo.contactInfo.firstName.value=this.user.FirstName;
+            this.resumeInfo.contactInfo.lastName.value=this.user.LastName;
+            this.resumeInfo.contactInfo.email.value=this.user.Mail;
+			this.resumeInfo.contactInfo.phone.value=this.user.Phone;
+			this.resumeInfo.contactInfo.mobile.value=this.user.Mobile;
 			//address
-            if(this.resume.ContactInfo.Address.State!='')this.resumeInfo.contactInfo.address.state.value=this.resume.ContactInfo.Address.State;
-            this.resumeInfo.contactInfo.address.zipCode.value=this.resume.ContactInfo.Address.Zipcode;
-			this.resumeInfo.contactInfo.address.city.value=this.resume.ContactInfo.Address.City;
+            if(this.resume.ContactInfo.Address.State!='')this.resumeInfo.contactInfo.address.state.value=this.user.State;
+            this.resumeInfo.contactInfo.address.zipCode.value=this.user.Zipcode;
+			this.resumeInfo.contactInfo.address.city.value=this.user.City;
 			this.resumeInfo.contactInfo.address.apt.value=this.resume.ContactInfo.Address.Apt;
-			this.resumeInfo.contactInfo.address.street.value=this.resume.ContactInfo.Address.Street;
+			this.resumeInfo.contactInfo.address.street.value=this.user.Street;
 			this.resumeInfo.contactInfo.state.completed=this.resume.ContactInfo.State.Completed;
 			console.log(this.resume.ContactInfo.State.Completed);
             //job

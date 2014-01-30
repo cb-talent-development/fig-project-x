@@ -255,14 +255,13 @@ function ResumeHeroCtr($scope, $http, pagination, getStarted){
     /*
     Constructor
     */
-	
 	//Select the current Resume
 	$scope.selectResume = function(resume){
 		$scope.currentResume.Class="";
 		$scope.currentResume = resume;
 		$scope.currentResume.Class="selected";
 		$scope.sections = $scope.currentResume.Data;
-		$scope.getStarted.initInput(resume.ResumeInfo);
+		$scope.getStarted.initInput(resume.ResumeInfo, user);
 		return false;
 	}	
 	
@@ -436,11 +435,11 @@ function ResumeHeroCtr($scope, $http, pagination, getStarted){
 	       });
 		}
 		if($scope.resumeHero[0]){
-			initGetStarted($scope,getStarted);
+			initGetStarted($scope,getStarted, $scope.user);
 			$scope.currentResume = $scope.resumeHero[0];
 			$scope.currentResume.Class="selected";
 			$scope.sections = $scope.currentResume.Data;
-			$scope.getStarted.initInput($scope.currentResume.ResumeInfo);
+			$scope.getStarted.initInput($scope.currentResume.ResumeInfo, user);
 		}
 		$scope.exportType="PDF";
 		$scope.changeType="PDF";

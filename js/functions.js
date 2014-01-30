@@ -346,6 +346,20 @@ function simpleToggleEffect(event){
         return false;
     }
 }
+
+function baseToggleEffect(event){
+    if(event!=undefined){
+        event.stopPropagation();
+    }
+    // If already open, close it
+    var subMenu=$(this).find(".subMenu").first();
+    if (!subMenu.is(':visible')) {
+        subMenu.fadeIn('fast',function () { 
+            $(this).parent().removeClass("open") }
+        );
+        return false;
+    }
+}
 function toggleEffect(event){
     if(event!=undefined){
         event.stopPropagation();
@@ -418,9 +432,17 @@ function cancelToggle(){
     );
     return false;
 }
+function cancelSimpleToggle(){
+    var subMenu=$(".simpleMenu .subMenu:visible");
+    subMenu.fadeOut('fast', function () { 
+        $(this).parent().removeClass("open") }
+    );
+    return false;
+}
 function cancelEffects(){
     if(!lock){
         cancelToggle();
+		cancelSimpleToggle();
     }
 }
 var lock=false;
@@ -553,12 +575,15 @@ Init all the effects
 function initEffect(){
     var htmlBody=$("html, body");
     var toggleMenu=$(".toggleMenu");
+    var simpleMenu=$(".simpleMenu");
     var toggleMenuSimple=$(".toggleMenuSimple");
     htmlBody.unbind('click');
     toggleMenu.unbind('click');
+    simpleMenu.unbind('click');
     toggleMenuSimple.unbind('click');
     htmlBody.click(cancelEffects);
-    toggleMenu.click(toggleEffect);  
+    toggleMenu.click(toggleEffect); 
+    simpleMenu.click(baseToggleEffect);  
     toggleMenuSimple.click(simpleToggleEffect); 
     
     //Initialization maxime
