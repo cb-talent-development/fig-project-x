@@ -145,6 +145,9 @@ $sprite-height: 3597px;
     width:$total-width; //default padding
     display:block;
     margin:auto;
+	@media only screen and (max-width: 1200px) and (min-width: 1025px){
+        width:1005px;
+    }
 	@media only screen and (max-width: 1024px) and (min-width: 980px){
         width:975px;
     }
@@ -628,16 +631,21 @@ Font handler
     @include font-family;
 }
 @mixin media-font-size-2-3{
+	@media only screen and (max-width: 1200px) {
+		h3.subtitle{
+			font-size: 15px;line-height: 17px;
+		}
+	}
     @media only screen and (max-width: 768px) {
-            h2.title{
-				font-size: 17px;line-height:21px;
-            }
-        	h3.subtitle{
-                font-size:12px;line-height:16px;
-            }
-            div.text{
-                font-size:12px;line-height:16px;
-            }
+		h2.title{
+			font-size: 17px;line-height:21px;
+		}
+		h3.subtitle{
+			font-size:12px;line-height:16px;
+		}
+		div.text{
+			font-size:12px;line-height:16px;
+		}
     }
 }
 @mixin font-size-2{
@@ -733,6 +741,7 @@ Font handler
     position:relative;
     left:- ($width-home - $total-width) / 2;
 	@media only screen and (max-width: 1200px){width: 1170px;}
+	@media only screen and (max-width: 1199px){width: 1035px;}
 	@media only screen and (max-width: 1024px){width: 1005px;}
     @media only screen and (max-width: 768px){
         width: 310px;
@@ -984,6 +993,9 @@ Header css
 		display: inline;
 		.background-image{
 			vertical-align:middle;
+		}
+		@media only screen and (max-width: 1200px){
+			font-size:40px;
 		}
         @media only screen and (max-width: 768px){
 			font-size:24px;
@@ -1317,6 +1329,9 @@ Width
 */
 @mixin big-width{
     float:left;width:$total-width;margin-left:15px;margin-right:15px;
+	@media only screen and (max-width: 1200px) and (min-width:1025px){
+		width: 1005px;
+	}
 	@media only screen and (max-width: 1024px) and (min-width: 769px){
 		width: 975px;
 	}
@@ -1332,6 +1347,9 @@ Width
 }
 @mixin med-width{
     float:left;width:370px;margin-left:15px;margin-right:15px;
+	@media only screen and (max-width: 1200px){
+		width: 315px;
+	}
 	@media only screen and (max-width: 1024px){
 		width: 305px;
 	}
@@ -1581,7 +1599,7 @@ PROFILE SUBMENU
 		left: -127px;
         top: 110px;
         @media only screen and (max-width: 768px){
-            top: 160px;
+            top: 90px;
 			position:fixed;
 		}
         @media only screen and (max-width: 768px) and (min-width:481px){
@@ -1767,6 +1785,9 @@ Article type 1
         width: 800px;
 		float: right;
 		-webkit-line-clamp: 2;
+		@media only screen and (max-width: 1200px){
+			width: 688px;
+		}
         @media only screen and (max-width: 1024px) and (min-width: 769px){
 			width: 80%;
             padding-top:15px;padding-left:15px;padding-right:15px;
@@ -1784,6 +1805,9 @@ Article type 1
     .left{
         float:left;
         width:363px;
+		@media only screen and (max-width: 1200px) {
+			width: 310px;
+		}
         @media only screen and (max-width: 1024px) {
 			width: 400px;
 		}
@@ -1794,9 +1818,13 @@ Article type 1
     .right{
         float:left;
         width:800px;
+        @media only screen and (max-width: 1200px) {
+			width: 688px;
+		}
         @media only screen and (max-width: 1024px) {
 			width: 568px;
-		}@media only screen and (max-width: 768px) {
+		}
+		@media only screen and (max-width: 768px) {
 			width: 190px;
 		}
     }
@@ -1813,7 +1841,10 @@ Article type 1
 	}
 	.img{
         width:363px;
-		height: 284px;		
+		height: 284px;
+		@media only screen and (max-width: 1200px) {
+			   width: 100%;
+			}		
 		@media only screen and (max-width: 768px) {
 		   height: 94px;
 		   width: 100%;
@@ -1881,8 +1912,31 @@ Article type 1
 Small A2 or A3
 */
 @mixin a-small{
+	@media only screen and (max-width: 1200px) and (min-width: 1025px){
+        .not-pictured .left,.not-pictured .right{
+            width: 100%;
+        }
+		.pictured .left{
+			width: 105px;
+		}
+		.pictured .right{
+			width: 193px;
+		}
+		.pictured{
+			.title{
+				width: 100%;
+				padding: 15px;
+			}
+			.img{
+               height:90px;
+           }
+		}
+		.pictured, .not-pictured{	
+			@include font-size-2-3;
+		}
+        @include font-size-3;
+    }
      @media only screen and (max-width: 1024px) and (min-width: 769px){
-        @include phone-height;
         //to be sure
         .not-pictured .left,.not-pictured .right{
             width: 100%;
@@ -1898,6 +1952,9 @@ Small A2 or A3
 				width: 100%;
 				padding: 15px;
 			}
+			.img{
+               height:90px;
+           }
 		}
 		.pictured, .not-pictured{	
 			@include font-size-2-3;
@@ -1987,6 +2044,7 @@ Article type 2
         .img{display:none;}
         .text{
             -webkit-line-clamp: 9;
+			@media only screen and (max-width: 1200px){-webkit-line-clamp: 11;}
         }
     }
     @include font-size-2;
@@ -2012,6 +2070,11 @@ Article type 3
         margin:0px;
         padding-top:15px;padding-left:15px;padding-right:15px;
 		-webkit-line-clamp: 3;
+		overflow: hidden;
+		@media only screen and (max-width: 1200px){
+			-webkit-line-clamp: 2;
+			max-height: 85px;
+		}
 	}
 	div.text{
 		margin:0px;
@@ -2034,12 +2097,16 @@ Article type 3
             padding-top:13px;
             max-height:80px;
             -webkit-line-clamp: 3;
+			@media only screen and (max-width: 1200px){
+				padding-top: 0px;
+			}
         }
         h2.title{
             width:100%;
         }
         h3.subtitle{
             padding-top:13px;
+			@media only screen and (max-width: 1200px){padding-bottom: 3px;}
         }
         .img{display:none;}
     }
@@ -2577,7 +2644,6 @@ Footer css
 			float: left;
 			a{
 				color: #444444;
-				text-decoration: underline;
 				display: block;
 			}
 		}
@@ -3367,7 +3433,7 @@ Tool CSS
         .icon-bar-grey{
             margin:9px;
         }
-		@media only screen and (max-width: 1024px){
+		@media only screen and (max-width: 1200px){
 			width: 100%;
 		}
 		@media only screen and (max-width: 768px){
@@ -3572,6 +3638,9 @@ Tool CSS
                     font-family:"HelveticaThinCondensed";
                 }
             }
+			@media only screen and (max-width: 1200px){
+				width: 44.5%;
+			}
 			@media only screen and (max-width: 1024px){
 				width: 43.7%;
 			}
@@ -4624,7 +4693,7 @@ Locally Grown
     .selector{
         .input-zip{
             width:23%;
-            min-width:267px;
+            min-width:230px;
             float:left;
             @include blue-element;
 			@media only screen and (max-width: 768px){
@@ -4650,7 +4719,7 @@ Career Scape
     canvas{
         background-color:white;
         margin:auto;cursor:move;padding:0px;display:block;z-index:1;
-		@media only screen and (max-width:1024px){
+		@media only screen and (max-width:1200px){
 			width: 100%;
 		}
 		@media only screen and (max-width:768px){
@@ -5262,6 +5331,9 @@ Dashboard
     .content{
         .col-left,.col-right{
             width:370px;
+			@media only screen and (max-width: 1200px){
+                width:318px;
+            }
 			@media only screen and (max-width: 1024px){
                 width:308px;
             }
@@ -5360,7 +5432,7 @@ Dashboard
            .occupation,.income{
                 text-transform:uppercase;
                 padding-left:15px;padding-right:15px;
-				@media only screen and (max-width: 1024px){
+				@media only screen and (max-width: 1200px){
                     padding-left:12px;
 					width: 100%;
                     margin-bottom:10px;
@@ -5441,7 +5513,7 @@ Dashboard
                 margin-bottom:20px;
                 background:rgb(92,26,71);
             }
-			@media only screen and (max-width: 1024px){.skill,.add-elem{width: 45%;}}
+			@media only screen and (max-width: 1200px){.skill,.add-elem{width: 45%;}}
         }
         .technology{
             .add-elem,.add-elem-input input,.technology-elem{

@@ -778,8 +778,8 @@ RESUME HERO
 .resume-hero{
 	padding-bottom: 100px;
 	@include main-block;
+	@media (max-width: 1200px){width: 100%;}
     @media (max-width: 1024px){
-        width:100%;
         padding-bottom: 50px;
         .saved-content{
             margin-bottom:10px;
@@ -803,8 +803,14 @@ RESUME HERO
 			left: 8px;
 			top: 11px;
 		}
-		@media only screen and (max-width: 1024px) and (min-width: 769px){
+		@media only screen and (max-width: 1200px) and (min-width: 769px){
 			width: 100%;
+			.button{
+				font-size: 15px;
+				width: 145px;
+			}
+		}
+		@media only screen and (max-width: 1024px) and (min-width: 769px){
 			margin-top: 30px !important;
 			.button{
 				width: 305px;
@@ -844,6 +850,7 @@ RESUME HERO
 	.content{
 		.button-list{
 			width: 370px;
+			@media only screen and (max-width: 1200px){width: 320px;}
 			@media only screen and (max-width: 1024px){width: 305px;}
 			@media only screen and(max-width: 768px){width: 100%;}
 			.button{
@@ -887,6 +894,7 @@ RESUME HERO
 		.resume-content{
 			@include whitebox;
 			width: 770px;
+			@media only screen and (max-width: 1200px){width: 655px;}
 			@media only screen and (max-width: 1024px){width: 640px;}
 			margin-left: 30px;
 			display: inline-block;

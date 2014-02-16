@@ -613,9 +613,11 @@ RESUME HERO
   @media only screen and (max-width: 768px) {
     .resume-hero {
       width: 95%; } }
+  @media (max-width: 1200px) {
+    .resume-hero {
+      width: 100%; } }
   @media (max-width: 1024px) {
     .resume-hero {
-      width: 100%;
       padding-bottom: 50px; }
       .resume-hero .saved-content {
         margin-bottom: 10px; } }
@@ -634,9 +636,14 @@ RESUME HERO
     .resume-hero .resume-buttons i {
       left: 8px;
       top: 11px; }
+    @media only screen and (max-width: 1200px) and (min-width: 769px) {
+      .resume-hero .resume-buttons {
+        width: 100%; }
+        .resume-hero .resume-buttons .button {
+          font-size: 15px;
+          width: 145px; } }
     @media only screen and (max-width: 1024px) and (min-width: 769px) {
       .resume-hero .resume-buttons {
-        width: 100%;
         margin-top: 30px !important; }
         .resume-hero .resume-buttons .button {
           width: 305px; }
@@ -666,6 +673,9 @@ RESUME HERO
       margin-left: 0px; }
   .resume-hero .content .button-list {
     width: 370px; }
+    @media only screen and (max-width: 1200px) {
+      .resume-hero .content .button-list {
+        width: 320px; } }
     @media only screen and (max-width: 1024px) {
       .resume-hero .content .button-list {
         width: 305px; } }
@@ -711,6 +721,9 @@ RESUME HERO
     margin-left: 30px;
     display: inline-block;
     font-family: "Times New Roman",Georgia,Serif; }
+    @media only screen and (max-width: 1200px) {
+      .resume-hero .content .resume-content {
+        width: 655px; } }
     @media only screen and (max-width: 1024px) {
       .resume-hero .content .resume-content {
         width: 640px; } }

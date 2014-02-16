@@ -119,6 +119,9 @@ General buttons classes
   width: 1170px;
   display: block;
   margin: auto; }
+  @media only screen and (max-width: 1200px) and (min-width: 1025px) {
+    .main-container {
+      width: 1005px; } }
   @media only screen and (max-width: 1024px) and (min-width: 980px) {
     .main-container {
       width: 975px; } }
@@ -414,6 +417,9 @@ Font handler
   width: 1170px;
   display: block;
   margin: auto; }
+  @media only screen and (max-width: 1200px) and (min-width: 1025px) {
+    .home-main-container {
+      width: 1005px; } }
   @media only screen and (max-width: 1024px) and (min-width: 980px) {
     .home-main-container {
       width: 975px; } }
@@ -436,6 +442,9 @@ Font handler
   @media only screen and (max-width: 1200px) {
     .home-container, .related .related-container {
       width: 1170px; } }
+  @media only screen and (max-width: 1199px) {
+    .home-container, .related .related-container {
+      width: 1035px; } }
   @media only screen and (max-width: 1024px) {
     .home-container, .related .related-container {
       width: 1005px; } }
@@ -654,6 +663,9 @@ Header css
       display: block;
       margin: auto;
       text-align: center; } }
+    @media only screen and (max-width: 768px) and (max-width: 1200px) and (min-width: 1025px) {
+      .page-header {
+        width: 1005px; } }
     @media only screen and (max-width: 768px) and (max-width: 1024px) and (min-width: 980px) {
       .page-header {
         width: 975px; } }
@@ -668,6 +680,9 @@ Header css
     display: inline; }
     .page-header h1 .background-image {
       vertical-align: middle; }
+    @media only screen and (max-width: 1200px) {
+      .page-header h1 {
+        font-size: 40px; } }
     @media only screen and (max-width: 768px) {
       .page-header h1 {
         font-size: 24px; } }
@@ -917,6 +932,9 @@ Width
   width: 1170px;
   margin-left: 15px;
   margin-right: 15px; }
+  @media only screen and (max-width: 1200px) and (min-width: 1025px) {
+    .col-type-1 {
+      width: 1005px; } }
   @media only screen and (max-width: 1024px) and (min-width: 769px) {
     .col-type-1 {
       width: 975px; } }
@@ -938,6 +956,9 @@ Width
   width: 370px;
   margin-left: 15px;
   margin-right: 15px; }
+  @media only screen and (max-width: 1200px) {
+    .col-type-2 {
+      width: 315px; } }
   @media only screen and (max-width: 1024px) {
     .col-type-2 {
       width: 305px; } }
@@ -1121,6 +1142,9 @@ Menu with multiple button
   margin: auto;
   padding-top: 40px;
   padding-bottom: 40px; }
+  @media only screen and (max-width: 1200px) and (min-width: 1025px) {
+    .menu-buttons {
+      width: 1005px; } }
   @media only screen and (max-width: 1024px) and (min-width: 980px) {
     .menu-buttons {
       width: 975px; } }
@@ -1245,7 +1269,7 @@ PROFILE SUBMENU
   top: 110px; }
   @media only screen and (max-width: 768px) {
     .page-header .subMenu {
-      top: 160px;
+      top: 90px;
       position: fixed; } }
   @media only screen and (max-width: 768px) and (min-width: 481px) {
     .page-header .subMenu {
@@ -1737,6 +1761,9 @@ Article type 1
     width: 800px;
     float: right;
     -webkit-line-clamp: 2; }
+    @media only screen and (max-width: 1200px) {
+      .a1 h2.title {
+        width: 688px; } }
     @media only screen and (max-width: 1024px) and (min-width: 769px) {
       .a1 h2.title {
         width: 80%;
@@ -1757,6 +1784,9 @@ Article type 1
   .a1 .left {
     float: left;
     width: 363px; }
+    @media only screen and (max-width: 1200px) {
+      .a1 .left {
+        width: 310px; } }
     @media only screen and (max-width: 1024px) {
       .a1 .left {
         width: 400px; } }
@@ -1766,6 +1796,9 @@ Article type 1
   .a1 .right {
     float: left;
     width: 800px; }
+    @media only screen and (max-width: 1200px) {
+      .a1 .right {
+        width: 688px; } }
     @media only screen and (max-width: 1024px) {
       .a1 .right {
         width: 568px; } }
@@ -1786,6 +1819,9 @@ Article type 1
   .a1 .img {
     width: 363px;
     height: 284px; }
+    @media only screen and (max-width: 1200px) {
+      .a1 .img {
+        width: 100%; } }
     @media only screen and (max-width: 768px) {
       .a1 .img {
         height: 94px;
@@ -1915,6 +1951,9 @@ Article type 2
     display: none; }
   .a2 .not-pictured .text {
     -webkit-line-clamp: 9; }
+    @media only screen and (max-width: 1200px) {
+      .a2 .not-pictured .text {
+        -webkit-line-clamp: 11; } }
   .a2 h2.title {
     overflow: hidden;
     display: -webkit-box;
@@ -1941,6 +1980,10 @@ Article type 2
     font-family: HelveticaThinCondensed, sans-serif; }
   .a2 div.text {
     font-family: HelveticaRoman  , sans-serif; }
+  @media only screen and (max-width: 1200px) {
+    .a2 h3.subtitle {
+      font-size: 15px;
+      line-height: 17px; } }
   @media only screen and (max-width: 768px) {
     .a2 h2.title {
       font-size: 17px;
@@ -1960,94 +2003,190 @@ Article type 2
   .a2 .pictured .left {
     float: left;
     clear: left; }
+  @media only screen and (max-width: 1200px) and (min-width: 1025px) {
+    .a2 .not-pictured .left, .a2 .not-pictured .right {
+      width: 100%; }
+    .a2 .pictured .left {
+      width: 105px; }
+    .a2 .pictured .right {
+      width: 193px; }
+    .a2 .pictured .title {
+      width: 100%;
+      padding: 15px; }
+    .a2 .pictured .img {
+      height: 90px; }
+    .a2 .pictured h2.title, .a2 .not-pictured h2.title {
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      font-size: 28px;
+      line-height: 30px; }
+    .a2 .pictured h3.subtitle, .a2 .not-pictured h3.subtitle {
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      font-size: 18px;
+      line-height: 20px; }
+    .a2 .pictured div.text, .a2 .not-pictured div.text {
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      font-size: 15px;
+      line-height: 20px; }
+    .a2 .pictured h2.title, .a2 .not-pictured h2.title {
+      font-family: HelveticaLightCondensed, sans-serif; }
+    .a2 .pictured h3.subtitle, .a2 .not-pictured h3.subtitle {
+      font-family: HelveticaThinCondensed , sans-serif; }
+    .a2 .pictured div.comment, .a2 .not-pictured div.comment {
+      font-family: HelveticaThinCondensed, sans-serif; }
+    .a2 .pictured div.text, .a2 .not-pictured div.text {
+      font-family: HelveticaRoman  , sans-serif; }
+    .a2 h2.title {
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      font-size: 20px;
+      line-height: 24px; }
+    .a2 h3.subtitle {
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      font-size: 14px;
+      line-height: 18px; }
+    .a2 div.text {
+      display: -webkit-box;
+      overflow: hidden;
+      -webkit-box-orient: vertical;
+      font-size: 14px;
+      line-height: 19px; }
+    .a2 h2.title {
+      font-family: HelveticaLightCondensed, sans-serif; }
+    .a2 h3.subtitle {
+      font-family: HelveticaThinCondensed , sans-serif; }
+    .a2 div.comment {
+      font-family: HelveticaThinCondensed, sans-serif; }
+    .a2 div.text {
+      font-family: HelveticaRoman  , sans-serif; } }
+  @media only screen and (max-width: 1200px) and (min-width: 1025px) and (max-width: 1200px) {
+    .a2 .pictured h3.subtitle, .a2 .not-pictured h3.subtitle {
+      font-size: 15px;
+      line-height: 17px; } }
+  @media only screen and (max-width: 1200px) and (min-width: 1025px) and (max-width: 768px) {
+    .a2 .pictured h2.title, .a2 .not-pictured h2.title {
+      font-size: 17px;
+      line-height: 21px; }
+    .a2 .pictured h3.subtitle, .a2 .not-pictured h3.subtitle {
+      font-size: 12px;
+      line-height: 16px; }
+    .a2 .pictured div.text, .a2 .not-pictured div.text {
+      font-size: 12px;
+      line-height: 16px; } }
+  @media only screen and (max-width: 1200px) and (min-width: 1025px) and (max-width: 1200px) {
+    .a2 h3.subtitle {
+      font-size: 15px;
+      line-height: 17px; } }
+  @media only screen and (max-width: 1200px) and (min-width: 1025px) and (max-width: 768px) {
+    .a2 h2.title {
+      font-size: 17px;
+      line-height: 21px; }
+    .a2 h3.subtitle {
+      font-size: 12px;
+      line-height: 16px; }
+    .a2 div.text {
+      font-size: 12px;
+      line-height: 16px; } }
   @media only screen and (max-width: 1024px) and (min-width: 769px) {
-    .a2 {
-      margin-bottom: 30px; }
-      .a2 .not-pictured .left, .a2 .not-pictured .right {
-        width: 100%; }
-      .a2 .pictured .left {
-        width: 105px; }
-      .a2 .pictured .right {
-        width: 193px; }
-      .a2 .pictured .title {
-        width: 100%;
-        padding: 15px; }
-      .a2 .pictured h2.title, .a2 .not-pictured h2.title {
-        overflow: hidden;
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-        font-size: 28px;
-        line-height: 30px; }
-      .a2 .pictured h3.subtitle, .a2 .not-pictured h3.subtitle {
-        overflow: hidden;
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-        font-size: 18px;
-        line-height: 20px; }
-      .a2 .pictured div.text, .a2 .not-pictured div.text {
-        overflow: hidden;
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-        font-size: 15px;
-        line-height: 20px; }
-      .a2 .pictured h2.title, .a2 .not-pictured h2.title {
-        font-family: HelveticaLightCondensed, sans-serif; }
-      .a2 .pictured h3.subtitle, .a2 .not-pictured h3.subtitle {
-        font-family: HelveticaThinCondensed , sans-serif; }
-      .a2 .pictured div.comment, .a2 .not-pictured div.comment {
-        font-family: HelveticaThinCondensed, sans-serif; }
-      .a2 .pictured div.text, .a2 .not-pictured div.text {
-        font-family: HelveticaRoman  , sans-serif; }
-      .a2 h2.title {
-        overflow: hidden;
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-        font-size: 35px;
-        line-height: 38px; }
-      .a2 h3.subtitle {
-        overflow: hidden;
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-        font-size: 18px;
-        line-height: 20px; }
-      .a2 div.text {
-        overflow: hidden;
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-        font-size: 15px;
-        line-height: 20px; }
-      .a2 h2.title {
-        font-family: HelveticaLightCondensed, sans-serif; }
-      .a2 h3.subtitle {
-        font-family: HelveticaThinCondensed , sans-serif; }
-      .a2 div.comment {
-        font-family: HelveticaThinCondensed, sans-serif; }
-      .a2 div.text {
-        font-family: HelveticaRoman  , sans-serif; } }
-    @media only screen and (max-width: 1024px) and (min-width: 769px) and (max-width: 768px) {
-      .a2 {
-        margin-bottom: 10px;
-        height: 225px; } }
-    @media only screen and (max-width: 1024px) and (min-width: 769px) and (max-width: 768px) {
-      .a2 .pictured h2.title, .a2 .not-pictured h2.title {
-        font-size: 17px;
-        line-height: 21px; }
-      .a2 .pictured h3.subtitle, .a2 .not-pictured h3.subtitle {
-        font-size: 12px;
-        line-height: 16px; }
-      .a2 .pictured div.text, .a2 .not-pictured div.text {
-        font-size: 12px;
-        line-height: 16px; } }
-    @media only screen and (max-width: 1024px) and (min-width: 769px) and (max-width: 768px) {
-      .a2 h2.title {
-        font-size: 17px;
-        line-height: 21px; }
-      .a2 h3.subtitle {
-        font-size: 12px;
-        line-height: 16px; }
-      .a2 div.text {
-        font-size: 12px;
-        line-height: 16px; } }
+    .a2 .not-pictured .left, .a2 .not-pictured .right {
+      width: 100%; }
+    .a2 .pictured .left {
+      width: 105px; }
+    .a2 .pictured .right {
+      width: 193px; }
+    .a2 .pictured .title {
+      width: 100%;
+      padding: 15px; }
+    .a2 .pictured .img {
+      height: 90px; }
+    .a2 .pictured h2.title, .a2 .not-pictured h2.title {
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      font-size: 28px;
+      line-height: 30px; }
+    .a2 .pictured h3.subtitle, .a2 .not-pictured h3.subtitle {
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      font-size: 18px;
+      line-height: 20px; }
+    .a2 .pictured div.text, .a2 .not-pictured div.text {
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      font-size: 15px;
+      line-height: 20px; }
+    .a2 .pictured h2.title, .a2 .not-pictured h2.title {
+      font-family: HelveticaLightCondensed, sans-serif; }
+    .a2 .pictured h3.subtitle, .a2 .not-pictured h3.subtitle {
+      font-family: HelveticaThinCondensed , sans-serif; }
+    .a2 .pictured div.comment, .a2 .not-pictured div.comment {
+      font-family: HelveticaThinCondensed, sans-serif; }
+    .a2 .pictured div.text, .a2 .not-pictured div.text {
+      font-family: HelveticaRoman  , sans-serif; }
+    .a2 h2.title {
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      font-size: 35px;
+      line-height: 38px; }
+    .a2 h3.subtitle {
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      font-size: 18px;
+      line-height: 20px; }
+    .a2 div.text {
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      font-size: 15px;
+      line-height: 20px; }
+    .a2 h2.title {
+      font-family: HelveticaLightCondensed, sans-serif; }
+    .a2 h3.subtitle {
+      font-family: HelveticaThinCondensed , sans-serif; }
+    .a2 div.comment {
+      font-family: HelveticaThinCondensed, sans-serif; }
+    .a2 div.text {
+      font-family: HelveticaRoman  , sans-serif; } }
+  @media only screen and (max-width: 1024px) and (min-width: 769px) and (max-width: 1200px) {
+    .a2 .pictured h3.subtitle, .a2 .not-pictured h3.subtitle {
+      font-size: 15px;
+      line-height: 17px; } }
+  @media only screen and (max-width: 1024px) and (min-width: 769px) and (max-width: 768px) {
+    .a2 .pictured h2.title, .a2 .not-pictured h2.title {
+      font-size: 17px;
+      line-height: 21px; }
+    .a2 .pictured h3.subtitle, .a2 .not-pictured h3.subtitle {
+      font-size: 12px;
+      line-height: 16px; }
+    .a2 .pictured div.text, .a2 .not-pictured div.text {
+      font-size: 12px;
+      line-height: 16px; } }
+  @media only screen and (max-width: 1024px) and (min-width: 769px) and (max-width: 1200px) {
+    .a2 h3.subtitle {
+      font-size: 15px;
+      line-height: 17px; } }
+  @media only screen and (max-width: 1024px) and (min-width: 769px) and (max-width: 768px) {
+    .a2 h2.title {
+      font-size: 17px;
+      line-height: 21px; }
+    .a2 h3.subtitle {
+      font-size: 12px;
+      line-height: 16px; }
+    .a2 div.text {
+      font-size: 12px;
+      line-height: 16px; } }
   @media only screen and (max-width: 768px) {
     .a2 {
       margin-bottom: 30px; }
@@ -2105,6 +2244,10 @@ Article type 2
       .a2 {
         margin-bottom: 10px;
         height: 225px; } }
+    @media only screen and (max-width: 768px) and (max-width: 1200px) {
+      .a2 h3.subtitle {
+        font-size: 15px;
+        line-height: 17px; } }
     @media only screen and (max-width: 768px) and (max-width: 768px) {
       .a2 h2.title {
         font-size: 17px;
@@ -2140,7 +2283,12 @@ Article type 3
     padding-top: 15px;
     padding-left: 15px;
     padding-right: 15px;
-    -webkit-line-clamp: 3; }
+    -webkit-line-clamp: 3;
+    overflow: hidden; }
+    @media only screen and (max-width: 1200px) {
+      .a3 h2.title {
+        -webkit-line-clamp: 2;
+        max-height: 85px; } }
   .a3 div.text {
     margin: 0px;
     padding-top: 4px;
@@ -2157,10 +2305,16 @@ Article type 3
     padding-top: 13px;
     max-height: 80px;
     -webkit-line-clamp: 3; }
+    @media only screen and (max-width: 1200px) {
+      .a3 .not-pictured div.text {
+        padding-top: 0px; } }
   .a3 .not-pictured h2.title {
     width: 100%; }
   .a3 .not-pictured h3.subtitle {
     padding-top: 13px; }
+    @media only screen and (max-width: 1200px) {
+      .a3 .not-pictured h3.subtitle {
+        padding-bottom: 3px; } }
   .a3 .not-pictured .img {
     display: none; }
   .a3 h2.title {
@@ -2189,6 +2343,10 @@ Article type 3
     font-family: HelveticaThinCondensed, sans-serif; }
   .a3 div.text {
     font-family: HelveticaRoman  , sans-serif; }
+  @media only screen and (max-width: 1200px) {
+    .a3 h3.subtitle {
+      font-size: 15px;
+      line-height: 17px; } }
   @media only screen and (max-width: 768px) {
     .a3 h2.title {
       font-size: 17px;
@@ -2208,94 +2366,190 @@ Article type 3
   .a3 .pictured .left {
     float: left;
     clear: left; }
+  @media only screen and (max-width: 1200px) and (min-width: 1025px) {
+    .a3 .not-pictured .left, .a3 .not-pictured .right {
+      width: 100%; }
+    .a3 .pictured .left {
+      width: 105px; }
+    .a3 .pictured .right {
+      width: 193px; }
+    .a3 .pictured .title {
+      width: 100%;
+      padding: 15px; }
+    .a3 .pictured .img {
+      height: 90px; }
+    .a3 .pictured h2.title, .a3 .not-pictured h2.title {
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      font-size: 28px;
+      line-height: 30px; }
+    .a3 .pictured h3.subtitle, .a3 .not-pictured h3.subtitle {
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      font-size: 18px;
+      line-height: 20px; }
+    .a3 .pictured div.text, .a3 .not-pictured div.text {
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      font-size: 15px;
+      line-height: 20px; }
+    .a3 .pictured h2.title, .a3 .not-pictured h2.title {
+      font-family: HelveticaLightCondensed, sans-serif; }
+    .a3 .pictured h3.subtitle, .a3 .not-pictured h3.subtitle {
+      font-family: HelveticaThinCondensed , sans-serif; }
+    .a3 .pictured div.comment, .a3 .not-pictured div.comment {
+      font-family: HelveticaThinCondensed, sans-serif; }
+    .a3 .pictured div.text, .a3 .not-pictured div.text {
+      font-family: HelveticaRoman  , sans-serif; }
+    .a3 h2.title {
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      font-size: 20px;
+      line-height: 24px; }
+    .a3 h3.subtitle {
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      font-size: 14px;
+      line-height: 18px; }
+    .a3 div.text {
+      display: -webkit-box;
+      overflow: hidden;
+      -webkit-box-orient: vertical;
+      font-size: 14px;
+      line-height: 19px; }
+    .a3 h2.title {
+      font-family: HelveticaLightCondensed, sans-serif; }
+    .a3 h3.subtitle {
+      font-family: HelveticaThinCondensed , sans-serif; }
+    .a3 div.comment {
+      font-family: HelveticaThinCondensed, sans-serif; }
+    .a3 div.text {
+      font-family: HelveticaRoman  , sans-serif; } }
+  @media only screen and (max-width: 1200px) and (min-width: 1025px) and (max-width: 1200px) {
+    .a3 .pictured h3.subtitle, .a3 .not-pictured h3.subtitle {
+      font-size: 15px;
+      line-height: 17px; } }
+  @media only screen and (max-width: 1200px) and (min-width: 1025px) and (max-width: 768px) {
+    .a3 .pictured h2.title, .a3 .not-pictured h2.title {
+      font-size: 17px;
+      line-height: 21px; }
+    .a3 .pictured h3.subtitle, .a3 .not-pictured h3.subtitle {
+      font-size: 12px;
+      line-height: 16px; }
+    .a3 .pictured div.text, .a3 .not-pictured div.text {
+      font-size: 12px;
+      line-height: 16px; } }
+  @media only screen and (max-width: 1200px) and (min-width: 1025px) and (max-width: 1200px) {
+    .a3 h3.subtitle {
+      font-size: 15px;
+      line-height: 17px; } }
+  @media only screen and (max-width: 1200px) and (min-width: 1025px) and (max-width: 768px) {
+    .a3 h2.title {
+      font-size: 17px;
+      line-height: 21px; }
+    .a3 h3.subtitle {
+      font-size: 12px;
+      line-height: 16px; }
+    .a3 div.text {
+      font-size: 12px;
+      line-height: 16px; } }
   @media only screen and (max-width: 1024px) and (min-width: 769px) {
-    .a3 {
-      margin-bottom: 30px; }
-      .a3 .not-pictured .left, .a3 .not-pictured .right {
-        width: 100%; }
-      .a3 .pictured .left {
-        width: 105px; }
-      .a3 .pictured .right {
-        width: 193px; }
-      .a3 .pictured .title {
-        width: 100%;
-        padding: 15px; }
-      .a3 .pictured h2.title, .a3 .not-pictured h2.title {
-        overflow: hidden;
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-        font-size: 28px;
-        line-height: 30px; }
-      .a3 .pictured h3.subtitle, .a3 .not-pictured h3.subtitle {
-        overflow: hidden;
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-        font-size: 18px;
-        line-height: 20px; }
-      .a3 .pictured div.text, .a3 .not-pictured div.text {
-        overflow: hidden;
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-        font-size: 15px;
-        line-height: 20px; }
-      .a3 .pictured h2.title, .a3 .not-pictured h2.title {
-        font-family: HelveticaLightCondensed, sans-serif; }
-      .a3 .pictured h3.subtitle, .a3 .not-pictured h3.subtitle {
-        font-family: HelveticaThinCondensed , sans-serif; }
-      .a3 .pictured div.comment, .a3 .not-pictured div.comment {
-        font-family: HelveticaThinCondensed, sans-serif; }
-      .a3 .pictured div.text, .a3 .not-pictured div.text {
-        font-family: HelveticaRoman  , sans-serif; }
-      .a3 h2.title {
-        overflow: hidden;
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-        font-size: 35px;
-        line-height: 38px; }
-      .a3 h3.subtitle {
-        overflow: hidden;
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-        font-size: 18px;
-        line-height: 20px; }
-      .a3 div.text {
-        overflow: hidden;
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-        font-size: 15px;
-        line-height: 20px; }
-      .a3 h2.title {
-        font-family: HelveticaLightCondensed, sans-serif; }
-      .a3 h3.subtitle {
-        font-family: HelveticaThinCondensed , sans-serif; }
-      .a3 div.comment {
-        font-family: HelveticaThinCondensed, sans-serif; }
-      .a3 div.text {
-        font-family: HelveticaRoman  , sans-serif; } }
-    @media only screen and (max-width: 1024px) and (min-width: 769px) and (max-width: 768px) {
-      .a3 {
-        margin-bottom: 10px;
-        height: 225px; } }
-    @media only screen and (max-width: 1024px) and (min-width: 769px) and (max-width: 768px) {
-      .a3 .pictured h2.title, .a3 .not-pictured h2.title {
-        font-size: 17px;
-        line-height: 21px; }
-      .a3 .pictured h3.subtitle, .a3 .not-pictured h3.subtitle {
-        font-size: 12px;
-        line-height: 16px; }
-      .a3 .pictured div.text, .a3 .not-pictured div.text {
-        font-size: 12px;
-        line-height: 16px; } }
-    @media only screen and (max-width: 1024px) and (min-width: 769px) and (max-width: 768px) {
-      .a3 h2.title {
-        font-size: 17px;
-        line-height: 21px; }
-      .a3 h3.subtitle {
-        font-size: 12px;
-        line-height: 16px; }
-      .a3 div.text {
-        font-size: 12px;
-        line-height: 16px; } }
+    .a3 .not-pictured .left, .a3 .not-pictured .right {
+      width: 100%; }
+    .a3 .pictured .left {
+      width: 105px; }
+    .a3 .pictured .right {
+      width: 193px; }
+    .a3 .pictured .title {
+      width: 100%;
+      padding: 15px; }
+    .a3 .pictured .img {
+      height: 90px; }
+    .a3 .pictured h2.title, .a3 .not-pictured h2.title {
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      font-size: 28px;
+      line-height: 30px; }
+    .a3 .pictured h3.subtitle, .a3 .not-pictured h3.subtitle {
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      font-size: 18px;
+      line-height: 20px; }
+    .a3 .pictured div.text, .a3 .not-pictured div.text {
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      font-size: 15px;
+      line-height: 20px; }
+    .a3 .pictured h2.title, .a3 .not-pictured h2.title {
+      font-family: HelveticaLightCondensed, sans-serif; }
+    .a3 .pictured h3.subtitle, .a3 .not-pictured h3.subtitle {
+      font-family: HelveticaThinCondensed , sans-serif; }
+    .a3 .pictured div.comment, .a3 .not-pictured div.comment {
+      font-family: HelveticaThinCondensed, sans-serif; }
+    .a3 .pictured div.text, .a3 .not-pictured div.text {
+      font-family: HelveticaRoman  , sans-serif; }
+    .a3 h2.title {
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      font-size: 35px;
+      line-height: 38px; }
+    .a3 h3.subtitle {
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      font-size: 18px;
+      line-height: 20px; }
+    .a3 div.text {
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      font-size: 15px;
+      line-height: 20px; }
+    .a3 h2.title {
+      font-family: HelveticaLightCondensed, sans-serif; }
+    .a3 h3.subtitle {
+      font-family: HelveticaThinCondensed , sans-serif; }
+    .a3 div.comment {
+      font-family: HelveticaThinCondensed, sans-serif; }
+    .a3 div.text {
+      font-family: HelveticaRoman  , sans-serif; } }
+  @media only screen and (max-width: 1024px) and (min-width: 769px) and (max-width: 1200px) {
+    .a3 .pictured h3.subtitle, .a3 .not-pictured h3.subtitle {
+      font-size: 15px;
+      line-height: 17px; } }
+  @media only screen and (max-width: 1024px) and (min-width: 769px) and (max-width: 768px) {
+    .a3 .pictured h2.title, .a3 .not-pictured h2.title {
+      font-size: 17px;
+      line-height: 21px; }
+    .a3 .pictured h3.subtitle, .a3 .not-pictured h3.subtitle {
+      font-size: 12px;
+      line-height: 16px; }
+    .a3 .pictured div.text, .a3 .not-pictured div.text {
+      font-size: 12px;
+      line-height: 16px; } }
+  @media only screen and (max-width: 1024px) and (min-width: 769px) and (max-width: 1200px) {
+    .a3 h3.subtitle {
+      font-size: 15px;
+      line-height: 17px; } }
+  @media only screen and (max-width: 1024px) and (min-width: 769px) and (max-width: 768px) {
+    .a3 h2.title {
+      font-size: 17px;
+      line-height: 21px; }
+    .a3 h3.subtitle {
+      font-size: 12px;
+      line-height: 16px; }
+    .a3 div.text {
+      font-size: 12px;
+      line-height: 16px; } }
   @media only screen and (max-width: 768px) {
     .a3 {
       margin-bottom: 30px; }
@@ -2353,6 +2607,10 @@ Article type 3
       .a3 {
         margin-bottom: 10px;
         height: 225px; } }
+    @media only screen and (max-width: 768px) and (max-width: 1200px) {
+      .a3 h3.subtitle {
+        font-size: 15px;
+        line-height: 17px; } }
     @media only screen and (max-width: 768px) and (max-width: 768px) {
       .a3 h2.title {
         font-size: 17px;
@@ -2426,6 +2684,10 @@ Small article (A2/A3)
     font-family: HelveticaThinCondensed, sans-serif; }
   .a-small div.text {
     font-family: HelveticaRoman  , sans-serif; }
+  @media only screen and (max-width: 1200px) {
+    .a-small h3.subtitle {
+      font-size: 15px;
+      line-height: 17px; } }
   @media only screen and (max-width: 768px) {
     .a-small h2.title {
       font-size: 17px;
@@ -2653,6 +2915,10 @@ Common css
     font-family: HelveticaThinCondensed, sans-serif; }
   .i2 div.text, .v2 div.text {
     font-family: HelveticaRoman  , sans-serif; }
+  @media only screen and (max-width: 1200px) {
+    .i2 h3.subtitle, .v2 h3.subtitle {
+      font-size: 15px;
+      line-height: 17px; } }
   @media only screen and (max-width: 768px) {
     .i2 h2.title, .v2 h2.title {
       font-size: 17px;
@@ -2717,6 +2983,10 @@ Common css
     font-family: HelveticaThinCondensed, sans-serif; }
   .i3 div.text, .v3 div.text {
     font-family: HelveticaRoman  , sans-serif; }
+  @media only screen and (max-width: 1200px) {
+    .i3 h3.subtitle, .v3 h3.subtitle {
+      font-size: 15px;
+      line-height: 17px; } }
   @media only screen and (max-width: 768px) {
     .i3 h2.title, .v3 h2.title {
       font-size: 17px;
@@ -2921,6 +3191,10 @@ Video
   font-family: HelveticaThinCondensed, sans-serif; }
 .v3 div.text {
   font-family: HelveticaRoman  , sans-serif; }
+@media only screen and (max-width: 1200px) {
+  .v3 h3.subtitle {
+    font-size: 15px;
+    line-height: 17px; } }
 @media only screen and (max-width: 768px) {
   .v3 h2.title {
     font-size: 17px;
@@ -2996,6 +3270,10 @@ Video
   font-family: HelveticaThinCondensed, sans-serif; }
 .v2 div.text {
   font-family: HelveticaRoman  , sans-serif; }
+@media only screen and (max-width: 1200px) {
+  .v2 h3.subtitle {
+    font-size: 15px;
+    line-height: 17px; } }
 @media only screen and (max-width: 768px) {
   .v2 h2.title {
     font-size: 17px;
@@ -3195,6 +3473,10 @@ Promo
     font-family: HelveticaThinCondensed, sans-serif; }
   .p2 div.text {
     font-family: HelveticaRoman  , sans-serif; }
+  @media only screen and (max-width: 1200px) {
+    .p2 h3.subtitle {
+      font-size: 15px;
+      line-height: 17px; } }
   @media only screen and (max-width: 768px) {
     .p2 h2.title {
       font-size: 17px;
@@ -3312,6 +3594,10 @@ Promo
     font-family: HelveticaThinCondensed, sans-serif; }
   .p3 div.text {
     font-family: HelveticaRoman  , sans-serif; }
+  @media only screen and (max-width: 1200px) {
+    .p3 h3.subtitle {
+      font-size: 15px;
+      line-height: 17px; } }
   @media only screen and (max-width: 768px) {
     .p3 h2.title {
       font-size: 17px;
@@ -3372,6 +3658,9 @@ Load More button
   margin-top: 30px;
   margin-bottom: 55px;
   text-align: center; }
+  @media only screen and (max-width: 1200px) and (min-width: 1025px) {
+    .load-more {
+      width: 1005px; } }
   @media only screen and (max-width: 1024px) and (min-width: 980px) {
     .load-more {
       width: 975px; } }
@@ -3437,7 +3726,6 @@ Footer css
           width: 100%; } }
       .footer div.section div.column a {
         color: #444444;
-        text-decoration: underline;
         display: block; }
 
 a.transp-link {
@@ -3502,6 +3790,9 @@ POST CSS
   /*
   Comment-section
   */ }
+  @media only screen and (max-width: 1200px) and (min-width: 1025px) {
+    .post {
+      width: 1005px; } }
   @media only screen and (max-width: 1024px) and (min-width: 980px) {
     .post {
       width: 975px; } }
@@ -3887,6 +4178,9 @@ Related
   text-transform: uppercase;
   margin-top: 50px;
   margin-bottom: 50px; }
+  @media only screen and (max-width: 1200px) and (min-width: 1025px) {
+    .related h2.related-title {
+      width: 1005px; } }
   @media only screen and (max-width: 1024px) and (min-width: 980px) {
     .related h2.related-title {
       width: 975px; } }
@@ -3904,6 +4198,9 @@ Related
     width: 370px;
     margin-left: 15px;
     margin-right: 15px; }
+    @media only screen and (max-width: 1200px) {
+      .related .related-container .a-small, .related .related-container .a3, .related .related-container .i3, .related .related-container .v3, .related .related-container .v3, .related .related-container .p3 {
+        width: 315px; } }
     @media only screen and (max-width: 1024px) {
       .related .related-container .a-small, .related .related-container .a3, .related .related-container .i3, .related .related-container .v3, .related .related-container .v3, .related .related-container .p3 {
         width: 305px; } }
@@ -4171,6 +4468,9 @@ Tool CSS
   /*
   Button for tools
   */ }
+  @media only screen and (max-width: 1200px) and (min-width: 1025px) {
+    .tool {
+      width: 1005px; } }
   @media only screen and (max-width: 1024px) and (min-width: 980px) {
     .tool {
       width: 975px; } }
@@ -4237,7 +4537,7 @@ Tool CSS
         cursor: pointer; }
     .tool .header-tool .icon-bar-grey {
       margin: 9px; }
-    @media only screen and (max-width: 1024px) {
+    @media only screen and (max-width: 1200px) {
       .tool .header-tool {
         width: 100%; } }
     @media only screen and (max-width: 768px) {
@@ -4430,6 +4730,9 @@ Tool CSS
       .tool .selector .occupations .check-box-1 label {
         margin-bottom: 0px;
         font-family: "HelveticaThinCondensed"; }
+      @media only screen and (max-width: 1200px) {
+        .tool .selector .occupations {
+          width: 44.5%; } }
       @media only screen and (max-width: 1024px) {
         .tool .selector .occupations {
           width: 43.7%; } }
@@ -5380,7 +5683,7 @@ Locally Grown
 */
 .locallyGrown .selector .input-zip {
   width: 23%;
-  min-width: 267px;
+  min-width: 230px;
   float: left;
   background-color: #09335b;
   color: white; }
@@ -5392,6 +5695,9 @@ Locally Grown
   display: block;
   margin: auto;
   height: 590px; }
+  @media only screen and (max-width: 1200px) and (min-width: 1025px) {
+    .locallyGrown .mapbox {
+      width: 1005px; } }
   @media only screen and (max-width: 1024px) and (min-width: 980px) {
     .locallyGrown .mapbox {
       width: 975px; } }
@@ -5424,7 +5730,7 @@ Career Scape
     padding: 0px;
     display: block;
     z-index: 1; }
-    @media only screen and (max-width: 1024px) {
+    @media only screen and (max-width: 1200px) {
       .careerScape canvas {
         width: 100%; } }
     @media only screen and (max-width: 768px) {
@@ -5842,6 +6148,9 @@ Dashboard
   width: 1170px;
   display: block;
   margin: auto; }
+  @media only screen and (max-width: 1200px) and (min-width: 1025px) {
+    .dashboard {
+      width: 1005px; } }
   @media only screen and (max-width: 1024px) and (min-width: 980px) {
     .dashboard {
       width: 975px; } }
@@ -6044,6 +6353,9 @@ Dashboard
     */ }
     .dashboard .content .col-left, .dashboard .content .col-right {
       width: 370px; }
+      @media only screen and (max-width: 1200px) {
+        .dashboard .content .col-left, .dashboard .content .col-right {
+          width: 318px; } }
       @media only screen and (max-width: 1024px) {
         .dashboard .content .col-left, .dashboard .content .col-right {
           width: 308px; } }
@@ -6143,7 +6455,7 @@ Dashboard
       text-transform: uppercase;
       padding-left: 15px;
       padding-right: 15px; }
-      @media only screen and (max-width: 1024px) {
+      @media only screen and (max-width: 1200px) {
         .dashboard .content .work-experience .occupation, .dashboard .content .work-experience .income {
           padding-left: 12px;
           width: 100%;
@@ -6215,7 +6527,7 @@ Dashboard
       color: white;
       margin-bottom: 20px;
       background: #5c1a47; }
-    @media only screen and (max-width: 1024px) {
+    @media only screen and (max-width: 1200px) {
       .dashboard .content .skills .skill, .dashboard .content .skills .add-elem {
         width: 45%; } }
     .dashboard .content .technology .add-elem, .dashboard .content .technology .add-elem-input input, .dashboard .content .technology .technology-elem {
@@ -6248,6 +6560,9 @@ Dashboard
   width: 1170px;
   display: block;
   margin: auto; }
+  @media only screen and (max-width: 1200px) and (min-width: 1025px) {
+    .saved-content-page {
+      width: 1005px; } }
   @media only screen and (max-width: 1024px) and (min-width: 980px) {
     .saved-content-page {
       width: 975px; } }
