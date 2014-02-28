@@ -15,8 +15,6 @@
                 <b class="icon-bigarrow-bottom-grey grey-icon"></b>
             </div>
             <div class="subMenu">
-				<div ng-repeat="occupation in $parent.occupations">
-                    <div class="elem mode-{{$index % 4}} check-box-1"><input ng-model="occupation_checkbox[$index]" id="checkbox-{{$index}}" type="checkbox" name="option{{$index}}" value="{{occupation.Name}}"><label for="checkbox-{{$index}}">{{occupation.Name}}</label></div>
-                </div>
+                <div ng-repeat="occupation in $parent.occupations" class="elem mode-{{$index % 4}} check-box-1"><input ng-model="occupation_checkbox[$index]" id="checkbox-{{$index}}" type="checkbox" name="option{{$index}}" value="{{occupation.Name}}"><label for="checkbox-{{$index}}">{{occupation.Name}}</label></div>
 			</div>
 </div>

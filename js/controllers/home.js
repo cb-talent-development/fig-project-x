@@ -172,16 +172,34 @@ function HomePageCtr($scope, $http,register) {
 	
 	$scope.setFilters = function(){
 		$scope.mostMenu = ["Most Recent", "Most Popular"];
-		$scope.selectedMost = $scope.mostMenu[0];
-		$scope.contentMenu = ["All Content", "Articles", "Infographics", "Videos"];
-		$scope.selectedContent = "All Content";
-		$scope.selectedCategory = "All Categories";
-		$scope.industryMenu = ["Some Text 1", "Some Text 2", "Some Text 3", "Some Text 4", "Some Text 5"];
-		$scope.selectedIndustry = "Filter By Industry";
+        $scope.contentMenu = ["All Content", "Articles", "Infographics", "Videos"];
+        $scope.industryMenu = ["Some Text 1", "Some Text 2", "Some Text 3", "Some Text 4", "Some Text 5"];
 		$scope.jobMenu = ["Discovery", "Get the Job", "Find the Job", "On the Job", "What is this?"];
-		$scope.selectedJob = "Filter By Industry";
+        
+		$scope.selectedMost = input($scope.mostMenu[0]);
+		$scope.selectedContent = input($scope.mostMenu[0]);
+		$scope.selectedCategory = input("All Categories");
+        $scope.selectedPhase = input("Job Phase");
+		$scope.selectedIndustry = input("Filter By Industry");
+
+		$scope.industryMenu = ["Some Text 1", "Some Text 2", "Some Text 3", "Some Text 4", "Some Text 5"];
+		$scope.jobMenu = ["Discovery", "Get the Job", "Find the Job", "On the Job", "What is this?"];
 	}
-	
+    /*
+    Reaction to a search
+    */
+	$scope.search=function(){
+        if($scope.searchValue.value=="")
+            $scope.searchValue.required=true;
+        else
+            search($scope.searchValue.value,$scope.actionSearch);
+    }
+    /*
+    Action to be called once the search has been done
+    */
+    $scope.actionSearch=function(){
+        alert("Action to handle the search results");    
+    }
     /*
     Constructor
     */
@@ -203,6 +221,7 @@ function HomePageCtr($scope, $http,register) {
         $scope.load('data/json/posts.json');
 		$scope.loadDropdown();
 		$scope.setFilters();
+        $scope.searchValue=input();
         $scope.$on('$includeContentLoaded', function(){
             initEffect();
         });

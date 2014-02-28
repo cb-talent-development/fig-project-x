@@ -3,7 +3,7 @@
 		<h2 class='title'>{{post.Headline}}</h2>
 		<h3 class='subtitle'>/&nbsp;{{post.Category.Name | uppercase}}</h3>
         <div class="comment">
-            <i class='icon-talk-{{post.classColor}}'></i>
+            <i class='icon-talk-{{post.classColor}} icon-talk'></i>
             <div class='commentCount'>{{post.CommentCount}} COMMENTS </div>
             <i class='icon-bar-grey'></i>
             <span ng-repeat="star in post.stars">
@@ -13,7 +13,7 @@
 	</div>
     <span class='icon icone-play{{post.size}}'></span>
 	<a class='transp-link' href='#/posts/{{post.id}}'></a>
-	<div class="img background-img-plain" style="background: url('{{post.Media.Url}}') center no-repeat;background-size: 280%;" ></div>
+	<div class="img background background-img-plain" style="background-image: url('{{post.Media.Url}}');" ></div>
 </div>
 
 

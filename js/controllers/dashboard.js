@@ -1,5 +1,15 @@
 function DashboardCtr($scope, $http,pagination,register) {
     /*
+    Make the register popup appears
+    */
+    $scope.appearPopup=function(page){
+        var name='.'+$scope.elemPopupName;
+        var popup=$(name);
+        apparition(popup);
+        movePopup(popup,page,true);
+        checkCursorPosition(name,'.icon-cursor-orange-down','horizontal',true);
+    }
+    /*
     Page Click
     */
     $scope.pageClick=function(page,type,class_element){
@@ -134,6 +144,9 @@ function DashboardCtr($scope, $http,pagination,register) {
     */
     $scope.init=function(){
         init($scope,register);
+        $scope.elemPopupName="dashboard-popup";
+        $scope.icon_vertical="icon-cursor-red";
+
         $scope.paths=[{
             "txt":" Dashboard",
             "color":"black"

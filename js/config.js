@@ -1,6 +1,7 @@
 
 //config file
 var config={
+    "production":false,
     "timeAnim":600,
     /*LOCALY GROWN PART */
     "step":100,

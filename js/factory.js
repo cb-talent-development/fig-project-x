@@ -2,7 +2,27 @@ var module = angular.module('factory', []);
 module.factory('register',['$http',function($http) {
     function register(scope){
         this.scope=scope;
+        this.name_elem='.dashboard-popup';
+        this.elem=[];
+        this.icon_vertical="icon-cursor-red";
+        this.icon_horizontal="icon-cursor-orange-down";
         this.init();
+    }
+    register.prototype.loadElem=function(){
+        if(this.elem.length==0){
+            this.elem=$(this.name_elem);
+        }
+        
+    };
+    register.prototype.appear=function(){
+        this.loadElem();
+        apparition(this.elem);
+        //eventually add other action
+    }
+    register.prototype.disappear=function(){
+        this.loadElem();
+        disparition(this.elem);
+        //eventually add other action
     }
     register.prototype.init=function(){
         //list to display (if too long, should be loaded on the server)
@@ -79,7 +99,6 @@ module.factory('register',['$http',function($http) {
             
         }
         this.user='none';
-        console.log(this);
     }
     /*
     Save function that does everything
@@ -87,15 +106,14 @@ module.factory('register',['$http',function($http) {
     register.prototype.save=function(){
         //HUGE FUNCTION
         //skills
-        //TODO: save skills
+        //TODO: save skills on server
         //we do that to avoid creating a new object
         this.userInfo.skills.saved.replace(this.userInfo.skills.selected);
         //technologies
-        //TODO: save tech
+        //TODO: save tech on server
         this.userInfo.technologies.saved.replace(this.userInfo.technologies.selected);
-        console.log(this.scope);
         //goals
-        //...
+        //TODO: combine with the server
         
         //change user Info so that the changing can be seen 
         //...
@@ -103,7 +121,8 @@ module.factory('register',['$http',function($http) {
         //recontruct user
         //...
         if(this.user!='none'){
-           disparition($('.dashboard-popup')); 
+           this.disappear();
+           
         }
         else{
             alert("Make sure that you have filled everything...");
@@ -111,7 +130,6 @@ module.factory('register',['$http',function($http) {
     }
     //Input initialisation
     register.prototype.initInput=function(user){
-        console.log("INIT INPUT");
         this.user=user;
         if(user && user != 'none'){
         //address
@@ -121,6 +139,7 @@ module.factory('register',['$http',function($http) {
             this.userInfo.gender.value=this.user.Gender;
             //job
             this.userInfo.job.name.value=this.user.JobTitle;
+            this.userInfo.job.phase=this.user.JobPhase; 
             //salary
             this.userInfo.salary.value=this.user.Income;
             //...
@@ -152,10 +171,19 @@ module.factory('register',['$http',function($http) {
     /*
     Setter
     */
-    register.prototype.setJobPhase=function(phase){
-        this.userInfo.job.phase=phase;
-        if(this.user){
-            this.user.JobPhase=phase;
+    register.prototype.setJobPhase=function(phase,elem){
+        var elem_vertical=$(".dashboard .resume ."+elem);
+        var elem_horizontal=$(".dashboard-popup ."+elem);
+        var cursor_vertical=$('.'+this.icon_vertical);
+        var cursor_horizontal=$('.'+this.icon_horizontal);
+        if(getLockCursor()==false){
+            this.userInfo.job.phase=phase;
+            if(this.user){
+                this.user.JobPhase=phase;
+            }
+            moveCursorHorizontal(elem_horizontal,cursor_horizontal);
+            if(elem_vertical.length!=0)
+                moveCursor(elem_vertical,cursor_vertical);
         }
     }
     register.prototype.setSchool=function(id){
@@ -242,6 +270,132 @@ module.factory('register',['$http',function($http) {
     }
     return register;
 }]);
+/*
+Factory used to send a file with other post data
+*/
+module.factory('formData',function(){
+    function formData($scope){
+        this.$scope=$scope;
+        if(!window.FormData){
+            //alert("Your browser does not support FormData, try to update it");
+            var data=function(){
+                this.content="";
+            };
+            data.prototype.append=function(name,value){
+                if(this.content!=''){
+                    this.content+="&";
+                }
+                this.content+=name+"="+value;
+            }
+            this.data=new data();
+        }
+        else{
+            this.form=new FormData();
+        }
+    }
+    formData.prototype.setData=function(datas){
+        for(data in datas){
+            if(typeof datas[data]==='object'){
+                if(datas[data].length !=undefined){
+                    if(datas[data].length>0){
+                        for(var i=0;i<datas[data].length;i++){
+                            var elem=datas[data][i];
+                            for(key in elem){
+                                if(this.form)
+                                    this.form.append(data+"["+i+"]["+key+"]",elem[key]);
+                                else if(this.data)
+                                    this.data.append(data+"["+i+"]["+key+"]",elem[key]);
+                            }
+                        }
+                    }
+                }
+                else{
+                   for(key in datas[data]){
+                        if(this.form)
+                            this.form.append(data+"["+key+"]",datas[data][key]);
+                        else if(this.data)
+                            this.data.append(data+"["+key+"]",datas[data][key]);
+                    } 
+                }
+            }
+            else{
+                if(this.form)
+                    this.form.append(data,datas[data]);
+                else if(this.data)
+                    this.data.append(data,datas[data]);
+            }
+        }
+    }
+    formData.prototype.setFile=function(files){
+        //var files=fileInput[0].files;
+        if(files.length!=0){
+            if(this.form)
+                this.form.append('file',files[0]);
+            //no picture
+        }    
+    }
+    formData.prototype.send=function(url,callback,progressFunction){
+        var xhr="";
+         try {
+            //firefox, chrome, safari etc
+            xhr = new XMLHttpRequest();
+        }
+        catch (e) {
+            // Internet Explorer Browsers
+            xhr = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xhr.open('POST',url); 
+        progress={};
+        var self=this;
+        xhr.onload = function() {
+                if (callback && typeof(callback) === "function") { 
+                    self.$scope.$apply(function(){
+                        var resp="";
+                        try {
+                            resp=JSON.parse(xhr.response);
+                        } catch (ex) {
+                            resp=xhr.response;
+                        }
+                        log(resp);
+                        callback.call(this,resp);
+                    });
+                }
+        };
+        xhr.upload.onprogress = function(e) {
+                progress.value = e.loaded;
+                progress.max = e.total;
+                log(progress);
+                if (progressFunction && typeof(progressFunction) === "function") {
+                    self.$scope.$apply(function(){
+                        progressFunction.call(this,progress);
+                    });
+                }
+        };
+        if(this.form){
+            xhr.send(this.form);
+        }
+        else{
+            log(this.data.content);
+            xhr.send(this.data.content);
+        }
+    }
+    return  formData;
+});
+/*
+Factory used to handle pagination (simple version: all pages displayed)
+*/
+module.factory('pagination', function () {
+            function page(){
+                this.currentPage=1;
+                this.pages=[1];
+                this.limit=5;
+                this.totalElem=0;
+            };
+            page.prototype.computePages=function(){
+                this.pages = range(1,Math.ceil(this.totalElem/this.limit));
+            }
+            return page;
+});
 
 module.factory('getStarted',['$http',function($http) {
     function getStarted(scope){
@@ -356,7 +510,6 @@ module.factory('getStarted',['$http',function($http) {
 			}
         }
         this.resume='none';
-        console.log(this);
     }
     /*
     Save function that does everything
@@ -414,7 +567,6 @@ module.factory('getStarted',['$http',function($http) {
 		this.resume.Volunteer.Description=this.resumeInfo.volunteer.description.value;
 		this.resume.Volunteer.State.Completed=this.resumeInfo.volunteer.state.completed;
 
-        console.log(this.scope);
 
         if(this.resume!='none'){
            disparition($('.get-started-resume')); 
@@ -433,7 +585,6 @@ module.factory('getStarted',['$http',function($http) {
 	}
     //Input initialisation
     getStarted.prototype.initInput=function(resume, user){
-        console.log("INIT INPUT");
         this.resume=resume;
 		this.user = user;
         if(resume && resume != 'none'){
@@ -450,7 +601,6 @@ module.factory('getStarted',['$http',function($http) {
 			this.resumeInfo.contactInfo.address.apt.value=this.resume.ContactInfo.Address.Apt;
 			this.resumeInfo.contactInfo.address.street.value=this.user.Street;
 			this.resumeInfo.contactInfo.state.completed=this.resume.ContactInfo.State.Completed;
-			console.log(this.resume.ContactInfo.State.Completed);
             //job
             this.resumeInfo.job.title.name.value=this.resume.Job.Title;
             this.resumeInfo.job.company.name.value=this.resume.Job.Company;
@@ -549,75 +699,3 @@ module.factory('getStarted',['$http',function($http) {
 	}
     return getStarted;
 }]);
-
-module.factory('formData',function(){
-    function formData($scope){
-        this.$scope=$scope;
-        if(!window.FormData){
-            alert("Your browser does not support FormData, try to update it");
-        }
-        else{
-            this.form=new FormData();
-        }
-    }
-    formData.prototype.setData=function(datas){
-        for(data in datas){
-            if(typeof datas[data]==='object'){
-                console.log(datas[data]);
-                if(datas[data].length !=undefined){
-                    console.log("array");
-                    if(datas[data].length>0){
-                        for(var i=0;i<datas[data].length;i++){
-                            var elem=datas[data][i];
-                            for(key in elem){
-                                this.form.append(data+"["+i+"]["+key+"]",elem[key]);
-                            }
-                        }
-                    }
-                }
-                else{
-                    console.log("json");
-                   for(key in datas[data]){
-                        this.form.append(data+"["+key+"]",datas[data][key]);
-                    } 
-                }
-            }
-            else{
-                this.form.append(data,datas[data]);
-            }
-        }
-    }
-    formData.prototype.setFile=function(files){
-        //var files=fileInput[0].files;
-        if(files.length!=0){
-            this.form.append('file',files[0]);
-        }    
-    }
-    formData.prototype.send=function(url,callback,progressFunction){
-        var xhr = new XMLHttpRequest();
-        xhr.open('POST',url); 
-        progress={};
-        var self=this;
-        xhr.onload = function() {
-                if (callback && typeof(callback) === "function") {  
-                    self.$scope.$apply(function(){
-                        console.log(xhr.response);
-                        callback.call(this,JSON.parse(xhr.response));
-                    });
-                }
-        };
-        xhr.upload.onprogress = function(e) {
-                progress.value = e.loaded;
-                progress.max = e.total;
-                console.log(progress);
-                if (progressFunction && typeof(progressFunction) === "function") {
-                    self.$scope.$apply(function(){
-                        progressFunction.call(this,progress);
-                    });
-                }
-        };
-        xhr.send(this.form);
-
-    }
-    return  formData;
-});

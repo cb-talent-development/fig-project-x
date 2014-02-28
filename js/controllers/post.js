@@ -95,14 +95,13 @@ function PostCtr($scope,$http,$routeParams,register){
             "input":input,
             "User":$scope.user
         }).success(function(data){
-            //console.log(data);
             //random id for now
             var newId=Math.floor((Math.random()*100)+100);
             data.Content=input;
             data.id=newId;
             data.isNew=true;
             data.display="none";
-            console.log(data);
+            log(data);
             if(id){
                 var find=false;
                 for(var i=0;i<$scope.comments.length;i++){
@@ -165,7 +164,7 @@ function PostCtr($scope,$http,$routeParams,register){
         if(input.length>0){
             var id=comment.id;
             $scope.actualPosition=$("#comment_"+id).find('.new-comment').first().position().top;
-            console.log($scope.actualPosition);
+            log($scope.actualPosition);
             $scope.addComment(input,id);
         }
     }

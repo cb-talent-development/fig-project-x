@@ -23,25 +23,21 @@ function FirstConnectCtr($scope, $http ,pagination) {
 	   });
     }
 	$scope.showHeader= function(){
-		$('.menu-buttons').slideDown('normal');
-		$('#header').slideDown('normal');
+        showHeader();
 	}
 	$scope.hideHeader= function(){
-		$('.menu-buttons').hide();
-		$('#header').hide();
+        hideHeader();
 	}
 	
 	$scope.closeFirstConnect= function(){
-		$('.first-connect').fadeOut('normal','linear', function(){
-			$scope.showHeader();
-		});
+        closeFirstConnectShowHeader();
 	}
 	$scope.hideFirstConnect= function(){
-		$('.first-connect').hide();
+        hideFirstConnect();
 	}
 	
 	$scope.chooseHeader = function() {
-		if($scope.firstConnection && !checkIfModeTwoColumns()){
+		if($scope.firstConnection){
 			$scope.hideHeader();
 		}
 		else{

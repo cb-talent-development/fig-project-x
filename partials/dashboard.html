@@ -2,16 +2,16 @@
 <div class="dashboard">
     <div class="resume">
         <div class="left person">
-            <i class="icon-pencil link" onclick="apparition($('.dashboard-popup'));movePopup($('.dashboard-popup'),7,true)"></i>
+            <i class="icon-pencil link" ng-click="appearPopup(7)"></i>
             <div class="picture" style="background: url('{{user.Media.Url}}') center no-repeat;background-size:160%;"></div>
-            <i class="icon-pencil edit-name link" onclick="apparition($('.dashboard-popup'));movePopup($('.dashboard-popup'),1,true)"></i>
+            <i class="icon-pencil edit-name link" ng-click="appearPopup(1)" ></i>
             <div class="name">{{user.Name}}</div>
             <div class="mail">{{user.Mail}}</div>
 
         </div>
         <div class="right job-phase">
             <div class="title">
-                <div class="icon-pencil inline link" onclick="apparition($('.dashboard-popup'));movePopup($('.dashboard-popup'),3,true);            checkCursorPosition('.section2','.icon-cursor-orange-down','horizontal',true);"></div>
+                <div class="icon-pencil inline link" ng-click="appearPopup(3)"></div>
                 <div class="txt inline">What Phase of the Job Search Are You?</div>
             </div>
             <div class="phase-content">
@@ -20,19 +20,19 @@
                     <div class="icon-bar-cursor"></div>
                 </div>
                 <div class="left phases">
-                    <div class="phase link" ng-class="{true:'selected',false:''}[user.JobPhase=='Discovery']" onclick="moveCursor($(this),$('.icon-cursor-red'))" ng-click="setJobPhase('Discovery')">
+                    <div class="phase link phase-1" ng-class="{true:'selected',false:''}[user.JobPhase=='Discovery']" ng-click="register.setJobPhase('Discovery','phase-1')">
                         <i class="icon-search-orange-big"></i>
                         <span>Discovery</span>
                     </div>
-                    <div class="phase link" ng-class="{true:'selected',false:''}[user.JobPhase=='Find the Job']" onclick="moveCursor($(this),$('.icon-cursor-red'))" ng-click="setJobPhase('Find the Job')">
+                    <div class="phase link phase-2" ng-class="{true:'selected',false:''}[user.JobPhase=='Find the Job']" ng-click="register.setJobPhase('Find the Job','phase-2')">
                         <i class="icon-twin-blue-big"></i>
                         <span>Find the Job</span>
                     </div>
-                    <div class="phase link" ng-class="{true:'selected',false:''}[user.JobPhase=='Get the Job']" onclick="moveCursor($(this),$('.icon-cursor-red'))" ng-click="setJobPhase('Get the Job')">
+                    <div class="phase link phase-3" ng-class="{true:'selected',false:''}[user.JobPhase=='Get the Job']" ng-click="register.setJobPhase('Get the Job','phase-3')">
                         <i class="icon-check-red-big"></i>
                         <span>Get the Job</span>
                     </div>
-                    <div class="phase link" ng-class="{true:'selected',false:''}[user.JobPhase=='On the Job']" onclick="moveCursor($(this),$('.icon-cursor-red'))" ng-click="setJobPhase('On the Job')">
+                    <div class="phase link phase-4" ng-class="{true:'selected',false:''}[user.JobPhase=='On the Job']" ng-click="register.setJobPhase('On the Job','phase-4')">
                         <i class="icon-suitcase-green-big"></i>
                         <span>On the Job</span>
                     </div>
@@ -42,22 +42,22 @@
         <div class="left presentation">
             <table>
                 <tr>
-                    <td><div class="icon-pencil link" onclick="apparition($('.dashboard-popup'));movePopup($('.dashboard-popup'),4,true)"></div></td>
+                    <td><div class="icon-pencil link" ng-click="appearPopup(4)"></div></td>
                     <td><div class="icon-suitcase-red logo"></div></td>
                     <td><div>{{user.JobTitle}}</div></td>
                 </tr>
                 <tr>
-                    <td><div class="icon-pencil link" onclick="apparition($('.dashboard-popup'));movePopup($('.dashboard-popup'),2,true)"></div></td>
+                    <td><div class="icon-pencil link" ng-click="appearPopup(2)" ></div></td>
                     <td><div class="icon-building logo"></div></td>
                     <td><div>{{user.Website}}</div></td>
                 </tr>
                 <tr>
-                    <td><div class="icon-pencil link" onclick="apparition($('.dashboard-popup'));movePopup($('.dashboard-popup'),2,true)"></div></td>
+                    <td><div class="icon-pencil link" ng-click="appearPopup(2)"></div></td>
                     <td><div class="icon-location logo"></div></td>
                     <td><div>{{user.State}},&nbsp;{{user.Zipcode}}</div></td>
                 </tr>
                 <tr>
-                    <td><div class="icon-pencil link" onclick="apparition($('.dashboard-popup'));movePopup($('.dashboard-popup'),4,true)"></div></td>
+                    <td><div class="icon-pencil link" ng-click="appearPopup(4)"></div></td>
                     <td><div class="icon-dollars logo"></div></td>
                     <td><div>{{user.Income}}</div></td>
                 </tr>
@@ -120,10 +120,10 @@
                 </div>
             </div>
         </div>
-        <div class="col-left left">
+        <div class="col-left col-middle left">
             <div class="education">
                 <div class="title-section">
-                    <span class="icon-pencil link" onclick="apparition($('.dashboard-popup'));movePopup($('.dashboard-popup'),5,true);"></span>
+                    <span class="icon-pencil link" ng-click="appearPopup(5)"></span>
                     <span class="title">Education</span>
                 </div>
                 <div class="content">
@@ -143,7 +143,7 @@
             </div>
             <div class="career-goals">
                 <div class="title-section">
-                    <span class="icon-pencil link" onclick="apparition($('.dashboard-popup'));movePopup($('.dashboard-popup'),6,true)"></span>
+                    <span class="icon-pencil link" ng-click="appearPopup(6)"></span>
                     <span class="title">Career Goals</span>
                 </div>
                 <div class="content">
@@ -155,7 +155,7 @@
         <div class="col-right right">
             <div class="skills">
                 <div class="title-section">
-                    <span class="icon-pencil link" onclick="apparition($('.dashboard-popup'));movePopup($('.dashboard-popup'),6,true)"></span>
+                    <span class="icon-pencil link" ng-click="appearPopup(6)"></span>
                     <span class="title">Skills</span>
                 </div>
                 <div class="content">
@@ -169,7 +169,7 @@
             </div>
             <div class="technology">
                 <div class="title-section">
-                    <span class="icon-pencil link" onclick="apparition($('.dashboard-popup'));movePopup($('.dashboard-popup'),6,true)"></span>
+                    <span class="icon-pencil link" ng-click="appearPopup(6)"></span>
                     <span class="title">Tools & Technology</span>
                 </div>
                 <div class="content">

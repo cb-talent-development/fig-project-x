@@ -10,7 +10,7 @@ $sprite-height: 3597px;
 	vertical-align: top;
     background: url("assets/x_sprite.png") no-repeat;
     background-size: $sprite-width/2 $sprite-height/2;
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
         background-size: $sprite-width/4 $sprite-height/4;
 	}
 }
@@ -26,25 +26,25 @@ $sprite-height: 3597px;
 }
 .icon-career {
 	@include dimensionPosition( -13px, -10px, 24px, 142px, 1.0);
-     @media only screen and (max-width: 768px){
+     @media only screen and (max-width: 1000px){
 		@include dimensionPosition( -178px, -10px, 24px, 26px, 0.7);
 	}
 }
 .icon-search {
 	@include dimensionPosition(-9px, -58px, 15px, 15px, 1.0);
-	@media( max-width: 767px){
+	@media( max-width: 1000px){
 		@include dimensionPosition(-9px, -58px, 15px, 15px, 1.5);
 	}
 }
 .icon-close{
 	@include dimensionPosition(-430px, -420px, 40px, 40px, 1.0);
-	@media only screen and (max-width: 768px){
+	@media only screen and (max-width: 1000px){
 		@include dimensionPosition(-430px, -420px, 40px, 40px, 0.7);
 	}
 }
 .icon-close:hover{
 	@include dimensionPosition(-475px, -420px, 40px, 40px, 1.0);
-	@media only screen and (max-width: 768px){
+	@media only screen and (max-width: 1000px){
 	   @include dimensionPosition(-475px, -420px, 40px, 40px, 0.7);
 	}
 }
@@ -52,7 +52,7 @@ $sprite-height: 3597px;
     background-position:-115px -55px;
 	width: 2px;
 	height: 24px;
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
        width: 1px;
        height: 12px;
 	   background-position: -57.5px -27.5px;
@@ -60,7 +60,7 @@ $sprite-height: 3597px;
 }
 .icon-bar-grey{
 	@include dimensionPosition(-150px, -55px, 24px, 2px, 1.0);
-    @media only screen and (max-width: 767px){
+    @media only screen and (max-width: 1000px){
 		@include dimensionPosition(-150px, -55px, 24px, 2px, 0.7);
 	}
     @media only screen and (max-width: 479px){
@@ -72,32 +72,32 @@ Arrow big
 **/
 .icon-bigarrow-bottom-grey{
 	@include dimensionPosition(-42px, -63px, 15px, 16px, 1.0);
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
 		@include dimensionPosition(-42px, -63px, 15px, 16px, 0.7);
 	}
 }
 .icon-bigarrow-bottom-orange{
 	@include dimensionPosition(-76px, -63px, 9px, 15px, 1.0);
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
         @include dimensionPosition(-76px, -63px, 9px, 15px, 0.7);
 	}
 }
 .icon-bigarrow-right-black{
 	@include dimensionPosition( -212px,  -59px, 17px, 9px, 1.0);
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
        @include dimensionPosition( -212px,  -59px, 17px, 9px, 0.7);
 	}
 }
 .icon-bigarrow-right-white{
     @include dimensionPosition(-245px, -59px, 15px, 9px, 1.0);
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
         @include dimensionPosition(-245px, -59px, 15px, 9px, 0.7);
 	}
 }
 //
 .icon-check{
     @include dimensionPosition( -273px, -56px, 24px, 24px, 1.0);
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
        @include dimensionPosition( -273px, -56px, 24px, 24px, 0.7);
 	}
 }
@@ -107,7 +107,7 @@ Arrow big
 	height: 17px;
     margin-top:-8.5px;
     margin-left:-7px;
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
        width: 7px;
        height: 8.5px;
        margin-top:-4px;
@@ -121,7 +121,7 @@ Arrow big
 	height: 20px;
     margin-top:-10px;
     margin-left:-8px;
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
        width: 8px;
         margin-top:-5px;
         margin-left:-4px;
@@ -135,7 +135,7 @@ Arrow big
 	height: 70px;
     margin-top:-10px;
     margin-left:-8px;
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
        width: 8px;
         margin-top:-5px;
         margin-left:-4px;
@@ -145,7 +145,7 @@ Arrow big
 }
 .icon-image{
 	@include dimensionPosition(-2px, -416px, 40px, 40px, 1.0);
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
 		@include dimensionPosition(-2px, -416px, 40px, 40px, 0.7);
 	}
 }
@@ -160,7 +160,7 @@ TALK
     background-position:-10px -96px;
 	width: 26px;
 	height: 24px;
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
        width: 13px;
        height: 12px;
 	   background-position: -5px -48px;
@@ -170,7 +170,7 @@ TALK
     background-position:-57px -96px;
 	width: 26px;
 	height: 24px;
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
        width: 13px;
        height: 12px;
 	   background-position: -28.5px -48px;
@@ -180,7 +180,7 @@ TALK
     background-position:-104px -96px;
 	width: 26px;
 	height: 24px;
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
        width: 13px;
        height: 12px;
 	   background-position: -57px -48px;
@@ -190,7 +190,7 @@ TALK
     background-position:-151px -96px;
 	width: 26px;
 	height: 24px;
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
        width: 13px;
        height: 12px;
 	   background-position: -75.5px -48px;
@@ -201,7 +201,7 @@ TALK
     background-position:-198px -96px;
 	width: 26px;
 	height: 24px;
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
        width: 13px;
        height: 12px;
 	   background-position: -99px -48px;
@@ -211,7 +211,7 @@ TALK
     background-position:-245px -96px;
 	width: 26px;
 	height: 24px;
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
        width: 13px;
        height: 12px;
 	   background-position: -222.5px -48px;
@@ -221,7 +221,7 @@ TALK
     background-position:-292px -96px;
 	width: 26px;
 	height: 24px;
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
        width: 13px;
        height: 12px;
 	   background-position: -146px -48px;
@@ -231,7 +231,7 @@ TALK
     background-position:-339px -96px;
 	width: 26px;
 	height: 24px;
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
        width: 13px;
        height: 12px;
 	   background-position: -169.5px -48px;
@@ -241,7 +241,7 @@ TALK
     background-position:-386px -96px;
 	width: 26px;
 	height: 24px;
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
        width: 13px;
        height: 12px;
 	   background-position: -193px -48px;
@@ -252,7 +252,7 @@ TALK
     background-position:-433px -96px;
 	width: 26px;
 	height: 24px;
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
        width: 13px;
        height: 12px;
 	   background-position: -216.5px -48px;
@@ -262,7 +262,7 @@ TALK
     background-position:-480px -96px;
 	width: 26px;
 	height: 24px;
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
        width: 13px;
        height: 12px;
 	   background-position: -240px -48px;
@@ -272,7 +272,7 @@ TALK
     background-position:-526px -96px;
 	width: 26px;
 	height: 24px;
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
        width: 13px;
        height: 12px;
 	   background-position: -263px -48px;
@@ -282,7 +282,7 @@ TALK
     background-position:-573px -96px;
 	width: 26px;
 	height: 24px;
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
        width: 13px;
        height: 12px;
 	   background-position: -286.5px -48px;
@@ -292,7 +292,7 @@ TALK
     background-position:-620px -96px;
 	width: 26px;
 	height: 24px;
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
        width: 13px;
        height: 12px;
 	   background-position: -310px -48px;
@@ -302,7 +302,7 @@ TALK
     background-position:-667px -96px;
 	width: 26px;
 	height: 24px;
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
        width: 13px;
        height: 12px;
 	   background-position: -333.5px -48px;
@@ -313,7 +313,7 @@ TALK
     background-position:-10px -143px;
 	width: 26px;
 	height: 24px;
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
        width: 13px;
        height: 12px;
 	   background-position: -5px -71.5px;
@@ -323,7 +323,7 @@ TALK
     background-position:-57px -143px;
 	width: 26px;
 	height: 24px;
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
        width: 13px;
        height: 12px;
 	   background-position: -28.5px -71.5px;
@@ -333,7 +333,7 @@ TALK
     background-position:-57px -143px;
 	width: 26px;
 	height: 24px;
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
        width: 13px;
        height: 12px;
 	   background-position: -28.5px -71.5px;
@@ -343,7 +343,7 @@ TALK
     background-position:-292px -143px;
 	width: 26px;
 	height: 24px;
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
        width: 13px;
        height: 12px;
 	   background-position: -146px -71.5px;
@@ -354,7 +354,7 @@ TALK
     background-position:-151px -143px;
 	width: 26px;
 	height: 24px;
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
        width: 13px;
        height: 12px;
 	   background-position: -75.5px -71.5px;
@@ -364,7 +364,7 @@ TALK
     background-position:-198px -143px;
 	width: 26px;
 	height: 24px;
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
        width: 13px;
        height: 12px;
 	   background-position: -99px -71.5px;
@@ -374,7 +374,7 @@ TALK
     background-position:-245px -143px;
 	width: 26px;
 	height: 24px;
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
        width: 13px;
        height: 12px;
 	   background-position: -122.5px -71.5px;
@@ -388,7 +388,7 @@ STARS
     background-size: 3000px 2800px;
     width: 43px;
 	height: 42px;
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
        background-size: 1500px 1400px;
        width: 22px;
        height: 21px;
@@ -400,7 +400,7 @@ STARS
 	/*@media only screen and (max-width: 979px){
         @include dimensionPosition($posx, $posy, 21.5px, 21px, 1.0);
 	}*/
-    @media only screen and (max-width: 768px) and (min-width: 481px){
+    @media only screen and (max-width: 1000px) and (min-width: 481px){
         @include dimensionPosition($posx, $posy, 21.5px, 21px, 1.2);
 	}
 	@media only screen and (max-width: 480px){
@@ -483,7 +483,7 @@ STARS
 //green
 .icon-star-green-1{
     @include dimensionPosition(-13px, -190px, 22px, 21px, 1.0);
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
 		@include dimensionPosition(-13px, -190px, 22px, 21px, 0.7);
 	}
 }
@@ -491,7 +491,7 @@ STARS
     background-position:-60px -190px;
 	width: 22px;
 	height: 21px;
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
        width: 11px;
        height: 10.5px;
 	   background-position: -30px -95px;
@@ -501,7 +501,7 @@ STARS
     background-position:-107px -190px;
 	width: 22px;
 	height: 21px;
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
        width: 11px;
        height: 10.5px;
 	   background-position: -53.5px -95px;
@@ -511,7 +511,7 @@ STARS
     background-position:-154px -190px;
 	width: 22px;
 	height: 21px;
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
        width: 11px;
        height: 10.5px;
 	   background-position: -77px -95px;
@@ -522,7 +522,7 @@ STARS
     background-position:-200px -190px;
 	width: 22px;
 	height: 21px;
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
        width: 11px;
        height: 10.5px;
 	   background-position: -100px -95px;
@@ -532,7 +532,7 @@ STARS
     background-position:-247px -190px;
 	width: 22px;
 	height: 21px;
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
        width: 11px;
        height: 10.5px;
 	   background-position: -123.5px -95px;
@@ -542,7 +542,7 @@ STARS
     background-position:-294px -190px;
 	width: 22px;
 	height: 21px;
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
        width: 11px;
        height: 10.5px;
 	   background-position: -147px -95px;
@@ -552,7 +552,7 @@ STARS
     background-position:-341px -190px;
 	width: 22px;
 	height: 21px;
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
        width: 11px;
        height: 10.5px;
 	   background-position: -170.5px -95px;
@@ -562,7 +562,7 @@ STARS
     background-position:-388px -190px;
 	width: 22px;
 	height: 21px;
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
        width: 11px;
        height: 10.5px;
 	   background-position: -194px -95px;
@@ -573,7 +573,7 @@ STARS
     background-position:-435px -190px;
 	width: 22px;
 	height: 21px;
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
        width: 11px;
        height: 10.5px;
 	   background-position: -217.5px -95px;
@@ -583,7 +583,7 @@ STARS
     background-position:-482px -190px;
 	width: 22px;
 	height: 21px;
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
        width: 11px;
        height: 10.5px;
 	   background-position: -241px -95px;
@@ -593,7 +593,7 @@ STARS
     background-position:-529px -190px;
 	width: 22px;
 	height: 21px;
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
        width: 11px;
        height: 10.5px;
 	   background-position: -264.5px -95px;
@@ -603,7 +603,7 @@ STARS
     background-position:-576px -190px;
 	width: 22px;
 	height: 21px;
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
        width: 11px;
        height: 10.5px;
 	   background-position: -288px -95px;
@@ -613,7 +613,7 @@ STARS
     background-position:-623px -190px;
 	width: 22px;
 	height: 21px;
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
        width: 11px;
        height: 10.5px;
 	   background-position: -311.5px -95px;
@@ -623,7 +623,7 @@ STARS
     background-position:-670px -190px;
 	width: 22px;
 	height: 21px;
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
        width: 11px;
        height: 10.5px;
 	   background-position: -335px -95px;
@@ -634,7 +634,7 @@ STARS
     background-position:-13px -237px;
 	width: 22px;
 	height: 21px;
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
        width: 11px;
        height: 10.5px;
 	   background-position: -6.5px -118.5px;
@@ -644,7 +644,7 @@ STARS
     background-position:-60px -237px;
 	width: 22px;
 	height: 21px;
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
        width: 11px;
        height: 10.5px;
 	   background-position: -30px -118.5px;
@@ -654,7 +654,7 @@ STARS
     background-position:-107px -237px;
 	width: 22px;
 	height: 21px;
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
        width: 11px;
        height: 10.5px;
 	   background-position: -53.5px -118.5px;
@@ -664,7 +664,7 @@ STARS
     background-position:-294px -237px;
 	width: 22px;
 	height: 21px;
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
        width: 11px;
        height: 10.5px;
 	   background-position: -147px -118.5px;
@@ -675,7 +675,7 @@ STARS
     background-position:-154px -237px;
 	width: 22px;
 	height: 21px;
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
        width: 11px;
        height: 10.5px;
 	   background-position: -77px -118.5px;
@@ -685,7 +685,7 @@ STARS
     background-position:-200px -237px;
 	width: 22px;
 	height: 21px;
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
        width: 11px;
        height: 10.5px;
 	   background-position: -100px -118.5px;
@@ -695,7 +695,7 @@ STARS
     background-position:-247px -237px;
 	width: 22px;
 	height: 21px;
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
        width: 11px;
        height: 10.5px;
 	   background-position: -123.5px -118.5px;
@@ -712,7 +712,7 @@ Arrow
 //Sign up
 .icon-triangle-white{
 	@include dimensionPosition(-279px,-29px,7px,15px,3.0);
-	@media only screen and (max-width: 768px){
+	@media only screen and (max-width: 1000px){
         @include dimensionPosition(-893px,-743px,115px,113px,0.5);
 	}
 }
@@ -721,144 +721,144 @@ Arrow
 @mixin icon-arrow-right{
     width: 8px;
 	height: 11px;
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
        width: 4px;
        height: 5.5px;
     }
 }
 .icon-arrow-right-green-1{
     @include dimensionPosition(-20px, -289px, 11px, 8px, 1.0);
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
 	   @include dimensionPosition(-20px, -289px, 11px, 8px, 0.7);
 	}
 }
 .icon-arrow-right-green-2{
 	@include dimensionPosition(-67px, -289px, 11px, 8px, 1.0);
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
 	   @include dimensionPosition(-67px, -289px, 11px, 8px, 0.7);
 	}
 }
 .icon-arrow-right-green-3{
     @include dimensionPosition(-114px, -289px, 11px, 8px, 1.0);
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
 	   @include dimensionPosition(-114px, -289px, 11px, 8px, 0.7);
 	}
 }
 .icon-arrow-right-green-4{
 	@include dimensionPosition(-161px, -289px, 11px, 8px, 1.0);
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
 	   @include dimensionPosition(-161px, -289px, 11px, 8px, 0.7);
 	}
 }
 //orange
 .icon-arrow-right-orange-1{
 	@include dimensionPosition(-208px, -289px, 11px, 8px, 1.0);
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
 	   @include dimensionPosition(-208px, -289px, 11px, 8px, 0.7);
 	}
 }
 .icon-arrow-right-orange-2{
     @include dimensionPosition(-255px, -289px, 11px, 8px, 1.0);
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
 	   @include dimensionPosition(-255px, -289px, 11px, 8px, 0.7);
 	}
 }
 .icon-arrow-right-orange-3{
     @include dimensionPosition(-302px, -289px, 11px, 8px, 1.0);
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
 	   @include dimensionPosition(-302px, -289px, 11px, 8px, 0.7);
 	}
 }
 .icon-arrow-right-orange-4{
     @include dimensionPosition(-349px, -289px, 11px, 8px, 1.0);
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
 	   @include dimensionPosition(-349px, -289px, 11px, 8px, 0.7);
 	}
 }
 .icon-arrow-right-orange-5{
     @include dimensionPosition(-396px, -289px, 11px, 8px, 1.0);
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
 	   @include dimensionPosition(-396px, -289px, 11px, 8px, 0.7);
 	}
 }
 //blue
 .icon-arrow-right-blue-1{
     @include dimensionPosition(-443px, -289px, 11px, 8px, 1.0);
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
 	   @include dimensionPosition(-443px, -289px, 11px, 8px, 0.7);
 	}
 }
 .icon-arrow-right-blue-2{
     @include dimensionPosition(-490px, -289px, 11px, 8px, 1.0);
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
 	   @include dimensionPosition(-490px, -289px, 11px, 8px, 0.7);
 	}
 }
 .icon-arrow-right-blue-3{
     @include dimensionPosition(-537px, -289px, 11px, 8px, 1.0);
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
 	   @include dimensionPosition(-537px, -289px, 11px, 8px, 0.7);
 	}
 }
 .icon-arrow-right-blue-4{
     @include dimensionPosition(-584px, -289px, 11px, 8px, 1.0);
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
 	   @include dimensionPosition(-584px, -289px, 11px, 8px, 0.7);
 	}
 }
 .icon-arrow-right-blue-5{
     @include dimensionPosition(-631px, -289px, 11px, 8px, 1.0);
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
 	   @include dimensionPosition(-631px, -289px, 11px, 8px, 0.7);
 	}
 }
 .icon-arrow-right-blue-6{
     @include dimensionPosition(-678px, -289px, 11px, 8px, 1.0);
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
 	   @include dimensionPosition(-678px, -289px, 11px, 8px, 0.7);
 	}
 }
 //red
 .icon-arrow-right-red-1{
     @include dimensionPosition(-20px, -336px, 11px, 8px, 1.0);
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
 	   @include dimensionPosition(-20px, -336px, 11px, 8px, 0.7);
 	}
 }
 .icon-arrow-right-red-2{
     @include dimensionPosition(-67px, -336px, 11px, 8px, 1.0);
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
 	   @include dimensionPosition(-67px, -336px, 11px, 8px, 0.7);
 	}
 }
 .icon-arrow-right-red-3{
     @include dimensionPosition(-114px, -336px, 11px, 8px, 1.0);
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
 	   @include dimensionPosition(-114px, -336px, 11px, 8px, 0.7);
 	}
 }
 .icon-arrow-right-red-4{
     @include dimensionPosition(-302px, -336px, 11px, 8px, 1.0);
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
 	   @include dimensionPosition(-302px, -336px, 11px, 8px, 0.7);
 	}
 }
 //pînk
 .icon-arrow-right-pink-1{
     @include dimensionPosition(-161px, -336px, 11px, 8px, 1.0);
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
 	   @include dimensionPosition(-161px, -336px, 11px, 8px, 0.7);
 	}
 }
 .icon-arrow-right-pink-2{
     @include dimensionPosition(-208px, -336px, 11px, 8px, 1.0);
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
 	   @include dimensionPosition(-208px, -336px, 11px, 8px, 0.7);
 	}
 }
 .icon-arrow-right-pink-3{
     @include dimensionPosition(-255px, -336px, 11px, 8px, 1.0);
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
 	   @include dimensionPosition(-255px, -336px, 11px, 8px, 0.7);
 	}
 }
@@ -867,85 +867,85 @@ JOB PHASES
 */
 .icon-search-orange{
     @include dimensionPosition(-13px, -379px, 24px, 24px, 1.0);
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
         @include dimensionPosition(-13px, -379px, 24px, 24px, 0.8);
 	}
 }
 .icon-check-red{
     @include dimensionPosition(-60px, -379px, 24px, 24px, 1.0);
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
         @include dimensionPosition(-60px, -379px, 24px, 24px, 0.8);
 	}
 }
 .icon-twin-blue{
     @include dimensionPosition(-106px, -379px, 24px, 24px, 1.0);
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
         @include dimensionPosition(-106px, -379px, 24px, 24px, 0.8);
 	}
 }
 .icon-suitcase-green{
     @include dimensionPosition(-153px, -378px, 24px, 24px, 1.0);
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
         @include dimensionPosition(-153px, -378px, 24px, 24px, 0.8);
 	}
 }
 .icon-search-people{
     @include dimensionPosition(-189px, -379px, 24px, 46px, 1.0);
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
 	   @include dimensionPosition(-189px, -379px, 24px, 46px, 0.8);
 	}
 }
 .icon-check-people{
     @include dimensionPosition(-236px, -379px, 24px, 46px, 1.0);
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
         @include dimensionPosition(-236px, -379px, 24px, 46px, 0.8);
 	}
 }
 .icon-twin-people{
     @include dimensionPosition(-282px, -379px, 24px, 46px, 1.0);
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
 	    @include dimensionPosition(-282px, -379px, 24px, 46px, 0.8);
 	}
 }
 .icon-suitcase-people{
     @include dimensionPosition(-329px, -379px, 24px, 46px, 1.0);
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
         @include dimensionPosition(-329px, -379px, 24px, 46px, 0.8);
 	}
 }
 .icon-question{
 	@include dimensionPosition(-387px, -379px, 22px, 22px, 1.0);
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
 	   @include dimensionPosition(-387px, -379px, 22px, 22px, 0.7);
 	}
 }
 .icon-search-orange-big{
     @include dimensionPosition(-426px, -370px, 40px, 40px, 1.0);
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
 	   @include dimensionPosition(-426px, -370px, 40px, 40px, 0.7);
 	}
 }
 .icon-check-red-big{
     @include dimensionPosition(-473px, -370px, 40px, 40px, 1.0);
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
         @include dimensionPosition(-473px, -370px, 40px, 40px, 0.7);
 	}
 }
 .icon-twin-blue-big{
     @include dimensionPosition(-520px, -370px, 40px, 40px, 1.0);
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
         @include dimensionPosition(-520px, -370px, 40px, 40px, 0.7);
 	}
 }
 .icon-suitcase-green-big{
     @include dimensionPosition(-566px, -370px, 40px, 40px, 1.0);
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
         @include dimensionPosition(-566px, -370px, 40px, 40px, 0.7);
 	}
 }
 .icon-cursor-red{
     @include dimensionPosition(-623px, -382px, 17px, 22px, 1.0);
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
 	   @include dimensionPosition(-623px, -382px, 17px, 22px, 0.7);
 	}
 }
@@ -957,7 +957,7 @@ $rapp-social:0.7;
 $rapp-social-2:0.77;
 .icon-save{
     @include dimensionPosition(-659px, -369px, 40px, 40px, 1.0);
-    @media only screen and (max-width: 768px) and (min-width:481px){
+    @media only screen and (max-width: 1000px) and (min-width:481px){
 		@include dimensionPosition(-659px, -369px, 40px, 40px, $rapp-social-2);
 	}
     @media only screen and (max-width: 480px){
@@ -966,7 +966,7 @@ $rapp-social-2:0.77;
 }
 .icon-mail{
 	@include dimensionPosition(-707px, -369px, 40px, 40px, 1.0);
-    @media only screen and (max-width: 768px) and (min-width:481px){
+    @media only screen and (max-width: 1000px) and (min-width:481px){
 		@include dimensionPosition(-707px, -369px, 40px, 40px, $rapp-social-2);
 	}
     @media only screen and (max-width: 480px){
@@ -975,7 +975,7 @@ $rapp-social-2:0.77;
 }
 .icon-twitter{
 	@include dimensionPosition(-754px, -369px, 40px, 40px, 1.0);
-    @media only screen and (max-width: 768px) and (min-width:481px){
+    @media only screen and (max-width: 1000px) and (min-width:481px){
 		@include dimensionPosition(-754px, -369px, 40px, 40px, $rapp-social-2);
 	}
     @media only screen and (max-width: 480px){
@@ -984,7 +984,7 @@ $rapp-social-2:0.77;
 }
 .icon-google{
 	@include dimensionPosition(-801px, -369px, 40px, 40px, 1.0);
-    @media only screen and (max-width: 768px) and (min-width:481px){
+    @media only screen and (max-width: 1000px) and (min-width:481px){
 		@include dimensionPosition(-801px, -369px, 40px, 40px, $rapp-social-2);
 	}
     @media only screen and (max-width: 480px){
@@ -993,7 +993,7 @@ $rapp-social-2:0.77;
 }
 .icon-face{
 	@include dimensionPosition(-848px, -369px, 40px, 40px, 1.0);
-    @media only screen and (max-width: 768px) and (min-width:481px){
+    @media only screen and (max-width: 1000px) and (min-width:481px){
 		@include dimensionPosition(-848px, -369px, 40px, 40px, $rapp-social-2);
 	}
     @media only screen and (max-width: 480px){
@@ -1002,7 +1002,7 @@ $rapp-social-2:0.77;
 }
 .icon-link{
 	@include dimensionPosition(-895px, -369px, 40px, 40px, 1.0);
-    @media only screen and (max-width: 768px) and (min-width:481px){
+    @media only screen and (max-width: 1000px) and (min-width:481px){
 		@include dimensionPosition(-895px, -369px, 40px, 40px, $rapp-social-2);
 	}
     @media only screen and (max-width: 480px){
@@ -1011,7 +1011,7 @@ $rapp-social-2:0.77;
 }
 .icon-question-big{
     @include dimensionPosition(-942px, -369px, 40px, 40px, 1.0);
-    @media only screen and (max-width: 768px) and (min-width:481px){
+    @media only screen and (max-width: 1000px) and (min-width:481px){
 		@include dimensionPosition(-942px, -369px, 40px, 40px, $rapp-social-2);
 	}
     @media only screen and (max-width: 480px){
@@ -1021,14 +1021,21 @@ $rapp-social-2:0.77;
 }
 .icon-check-lightgreen{
 	@include dimensionPosition(-989px, -369px, 41px, 40px, 0.7);
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
 	   @include dimensionPosition(-989px, -369px, 41px, 40px, 0.5);
 	}
 }
 .icon-check-big{
 	@include dimensionPosition(-708px, -416px, 41px, 41px, 0.7);
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
 		@include dimensionPosition(-708px, -416px, 41px, 41px, 0.5);
+	}
+}
+
+.icon-cursor-orange-down{
+    @include dimensionPosition(-1045px, -372px, 29px, 19px, 1.3);
+    @media only screen and (max-width: 1000px){
+        @include dimensionPosition(-1045px, -372px, 29px, 19px, 1.0);
 	}
 }
 /*
@@ -1036,61 +1043,61 @@ STEPS
 */
 .icon-step-1{
 	@include dimensionPosition(-3px, -463px, 75px, 252px, 0.94);
-	@media only screen and (max-width: 768px){
+	@media only screen and (max-width: 1000px){
 		@include dimensionPosition(-3px, -463px, 75px, 251px, 0.5);
 	}
 }
 .icon-step-2{
 	@include dimensionPosition(-257px, -463px, 75px, 278px, 0.94);
-	@media only screen and (max-width: 768px){
+	@media only screen and (max-width: 1000px){
 		@include dimensionPosition(-255px, -463px, 75px, 280px, 0.5);
 	}
 }
 .icon-step-3{
 	@include dimensionPosition(-538px, -463px, 75px, 288px, 0.94);
-	@media only screen and (max-width: 768px){
+	@media only screen and (max-width: 1000px){
 		@include dimensionPosition(-535px, -463px, 75px, 290px, 0.5);
 	}
 }
 .icon-step-4{
 	@include dimensionPosition(-829px, -463px, 75px, 288px, 0.94);
-	@media only screen and (max-width: 768px){
+	@media only screen and (max-width: 1000px){
 		@include dimensionPosition(-825px, -463px, 75px, 292px, 0.5);
 	}
 }
 .icon-step-5{
 	@include dimensionPosition(-1121px, -463px, 75px, 251px, 0.94);
-	@media only screen and (max-width: 768px){
+	@media only screen and (max-width: 1000px){
 		@include dimensionPosition(-1121px, -463px, 75px, 251px, 0.5);
 	}
 }
 .icon-step-1-grey{
 	@include dimensionPosition(-3px, -1716px, 75px, 252px, 0.94);
-	@media only screen and (max-width: 768px){
+	@media only screen and (max-width: 1000px){
 	   @include dimensionPosition(-3px, -1716px, 75px, 252px, 0.5);
 	}
 }
 .icon-step-2-grey{
 	@include dimensionPosition(-256px, -1716px, 75px, 278px, 0.94);
-	@media only screen and (max-width: 768px){
+	@media only screen and (max-width: 1000px){
 		@include dimensionPosition(-255px, -1716px, 75px, 278px, 0.5);
 	}
 }
 .icon-step-3-grey{
 	@include dimensionPosition(-537px, -1716px, 75px, 289px, 0.94);
-	@media only screen and (max-width: 768px){
+	@media only screen and (max-width: 1000px){
 		@include dimensionPosition(-537px, -1716px, 75px, 289px, 0.5);
 	}
 }
 .icon-step-4-grey{
 	@include dimensionPosition(-829px, -1716px, 75px, 289px, 0.94);
-	@media only screen and (max-width: 768px){
+	@media only screen and (max-width: 1000px){
 		@include dimensionPosition(-829px, -1716px, 75px, 289px, 0.5);
 	}
 }
 .icon-step-5-grey{
 	@include dimensionPosition(-1121px, -1716px, 75px, 251px, 0.94);
-	@media only screen and (max-width: 768px){
+	@media only screen and (max-width: 1000px){
 		@include dimensionPosition(-1121px, -1716px, 75px, 251px, 0.5);
 	}
 }
@@ -1102,7 +1109,7 @@ OTHER
     background-position:-3px -416px;
     height:39px;
     width:39px;
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
 	   background-position: -1.5px -208px;
        height:20px;
        width:20px;
@@ -1110,62 +1117,62 @@ OTHER
 }
 .icon-menu-white{
 	@include dimensionPosition(-55px, -427px, 20px, 31px, 1.0);
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
 	   @include dimensionPosition(-55px, -427px, 25px, 31px, 0.7);
 	}
 }
 .icon-menu-orange{
 @include dimensionPosition(-101px, -427px, 19px, 31px, 1.0);
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
 	   @include dimensionPosition(-101px, -427px, 25px, 31px, 0.7);
 	}
 }
 .icon-pencil{
 	@include dimensionPosition(-150px, -422px, 28px, 28px, 0.7);
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
 		@include dimensionPosition(-150px, -422px, 28px, 28px, 0.5);
 	}
 }
 .icon-suitcase-red{
     @include dimensionPosition(-190px, -415px, 43px, 43px, 1.0);
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
 	   @include dimensionPosition(-190px, -415px, 43px, 43px, 0.7);
 	}
 }
 $rapp:0.75;
 .icon-suitcase-red-medium{
     @include dimensionPosition(-190px, -415px, 43px, 43px, 0.75);
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
 	   @include dimensionPosition(-190px, -415px, 43px, 43px, 0.6);
 	}
 }
 .icon-building{
     @include dimensionPosition(-236px, -415px, 43px, 43px,1.0);
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
         @include dimensionPosition(-236px, -415px, 43px, 43px,0.7);
 	}
 }
 .icon-location{
     @include dimensionPosition(-283px, -415px, 43px, 43px,1.0);
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
 	   @include dimensionPosition(-283px, -415px, 43px, 43px,0.7);
 	}
 }
 .icon-dollars{
     @include dimensionPosition(-330px, -415px, 43px, 43px,1.0);
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
 	   @include dimensionPosition(-330px, -415px, 43px, 43px,0.7);
 	}
 }
 .icon-graduation{
     @include dimensionPosition(-382px, -420px, 32px, 32px, 1.0);
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
         @include dimensionPosition(-382px, -420px, 32px, 32px, 0.8);
 	}
 }
 .icon-x-black{
 	@include dimensionPosition(-431px, -422px, 30px, 30px, 1.0);
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
 	   @include dimensionPosition(-431px, -422px, 30px, 30px, 0.5);
 	}
 }
@@ -1173,7 +1180,7 @@ $rapp:0.75;
     background-position:-479px -422px;
     height:30px;
     width:30px;
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
 	   background-position: -239.5px -211px;
        height:15x;
        width:15px;
@@ -1181,32 +1188,32 @@ $rapp:0.75;
 }
 .icon-arow-right-light{
     @include dimensionPosition(-533px, -425px, 23px, 12px, 1.0);
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
 	   @include dimensionPosition(-533px, -425px, 23px, 12px, 0.7);
 
 	}
 }
 .icon-plus{
     @include dimensionPosition(-573px, -423px, 30px, 30px, 1.0);
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
         @include dimensionPosition(-573px, -423px, 30px, 30px, 0.6);
 	}
 }
 .icon-minus{
     @include dimensionPosition(-620px, -435px, 4px, 27px, 1.0);
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
         @include dimensionPosition(-620px, -435px, 4px, 27px, 0.6);
 	} 
 }
 .icon-minus-round{
     @include dimensionPosition(-660px, -416px, 42px, 42px, 1.0);
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
         @include dimensionPosition(-660px, -416px, 42px, 42px, 0.6);
 	}
 }
 .icon-check-big-green{
 	@include dimensionPosition(-708px, -416px, 41px, 41px, 1.0);
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
 		@include dimensionPosition(-708px, -416px, 41px, 41px, 0.6);
 	}
 }
@@ -1214,7 +1221,7 @@ $rapp:0.75;
     background-position:-419px -542px;
     height:53px;
     width:28px;
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
 	   background-position: -209.5px -271px;
        height:26.5px;
        width:14px;
@@ -1222,13 +1229,13 @@ $rapp:0.75;
 }
 .icon-arrow-right-big-blue{
     @include dimensionPosition(-258px, -540px, 53px, 30px, 1.0);
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
         @include dimensionPosition(-258px, -540px, 53px, 30px, 0.4);
 	}
 }
 .icon-arrow-left-big-blue{
     @include dimensionPosition(-310px, -540px, 55px, 30px, 1.0);
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
         @include dimensionPosition(-310px, -540px, 55px, 30px, 0.4);
 
 	}
@@ -1237,85 +1244,85 @@ $rapp:0.75;
     background-position:-367px -541px;
     height:55px;
     width:30px;
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
         //...
 	}
 }
 .icon-bar-cursor{
     @include dimensionPosition(-156px,-545px,192px,5px,1);
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
         @include dimensionPosition(-156px,-545px,192px,5px,0.74);
 	}
 }
 .icon-new-resume-button{
 	@include dimensionPosition(-765px,-427px,30px,30px,1);
-	@media (max-width: 767px){
+	@media (max-width: 1000px){
 		@include dimensionPosition(-765px,-427x,30px,30px,0.7);
 	}
 }
 .icon-change-resume-button{
 	@include dimensionPosition(-810px,-427px,30px,30px,1);
-	@media (max-width: 767px){
+	@media (max-width: 1000px){
 		@include dimensionPosition(-810px,-427px,30px,30px,0.7);
 	}
 }
 .icon-export-resume-button{
 	@include dimensionPosition(-860px,-427px,30px,30px,1);
-	@media (max-width: 767px){
+	@media (max-width: 1000px){
 		@include dimensionPosition(-860px,-427px,30px,30px,0.7);
 	}
 }
 .icon-post-resume-button{
 	@include dimensionPosition(-905px,-428px,30px,30px,1);
-	@media (max-width: 767px){
+	@media (max-width: 1000px){
 		@include dimensionPosition(-905px,-428px,30px,30px,0.7);
 	}
 }
 .icon-delete-resume-button{
 	@include dimensionPosition(-953px,-427px,30px,30px,1);
-	@media (max-width: 767px){
+	@media (max-width: 1000px){
 		@include dimensionPosition(-953px,-427px,30px,30px,0.7);
 	}
 }
 .icon-add-section{
 	@include dimensionPosition(-1276px,-421px,30px,30px,1);
-	@media (max-width: 767px){
+	@media (max-width: 1000px){
 		@include dimensionPosition(-1276px,-421px,30px,30px,0.7);
 	}
 }
 .icon-add-button{
 	@include dimensionPosition(-1046px,-426px,30px,30px,1);
-	@media (max-width: 767px){
+	@media (max-width: 1000px){
 		@include dimensionPosition(-1046px,-426px,30px,30px,0.7);
 	}
 }
 .icon-drag-button{
 	@include dimensionPosition(-1093px,-426px,30px,30px,1);
-	@media (max-width: 767px){
+	@media (max-width: 1000px){
 		@include dimensionPosition(-1093px,-426px,30px,30px,0.7);
 	}
 }
 .icon-edit-button{
 	@include dimensionPosition(-1139px,-426px,30px,30px,1);
-	@media (max-width: 767px){
+	@media (max-width: 1000px){
 		@include dimensionPosition(-1139px,-426px,30px,30px,0.7);
 	}
 }
 .icon-not-completed{
 	@include dimensionPosition(-1183px,-421px,30px,30px,1);
-	@media (max-width: 767px){
+	@media (max-width: 1000px){
 		@include dimensionPosition(-1183px,-421px,30px,30px,0.7);
 	}
 }
 .icon-completed-check{
 	@include dimensionPosition(-1231px,-421px,30px,30px,1);
-	@media (max-width: 767px){
+	@media (max-width: 1000px){
 		@include dimensionPosition(-1231px,-421px,30px,30px,0.7);
 	}
 }
 .icon-add-section{
 	@include dimensionPosition(-1276px,-421px,30px,30px,1);
-	@media (max-width: 767px){
+	@media (max-width: 1000px){
 		@include dimensionPosition(-1276px,-421px,30px,30px,0.7);
 	}
 }
@@ -1326,19 +1333,19 @@ TOOLS
 $rapp-helper:0.6;
 .icon-careerscape-small-helper{
 	@include dimensionPosition(-236px,-785px,175px,171px,1);
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
 	   @include dimensionPosition(-236px,-785px,175px,171px,$rapp-helper);
 	}
 }
 .icon-resumeHero-small-helper{
 	@include dimensionPosition(-450px,-785px,177px,172px,1);
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
 	   @include dimensionPosition(-450px,-785px,177px,172px,$rapp-helper);
 	}
 }
 .icon-localygrown-small-helper{
 	@include dimensionPosition(-22px,-785px,177px,186px,1);
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
 	   @include dimensionPosition(-22px,-785px,177px,186px,$rapp-helper);
 	}
 }
@@ -1346,55 +1353,55 @@ $rapp-helper:0.6;
 $rapp-logo-small:0.95;
 .icon-careerscape-small{
 	@include dimensionPosition(-236px,-785px,175px,171px,1);
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
 	   @include dimensionPosition(-236px,-785px,175px,171px,$rapp-logo-small);
 	}
 }
 .icon-resumeHero-small{
 	@include dimensionPosition(-450px,-785px,177px,172px,1);
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
 	   @include dimensionPosition(-450px,-785px,177px,172px,$rapp-logo-small);
 	}
 }
 .icon-localygrown-small{
 	@include dimensionPosition(-22px,-785px,177px,186px,1);
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
 	   @include dimensionPosition(-22px,-785px,177px,186px,$rapp-logo-small);
 	}
 }
 .icon-jobinality-small{
     @include dimensionPosition(-664px,-785px,186px,171px,1);
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
 	   @include dimensionPosition(-664px,-785px,186px,171px,$rapp-logo-small);
 	}
 }
 .icon-careerscape{
 	@include dimensionPosition(-34px,-1040px,345px,269px,1);
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
 	   @include dimensionPosition(-34px,-1040px,345px,269px,0.7);
 	}
 }
 .icon-resumeHero{
 	@include dimensionPosition(-335px,-1040px,345px,269px,1);
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
 	   @include dimensionPosition(-335px,-1040px,345px,269px,0.7);
 	}
 }
 .icon-jobinality{
 	@include dimensionPosition(-635px,-1020px,365px,269px,1);
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
 	   @include dimensionPosition(-635px,-1020px,365px,269px,0.7);
 	}
 }
 .icon-locallygrown{
 	@include dimensionPosition(-935px,-1040px,345px,269px,1);
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
 	   @include dimensionPosition(-34px,-1040px,345px,269px,0.7);
 	}
 }
 .icon-button-post{
 	@include dimensionPosition(-464px,-541px,43px,179px,1);
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
 		@include dimensionPosition(-490px,-542px,43px,160px,1);
 	}
 	@media only screen and (max-width: 480px){
@@ -1403,7 +1410,7 @@ $rapp-logo-small:0.95;
 }
 .icon-button-post-large{
 	@include dimensionPosition(-464px,-592px,43px,387px,1);
-	@media only screen and (max-width: 768px){
+	@media only screen and (max-width: 1000px){
 		@include dimensionPosition(-530px,-592px,43px,307px,1);
 	}
 	@media only screen and (max-width: 480px){
@@ -1412,7 +1419,7 @@ $rapp-logo-small:0.95;
 }
 .icon-suitcase-job{
 	@include dimensionPosition(-181px,-540px,58px,58px,1);
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
 		@include dimensionPosition(-181px,-540px,58px,58px,0.7);
 	}
 }
@@ -1421,25 +1428,25 @@ ICON FIRST CONNECT
 */
 .icon-welcome{
     @include dimensionPosition(-53px,-1465px,203px,235px,0.8);
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
         @include dimensionPosition(-53px,-1498px,203px,235px,0.4);
 	}
 }
 .icon-welcome-video-saved-big{
     @include dimensionPosition(-748px,-1498px,203px,185px,0.8);
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
         @include dimensionPosition(-748px,-1498px,203px,185px,0.4);
 	}
 }
 .icon-welcome-article-saved-big{
     @include dimensionPosition(-324px,-1498px,203px,186px,0.8);
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
         @include dimensionPosition(-324px,-1498px,203px,186px,0.4);
 	}
 }
 .icon-welcome-image-saved-big{
     @include dimensionPosition(-536px,-1498px,203px,184px,0.8);
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
         @include dimensionPosition(-536px,-1498px,203px,185px,0.4);
 	}
 }
@@ -1449,55 +1456,55 @@ ICON SAVED
 //for saved content,...
 .icon-article-saved{
     @include dimensionPosition(-1008px,-583px,126px,102px,1);
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
         @include dimensionPosition(-1008px,-583px,126px,102px,0.7);
 	}
 }
 .icon-article-saved-big{
     @include dimensionPosition(-1008px,-583px,126px,102px,1.7);
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
         @include dimensionPosition(-1008px,-583px,126px,102px,1);
 	}
 }
 .icon-video-saved{
     @include dimensionPosition(-1240px,-583px,126px,101px,1);
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
         @include dimensionPosition(-1240px,-583px,126px,101px,0.7);
 	}
 }
 .icon-video-saved-big{
     @include dimensionPosition(-1240px,-583px,126px,101px,1.7);
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
         @include dimensionPosition(-1240px,-583px,126px,101px,1);
 	}
 }
 .icon-image-saved{
     @include dimensionPosition(-1356px,-583px,126px,101px,1);
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
         @include dimensionPosition(-1356px,-583px,126px,101px,0.7);
 	}
 }
 .icon-image-saved-big{
     @include dimensionPosition(-1356px,-583px,126px,101px,1.7);
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
         @include dimensionPosition(-1356px,-583px,126px,101px,1);
 	}
 }
 .icon-resumeHero-saved{
 	@include dimensionPosition(-1125px,-589px,120px,105px,1);
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
 	   @include dimensionPosition(-1125px,-589px,120px,105px,0.7);
 	}
 }
 .icon-locallygrown-saved{
 	@include dimensionPosition(-893px,-744px,115px,115px,1);
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
 	   @include dimensionPosition(-893px,-744px,115px,115px,0.7);
 	}
 }
 .icon-careerscape-saved{
     @include dimensionPosition(-1045px,-740px,120px,115px,1);
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
         @include dimensionPosition(-1045px,-740px,120px,115px,0.7);
 	}
 }
@@ -1506,19 +1513,19 @@ Icon tool saved
 */
 .icon-resumeHero-saved-big{
 	@include dimensionPosition(-1125px,-589px,120px,105px,1.4);
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
 	   @include dimensionPosition(-1125px,-589px,120px,105px,1);
 	}
 }
 .icon-locallygrown-saved-big{
 	@include dimensionPosition(-893px,-744px,115px,115px,1.4);
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
 	   @include dimensionPosition(-893px,-744px,115px,115px,1);
 	}
 }
 .icon-careerscape-saved-big{
     @include dimensionPosition(-1045px,-740px,120px,115px,1.4);
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
         @include dimensionPosition(-1045px,-740px,120px,115px,1);
 	}
 }
@@ -1527,19 +1534,19 @@ ICON PRESENTATION (ONLY FOUR)
 */
 .icon-resumeHero-presentation{
 	@include dimensionPosition(-335px,-1040px,345px,269px,1);
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
 	   @include dimensionPosition(-335px,-1040px,345px,269px,0.4);
 	}
 }
 .icon-locallygrown-presentation{
 	@include dimensionPosition(-935px,-1040px,345px,269px,1);
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
 	   @include dimensionPosition(-935px,-1040px,345px,269px,0.4);
 	}
 }
 .icon-careerscape-presentation{
     @include dimensionPosition(-34px,-1040px,345px,269px,1);
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
         @include dimensionPosition(-34px,-1040px,345px,269px,0.4);
 	}
 }
@@ -1549,25 +1556,25 @@ ICON POPUP (ONLY 4)
 
 .icon-resumeHero-popup{
 	@include dimensionPosition(-1125px,-589px,120px,105px,0.62);
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
 	   @include dimensionPosition(-1125px,-589px,120px,105px,0.47);
 	}
 }
 .icon-locallyGrown-popup{
 	@include dimensionPosition(-893px,-744px,115px,115px,0.6);
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
 	   @include dimensionPosition(-893px,-744px,115px,115px,0.45);
 	}
 }
 .icon-careerScape-popup{
     @include dimensionPosition(-1045px,-740px,120px,115px,0.6);
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
         @include dimensionPosition(-1045px,-740px,120px,115px,0.45);
 	}
 }
 .icon-article-popup{
     @include dimensionPosition(-1008px,-583px,128px,102px,0.57);
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1000px){
         @include dimensionPosition(-1008px,-583px,128px,102px,0.42);
 	}
 }

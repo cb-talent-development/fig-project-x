@@ -34,9 +34,6 @@ function ToolCtr($scope, $http,$routeParams,pagination,register) {
             else{}
         }
     }
-    /*
-    Constructor
-    */
     $scope.loadJob=function(){
         $http.get("data/json/jobs.json").success(function(data) {
            // Job recommandation
@@ -100,8 +97,8 @@ function ToolCtr($scope, $http,$routeParams,pagination,register) {
     Saved search
     */
     $scope.save_search=function(){
-        console.log("Search Name : "+$scope.input_saved_search+", Have to save : "+$scope.savedIndustry);
-        console.log($scope.occupation_checkbox);
+        log("Search Name : "+$scope.input_saved_search+", Have to save : "+$scope.savedIndustry);
+        log($scope.occupation_checkbox);
     }
     /*
     Constructor
@@ -419,7 +416,7 @@ function ResumeHeroCtr($scope, $http, pagination, getStarted){
 	
 	
     $scope.init=function(){
-		if(!$scope.resumeHero[0]){
+		if($scope.resumeHero.length==0){
 			$http.get("data/json/resume-hero.json").success(function(data) {
                 // Job recommandation
                 $scope.resumeHero=data;
@@ -431,15 +428,15 @@ function ResumeHeroCtr($scope, $http, pagination, getStarted){
 				$scope.currentResume=$scope.resumeHero[0];
 				$scope.currentResume.Class="selected";
 				$scope.sections = $scope.currentResume.Data;
-				$scope.getStarted.initInput($scope.currentResume.ResumeInfo);
+				$scope.getStarted.initInput($scope.currentResume.ResumeInfo, $scope.user);
 	       });
 		}
-		if($scope.resumeHero[0]){
+		else{
 			initGetStarted($scope,getStarted, $scope.user);
 			$scope.currentResume = $scope.resumeHero[0];
 			$scope.currentResume.Class="selected";
 			$scope.sections = $scope.currentResume.Data;
-			$scope.getStarted.initInput($scope.currentResume.ResumeInfo, user);
+			$scope.getStarted.initInput($scope.currentResume.ResumeInfo, $scope.user);
 		}
 		$scope.exportType="PDF";
 		$scope.changeType="PDF";

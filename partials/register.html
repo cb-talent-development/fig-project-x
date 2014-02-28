@@ -1,11 +1,11 @@
 <div class="dialog dashboard-popup">
-    <div class="background" onclick="disparition($('.dashboard-popup'))"></div>
+    <div class="background" ng-click="register.disappear()"></div>
     <div class="scrollable-content">
         <div class="scrollable">
             <div class="section-wrapper">
                 <div class="section section1">
                     <div class="header">
-                        <span class"title">Let's Get Started<i class="icon-x-black close" onclick="disparition($('.dashboard-popup'))"></i></span>
+                        <span class="title">Let's Get Started<i class="icon-x-black close" ng-click="register.disappear()"></i></span>
                     </div>
                     <div class="content-dialog user-info">
                        <div class="content presentation" ng-show="register.user=='none'">
@@ -112,7 +112,7 @@
             <div class="section-wrapper">
                 <div class="section section2">
                     <div class="header">
-                        <span class"title">Did you know: XX% of the la population love hamburgers<i class="icon-x-black close" onclick="disparition($('.dashboard-popup'))"></i></span>
+                        <span class="title">Did you know: XX% of the la population love hamburgers<i class="icon-x-black close" ng-click="register.disappear()"></i></span>
                     </div>
                     <div class="content-dialog">
                         <div class="content steps-content" ng-show="(register.user=='none')">
@@ -186,7 +186,7 @@
             <div class="section-wrapper">
                 <div class="section section3">
                     <div class="header">
-                        <span class"title">Did you know: XX% of the la population love hamburgers<i class="icon-x-black close" onclick="disparition($('.dashboard-popup'));"></i></span>
+                        <span class"title">Did you know: XX% of the la population love hamburgers<i class="icon-x-black close" ng-click="register.disappear()"></i></span>
                     </div>
                     <div class="content-dialog">
                           <div class="content steps-content" ng-show="(register.user=='none')">
@@ -198,7 +198,7 @@
                                 <div class="bar"></div>
                                 <div class="icon-cursor-orange-down"></div>
                             </div>
-                            <div class="phase left link" ng-class="{true:'selected',false:''}[register.userInfo.job.phase=='Discovery']" onclick="moveCursorHorizontal($(this),$('.icon-cursor-orange-down'));" ng-click="register.setJobPhase('Discovery')">
+                            <div class="phase left link phase-1" ng-class="{true:'selected',false:''}[register.userInfo.job.phase=='Discovery']" ng-click="register.setJobPhase('Discovery','phase-1')">
                                 <div class="title"> 
                                     <div class="icon-search-orange-big logo"></div>
                                     <div>Discovery</div>
@@ -207,7 +207,7 @@
                                     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec felis sed leo placerat imperdiet. Curabitur eu amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor."
                                 </div>
                             </div>
-                            <div class="phase left link right-resp" ng-class="{true:'selected',false:''}[register.userInfo.job.phase=='Find the Job']"  onclick="moveCursorHorizontal($(this),$('.icon-cursor-orange-down'));" ng-click="register.setJobPhase('Find the Job')">
+                            <div class="phase left link right-resp phase-2" ng-class="{true:'selected',false:''}[register.userInfo.job.phase=='Find the Job']"  ng-click="register.setJobPhase('Find the Job','phase-2')">
                                 <div class="title">
                                     <div class="icon-twin-blue-big logo"></div>
                                     <div>Find the Job</div>
@@ -216,7 +216,7 @@
                                      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec felis sed leo placerat imperdiet. Curabitur eu amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor."
                                 </div>
                             </div>
-                            <div class="phase before-last left link" ng-class="{true:'selected',false:''}[register.userInfo.job.phase=='Get the Job']" onclick="moveCursorHorizontal($(this),$('.icon-cursor-orange-down'));" ng-click="register.setJobPhase('Get the Job')">
+                            <div class="phase before-last left link phase-3" ng-class="{true:'selected',false:''}[register.userInfo.job.phase=='Get the Job']" ng-click="register.setJobPhase('Get the Job','phase-3')">
                                 <div class="title">
                                     <div class="icon-check-red-big logo"></div>
                                     <div>Get the Job</div>
@@ -225,7 +225,7 @@
                                      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec felis sed leo placerat imperdiet. Curabitur eu amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor."
                                 </div>
                             </div>
-                            <div class="phase right link" ng-class="{true:'selected',false:''}[register.userInfo.job.phase=='On the Job']"  onclick="moveCursorHorizontal($(this),$('.icon-cursor-orange-down'));" ng-click="register.setJobPhase('On the Job')">
+                            <div class="phase right link phase-4" ng-class="{true:'selected',false:''}[register.userInfo.job.phase=='On the Job']" ng-click="register.setJobPhase('On the Job','phase-4')">
                                 <div class="title">
                                     <div class="icon-suitcase-green-big logo"></div>
                                     <div>On the Job</div>
@@ -255,7 +255,7 @@
             <div class="section-wrapper">
                 <div class="section section4">
                     <div class="header">
-                        <span class"title">Did you know: XX% of the la population love hamburgers<i class="icon-x-black close" onclick="disparition($('.dashboard-popup'))"></i></span>
+                        <span class"title">Did you know: XX% of the la population love hamburgers<i class="icon-x-black close" ng-click="register.disappear()"></i></span>
                     </div>
                     <div class="content-dialog">
                         <div class="content steps-content" ng-show="(register.user=='none')">
@@ -328,7 +328,7 @@
             <div class="section-wrapper">
                 <div class="section section5">
                     <div class="header">
-                        <span class"title">Did you know: XX% of the la population love hamburgers<i class="icon-x-black close" onclick="disparition($('.dashboard-popup'))"></i></span>
+                        <span class"title">Did you know: XX% of the la population love hamburgers<i class="icon-x-black close" ng-click="register.disappear()"></i></span>
                     </div>
                     <div class="content-dialog">
                         <div class="content steps-content" ng-show="(register.user=='none')">
@@ -401,7 +401,7 @@
             <div class="section-wrapper">
                 <div class="section section6">
                     <div class="header">
-                        <span class"title">Did you know: XX% of the la population love hamburgers<i class="icon-x-black close" onclick="disparition($('.dashboard-popup'))"></i></span>
+                        <span class"title">Did you know: XX% of the la population love hamburgers<i class="icon-x-black close" ng-click="register.disappear()"></i></span>
                     </div>
                     <div class="content-dialog">
                         <div class="content steps-content" ng-show="(register.user=='none')">
@@ -519,7 +519,7 @@
             <div class="section-wrapper">
                 <div class="section section-photo">
                     <div class="header">
-                        <span class"title">Change Your Dashboard Photo<i class="icon-x-black close" onclick="disparition($('.dashboard-popup'))"></i></span>
+                        <span class"title">Change Your Dashboard Photo<i class="icon-x-black close" ng-click="register.disappear()"></i></span>
                     </div>
                     <div class="content-dialog change-picture">
                         <div id="preview" class="photo background-image" style="background-image:url('{{user.Media.Url}}')"></div>

@@ -95,7 +95,7 @@ function prepareWindow(){
 
 var modeTwoColumns=false;
 function checkIfModeTwoColumns(){
-   if(window.innerWidth<=768){
+   if(window.innerWidth<=1000){
         return true;
    }
    return false;
@@ -203,10 +203,12 @@ function input(value){
 /*
 General search function
 */
-function search(input){
-    var val=input.val();
-    console.log("->SEARCH<-");
+function search(val,callback){
     alert("Search value: "+val);
+    //TODO: handle backend
+    if(callback && typeof callback=="function"){
+        callback.call(this);
+    }
 }
 /*
 General function that handle user caching
@@ -398,6 +400,26 @@ function simpleSlideEffect(button,elem){
         }
     }
 }
+function toggleEffectLarge(event){
+    if(event!=undefined){
+        event.stopPropagation();
+    }
+    // If closed, close the others and open it
+    var subMenu=$(this).find(".subMenu").first();
+    if (!subMenu.is(':visible')) {
+		$(this).addClass("open");
+        subMenu.slideDown(config.timeAnim);
+        return false;
+    }
+	// If already open, close it
+    else{
+        subMenu.slideUp(config.timeAnim, function () { 
+            $(this).parent().removeClass("open") }
+        );
+        // Don't follow the link
+        return false;
+    }
+}
 function slideEffect(button,elem,height,textOpen,textClose){
     if(!button.hasClass("selected")){
         button.addClass("selected");
@@ -426,10 +448,11 @@ function slideEffect(button,elem,height,textOpen,textClose){
 Cancel effects
 */
 function cancelToggle(){
-    var subMenu=$("toggleMenu .subMenu:visible,toggleMenuSimple .subMenu:visible");
+    var subMenu=$("toggleMenu .subMenu:visible,toggleMenuSimple .subMenu:visible, .toggleMenuLarge .submenu:visible");
     subMenu.slideUp(config.timeAnim, function () { 
         $(this).parent().removeClass("open") }
     );
+	$(".toggleMenuLarge.open > form").parent().removeClass("open");
     return false;
 }
 function cancelSimpleToggle(){
@@ -497,17 +520,24 @@ function disparition(elem){
 /*
 Functions move cursor
 */
+var lockCursorVertical=false;
+var lockCursorHorizontal=false;
+function getLockCursor(){
+    if(!lockCursorHorizontal || !lockCursorVertical)
+        return false
+    return true;
+}
 /*
 Vertical
 */
 function moveCursor(elem,cursor,first){
-    if(!lock){
+    if(!lockCursorVertical){
         if(!elem.hasClass("selected") || first){
-            lock=true;
+            lockCursorVertical=true;
             $(elem.parent()).find(".selected").removeClass("selected");
             elem.addClass("selected");
             var dist=elem.position().top+(elem.height()/2)-cursor.position().top-cursor.height()/2;
-            cursor.animate({'top':"+="+dist},config.time_anim,unlock)
+            cursor.animate({'top':"+="+dist},config.time_anim,function(){ lockCursorVertical=false; });
         }
      }
 }
@@ -516,18 +546,17 @@ Horizontal
 */
 function moveCursorHorizontal(elem,cursor,fast){
     if(window.innerWidth>768){
-        if(!lock){
+        if(!lockCursorHorizontal){
             if(!elem.hasClass("selected") || fast){
-                lock=true;
                 $(elem.parent()).find(".selected").removeClass("selected");
                 elem.addClass("selected");
                 var dist=elem.offset().left+(elem.width()/2)-cursor.offset().left-cursor.width()/2;
                 if(fast){
                     var pos=cursor.position().left+dist+"px";
                     cursor.css('left',pos);
-                    unlock();
                 }else{
-                    cursor.animate({'left':"+="+dist},config.time_anim,unlock)
+                    lockCursorHorizontal=true;
+                    cursor.animate({'left':"+="+dist},config.time_anim,function(){ lockCursorHorizontal=false; });
                 }
             }
          }
@@ -577,18 +606,27 @@ function initEffect(){
     var toggleMenu=$(".toggleMenu");
     var simpleMenu=$(".simpleMenu");
     var toggleMenuSimple=$(".toggleMenuSimple");
+	var toggleMenuLarge=$(".toggleMenuLarge");
     htmlBody.unbind('click');
     toggleMenu.unbind('click');
     simpleMenu.unbind('click');
     toggleMenuSimple.unbind('click');
+	toggleMenuLarge.unbind('click');
     htmlBody.click(cancelEffects);
     toggleMenu.click(toggleEffect); 
     simpleMenu.click(baseToggleEffect);  
-    toggleMenuSimple.click(simpleToggleEffect); 
-    
-    //Initialization maxime
-    initMaxime()
-
+    toggleMenuSimple.click(simpleToggleEffect);
+	toggleMenuLarge.click(toggleEffectLarge);
+	
+    initHeaderEffect();
+	initWysiwyg();
+}
+/*
+Function to handle logs
+*/
+function log(txt){
+    if(!config.production)
+        console.log(txt);
 }
 /*
 Preview Picture
@@ -606,7 +644,6 @@ var allowedTypes = ['png', 'jpg', 'jpeg', 'gif'];
 function showPreview(files,preview){
     hasChanged=true;
     if(window.File && window.FileList && window.FileReader){
-        console.log(files);
         if(files!=undefined){
             for(var i=0;i<files.length;i++){
                 var file=files[i];
@@ -641,7 +678,7 @@ function postToFeed(url,description,title,picture) {
         };
 
         function callback(response) {
-			console.log("posted");
+			log("posted");
 
         }
 
@@ -676,8 +713,10 @@ function init($scope,register){
     else if(document.register){
         $scope.register=document.register;
     }
-    //console.log($scope.register);
 }
+/*
+Init the get started dialog for the Resume Hero
+*/
 function initGetStarted($scope,getStarted){
     if(!window.getStarted && !document.getStarted){
         $scope.getStarted=new getStarted($scope);
@@ -690,8 +729,10 @@ function initGetStarted($scope,getStarted){
     else if(document.getStarted){
         $scope.getStarted=document.getStarted;
     }
-    //console.log($scope.getStarted);
 }
+/*
+Init DOM effect for the resume hero
+*/
 function initResumeHero(){
     $(function() {
 		$( "#sortable" ).sortable({
@@ -734,7 +775,7 @@ function initResumeHero(){
 			lang: 'en',
 			parser: 'html',
 			webservice: {
-			  path: "../webservices/php/SpellChecker.php",
+			  path: "../Career/php/SpellChecker.php",
 			  driver: 'pspell'
 			},
 			suggestBox: {
@@ -763,4 +804,76 @@ function initResumeHero(){
 
 		wysihtml5.toolbar.find('[data-wysihtml5-command="spellcheck"]').click(toggle);
 	})();
+}
+
+/*
+Header effect
+*/
+function initHeaderEffect(){
+	$("span#menu-button").click( function() {
+		if(checkIfModeTwoColumns())
+			var subMenu=$('li.movable');
+		else
+			var subMenu=$('.nav-menu.subMenu');
+		if (!subMenu.is(':visible')) {
+			subMenu.slideDown(config.timeAnim,function () { 
+				$(this).parent().removeClass("open") }
+			);
+			$('.icon-menu-white').addClass('icon-menu-orange').removeClass('icon-menu-white');
+			return false;
+		}
+		// If closed, close the others and open it
+		else {
+			subMenu.slideUp(config.timeAnim, function () { 
+				$(this).parent().removeClass("open") }
+			);
+			$('.icon-menu-orange').addClass('icon-menu-white').removeClass('icon-menu-orange');
+			// Don't follow the link
+			return false;
+		}
+	});
+	if(checkIfModeTwoColumns()){
+		$('li.movable').hide();
+	}
+}
+/*
+Init wysiwyg
+*/
+function initWysiwyg(){	
+	$("a:contains('Bold')").replaceWith('<a id="bold-button" class="btn" data-wysihtml5-command="bold" title="CTRL+B" href="javascript:;" unselectable="on">Bold</a>');
+	$("a:contains('Italic')").replaceWith('<a id="italic-button" class="btn" data-wysihtml5-command="italic" title="CTRL+B" href="javascript:;" unselectable="on">Italic</a>');
+	$("a:contains('Underline')").replaceWith('<a id="underline-button" class="btn" data-wysihtml5-command="underline" title="CTRL+B" href="javascript:;" unselectable="on">Underline</a>');
+}
+/*
+Show the header if first Connect is on
+*/
+function showHeader(){
+    $('.menu-buttons').slideDown('normal');
+    $('#header').slideDown('normal');
+}
+/*
+Hide the header to display first connect
+*/
+function hideHeader(){
+    $('.menu-buttons').hide();
+    $('#header').hide();
+}
+/*
+Close the first connect element and show the header
+*/
+function closeFirstConnectShowHeader(callback){
+    $('.first-connect').fadeOut('normal','linear', function(){
+        if(callback && typeof callback=='function'){
+            callback.call(this);
+        }
+        else{
+            showHeader();
+        }
+    });
+}
+/*
+Hide the first connect element
+*/
+function hideFirstConnect(){
+    $('.first-connect').hide();
 }

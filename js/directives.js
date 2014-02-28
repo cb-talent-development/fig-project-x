@@ -1,68 +1,5 @@
 var dir = angular.module('CareerDirectives', []);
 
-dir.directive('photoLarge', function() {
-	return {
-		restrict: 'A',
-		templateUrl: 'partials/A-photo-large.html',
-		scope: {
-			articleA: '='
-		}
-	};
-});
-
-dir.directive('photoSmall', function() {
-	return {
-		restrict: 'A',
-		templateUrl: 'partials/A-photo-small.html',
-		scope: {
-			articleA: '='
-		}
-	};
-});
-
-dir.directive('nophoto', function() {
-	return {
-		restrict: 'A',
-		templateUrl: 'partials/A-nophoto.html',
-		scope: {
-			articleA: '='
-		}
-	};
-});
-
-dir.directive('tempI', function() {
-	return {
-		restrict: 'E',
-		replace: true,
-		templateUrl: 'partials/I.html',
-		scope: {
-			articleI: '='
-		}
-	};
-});
-
-dir.directive('tempV', function() {
-	return {
-		restrict: 'E',
-		replace: true,
-		templateUrl: 'partials/V.html',
-		scope: {
-			articleV: '='
-		}
-	};
-});
-
-dir.directive('tempP', function() {
-	return {
-		restrict: 'E',
-		replace: true,
-		templateUrl: 'partials/P-2-3.html',
-		scope: {
-			articleV: '='
-		}
-	};
-});
-
 dir.directive('select',[function(){
     return{
         scope:{
@@ -70,11 +7,6 @@ dir.directive('select',[function(){
             value: '='
         },
         link: function (scope, element, attrs,controller) {
-            //scope.value=attrs.value;
-            //scope.elem=attrs.elem;
-            //console.log(scope);
-            //var content=scope.$eval(scope.value);
-            element.text(scope.value);
             element.click(function(e){
                 scope.$apply(function(scope){
                     scope.elem=scope.value;
@@ -161,4 +93,45 @@ dir.directive('steps', function(){
 			}
 		}
 	};
+});
+
+dir.directive('onKeyup', function() {
+            return function(scope, element, attributs) {
+            scope.safeApply = function(fn) {
+              var phase = this.$root.$$phase;
+              if(phase == '$apply' || phase == '$digest') {
+                if(fn && (typeof(fn) === 'function')) {
+                  fn();
+                }
+              } else {
+                this.$apply(fn);
+              }
+            };
+            var keyupFn = scope.$eval(attributs.onKeyup);
+            element.bind("keyup", function(event) {
+                scope.safeApply(function() {
+                    keyupFn.call(scope, event.which);
+                });
+            });
+        };
+});
+dir.directive('onKeydown', function() {
+            return function(scope, element, attributs) {
+            scope.safeApply = function(fn) {
+              var phase = this.$root.$$phase;
+              if(phase == '$apply' || phase == '$digest') {
+                if(fn && (typeof(fn) === 'function')) {
+                  fn();
+                }
+              } else {
+                this.$apply(fn);
+              }
+            };
+            var keyupFn = scope.$eval(attributs.onKeydown);
+            element.bind("keydown", function(event) {
+                scope.safeApply(function() {
+                    keyupFn.call(scope, event.which);
+                });
+            });
+        };
 });
