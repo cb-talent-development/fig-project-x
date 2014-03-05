@@ -7837,7 +7837,8 @@ ICON css
   vertical-align: top;
   background-image: url("assets/x_sprite.png");
   background-repeat: no-repeat;
-  background-size: 1500px 1798.5px; }
+  background-size: 1500px 1798.5px;
+  background-color: inherit; }
   @media only screen and (max-width: 1000px) {
     *[class^=icon-] {
       background-size: 750px 899.25px; } }
@@ -10703,7 +10704,8 @@ ICON POPUP (ONLY 4)
   vertical-align: top;
   background-image: url("assets/x_sprite.png");
   background-repeat: no-repeat;
-  background-size: 1500px 1798.5px; }
+  background-size: 1500px 1798.5px;
+  background-color: inherit; }
   @media only screen and (max-width: 1000px) {
     .check-box-1 label:before {
       background-size: 750px 899.25px; } }
@@ -10715,7 +10717,8 @@ ICON POPUP (ONLY 4)
   vertical-align: top;
   background-image: url("assets/x_sprite.png");
   background-repeat: no-repeat;
-  background-size: 1500px 1798.5px; }
+  background-size: 1500px 1798.5px;
+  background-color: inherit; }
   @media only screen and (max-width: 1000px) {
     .check-box-2 label:before {
       background-size: 750px 899.25px; } }

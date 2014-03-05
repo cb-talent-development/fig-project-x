@@ -11,6 +11,7 @@ $sprite-height: 3597px;
     background-image: url("assets/x_sprite.png");
     background-repeat: no-repeat;
     background-size: $sprite-width/2 $sprite-height/2;
+    background-color: inherit;
     @media only screen and (max-width: 1000px){
         background-size: $sprite-width/4 $sprite-height/4;
 	}
