@@ -278,7 +278,7 @@ module.factory('formData',function(){
         this.$scope=$scope;
         if(!window.FormData){
             //alert("Your browser does not support FormData, try to update it");
-            var data=function(){
+            function data(){
                 this.content="";
             };
             data.prototype.append=function(name,value){
@@ -294,9 +294,12 @@ module.factory('formData',function(){
         }
     }
     formData.prototype.setData=function(datas){
+        console.log(datas);
         for(data in datas){
             if(typeof datas[data]==='object'){
+                console.log(datas[data]);
                 if(datas[data].length !=undefined){
+                    console.log("array");
                     if(datas[data].length>0){
                         for(var i=0;i<datas[data].length;i++){
                             var elem=datas[data][i];
@@ -310,6 +313,7 @@ module.factory('formData',function(){
                     }
                 }
                 else{
+                    console.log("json");
                    for(key in datas[data]){
                         if(this.form)
                             this.form.append(data+"["+key+"]",datas[data][key]);
@@ -356,7 +360,7 @@ module.factory('formData',function(){
                         } catch (ex) {
                             resp=xhr.response;
                         }
-                        log(resp);
+                        console.log(resp);
                         callback.call(this,resp);
                     });
                 }
@@ -364,7 +368,7 @@ module.factory('formData',function(){
         xhr.upload.onprogress = function(e) {
                 progress.value = e.loaded;
                 progress.max = e.total;
-                log(progress);
+                console.log(progress);
                 if (progressFunction && typeof(progressFunction) === "function") {
                     self.$scope.$apply(function(){
                         progressFunction.call(this,progress);
@@ -375,7 +379,7 @@ module.factory('formData',function(){
             xhr.send(this.form);
         }
         else{
-            log(this.data.content);
+            console.log(this.data.content);
             xhr.send(this.data.content);
         }
     }

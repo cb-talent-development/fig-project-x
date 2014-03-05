@@ -620,6 +620,9 @@ function initEffect(){
 	
     initHeaderEffect();
 	initWysiwyg();
+    
+    //IE compatibility
+    $('input, textarea').placeholder();
 }
 /*
 Function to handle logs
