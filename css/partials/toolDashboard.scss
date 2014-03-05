@@ -1,0 +1,110 @@
+/*
+Tools dashboard & tool css
+*/
+.tools-dashboard,.tool{
+    .title{
+        .part1{
+            color:black;
+        }
+        .part2{
+            color:$grey;
+        }
+    }
+}
+.tools-dashboard{
+    .first{
+        margin-top:60px;
+        @media only screen and (max-width: 1000px) {
+            margin-top:30px;
+        }
+    }
+    .last{
+        margin-bottom:75px !important;
+        @media only screen and (max-width: 1000px) {
+            margin-bottom:30px !important;
+        }
+    }
+    .tool{
+        @include big-height;
+        .link{
+            width:100%;
+            height:100%;
+            z-index:10;
+            position:absolute;top:0px;left:0px;right:0px;bottom:0px;
+        }
+        .link:hover{
+            background-color:rgba(100,100,100,0.1);
+        }
+        .left{
+            position:relative;
+            height:100%;
+            width:30.77%;
+            float:left;
+            text-align:center;
+            @media only screen and (max-width: 1000px) {
+                width:100%;
+            }
+            .logo{
+                position:absolute;top:25px;left:50%;
+            }
+            $rapp-logo:0.95;
+            .icon-careerscape-small{
+                margin-left:-70px;
+                @media only screen and (max-width: 1000px) {
+                    margin-left:-70px * $rapp-logo;
+                }
+            }
+            .icon-resumeHero-small{
+                margin-left:-73.5px;
+                @media only screen and (max-width: 1000px) {
+                    margin-left:-73.5px * $rapp-logo;
+                }
+            }
+            .icon-jobinality-small{
+                margin-left:-60px;
+                @media only screen and (max-width: 1000px) {
+                    margin-left:-60px * $rapp-logo;
+                }
+            }
+            .icon-localygrown-small{
+                margin-left:-79px;
+                @media only screen and (max-width: 1000px) {
+                    margin-left:-79px * $rapp-logo;
+                }
+            }
+            .info{
+                width:65%;margin:auto;margin-top:200px;
+                .title{
+                    @include font-size(36px);
+                }
+                .summary{
+                    @include font-size(23px);
+                    margin-top:20px;
+                }
+                .icon-arow-right-light{
+                    margin-left:3px;margin-top:2px;
+                }
+                @media only screen and (max-width: 1000px) {
+                    margin-top:175px;
+                    width:68%;
+                }
+            }
+        }
+        .right{
+            height:100%;
+            background-color:$grey;
+            width:69.2%;
+            @media only screen and (max-width: 1000px) {
+                display:none;
+            }
+			.picture{
+				width: 100%;
+				height: 100%;
+			}
+        }
+    }
+}
+@mixin blue-element{
+    background-color:$navcolor;
+    color:white;
+}

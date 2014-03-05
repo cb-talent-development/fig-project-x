@@ -1,0 +1,213 @@
+/*
+Career Scape
+*/
+.careerScape{
+    canvas{
+        background-color:white;
+        margin:auto;cursor:move;padding:0px;display:block;z-index:1;
+		@media only screen and (max-width:1200px){
+			width: 100%;
+		}
+		@media only screen and (max-width:1000px){
+			margin: 0px;
+		}
+    }
+    .canvas-container{
+        margin:auto;
+        text-align:center;
+        position:relative;
+		@media only screen and (max-width:1000px){
+			width: 100%;
+			margin: 0px;
+		}
+    }
+    .buttons-changes{
+            width:23%;
+            min-width:267px;
+            height:64px;
+            float:left;
+            background-color:$navcolor;
+			.button-change{
+				padding-top:23px;padding-bottom:10px;
+				height:100%;
+				width:49%;
+				.carre{
+					margin-left:15px;
+				}
+			}
+			@media only screen and (max-width: 1200px) and (min-width:1001px){
+				min-width: 250px;
+				.button-change{
+					font-size: 17px;
+					.carre{
+						margin-left: 13px;
+						margin-right: 8px;
+					}
+
+				}
+			}
+			@media only screen and (max-width: 1000px){
+				width: 100%;
+				height: 64px * $rapp-resp;
+                min-width:0px;
+				.button-change{
+					padding-top:23px * $rapp-resp;
+                    padding-bottom:10px * $rapp-resp;
+					.carre{
+						margin-left: 11px;
+						width: 17px;
+						height: 17px;
+					}
+				}
+			}
+			.button-change:hover:not(.selected) .txt{
+				color:rgba(255,255,255,0.8);
+			}
+			.button-change:hover:not(.selected) .carre{
+				background-color:rgba(255,255,255,0.8);
+			}
+			.buttons-changes .selected .txt,.buttons-changes .selected:hover .txt{
+				color:rgb(238,120,53);
+			}
+    }
+    .zoom{
+        width:38px;
+        font-weight:600;
+        font-size:25px;
+        background:rgb(80,80,80);
+        color:white;
+        margin-bottom:12px;
+        padding-top:5px;
+        padding-bottom:3px;
+    }
+    .zoom:hover:not(.selected){
+            background: rgba(50,50,50,0.8);
+            cursor:pointer;
+    }
+    .button:hover{
+        cursor:pointer;
+    }
+    //was used to present an input where the user can input the json and see the corresponding result
+    #json{
+        margin:auto;
+        display:block;
+        margin-top:40px;
+        background:#FFFEAA;
+        color:rgb(90,90,90);
+        width:70%;
+        height:400px;
+    }
+    /*
+    Legend part
+    */
+    $rapp-legend: 0.6;
+    
+    .legend{
+        z-index:10;
+        position:absolute;
+        width:200px;
+        height:300px;
+        top:40px;
+        right:22px;  
+        -moz-box-shadow: 0px 2px 2px rgba(0,0,0,0.3);
+        -webkit-box-shadow: 0px 2px 2px rgba(0,0,0,0.3);
+        box-shadow: 0px 2px 2px rgba(0,0,0,0.3);
+		@media only screen and (max-width:1000px){
+			width:230px;
+            height:300px * $rapp-legend * 1.3 / 2;
+            top:auto;
+            bottom:80px;
+            right:22px * $rapp-legend;  
+		}
+    }
+    .legend > div{
+        position:relative;
+        width:100%;
+        height:150px;
+        background:white;
+        /*border-bottom:1.5px solid rgba(200,200,200,0.7);
+        border-right:1.5px solid rgba(200,200,200,0.7);
+        border-left:1.5px solid rgba(200,200,200,0.7);*/
+		@media only screen and (max-width: 1000px){
+            float:left;
+            width:50%;
+			height:150px * $rapp-legend * 1.3;
+		}
+    }
+    .legend >div.growth{
+        border-bottom:1.5px solid rgba(200,200,200,0.7);
+        @media only screen and (max-width: 1000px){
+            border-bottom:none;
+        }
+
+    }
+    .legend .ball{
+        display:inline-block;
+        position:absolute;
+        border:2px solid grey;
+        background:lightgrey;
+    }
+    .legend .big{
+        top:24px;
+        right:26px;
+        width:68px;
+        height:68px;
+        border-radius:39px;
+		@media only screen and (max-width: 1000px){
+			top:24px * $rapp-legend;
+            left:55px;
+            width:68px * $rapp-legend;
+            height:68px * $rapp-legend;
+            border-radius:39px * $rapp-legend;
+		}
+    }
+    .legend .medium{
+        top:24px;
+        right:85px;
+        width:54px;
+        height:54px;
+        border-radius:32px;
+        @media only screen and (max-width: 1000px){
+			top:24px * $rapp-legend;
+            left:35px;
+            width:54px * $rapp-legend;
+            height:54px * $rapp-legend;
+            border-radius:32px * $rapp-legend;
+		}
+    }
+    .legend .small{
+        top:24px;
+        right:133px;
+        width:38px;
+        height:38px;
+        border-radius:24px;
+		@media only screen and (max-width: 1000px){
+			top:24px * $rapp-legend;
+            left:20px;
+            width:38px * $rapp-legend;
+            height:38px * $rapp-legend;
+            border-radius:24px * $rapp-legend;
+		}		
+    }
+    .legend .info{
+        text-align:left;
+        position:absolute;
+        bottom:18px;
+        left:22px;
+		@media only screen and (max-width:1000px){
+			bottom:18px * $rapp-legend;
+            left:22px * $rapp-legend;
+		}
+    }
+    .legend .info .title{
+        font-weight:200;
+        @include font-size(18px);
+    }
+    .legend .info .comment{
+        font-style:italic;
+        @include font-size(12px);
+    }
+    /*
+    /END Legend part
+    */
+}

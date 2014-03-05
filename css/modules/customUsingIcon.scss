@@ -1,0 +1,78 @@
+.custom-checkbox{
+    position:relative;
+    input[type=checkbox] {
+	    display: none;
+    } 
+    label:hover{ cursor:pointer;}
+    label:before{
+        content:"";
+        position:absolute;
+        left:0px;
+        text-align: center;  
+    }
+    label:hover:before { 
+        box-shadow:0px 0px 2px 0px rgba(0,0,0,0.3);
+        -webkit-box-shadow:0 0px 2px 0px rgba(0,0,0,0.3);
+    }
+    input[type=checkbox]:checked + label:before { 
+        //content: "\2713";  
+    }  
+}
+.check-box-1{
+    @extend .custom-checkbox;
+    label{
+        b,span{
+            opacity:0.5;
+            transition: opacity 1s;
+            -webkit-transition: opacity 1s;
+        }
+        font-weight:normal;
+    }
+    label{
+        font-family: HelveticaNeue;
+        margin-left:25px;
+		overflow: hidden;
+    }
+    label:before{
+        margin-top:4px;
+        opacity:1.0 !important;
+        @include global-icon;
+        @extend .icon-box-not-checked;
+
+    }
+    input[type=checkbox]:checked + label {
+        b,span{
+            opacity:1.0;
+        }
+    } 
+    input[type=checkbox]:checked + label:before { 
+        @extend .icon-box-checked;
+    } 
+}
+.check-box-2{
+    @extend .custom-checkbox;
+    label:before{
+        @extend .icon-box-white;
+        @include global-icon;
+    }
+    input[type=checkbox]:checked + label:before {
+        @extend .icon-box-orange;
+    } 
+}
+.custom-radio{
+    position:relative;
+    input[type=radio] {
+	    display: none;
+    } 
+    label:hover{ cursor:pointer;}
+    label:before{
+        content:"";position:absolute;
+        left:0px;
+        top:50%;
+        text-align: center;  
+    }
+    label:hover:before { 
+        box-shadow:0px 0px 2px 0px rgba(0,0,0,0.3);
+        -webkit-box-shadow:0 0px 2px 0px rgba(0,0,0,0.3);
+    } 
+}

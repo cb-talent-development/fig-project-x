@@ -1,0 +1,50 @@
+/*
+Footer css
+*/
+.footer{
+    width:100%;
+	background-color: #cccccc;
+    .main-container{
+        margin:auto;
+        padding-top:70px;
+        padding-bottom:50px;
+    }
+	div.section{
+        width:33%;
+        margin-top:10px;
+        float:left;
+        @media only screen and (max-width: 1000px) {
+            padding:0px 8px;
+        }
+        @media only screen and (max-width: 480px) {
+            width:50%;
+        }
+		h4{
+            font-size: 17px;
+			margin-bottom: 50px;
+            height:50px;
+            margin-bottom:30px;
+            @media only screen and (max-width: 1000px) {
+                margin-bottom:20px;
+                font-size: 14px;
+            }
+			>div{ 
+				background-color: rgba(255,248,51,0.7); 
+                padding:7px;
+                border-radius:1px;
+                display:inline-block;
+			}
+		}
+		div.column{
+			width: 50%;
+            @media only screen and (max-width: 1000px) {
+                width:100%;
+            }
+			float: left;
+			a{
+				color: #444444;
+				display: block;
+			}
+		}
+	}
+}

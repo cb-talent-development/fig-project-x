@@ -1,0 +1,321 @@
+//colors
+$navcolor: rgb(9,51,91);
+$darkBlue:rgb(8,46,82);
+$color-promo:#104E9B;
+//colors
+$lightnavcolor: rgb(29,71,111);
+$darknavcolor: rgb(0,11,61);
+$boxBlue: #00B2EE;
+$boxGreen: #008B00;
+$boxYellow: #EEAD0E;
+$boxRed: #EE6363;
+$boxPurple: #CD6090;
+$boxLightGreen: #66CDAA;
+$boxDarkBlue: #104E9B;
+$lightBlue: rgb(204,214,222);
+$grey: rgb(167,167,167);
+
+$blue-1: #00D2FF;
+$blue-2: #00A6FF;
+$blue-3: #1B96D9;
+$blue-4: #0169CB;
+$blue-5: #003D7B;
+$blue-6: #41A9E0;
+$green-1: #64D438;
+$green-2: #39BD59;
+$green-3: #177230;
+$green-4: #39B059;
+$orange-1: #FECB1B;
+$orange-2: #FFAE00;
+$orange-3: #FF5400;
+$orange-4: #D84700;
+$orange-5: #FF7E00;
+$red-1: #F6492C;
+$red-2: #FF2400;
+$red-3: #CD0E44;
+$red-4: #EA0000;
+$pink-1: #E7007D;
+$pink-2: #CD6090;
+$pink-3: #DB0CAD;
+
+a.green-1 { color: $green-1; }
+a.green-2 { color: $green-2; }
+a.green-3 { color: $green-3; }
+a.green-4 { color: $green-4; }
+a.blue-1 { color: $blue-1; }
+a.blue-2 { color: $blue-2; }
+a.blue-3 { color: $blue-3; }
+a.blue-4 { color: $blue-4; }
+a.blue-5 { color: $blue-5; }
+a.blue-6 { color: $blue-6; }
+a.orange-1 { color: $orange-1; }
+a.orange-2 { color: $orange-2; }
+a.orange-3 { color: $orange-3; }
+a.orange-4 { color: $orange-4; }
+a.orange-5 { color: $orange-5; }
+a.red-1 { color: $red-1; }
+a.red-2 { color: $red-2; }
+a.red-3 { color: $red-3; }
+a.red-4 { color: $red-4; }
+a.pink-1 { color: $pink-1; }
+a.pink-2 { color: $pink-2; }
+a.pink-3 { color: $pink-3; }
+
+$lightBlue: rgb(204,214,222);
+$darkGrey:rgb(128, 128, 128);
+$grey: rgb(157,157,157);
+$lightGrey: rgb(207,207,207);
+$midGrey:rgb(180,180,180);
+$backgroundGrey: #E7E7E7;
+$orange: rgb(238,120,53);
+$orangeHover: rgba(238,120,53,0.8);
+$red-delete:rgb(214,57,46);
+$green: rgb(112, 194, 57);
+
+/*
+COLOR
+*/
+@mixin shadow-color{
+    @include box-shadow(0px,2px,2px,0px,0.2);
+}
+@mixin white-box{
+    background-color:white;
+    @include shadow-color;
+    padding:25px 30px;
+}
+@mixin box-shadow($left,$bottom,$spread,$thickness,$opacity){
+    box-shadow:$left $bottom $spread $thickness rgba(0,0,0,$opacity);
+    -webkit-box-shadow: $left $bottom $spread $thickness rgba(0,0,0,$opacity);
+}
+
+$grey-color:rgb(237,237,237);
+$dark-grey-color:rgb(207,207,207);
+$dark-grey-color-active:rgb(195,195,195);
+$grey-font:rgb(157,157,157);
+@mixin colorCommon{
+    padding-top:12px;
+    padding-bottom:8px;
+    @include box-shadow(0px,1px,1px,0px,0.3);
+}
+@mixin back-grey{
+    @include colorCommon;
+    background-color:$grey-color !important;color:black !important;
+}
+.back-grey{
+    @include back-grey;
+}
+.back-grey-no-hover{
+    @include back-grey;
+}
+.back-grey:hover{
+    cursor:pointer;
+    background-color:$dark-grey-color !important;
+}
+.back-grey:active{
+    background-color:$dark-grey-color-active !important;
+}
+.grey{
+    color:$grey-font;
+}
+
+//green
+$green-color:rgb(112,194,57);
+$dark-green-color:rgb(95,174,45);
+$dark-green-color-active:rgb(85,164,35);
+@mixin back-green{
+    @include colorCommon;
+    background-color:$green-color !important;color:white !important;
+}
+.back-green-no-hover{
+    @include back-green;
+}
+.back-green{
+    @include back-green;
+}
+.back-green:hover{
+    cursor:pointer;
+    background-color:$dark-green-color !important;
+}
+.back-green:active{
+    background-color:$dark-green-color-active !important;
+}
+.green{
+    color:$green-color !important;
+}
+
+//white
+@mixin back-white{
+    @include colorCommon;
+    background-color:white !important;color:black !important;
+}
+.back-white-no-hover{
+    @include back-white;
+}
+.back-white{
+    @include back-white;
+}
+.back-white:hover{
+    cursor:pointer;
+    color:rgb(80,80,80) !important;
+}
+.white{
+    color:white !important;
+}
+
+//Blue
+$blue: rgb(9,51,61);
+$dark-blue: rgb(0,31,41); 
+$dark-blue-active: rgb(0,21,31); 
+@mixin back-blue{
+    @include colorCommon;
+    background-color:$blue !important;color:white !important;
+}
+.back-blue{
+    @include back-blue;
+}
+.back-blue-no-hover{
+    @include back-blue;
+}
+.back-blue:hover{
+    cursor:pointer;
+    background-color:$dark-blue !important;
+	color: white !important;
+}
+.back-blue:active{
+    background-color:$dark-blue-active !important;
+}
+.blue{
+    color:$blue !important;
+}
+
+//Light Blue
+$light-blue: rgb(79,192,238);
+$med-blue: rgb(59,172,218);
+$med-blue-active: rgb(49,162,208);
+@mixin back-light-blue{
+    @include colorCommon;
+    background-color:$light-blue !important;color:white !important;
+}
+.back-light-blue{
+    @include back-light-blue;
+}
+.back-light-blue-no-hover{
+    @include back-light-blue;
+}
+.back-light-blue:hover{
+    cursor:pointer;
+    background-color:$med-blue !important;
+	color: white !important;
+}
+.back-light-blue:active{
+    background-color:$med-blue-active !important;
+}
+.light-blue{
+    color:$light-blue !important;
+}
+
+//Orange
+$orange: rgb(244,121,55);
+$dark-orange: rgb(224,101,31); 
+$dark-orange-active: rgb(214,91,21); 
+@mixin back-orange{
+    @include colorCommon;
+    background-color:$orange !important;color:white !important;
+}
+.back-orange{
+    @include back-orange;
+}
+.back-orange-no-hover{
+    @include back-orange;
+}
+.back-orange:hover{
+    cursor:pointer;
+    background-color:$dark-orange !important;
+	color: white !important;
+}
+.back-orange:active{
+    background-color:$dark-orange-active !important;
+}
+.orange{
+    color:$orange !important;
+}
+//Red
+$red: rgb(255,0,0);
+$dark-red: rgb(225,0,0); 
+$dark-red-active:rgb(215,0,0);
+@mixin back-red{
+    @include colorCommon;
+    background-color:$red !important;color:white !important;
+}
+.back-red{
+    @include back-red;
+}
+.back-red-no-hover{
+    @include back-red;
+}
+.back-red:hover{
+    cursor:pointer;
+    background-color:$dark-red !important;
+	color: white !important;
+}
+.back-red:active{
+    background-color:$dark-red-active !important;
+}
+.red{
+    color:$red !important;
+}
+
+//Pink
+$pink: rgb(109,31,164);
+$dark-pink: rgb(79,1,134);
+$dark-pink-hover: rgb(69,0,124); 
+
+@mixin back-pink{
+    @include colorCommon;
+    background-color:$pink !important;color:white !important;
+}
+.back-pink{
+    @include back-pink;
+}
+.back-pink-no-hover{
+    @include back-pink;
+}
+.back-pink:hover{
+    cursor:pointer;
+    background-color:$dark-pink !important;
+	color: white !important;
+}
+.back-pink:active{
+    background-color:$dark-pink-hover !important;
+}
+.pink{
+    color:$pink !important;
+}
+
+//Darkgrey
+$darkgrey: rgb(128,128,128);
+$dark-darkgrey: rgb(98,98,98); 
+$dark-darkgrey-active: rgb(88,88,88); 
+
+@mixin back-darkgrey{
+    @include colorCommon;
+    background-color:$darkgrey !important;color:white !important;
+}
+.back-darkgrey{
+    @include back-darkgrey;
+}
+.back-darkgrey-no-hover{
+    @include back-darkgrey;
+}
+.back-darkgrey:hover{
+    cursor:pointer;
+    background-color:$dark-darkgrey !important;
+	color: white !important;
+}
+.back-darkgrey:active{
+    background-color:$dark-darkgrey-active !important;
+}
+.darkgrey{
+    color:$darkgrey !important;
+}
+

@@ -143,9 +143,9 @@ function PostCtr($scope,$http,$routeParams,register){
                 if(newComment!=undefined){
                     newComment.hide();
                     newComment.slideDown(500);
-                    var deltaTop=newComment.position().top-window.innerHeight/2-(window.scrollY);
+                    var deltaTop=newComment.offset().top-window.innerHeight/2;
                    // window.scrollTo(window.scrollX,$scope.actualPosition);
-                    $('html, body').animate({scrollTop:window.scrollY+deltaTop}, 400);
+                    $('html, body').animate({scrollTop:deltaTop}, 400);
                     //window.scrollTo(window.scrollX,window.scrollY+deltaTop);
                     clearInterval(inter);
                 }

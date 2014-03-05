@@ -1,0 +1,57 @@
+/*
+Saved Content page
+*/
+.saved-content-page{
+    @include main-block;
+    .saved-content{
+        margin-top:65px;
+        @media only screen and (max-width: 1000px){
+            margin-top:15px;
+        }
+        .content{
+            height:auto;
+            padding:0px 100px;
+            text-align: center;
+            padding-bottom:40px;
+            .save:not(.right){
+                margin-right:8px;
+            }
+            .fourth{
+                margin-right:0px !important;
+            }
+            .save{
+                height:265px;
+                display: inline-block;
+                vertical-align: top;
+                overflow:hidden;
+                margin-top:40px;
+                .delete{
+                    color:$red-delete;
+                    margin-top:25px;
+                    margin-bottom:10px;
+                }
+                width:185px;
+                @media only screen and (max-width: 1200px){
+                    width: 190px;
+                }
+                @media only screen and (max-width: 1024px) and (min-width: 1001px){
+                    width: 180px;
+                }
+            }
+            @media only screen and (max-width: 1000px){
+                padding:20px;
+                .save{
+                    height:240px;
+                    margin-left:0px;
+                    margin-right:0px;
+                    margin-top:0px;margin-bottom:0px;
+                    display:inline-block;
+                    vertical-align:top;float:none;
+                }
+                .save:not(.right){
+                    margin-right:0px;
+                }
+            }
+        }
+    }
+}

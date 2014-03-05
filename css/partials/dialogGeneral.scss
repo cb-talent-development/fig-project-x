@@ -1,0 +1,124 @@
+/*
+DIALOG
+*/
+.dialog{
+    z-index:3000;
+    display:none;
+    position:absolute;top:0px;left:0px;right:0px;width:100%;height:100%;
+    .background{
+        background:rgba(0,0,0,0.5);
+        position:fixed;top:0px;left:0px;bottom:0px;right:0px;width:100%;min-height:100%;
+    }
+    .section{
+        position:relative;display:none;
+        width:60%;margin:auto;margin-top:140px;background-color:rgb(243,245,245);
+        margin-bottom:140px;//security
+        .header{
+            position:relative;
+            @include font-size(27px);
+            padding-left:30px;
+            padding-right:15px;
+            padding-top:20px;
+			padding-bottom: 20px;
+            font-weight:bold;
+            border-bottom:1px solid $lightGrey;
+            .close{
+                position:absolute;
+				right: 20px;
+                padding-right:15px;
+				top:20px;
+            }
+            @media only screen and (max-width: 1000px){
+				padding-left:20px;
+                padding-right:37px;
+                padding-top:20px;
+			    padding-bottom: 12px;
+			}
+        }
+        .intro{
+            width:100%;
+            font-weight:18px;padding:22px;
+            border-bottom:1px solid $lightGrey;
+            td{
+                vertical-align:middle;
+            }
+            .descr{
+                padding:15px;
+                @media only screen and (max-width: 1000px){
+                    padding:10px 8px;
+                }
+            }
+            $rapp-helper:0.6;
+            .logo{position:relative;top:26px;left:17px;
+                @media only screen and (max-width: 1000px){
+                    top:26px * $rapp-helper;
+                    left:17px * $rapp-helper;
+                }
+            }
+            strong{
+                font-weight:bold;
+            }
+        }
+        .third{
+            width:32%;
+            margin-right:2%;
+            @media only screen and (max-width:1000px){
+                width:100%;
+            }
+        }
+        .right{
+            margin-right:0px;
+        }
+        .content{width:100%;}
+        .footer-dialog{
+            padding:20px;
+            @media only screen and (max-width:1000px){
+                padding:10px;
+            }
+			.button-save,.button-next,.button-previous{
+				position:relative;
+				padding:0px 14px;
+				padding-top:12px;
+				padding-bottom:7px;
+                @media only screen and (max-width:1000px){
+                    padding:0px 12px;
+                    font-size:14px;
+                    padding-top:10px;
+                    padding-bottom:5px;
+                    
+                }
+			}
+			.button-next,.button-previous{
+				i{
+					position:absolute;
+					top:50%;
+					margin-top:-8.5px;
+                    @media only screen and (max-width:1000px){
+                        margin-top:-6px;
+                    }
+				}
+			}
+			.button-previous[class~=selected],.button-next[class~=selected]{
+				opacity:0.5;
+			}
+			.button-previous{
+				padding-left:40px;
+				margin-right:15px;
+				i{left:15px;}
+                @media only screen and (max-width:1000px){
+                    padding-left:24px;
+                    margin-right:5px;
+                    i{left:8px;}
+                }
+			}
+			.button-next{
+				padding-right:40px;
+				i{right:15px;}
+                @media only screen and (max-width:1000px){
+                    padding-right:24px;
+                    i{right:8px;}
+                }
+			}
+        }
+    }
+}

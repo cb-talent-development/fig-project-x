@@ -1,0 +1,60 @@
+/*
+General social CSS
+*/
+.social{
+    .icon-social{
+        @include inline-top;
+        border-radius:30px;
+        margin-right:12px;
+        @media only screen and (max-width: 1000px) {
+            margin:0% 0.7% !important;
+        }
+    }
+    .icon-social:hover{
+        cursor:pointer;
+        @include shadow-effect;        
+    }
+    .icon-save{
+        margin-right:3px;
+    }
+    .icon-bar-grey{
+        margin:9px;
+    }
+}
+/*
+SOCIAL
+*/
+.button-social{
+    color:white;
+    width:130px;
+    font-size:27px;
+    padding-top:18px;padding-bottom:12px;
+    padding-left:20px;padding-right:20px;
+    @media only screen and (max-width: 1000px){
+        width:44%;
+        font-size:19px;
+        padding:0px 15px;
+        padding-top:14px;
+        padding-bottom:8px;
+        margin-bottom:10px;
+        
+    }
+}
+.button-google{
+    background-color:rgb(194,83,57);
+    @media only screen and (max-width: 480px){
+        width:100% !important;
+    }
+}
+.button-google:hover{
+    background-color:rgb(184,73,47);
+}
+.button-facebook{
+    background-color:rgb(64,93,149);
+    @media only screen and (max-width: 480px){
+        width:100% !important;
+    }
+}
+.button-facebook:hover{
+    background-color:rgb(54,83,139);
+}

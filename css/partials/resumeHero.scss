@@ -1,0 +1,513 @@
+//ResumeHero Popups
+.get-started-resume, .template-resume, .export-resume, .delete-resume{
+	.section{
+		.content{
+			.label{
+				font-style: italic;
+				max-width: 900px;
+				white-space: normal;
+			}
+			textarea#role, textarea#technical-skills, textarea#extra-skills{
+				@include invert-shadow;
+				width: 100%;
+				height: 150px;
+				margin-left: 0px;
+				font-size: 25px;
+				padding: 15px;
+				@media only screen and (max-width: 1000px){font-size: 17px;}
+			}
+			textarea#extra-skills{
+				height: 400px;
+                @media only screen and (max-width: 1000px){
+                    height:250px;
+                }
+			}	
+			.little{
+				width: 173px;
+				margin-right:25px;
+				@media only screen and (max-width: 1200px){
+					width: 140px;
+				}
+				@media only screen and (max-width: 1024px){
+					width: 135px;
+				}
+				@media only screen and (max-width: 1000px){
+					width: 49%;
+					margin-right:2%;
+				}
+			}
+			.little.last{margin-right: 0px;}
+			.medium{
+				.input-button, .select{
+					width: 100%;
+				}
+			}
+            .message{
+                @media only screen and (max-width: 1000px){
+                    margin-top:5px;
+                }
+            }
+			.large-resp{
+				@media only screen and (max-width: 1000px){width: 100% !important;}
+			}
+			.buttons-changes{
+                margin-top:15px;
+				.button-change{
+					margin-bottom: 20px;
+					.title{
+						color: $grey;
+					}
+					.txt{margin-top: 10px;color:$grey;margin-left:30px;font-size:14px;}
+				}
+                @media only screen and (max-width: 1000px){
+                    margin-top:10px;
+                    .button-change{
+					   margin-bottom: 10px;
+                    }
+                }
+				.button-change.selected{
+					.title{
+						color: black;
+					}
+					.txt{color:black;}
+				}
+				.button-change.medium{
+					@media only screen and (max-width: 1000px){
+						width: 100%;
+						margin-right: 0px;
+					}
+				}
+				.first{
+					margin-top: 0px;
+				}
+				
+			}
+		}
+		.margin-bottom{
+			@media only screen and (min-width: 1000px){
+				margin-bottom: 25px !important;
+			}
+		}
+		.margin-top{
+			@media only screen and (min-width: 1000px){
+				margin-top: 25px !important;
+			}
+		}
+	}
+}
+
+/*
+Global Resume Hero SCSS
+*/
+
+.template-resume{
+	.section{
+		.content{
+			ul{
+				top: 60px !important;
+			}
+			.label{
+				padding-bottom: 20px;
+				font-style: italic;
+			}
+			.scrollable-content{
+				width:80%;
+				height:82%;
+				@media(max-width: 1000px){
+					width: 100%;
+					height: 80%;
+				}
+			}
+			.scrollable{
+				height:100%;
+			}
+			.save{
+				text-align:center;
+				text-transform:uppercase;
+				height:100%;width: 189px;
+				margin-bottom: 15px;
+				@media(max-width: 1000px){
+					width: 4.2%;
+				}
+				@include inline-top;
+			}
+			.pages{
+				text-align:center;
+				@media(max-width: 1000px){
+					padding-top: 13px;
+				}
+				.activated{
+					background-color:$navcolor !important;
+				}
+				.ball{
+					margin:0px 5px;
+					@include inline-top;
+					width:15px;height:15px;border-radius:10px;
+					background-color:$lightBlue;
+					@media(max-width: 479px){
+						width:10px;height:10px;border-radius:7px;
+					}
+				}
+				.ball:hover{
+					cursor:pointer;
+				}
+			}
+		}
+		.template-content{
+			.icon-arrow-left-big-blue,.icon-arrow-right-big-blue{
+				position:absolute;top:64%;margin-top:-26px;
+				@include no_select;
+			}
+			.icon-arrow-left-big-blue{left:40px;
+				@media only screen and (max-width: 1000px){left: 20px;}
+			}
+			.icon-arrow-right-big-blue{right:40px;
+				@media only screen and (max-width: 1000px){right: 20px;}
+			}
+			i:hover{
+				cursor:pointer;
+			}
+		}
+	}
+}
+.export-resume, .template-resume{
+	.section{
+		width: 975px;
+		@media only screen and (max-width: 1000px){
+			width: 95% !important;
+		}
+		.header{
+			padding-bottom: 20px;
+		}
+		.content{
+			border-bottom: 1px solid $grey;
+			.large:nth-child(2){
+				margin-right: 0px;
+			}
+			.large{
+				width: 460px;
+			}
+			.input-button{
+				padding-top: 0px;
+				padding-bottom: 0px;
+			}
+		}	
+	}
+}
+
+.export-resume, .template-resume, .delete-resume{
+	.section{
+		.header{
+			@media only screen and(max-width: 1000px){font-size: 19px;padding:10px;}
+			i{
+				@media only screen and(max-width: 1000px){top: 14px !important;right:14px !important;}
+			}
+		}
+		.button{
+			padding-top: 14px;
+			padding-bottom: 12px;
+			@media only screen and(max-width: 1000px){font-size: 17px;padding-top:10px;padding-bottom: 8px;}
+		}
+	}
+}
+
+/*
+END POPUPS
+*/
+
+.careerScape, .resume-hero{
+	.button-change{
+        color:white;
+        font-size:18px;
+        display: inline-block;
+        .carre{
+            float:left;
+            width:20px;
+            height:20px;
+            background:white;
+            position:relative;
+            margin-right:10px;
+            margin-top: -1px;
+        }
+        .txt{
+            float:left; 
+            margin-top: 1px;
+        }
+        
+    }
+    .button-change:hover{
+        cursor:pointer
+    }
+    .buttons-changes .selected .carre,.buttons-changes .selected:hover .carre{
+        background:rgb(238,120,53);
+    }
+}
+
+
+/*
+RESUME HERO
+*/
+
+.resume-hero{
+	padding-bottom: 100px;
+	@include main-block;
+	@media (max-width: 1200px){width: 100%;}
+    @media (max-width: 1024px){
+        padding-bottom: 50px;
+        .saved-content{
+            margin-bottom:10px;
+        }
+    }
+	.resume-buttons{
+		margin-bottom: 30px;
+		margin-top: -30px !important;
+		padding: 0px;
+		.button{
+			width: 170px;
+			margin: 0px;
+			margin-left: 27px;
+			padding-left: 40px;
+            @media only screen and (max-width: 1200px) and (min-width:1001px){
+                padding-left: 37px;
+                margin-left: 24px;
+            }
+		}
+        .right{
+            margin-left:0px;
+        }
+		i{
+			left: 8px;
+			top: 11px;
+		}
+		@media only screen and (max-width: 1200px) and (min-width:1001px){
+			width: 100%;
+			.button{
+				font-size: 15px;
+				width: 145px;
+			}
+		}
+		@media only screen and (max-width: 1024px) and (min-width:1001px){
+			margin-top: 30px !important;
+			.button{
+				width: 305px;
+			}
+			.button:nth-child(n+4){
+				margin-top: 27px;
+			}
+			.button:nth-child(4){
+				margin-left: 0px;
+			}
+		}
+		@media (max-width: 1000px){
+			width: 100%;
+			margin-left: auto;
+			margin-right: auto;
+			margin-bottom: 0px;
+			margin-top:0px !important;
+			.button{
+				font-size: 15px;
+				padding-top: 12px;
+				padding-bottom: 8px;
+				padding-left: 30px !important;
+				padding-right: 10px;
+				width: 49%;
+				margin-left: 0px;
+				margin-bottom: 10px;
+			}
+            .button:nth-child(2n+1){
+				float:left;
+			}
+			.button:nth-child(2n){
+				float:right;
+			}
+		}
+		width: 1170px;
+		.button:first-child{
+			margin-left: 0px;
+		}
+	}
+	.content{
+		.button-list{
+			width: 370px;
+			@media only screen and (max-width: 1200px){width: 320px;}
+			@media only screen and (max-width: 1024px){width: 305px;}
+			@media only screen and(max-width: 1000px){width: 100%;}
+			.button{
+				width: 100%;
+				height: 60px;
+				padding-left: 50px;
+				padding-top: 20px;
+				margin-top: 10px;
+				font-size: 22px;
+				color: black;
+				.icon-completed-check, .icon-not-completed, .icon-add-section{
+					left: 15px;
+					top: 15px;
+				}
+				.icon-right-black{
+					right: 0px;
+					top: 18px;
+				}
+				@media only screen and (max-width: 1200px){
+					font-size: 20px;
+					padding-top: 20px;
+				}
+				@media only screen and (max-width: 1000px){
+					height: 40px;
+					padding-top: 11px;
+					font-size: 17px;
+					.icon-right-black,.icon-completed-check, .icon-not-completed, .icon-add-section{
+						top: 8px;
+					}
+				}
+			}
+			.button:first-child{
+				margin-top: 0px;
+			}
+			.button:hover{
+				color: $grey !important;
+				.icon-check-big{
+					display:none;
+				}
+				.icon-check-lightgreen{
+					display: block;
+				}
+			}
+		}
+		.resume-content{
+			@include whitebox;
+			width: 770px;
+			@media only screen and (max-width: 1200px){width: 655px;}
+			@media only screen and (max-width: 1024px){width: 640px;}
+			margin-left: 30px;
+			display: inline-block;
+			font-family:"Times New Roman",Georgia,Serif;
+			@media(max-width: 1000px){
+				width: 100%;
+				margin: 0px;
+				margin-top: 10px;
+			}
+			h2{
+				font-size: 20px;
+				background-color: rgb(199, 199, 199);
+				margin: 0px;
+				padding: 20px;
+				font-family:"Times New Roman",Georgia,Serif;
+			}
+			.presentation{
+				padding: 20px;
+				.name{
+					font-size: 20px;
+					font-weight: 500;
+					@media(max-width: 1000px){
+						font-size: 15px;
+					}
+				}
+				ul{
+					padding-left: 20px;
+					list-style-type: diamond;
+					li{
+						padding: 0px 25px;
+						padding-left:0px;
+						@media(max-width: 1000px){
+							font-size: 12px;
+							padding-right: 18px;
+						}
+					}
+				}
+			}
+			h3{
+				text-align: center;
+				margin: 20px 0px;
+				font-weight: 900;
+				font-size: 15px;
+				font-family:"Times New Roman",Georgia,Serif;
+				@media(max-width: 1000px){
+					font-size: 12px;
+				}
+			}
+			ul.sortable{
+				margin: 0px;
+				padding: 0px;
+				list-style-type: none;
+				li.element{
+					margin: 0px;
+					padding: 0px;
+					border: solid 2px white;
+					position:relative;
+					background-color: white;
+					@media(max-width: 479px){
+						font-size: 12px;
+					}
+					h4{
+						text-align: center;
+						padding: 0px;
+						font-weight: 800;
+						font-size: 16px;
+						font-family:"Times New Roman",Georgia,Serif;
+						@media (max-width: 1000px){
+							font-size: 14px;
+						}
+                        @media (max-width: 480px){
+							width:65%;
+                            margin-left:35%;
+						}
+					}
+					.icons{
+						position: absolute;
+						top: 0px;
+						left: 30px;
+						@media (max-width: 1000px){
+							left: 20px;
+						}
+						.button{
+							width: 30px;
+							height: 30px;
+							margin-left: 10px;
+							i{
+								top: 5px;
+								left: 4px;
+							}
+							@media (max-width: 1000px){
+								width: 19px !important;
+								height: 19px;
+								padding: 0px;
+								margin-left: 7px;
+								i{
+									top: 2px;
+									left: 2px;
+								}
+							}
+						}
+						.button:first-child{
+							margin-right: 10px;
+							margin-left: 0px;
+							@media (max-width: 1000px){
+								margin-right: 7px;
+							}
+						}
+						.separation{
+							width: 1px;
+							height: 30px;
+							border: 1px dotted $grey;
+							display: inline-block;
+							@media (max-width: 1000px){
+								height: 18px;
+							}
+						}
+					}
+					.section-content{
+						margin: 30px;
+						@media(max-width: 1000px){
+							margin:20px;
+						}
+					}
+				}
+				.element:hover{
+					border: solid 2px rgb(230, 230, 230);
+					cursor: pointer;
+				}
+			}
+		}
+	}
+}

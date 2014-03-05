@@ -58,10 +58,10 @@
 			</ul>
 		</div>
 		<div class="input-button right search last toggleMenuLarge dubble">
-			<form onsubmit="search($('#search-input'))">
-				<input id="search-input" placeholder="">
+			<form ng-submit="search()">
+				<input id="search-input" placeholder="Search" ng-model="searchValue.value">
 			</form>
-			<i onclick="" class="icon-search"></i>
+			<i ng-click="search()" class="icon-search"></i>
 		</div>
 </div>
 <div class="background-zig"></div>

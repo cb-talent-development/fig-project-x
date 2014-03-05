@@ -1,0 +1,399 @@
+//animation
+$transition-time:1s;
+
+//Width
+$total-width:1170px; //normal page
+
+//Heights
+
+//Desktop
+$large-box-height: 355px;
+$med-box-height: 380px;
+$small-box-height: 175px;
+//phone portrait
+$phone-height: 310px;
+$phone-height-small: 225px;
+
+//Retina
+$phone-retina-height:620px;
+$phone-retina-height-small: 450px;
+
+
+/*
+Responsive
+*/
+$rapp-resp: 0.8;
+//tablet
+$rapp-resp-2: 0.9;
+
+$rapp-resp-text: 0.9;
+//tablet
+$rapp-resp-text-tablet: 0.95;
+//small desktop
+$rapp-resp-text-small-desktop: 0.95;
+
+//General mixin
+@mixin main-block{
+    width:$total-width; //default padding
+    display:block;
+    margin:auto;
+	@media only screen and (max-width: 1200px) and (min-width: 1025px){
+        width:1005px;
+    }
+	@media only screen and (max-width: 1024px) and (min-width:1001px){
+        width:975px;
+    }
+    @media only screen and (max-width: 1000px){
+        width:95%;
+    }
+}
+@mixin flex-box{
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+@mixin webkit-box{
+    display: -webkit-box;
+    display: -moz-box;
+    -webkit-box-orient: vertical;
+    overflow:hidden;
+
+}
+@mixin absoluteFill{
+    position:absolute;left:0px;right:0px;top:0px;bottom:0px;
+    width:100%;height:100%;
+}
+@mixin inline-top{
+   display:inline-block;
+   vertical-align:top;
+}
+/*
+Mixin to handle the font-size
+*/
+@mixin font-size($font-size){
+    font-size:$font-size;
+    @media only screen and (min-width:1001px) and (max-width: 1200px) {
+        font-size:$font-size * $rapp-resp-text-small-desktop;
+    }
+    @media only screen and (min-width:481px) and (max-width: 1000px) {
+        font-size:$font-size * $rapp-resp-text-tablet;
+    }
+    @media only screen and (max-width: 480px) {
+        font-size:$font-size * $rapp-resp-text;
+    }
+}
+/*
+General buttons classes
+*/
+@mixin shadow-effect{
+    box-shadow:0 2px 2px rgba(0,0,0,0.2);
+    -webkit-box-shadow:0 2px 2px rgba(0,0,0,0.2);
+    border:none;
+}
+@mixin shadow{
+    @include shadow-effect;
+    background:white;
+}
+@mixin whitebox{
+	background-color: white;
+    @include shadow;
+}
+@mixin invert-shadow-effect{
+    box-shadow:0px -1px 1px rgba(0,0,0,0.2);
+    -webkit-box-shadow:0px -1px 1px rgba(0,0,0,0.2);
+    border:none;
+}
+@mixin invert-shadow{
+    @include invert-shadow-effect;
+    background:white;
+}
+@mixin button-style{
+    @include font-size(18px);
+    @include inline-top; 
+    position:relative;
+    padding-top:15px;padding-bottom:9px;
+    padding-left:15px;padding-right:15px;
+    text-align:left;
+    color:$darkGrey;
+     b,i{
+        position:absolute;
+        top:50%;
+        right:15px;
+        @media only screen and (max-width: 1000px){
+            right:8px;
+        }
+    }
+    @media only screen and (max-width: 1000px){
+        padding-top:15px;
+        padding-bottom:9px;
+        padding-left:10px;padding-right:10px;
+    }
+}
+@mixin no_select{
+   -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+/*
+General classes
+*/
+.subtitle{
+    -webkit-line-clamp: 1;
+    overflow:ellipsis;
+}
+.subMenu{
+	a:hover{
+		text-decoration:none;
+	}
+}
+.visible{
+    display:block;
+}
+.invisible{
+    display:none;
+}
+.visible-xs{
+    display: none !important;
+	@media only screen and (max-width: 1000px){
+		display: block !important;
+	}
+}
+.hidden-xs{
+    display: block !important;
+	@media only screen and (max-width: 1000px){
+		display: none !important;
+	}
+}
+.clear{
+    clear:both;
+}
+.no_select{
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+.main-container{
+    @include main-block;
+}
+.link{
+    position:relative;
+}
+.link > a{
+    @include absoluteFill;
+    z-index:10;
+}
+.link:hover{
+    cursor:pointer;
+}
+.center{
+    margin:auto;
+    text-align:center;
+}
+table{
+    border-collapse:collapse;
+}
+table td{
+    vertical-align:middle;
+}
+.left{
+    float:left;
+}
+.right{
+    float:right;
+}
+.inline{
+    @include inline-top;
+}
+.background-img-plain{
+    width: 100%; height: 100%;
+}
+.background{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+body{
+	background-color: $backgroundGrey;
+    z-index:1;
+    width:100%;
+    font-size:auto;
+    line-height:normal;
+    font-family: HelveticaThinCondensed, sans-serif;
+}
+input{
+    outline:none;
+}
+.home-container,.navbar,.page-header h1,.page-header h2{
+    font-family: HelveticaLightCondensed, sans-serif;
+}
+.home-main-container{
+    @include main-block;
+}
+.home-container{
+    $width-home:1200px;
+    width:$width-home;
+    margin:auto;margin-top:60px;
+    position:relative;
+    left:- ($width-home - $total-width) / 2;
+	@media only screen and (max-width: 1200px){width: 1170px;}
+	@media only screen and (max-width: 1199px){width: 1035px;}
+	@media only screen and (max-width: 1024px){width: 1005px;}
+    @media only screen and (max-width: 1000px){
+        //width: 310px;
+        width: 100%;
+        margin-top: 15px;
+        left:0px; //should be -5px; if width not fixed
+    }
+}
+a.transp-link{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	z-index: 5;
+	top: 0;
+	left: 0;
+}
+a.transp-link:hover{
+	opacity: 0.3 !important;
+}
+/*
+Custom input
+*/
+.custom-input-file{
+    position:relative;
+    overflow:hidden !important;
+    input[type=file] {
+        font:200px monospace !important;
+        position:absolute;
+        color:rgba(255,255,255,0);
+        top:0px;
+        right:0px;
+        z-index:1;
+    } 
+    input[type=file]:hover{
+        cursor:pointer;
+    }
+}
+.custom-input-file:hover{
+    cursor:pointer;
+}
+.toggleMenu,.toggleMenuSimple,.toggleMenuLarge,.occupations, .simpleMenu{
+    position:relative;
+    .subMenu{
+        position:absolute;
+        left:0px;
+		width: 100%;
+        
+        z-index:100;
+        color:inherit;
+        display:none;
+        background-color:inherit;
+        max-height:230px;
+        overflow-y:scroll;
+    }
+}
+.background-image{
+    background-position:center;
+    background-size:cover;
+    background-repeat:no-repeat;
+}
+/*
+ICON-ARROW
+*/
+.link{
+    i,b{position:absolute;top:50%;right:23px;}
+    .icon-bigarrow-right-black,.icon-bigarrow-right-white{
+        margin-top:-8.5px;
+        @media only screen and (max-width: 1000px){
+            margin-top:-6px;
+        }
+    }
+    .icon-bigarrow-bottom-grey,.icon-bigarrow-bottom-orange{
+        margin-top:-1.5px;
+        @media only screen and (max-width: 1000px){
+            margin-top:-4px;
+        }
+    }
+    @media only screen and (max-width: 1000px){
+        i,b{
+            right:10px;
+        }
+    }
+}
+
+/*
+Arrow
+*/
+@mixin arrow-up-down{
+    width: 0; 
+	height: 0; 
+	border-left-style:solid;
+    border-left-color:transparent;
+    border-right-style:solid;  
+    border-right-color:transparent;  
+	font-size: 0;
+	line-height: 0;
+    
+}
+.arrow-up {
+    @include arrow-up-down;
+    border-bottom-style:solid; 
+}
+.arrow-down {    
+    @include arrow-up-down;
+	border-top-style:solid; 
+}
+/*
+Leaflet
+*/
+.leaflet-top-pane {
+    pointer-events: none;
+}
+.leaflet-control-attribution,.map-legends {
+    display:none !important;
+}
+
+/*
+Font handler
+*/
+.title,.content,.text,.careerScape,.dashboard,.related-title{
+    font-family: HelveticaLightCondensed, sans-serif;
+}
+.related-content{
+    font-family:HelveticaRoman,'sans-serif';
+}
+.end-week,.article,.intro,.dialog .message,.job-correction .mess{
+    font-family: HelveticaThinCondensedEm, sans-serif;
+}
+.comment .content,.comments .placeholder,.help-section .intro,.post .body,.optional{
+    font-family: HelveticaNeue, sans-serif;
+   
+}
+
+@mixin font-family{
+    h2.title{
+            font-family: HelveticaLightCondensed, sans-serif;
+    }
+    h3.subtitle{
+            font-family: HelveticaThinCondensed , sans-serif;
+    }
+    div.comment{
+            font-family: HelveticaThinCondensed, sans-serif;
+    }
+    div.text{
+            font-family: HelveticaRoman  , sans-serif;
+    }
+}
+
+
+//Wysiwyg
+div.bootstrap-wysihtml5-insert-image-modal.modal.hide.fade, div.bootstrap-wysihtml5-insert-link-modal.modal.hide.fade{
+	background-color: $lightGrey;
+	z-index: 100000 !important;
+}
+div.bootstrap-wysihtml5-insert-image-modal.modal.hide.fade.in, div.bootstrap-wysihtml5-insert-link-modal.modal.hide.fade.in{
+	display: block !important;
+}

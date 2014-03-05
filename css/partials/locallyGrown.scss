@@ -1,0 +1,28 @@
+/*
+Locally Grown
+*/
+.locallyGrown{
+    .selector{
+        .input-zip{
+            width:23%;
+            min-width:230px;
+            float:left;
+            @include blue-element;
+			@media only screen and (max-width: 1200px){
+				width:25%;
+			}
+			@media only screen and (max-width: 1000px){
+				width: 100%;
+			}
+        }
+    }
+    .mapbox{
+        @include main-block;
+        height:590px;
+		@media only screen and (max-width: 1000px){
+			width: 100%;
+			margin: 0px;
+            height:590px * $rapp-resp * $rapp-resp;
+		}
+    }
+}

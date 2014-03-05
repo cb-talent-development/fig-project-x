@@ -1,0 +1,128 @@
+/*
+Header css
+*/
+.container-filter{
+    padding-top:40px;
+    padding-bottom:40px;    
+}
+.page-header{
+    position:relative;
+    margin:30px 0px;
+    padding:0px;
+	border: none;
+	@media only screen and (max-width: 1000px){
+		@include main-block;
+        text-align:center;
+	}
+	line-height: 1.1;
+	h1{
+		font-size: 50px;
+		display: inline;
+		.background-image{
+			vertical-align:middle;
+		}
+		@media only screen and (max-width: 1200px){
+			font-size:40px;
+		}
+        @media only screen and (max-width: 1000px){
+			font-size:24px;
+		}
+	}
+	.grey{
+		color: #bbb;
+	}
+	.orange{
+		color: $orange;
+	}
+	.black{
+		color: rgb(35,35,35);
+	}
+	span{
+		display: inline-block;
+	}
+	.icon-bigarrow-bottom-orange{
+		/*position:relative;
+		top: 19px;
+		right: 0px;
+		@media only screen and (max-width: 1000px){
+			right: 0px;
+			top: 10px;
+		}*/
+	}
+	.button-signout{
+        position:absolute;
+        right:0px;
+        top:0px;
+		margin-top:32px;
+		font-size: 16px !important;
+		padding-left:10px;
+        width:170px;
+        @media only screen and (max-width: 1000px){
+			width:60%;
+            text-align:left;
+            position:relative;
+            font-size: 14px !important;
+            margin:15px auto;
+            margin-bottom:5px;
+		}
+	}
+	#profil-pic{
+		height: 100px;
+		width: 100px;
+		display: inline-block;
+		@media only screen and (max-width: 1000px){
+			height: 70px;
+			width: 70px;
+            margin-bottom:8px;
+		}
+		-webkit-box-shadow:0 1px 2px rgba(0,0,0,0.2);
+		border: 2px solid white;
+		margin-right: 15px;
+	}
+	.block{
+	}
+    .subMenu{
+        max-height:none;
+        overflow:auto;
+    }
+}
+
+/*
+HEADER BUTTONS
+*/
+
+.dropdown{
+	margin: 0px;
+	padding: 0px;
+	position:absolute; top:42px;
+	-webkit-box-shadow:0px 1px 1px rgba(0,0,0,0.2);
+	li{
+        position:relative;
+        b{
+            position:absolute;top:50% !important;
+            left:10px;
+            margin-top:-11px;
+        }
+		list-style-type: none;
+		margin: 0px;
+		padding: 15px 15px;
+        padding-bottom:8px;
+        padding-left:15px;
+		width: 100%;
+		@media only screen and (max-width: 1024px){
+			padding-right: 5px;
+		}
+	}
+    li:hover{
+        color:$midGrey;
+    }
+	a:hover{
+		text-decoration:none;
+	}
+}
+
+.dropdown > li{
+	li:nth-child(odd){
+		background-color: #eee;
+	}
+}

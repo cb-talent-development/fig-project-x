@@ -258,7 +258,7 @@ function postPretreatment(post,string){
                 }
                 for(var i=post.stars.length;i<5;i++){
                     post.stars.push({
-                        "class":"icon-star-disabled"
+                        "class":"icon-star-"+string+"grey"
                     });
                 }
             }

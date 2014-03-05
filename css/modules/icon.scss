@@ -5,25 +5,63 @@ ICON css
 $sprite-width: 3000px;
 $sprite-height: 3597px;
 
-*[class^=icon-]{
+@mixin global-icon{
     display: inline-block;
 	vertical-align: top;
-    background: url("assets/x_sprite.png") no-repeat;
+    background-image: url("assets/x_sprite.png");
+    background-repeat: no-repeat;
     background-size: $sprite-width/2 $sprite-height/2;
     @media only screen and (max-width: 1000px){
         background-size: $sprite-width/4 $sprite-height/4;
 	}
 }
+*[class^=icon-]{
+    @include global-icon;
+}
 .background-zig{
     height:10px;
-    background: url('assets/zig.png') center center repeat-x;
+    background-image: url('assets/zig.png');
+    background-repeat: repeat-x;
+    background-position: center;
 }
 @mixin dimensionPosition($posX,$posY,$height,$width,$rapp){
-    background-size:ceil($sprite-width/2 * $rapp) ceil($sprite-height/2 * $rapp);
-    background-position: ceil($rapp * $posX) ceil($rapp * $posY);
+    background-size:ceil($sprite-width/2 * $rapp) ceil($sprite-height/2 * $rapp) !important;
+    background-position: ceil($rapp * $posX) ceil($rapp * $posY) !important;
     height: ceil($height * $rapp);
     width: ceil($width * $rapp);
 }
+
+/*
+Icon CheckBox
+*/
+.icon-box-white{
+    @include dimensionPosition( -340px, -56px, 21px, 21px, 1.0);
+    @media only screen and (max-width: 1000px){
+        @include dimensionPosition( -340px, -56px, 21px, 21px, 0.7);
+	}
+}
+.icon-box-orange{
+    @include dimensionPosition( -306px, -56px, 21px, 21px, 1.0);
+    @media only screen and (max-width: 1000px){
+        @include dimensionPosition( -306px, -56px, 21px, 21px, 0.7);
+	}
+}
+.icon-box-checked{
+    @include dimensionPosition( -376px, -59px, 16px, 16px, 1.0);
+    @media only screen and (max-width: 1000px){
+        @include dimensionPosition( -376px, -59px, 16px, 16px, 0.8);
+	}
+}
+.icon-box-not-checked{
+    @include dimensionPosition( -409px, -59px, 16px, 16px, 1.0);
+    @media only screen and (max-width: 1000px){
+        @include dimensionPosition( -409px, -59px, 16px, 16px, 0.8);
+	}
+}
+/*
+Rest of the icons
+*/
+
 .icon-career {
 	@include dimensionPosition( -13px, -10px, 24px, 142px, 1.0);
      @media only screen and (max-width: 1000px){
@@ -407,10 +445,13 @@ STARS
         @include dimensionPosition($posx, $posy, 21.5px, 21px, 1.1);
 	}
 }
+//disabled
+.icon-star-big-grey{
+    @include icon-star-big-dim(-341px,-238px);
+}
 //green
 .icon-star-big-green-1{
     @include icon-star-big-dim(-13px, -190px);
-
 }
 .icon-star-big-green-2{
     @include icon-star-big-dim(-60px, -190px);
@@ -480,6 +521,13 @@ STARS
     @include icon-star-big-dim(-247px, -237px);
 }
 /*SMALL*/
+//disabled
+.icon-star-grey{
+    @include dimensionPosition(-341px, -238px, 22px, 21px, 1.0);
+    @media only screen and (max-width: 1000px){
+        @include dimensionPosition(-341px, -238px, 22px, 21px, 0.7);
+	}
+}
 //green
 .icon-star-green-1{
     @include dimensionPosition(-13px, -190px, 22px, 21px, 1.0);
@@ -1401,6 +1449,9 @@ $rapp-logo-small:0.95;
 }
 .icon-button-post{
 	@include dimensionPosition(-464px,-541px,43px,179px,1);
+    @media only screen and (max-width: 1200px){
+	   @include dimensionPosition(-490px,-541px,43px,179px,1);
+	}
     @media only screen and (max-width: 1000px){
 		@include dimensionPosition(-490px,-542px,43px,160px,1);
 	}
@@ -1410,6 +1461,9 @@ $rapp-logo-small:0.95;
 }
 .icon-button-post-large{
 	@include dimensionPosition(-464px,-592px,43px,387px,1);
+    @media only screen and (max-width: 1200px){
+		@include dimensionPosition(-535px,-592px,43px,307px,1);
+	}
 	@media only screen and (max-width: 1000px){
 		@include dimensionPosition(-530px,-592px,43px,307px,1);
 	}
